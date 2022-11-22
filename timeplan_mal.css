@@ -108,9 +108,9 @@ body{
 /*_________________ Grid- og Flex-layout _________________*/
 .timeplan{
   display: grid;
-  grid-template-columns: [mandag-start] 1fr [mandag-end tirsdag-start] 1fr [tirsdag-end onsdag-start] 1fr [onsdag-end torsdag-start] 1fr [torsdag-end fredag-start] 1fr [fredag-end];
-  grid-template-rows: [header-start] 0.2fr [header-end overskrift-start] 0.6fr [oversktrift-end time1-start] 1fr [time1-end time2-start] 1fr [time2-end time3-start] 1fr [time3-end time4-start] 1fr [time4-end pause-start] 0.1fr [pause-end time5-start] 1fr [time5-end time6-start] 1fr [time6-end time7-start] 1fr [time7-end time8-start] 1fr [time8-end time9-start] 1fr [time9-end footer-start] 0.1fr [footer-end];
-  gap: 10px;
+  grid-template-columns: [d1-start] 1fr [d1-end d2-start] 1fr [d2-end d3-start] 1fr [d3-end d4-start] 1fr [d4-end d5-start] 1fr [d5-end];
+  grid-template-rows: [i-start] 0.1fr [i-end ii-start] 1fr [ii-end t1-start] 1fr [t1-end t2-start] 1fr [t2-end t3-start] 1fr [t3-end t4-start] 1fr [t4-end P-start] 0.05fr [p-end t5-start] 1fr [t5-end t6-start] 1fr [t6-end t7-start] 1fr [t7-end t8-start] 1fr [t8-end t9-start] 1fr [t9-end f-start] 0.1fr [f-end];
+  row-gap: 0.5%;
   height: 100%;
   margin-inline: 2%;
 }
@@ -120,18 +120,21 @@ body{
 .ramme{
   background-color: #262738;
   border-color: #57637A;
-  border-radius: 2rem 0.4rem 2rem 0.4rem;
+  border-radius: 1.8rem 0.4rem 1.8rem 0.4rem;
   border-top-width: 2px;
   border-right-width: 2px;
   border-bottom-width: 6px;
   border-left-width: 6px;
   border-style: solid;
   padding: 3%;
+  margin-inline: 1%;
+  min-width: 280px;
 }
 
 .fagtittel{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 2%;
 }
 
@@ -145,127 +148,132 @@ body{
   align-items: center;
 }
 
+.ikon{
+  min-height: 30px;
+  min-width: 60px;
+}
+
 /*_________________ dager-økter _________________*/
-.mandag{
-  grid-column: mandag-start / mandag-end;
-  grid-row: overskrift-start / overskrift-end;
+.d1{
+  grid-column: d1-start / d1-end;
+  grid-row: ii-start / ii-start-end;
 }
 
-.tirsdag{
-  grid-column: tirsdag-start / tirsdag-end;
-  grid-row: overskrift-start / overskrift-end;
+.d2{
+  grid-column: d2-start / d2-end;
+  grid-row: ii-start / ii-start-end;
 }
 
-.onsdag{
-  grid-column: onsdag-start / onsdag-end;
-  grid-row: overskrift-start / overskrift-end;
+.d3{
+  grid-column: d3-start / d3-end;
+  grid-row: ii-start / ii-start-end;
 }
 
-.torsdag{
-  grid-column: torsdag-start / torsdag-end;
-  grid-row: overskrift-start / overskrift-end;
+.d4{
+  grid-column: d4-start / d4-end;
+  grid-row: ii-start / ii-start-end;
 }
 
-.fredag{
-  grid-column: fredag-start / fredag-end;
-  grid-row: overskrift-start / overskrift-end;
+.d5{
+  grid-column: d5-start / d5-end;
+  grid-row: ii-start / ii-start-end;
 }
 
-/*_________________ Mandags-økter _________________*/
+/*_________________ D1s-økter _________________*/
 .forum{
-  grid-column-start: mandag-start;
-  grid-row: time1-start / time2-end;
+  grid-column-start: d1-start;
+  grid-row: t1-start / t2-end;
 }
 
 .programfag1-2{
-  grid-column-start: mandag-start;
-  grid-row: time3-start / time4-end;
+  grid-column-start: d1-start;
+  grid-row: t3-start / t4-end;
 }
 
 .engelsk1-3{
-  grid-column-start: mandag-start;
-  grid-row: time5-start / time7-end;
+  grid-column-start: d1-start;
+  grid-row: t5-start / t7-end;
 }
 
 .programfag3-4{
-  grid-column-start: mandag-start;
-  grid-row: time8-start / time9-end;
+  grid-column-start: d1-start;
+  grid-row: t8-start / t9-end;
 }
 
-/*_________________Tirsdags-økter_________________*/
+/*_________________D2s-økter_________________*/
 .ig{
-  grid-column-start: tirsdag-start;
-  grid-row: time1-start / time4-end;
+  grid-column-start: d2-start;
+  grid-row: t1-start / t4-end;
 }
 
 .matte1{
-  grid-column-start: tirsdag-start;
-  grid-row: time5-start / time5-end;
+  grid-column-start: d2-start;
+  grid-row: t5-start / t5-end;
 }
 
 .programfag5-6{
-  grid-column-start: tirsdag-start;
-  grid-row: time6-start / time7-end;
+  grid-column-start: d2-start;
+  grid-row: t6-start / t7-end;
 }
 
-/*_________________Onsdag-økter_________________*/
+/*_________________d3-økter_________________*/
 .matte2-3{
-  grid-column-start: onsdag-start;
-  grid-row: time3-start / time4-end;
+  grid-column-start: d3-start;
+  grid-row: t3-start / t4-end;
 }
 
 .engelsk4-5{
-  grid-column-start: onsdag-start;
-  grid-row: time5-start / time6-end;
+  grid-column-start: d3-start;
+  grid-row: t5-start / t6-end;
 }
 
 .programfag7-8{
-  grid-column-start: onsdag-start;
-  grid-row: time7-start / time8-end;
+  grid-column-start: d3-start;
+  grid-row: t7-start / t8-end;
 }
 
-/*_________________Torsdag-økter_________________*/
+/*_________________d4-økter_________________*/
 .yff1-4{
-  grid-column-start: torsdag-start;
-  grid-row: time1-start / time4-end;
+  grid-column-start: d4-start;
+  grid-row: t1-start / t4-end;
 }
 
 .midttime{
-  grid-column-start: torsdag-start;
-  grid-row: time5-start / time5-end;
+  grid-column-start: d4-start;
+  grid-row: t5-start / t5-end;
 }
 
 .yff5-6{
-  grid-column-start: torsdag-start;
-  grid-row: time6-start / time7-end;
+  grid-column-start: d4-start;
+  grid-row: t6-start / t7-end;
 }
 
-/*_________________fredag-økter_________________*/
+/*_________________d5-økter_________________*/
 .programfag9-12{
-  grid-column-start: fredag-start;
-  grid-row: time1-start / time4-end;
+  grid-column-start: d5-start;
+  grid-row: t1-start / t4-end;
 }
 
 .naturfag{
-  grid-column-start: fredag-start;
-  grid-row: time5-start / time6-end;
+  grid-column-start: d5-start;
+  grid-row: t5-start / t6-end;
 }
 
 .kroppsoeving{
-  grid-column-start: fredag-start;
-  grid-row: time7-start / time8-end;
+  grid-column-start: d5-start;
+  grid-row: t7-start / t8-end;
 }
 
 /*_________________         _________________*/
 
 .tittel{
-  grid-column: tirsdag-start / torsdag-end;
-  grid-row: time9-start / time9-end;
+  grid-column: d2-start / d4-end;
+  grid-row: t9-start / t9-end;
   line-height: 1.2;
 }
 
 .uketall{
-  grid-column: torsdag-start / torsdag-end;
-  grid-row: time9-start / time9-end;
+  grid-column: d4-start / d4-end;
+  grid-row: t9-start / t9-end;
   line-height: 1.2;
 }
