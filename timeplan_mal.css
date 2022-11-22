@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+/*_________________ Skrifttype _________________*/
+
+h1{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+  color: #A8A8A8;
+  font-size: 4rem;
+  text-align: center;
+} /* Tittel */
+
+h2{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  color: #A8A8A8;
+  font-size: 2rem;
+  text-align: center;
+} /* Dager */
+
+h3{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+  color: #A8A8A8;
+  font-size: 1.6rem;
+  text-align: center;
+} /* Fagtittel */
+
+h4{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+  color: #A8A8A8;
+  font-size: 1.4rem;
+  text-align: center;
+} /* Dato */
+
+h5{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #A8A8A8;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2%;
+} /* Fagtittel */
+
+h6{
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  color: #A8A8A8;
+  font-size: 0.8rem;
+  text-align: center;
+} /* Fagtittel */
+
+p{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #A8A8A8;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/*_________________ Fargekoder _________________*/
+body{
+  background-color: #14151F;
+}
+
+.farge-engelsk{
+  color: #E68D2F;
+}
+
+.farge-matte{
+  color: #DBB700;
+}
+
+.farge-naturfag{
+  color: #A6BE54;
+}
+
+.farge-kroppsoeving{
+  color: #35B06F;
+}
+
+.farge-programfag{
+  color: #339BC9;
+}
+
+.farge-yff{
+ color: #6680E6;
+}
+
+.farge-ig {
+  color: #B18BF4;
+}
+
+.farge-forum {
+  color: #C973A4;
+}
+
+
+/*_________________ Grid- og Flex-layout _________________*/
+.timeplan{
+  display: grid;
+  grid-template-columns: [mandag-start] 1fr [mandag-end tirsdag-start] 1fr [tirsdag-end onsdag-start] 1fr [onsdag-end torsdag-start] 1fr [torsdag-end fredag-start] 1fr [fredag-end];
+  grid-template-rows: [header-start] 0.2fr [header-end overskrift-start] 0.6fr [oversktrift-end time1-start] 1fr [time1-end time2-start] 1fr [time2-end time3-start] 1fr [time3-end time4-start] 1fr [time4-end pause-start] 0.1fr [pause-end time5-start] 1fr [time5-end time6-start] 1fr [time6-end time7-start] 1fr [time7-end time8-start] 1fr [time8-end time9-start] 1fr [time9-end footer-start] 0.1fr [footer-end];
+  gap: 10px;
+  height: 100%;
+  margin-inline: 2%;
+}
+
+
+/* Prøv ut en annen relativ metode for border radius*/
+.ramme{
+  background-color: #262738;
+  border-color: #57637A;
+  border-radius: 2rem 0.4rem 2rem 0.4rem;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 6px;
+  border-left-width: 6px;
+  border-style: solid;
+  padding: 3%;
+}
+
+.fagtittel{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+}
+
+.faginnhold{
+  margin-inline: 6%;
+}
+
+.gruppe-xy{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+/*_________________ dager-økter _________________*/
+.mandag{
+  grid-column: mandag-start / mandag-end;
+  grid-row: overskrift-start / overskrift-end;
+}
+
+.tirsdag{
+  grid-column: tirsdag-start / tirsdag-end;
+  grid-row: overskrift-start / overskrift-end;
+}
+
+.onsdag{
+  grid-column: onsdag-start / onsdag-end;
+  grid-row: overskrift-start / overskrift-end;
+}
+
+.torsdag{
+  grid-column: torsdag-start / torsdag-end;
+  grid-row: overskrift-start / overskrift-end;
+}
+
+.fredag{
+  grid-column: fredag-start / fredag-end;
+  grid-row: overskrift-start / overskrift-end;
+}
+
+/*_________________ Mandags-økter _________________*/
+.forum{
+  grid-column-start: mandag-start;
+  grid-row: time1-start / time2-end;
+}
+
+.programfag1-2{
+  grid-column-start: mandag-start;
+  grid-row: time3-start / time4-end;
+}
+
+.engelsk1-3{
+  grid-column-start: mandag-start;
+  grid-row: time5-start / time7-end;
+}
+
+.programfag3-4{
+  grid-column-start: mandag-start;
+  grid-row: time8-start / time9-end;
+}
+
+/*_________________Tirsdags-økter_________________*/
+.ig{
+  grid-column-start: tirsdag-start;
+  grid-row: time1-start / time4-end;
+}
+
+.matte1{
+  grid-column-start: tirsdag-start;
+  grid-row: time5-start / time5-end;
+}
+
+.programfag5-6{
+  grid-column-start: tirsdag-start;
+  grid-row: time6-start / time7-end;
+}
+
+/*_________________Onsdag-økter_________________*/
+.matte2-3{
+  grid-column-start: onsdag-start;
+  grid-row: time3-start / time4-end;
+}
+
+.engelsk4-5{
+  grid-column-start: onsdag-start;
+  grid-row: time5-start / time6-end;
+}
+
+.programfag7-8{
+  grid-column-start: onsdag-start;
+  grid-row: time7-start / time8-end;
+}
+
+/*_________________Torsdag-økter_________________*/
+.yff1-4{
+  grid-column-start: torsdag-start;
+  grid-row: time1-start / time4-end;
+}
+
+.midttime{
+  grid-column-start: torsdag-start;
+  grid-row: time5-start / time5-end;
+}
+
+.yff5-6{
+  grid-column-start: torsdag-start;
+  grid-row: time6-start / time7-end;
+}
+
+/*_________________fredag-økter_________________*/
+.programfag9-12{
+  grid-column-start: fredag-start;
+  grid-row: time1-start / time4-end;
+}
+
+.naturfag{
+  grid-column-start: fredag-start;
+  grid-row: time5-start / time6-end;
+}
+
+.kroppsoeving{
+  grid-column-start: fredag-start;
+  grid-row: time7-start / time8-end;
+}
+
+/*_________________         _________________*/
+
+.tittel{
+  grid-column: tirsdag-start / torsdag-end;
+  grid-row: time9-start / time9-end;
+  line-height: 1.2;
+}
+
+.uketall{
+  grid-column: torsdag-start / torsdag-end;
+  grid-row: time9-start / time9-end;
+  line-height: 1.2;
+}
