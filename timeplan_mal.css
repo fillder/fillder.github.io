@@ -11,7 +11,7 @@ html, body {
 
 h1{
   font-family: 'Roboto Slab', serif;
-  font-weight: 500;
+  font-weight: 300;
   color: #A8A8A8;
   font-size: 3rem;
 } /* Tittel */
@@ -106,27 +106,20 @@ body{
 
 /*_________________ Tittel og uketall _________________*/
 header{
-  display: grid;
-  grid-column: d2-start / d4-end;
-  grid-row: i-start / i-end;
-  place-content: center;
-}
-
-.uketall{
-  display: grid;
-  grid-column: d1-start / d1-end;
-  grid-row: i-start / i-end;
-  align-content: center;
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  margin-inline: 2%;
 }
 
 /*_________________ Grid- og Flex-layout _________________*/
 .timeplan{
   display: grid;
   grid-template-columns: [d1-start] 1fr [d1-end d2-start] 1fr [d2-end d3-start] 1fr [d3-end d4-start] 1fr [d4-end d5-start] 1fr [d5-end];
-  grid-template-rows: [i-start] 0.8fr [i-end ii-start] 0.8fr [ii-end t1-start] 1fr [t1-end t2-start] 1fr [t2-end t3-start] 1fr [t3-end t4-start] 1fr [t4-end P-start] 0.05fr [p-end t5-start] 1fr [t5-end t6-start] 1fr [t6-end t7-start] 1fr [t7-end t8-start] 1fr [t8-end t9-start] 1fr [t9-end f-start] 0.1fr [f-end];
+  grid-template-rows: [i-start] 0.8fr [i-end t1-start] 1fr [t1-end t2-start] 1fr [t2-end t3-start] 1fr [t3-end t4-start] 1fr [t4-end P-start] 0.05fr [p-end t5-start] 1fr [t5-end t6-start] 1fr [t6-end t7-start] 1fr [t7-end t8-start] 1fr [t8-end t9-start] 1fr [t9-end f-start] 0.1fr [f-end];
   row-gap: 0.5%;
-  height: 100%;
+  height: 92vh;
   margin-inline: 2%;
 }
 
@@ -169,27 +162,27 @@ header{
 /*_________________ dager-økter _________________*/
 .d1{
   grid-column: d1-start / d1-end;
-  grid-row: ii-start / ii-start-end;
+  grid-row: i-start / i-start-end;
 }
 
 .d2{
   grid-column: d2-start / d2-end;
-  grid-row: ii-start / ii-start-end;
+  grid-row: i-start / i-start-end;
 }
 
 .d3{
   grid-column: d3-start / d3-end;
-  grid-row: ii-start / ii-start-end;
+  grid-row: i-start / i-start-end;
 }
 
 .d4{
   grid-column: d4-start / d4-end;
-  grid-row: ii-start / ii-start-end;
+  grid-row: i-start / i-start-end;
 }
 
 .d5{
   grid-column: d5-start / d5-end;
-  grid-row: ii-start / ii-start-end;
+  grid-row: i-start / i-start-end;
 }
 
 /*_________________ D1s-økter _________________*/
