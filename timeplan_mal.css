@@ -7,6 +7,10 @@ html, body {
   height: 100%;
 }
 
+body{
+  height: 100vh;
+}
+
 /*_________________ Skrifttype _________________*/
 
 h1{
@@ -109,20 +113,111 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 8vh;
+  height: 6vh;
   margin-inline: 2%;
+}
+
+.ukedager{
+  /* display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-content: center; */
+  display: flex;
+  justify-content: space-around;
+  height: 4vh;
+  margin-inline: 2%;
+  min-width: 1430px;
 }
 
 /*_________________ Grid- og Flex-layout _________________*/
 .timeplan{
   display: grid;
-  grid-template-columns: [d1-start] 1fr [d1-end d2-start] 1fr [d2-end d3-start] 1fr [d3-end d4-start] 1fr [d4-end d5-start] 1fr [d5-end];
-  grid-template-rows: [i-start] 0.8fr [i-end t1-start] 1fr [t1-end t2-start] 1fr [t2-end t3-start] 1fr [t3-end t4-start] 1fr [t4-end P-start] 0.05fr [p-end t5-start] 1fr [t5-end t6-start] 1fr [t6-end t7-start] 1fr [t7-end t8-start] 1fr [t8-end t9-start] 1fr [t9-end f-start] 0.1fr [f-end];
-  row-gap: 0.5%;
-  height: 92vh;
+  gap: 0.5rem;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-areas: 
+    'fr ig    y1 p5'
+    'fr ig    y1 p5'
+    'p1 ig m2 y1 p5'
+    'p1 ig m2 mt p5'
+    'e1 m1 e2 y2 nt'
+    'e1 p3 e2 y2 nt'
+    'e1 p3 p4    ko'
+    'p2    p4    ko'
+    'p2'; 
+  height: 90vh;
   margin-inline: 2%;
+  }
+
+/*_________________ Mandag _________________*/
+.forum{
+  grid-area: fr;
 }
 
+.programfag1{
+  grid-area: p1;
+}
+
+.engelsk1{  
+  grid-area: e1;
+}
+
+.programfag2{
+  grid-area: p2;
+}
+
+/*_________________ tirsdag _________________*/
+.ig{
+  grid-area: ig;
+}
+
+.matte1{
+  grid-area: m1;
+}
+
+.programfag3{
+  grid-area: p3;
+}
+
+/*_________________ onsdag _________________*/
+.matte2{
+  grid-area: m2;
+}
+
+.engelsk2{
+  grid-area: e2;
+}
+
+.programfag4{
+  grid-area: p4;
+}
+
+/*_________________ torsdag _________________*/
+.yff1{
+  grid-area: y1;
+}
+
+.midttime{
+  grid-area: mt;
+}
+
+.yff2{
+  grid-area: y2;
+}
+
+/*_________________ fredag _________________*/
+.programfag5{
+  grid-area: p5;
+}
+
+.naturfag{
+  grid-area: nt;
+}
+
+.kroppsoeving{
+  grid-area: ko;
+}
+
+/*_________________ innhold _________________*/
 .ramme{
   background-color: #262738;
   border-color: #57637A;
@@ -133,7 +228,6 @@ header{
   border-left-width: 6px;
   border-style: solid;
   padding: 3%;
-  margin-inline: 1%;
   min-width: 280px;
 }
 
@@ -159,123 +253,11 @@ header{
   min-width: 60px;
 }
 
-/*_________________ dager-økter _________________*/
-.d1{
-  grid-column: d1-start / d1-end;
-  grid-row: i-start / i-start-end;
-}
-
-.d2{
-  grid-column: d2-start / d2-end;
-  grid-row: i-start / i-start-end;
-}
-
-.d3{
-  grid-column: d3-start / d3-end;
-  grid-row: i-start / i-start-end;
-}
-
-.d4{
-  grid-column: d4-start / d4-end;
-  grid-row: i-start / i-start-end;
-}
-
-.d5{
-  grid-column: d5-start / d5-end;
-  grid-row: i-start / i-start-end;
-}
-
-/*_________________ D1s-økter _________________*/
-.forum{
-  grid-column-start: d1-start;
-  grid-row: t1-start / t2-end;
-}
-
-.programfag1-2{
-  grid-column-start: d1-start;
-  grid-row: t3-start / t4-end;
-}
-
-.engelsk1-3{
-  grid-column-start: d1-start;
-  grid-row: t5-start / t7-end;
-}
-
-.programfag3-4{
-  grid-column-start: d1-start;
-  grid-row: t8-start / t9-end;
-}
-
-/*_________________D2s-økter_________________*/
-.ig{
-  grid-column-start: d2-start;
-  grid-row: t1-start / t4-end;
-}
-
-.matte1{
-  grid-column-start: d2-start;
-  grid-row: t5-start / t5-end;
-}
-
-.programfag5-6{
-  grid-column-start: d2-start;
-  grid-row: t6-start / t7-end;
-}
-
-/*_________________d3-økter_________________*/
-.matte2-3{
-  grid-column-start: d3-start;
-  grid-row: t3-start / t4-end;
-}
-
-.engelsk4-5{
-  grid-column-start: d3-start;
-  grid-row: t5-start / t6-end;
-}
-
-.programfag7-8{
-  grid-column-start: d3-start;
-  grid-row: t7-start / t8-end;
-}
-
-/*_________________d4-økter_________________*/
-.yff1-4{
-  grid-column-start: d4-start;
-  grid-row: t1-start / t4-end;
-}
-
-.midttime{
-  grid-column-start: d4-start;
-  grid-row: t5-start / t5-end;
-}
-
-.yff5-6{
-  grid-column-start: d4-start;
-  grid-row: t6-start / t7-end;
-}
-
-/*_________________d5-økter_________________*/
-.programfag9-12{
-  grid-column-start: d5-start;
-  grid-row: t1-start / t4-end;
-}
-
-.naturfag{
-  grid-column-start: d5-start;
-  grid-row: t5-start / t6-end;
-}
-
-.kroppsoeving{
-  grid-column-start: d5-start;
-  grid-row: t7-start / t8-end;
-}
-
 /*_________________ periode _________________*/
 
-.periode{
+/*.periode{
   display: grid;
   grid-column: d2-start / d4-end;
   grid-row: t9-start / t9-end;
   place-content: center;
-}
-
+}*/
