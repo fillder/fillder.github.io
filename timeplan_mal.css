@@ -8,7 +8,7 @@ html, body {
 }
 
 body{
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 /*______ Skrifttype ______*/
@@ -130,22 +130,27 @@ header{
 
 .mandag{
   grid-area: d1;
+  min-width: 280px;
 }
 
 .tirsdag{
   grid-area: d2;
+  min-width: 280px;
 }
 
 .onsdag{
   grid-area: d3;
+  min-width: 280px;
 }
 
 .torsdag{
   grid-area: d4;
+  min-width: 280px;
 }
 
 .fredag{
   grid-area: d5;
+  min-width: 280px;
 }
 
 /*______ Timeplan ______*/
