@@ -11,7 +11,7 @@ body{
   min-height: 100vh;
 }
 
-/*_________________ Skrifttype _________________*/
+/*______ Skrifttype ______*/
 
 h1{
   font-family: 'Roboto Slab', serif;
@@ -66,11 +66,11 @@ p{
   font-weight: 300;
   line-height: 1.5;
   color: #A8A8A8;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-align: center;
 }
 
-/*_________________ Fargekoder _________________*/
+/*______ Fargekoder ______*/
 body{
   background-color: #14151F;
 }
@@ -108,7 +108,7 @@ body{
 }
 
 
-/*_________________ Tittel og uketall _________________*/
+/*______ Grid- og Flex-layout ______*/
 header{
   display: flex;
   justify-content: space-between;
@@ -117,38 +117,58 @@ header{
   margin-inline: 2%;
 }
 
+/*______ ukedager ______*/
 .ukedager{
-  /* display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  place-content: center; */
-  display: flex;
-  justify-content: space-around;
-  height: 4vh;
+  display: grid;
+  gap: 0.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    'd1 d2 d3 d4 d5'; 
+  height: 6vh;
   margin-inline: 2%;
-  min-width: 1430px;
 }
 
-/*_________________ Grid- og Flex-layout _________________*/
+.mandag{
+  grid-area: d1;
+}
+
+.tirsdag{
+  grid-area: d2;
+}
+
+.onsdag{
+  grid-area: d3;
+}
+
+.torsdag{
+  grid-area: d4;
+}
+
+.fredag{
+  grid-area: d5;
+}
+
+/*______ Timeplan ______*/
 .timeplan{
   display: grid;
   gap: 0.5rem;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
-  grid-template-areas: 
-    'fr ig    y1 p5'
-    'fr ig    y1 p5'
+  grid-template-areas:
+    'fr ig .. y1 p5'
+    'fr ig .. y1 p5'
     'p1 ig m2 y1 p5'
     'p1 ig m2 mt p5'
     'e1 m1 e2 y2 nt'
     'e1 p3 e2 y2 nt'
-    'e1 p3 p4    ko'
-    'p2    p4    ko'
-    'p2'; 
-  height: 90vh;
+    'e1 p3 p4 .. ko'
+    'p2 .. p4 .. ko'
+    'p2 .. pe .. ..'; 
+  height: 88vh;
   margin-inline: 2%;
-  }
+}
 
-/*_________________ Mandag _________________*/
+/* Mandag */
 .forum{
   grid-area: fr;
 }
@@ -165,7 +185,7 @@ header{
   grid-area: p2;
 }
 
-/*_________________ tirsdag _________________*/
+/* tirsdag */
 .ig{
   grid-area: ig;
 }
@@ -178,7 +198,7 @@ header{
   grid-area: p3;
 }
 
-/*_________________ onsdag _________________*/
+/* onsdag */
 .matte2{
   grid-area: m2;
 }
@@ -191,7 +211,7 @@ header{
   grid-area: p4;
 }
 
-/*_________________ torsdag _________________*/
+/* torsdag */
 .yff1{
   grid-area: y1;
 }
@@ -204,7 +224,7 @@ header{
   grid-area: y2;
 }
 
-/*_________________ fredag _________________*/
+/* fredag */
 .programfag5{
   grid-area: p5;
 }
@@ -217,7 +237,12 @@ header{
   grid-area: ko;
 }
 
-/*_________________ innhold _________________*/
+/*______ periode ______*/
+.periode{
+  grid-area: pe;
+}
+
+/*______ innhold ______*/
 .ramme{
   background-color: #262738;
   border-color: #57637A;
@@ -252,12 +277,3 @@ header{
   min-height: 30px;
   min-width: 60px;
 }
-
-/*_________________ periode _________________*/
-
-/*.periode{
-  display: grid;
-  grid-column: d2-start / d4-end;
-  grid-row: t9-start / t9-end;
-  place-content: center;
-}*/
