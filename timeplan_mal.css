@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 html, body {
@@ -9,6 +10,8 @@ html, body {
 
 body{
   max-height: 100vh;
+  color: #A8A8A8;
+  background-color: #14151F;
 }
 
 /*______ Skrifttype ______*/
@@ -16,14 +19,13 @@ body{
 h1{
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
-  color: #A8A8A8;
+
   font-size: 3rem;
 } /* Tittel */
 
 h2{
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
-  color: #A8A8A8;
   font-size: 2rem;
   text-align: center;
 } /* Dager */
@@ -31,7 +33,6 @@ h2{
 h3{
   font-family: 'Roboto Slab', serif;
   font-weight: 500;
-  color: #A8A8A8;
   font-size: 1.6rem;
   text-align: center;
 } /* Fagtittel */
@@ -39,7 +40,6 @@ h3{
 h4{
   font-family: 'Roboto Slab', serif;
   font-weight: 500;
-  color: #A8A8A8;
   font-size: 1.4rem;
   text-align: center;
 } /* Dato */
@@ -47,7 +47,6 @@ h4{
 h5{
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  color: #A8A8A8;
   font-size: 1.2rem;
   text-align: center;
   margin-bottom: 2%;
@@ -56,7 +55,6 @@ h5{
 h6{
   font-family: 'Roboto Mono', monospace;
   font-weight: 500;
-  color: #A8A8A8;
   font-size: 0.8rem;
   text-align: center;
 } /* Fagtittel */
@@ -65,16 +63,11 @@ p{
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   line-height: 1.5;
-  color: #A8A8A8;
   font-size: 0.9rem;
   text-align: center;
 }
 
 /*______ Fargekoder ______*/
-body{
-  background-color: #14151F;
-}
-
 .farge-engelsk{
   color: #E68D2F;
 }
@@ -113,8 +106,11 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 6vh;
   margin-inline: 2%;
+  height: 6vh;
+  width: 96%;
+  max-width: 1900px;
+  margin-inline: auto;
 }
 
 /*______ ukedager ______*/
@@ -124,8 +120,11 @@ header{
   grid-auto-columns: 1fr;
   grid-template-areas:
     'd1 d2 d3 d4 d5'; 
-  height: 6vh;
   margin-inline: 2%;
+  height: 6vh;
+  width: 96%;
+  max-width: 1900px;
+  margin-inline: auto;
 }
 
 .mandag{
@@ -158,7 +157,7 @@ header{
   display: grid;
   gap: 0.5rem;
   grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
+  grid-auto-rows: minmax(120px, auto);
   grid-template-areas:
     'fr ig .. y1 p5'
     'fr ig .. y1 p5'
@@ -170,8 +169,33 @@ header{
     'p2 .. p4 .. ko'
     'p2 .. pe .. ..'; 
   height: 88vh;
-  margin-inline: 2%;
+  width: 96%;
+  max-width: 1900px;
+  margin-inline: auto;
 }
+
+/* @media (max-width: 1400px){
+  .timeplan{
+    display: grid;
+    gap: 0.5rem;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: minmax(120px, auto);
+    grid-template-areas:
+      'fr ig .. y1 p5'
+      'fr ig .. y1 p5'
+      'p1 ig m2 y1 p5'
+      'p1 ig m2 mt p5'
+      'e1 m1 e2 y2 nt'
+      'e1 p3 e2 y2 nt'
+      'e1 p3 p4 .. ko'
+      'p2 .. p4 .. ko'
+      'p2 .. pe .. ..'; 
+    height: 88vh;
+    width: 96%;
+    max-width: 1900px;
+    margin-inline: auto;
+  }
+} */
 
 /* Mandag */
 .forum{
