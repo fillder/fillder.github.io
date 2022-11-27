@@ -63,7 +63,7 @@ p{
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   line-height: 1.5;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -162,10 +162,10 @@ header{
     'fr ig .. y1 p5'
     'fr ig .. y1 p5'
     'p1 ig m2 y1 p5'
-    'p1 ig m2 mt p5'
-    'e1 m1 e2 y2 nt'
+    'p1 ig m2 y1 p5'
+    'e1 m1 e2 mt nt'
     'e1 p3 e2 y2 nt'
-    'e1 p3 p4 .. ko'
+    'e1 p3 p4 y2 ko'
     'p2 .. p4 .. ko'
     'p2 .. pe .. ..'; 
   height: 88vh;
@@ -269,6 +269,9 @@ header{
 /*______ periode ______*/
 .periode{
   grid-area: pe;
+  line-height: 1;
+  align-self: center;
+  padding-bottom: 10%;
 }
 
 /*______ innhold ______*/
@@ -305,4 +308,8 @@ header{
 .ikon{
   min-height: 30px;
   min-width: 60px;
+}
+
+.skolelogo{
+  width: 3.5%;
 }
