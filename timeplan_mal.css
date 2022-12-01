@@ -1,17 +1,26 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-html, body {
-  height: 100%;
+*{
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html{
+  color-scheme: dark light;
 }
 
 body{
-  max-height: 100vh;
+  min-height: 100vh;
   color: #A8A8A8;
   background-color: #14151F;
+}
+
+img, picture, svg, video{
+  display: block;
+  max-width: 100%;
 }
 
 /*______ Skrifttype ______*/
@@ -19,7 +28,6 @@ body{
 h1{
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
-
   font-size: 3rem;
 } /* Tittel */
 
@@ -92,11 +100,11 @@ p{
  color: #6680E6;
 }
 
-.farge-ig {
+.farge-ig{
   color: #B18BF4;
 }
 
-.farge-forum {
+.farge-forum{
   color: #C973A4;
 }
 
@@ -113,91 +121,66 @@ header{
   margin-inline: auto;
 }
 
-/*______ ukedager ______*/
-.ukedager{
-  display: grid;
-  gap: 0.5rem;
-  grid-auto-columns: 1fr;
-  grid-template-areas:
-    'd1 d2 d3 d4 d5'; 
-  margin-inline: 2%;
-  height: 6vh;
-  width: 96%;
-  max-width: 1900px;
-  margin-inline: auto;
-}
-
-.mandag{
-  grid-area: d1;
-  min-width: 280px;
-}
-
-.tirsdag{
-  grid-area: d2;
-  min-width: 280px;
-}
-
-.onsdag{
-  grid-area: d3;
-  min-width: 280px;
-}
-
-.torsdag{
-  grid-area: d4;
-  min-width: 280px;
-}
-
-.fredag{
-  grid-area: d5;
-  min-width: 280px;
-}
-
-/*______ Timeplan ______*/
-.timeplan{
-  display: grid;
-  gap: 0.5rem;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: minmax(120px, auto);
-  grid-template-areas:
-    'fr ig .. y1 p5'
-    'fr ig .. y1 p5'
-    'p1 ig m2 y1 p5'
-    'p1 ig m2 y1 p5'
-    'e1 m1 e2 mt nt'
-    'e1 p3 e2 y2 nt'
-    'e1 p3 p4 y2 ko'
-    'p2 .. p4 .. ko'
-    'p2 .. pe .. ..'; 
-  height: 88vh;
-  width: 96%;
-  max-width: 1900px;
-  margin-inline: auto;
-}
-
-/* @media (max-width: 1400px){
-  .timeplan{
+@media (orientation: landscape){
+  main{
     display: grid;
     gap: 0.5rem;
     grid-auto-columns: 1fr;
     grid-auto-rows: minmax(120px, auto);
     grid-template-areas:
-      'fr ig .. y1 p5'
-      'fr ig .. y1 p5'
-      'p1 ig m2 y1 p5'
-      'p1 ig m2 mt p5'
-      'e1 m1 e2 y2 nt'
-      'e1 p3 e2 y2 nt'
-      'e1 p3 p4 .. ko'
-      'p2 .. p4 .. ko'
-      'p2 .. pe .. ..'; 
-    height: 88vh;
+      'd1 d2 d3 d4 d5' 
+      'fr ig .. y1 p4'
+      'fr ig .. y1 p4'
+      'p1 ig m2 y1 p4'
+      'p1 ig m2 y1 p4'
+      'e1 m1 e2 mt nt'
+      'e1 p2 e2 y2 nt'
+      'e1 p2 p3 y2 ko'
+      '.. .. p3 .. ko'; 
+    height: 94vh;
     width: 96%;
-    max-width: 1900px;
+    max-width: 2000px;
+    margin-inline: auto;
+    padding-bottom: 2%;
+  }
+}
+
+@media (orientation: portrait){
+  main{
+    display: grid;
+    gap: 0.5rem;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: minmax(120px, auto);
+    grid-template-areas:
+      'd1 d2 d3'
+      'fr ig ..'
+      'fr ig ..'
+      'p1 ig m2'
+      'p1 ig m2'
+      'e1 m1 e2'
+      'e1 p2 e2'
+      'e1 p2 p3'
+      '.. .. p3' 
+      'd4 xx d5'
+      'y1 xx p4'
+      'y1 xx p4'
+      'y1 xx p4'
+      'mt xx p4'
+      'y2 xx nt'
+      'y2 xx nt'
+      '.. xx ko'
+      '.. xx ko';
+    width: 96%;
     margin-inline: auto;
   }
-} */
+}
 
 /* Mandag */
+.mandag{
+  grid-area: d1;
+  min-width: 280px;
+}
+
 .forum{
   grid-area: fr;
 }
@@ -210,11 +193,12 @@ header{
   grid-area: e1;
 }
 
-.programfag2{
-  grid-area: p2;
+/* tirsdag */
+.tirsdag{
+  grid-area: d2;
+  min-width: 280px;
 }
 
-/* tirsdag */
 .ig{
   grid-area: ig;
 }
@@ -223,11 +207,16 @@ header{
   grid-area: m1;
 }
 
-.programfag3{
-  grid-area: p3;
+.programfag2{
+  grid-area: p2;
 }
 
 /* onsdag */
+.onsdag{
+  grid-area: d3;
+  min-width: 280px;
+}
+
 .matte2{
   grid-area: m2;
 }
@@ -236,43 +225,109 @@ header{
   grid-area: e2;
 }
 
-.programfag4{
-  grid-area: p4;
+.programfag3{
+  grid-area: p3;
 }
 
-/* torsdag */
-.yff1{
-  grid-area: y1;
+@media (orientation: landscape){
+  /* torsdag */
+  .torsdag{
+    grid-area: d4;
+    min-width: 280px;
+  }
+
+  .yff1{
+    grid-area: y1;
+  }
+
+  .midttime{
+    grid-area: mt;
+  }
+
+  .yff2{
+    grid-area: y2;
+  }
+
+  /* fredag */
+  .fredag{
+    grid-area: d5;
+    min-width: 280px;
+  }
+
+  .programfag4{
+    grid-area: p4;
+  }
+
+  .naturfag{
+    grid-area: nt;
+  }
+
+  .kroppsoeving{
+    grid-area: ko;
+  }
 }
 
-.midttime{
-  grid-area: mt;
-}
+@media (orientation: portrait){
+  /* torsdag */
+  .torsdag{
+    grid-area: d4;
+    min-width: 280px;
+    margin-left: 51%;
+    margin-right: -51%;
+  }
 
-.yff2{
-  grid-area: y2;
-}
+  .yff1{
+    grid-area: y1;
+    margin-left: 51%;
+    margin-right: -51%;
+  }
 
-/* fredag */
-.programfag5{
-  grid-area: p5;
-}
+  .midttime{
+    grid-area: mt;
+    margin-left: 51%;
+    margin-right: -51%;
+  }
 
-.naturfag{
-  grid-area: nt;
-}
+  .yff2{
+    grid-area: y2;
+    margin-left: 51%;
+    margin-right: -51%;
+  }
 
-.kroppsoeving{
-  grid-area: ko;
+  /* fredag */
+  .fredag{
+    grid-area: d5;
+    min-width: 280px;
+    margin-left: -51%;
+    margin-right: 51%;
+  }
+
+  .programfag4{
+    grid-area: p4;
+    margin-left: -51%;
+    margin-right: 51%;
+  }
+
+  .naturfag{
+    grid-area: nt;
+    margin-left: -51%;
+    margin-right: 51%;
+  }
+
+  .kroppsoeving{
+    grid-area: ko;
+    margin-left: -51%;
+    margin-right: 51%;
+  }
 }
 
 /*______ periode ______*/
-.periode{
+/* .periode{
   grid-area: pe;
   line-height: 1;
   align-self: center;
   padding-bottom: 10%;
-}
+} */
 
 /*______ innhold ______*/
 .ramme{
