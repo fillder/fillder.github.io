@@ -1,0 +1,107 @@
+/*______ Skrifttype ______*/
+h1{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-size: 3rem;
+} /* Tittel */
+
+h2{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+} /* Dager */
+
+h3{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-align: center;
+} /* Fagtittel */
+
+h4{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-align: center;
+} /* Dato */
+
+h5{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 2%;
+} /* Fagtittel */
+
+h6{
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-align: center;
+} /* Fagtittel */
+
+p{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/*______ Fargekoder ______*/
+.farge-engelsk{
+  color: #E68D2F;
+}
+
+.farge-matte{
+  color: #DBB700;
+}
+
+.farge-naturfag{
+  color: #A6BE54;
+}
+
+.farge-kroppsoeving{
+  color: #35B06F;
+}
+
+.farge-programfag{
+  color: #339BC9;
+}
+
+.farge-yff{
+ color: #6680E6;
+}
+
+.farge-ig{
+  color: #B18BF4;
+}
+
+.farge-forum{
+  color: #C973A4;
+}
+
+/*______ boksdesign ______*/
+.ramme{
+  background-color: #262738;
+  border-color: #57637A;
+  border-radius: 1.8rem 0.4rem 1.8rem 0.4rem;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 6px;
+  border-left-width: 6px;
+  border-style: solid;
+  padding: 3%;
+  min-width: 280px;
+}
+
+/*______ ikoner og bilder ______*/
+.ikon{
+  min-height: 30px;
+  min-width: 60px;
+}
+
+.skolelogo{
+  width: 2%;
+}

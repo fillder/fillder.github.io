@@ -1,3 +1,4 @@
+/*______ Universelle instillinger ______*/
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -6,6 +7,10 @@
   margin: 0;
   padding: 0;
   font: inherit;
+}
+
+html, body{
+  height: 100%;
 }
 
 html{
@@ -23,99 +28,12 @@ img, picture, svg, video{
   max-width: 100%;
 }
 
-/*______ Skrifttype ______*/
-
-h1{
-  font-family: 'Roboto Slab', serif;
-  font-weight: 300;
-  font-size: 3rem;
-} /* Tittel */
-
-h2{
-  font-family: 'Roboto Slab', serif;
-  font-weight: 700;
-  font-size: 2rem;
-  text-align: center;
-} /* Dager */
-
-h3{
-  font-family: 'Roboto Slab', serif;
-  font-weight: 500;
-  font-size: 1.6rem;
-  text-align: center;
-} /* Fagtittel */
-
-h4{
-  font-family: 'Roboto Slab', serif;
-  font-weight: 500;
-  font-size: 1.4rem;
-  text-align: center;
-} /* Dato */
-
-h5{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 1.2rem;
-  text-align: center;
-  margin-bottom: 2%;
-} /* Fagtittel */
-
-h6{
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 500;
-  font-size: 0.8rem;
-  text-align: center;
-} /* Fagtittel */
-
-p{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  line-height: 1.5;
-  font-size: 1rem;
-  text-align: center;
-}
-
-/*______ Fargekoder ______*/
-.farge-engelsk{
-  color: #E68D2F;
-}
-
-.farge-matte{
-  color: #DBB700;
-}
-
-.farge-naturfag{
-  color: #A6BE54;
-}
-
-.farge-kroppsoeving{
-  color: #35B06F;
-}
-
-.farge-programfag{
-  color: #339BC9;
-}
-
-.farge-yff{
- color: #6680E6;
-}
-
-.farge-ig{
-  color: #B18BF4;
-}
-
-.farge-forum{
-  color: #C973A4;
-}
-
-
 /*______ Grid- og Flex-layout ______*/
 header{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-inline: 2%;
-  height: 6vh;
   width: 96%;
   max-width: 1900px;
   margin-inline: auto;
@@ -125,19 +43,19 @@ header{
   main{
     display: grid;
     gap: 0.5rem;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: minmax(120px, auto);
-    grid-template-areas:
-      'd1 d2 d3 d4 d5' 
-      'fr ig .. y1 p4'
-      'fr ig .. y1 p4'
-      'p1 ig m2 y1 p4'
-      'p1 ig m2 y1 p4'
-      'e1 m1 e2 mt nt'
-      'e1 p2 e2 y2 nt'
-      'e1 p2 p3 y2 ko'
-      '.. .. p3 .. ko'; 
-    height: 94vh;
+    grid:
+      'd1 d2 d3 d4 d5' 0.4fr
+      'fr ig .. y1 p4' 1fr
+      'fr ig .. y1 p4' 1fr
+      'p1 ig m2 y1 p4' 1fr
+      'p1 ig m2 y1 p4' 1fr
+      '.. .. .. .. ..' 0.1fr
+      'e1 m1 e2 mt nt' 1fr
+      'e1 p2 e2 y2 nt' 1fr
+      'e1 p2 p3 y2 ko' 1fr
+      '.. .. p3 .. ko' 1fr
+      /1fr 1fr 1fr 1fr 1fr;
+    height: 90vh;
     width: 96%;
     max-width: 2000px;
     margin-inline: auto;
@@ -145,35 +63,22 @@ header{
   }
 }
 
-@media (orientation: portrait){
+/* @media screen (min-width: 785), (orientation: portrait){
   main{
     display: grid;
     gap: 0.5rem;
     grid-auto-columns: 1fr;
     grid-auto-rows: minmax(120px, auto);
     grid-template-areas:
-      'd1 d2 d3'
-      'fr ig ..'
-      'fr ig ..'
-      'p1 ig m2'
-      'p1 ig m2'
-      'e1 m1 e2'
-      'e1 p2 e2'
-      'e1 p2 p3'
-      '.. .. p3' 
-      'd4 xx d5'
-      'y1 xx p4'
-      'y1 xx p4'
-      'y1 xx p4'
-      'mt xx p4'
-      'y2 xx nt'
-      'y2 xx nt'
-      '.. xx ko'
-      '.. xx ko';
+      'mandag'
+      'tirsdag'
+      'onsdag'
+      'torsdag'
+      'fredag';
     width: 96%;
     margin-inline: auto;
   }
-}
+} */
 
 /* Mandag */
 .mandag{
@@ -205,6 +110,7 @@ header{
 
 .matte1{
   grid-area: m1;
+  height: 130px;
 }
 
 .programfag2{
@@ -227,6 +133,7 @@ header{
 
 .programfag3{
   grid-area: p3;
+  margin-bottom: -20%;
 }
 
 @media (orientation: landscape){
@@ -330,19 +237,6 @@ header{
 } */
 
 /*______ innhold ______*/
-.ramme{
-  background-color: #262738;
-  border-color: #57637A;
-  border-radius: 1.8rem 0.4rem 1.8rem 0.4rem;
-  border-top-width: 2px;
-  border-right-width: 2px;
-  border-bottom-width: 6px;
-  border-left-width: 6px;
-  border-style: solid;
-  padding: 3%;
-  min-width: 280px;
-}
-
 .fagtittel{
   display: flex;
   justify-content: space-between;
@@ -358,13 +252,4 @@ header{
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-}
-
-.ikon{
-  min-height: 30px;
-  min-width: 60px;
-}
-
-.skolelogo{
-  width: 3.5%;
 }

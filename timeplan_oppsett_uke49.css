@@ -1,0 +1,250 @@
+/*______ Universelle instillinger ______*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html, body{
+  height: 100%;
+}
+
+html{
+  color-scheme: dark light;
+}
+
+body{
+  color: #A8A8A8;
+  background-color: #14151F;
+}
+
+img, picture, svg, video{
+  display: block;
+  max-width: 100%;
+}
+
+/*______ Grid- og Flex-layout ______*/
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 2%;
+  width: 96%;
+  max-width: 1900px;
+  margin-inline: auto;
+}
+
+@media (orientation: landscape){
+  main{
+    display: grid;
+    gap: 0.5rem;
+    grid:
+      'd1 d2 d3 d4 d5' 0.4fr
+      'fr ig .. y1 p4' 1fr
+      'p1 ig .. y1 p4' 1fr
+      'p1 ig m2 y1 p4' 1fr
+      'p1 ig m2 y1 p4' 1fr
+      '.. .. .. .. ..' 0.1fr
+      'e1 m1 e2 mt nt' 1fr
+      'e1 p2 e2 y2 nt' 1fr
+      'e1 p2 p3 y2 ko' 1fr
+      '.. .. p3 .. ko' 1fr
+      /1fr 1fr 1fr 1fr 1fr;
+    height: 90%;
+    width: 96%;
+    max-width: 2000px;
+    margin-inline: auto;
+    padding-bottom: 2%;
+  }
+}
+
+/* @media screen (min-width: 785), (orientation: portrait){
+  main{
+    display: grid;
+    gap: 0.5rem;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: minmax(120px, auto);
+    grid-template-areas:
+      'mandag'
+      'tirsdag'
+      'onsdag'
+      'torsdag'
+      'fredag';
+    width: 96%;
+    margin-inline: auto;
+  }
+} */
+
+/* Mandag */
+.mandag{
+  grid-area: d1;
+  min-width: 280px;
+}
+
+.forum{
+  grid-area: fr;
+}
+
+.programfag1{
+  grid-area: p1;
+}
+
+.engelsk1{  
+  grid-area: e1;
+}
+
+/* tirsdag */
+.tirsdag{
+  grid-area: d2;
+  min-width: 280px;
+}
+
+.ig{
+  grid-area: ig;
+}
+
+.matte1{
+  grid-area: m1;
+  height: 130px;
+}
+
+.programfag2{
+  grid-area: p2;
+}
+
+/* onsdag */
+.onsdag{
+  grid-area: d3;
+  min-width: 280px;
+}
+
+.matte2{
+  grid-area: m2;
+}
+
+.engelsk2{
+  grid-area: e2;
+}
+
+.programfag3{
+  grid-area: p3;
+  margin-bottom: -20%;
+}
+
+@media (orientation: landscape){
+  /* torsdag */
+  .torsdag{
+    grid-area: d4;
+    min-width: 280px;
+  }
+
+  .yff1{
+    grid-area: y1;
+  }
+
+  .midttime{
+    grid-area: mt;
+  }
+
+  .yff2{
+    grid-area: y2;
+  }
+
+  /* fredag */
+  .fredag{
+    grid-area: d5;
+    min-width: 280px;
+  }
+
+  .programfag4{
+    grid-area: p4;
+  }
+
+  .naturfag{
+    grid-area: nt;
+  }
+
+  .kroppsoeving{
+    grid-area: ko;
+  }
+}
+
+@media (orientation: portrait){
+  /* torsdag */
+  .torsdag{
+    grid-area: d4;
+    min-width: 280px;
+    margin-left: 51%;
+    margin-right: -51%;
+  }
+
+  .yff1{
+    grid-area: y1;
+    margin-left: 51%;
+    margin-right: -51%;
+  }
+
+  .midttime{
+    grid-area: mt;
+    margin-left: 51%;
+    margin-right: -51%;
+  }
+
+  .yff2{
+    grid-area: y2;
+    margin-left: 51%;
+    margin-right: -51%;
+  }
+
+  /* fredag */
+  .fredag{
+    grid-area: d5;
+    min-width: 280px;
+    margin-left: -51%;
+    margin-right: 51%;
+  }
+
+  .programfag4{
+    grid-area: p4;
+    margin-left: -51%;
+    margin-right: 51%;
+  }
+
+  .naturfag{
+    grid-area: nt;
+    margin-left: -51%;
+    margin-right: 51%;
+  }
+
+  .kroppsoeving{
+    grid-area: ko;
+    margin-left: -51%;
+    margin-right: 51%;
+  }
+}
+
+/*______ periode ______*/
+/* .periode{
+  grid-area: pe;
+  line-height: 1;
+  align-self: center;
+  padding-bottom: 10%;
+} */
+
+/*______ innhold ______*/
+.fagtittel{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.gruppe-xy{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
