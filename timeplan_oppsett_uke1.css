@@ -17,6 +17,11 @@ html{
   color-scheme: dark light;
 }
 
+body{
+  color: #A8A8A8;
+  background-color: #14151F;
+}
+
 img, picture, svg, video{
   display: block;
   max-width: 100%;
@@ -103,10 +108,10 @@ header{
     'm2' 1fr
     'm2' 1fr
     '..' 0.1fr
-    'ju' 1fr
-    'ju' 1fr
-    'ju' 1fr
-    'ju' 1fr
+    'e2' 1fr
+    'e2' 1fr
+    'p3' 1fr
+    'p3' 1fr
     /1fr;
     justify-self: center;
     padding-bottom: 2%;
@@ -115,7 +120,6 @@ header{
 .tor{
   flex: 1;
   display: grid;
-  opacity: 0.2;
   gap: 0.5rem;
   grid:
     'd4' 0.4fr
@@ -136,7 +140,6 @@ header{
 .fre{
   flex: 1;
   display: grid;
-  opacity: 0.2;
   gap: 0.5rem;
   grid:
     'd5' 0.4fr
@@ -197,17 +200,10 @@ header{
 
 .matte2{
   grid-area: m2;
-  margin-bottom: 20%;
-  margin-top: -30%;
 }
 
 .engelsk2{
   grid-area: e2;
-}
-
-.jul{
-  grid-area: ju;
-  margin-top: -40;
 }
 
 .programfag3{
