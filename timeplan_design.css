@@ -1,3 +1,89 @@
+/*______ Fargekoder ______*/
+:root{
+  --clr-bakgrunn: #14151F;
+  --clr-tekst: #A8A8A8;
+  --clr-boks: #262738;
+  --clr-ramme: #57637A;
+
+  --clr-engelsk: #E68D2F;
+  --clr-matte: #DBB700;
+  --clr-naturfag: #A6BE54;
+  --clr-gym: #35B06F;
+  --clr-programfag: #339BC9;
+  --clr-yff: #6680E6;
+  --clr-ig: #B18BF4;
+  --clr-forum: #C973A4;
+  --clr-norsk: #ED6645;
+}
+
+/*______ dagsversjon ______*/
+@media (prefers-color-scheme: light) {
+  :root{
+    --clr-bakgrunn: #EFEFEF;
+    --clr-tekst: #3E4247;
+    --clr-boks: #FEFEFE;
+    --clr-ramme: #7D8B97;
+  
+    --clr-engelsk: #9E500B;
+    --clr-matte: #8B7403;
+    --clr-naturfag: #4C7A35;
+    --clr-gym: #1F7A60;
+    --clr-programfag: #2583AD;
+    --clr-yff: #3661AD;
+    --clr-ig: #8158BB;
+    --clr-forum: #8F538E;
+    --clr-norsk: #D24040;
+  }
+}
+  
+body{
+  background-color: var(--clr-bakgrunn);
+  color: var(--clr-tekst);
+}
+
+/*______ boksdesign ______*/
+.ramme{
+  background-color: var(--clr-boks);
+  border-color: var(--clr-ramme);
+  border-radius: 1.8rem 0.4rem 1.8rem 0.4rem;
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 6px;
+  border-left-width: 6px;
+  border-style: solid;
+  padding: 3%;
+  min-width: 280px;
+}
+
+/*______ dekorasjonsfarger ______*/
+.farge-engelsk{
+  color: var(--clr-engelsk);
+}
+.farge-matte{
+  color: var(--clr-matte);
+}
+.farge-naturfag{
+  color: var(--clr-naturfag);
+}
+.farge-gym{
+  color: var(--clr-gym);
+}
+.farge-programfag{
+  color: var(--clr-programfag);
+}
+.farge-yff{
+ color: var(--clr-yff);
+}
+.farge-ig{
+  color: var(--clr-ig);
+}
+.farge-forum{
+  color: var(--clr-forum);
+}
+.farge-norsk{
+  color: var(--clr-norsk);
+}
+
 /*______ Skrifttype ______*/
 h1{
   font-family: 'Roboto Slab', serif;
@@ -49,63 +135,6 @@ p{
   text-align: center;
 }
 
-/*______ Fargekoder ______*/
-body{
-  color: #A8A8A8;
-  background-color: #14151F;
-}
-
-.farge-engelsk{
-  color: #E68D2F;
-}
-
-.farge-matte{
-  color: #DBB700;
-}
-
-.farge-naturfag{
-  color: #A6BE54;
-}
-
-.farge-kroppsoeving{
-  color: #35B06F;
-}
-
-.farge-programfag{
-  color: #339BC9;
-}
-
-.farge-yff{
- color: #6680E6;
-}
-
-.farge-ig{
-  color: #B18BF4;
-}
-
-.farge-forum{
-  color: #C973A4;
-}
-
-.farge-jul{
-  color: #ED6645;
-}
-
-
-/*______ boksdesign ______*/
-.ramme{
-  background-color: #262738;
-  border-color: #57637A;
-  border-radius: 1.8rem 0.4rem 1.8rem 0.4rem;
-  border-top-width: 2px;
-  border-right-width: 2px;
-  border-bottom-width: 6px;
-  border-left-width: 6px;
-  border-style: solid;
-  padding: 3%;
-  min-width: 280px;
-}
-
 /*______ ikoner og bilder ______*/
 .ikon{
   min-height: 30px;
@@ -116,18 +145,64 @@ body{
   width: 2%;
 }
 
-.ramme-gradient{
-  opacity: 0.8;
-  background: 
-    linear-gradient(#262738, #14151F) padding-box,
-    linear-gradient(#57637A, #14151F) border-box;
-  border-radius: 1.8rem 0.4rem 1.8rem 0.4rem;
-  border-top-width: 2px;
-  border-right-width: 2px;
-  border-bottom-width: 6px;
-  border-left-width: 6px;
-  border-style: solid;
-  border-color: transparent;
-  padding: 3%;
-  min-width: 280px;
+button{
+  background-color: transparent;
+}
+
+.menyknapp-en{
+  fill: var(--clr-tekst);
+}
+
+.menyknapp-en .line{
+  transition: 
+    y 200ms ease-in 200ms,
+    rotate 200ms ease-in,
+    opacity 0ms 200ms;
+  transform-origin: center;
+}
+
+.menyknapp-en:hover .line{
+  transition: 
+    y 200ms ease-in,
+    rotate 200ms ease-in 200ms,
+    opacity 0ms 200ms;
+  transform-origin: center;
+}
+
+.menyknapp-en:hover :is(.top, .bottom){
+  y: 45;
+}
+
+.menyknapp-en:hover .top{
+  rotate: 45deg;
+}
+
+.menyknapp-en:hover .bottom{
+  rotate: -45deg;
+}
+
+.menyknapp-en:hover .center{
+  opacity: 0;
+}
+
+.menyknapp-tre{
+  stroke: var(--clr-tekst);
+}
+
+.menyknapp-tre .line{
+  animation: nav-animation-start 500ms forwards;
+}
+
+.menyknapp-tre:hover .line{
+  animation: nav-animation-end 500ms forwards;
+} 
+
+@keyframes nav-animation-end {
+  0% {stroke-dashoffset: 0;}
+  100% {stroke-dashoffset: 26;}
+}
+
+@keyframes nav-animation-start {
+  0% {stroke-dashoffset: 26;}
+  100% {stroke-dashoffset: 0;}
 }

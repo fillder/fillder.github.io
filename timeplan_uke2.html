@@ -4,25 +4,137 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="dark light">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;0,700;1,300&family=Roboto+Slab:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="timeplan_oppsett_uke1.css"/>
+        <link rel="stylesheet" type="text/css" href="timeplan_oppsett_uke2.css"/>
         <link rel="stylesheet" type="text/css" href="timeplan_design.css"/>
         <title>Document</title>
     </head>
     <body>
         <!-- Tittel og uketall -->
         <header>
-            <div>
-                <h1>50</h1>
-            </div>
-            <h1>Timeplan 2022</h1>
+            <button class="menyknapp-en" aria-controls="navigasjon" aria-expanded="false">
+                <svg class="hamburger" viewBox="0 0 100 100" width="50">
+                    <rect class="line top" width="80" height="10" x="10" y="20" rx="5"></rect>
+                    <rect class="line center" width="80" height="10" x="10" y="45" rx="5"></rect>
+                    <rect class="line bottom" width="80" height="10" x="10" y="70" rx="5"></rect>
+                </svg>
+            </button>
+
+            <!-- <button class="menyknapp-to" aria-controls="navigasjon" aria-expanded="false">
+                <svg class="hamburger" viewBox="0 0 100 100" width="50">
+                    <line 
+                        class="line top-left" 
+                        x1="15" x2="50" y1="35" y2="35" 
+                        stroke-width="10" 
+                        stroke-linecap="round"
+                        stroke-dasharray="35"
+                        stroke-dashoffset="0">
+                    </line>
+                    <line 
+                        class="line top-right" 
+                        x1="85" x2="50" y1="35" y2="35" 
+                        stroke-width="10" 
+                        stroke-linecap="round"
+                        stroke-dasharray="35"
+                        stroke-dashoffset="0">
+                    </line>
+                    <line 
+                        class="line bottom-left" 
+                        x1="15" x2="50" y1="65" y2="65"                         
+                        stroke-width="10" 
+                        stroke-linecap="round"
+                        stroke-dasharray="35"
+                        stroke-dashoffset="0">
+                    </line>
+                    <line 
+                        class="line bottom-right" 
+                        x1="85" x2="50" y1="65" y2="65"                         
+                        stroke-width="10" 
+                        stroke-linecap="round"
+                        stroke-dasharray="35"
+                        stroke-dashoffset="0">
+                    </line>
+                </svg>
+            </button> -->
+
+            <button class="menyknapp-tre" aria-controls="navigasjon" aria-expanded="false">
+                <svg id="dag-natt" viewBox="0 0 100 100" width="50">
+                    <circle
+                        id="sun"
+                        cx="50" cy="50" r="20"
+                        fill="var(--clr-tekst)"/>
+                    <circle 
+                        id="moon"
+                        cx="60" cy="40" r="5"
+                        fill="var(--clr-bakgrunn)"/>
+                    <line 
+                        class="line north-west" 
+                        x1="31" x2="16.5" y1="31" y2="16.5" 
+                        stroke-width="6" 
+                        stroke-linecap="round"
+                        stroke-dasharray="25"
+                        stroke-dashoffset="0"/>
+                    <line 
+                        class="line north" 
+                        x1="50" x2="50" y1="22" y2="2" 
+                        stroke-width="6" 
+                        stroke-linecap="round"
+                        stroke-dasharray="25"
+                        stroke-dashoffset="0"/>
+                    <line 
+                        class="line north-east" 
+                        x1="69" x2="83.5" y1="31" y2="16.5" 
+                        stroke-width="6" 
+                        stroke-linecap="round"
+                        stroke-dasharray="25"
+                        stroke-dashoffset="0"/>
+                    <line 
+                        class="line east" 
+                        x1="78" x2="98" y1="50" y2="50" 
+                        stroke-width="6" 
+                        stroke-linecap="round"
+                        stroke-dasharray="25"
+                        stroke-dashoffset="0"/>
+                    <line 
+                        class="line south-east" 
+                        x1="69" x2="83.5" y1="69" y2="83.5" 
+                        stroke-width="6" 
+                        stroke-linecap="round"
+                        stroke-dasharray="25"
+                        stroke-dashoffset="0"/>
+                    <line 
+                        class="line south" 
+                        x1="50" x2="50" y1="78" y2="98" 
+                        stroke-width="6" 
+                        stroke-linecap="round"
+                        stroke-dasharray="25"
+                        stroke-dashoffset="0"/>
+                    <line 
+                        class="line south-west" 
+                        x1="31" x2="16.5" y1="69" y2="83.5" 
+                        stroke-width="6" 
+                        stroke-linecap="round"
+                        stroke-dasharray="25"
+                        stroke-dashoffset="0"/>  
+                    <line 
+                        class="line west" 
+                        x1="22" x2="2" y1="50" y2="50" 
+                        stroke-width="6" 
+                        stroke-linecap="round"
+                        stroke-dasharray="25"
+                        stroke-dashoffset="0"/>
+                </svg>
+            </button>
+
+            <h1>Timeplan, uke 2</h1>
             <img class="skolelogo" src="/bilder/skolelogo.png" alt="F21 Logo"/>
         </header>
         <main>
+            <!-- Mandags-økter -->
             <div class="man">
-                <!-- Mandags-økter -->
                 <div class="mandag">
                     <h2>Mandag</h2>
                     <h4>5. desember</h4>
@@ -72,30 +184,12 @@
                     </div>
                 </div>
             </div>
+            <!-- Tirsdags-økter -->
             <div class="tir">
-                <!-- Tirsdags-økter -->
                 <div class="tirsdag">
                     <h2>Tirsdag</h2>
                     <h4>6. desember</h4>
                 </div>
-                <!-- <div class="ramme ig">
-                    <div class="fagtittel">
-                        <img class="ikon" src="/bilder/fagikon-ig.svg" alt="ikon for IG" width="20%" height="20%"/>
-                        <h3 class="farge-ig">IG (4:4)</h3>
-                        <h6>08:15<br>11:25</h6>
-                    </div>
-                    <div>
-                        <h4 class="farge-ig">Flere steder</h4>
-                        <h5>Marius, Haidar, Richard,<br>Eirik, Lars og Jon</h5>
-                        <p><b>Siste runde med IG for i år</b></p>
-                        <p><b>Kortfilmproduksjon</b> m/Jon i 307</p>
-                        <p><b>Musikkproduksjon</b> m/Richard i 207</p>
-                        <p><b>Grafisk Design</b> m/Marius i Grafisk</p>
-                        <p><b>Webutvikling</b> m/Lars i G18-1IM</p>
-                        <p><b>Spill- og Filmmusikk</b> m/Eirik i 211</p>
-                        <p><b>Skyteknologi</b> m/Haidar i G18-2IT</p>
-                    </div>
-                </div> -->
                 <div class="ramme ig">
                     <div class="fagtittel">
                         <img class="ikon" src="/bilder/fagikon-programfag.svg" alt="ikon for Programfag" width="20%" height="20%"/>
@@ -137,8 +231,8 @@
                     </div>
                 </div>
             </div>
+            <!-- Onsdags-økter -->
             <div class="ons">
-                <!-- Onsdags-økter -->
                 <div class="onsdag">
                     <h2>Onsdag</h2>
                     <h4>7. desember</h4>
@@ -186,8 +280,8 @@
                     </div>
                 </div>
             </div>
+            <!-- Torsdags-økter -->
             <div class="tor">
-                <!-- Torsdags-økter -->
                 <div class="torsdag">
                     <h2>Torsdag</h2>
                     <h4>8. desember</h4>
@@ -227,8 +321,8 @@
                     </div>  
                 </div>
             </div>
+            <!-- Fredags-økter -->
             <div class="fre">
-                <!-- Fredags-økter -->
                 <div class="fredag">
                     <h2>Fredag</h2>
                     <h4>9. desember</h4>
@@ -262,19 +356,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="ramme kroppsoeving">
+                <div class="ramme gym">
                     <div class="fagtittel">
                         <img class="ikon" src="/bilder/fagikon-kroppsoeving.svg" alt="ikon for Kroppsøving" width="20%" height="20%"/>
-                        <h3 class="farge-kroppsoeving">Kroppsøving</h3>
+                        <h3 class="farge-gym">Kroppsøving</h3>
                         <h6>13:50<br>15:20</h6>
                     </div>
                     <div class="gruppe-xy">
                         <div>
-                            <h4 class="farge-kroppsoeving">IMX: Sal 2</h4>
+                            <h4 class="farge-gym">IMX: Sal 2</h4>
                             <h5>Ajdin Medic</h5>
                         </div>
                         <div>
-                            <h4 class="farge-kroppsoeving">IMY: Sal 3</h4>
+                            <h4 class="farge-gym">IMY: Sal 3</h4>
                             <h5>Jone</h5>
                         </div>
                     </div>

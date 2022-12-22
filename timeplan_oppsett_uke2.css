@@ -17,11 +17,6 @@ html{
   color-scheme: dark light;
 }
 
-body{
-  color: #A8A8A8;
-  background-color: #14151F;
-}
-
 img, picture, svg, video{
   display: block;
   max-width: 100%;
@@ -150,8 +145,8 @@ header{
     '..' 0.1fr
     'nt' 1fr
     'nt' 1fr
-    'ko' 1fr
-    'ko' 1fr
+    'gy' 1fr
+    'gy' 1fr
     /1fr;
     justify-self: center;
     padding-bottom: 2%;
@@ -241,8 +236,8 @@ header{
   grid-area: nt;
 }
 
-.kroppsoeving{
-  grid-area: ko;
+.gym{
+  grid-area: gy;
 }
 
 
