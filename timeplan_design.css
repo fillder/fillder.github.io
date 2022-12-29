@@ -1,48 +1,45 @@
 /*______ Fargekoder ______*/
-:root{
-  --clr-bakgrunn: #14151F;
-  --clr-tekst: #A8A8A8;
+:root {
+  --clr-bakgrunn: #efefef;
+  --clr-tekst: #3e4247;
+  --clr-boks: #fefefe;
+  --clr-ramme: #7d8b97;
+
+  --clr-engelsk: #9e500b;
+  --clr-matte: #8b7403;
+  --clr-naturfag: #4c7a35;
+  --clr-gym: #1f7a60;
+  --clr-programfag: #2583ad;
+  --clr-yff: #3661ad;
+  --clr-ig: #8158bb;
+  --clr-forum: #8f538e;
+  --clr-norsk: #d24040;
+}
+
+.darkmode {
+  --clr-bakgrunn: #14151f;
+  --clr-tekst: #a8a8a8;
   --clr-boks: #262738;
-  --clr-ramme: #57637A;
+  --clr-ramme: #57637a;
 
-  --clr-engelsk: #E68D2F;
-  --clr-matte: #DBB700;
-  --clr-naturfag: #A6BE54;
-  --clr-gym: #35B06F;
-  --clr-programfag: #339BC9;
-  --clr-yff: #6680E6;
-  --clr-ig: #B18BF4;
-  --clr-forum: #C973A4;
-  --clr-norsk: #ED6645;
+  --clr-engelsk: #e68d2f;
+  --clr-matte: #dbb700;
+  --clr-naturfag: #a6be54;
+  --clr-gym: #35b06f;
+  --clr-programfag: #339bc9;
+  --clr-yff: #6680e6;
+  --clr-ig: #b18bf4;
+  --clr-forum: #c973a4;
+  --clr-norsk: #ed6645;
 }
 
-/*______ dagsversjon ______*/
-@media (prefers-color-scheme: light) {
-  :root{
-    --clr-bakgrunn: #EFEFEF;
-    --clr-tekst: #3E4247;
-    --clr-boks: #FEFEFE;
-    --clr-ramme: #7D8B97;
-  
-    --clr-engelsk: #9E500B;
-    --clr-matte: #8B7403;
-    --clr-naturfag: #4C7A35;
-    --clr-gym: #1F7A60;
-    --clr-programfag: #2583AD;
-    --clr-yff: #3661AD;
-    --clr-ig: #8158BB;
-    --clr-forum: #8F538E;
-    --clr-norsk: #D24040;
-  }
-}
-  
-body{
+body {
   background-color: var(--clr-bakgrunn);
   color: var(--clr-tekst);
 }
 
 /*______ boksdesign ______*/
-.ramme{
+.ramme {
   background-color: var(--clr-boks);
   border-color: var(--clr-ramme);
   border-radius: 1.8rem 0.4rem 1.8rem 0.4rem;
@@ -56,79 +53,79 @@ body{
 }
 
 /*______ dekorasjonsfarger ______*/
-.farge-engelsk{
+.farge-engelsk {
   color: var(--clr-engelsk);
 }
-.farge-matte{
+.farge-matte {
   color: var(--clr-matte);
 }
-.farge-naturfag{
+.farge-naturfag {
   color: var(--clr-naturfag);
 }
-.farge-gym{
+.farge-gym {
   color: var(--clr-gym);
 }
-.farge-programfag{
+.farge-programfag {
   color: var(--clr-programfag);
 }
-.farge-yff{
- color: var(--clr-yff);
+.farge-yff {
+  color: var(--clr-yff);
 }
-.farge-ig{
+.farge-ig {
   color: var(--clr-ig);
 }
-.farge-forum{
+.farge-forum {
   color: var(--clr-forum);
 }
-.farge-norsk{
+.farge-norsk {
   color: var(--clr-norsk);
 }
 
 /*______ Skrifttype ______*/
-h1{
-  font-family: 'Roboto Slab', serif;
+h1 {
+  font-family: "Roboto Slab", serif;
   font-weight: 300;
   font-size: 3rem;
 } /* Tittel */
 
-h2{
-  font-family: 'Roboto Slab', serif;
+h2 {
+  font-family: "Roboto Slab", serif;
   font-weight: 700;
   font-size: 2rem;
   text-align: center;
 } /* Dager */
 
-h3{
-  font-family: 'Roboto Slab', serif;
+h3 {
+  font-family: "Roboto Slab", serif;
   font-weight: 500;
   font-size: 1.4rem;
   text-align: center;
 } /* Fagtittel */
 
-h4{
-  font-family: 'Roboto Slab', serif;
+h4 {
+  font-family: "Roboto Slab", serif;
   font-weight: 500;
   font-size: 1.1rem;
   text-align: center;
 } /* Dato */
 
-h5{
-  font-family: 'Roboto', sans-serif;
+h5 {
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   text-align: center;
   margin-bottom: 2%;
 } /* Fagtittel */
 
-h6{
-  font-family: 'Roboto Mono', monospace;
+h6 {
+  font-family: "Roboto Mono", monospace;
   font-weight: 500;
   font-size: 0.8rem;
   text-align: center;
 } /* Fagtittel */
 
-p{
-  font-family: 'Roboto', sans-serif;
+p {
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   line-height: 1.5;
   font-size: 0.9rem;
@@ -136,73 +133,56 @@ p{
 }
 
 /*______ ikoner og bilder ______*/
-.ikon{
+.ikon {
   min-height: 30px;
   min-width: 60px;
 }
 
-.skolelogo{
+.skolelogo {
   width: 2%;
 }
 
-button{
+button {
   background-color: transparent;
 }
 
-.menyknapp-en{
+.menyknapp-en {
   fill: var(--clr-tekst);
 }
 
-.menyknapp-en .line{
-  transition: 
-    y 200ms ease-in 200ms,
-    rotate 200ms ease-in,
-    opacity 0ms 200ms;
-  transform-origin: center;
+.sun {
+  fill: var(--clr-tekst);
 }
-
-.menyknapp-en:hover .line{
-  transition: 
-    y 200ms ease-in,
-    rotate 200ms ease-in 200ms,
-    opacity 0ms 200ms;
-  transform-origin: center;
-}
-
-.menyknapp-en:hover :is(.top, .bottom){
-  y: 45;
-}
-
-.menyknapp-en:hover .top{
-  rotate: 45deg;
-}
-
-.menyknapp-en:hover .bottom{
-  rotate: -45deg;
-}
-
-.menyknapp-en:hover .center{
-  opacity: 0;
-}
-
-.menyknapp-tre{
+.beam {
   stroke: var(--clr-tekst);
 }
-
-.menyknapp-tre .line{
-  animation: nav-animation-start 500ms forwards;
+.moon {
+  fill: var(--clr-bakgrunn);
 }
-
-.menyknapp-tre:hover .line{
-  animation: nav-animation-end 500ms forwards;
-} 
-
-@keyframes nav-animation-end {
-  0% {stroke-dashoffset: 0;}
-  100% {stroke-dashoffset: 26;}
+.dag-natt:hover .sun,
+.dag-natt:hover .beam {
+  animation: sun 500ms ease-in forwards;
+  transform-origin: 50px 120px;
 }
-
-@keyframes nav-animation-start {
-  0% {stroke-dashoffset: 26;}
-  100% {stroke-dashoffset: 0;}
+@keyframes sun {
+  0% {
+    transform: scale(1);
+    stroke-dashoffset: 0;
+  }
+  100% {
+    transform: scale(2.5);
+    stroke-dashoffset: 19.9;
+  }
+}
+.dag-natt:hover .moon {
+  animation: moon 500ms ease-in forwards;
+  transform-origin: 50px 120px;
+}
+@keyframes moon {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(-70px, 70px);
+  }
 }
