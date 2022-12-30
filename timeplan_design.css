@@ -1,9 +1,32 @@
+/*______ Universelle instillinger ______*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+html {
+  color-scheme: dark light;
+}
+html, body {
+  height: 100%;
+}
+body{
+  height: 100vh;
+}
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
 /*______ Fargekoder ______*/
 :root {
   --clr-bakgrunn: #efefef;
   --clr-tekst: #3e4247;
   --clr-boks: #fefefe;
-  --clr-ramme: #7d8b97;
+  --clr-ramme: #c7c9ca;
+  --clr-fremheving: #dddde0;
 
   --clr-engelsk: #9e500b;
   --clr-matte: #8b7403;
@@ -14,13 +37,15 @@
   --clr-ig: #8158bb;
   --clr-forum: #8f538e;
   --clr-norsk: #d24040;
+  --clr-skolefarge1: #ef7c00;
+  --clr-skolefarge2: #000000;
 }
-
 .darkmode {
   --clr-bakgrunn: #14151f;
   --clr-tekst: #a8a8a8;
   --clr-boks: #262738;
   --clr-ramme: #57637a;
+  --clr-fremheving: #0B0C13;
 
   --clr-engelsk: #e68d2f;
   --clr-matte: #dbb700;
@@ -31,27 +56,31 @@
   --clr-ig: #b18bf4;
   --clr-forum: #c973a4;
   --clr-norsk: #ed6645;
-}
+  --clr-skolefarge1: #ef7c00;
+  --clr-skolefarge2: #ffffff;
 
+}
 body {
   background-color: var(--clr-bakgrunn);
   color: var(--clr-tekst);
 }
-
 /*______ boksdesign ______*/
 .ramme {
   background-color: var(--clr-boks);
   border-color: var(--clr-ramme);
-  border-radius: 1.8rem 0.4rem 1.8rem 0.4rem;
+  border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
+  border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
+  border-bottom-left-radius: clamp(0.1rem, 0.4rem, 0.6vw);
+  border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
   border-top-width: 2px;
   border-right-width: 2px;
   border-bottom-width: 6px;
   border-left-width: 6px;
   border-style: solid;
-  padding: 3%;
-  min-width: 280px;
+  padding-inline: 5%;
+  padding-block: 2%;
+  z-index: 0;
 }
-
 /*______ dekorasjonsfarger ______*/
 .farge-engelsk {
   color: var(--clr-engelsk);
@@ -82,74 +111,68 @@ body {
 }
 
 /*______ Skrifttype ______*/
-h1 {
+h1 {/* Tittel */
   font-family: "Roboto Slab", serif;
   font-weight: 300;
-  font-size: 3rem;
-} /* Tittel */
-
-h2 {
+  font-size: clamp(2rem, 3vw, 4rem);
+} 
+h2 {/* Dager */
   font-family: "Roboto Slab", serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: clamp(1.7rem, 2vw, 2.3rem);
   text-align: center;
-} /* Dager */
-
-h3 {
+} 
+h3 {/* Fagtittel */
   font-family: "Roboto Slab", serif;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: clamp(.6rem, 1.4vw, 1.7rem);
   text-align: center;
-} /* Fagtittel */
-
-h4 {
+} 
+h4 {/* Dato */
   font-family: "Roboto Slab", serif;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: clamp(.6rem, 1.1vw, 1.4rem);
   text-align: center;
-} /* Dato */
-
-h5 {
+} 
+h5 {/* lærer */
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: clamp(.6rem, 1vw, 1.3rem);
   text-align: center;
   margin-bottom: 2%;
-} /* Fagtittel */
-
-h6 {
+} 
+h6 {/* klokkelsett */
   font-family: "Roboto Mono", monospace;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: clamp(.4rem, .8vw, 1.1rem);
   text-align: center;
-} /* Fagtittel */
-
-p {
+} 
+p {/* brødtekst */
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   line-height: 1.5;
-  font-size: 0.9rem;
+  font-size: clamp(.6rem, .9vw, 1.2rem);
   text-align: center;
 }
-
 /*______ ikoner og bilder ______*/
 .ikon {
-  min-height: 30px;
-  min-width: 60px;
+  width: clamp(1.5rem, 3vw, 6rem);
 }
-
 .skolelogo {
-  width: 2%;
+  width: clamp(2rem, 3vw, 50px);
 }
-
+.skolefarge1{
+  fill: var(--clr-skolefarge1);
+}
+.skolefarge2{
+  fill: var(--clr-skolefarge2);
+}
 button {
   background-color: transparent;
 }
-
 .menyknapp-en {
   fill: var(--clr-tekst);
 }
-
 .sun {
   fill: var(--clr-tekst);
 }
@@ -159,6 +182,7 @@ button {
 .moon {
   fill: var(--clr-bakgrunn);
 }
+/*______ animasjoner ______*/
 .dag-natt:hover .sun,
 .dag-natt:hover .beam {
   animation: sun 500ms ease-in forwards;
@@ -186,3 +210,39 @@ button {
     transform: translate(-70px, 70px);
   }
 }
+/*______ Grid- og Flex-layout ______*/
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 2%;
+  margin-block: 1rem;
+}
+.fagtittel{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+}
+.gruppe-xy{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+@media (orientation: landscape){
+  main{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    margin-inline: 2%;
+  }
+}
+@media (max-width: 740px) or (orientation: portrait){
+  main{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    justify-content: space-between;
+    margin-inline: 20%;
+  }
+} 
