@@ -154,6 +154,32 @@ p {/* brødtekst */
   font-size: clamp(.6rem, .9vw, 1.2rem);
   text-align: center;
 }
+/*______ Grid- og Flex-layout ______*/
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 2%;
+  margin-block: 1rem;
+  min-width: 460px;
+}
+main{
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-inline: 2%;
+}
+.fagtittel{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+}
+.gruppe-xy{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
 /*______ ikoner og bilder ______*/
 .ikon {
   width: clamp(1.5rem, 3vw, 6rem);
@@ -175,17 +201,26 @@ button {
 }
 .sun {
   fill: var(--clr-tekst);
-}
-.beam {
   stroke: var(--clr-tekst);
 }
 .moon {
   fill: var(--clr-bakgrunn);
 }
 /*______ animasjoner ______*/
-.dag-natt:hover .sun,
-.dag-natt:hover .beam {
+.moonAnim{
+  animation: moon 500ms ease-in forwards;
+  transform-origin: 50px 120px;
+}
+.sunAnim{
   animation: sun 500ms ease-in forwards;
+  transform-origin: 50px 120px;
+}
+.moonAnimRev{
+  animation: moonrev 500ms ease-in forwards;
+  transform-origin: 50px 120px;
+}
+.sunAnimRev{
+  animation: sunrev 500ms ease-in forwards;
   transform-origin: 50px 120px;
 }
 @keyframes sun {
@@ -194,13 +229,9 @@ button {
     stroke-dashoffset: 0;
   }
   100% {
-    transform: scale(2.5);
+    transform: scale(2.4);
     stroke-dashoffset: 19.9;
   }
-}
-.dag-natt:hover .moon {
-  animation: moon 500ms ease-in forwards;
-  transform-origin: 50px 120px;
 }
 @keyframes moon {
   0% {
@@ -210,39 +241,56 @@ button {
     transform: translate(-70px, 70px);
   }
 }
-/*______ Grid- og Flex-layout ______*/
-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-inline: 2%;
-  margin-block: 1rem;
-}
-.fagtittel{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2%;
-}
-.gruppe-xy{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
-@media (orientation: landscape){
-  main{
-    display: flex;
-    gap: 0.5rem;
-    justify-content: space-between;
-    margin-inline: 2%;
+@keyframes sunrev {
+  0% {
+    transform: scale(2.4);
+    stroke-dashoffset: 19.9;
+  }
+  100% {
+    transform: scale(1);
+    stroke-dashoffset: 0;
   }
 }
+@keyframes moonrev {
+  0% {
+    transform: translate(-70px, 70px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+/*______ mobilversjon ______*/
 @media (max-width: 740px) or (orientation: portrait){
   main{
     display: flex;
     flex-direction: column;
     gap: 6rem;
     justify-content: space-between;
-    margin-inline: 20%;
+    width: clamp(340px, 600px, 70%);
+    margin-inline: auto;
+  }
+  h1 {/* Tittel */
+    font-size: 3rem;
+  } 
+  h2 {/* Dager */
+    font-size: 2rem;
+  } 
+  h3 {/* Fagtittel */
+    font-size: 1.4rem;
+  } 
+  h4 {/* Dato */
+    font-size: 1.1rem;
+  } 
+  h5 {/* lærer */
+    font-size: 1rem;
+  } 
+  h6 {/* klokkelsett */
+    font-size: .8rem;
+  } 
+  p {/* brødtekst */
+    font-size: .9rem;
+  }
+  .ikon {
+    width: 3.4rem;
   }
 } 
