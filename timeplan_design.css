@@ -58,30 +58,12 @@ img, picture, svg, video {
   --clr-norsk: #ed6645;
   --clr-skolefarge1: #ef7c00;
   --clr-skolefarge2: #ffffff;
-
 }
+/*______ fargedeklarering ______*/
 body {
   background-color: var(--clr-bakgrunn);
   color: var(--clr-tekst);
 }
-/*______ boksdesign ______*/
-.ramme {
-  background-color: var(--clr-boks);
-  border-color: var(--clr-ramme);
-  border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
-  border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
-  border-bottom-left-radius: clamp(0.1rem, 0.4rem, 0.6vw);
-  border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
-  border-top-width: 2px;
-  border-right-width: 2px;
-  border-bottom-width: 6px;
-  border-left-width: 6px;
-  border-style: solid;
-  padding-inline: 5%;
-  padding-block: 2%;
-  z-index: 0;
-}
-/*______ dekorasjonsfarger ______*/
 .farge-engelsk {
   color: var(--clr-engelsk);
 }
@@ -109,7 +91,6 @@ body {
 .farge-norsk {
   color: var(--clr-norsk);
 }
-
 /*______ Skrifttype ______*/
 h1 {/* Tittel */
   font-family: "Roboto Slab", serif;
@@ -157,19 +138,40 @@ p {/* brødtekst */
   font-size: clamp(.6rem, .9vw, 1.2rem);
   text-align: center;
 }
-/*______ Grid- og Flex-layout ______*/
+/*______ boksdesign ______*/
+.ramme {
+  background-color: var(--clr-boks);
+  border-color: var(--clr-ramme);
+  border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
+  border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
+  border-bottom-left-radius: clamp(0.1rem, 0.4rem, 0.6vw);
+  border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 6px;
+  border-left-width: 6px;
+  border-style: solid;
+  padding-inline: .6vw;
+  padding-block: .4vw;
+}
 header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-inline: 2%;
+  min-width: 340px;
+  max-width: 2500px;
+  padding-inline: 1vw;
+  margin-inline: auto;
   margin-block: 1rem;
 }
 main{
   display: flex;
   gap: 0.5rem;
   justify-content: space-between;
-  margin-inline: 2%;
+  min-width: 340px;
+  max-width: 2500px;
+  padding-inline: 1vw;
+  margin-inline: auto;
 }
 .fagtittel{
   display: flex;
@@ -189,7 +191,7 @@ button {
   background: none;
 }
 .ikon {
-  width: clamp(1.5rem, 3vw, 6rem);
+  width: clamp(2rem, 3vw, 6rem);
 }
 .skolelogo {
   width: clamp(2rem, 3vw, 4rem);
@@ -300,6 +302,10 @@ button {
   }
   .ikon {
     width: 3.4rem;
+  }
+  .ramme{
+    padding-inline: 1.2vw;
+    padding-block: .8vw;
   }
   .man,
   .tir,
