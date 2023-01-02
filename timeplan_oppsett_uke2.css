@@ -15,7 +15,6 @@
     '..' 1fr
     /1fr;
   justify-self: center;
-  background-color: var(--clr-fremheving);
 }
 .tir{
   flex: 1;

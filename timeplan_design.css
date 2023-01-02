@@ -116,6 +116,9 @@ h1 {/* Tittel */
   font-weight: 300;
   font-size: clamp(2rem, 3vw, 4rem);
 } 
+b{
+  font-weight: 500;
+}
 h2 {/* Dager */
   font-family: "Roboto Slab", serif;
   font-weight: 700;
@@ -161,7 +164,6 @@ header{
   align-items: center;
   margin-inline: 2%;
   margin-block: 1rem;
-  min-width: 460px;
 }
 main{
   display: flex;
@@ -181,20 +183,26 @@ main{
   align-items: center;
 }
 /*______ ikoner og bilder ______*/
+button {
+  background-color: transparent;
+  border: none;
+  background: none;
+}
 .ikon {
   width: clamp(1.5rem, 3vw, 6rem);
 }
 .skolelogo {
-  width: clamp(2rem, 3vw, 50px);
+  width: clamp(2rem, 3vw, 4rem);
+}
+.dag-natt{
+  width: clamp(2rem, 3vw, 4rem);
+  height: clamp(2rem, 3vh, 4rem);
 }
 .skolefarge1{
   fill: var(--clr-skolefarge1);
 }
 .skolefarge2{
   fill: var(--clr-skolefarge2);
-}
-button {
-  background-color: transparent;
 }
 .menyknapp-en {
   fill: var(--clr-tekst);
@@ -270,7 +278,7 @@ button {
     margin-inline: auto;
   }
   h1 {/* Tittel */
-    font-size: 3rem;
+    font-size: 2.6rem;
   } 
   h2 {/* Dager */
     font-size: 2rem;
@@ -292,5 +300,12 @@ button {
   }
   .ikon {
     width: 3.4rem;
+  }
+  .man,
+  .tir,
+  .ons,
+  .tor,
+  .fre{
+    background-color: var(--clr-fremheving);
   }
 } 
