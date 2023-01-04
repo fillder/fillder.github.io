@@ -1,0 +1,70 @@
+/*______ Universelle instillinger ______*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+  }
+  html {
+    color-scheme: dark light;
+  }
+  html, body {
+    height: 100%;
+  }
+  body{
+    height: 100vh;
+  }
+  img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+  }
+/*______ Fargekoder ______*/
+:root {
+  --clr-bakgrunn: #efefef;
+  --clr-tekst: #3e4247;
+  --clr-boks: #fefefe;
+  --clr-ramme: #c7c9ca;
+  --clr-fremheving: #dddde0;  
+
+  --clr-safir: #2C6AD6;       /*programfag og drift*/
+  --clr-akvamarin: #257DA5;   /*yff og lyddesign*/ 
+  --clr-amazonitt: #228468;   /*korppsøving og animasjon*/  
+  --clr-smaragd: #518238;     /*naturfag og film-vfx*/ 
+  --clr-citrin: #8B7403;      /*matte og fotografi*/ 
+  --clr-spessartin: #9e500b;  /*engelsk og 3d-grafikk*/ 
+  --clr-rubin: #D24040;       /*norsk, hoytid og 2d-grafikk*/ 
+  --clr-thulitt: #B44F99;     /*forum og innovasjon*/
+  --clr-kunzitt: #9A5DAF;     /*midttime og teknologi*/
+  --clr-ametyst: #7258BB;     /*ig og utvikling*/
+
+  --clr-skolefarge1: #ef7c00;
+  --clr-skolefarge2: #000000;
+}
+.darkmode {
+    --clr-bakgrunn: #14151f;
+    --clr-tekst: #a8a8a8;
+    --clr-boks: #262738;
+    --clr-ramme: #57637a;
+    --clr-fremheving: #0B0C13;
+  
+    --clr-safir: #1FA6E2;       /*programfag og drift*/
+    --clr-akvamarin: #33C9C4;   /*yff og lyddesign*/ 
+    --clr-amazonitt: #35B06F;   /*korppsøving og animasjon*/ 
+    --clr-smaragd: #839E53;     /*naturfag og film-vfx*/ 
+    --clr-citrin: #E6CE2F;      /*matte og fotografi*/ 
+    --clr-spessartin: #E68D2F;  /*engelsk og 3d-grafikk*/ 
+    --clr-rubin: #EC4F28;       /*norsk, hoytid og 2d-grafikk*/ 
+    --clr-thulitt: #C973AF;     /*forum og innovasjon*/
+    --clr-kunzitt: #B18BF4;     /*midttime og teknologi*/
+    --clr-ametyst: #7B77FF;     /*ig og utvikling*/
+  
+    --clr-skolefarge1: #ef7c00;
+    --clr-skolefarge2: #ffffff;
+}
+/*______ fargedeklarering ______*/
+body {
+  background-color: var(--clr-bakgrunn);
+  color: var(--clr-tekst);
+}

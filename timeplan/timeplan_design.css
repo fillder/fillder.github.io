@@ -1,95 +1,47 @@
-/*______ Universelle instillinger ______*/
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-* {
-  margin: 0;
-  padding: 0;
-  font: inherit;
-}
-html {
-  color-scheme: dark light;
-}
-html, body {
-  height: 100%;
-}
-body{
-  height: 100vh;
-}
-img, picture, svg, video {
-  display: block;
-  max-width: 100%;
-}
-/*______ Fargekoder ______*/
-:root {
-  --clr-bakgrunn: #efefef;
-  --clr-tekst: #3e4247;
-  --clr-boks: #fefefe;
-  --clr-ramme: #c7c9ca;
-  --clr-fremheving: #dddde0;
-
-  --clr-engelsk: #9e500b;
-  --clr-matte: #8b7403;
-  --clr-naturfag: #4c7a35;
-  --clr-gym: #1f7a60;
-  --clr-programfag: #2583ad;
-  --clr-yff: #3661ad;
-  --clr-ig: #8158bb;
-  --clr-forum: #8f538e;
-  --clr-norsk: #d24040;
-  --clr-skolefarge1: #ef7c00;
-  --clr-skolefarge2: #000000;
-}
-.darkmode {
-  --clr-bakgrunn: #14151f;
-  --clr-tekst: #a8a8a8;
-  --clr-boks: #262738;
-  --clr-ramme: #57637a;
-  --clr-fremheving: #0B0C13;
-
-  --clr-engelsk: #e68d2f;
-  --clr-matte: #dbb700;
-  --clr-naturfag: #a6be54;
-  --clr-gym: #35b06f;
-  --clr-programfag: #339bc9;
-  --clr-yff: #6680e6;
-  --clr-ig: #b18bf4;
-  --clr-forum: #c973a4;
-  --clr-norsk: #ed6645;
-  --clr-skolefarge1: #ef7c00;
-  --clr-skolefarge2: #ffffff;
-}
 /*______ fargedeklarering ______*/
 body {
   background-color: var(--clr-bakgrunn);
   color: var(--clr-tekst);
 }
-.farge-engelsk {
-  color: var(--clr-engelsk);
-}
-.farge-matte {
-  color: var(--clr-matte);
-}
-.farge-naturfag {
-  color: var(--clr-naturfag);
-}
-.farge-gym {
-  color: var(--clr-gym);
-}
 .farge-programfag {
-  color: var(--clr-programfag);
+  color: var(--clr-safir);
+  fill: var(--clr-safir);
 }
 .farge-yff {
-  color: var(--clr-yff);
+  color: var(--clr-akvamarin);
+  fill: var(--clr-akvamarin);
 }
-.farge-ig {
-  color: var(--clr-ig);
+.farge-kroppsoving {
+  color: var(--clr-amazonitt);
+  fill: var(--clr-amazonitt);
 }
-.farge-forum {
-  color: var(--clr-forum);
+.farge-naturfag {
+  color: var(--clr-smaragd);
+  fill: var(--clr-smaragd);
+}
+.farge-matte {
+  color: var(--clr-citrin);
+  fill: var(--clr-citrin);
+}
+.farge-engelsk {
+  color: var(--clr-spessartin);
+  fill: var(--clr-spessartin);
 }
 .farge-norsk {
-  color: var(--clr-norsk);
+  color: var(--clr-rubin);
+  fill: var(--clr-rubin);
+}
+.farge-forum {
+  color: var(--clr-thulitt);
+  fill: var(--clr-thulitt);
+}
+.farge-midttimen {
+  color: var(--clr-kunzitt);
+  fill: var(--clr-kunzitt);
+}
+.farge-ig {
+  color: var(--clr-ametyst);
+  fill: var(--clr-ametyst);
 }
 /*______ Skrifttype ______*/
 h1 {/* Tittel */
