@@ -228,6 +228,9 @@ button {
 }
 /*______ mobilversjon ______*/
 @media (max-width: 740px) or (orientation: portrait){
+  header{
+    padding-inline: 2vw;
+  }
   main{
     display: flex;
     flex-direction: column;
@@ -270,5 +273,7 @@ button {
   .tor,
   .fre{
     background-color: var(--clr-fremheving);
+    min-height: 1000px;
   }
 } 
+
