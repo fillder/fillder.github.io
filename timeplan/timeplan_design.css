@@ -237,25 +237,25 @@ button {
     margin-inline: auto;
   }
   h1 {/* Tittel */
-    font-size: 2.6rem;
-  } 
-  h2 {/* Dager */
     font-size: 2rem;
   } 
+  h2 {/* Dager */
+    font-size: 1.7rem;
+  } 
   h3 {/* Fagtittel */
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   } 
   h4 {/* Dato */
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   } 
   h5 {/* lærer */
     font-size: 1rem;
   } 
   h6 {/* klokkelsett */
-    font-size: .8rem;
+    font-size: .6rem;
   } 
   p {/* brødtekst */
-    font-size: .9rem;
+    font-size: .8rem;
   }
   .ikon {
     width: 3.4rem;
