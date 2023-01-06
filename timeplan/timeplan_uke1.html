@@ -8,10 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;0,700;1,300&family=Roboto+Slab:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href=".../stylesheet.css" />
     <link rel="stylesheet" type="text/css" href="/timeplan/timeplan_design.css" />
-    <link rel="stylesheet" type="text/css" href="/timeplan/timeplan_oppsett_uke2.css" />
-    <script type="module" src="../script/dag-natt.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="/timeplan/timeplan_oppsett_uke1.css" />
+    <link rel="icon" href="/bilder/skolelogo.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/bilder/skolelogo.svg">
+    <link rel="apple-touch-icon" href="/bilder/skolelogo.svg">
+    <script type="module" src=".../script/dag-natt.js" defer></script>
     <title>Timeplan 2023</title>
   </head>
   <body>
@@ -31,7 +34,9 @@
           <circle class="moon" cx="135" cy="40" r="40" />
         </svg>
       </button>
-      <h1><b>Timeplan</b>, uke 2</h1>
+      <div class="overskrift">
+        <h1><b>Timeplan</b>, uke 1</h1>
+      </div>
       <svg class="skolelogo" viewBox="0 0 50 50">
         <path class="skolefarge1" d="m35.71,7.14h7.14v35.71h-7.14V7.14ZM28.57,0v28.58h-14.29v7.14h14.29v7.14H7.14v-7.14H0v14.28h50V0h-21.43Z"/>
         <polygon class="skolefarge2" points="0 0 0 32.72 7.14 32.72 7.14 21.43 21.43 21.43 21.43 14.29 7.14 14.29 7.14 7.14 25.58 7.14 25.58 0 0 0"/>
@@ -42,58 +47,14 @@
       <div class="man">
         <div class="mandag">
           <h2>Mandag</h2>
-          <h4>9. januar</h4>
-        </div>
-        <div class="ramme forum">
-          <div class="fagtittel">
-            <svg class="ikon farge-forum" alt="Ikon for Forum" viewBox="0 0 100 50"><path d="m59.61,16.57c.09.1.22.15.35.15.06,0,.13-.01.19-.04l4.45-1.78c1.58.82,3.46,1.31,5.49,1.31,5.6,0,10.13-3.63,10.13-8.1S75.69,0,70.09,0s-10.13,3.63-10.13,8.1c0,1.36.46,2.62,1.2,3.75l-1.67,4.17c-.08.19-.03.4.12.55Z"/><path d="m41,23c0,4.97,4.03,9,9,9s9-4.03,9-9-4.03-9-9-9-9,4.03-9,9Z"/><path d="m70.57,19.14c-4.26,0-7.71,3.45-7.71,7.71s3.45,7.72,7.71,7.72,7.71-3.45,7.71-7.72-3.45-7.71-7.71-7.71Z"/><path d="m21.71,26.85c0,4.26,3.45,7.72,7.71,7.72s7.71-3.45,7.71-7.72-3.45-7.71-7.71-7.71-7.71,3.45-7.71,7.71Z"/><path d="m50,34.57c-7.24.12-17.79,4.6-18,12.86,0,1.42,1.15,2.57,2.57,2.57h30.86c2.31.03,2.96-2.44,2.57-4.25-1.57-7.35-10.88-11.07-18-11.18Z"/><path d="m34.32,37.32c-3.45-.46-7.02.11-10.13,1.69-3.54,1.53-10.97,8.14-5.01,10.98,0,0,6.97,0,10.64,0-.42-.77-.68-1.64-.68-2.57.11-4.25,2.2-7.6,5.18-10.1Z"/><path d="m87.13,5.71h7.16v38.57h-4.17c.43,1.88.38,3.86-.15,5.71h10.03V0h-15.3c1.22,1.71,2.06,3.64,2.43,5.71Z"/><path d="m65.87,37.31c2.45,2.07,4.25,4.69,4.93,7.83.29,1.37.24,3.25-.6,4.85h10.49c2.55.1,3.25-3.44,2.04-5.24-3.7-5.44-10.43-8.33-16.85-7.44Z"/><path d="m25,5.71h0s9.82,0,9.82,0h0s18.24,0,18.24,0c.37-2.07,1.23-4,2.44-5.71h-30.12,0s-2.8,0-2.8,0C10.11,0,0,10.11,0,22.58v27.42h10.26c-.31-1-.48-2.05-.46-3.14.02-.88.15-1.74.37-2.57h-4.46v-19.28C5.71,14.37,14.37,5.71,25,5.71Z"/></svg>
-            <h3 class="farge-forum">Forum</h3>
-            <h6>08:15<br />09:00</h6>
-          </div>
-          <div>
-            <h4 class="farge-forum">Auditoriet</h4>
-            <h5>Marius, Stian og Jon</h5>
-            <p>Gjennomgang av undervisningsevaluering</p>
-          </div>
-        </div>
-        <div class="ramme programfag1">
-          <div class="fagtittel">
-            <svg class="ikon farge-programfag" alt="Ikon for Programfag" viewBox="0 0 100 50"><polygon points="54.79 19.2 59.22 14.77 54.77 10.54 53.3 12.09 56.16 14.81 53.28 17.69 54.79 19.2"/><polygon points="43.14 14.81 46 12.09 44.53 10.54 40.08 14.77 44.51 19.2 46.02 17.69 43.14 14.81"/><polygon points="52.99 9.41 50.69 9.41 46.31 20.31 48.61 20.31 52.99 9.41"/><path d="m54.61,41.42c2.63-1.29,2.83-1.34,2.74-2.46-.07-.95,0-1.2-1.15-.58-3.16,1.72-9.6,3.92-12.89,4.94-.99.3-2.15,1.26.1,3.93,4.16,4.93,11.03,2.8,13.11-2.96.58-1.62.48-2.21-.81-1.54-.92.48-2.32,1.23-3.74,1.83-3.41,1.44-4.12,1.75-5.1.29,1.31-.58,2.7-1.31,4.21-1.94,1.7-.7,3.54-1.51,3.54-1.51Z"/><path d="m36.61,50c-1.33-2.17-1.7-4.11-1.62-5.71H5.71v-19.29C5.71,14.37,14.37,5.71,25,5.71h0s5.1,0,5.1,0C30.98,3.59,32.18,1.68,33.64,0h-11.05c-12.47,0-22.58,10.11-22.58,22.58v27.42h36.61Z"/><path d="m69.2,5.71h25.08v38.57h-30.41c-.16,1.08-.47,1.95-.65,2.43-.42,1.17-.97,2.27-1.62,3.29h38.39V0h-34.34c1.46,1.68,2.66,3.59,3.54,5.71Z"/><path d="m41.9,33.32c-.92.06-.57.19-.43,1.87.07.82,1.4.61,2.04.58,6.23-.27,7.16-.51,7.03.69-.9.29-2.79.96-5.07,1.51-4.13,1.01-4.21.88-4,2.22.13.85.1,1.27,1.12,1.1,1.58-.26,3.21-.9,4.72-1.41,4.76-1.61,6.56-2.39,9.97-4.24.16-.09.25-2.26.07-2.39-.26-.19-1.17-.35-1.31-.51,0,0-.12.02-.11-1.13h0c0-6.68,7.85-8.61,7.85-17.06S57.45,0,49.65,0s-14.13,5.82-14.13,14.55,7.85,10.62,7.85,17.06c0,1.58-.39,1.64-1.47,1.71Zm.36-10.85c-1.92-2.29-3.57-4.27-3.57-7.84,0-6.58,4.61-11.36,10.97-11.36s10.97,4.78,10.97,11.36c0,3.36-1.61,5.3-3.48,7.55-1.45,1.74-3.05,3.67-3.67,6.28-.94.02-2.2.03-3.72.03-1.66,0-2.98-.01-3.93-.03-.62-2.46-2.16-4.31-3.56-5.98Z"/></svg>
-            <h3 class="farge-programfag">Programfag</h3>
-            <h6>09:00<br />11:25</h6>
-          </div>
-          <div>
-            <h4 class="farge-programfag">Grafisk / G18 / TV-studio</h4>
-            <h5>Marius, Stian, og Jon</h5>
-            <p>Oppstart av neste rulleringsrunde</p>
-            <p>1IMB: Visuell identitet i Grafisk verksted</p>
-            <p>1IMC: JavaScrip i G18</p>
-            <p>1IMA: Sanntidsproduksjon i TV-studio</p>
-          </div>
-        </div>
-        <div class="ramme engelsk1">
-          <div class="fagtittel">
-            <svg class="ikon farge-engelsk" alt="Ikon for Engelsk" viewBox="0 0 100 50"><path d="m24.3,44.29H5.71v-19.29C5.71,14.6,13.99,6.08,24.3,5.71h0C25.9,3.59,27.76,1.67,29.83,0h-4.45s-2.8,0-2.8,0C10.11,0,0,10.11,0,22.58H0s0,0,0,0v27.42h29.83c-2.07-1.67-3.93-3.59-5.52-5.71Z"/><path d="m75.7,5.71h18.59v38.57h-18.59c-1.6,2.13-3.46,4.04-5.53,5.71h29.83V0h-29.83c2.07,1.67,3.93,3.59,5.52,5.71Z"/><path d="m50,50c13.8,0,25-11.2,25-25S63.8,0,50,0s-25,11.2-25,25,11.2,25,25,25Zm8.89-5.6c1.19-1.75,2.24-3.92,3.01-6.37,1.4.35,2.66.77,3.92,1.26-1.89,2.1-4.27,3.85-6.93,5.11Zm1.26-17.58c-.07,2.45-.42,4.69-.84,6.72-2.38-.42-4.9-.7-7.42-.77v-5.95h8.26Zm-8.26-3.64v-5.95c2.52-.07,5.04-.35,7.42-.77.42,2.03.77,4.27.84,6.72h-8.26Zm16.25,13.03c-1.68-.7-3.43-1.26-5.18-1.82.49-2.38.77-4.9.91-7.56h7.35c-.28,3.43-1.4,6.58-3.08,9.38Zm0-22.41c1.68,2.8,2.8,5.95,3.08,9.38h-7.35c-.14-2.66-.42-5.18-.91-7.56,1.75-.56,3.5-1.12,5.18-1.82Zm-2.31-3.08c-1.26.49-2.52.91-3.92,1.26-.77-2.45-1.82-4.62-3.01-6.37,2.66,1.26,5.04,3.01,6.93,5.11Zm-7.49,2.1c-2.1.35-4.2.56-6.44.7V4.06c2.45,1.05,4.9,4.13,6.44,8.75Zm-6.44,23.67c2.24.14,4.34.35,6.44.7-1.54,4.62-3.99,7.7-6.44,8.75v-9.45Zm-20.03-.28c-1.68-2.8-2.8-5.95-3.08-9.38h7.35c.14,2.66.42,5.18.91,7.56-1.75.56-3.5,1.12-5.18,1.82Zm2.31,3.08c1.26-.49,2.52-.91,3.92-1.26.77,2.45,1.82,4.62,3.01,6.37-2.66-1.26-5.04-3.01-6.93-5.11Zm13.94-12.47v5.95c-2.52.07-5.04.35-7.42.77-.42-2.03-.77-4.27-.84-6.72h8.26Zm-8.26-3.64c.07-2.45.42-4.69.84-6.72,2.38.42,4.9.7,7.42.77v5.95h-8.26Zm1.82,14.01c2.1-.35,4.2-.56,6.44-.7v9.45c-2.45-1.05-4.9-4.13-6.44-8.75Zm6.44-33.12v9.45c-2.24-.14-4.34-.35-6.44-.7,1.54-4.62,3.99-7.7,6.44-8.75Zm-7,1.54c-1.19,1.75-2.24,3.92-3.01,6.37-1.4-.35-2.66-.77-3.92-1.26,1.89-2.1,4.27-3.85,6.93-5.11Zm-9.24,8.19c1.68.7,3.43,1.26,5.18,1.82-.49,2.38-.77,4.9-.91,7.56h-7.35c.28-3.43,1.4-6.58,3.08-9.38Z"/><path d="m24.38,5.71s.01,0,0,0h0Z"/><path d="m24.38,5.71s-.02,0-.05,0c.02,0,.03,0,.05,0Z"/></svg>
-            <h3 class="farge-engelsk">Engelsk</h3>
-            <h6>12:10<br />14:35</h6>
-          </div>
-          <div class="gruppe-xy">
-            <div>
-              <h4 class="farge-engelsk">IMX: 206</h4>
-              <h5>Stine Cecilie</h5>
-            </div>
-            <div>
-              <h4 class="farge-engelsk">IMY: G18</h4>
-              <h5>Runar</h5>
-            </div>
-          </div>
+          <h4>2. januar</h4>
         </div>
       </div>
       <!-- Tirsdags-økter -->
       <div class="tir">
         <div class="tirsdag">
           <h2>Tirsdag</h2>
-          <h4>10. januar</h4>
+          <h4>3. januar</h4>
         </div>
         <div class="ramme ig">
           <div class="fagtittel">
@@ -102,11 +63,11 @@
             <h6>08:15<br />11:25</h6>
           </div>
           <div>
-            <h4 class="farge-programfag">G18</h4>
+            <h4 class="farge-programfag">Auditoriet > G18</h4>
             <h5>Marius, Stian og Jon</h5>
-            <p>1IMB: Visuell identitet i Grafisk verksted</p>
-            <p>1IMC: JavaScrip i G18</p>
-            <p>1IMA: Sanntidsproduksjon i TV-studio</p>
+            <p>Oppstart i Auditoriet</p>
+            <p>Lage cat6 kabler og sette opp trådløs ruter i G18</p>
+            <p>Jon har terminsamtaler</p>
           </div>
         </div>
         <div class="ramme matte1">
@@ -117,7 +78,7 @@
           </div>
           <div class="gruppe-abc">
             <div>
-              <h4 class="farge-matte">A: 316</h4>
+              <h4 class="farge-matte">A: G18</h4>
               <h5>Thomas</h5>
             </div>
             <div>
@@ -137,11 +98,10 @@
             <h6>13:05<br />14:35</h6>
           </div>
           <div>
-            <h4 class="farge-programfag">Grafisk / G18 / TV-studio</h4>
+            <h4 class="farge-programfag">G18</h4>
             <h5>Marius, Stian og Jon</h5>
-            <p>1IMB: Visuell identitet i Grafisk verksted</p>
-            <p>1IMC: JavaScrip i G18</p>
-            <p>1IMA: Sanntidsproduksjon i TV-studio</p>
+            <p>Maskinvarer</p>
+            <p>Marius har terminsamtaler</p>
           </div>
         </div>
       </div>
@@ -149,7 +109,7 @@
       <div class="ons">
         <div class="onsdag">
           <h2>Onsdag</h2>
-          <h4>11. januar</h4>
+          <h4>4. januar</h4>
         </div>
         <div class="ramme matte2">
           <div class="fagtittel">
@@ -159,7 +119,7 @@
           </div>
           <div class="gruppe-abc">
             <div>
-              <h4 class="farge-matte">A: 308</h4>
+              <h4 class="farge-matte">A: G18</h4>
               <h5>Thomas</h5>
             </div>
             <div>
@@ -196,11 +156,10 @@
             <h6>13:50<br />15:44</h6>
           </div>
           <div>
-            <h4 class="farge-programfag">Grafisk / G18 / TV-studio</h4>
+            <h4 class="farge-programfag">G18</h4>
             <h5>Marius, Stian, og Jon</h5>
-            <p>1IMB: Visuell identitet i Grafisk verksted</p>
-            <p>1IMC: JavaScrip i G18</p>
-            <p>1IMA: Sanntidsproduksjon i TV-studio</p>
+            <p>Maskinvarer</p>
+            <p>Marius har terminsamtaler</p>
           </div>
         </div>
       </div>
@@ -208,7 +167,7 @@
       <div class="tor">
         <div class="torsdag">
           <h2>Torsdag</h2>
-          <h4>12. januar</h4>
+          <h4>5. januar</h4>
         </div>
         <div class="ramme yff1">
           <div class="fagtittel">
@@ -219,14 +178,14 @@
           <div>
             <h4 class="farge-yff">G18</h4>
             <h5>Karine, Åsa Maria og Stein</h5>
-            <p>Siste uke med YFF dette semesteret. Det er anbefalt å gå over alle prosjektene en har gjort så langt i år, og sikre at de er lagret på OneDrive og synkronisert.</p>
+            <p>Terminavslutning YFF</p>
           </div>
         </div>
         <div class="ramme midttimen">
           <div class="fagtittel">
             <svg class="ikon farge-midttimen" alt="Ikon for Midttimen" viewBox="0 0 100 50"><g id="c"><path id="d" d="m71.13,33.71l-3.3-1.91,2.54-.68c.8-.22,1.28-1.04,1.06-1.85l-.38-1.45c-.22-.8-1.04-1.28-1.85-1.06l-6.92,1.85-6.23-3.61,6.23-3.6,6.91,1.86c.8.21,1.63-.26,1.85-1.06l.39-1.46c.21-.81-.27-1.63-1.08-1.84l-2.54-.68,3.3-1.9c.72-.42.97-1.34.56-2.06l-1.51-2.62c-.42-.72-1.34-.97-2.06-.56l-3.3,1.9.68-2.54c.21-.8-.26-1.63-1.06-1.85l-1.45-.39c-.8-.21-1.63.26-1.85,1.06l-1.86,6.91-6.13,3.53v-7.57l5.24-5.24c.61-.61.61-1.6,0-2.21l-1.1-1.1c-.61-.61-1.6-.61-2.21,0l-1.93,1.93V1.56C53.12.7,52.43,0,51.56,0h-3.12c-.86,0-1.56.7-1.56,1.56v3.95l-1.92-1.93c-.61-.61-1.6-.61-2.21,0l-1.11,1.1c-.61.6-.62,1.58-.01,2.19,0,0,0,.01.01.01l5.24,5.24v7.57l-6.13-3.53-1.86-6.91c-.22-.8-1.04-1.28-1.84-1.06l-1.46.39c-.8.22-1.28,1.04-1.06,1.85l.69,2.54-3.3-1.9c-.72-.42-1.64-.17-2.06.55,0,0,0,0,0,0l-1.51,2.61c-.42.72-.17,1.64.55,2.06,0,0,0,0,0,0l3.3,1.9-2.53.68c-.81.21-1.29,1.04-1.07,1.85,0,0,0,0,0,0l.38,1.46c.22.8,1.04,1.28,1.85,1.06l6.91-1.86,6.24,3.6-6.23,3.6-6.91-1.86c-.81-.22-1.63.26-1.85,1.06l-.38,1.46c-.21.8.26,1.63,1.07,1.84l2.54.68-3.3,1.92c-.72.42-.97,1.34-.56,2.06l1.51,2.62c.42.72,1.34.97,2.06.56l3.3-1.9-.68,2.54c-.21.8.26,1.63,1.06,1.85l1.46.39c.8.21,1.63-.26,1.85-1.06l1.86-6.91,6.13-3.53v7.57l-5.25,5.24c-.61.6-.62,1.58-.01,2.19,0,0,0,.01.01.01l1.1,1.1c.61.61,1.6.61,2.21,0l1.92-1.92v3.94c0,.86.7,1.56,1.56,1.56h3.12c.86,0,1.56-.7,1.56-1.56v-3.95l1.92,1.92c.61.61,1.6.61,2.21,0l1.1-1.1c.61-.61.61-1.6,0-2.21l-5.22-5.24v-7.57l6.13,3.53,1.86,6.91c.22.8,1.04,1.28,1.85,1.06l1.46-.39c.8-.22,1.28-1.04,1.06-1.85l-.69-2.54,3.3,1.9c.72.42,1.64.17,2.06-.55,0,0,0,0,0,0l1.51-2.62c.42-.71.18-1.62-.53-2.04,0,0-.01,0-.02,0h0Z"/></g><g><path d="m37.16,47.23c-3.07-.09-6.07-1.11-8.56-2.95H5.71v-19.29C5.71,14.37,14.37,5.71,25,5.71h0s3.6,0,3.6,0c2.49-1.84,5.49-2.86,8.56-2.95.62-1.01,1.36-1.93,2.19-2.77h-13.97,0s0,0,0,0h-2.8C10.11,0,0,10.11,0,22.58v27.42h39.35c-.83-.83-1.57-1.76-2.19-2.77Z"/><path d="m60.65,0c.83.83,1.57,1.76,2.19,2.77,3.07.09,6.07,1.11,8.56,2.95h22.89v38.57h-22.89c-2.49,1.84-5.49,2.86-8.56,2.95-.62,1.01-1.36,1.93-2.19,2.77h39.35V0h-39.35Z"/></g></svg>
             <h3 class="farge-midttimen">Midttimen</h3>
-            <h6>12:10<br />12:55</h6>
+            <h6>12:10<br />12:50</h6>
           </div>
           <div>
             <h4 class="farge-midttimen">G18</h4>
@@ -241,7 +200,7 @@
           <div>
             <h4 class="farge-yff">G18</h4>
             <h5>Marius, Torbjørn og Nicholas</h5>
-            <p>Oppsummering og avslutning</p>
+            <p>Terminavslutning YFF</p>
           </div>
         </div>
       </div>
@@ -249,7 +208,7 @@
       <div class="fre">
         <div class="fredag">
           <h2>Fredag</h2>
-          <h4>13. januar</h4>
+          <h4>6. januar</h4>
         </div>
         <div class="ramme programfag4">
           <div class="fagtittel">
@@ -258,11 +217,11 @@
             <h6>08:15<br />11:25</h6>
           </div>
           <div>
-            <h4 class="farge-programfag">Grafisk / G18 / TV-studio</h4>
-            <h5>Erik, Stian og Jon</h5>
-            <p>1IMB: Visuell identitet i Grafisk verksted</p>
-            <p>1IMC: JavaScrip i G18</p>
-            <p>1IMA: Sanntidsproduksjon i TV-studio</p>
+            <h4 class="farge-programfag">G18</h4>
+            <h5>Marius og Stian</h5>
+            <p>GitHub og Versjonskontroll</p>
+            <p>Stian har terminsamtaler</p>
+            <p>Jon er borte</p>
           </div>
         </div>
         <div class="ramme naturfag">
@@ -274,11 +233,11 @@
           <div class="gruppe-xy">
             <div>
               <h4 class="farge-naturfag">IMX: 206</h4>
-              <h5>Sivert</h5>
+              <h5>Thomas</h5>
             </div>
             <div>
               <h4 class="farge-naturfag">IMY: G18</h4>
-              <h5>Stein</h5>
+              <h5>Thomas</h5>
             </div>
           </div>
         </div>

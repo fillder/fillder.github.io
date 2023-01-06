@@ -1,8 +1,4 @@
 /*______ fargedeklarering ______*/
-body {
-  background-color: var(--clr-bakgrunn);
-  color: var(--clr-tekst);
-}
 .farge-programfag {
   color: var(--clr-safir);
   fill: var(--clr-safir);
@@ -147,8 +143,15 @@ button {
   border: none;
   background: none;
 }
+.overskrift{
+  display: flex;
+}
 .ikon {
   width: clamp(2rem, 3vw, 6rem);
+}
+.piler{
+    width: clamp(2rem, 3vw, 6rem);
+    fill: var(--clr-boks);
 }
 .skolelogo {
   width: clamp(2rem, 3vw, 4rem);
