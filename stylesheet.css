@@ -68,3 +68,88 @@ body {
   background-color: var(--clr-bakgrunn);
   color: var(--clr-tekst);
 }
+/*______ Knapper ______*/
+button {
+  background-color: transparent;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+/*______ Skolelogo ______*/
+.skolelogo {
+  width: clamp(2rem, 3vw, 4rem);
+}
+.skolefarge1{
+  fill: var(--clr-skolefarge1);
+}
+.skolefarge2{
+  fill: var(--clr-skolefarge2);
+}
+/*______ Dag/natt-tema ______*/
+.dag-natt{
+  width: clamp(2rem, 3vw, 4rem);
+  height: clamp(2rem, 3vh, 4rem);
+}
+.menyknapp-en {
+  fill: var(--clr-tekst);
+}
+.sun {
+  fill: var(--clr-tekst);
+  stroke: var(--clr-tekst);
+}
+.moon {
+  fill: var(--clr-bakgrunn);
+}
+/*______ Animasjoner ______*/
+.moonAnim{
+  animation: moon 500ms ease-in forwards;
+  transform-origin: 50px 120px;
+}
+.sunAnim{
+  animation: sun 500ms ease-in forwards;
+  transform-origin: 50px 120px;
+}
+.moonAnimRev{
+  animation: moonrev 500ms ease-in forwards;
+  transform-origin: 50px 120px;
+}
+.sunAnimRev{
+  animation: sunrev 500ms ease-in forwards;
+  transform-origin: 50px 120px;
+}
+@keyframes sun {
+  0% {
+    transform: scale(1);
+    stroke-dashoffset: 0;
+  }
+  100% {
+    transform: scale(2.4);
+    stroke-dashoffset: 19.9;
+  }
+}
+@keyframes moon {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(-70px, 70px);
+  }
+}
+@keyframes sunrev {
+  0% {
+    transform: scale(2.4);
+    stroke-dashoffset: 19.9;
+  }
+  100% {
+    transform: scale(1);
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes moonrev {
+  0% {
+    transform: translate(-70px, 70px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

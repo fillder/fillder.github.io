@@ -92,7 +92,7 @@ p {/* brødtekst */
   border-color: var(--clr-ramme);
   border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
   border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
-  border-bottom-left-radius: clamp(0.1rem, 0.4rem, 0.6vw);
+  border-bottom-left-radius: clamp(0.5rem, 0.6rem, 0.8vw);
   border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
   border-top-width: 2px;
   border-right-width: 2px;
@@ -152,82 +152,6 @@ button {
 .piler{
     width: clamp(2rem, 3vw, 6rem);
     fill: var(--clr-boks);
-}
-.skolelogo {
-  width: clamp(2rem, 3vw, 4rem);
-}
-.dag-natt{
-  width: clamp(2rem, 3vw, 4rem);
-  height: clamp(2rem, 3vh, 4rem);
-}
-.skolefarge1{
-  fill: var(--clr-skolefarge1);
-}
-.skolefarge2{
-  fill: var(--clr-skolefarge2);
-}
-.menyknapp-en {
-  fill: var(--clr-tekst);
-}
-.sun {
-  fill: var(--clr-tekst);
-  stroke: var(--clr-tekst);
-}
-.moon {
-  fill: var(--clr-bakgrunn);
-}
-/*______ animasjoner ______*/
-.moonAnim{
-  animation: moon 500ms ease-in forwards;
-  transform-origin: 50px 120px;
-}
-.sunAnim{
-  animation: sun 500ms ease-in forwards;
-  transform-origin: 50px 120px;
-}
-.moonAnimRev{
-  animation: moonrev 500ms ease-in forwards;
-  transform-origin: 50px 120px;
-}
-.sunAnimRev{
-  animation: sunrev 500ms ease-in forwards;
-  transform-origin: 50px 120px;
-}
-@keyframes sun {
-  0% {
-    transform: scale(1);
-    stroke-dashoffset: 0;
-  }
-  100% {
-    transform: scale(2.4);
-    stroke-dashoffset: 19.9;
-  }
-}
-@keyframes moon {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  100% {
-    transform: translate(-70px, 70px);
-  }
-}
-@keyframes sunrev {
-  0% {
-    transform: scale(2.4);
-    stroke-dashoffset: 19.9;
-  }
-  100% {
-    transform: scale(1);
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes moonrev {
-  0% {
-    transform: translate(-70px, 70px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
 }
 /*______ mobilversjon ______*/
 @media (max-width: 740px) or (orientation: portrait){
