@@ -138,11 +138,6 @@ main{
   align-items: center;
 }
 /*______ ikoner og bilder ______*/
-button {
-  background-color: transparent;
-  border: none;
-  background: none;
-}
 .overskrift{
   display: flex;
 }
