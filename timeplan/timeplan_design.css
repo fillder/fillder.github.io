@@ -149,7 +149,7 @@ main{
     fill: var(--clr-boks);
 }
 /*______ mobilversjon ______*/
-@media (max-width: 833px) or (orientation: portrait) or (min-resolution: 400dppx){
+@media (orientation: portrait) or (max-width: 833px) {
   header{
     padding-inline: 2vw;
   }
@@ -199,3 +199,52 @@ main{
   }
 } 
 
+@media only screen and (min-resolution: 400dppx){
+  header{
+    padding-inline: 2vw;
+  }
+  main{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    width: clamp(340px, 600px, 70%);
+    margin-inline: auto;
+  }
+  h1 {/* Tittel */
+    font-size: 2rem;
+  } 
+  h2 {/* Dager */
+    font-size: 1.7rem;
+  } 
+  h3 {/* Fagtittel */
+    font-size: 1.4rem;
+  } 
+  h4 {/* Dato */
+    font-size: 1.2rem;
+  } 
+  h5 {/* lærer */
+    font-size: 1.1rem;
+  } 
+  h6 {/* klokkelsett */
+    font-size: .6rem;
+  } 
+  p {/* brødtekst */
+    font-size: 1rem;
+  }
+  .ikon {
+    width: 3.4rem;
+  }
+  .ramme{
+    padding-inline: 1.2vw;
+    padding-block: .8vw;
+  }
+  .man,
+  .tir,
+  .ons,
+  .tor,
+  .fre{
+    background-color: var(--clr-fremheving);
+    min-height: 1000px;
+    padding: 2vw;
+  }
+} 
