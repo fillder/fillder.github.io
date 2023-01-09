@@ -149,7 +149,7 @@ main{
     fill: var(--clr-boks);
 }
 /*______ mobilversjon ______*/
-@media only sreen and (max-width: 800px) or (orientation: portrait) or (min-resolution: 400dppx){
+@media (max-width: 800px) or (orientation: portrait) or (min-resolution: 400dppx){
   header{
     padding-inline: 2vw;
   }
