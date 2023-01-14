@@ -51,7 +51,8 @@ darkModeToggle.addEventListener("click", () => {
   if (darkMode !== "enabled") {
     enableDarkMode();
     console.log(darkMode);
-  } else {
+  } 
+  else {
     disableDarkMode();
     console.log(darkMode);
   }
@@ -60,11 +61,7 @@ darkModeToggle.addEventListener("click", () => {
 //Legger til animasjonsvarighet
 function svgAnim() {
   //henter alle barna til elementer som har klassen .svg-anim
-  let elements = document.querySelectorAll('.svg-anim *'); 
-    for(let i = 0; i < elements.length; i++){
-    const element = elements[i];
-    element.classList.add("animasjonstimer");
-  }
+  document.querySelectorAll('.svg-anim *').forEach(function(element) { element.classList.add("animasjonstimer")})
 }
 
 setTimeout(svgAnim, 800);
