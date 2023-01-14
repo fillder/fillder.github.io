@@ -1,4 +1,4 @@
-.man{
+.man {
   flex: 1;
   display: grid;
   gap: 0.5rem;
@@ -16,7 +16,7 @@
     /1fr;
   justify-self: center;
 }
-.tir{
+.tir {
   flex: 1;
   display: grid;
   gap: 0.5rem;
@@ -34,7 +34,7 @@
     /1fr;
   justify-self: center;
 }
-.ons{
+.ons {
   flex: 1;
   display: grid;
   gap: 0.5rem;
@@ -52,7 +52,7 @@
     /1fr;
     justify-self: center;
 }
-.tor{
+.tor {
   flex: 1;
   display: grid;
   gap: 0.5rem;
@@ -70,7 +70,7 @@
     /1fr;
     justify-self: center;
 }
-.fre{
+.fre {
   flex: 1;
   display: grid;
   gap: 0.5rem;
@@ -89,87 +89,87 @@
     justify-self: center;
 }
 /* Mandag */
-.mandag{
+.mandag {
   grid-area: d1;
 }
 
-.forum{
+.forum {
   grid-area: fr;
 }
 
-.programfag1{
+.programfag1 {
   grid-area: p1;
 }
 
-.engelsk1{  
+.engelsk1 {  
   grid-area: e1;
 }
 
 /* tirsdag */
-.tirsdag{
+.tirsdag {
   grid-area: d2;
 }
 
-.ig{
+.ig {
   grid-area: ig;
 }
 
-.matte1{
+.matte1 {
   grid-area: m1;
 }
 
-.programfag2{
+.programfag2 {
   grid-area: p2;
 }
 
 /* onsdag */
-.onsdag{
+.onsdag {
   grid-area: d3;
 }
 
-.matte2{
+.matte2 {
   grid-area: m2;
 }
 
-.engelsk2{
+.engelsk2 {
   grid-area: e2;
 }
 
-.programfag3{
+.programfag3 {
   grid-area: p3;
   margin-bottom: -4rem;
 }
 
 /* torsdag */
-.torsdag{
+.torsdag {
   grid-area: d4;
 }
 
-.yff1{
+.yff1 {
   grid-area: y1;
 }
 
-.midttimen{
+.midttimen {
   grid-area: mt;
 }
 
-.yff2{
+.yff2 {
   grid-area: y2;
 }
 
 /* fredag */
-.fredag{
+.fredag {
   grid-area: d5;
 }
 
-.programfag4{
+.programfag4 {
   grid-area: p4;
 }
 
-.naturfag{
+.naturfag {
   grid-area: nt;
 }
 
-.kroppsoving{
+.kroppsoving {
   grid-area: gy;
 }
