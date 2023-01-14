@@ -156,20 +156,23 @@ a {
 }
 /*______ Animasjoner ______*/
 .moonAnim {
-  animation: moon 500ms ease-in forwards;
+  animation: moon ease-in forwards;
   transform-origin: 50px 120px;
 }
 .sunAnim {
-  animation: sun 500ms ease-in forwards;
+  animation: sun ease-in forwards;
   transform-origin: 50px 120px;
 }
 .moonAnimRev {
-  animation: moonrev 500ms ease-in forwards;
+  animation: moonrev ease-in forwards;
   transform-origin: 50px 120px;
 }
 .sunAnimRev {
-  animation: sunrev 500ms ease-in forwards;
+  animation: sunrev ease-in forwards;
   transform-origin: 50px 120px;
+}
+.animasjonstimer {
+  animation-duration: 500ms;
 }
 @keyframes sun {
   0% {
