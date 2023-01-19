@@ -108,6 +108,9 @@ main {
 .utilgjengelig {
   opacity: 0.2;
 }
+.navigasjon{
+  display: none;
+}
 /*______ mobilversjon ______*/
 @media (max-width: 833px) or (orientation: portrait) or (min-resolution: 400dppx){
   header{

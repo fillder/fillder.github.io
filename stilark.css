@@ -16,7 +16,7 @@
   body {
     height: 100vh;
   }
-  img, picture, svg, video {
+  img, picture, video {
     display: block;
     max-width: 100%;
   }
