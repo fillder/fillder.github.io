@@ -1,3 +1,20 @@
+  /*______ Scrollehjulet ______*/
+  /* Gjemmer bort scrollehjulet for Chrome, Safari og Opera */
+  html::-webkit-scrollbar {
+    display: none;
+  }
+  main::-webkit-scrollbar {
+    display: none;
+  }
+  /* Gjemmer bort scrollehjulet for IE, Edge og Firefox */
+  html {
+    -ms-overflow-style: none;  /* IE og Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  main {
+    -ms-overflow-style: none;  /* IE og Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 /*______ fargedeklarering ______*/
 .farge-programfag {
   color: var(--clr-safir);
@@ -126,7 +143,7 @@ main {
     margin-bottom: 5rem;
   }
   h1 {/* Tittel */
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   h2 {/* Dager */
     font-size: 1.7rem;
@@ -166,9 +183,9 @@ main {
   }
   .snap-inline{
     scroll-snap-type: inline mandatory;
+    scroll-behavior: smooth;
     /* scroll-padding-inline: 1rem; */
   }
-
   .snap-inline > * {
     scroll-snap-align: center;
   }
@@ -176,27 +193,39 @@ main {
     display: revert;
     position: fixed;
     width: 100%;
-    /* height: 100px; */
-    bottom: 50%;
+    bottom: 0%;
     background-color: var(--clr-tekst);
     border-top-left-radius: .6rem;
     border-top-right-radius: .6rem;
-    /* padding-inline: 2vw; */
     justify-content: center;
+    /* border: 2px solid green; */
   }
   .navigasjon ul{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    width: clamp(350px, 80%, 500px);
+    width: 80%;
+    max-width: 500px;
     margin-inline: auto;
-    padding-block: 10px;
+    /* border: 2px solid green; */
   }
   .navigasjon ul li{
+    list-style: none;
+    width: 100%;
     align-self: center;
-    width: 60%;
-    margin-inline: auto;
+    border-radius: 50%;
+    /* border: 2px solid blue; */
     /* margin-inline: 10%; */
+  }
+  .active{
+    transform: scale(120%, 120%) translateY(-25%);
+    background-color: var(--clr-safir);
+    border: 0.4rem solid  var(--clr-tekst);
+    transition: .5s;
+  }
+  .navigasjon ul li a{
+    display: flex;
+    margin: 20%;
+    /* border: 2px solid yellow; */
   }
   .navigasjon ul li a .nav-text{
     font-family: "Roboto slab", sans-serif;
