@@ -109,58 +109,98 @@ main {
   opacity: 0.2;
 }
 /*______ mobilversjon ______*/
-@media (orientation: portrait) or (max-width: 833px) {
-  header {
+@media (max-width: 833px) or (orientation: portrait) or (min-resolution: 400dppx){
+  header{
     padding-inline: 2vw;
   }
-  .overskrift {
-    min-width: 360px;
-  }
-  .piler {
-    max-height: 35px;
-  }
-  main {
-    display: flex;
-    flex-direction: column;
-    gap: 6rem;
-    width: clamp(340px, 600px, 70%);
-    margin-inline: auto;
+  main{
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    /* overscroll-behavior-inline: contain; */
+    gap: 10rem;
+    grid-auto-columns: 100%;
+    margin-bottom: 5rem;
   }
   h1 {/* Tittel */
-    font-size: 1.8rem;
-  } 
+    font-size: 2rem;
+  }
   h2 {/* Dager */
     font-size: 1.7rem;
-  } 
+  }
   h3 {/* Fagtittel */
     font-size: 1.4rem;
-  } 
+  }
   h4 {/* Dato */
     font-size: 1.2rem;
-  } 
+  }
   h5 {/* lærer */
     font-size: 1.1rem;
-  } 
+  }
   h6 {/* klokkelsett */
-    font-size: .6rem;
-  } 
+    font-size: .8rem;
+  }
   p {/* brødtekst */
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .ikon {
     width: 3.4rem;
   }
-  .ramme {
+  .ramme{
     padding-inline: 1.2vw;
     padding-block: .8vw;
+    border-radius: 1.2rem 0.4rem 1.2rem 0.8rem;
   }
   .man,
   .tir,
   .ons,
   .tor,
-  .fre {
+  .fre{
     background-color: var(--clr-fremheving);
-    min-height: 1000px;
-    padding: 2vw;
+    border-radius: 1rem;
+    width: clamp(350px, 80%, 500px);
+    padding: 1rem;
   }
-} 
+  .snap-inline{
+    scroll-snap-type: inline mandatory;
+    /* scroll-padding-inline: 1rem; */
+  }
+
+  .snap-inline > * {
+    scroll-snap-align: center;
+  }
+  .navigasjon{
+    display: revert;
+    position: fixed;
+    width: 100%;
+    /* height: 100px; */
+    bottom: 50%;
+    background-color: var(--clr-tekst);
+    border-top-left-radius: .6rem;
+    border-top-right-radius: .6rem;
+    /* padding-inline: 2vw; */
+    justify-content: center;
+  }
+  .navigasjon ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    width: clamp(350px, 80%, 500px);
+    margin-inline: auto;
+    padding-block: 10px;
+  }
+  .navigasjon ul li{
+    align-self: center;
+    width: 60%;
+    margin-inline: auto;
+    /* margin-inline: 10%; */
+  }
+  .navigasjon ul li a .nav-text{
+    font-family: "Roboto slab", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    text-anchor: middle;
+    transform: translate(50%, 75%);
+    color: #14151f;
+  }
+}
