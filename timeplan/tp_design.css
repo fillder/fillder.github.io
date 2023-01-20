@@ -136,7 +136,7 @@ main {
   main{
     display: grid;
     grid-auto-flow: column;
-    overflow-x: auto;
+    overflow-x: hidden;
     /* overscroll-behavior-inline: contain; */
     gap: 10rem;
     grid-auto-columns: 100%;
@@ -184,7 +184,6 @@ main {
   .snap-inline{
     scroll-snap-type: inline mandatory;
     scroll-behavior: smooth;
-    /* scroll-padding-inline: 1rem; */
   }
   .snap-inline > * {
     scroll-snap-align: center;
@@ -198,34 +197,27 @@ main {
     border-top-left-radius: .6rem;
     border-top-right-radius: .6rem;
     justify-content: center;
-    /* border: 2px solid green; */
   }
   .navigasjon ul{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    width: 80%;
-    max-width: 500px;
+    width: 400px;
     margin-inline: auto;
-    /* border: 2px solid green; */
   }
-  .navigasjon ul li{
+  .navigasjon ul li.list{
     list-style: none;
-    width: 100%;
+    width: 80px;
     align-self: center;
     border-radius: 50%;
-    /* border: 2px solid blue; */
-    /* margin-inline: 10%; */
+    z-index: 2;
   }
-  .active{
+  .navigasjon ul li.active{
     transform: scale(120%, 120%) translateY(-25%);
-    background-color: var(--clr-safir);
-    border: 0.4rem solid  var(--clr-tekst);
     transition: .5s;
   }
   .navigasjon ul li a{
     display: flex;
-    margin: 20%;
-    /* border: 2px solid yellow; */
+    margin: 22%;
   }
   .navigasjon ul li a .nav-text{
     font-family: "Roboto slab", sans-serif;
@@ -234,5 +226,59 @@ main {
     text-anchor: middle;
     transform: translate(50%, 75%);
     color: #14151f;
+  }
+  .indikator{
+    position: absolute;
+    list-style: none;
+    top: -24px;
+    margin-left: -4px;
+    width: 90px;
+    height: 90px;
+    background-color: var(--clr-safir);
+    border: 0.4rem solid  var(--clr-tekst);
+    border-radius: 50%;
+    z-index: 1;
+    transition: .5s;
+  }
+  .indikator::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    transform: rotate(-38deg);
+    top: 5px;
+    left: -12px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 0px 6px var(--clr-tekst);
+    transition: .5s;
+  }
+  .indikator::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    transform: rotate(38deg);
+    top: 5px;
+    right: -12px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 0px 6px var(--clr-tekst);
+    transition: .5s;
+  }
+  .navigasjon ul li:nth-child(1).active ~ .indikator{
+    transform: translateX(calc(80px * 0));
+  }
+  .navigasjon ul li:nth-child(2).active ~ .indikator{
+    transform: translateX(calc(80px * 1));
+  }
+  .navigasjon ul li:nth-child(3).active ~ .indikator{
+    transform: translateX(calc(80px * 2));
+  }
+  .navigasjon ul li:nth-child(4).active ~ .indikator{
+    transform: translateX(calc(80px * 3));
+  }
+  .navigasjon ul li:nth-child(5).active ~ .indikator{
+    transform: translateX(calc(80px * 4));
   }
 }
