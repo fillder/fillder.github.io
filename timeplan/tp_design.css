@@ -136,7 +136,7 @@ main {
   main{
     display: grid;
     grid-auto-flow: column;
-    overflow-x: hidden;
+    overflow-x: auto;
     /* overscroll-behavior-inline: contain; */
     gap: 10rem;
     grid-auto-columns: 100%;
