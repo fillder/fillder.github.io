@@ -201,19 +201,19 @@ main {
   .navigasjon ul{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    width: 400px;
+    width: 350px;
     margin-inline: auto;
   }
   .navigasjon ul li.list{
     list-style: none;
-    width: 80px;
+    width: 70px;
     align-self: center;
     border-radius: 50%;
     z-index: 2;
   }
   .navigasjon ul li.active{
     transform: scale(120%, 120%) translateY(-25%);
-    transition: .5s;
+    transition: .3s;
   }
   .navigasjon ul li a{
     display: flex;
@@ -232,13 +232,13 @@ main {
     list-style: none;
     top: -24px;
     margin-left: -4px;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     background-color: var(--clr-safir);
     border: 0.4rem solid  var(--clr-tekst);
     border-radius: 50%;
     z-index: 1;
-    transition: .5s;
+    transition: .3s;
   }
   .indikator::before{
     content: '';
@@ -247,11 +247,11 @@ main {
     height: 10px;
     transform: rotate(-38deg);
     top: 5px;
-    left: -12px;
+    left: -14px;
     background: transparent;
     border-radius: 50%;
     box-shadow: 0px 6px var(--clr-tekst);
-    transition: .5s;
+    transition: .3s;
   }
   .indikator::after{
     content: '';
@@ -260,25 +260,25 @@ main {
     height: 10px;
     transform: rotate(38deg);
     top: 5px;
-    right: -12px;
+    right: -14px;
     background: transparent;
     border-radius: 50%;
     box-shadow: 0px 6px var(--clr-tekst);
     transition: .5s;
   }
   .navigasjon ul li:nth-child(1).active ~ .indikator{
-    transform: translateX(calc(80px * 0));
+    transform: translateX(calc(70px * 0));
   }
   .navigasjon ul li:nth-child(2).active ~ .indikator{
-    transform: translateX(calc(80px * 1));
+    transform: translateX(calc(70px * 1));
   }
   .navigasjon ul li:nth-child(3).active ~ .indikator{
-    transform: translateX(calc(80px * 2));
+    transform: translateX(calc(70px * 2));
   }
   .navigasjon ul li:nth-child(4).active ~ .indikator{
-    transform: translateX(calc(80px * 3));
+    transform: translateX(calc(70px * 3));
   }
   .navigasjon ul li:nth-child(5).active ~ .indikator{
-    transform: translateX(calc(80px * 4));
+    transform: translateX(calc(70px * 4));
   }
 }
