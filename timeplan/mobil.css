@@ -8,8 +8,8 @@
       height: 50px;
     }
     .skolelogo {
-      width: 50px;
-      height: 50px;
+      width: 45px;
+      height: 45px;
     }
     main{
       display: grid;
@@ -20,8 +20,8 @@
       margin-bottom: 5rem;
     }
     h1 {/* Tittel */
-      font-size: 1.8rem;
-      padding-inline: 2rem;
+      font-size: 2rem;
+      padding-inline: 1rem;
     }
     h2 {/* Dager */
       font-size: 1.7rem;
