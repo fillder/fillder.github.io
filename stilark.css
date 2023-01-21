@@ -144,9 +144,6 @@ a {
   width: clamp(2rem, 3vw, 4rem);
   height: clamp(2rem, 3vh, 4rem);
 }
-.menyknapp-en {
-  fill: var(--clr-tekst);
-}
 .sun {
   fill: var(--clr-tekst);
   stroke: var(--clr-tekst);
