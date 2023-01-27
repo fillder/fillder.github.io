@@ -167,3 +167,173 @@
       transform: translateX(calc(70px * 4));
     }
   }
+
+/* iphone 4-12 */
+@media only screen and (min-device-width: 320px) and (max-device-width: 844px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) { 
+  header{
+    padding-inline: 2vw;
+  }
+  .dag-natt {
+    width: 50px;
+    height: 50px;
+  }
+  .skolelogo {
+    width: 45px;
+    height: 45px;
+  }
+  main{
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    gap: 10rem;
+    grid-auto-columns: 100%;
+    margin-bottom: 5rem;
+  }
+  h1 {/* Tittel */
+    font-size: 2rem;
+    padding-inline: 1rem;
+  }
+  h2 {/* Dager */
+    font-size: 1.7rem;
+  }
+  h3 {/* Fagtittel */
+    font-size: 1.4rem;
+  }
+  h4 {/* Dato */
+    font-size: 1.2rem;
+  }
+  h5 {/* lærer */
+    font-size: 1.1rem;
+  }
+  h6 {/* klokkelsett */
+    font-size: .8rem;
+  }
+  p {/* brødtekst */
+    font-size: 0.9rem;
+  }
+  .ikon {
+    width: 3.4rem;
+  }
+  .ramme{
+    padding-inline: 1.2vw;
+    padding-block: .8vw;
+    border-radius: 1.2rem 0.4rem 1.2rem 0.8rem;
+  }
+  .man,
+  .tir,
+  .ons,
+  .tor,
+  .fre{
+    background-color: var(--clr-fremheving);
+    border-radius: 1rem;
+    width: clamp(350px, 80%, 500px);
+    padding: 1rem;
+  }
+  .ons{
+    box-shadow: 0 60px 0 0rem var(--clr-fremheving);
+  }
+  .snap-inline{
+    scroll-snap-type: inline mandatory;
+    scroll-behavior: smooth;
+  }
+  .snap-inline > * {
+    scroll-snap-align: center;
+  }
+  .navigasjon{
+    display: revert;
+    position: fixed;
+    width: 100%;
+    bottom: 0%;
+    background-color: var(--clr-tekst);
+    border-top-left-radius: .6rem;
+    border-top-right-radius: .6rem;
+    justify-content: center;
+  }
+  .navigasjon ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 350px;
+    margin-inline: auto;
+  }
+  .navigasjon ul li.list{
+    list-style: none;
+    width: 70px;
+    align-self: center;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  .navigasjon ul li.active{
+    transform: scale(120%, 120%) translateY(-25%);
+    transition: .3s;
+  }
+  .navigasjon ul li a{
+    display: flex;
+    border-radius: 50%;
+    /* border: 2px solid red; */
+  }
+  .navigasjon ul li a svg{
+    margin: 22%;
+  } 
+  .navigasjon ul li a .nav-text{
+    font-family: "Roboto slab", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    text-anchor: middle;
+    transform: translate(50%, 75%);
+    color: #14151f;
+  }
+  .indikator{
+    position: absolute;
+    list-style: none;
+    top: -24px;
+    margin-left: -4px;
+    width: 80px;
+    height: 80px;
+    background-color: var(--clr-safir);
+    border: 0.4rem solid  var(--clr-tekst);
+    border-radius: 50%;
+    z-index: 1;
+    transition: .3s;
+  }
+  .indikator::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    transform: rotate(-38deg);
+    top: 5px;
+    left: -14px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 0px 6px var(--clr-tekst);
+    transition: .3s;
+  }
+  .indikator::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    transform: rotate(38deg);
+    top: 5px;
+    right: -14px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 0px 6px var(--clr-tekst);
+    transition: .5s;
+  }
+  .navigasjon ul li:nth-child(1).active ~ .indikator{
+    transform: translateX(calc(70px * 0));
+  }
+  .navigasjon ul li:nth-child(2).active ~ .indikator{
+    transform: translateX(calc(70px * 1));
+  }
+  .navigasjon ul li:nth-child(3).active ~ .indikator{
+    transform: translateX(calc(70px * 2));
+  }
+  .navigasjon ul li:nth-child(4).active ~ .indikator{
+    transform: translateX(calc(70px * 3));
+  }
+  .navigasjon ul li:nth-child(5).active ~ .indikator{
+    transform: translateX(calc(70px * 4));
+  }
+}
