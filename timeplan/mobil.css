@@ -1,5 +1,5 @@
 /*______ mobilversjon ______*/
-@media (max-width: 833px) or (orientation: portrait) or (min-resolution: 400dppx){
+@media (max-width: 833px) or (orientation: portrait) or (-webkit-min-device-pixel-ratio: 3) or (min-resolution: 350dpi){
     header{
       padding-inline: 2vw;
     }
