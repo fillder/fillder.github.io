@@ -99,7 +99,7 @@
     .navigasjon ul li a{
       display: flex;
       border-radius: 50%;
-      border: 2px solid red;
+      /* border: 2px solid red; */
     }
     .navigasjon ul li a svg{
       margin: 22%;
