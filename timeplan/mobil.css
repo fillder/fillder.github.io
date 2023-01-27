@@ -98,8 +98,12 @@
     }
     .navigasjon ul li a{
       display: flex;
-      margin: 22%;
+      border-radius: 50%;
+      border: 2px solid red;
     }
+    .navigasjon ul li a svg{
+      margin: 22%;
+    } 
     .navigasjon ul li a .nav-text{
       font-family: "Roboto slab", sans-serif;
       font-weight: 500;
