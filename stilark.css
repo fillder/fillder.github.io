@@ -1,210 +1,222 @@
 /*______ Universelle instillinger ______*/
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  * {
-    margin: 0;
-    padding: 0;
-    font: inherit;
-  }
-  html {
-    color-scheme: dark light;
-  }
-  html, body {
-    height: 100%;
-  }
-  body {
-    min-height: 100vh;
-    min-height: 100dvh;
-  }
-  img, picture, video {
-    display: block;
-    max-width: 100%;
-  }
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+* {
+   margin: 0;
+   padding: 0;
+   font: inherit;
+}
+html {
+   color-scheme: dark light;
+}
+html,
+body {
+   height: 100%;
+}
+body {
+   min-height: 100vh;
+   min-height: 100dvh;
+}
+img,
+picture,
+video {
+   display: block;
+   max-width: 100%;
+}
 /*______ Fargekoder ______*/
 :root {
-  --clr-bakgrunn: #efefef;
-  --clr-tekst: #3e4247;
-  --clr-boks: #fefefe;
-  --clr-ramme: #c7c9ca;
-  --clr-fremheving: #dddde0;  
+   --clr-bakgrunn: #efefef;
+   --clr-tekst: #3e4247;
+   --clr-boks: #fefefe;
+   --clr-ramme: #c7c9ca;
+   --clr-fremheving: #dddde0;
 
-  --clr-safir: #2C6AD6;       /*programfag og drift*/
-  --clr-akvamarin: #257DA5;   /*yff og lyddesign*/ 
-  --clr-amazonitt: #228468;   /*kroppsøving og animasjon*/  
-  --clr-smaragd: #518238;     /*naturfag og film-vfx*/ 
-  --clr-citrin: #8B7403;      /*matte og fotografi*/ 
-  --clr-spessartin: #9e500b;  /*engelsk og 3d-grafikk*/ 
-  --clr-rubin: #D24040;       /*norsk, hoytid og 2d-grafikk*/ 
-  --clr-thulitt: #B44F99;     /*forum og innovasjon*/
-  --clr-kunzitt: #9A5DAF;     /*midttime og teknologi*/
-  --clr-ametyst: #7258BB;     /*ig og utvikling*/
+   --clr-safir: #2c6ad6; /*programfag og drift*/
+   --clr-akvamarin: #257da5; /*yff og lyddesign*/
+   --clr-amazonitt: #228468; /*kroppsøving og animasjon*/
+   --clr-smaragd: #518238; /*naturfag og film-vfx*/
+   --clr-citrin: #8b7403; /*matte og fotografi*/
+   --clr-spessartin: #9e500b; /*engelsk og 3d-grafikk*/
+   --clr-rubin: #d24040; /*norsk, hoytid og 2d-grafikk*/
+   --clr-thulitt: #b44f99; /*forum og innovasjon*/
+   --clr-kunzitt: #9a5daf; /*midttime og teknologi*/
+   --clr-ametyst: #7258bb; /*ig og utvikling*/
 
-  --clr-skolefarge1: #ef7c00;
-  --clr-skolefarge2: #000000;
+   --clr-skolefarge1: #ef7c00;
+   --clr-skolefarge2: #000000;
 }
 .darkmode {
-    --clr-bakgrunn: #14151f;
-    --clr-tekst: #a8a8a8;
-    --clr-boks: #262738;
-    --clr-ramme: #57637a;
-    --clr-fremheving: #0B0C13;
-  
-    --clr-safir: #1FA6E2;       /*programfag og drift*/
-    --clr-akvamarin: #33C9C4;   /*yff og lyddesign*/ 
-    --clr-amazonitt: #35B06F;   /*kroppsøving og animasjon*/ 
-    --clr-smaragd: #839E53;     /*naturfag og film-vfx*/ 
-    --clr-citrin: #E6CE2F;      /*matte og fotografi*/ 
-    --clr-spessartin: #E68D2F;  /*engelsk og 3d-grafikk*/ 
-    --clr-rubin: #EC4F28;       /*norsk, hoytid og 2d-grafikk*/ 
-    --clr-thulitt: #C973AF;     /*forum og innovasjon*/
-    --clr-kunzitt: #B18BF4;     /*midttime og teknologi*/
-    --clr-ametyst: #7B77FF;     /*ig og utvikling*/
-  
-    --clr-skolefarge1: #ef7c00;
-    --clr-skolefarge2: #ffffff;
+   --clr-bakgrunn: #14151f;
+   --clr-tekst: #a8a8a8;
+   --clr-boks: #262738;
+   --clr-ramme: #57637a;
+   --clr-fremheving: #0b0c13;
+
+   --clr-safir: #1fa6e2; /*programfag og drift*/
+   --clr-akvamarin: #33c9c4; /*yff og lyddesign*/
+   --clr-amazonitt: #35b06f; /*kroppsøving og animasjon*/
+   --clr-smaragd: #839e53; /*naturfag og film-vfx*/
+   --clr-citrin: #e6ce2f; /*matte og fotografi*/
+   --clr-spessartin: #e68d2f; /*engelsk og 3d-grafikk*/
+   --clr-rubin: #ec4f28; /*norsk, hoytid og 2d-grafikk*/
+   --clr-thulitt: #c973af; /*forum og innovasjon*/
+   --clr-kunzitt: #b18bf4; /*midttime og teknologi*/
+   --clr-ametyst: #7b77ff; /*ig og utvikling*/
+
+   --clr-skolefarge1: #ef7c00;
+   --clr-skolefarge2: #ffffff;
 }
 /*______ fargedeklarering ______*/
 body {
-  background-color: var(--clr-bakgrunn);
-  color: var(--clr-tekst);
+   background-color: var(--clr-bakgrunn);
+   color: var(--clr-tekst);
 }
 /*______ Skrifttype ______*/
-h1 {/* Tittel */
-  font-family: "Roboto Slab", serif;
-  font-weight: 300;
-  font-size: clamp(2rem, 3vw, 4rem);
-} 
-h2 {/* Dager */
-  font-family: "Roboto Slab", serif;
-  font-weight: 700;
-  font-size: clamp(1.7rem, 2vw, 2.3rem);
-  text-align: center;
-} 
-h3 {/* Fagtittel */
-  font-family: "Roboto Slab", serif;
-  font-weight: 500;
-  font-size: clamp(.6rem, 1.4vw, 1.7rem);
-  text-align: center;
-} 
-h4 {/* Dato */
-  font-family: "Roboto Slab", serif;
-  font-weight: 500;
-  font-size: clamp(.6rem, 1.1vw, 1.4rem);
-  text-align: center;
-} 
-h5 {/* lærer */
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: clamp(.6rem, 1vw, 1.3rem);
-  text-align: center;
-  margin-bottom: 2%;
-} 
-h6 {/* klokkelsett */
-  font-family: "Roboto Mono", monospace;
-  font-weight: 500;
-  font-size: clamp(.4rem, .8vw, 1.1rem);
-  text-align: center;
-} 
-p {/* brødtekst */
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  line-height: 1.5;
-  font-size: clamp(.6rem, .9vw, 1.2rem);
-  text-align: center;
+h1 {
+   /* Tittel */
+   font-family: "Roboto Slab", serif;
+   font-weight: 300;
+   font-size: clamp(2rem, 3vw, 4rem);
+}
+h2 {
+   /* Dager */
+   font-family: "Roboto Slab", serif;
+   font-weight: 700;
+   font-size: clamp(1.7rem, 2vw, 2.3rem);
+   text-align: center;
+}
+h3 {
+   /* Fagtittel */
+   font-family: "Roboto Slab", serif;
+   font-weight: 500;
+   font-size: clamp(0.6rem, 1.4vw, 1.7rem);
+   text-align: center;
+}
+h4 {
+   /* Dato */
+   font-family: "Roboto Slab", serif;
+   font-weight: 500;
+   font-size: clamp(0.6rem, 1.1vw, 1.4rem);
+   text-align: center;
+}
+h5 {
+   /* lærer */
+   font-family: "Roboto", sans-serif;
+   font-weight: 500;
+   font-size: clamp(0.6rem, 1vw, 1.3rem);
+   text-align: center;
+   margin-bottom: 2%;
+}
+h6 {
+   /* klokkelsett */
+   font-family: "Roboto Mono", monospace;
+   font-weight: 500;
+   font-size: clamp(0.4rem, 0.8vw, 1.1rem);
+   text-align: center;
+}
+p {
+   /* brødtekst */
+   font-family: "Roboto", sans-serif;
+   font-weight: 300;
+   line-height: 1.5;
+   font-size: clamp(0.6rem, 0.9vw, 1.2rem);
+   text-align: center;
 }
 i {
-  font-style: italic;
+   font-style: italic;
 }
 b {
-  font-weight: 500;
+   font-weight: 500;
 }
 /*______ Knapper ______*/
 button {
-  background-color: transparent;
-  border: none;
-  background: none;
-  cursor: pointer;
+   background-color: transparent;
+   border: none;
+   background: none;
+   cursor: pointer;
 }
 a {
-  cursor: pointer;
-  text-decoration: none;
+   cursor: pointer;
+   text-decoration: none;
 }
 /*______ Skolelogo ______*/
 .skolelogo {
-  width: clamp(2rem, 3vw, 4rem);
+   width: clamp(2rem, 3vw, 4rem);
 }
 .skolefarge1 {
-  fill: var(--clr-skolefarge1);
+   fill: var(--clr-skolefarge1);
 }
 .skolefarge2 {
-  fill: var(--clr-skolefarge2);
+   fill: var(--clr-skolefarge2);
 }
 /*______ Dag/natt-tema ______*/
 .dag-natt {
-  width: clamp(2rem, 3vw, 4rem);
-  height: clamp(2rem, 3vh, 4rem);
+   width: clamp(2rem, 3vw, 4rem);
+   height: clamp(2rem, 3vh, 4rem);
 }
 .sun {
-  fill: var(--clr-tekst);
-  stroke: var(--clr-tekst);
+   fill: var(--clr-tekst);
+   stroke: var(--clr-tekst);
 }
 .moon {
-  fill: var(--clr-bakgrunn);
+   fill: var(--clr-bakgrunn);
 }
 /*______ Animasjoner ______*/
 .moonAnim {
-  animation: moon ease-in forwards;
-  transform-origin: 50px 120px;
+   animation: moon ease-in forwards;
+   transform-origin: 50px 120px;
 }
 .sunAnim {
-  animation: sun ease-in forwards;
-  transform-origin: 50px 120px;
+   animation: sun ease-in forwards;
+   transform-origin: 50px 120px;
 }
 .moonAnimRev {
-  animation: moonrev ease-in forwards;
-  transform-origin: 50px 120px;
+   animation: moonrev ease-in forwards;
+   transform-origin: 50px 120px;
 }
 .sunAnimRev {
-  animation: sunrev ease-in forwards;
-  transform-origin: 50px 120px;
+   animation: sunrev ease-in forwards;
+   transform-origin: 50px 120px;
 }
 .animasjonstimer {
-  animation-duration: 500ms;
+   animation-duration: 500ms;
 }
 @keyframes sun {
-  0% {
-    transform: scale(1);
-    stroke-dashoffset: 0;
-  }
-  100% {
-    transform: scale(2.4);
-    stroke-dashoffset: 19.9;
-  }
+   0% {
+      transform: scale(1);
+      stroke-dashoffset: 0;
+   }
+   100% {
+      transform: scale(2.4);
+      stroke-dashoffset: 19.9;
+   }
 }
 @keyframes moon {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  100% {
-    transform: translate(-70px, 70px);
-  }
+   0% {
+      transform: translate(0px, 0px);
+   }
+   100% {
+      transform: translate(-70px, 70px);
+   }
 }
 @keyframes sunrev {
-  0% {
-    transform: scale(2.4);
-    stroke-dashoffset: 19.9;
-  }
-  100% {
-    transform: scale(1);
-    stroke-dashoffset: 0;
-  }
+   0% {
+      transform: scale(2.4);
+      stroke-dashoffset: 19.9;
+   }
+   100% {
+      transform: scale(1);
+      stroke-dashoffset: 0;
+   }
 }
 @keyframes moonrev {
-  0% {
-    transform: translate(-70px, 70px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
+   0% {
+      transform: translate(-70px, 70px);
+   }
+   100% {
+      transform: translate(0px, 0px);
+   }
 }

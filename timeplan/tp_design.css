@@ -1,130 +1,135 @@
-  /*______ Scrollehjulet ______*/
-  /* Gjemmer bort scrollehjulet for Chrome, Safari og Opera */
-  html::-webkit-scrollbar {
-    display: none;
-  }
-  main::-webkit-scrollbar {
-    display: none;
-  }
-  /* Gjemmer bort scrollehjulet for IE, Edge og Firefox */
-  html {
-    -ms-overflow-style: none;  /* IE og Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-  main {
-    -ms-overflow-style: none;  /* IE og Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+/*______ Scrollehjulet ______*/
+/* Gjemmer bort scrollehjulet for Chrome, Safari og Opera */
+html::-webkit-scrollbar {
+   display: none;
+}
+main::-webkit-scrollbar {
+   display: none;
+}
+/* Gjemmer bort scrollehjulet for IE, Edge og Firefox */
+html {
+   -ms-overflow-style: none; /* IE og Edge */
+   scrollbar-width: none; /* Firefox */
+}
+main {
+   -ms-overflow-style: none; /* IE og Edge */
+   scrollbar-width: none; /* Firefox */
+}
 /*______ fargedeklarering ______*/
 .farge-programfag {
-  color: var(--clr-safir);
-  fill: var(--clr-safir);
+   color: var(--clr-safir);
+   fill: var(--clr-safir);
 }
 .farge-yff {
-  color: var(--clr-akvamarin);
-  fill: var(--clr-akvamarin);
+   color: var(--clr-akvamarin);
+   fill: var(--clr-akvamarin);
 }
 .farge-kroppsoving {
-  color: var(--clr-amazonitt);
-  fill: var(--clr-amazonitt);
+   color: var(--clr-amazonitt);
+   fill: var(--clr-amazonitt);
 }
 .farge-naturfag {
-  color: var(--clr-smaragd);
-  fill: var(--clr-smaragd);
+   color: var(--clr-smaragd);
+   fill: var(--clr-smaragd);
 }
 .farge-matte {
-  color: var(--clr-citrin);
-  fill: var(--clr-citrin);
+   color: var(--clr-citrin);
+   fill: var(--clr-citrin);
 }
 .farge-engelsk {
-  color: var(--clr-spessartin);
-  fill: var(--clr-spessartin);
+   color: var(--clr-spessartin);
+   fill: var(--clr-spessartin);
 }
 .farge-norsk {
-  color: var(--clr-rubin);
-  fill: var(--clr-rubin);
+   color: var(--clr-rubin);
+   fill: var(--clr-rubin);
 }
 .farge-forum {
-  color: var(--clr-thulitt);
-  fill: var(--clr-thulitt);
+   color: var(--clr-thulitt);
+   fill: var(--clr-thulitt);
 }
 .farge-midttimen {
-  color: var(--clr-kunzitt);
-  fill: var(--clr-kunzitt);
+   color: var(--clr-kunzitt);
+   fill: var(--clr-kunzitt);
 }
 .farge-ig {
-  color: var(--clr-ametyst);
-  fill: var(--clr-ametyst);
+   color: var(--clr-ametyst);
+   fill: var(--clr-ametyst);
 }
 /*______ boksdesign ______*/
 .ramme {
-  background-color: var(--clr-boks);
-  border-color: var(--clr-ramme);
-  border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
-  border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
-  border-bottom-left-radius: clamp(0.5rem, 0.6rem, 0.8vw);
-  border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
-  border-top-width: 2px;
-  border-right-width: 2px;
-  border-bottom-width: 6px;
-  border-left-width: 6px;
-  border-style: solid;
-  padding-inline: .6vw;
-  padding-block: .4vw;
+   background-color: var(--clr-boks);
+   border-color: var(--clr-ramme);
+   border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
+   border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
+   border-bottom-left-radius: clamp(0.5rem, 0.6rem, 0.8vw);
+   border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
+   border-top-width: 2px;
+   border-right-width: 2px;
+   border-bottom-width: 6px;
+   border-left-width: 6px;
+   border-style: solid;
+   padding-inline: 0.6vw;
+   padding-block: 0.4vw;
 }
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-width: 340px;
-  max-width: 2500px;
-  padding-inline: 1vw;
-  margin-inline: auto;
-  margin-block: 1rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   min-width: 340px;
+   max-width: 2500px;
+   padding-inline: 1vw;
+   margin-inline: auto;
+   margin-block: 1rem;
 }
 main {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: space-between;
-  min-width: 340px;
-  max-width: 2500px;
-  padding-inline: 1vw;
-  margin-inline: auto;
+   display: flex;
+   gap: 0.5rem;
+   justify-content: space-between;
+   min-width: 340px;
+   max-width: 2500px;
+   padding-inline: 1vw;
+   margin-inline: auto;
 }
 .fagtittel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 2%;
 }
 .gruppe-xy {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
 }
 .gruppe-abc {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   align-items: center;
 }
 /*______ ikoner og bilder ______*/
 .overskrift {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 .ikon {
-  width: clamp(2rem, 3vw, 6rem);
+   width: clamp(2rem, 3vw, 6rem);
 }
 .piler {
-  width: clamp(2rem, 3vw, 4rem);
-  fill: var(--clr-tekst);
-  max-height: 60px;
-  margin-inline: 1rem;
+   width: clamp(2rem, 3vw, 4rem);
+   fill: var(--clr-tekst);
+   max-height: 60px;
+   margin-inline: 1rem;
 }
 .utilgjengelig {
-  opacity: 0.2;
+   opacity: 0.2;
 }
-.navigasjon{
-  display: none;
+.navigasjon {
+   display: none;
+}
+.vinterfarger {
+   background-color: lightblue;
+   border-color: cornflowerblue;
+   color: #3e4247;
 }
