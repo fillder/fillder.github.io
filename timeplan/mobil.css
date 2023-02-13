@@ -258,6 +258,7 @@
       position: fixed;
       width: 100%;
       bottom: 0%;
+      height: 70px;
       background-color: var(--clr-tekst);
       border-top-left-radius: 0.6rem;
       border-top-right-radius: 0.6rem;
