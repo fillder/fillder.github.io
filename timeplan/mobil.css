@@ -288,6 +288,7 @@
    }
    .navigasjon ul li a svg {
       margin: 22%;
+      z-index: 3;
    }
    .navigasjon ul li a .nav-text {
       font-family: "Roboto slab", sans-serif;
