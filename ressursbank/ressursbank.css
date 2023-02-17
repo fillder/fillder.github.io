@@ -1,0 +1,29 @@
+/*____Main grid____*/
+body {
+   /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
+   display: grid;
+   grid-template-rows:
+      auto
+      1fr
+      auto;
+}
+header {
+   outline: 2px solid red;
+   height: 5rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   place-content: center;
+}
+
+main {
+   outline: 2px solid aqua;
+}
+footer {
+   outline: 2px solid greenyellow;
+   height: 3rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   place-content: center;
+}
