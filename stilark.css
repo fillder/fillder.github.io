@@ -80,7 +80,7 @@ h1 {
    /* Tittel */
    font-family: "Roboto Slab", serif;
    font-weight: 300;
-   font-size: clamp(2rem, 3vw, 4rem);
+   font-size: clamp(2rem, 3vw, 3rem);
 }
 h2 {
    /* Dager */

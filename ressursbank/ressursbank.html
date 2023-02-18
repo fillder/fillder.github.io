@@ -22,17 +22,56 @@
 </head>
 
 <body>
-    <header>
-        <h1>IM-ressursbank</h1>
+    <nav>
+        <div class="hjem">
+            <ion-icon name="home"></ion-icon>
+        </div>
+        <div class="logo">
+            <ion-icon name="image"></ion-icon>
+        </div>
+        <div>
+            <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
+                <svg class="svg-anim" viewBox="0 70 100 100">
+                    <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-linecap="round" stroke-width="6"
+                        stroke-dasharray="20" stroke-dashoffset="0" />
+                    <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-linecap="round" stroke-width="6"
+                        stroke-dasharray="20" stroke-dashoffset="0" />
+                    <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-linecap="round" stroke-width="6"
+                        stroke-dasharray="20" stroke-dashoffset="0" />
+                    <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-linecap="round" stroke-width="6"
+                        stroke-dasharray="20" stroke-dashoffset="0" />
+                    <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-linecap="round" stroke-width="6"
+                        stroke-dasharray="20" stroke-dashoffset="0" />
+                    <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-linecap="round" stroke-width="6"
+                        stroke-dasharray="20" stroke-dashoffset="0" />
+                    <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-linecap="round" stroke-width="6"
+                        stroke-dasharray="20" stroke-dashoffset="0" />
+                    <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-linecap="round" stroke-width="6"
+                        stroke-dasharray="20" stroke-dashoffset="0" />
+                    <circle class="sun" cx="50" cy="120" r="20" />
+                    <circle class="moon" cx="135" cy="40" r="40" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+    <header class="hero">
+        <img class="hero-bilde" src="rb-bilder/front-end_hero.jpg" alt="bilde av en skjerm med kode">
+        <div class="hero-tittel">
+            <h1>IM-ressursbank</h1>
+        </div>
+        <div class="hero-emblem">
+            <ion-icon name="contrast"></ion-icon>
+        </div>
     </header>
     <main>
-        <section>
+        <section class="ramme seksjon">
             <div class="seksjonstittel">
                 <h2>Ekamensseminar</h2>
                 <h3>1. februar 2023</h3>
             </div>
             <div class="seksjonsbeskrivelse">
-                <p></p>
+                <p>Her er en samling av nyttige lenker og eksempeloppgaver for informasjonsteknologi og medieproduksjon
+                </p>
             </div>
             <div class="seksjonsressurser">
                 <details>
@@ -44,6 +83,8 @@
     <footer>
         En footer
     </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

@@ -1,24 +1,86 @@
 /*____Main grid____*/
 body {
+   background-color: var(--clr-fremheving);
+   max-width: 2000px;
+   margin: auto;
    /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
    display: grid;
    grid-template-rows:
       auto
+      auto
       1fr
       auto;
 }
-header {
-   outline: 2px solid red;
-   height: 5rem;
+/*______ Navigasjon ______*/
+nav {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   place-content: center;
+   padding: 0.5rem;
+   background-color: var(--clr-ramme);
+}
+/*______ headerområde ______*/
+.hero {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 400px; /* Sett høyden på banneret etter behov */
+   overflow: hidden; /* Skjul eventuelt innhold som faller utenfor banneret */
+}
+.hero-bilde {
+   /* Stil for bannerbildet */
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover; /* Sørger for at bildet fyller hele banneret */
+}
+.hero-tittel {
+   position: absolute;
+   top: 20px;
+   left: 20px;
+   z-index: 1; /* Sørger for at innholdet ligger over bannerbildet */
+}
+.hero-emblem {
+   position: relative;
+   bottom: -50%;
+   transform: translateX(-50%);
+   z-index: 1;
+}
+/*______ hovedinnhold ______*/
+main {
+   background-color: var(--clr-bakgrunn);
+}
+.ramme {
+   background-color: var(--clr-boks);
+   border-color: var(--clr-ramme);
+   border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
+   border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
+   border-bottom-left-radius: clamp(0.5rem, 0.6rem, 0.8vw);
+   border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
+   border-width: 2px 2px 6px 6px;
+   border-style: solid;
+}
+.seksjon {
+   width: 80%;
+   margin-inline: auto;
+   margin-block: 4rem;
 }
 
-main {
-   outline: 2px solid aqua;
+.seksjonstittel {
+   background-color: var(--clr-ramme);
+   border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
+   border-top-left-radius: clamp(0.6rem, 1.8rem, 0.8vw);
 }
+.seksjonsbeskrivelse {
+   padding: 1rem;
+}
+.seksjonsressurser {
+   padding: 2rem;
+}
+/*______ footer ______*/
 footer {
    outline: 2px solid greenyellow;
    height: 3rem;
@@ -26,4 +88,9 @@ footer {
    justify-content: space-between;
    align-items: center;
    place-content: center;
+}
+/*______ ikoner ______*/
+ion-icon {
+   font-size: 32px;
+   fill: var(--clr-tekst);
 }
