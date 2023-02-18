@@ -1,0 +1,75 @@
+/*______ Knappdekorasjon ______*/
+button {
+   background-color: transparent;
+   border: none;
+   background: none;
+   cursor: pointer;
+}
+/*______ Dag/natt-tema ______*/
+.dag-natt {
+   width: clamp(2rem, 3vw, 4rem);
+   height: clamp(2rem, 3vh, 4rem);
+}
+.sun {
+   fill: var(--clr-tekst);
+   stroke: var(--clr-tekst);
+}
+.moon {
+   fill: var(--clr-bakgrunn);
+}
+/*______ Animasjoner ______*/
+.moonAnim {
+   animation: moon ease-in forwards;
+   transform-origin: 50px 120px;
+}
+.sunAnim {
+   animation: sun ease-in forwards;
+   transform-origin: 50px 120px;
+}
+.moonAnimRev {
+   animation: moonrev ease-in forwards;
+   transform-origin: 50px 120px;
+}
+.sunAnimRev {
+   animation: sunrev ease-in forwards;
+   transform-origin: 50px 120px;
+}
+.animasjonstimer {
+   animation-duration: 500ms;
+}
+@keyframes sun {
+   0% {
+      transform: scale(1);
+      stroke-dashoffset: 0;
+   }
+   100% {
+      transform: scale(2.4);
+      stroke-dashoffset: 19.9;
+   }
+}
+@keyframes moon {
+   0% {
+      transform: translate(0px, 0px);
+   }
+   100% {
+      transform: translate(-70px, 70px);
+   }
+}
+@keyframes sunrev {
+   0% {
+      transform: scale(2.4);
+      stroke-dashoffset: 19.9;
+   }
+   100% {
+      transform: scale(1);
+      stroke-dashoffset: 0;
+   }
+}
+@keyframes moonrev {
+   0% {
+      transform: translate(-70px, 70px);
+   }
+   100% {
+      transform: translate(0px, 0px);
+   }
+}

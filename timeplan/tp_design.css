@@ -56,18 +56,15 @@ main {
    color: var(--clr-ametyst);
    fill: var(--clr-ametyst);
 }
-/*______ boksdesign ______*/
-.ramme {
+/*______ Boksdesign ______*/
+.tp-ramme {
    background-color: var(--clr-boks);
    border-color: var(--clr-ramme);
    border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
    border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
    border-bottom-left-radius: clamp(0.5rem, 0.6rem, 0.8vw);
    border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
-   border-top-width: 2px;
-   border-right-width: 2px;
-   border-bottom-width: 6px;
-   border-left-width: 6px;
+   border-width: 2px 2px 6px 6px;
    border-style: solid;
    padding-inline: 0.6vw;
    padding-block: 0.4vw;
