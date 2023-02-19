@@ -8,7 +8,8 @@
       {
         "ignore": [
           "scroll-behavior",
-          "scrollbar-width"
+          "scrollbar-width",
+          "text-underline-offset"
         ]
       }
     ]
