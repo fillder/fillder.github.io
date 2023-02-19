@@ -16,7 +16,8 @@ nav {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 0.5rem;
+   padding-block: 0.5rem;
+   padding-inline: 1rem;
    background-color: var(--clr-ramme);
 }
 /*______ headerområde ______*/
@@ -25,8 +26,7 @@ nav {
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 400px; /* Sett høyden på banneret etter behov */
-   /* Skjul eventuelt innhold som faller utenfor banneret */
+   height: 300px; /* Sett høyden på banneret etter behov */
 }
 .hero-bilde {
    /* Stil for bannerbildet */
@@ -39,18 +39,19 @@ nav {
 }
 .hero-tittel {
    position: absolute;
-   top: 10px;
-   left: 10px;
-   z-index: 1; /* Sørger for at innholdet ligger over bannerbildet */
-   padding: 10px; /* valgfritt: legg til padding for å øke avstanden mellom teksten og bakgrunnen */
-   background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
-   border-radius: 1rem;
+   top: 20px;
+   left: 20px;
+   padding: 5px 20px 10px 15px; /* top | right | bottom | left */
+   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
+   border-radius: 0.2rem;
+   color: whitesmoke;
+   text-decoration: underline #ff9100 4px;
+   text-underline-offset: 4px;
 }
 .hero-emblem {
-   position: relative;
-   bottom: -50%;
-   transform: translateX(-50%);
-   z-index: 1;
+   position: relative; /*flytter ikonet relativt i forhold til bannerbildet */
+   bottom: -50%; /*Skyver ikonet 50% av egen størrelse nedover fra banneren */
+   transform: translateX(-50%); /*flytter origin til midten av objektet*/
 }
 /*______ hovedinnhold ______*/
 main {
@@ -71,7 +72,6 @@ main {
    margin-inline: auto;
    margin-block: 4rem;
 }
-
 .seksjonstittel {
    background-color: var(--clr-ramme);
    border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
@@ -96,7 +96,4 @@ footer {
 ion-icon {
    font-size: clamp(2rem, 3vw, 4rem);
    fill: var(--clr-tekst);
-}
-h1 {
-   color: whitesmoke;
 }
