@@ -1,9 +1,13 @@
-/*______ Knappdekorasjon ______*/
+/*______ Knapper ______*/
 button {
    background-color: transparent;
    border: none;
    background: none;
    cursor: pointer;
+}
+a {
+   cursor: pointer;
+   text-decoration: none;
 }
 /*______ Dag/natt-tema ______*/
 .dag-natt {

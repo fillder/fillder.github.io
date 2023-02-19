@@ -15,7 +15,68 @@ main {
    -ms-overflow-style: none; /* IE og Edge */
    scrollbar-width: none; /* Firefox */
 }
+/*______ Skrifttype ______*/
+h1 {
+   /* Tittel */
+   font-family: "Roboto Slab", serif;
+   font-weight: 300;
+   font-size: clamp(2rem, 3vw, 4rem);
+}
+h2 {
+   /* Dager */
+   font-family: "Roboto Slab", serif;
+   font-weight: 700;
+   font-size: clamp(1.7rem, 2vw, 2.3rem);
+   text-align: center;
+}
+h3 {
+   /* Fagtittel */
+   font-family: "Roboto Slab", serif;
+   font-weight: 500;
+   font-size: clamp(0.6rem, 1.4vw, 1.7rem);
+   text-align: center;
+}
+h4 {
+   /* Dato */
+   font-family: "Roboto Slab", serif;
+   font-weight: 500;
+   font-size: clamp(0.6rem, 1.1vw, 1.4rem);
+   text-align: center;
+}
+h5 {
+   /* lærer */
+   font-family: "Roboto", sans-serif;
+   font-weight: 500;
+   font-size: clamp(0.6rem, 1vw, 1.3rem);
+   text-align: center;
+   margin-bottom: 2%;
+}
+h6 {
+   /* klokkelsett */
+   font-family: "Roboto Mono", monospace;
+   font-weight: 500;
+   font-size: clamp(0.4rem, 0.8vw, 1.1rem);
+   text-align: center;
+}
+p {
+   /* brødtekst */
+   font-family: "Roboto", sans-serif;
+   font-weight: 300;
+   line-height: 1.5;
+   font-size: clamp(0.6rem, 0.9vw, 1.2rem);
+   text-align: center;
+}
+i {
+   font-style: italic;
+}
+b {
+   font-weight: 500;
+}
 /*______ fargedeklarering ______*/
+body {
+   background-color: var(--clr-bakgrunn);
+   color: var(--clr-tekst);
+}
 .farge-programfag {
    color: var(--clr-safir);
    fill: var(--clr-safir);
@@ -55,6 +116,21 @@ main {
 .farge-ig {
    color: var(--clr-ametyst);
    fill: var(--clr-ametyst);
+}
+.vinterfarger {
+   background-color: lightblue;
+   border-color: cornflowerblue;
+   color: #3e4247;
+}
+/*______ Skolelogo ______*/
+.skolelogo {
+   width: clamp(2rem, 3vw, 4rem);
+}
+.skolefarge1 {
+   fill: var(--clr-skolefarge1);
+}
+.skolefarge2 {
+   fill: var(--clr-skolefarge2);
 }
 /*______ Boksdesign ______*/
 .tp-ramme {
@@ -124,9 +200,4 @@ main {
 }
 .navigasjon {
    display: none;
-}
-.vinterfarger {
-   background-color: lightblue;
-   border-color: cornflowerblue;
-   color: #3e4247;
 }

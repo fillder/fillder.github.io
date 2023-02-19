@@ -1,9 +1,60 @@
+/*______ Skrifttype ______*/
+h1 {
+   /* Tittel */
+   font-family: "Roboto Slab", serif;
+   font-weight: 300;
+   font-size: clamp(2rem, 3vw, 4rem);
+}
+h2 {
+   /* Dager */
+   font-family: "Roboto Slab", serif;
+   font-weight: 700;
+   font-size: clamp(1.7rem, 2vw, 2.3rem);
+}
+h3 {
+   /* Fagtittel */
+   font-family: "Roboto Slab", serif;
+   font-weight: 500;
+   font-size: clamp(0.6rem, 1.4vw, 1.7rem);
+}
+h4 {
+   /* Dato */
+   font-family: "Roboto Slab", serif;
+   font-weight: 500;
+   font-size: clamp(0.6rem, 1.1vw, 1.4rem);
+}
+h5 {
+   /* lærer */
+   font-family: "Roboto", sans-serif;
+   font-weight: 500;
+   font-size: clamp(0.6rem, 1vw, 1.3rem);
+}
+h6 {
+   /* klokkelsett */
+   font-family: "Roboto Mono", monospace;
+   font-weight: 500;
+   font-size: clamp(0.4rem, 0.8vw, 1.1rem);
+}
+p {
+   /* brødtekst */
+   font-family: "Roboto", sans-serif;
+   font-weight: 300;
+   line-height: 1.5;
+   font-size: clamp(0.6rem, 0.9vw, 1.2rem);
+}
+i {
+   font-style: italic;
+}
+b {
+   font-weight: 500;
+}
 /*____Main grid____*/
 body {
+   /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
    background-color: var(--clr-fremheving);
+   color: var(--clr-tekst);
    max-width: 2000px;
    margin: auto;
-   /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
    display: grid;
    grid-template-rows:
       auto
@@ -68,9 +119,7 @@ main {
    border-style: solid;
 }
 .seksjon {
-   width: 80%;
-   margin-inline: auto;
-   margin-block: 4rem;
+   margin-block: 2rem;
 }
 .seksjonstittel {
    background-color: var(--clr-ramme);
@@ -96,4 +145,72 @@ footer {
 ion-icon {
    font-size: clamp(2rem, 3vw, 4rem);
    fill: var(--clr-tekst);
+}
+
+/*Wikioppsett*/
+.gridBeholder {
+   width: 80%;
+   display: grid;
+   grid-gap: 1rem;
+   padding: 1rem;
+   margin-inline: auto;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-areas:
+      "fB fB fB"
+      "oS oS iF"
+      "iH iH iH"
+      "gI aK aK";
+}
+/*___Faktaboks___*/
+.faktaboks {
+   grid-area: fB;
+}
+.fbBilde,
+.fbInnhold {
+   display: inline-block;
+}
+.fbBilde {
+   padding: 1rem;
+   height: 16rem;
+   width: 16rem;
+}
+
+.fbListeElem {
+   display: flex;
+}
+.fbListeElem p {
+   display: inline; /* faktaboks-lista har overskriftene på samme linje som punktene*/
+}
+
+/*___Oversikt og Innholdfortegnelse____*/
+.oversikt {
+   grid-area: oS;
+}
+.innholdsfortegnelse {
+   grid-area: iF;
+}
+
+/*___gjembart innhold___*/
+.innhold {
+   grid-area: iH;
+}
+
+/*___galleri___*/
+.galleri {
+   grid-area: gI;
+   border: 2px solid yellow;
+}
+
+/*___relevante artikler___*/
+.artikler {
+   grid-area: aK;
+   border: 2px solid lightblue;
+}
+
+/*____Main-lister  felles___*/
+ul {
+   list-style-type: none;
+}
+li {
+   list-style-position: inside; /*listepunktene holder seg innenfor listeboksen*/
 }
