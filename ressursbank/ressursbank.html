@@ -19,7 +19,7 @@
     <link rel="shortcut icon" href="/bilder/skolelogo.svg">
     <link rel="apple-touch-icon" href="/bilder/skolelogo.svg">
     <script type="module" src="/script/dag-natt.js"></script>
-    <script type="module" src="/script/navigasjon.js"></script>
+    <script type="module" src="rb-seksjoner.js"></script>
     <title>IM-ressursbank</title>
 </head>
 
@@ -149,7 +149,7 @@
                 </article>
             </section>
             <section class="innholdsfortegnelse rb-ramme">
-                <button class="ifKnapp" data-target="demografi">
+                <button class="ifKnapp" data-knapp="demografi">
                     <div class="ifKnappBilde">
                         <svg class="seksjonsikon" viewBox="0 0 50 50">
                             <line x1="32.29" y1="16.94" x2="38.28" y2="10.95" />
@@ -168,7 +168,7 @@
                     </div>
                     <h4 class="ifKnapptittel">Demografi</h4>
                 </button>
-                <button class="ifKnapp" data-target="etymologi">
+                <button class="ifKnapp" data-knapp="etymologi">
                     <div class="ifKnappBilde">
                         <svg class="seksjonsikon" viewBox="0 0 50 50">
                             <path d="m24.57,23.15c-.88,1.16-2.28,1.92-3.85,1.92s-3.03-.79-3.91-2" />
@@ -183,7 +183,7 @@
                     </div>
                     <h4 class="ifKnapptittel">Etymologi</h4>
                 </button>
-                <button class="ifKnapp" data-target="geografi">
+                <button class="ifKnapp" data-knapp="geografi">
                     <div class="ifKnappBilde">
                         <svg class="seksjonsikon" viewBox="0 0 50 50">
                             <circle cx="12.79" cy="33.61" r="1.05" />
@@ -204,7 +204,7 @@
                     </div>
                     <h4 class="ifKnapptittel">Geografi</h4>
                 </button>
-                <button class="ifKnapp" data-target="historie">
+                <button class="ifKnapp" data-knapp="historie">
                     <div class="ifKnappBilde">
                         <svg class="seksjonsikon" viewBox="0 0 50 50">
                             <circle cx="19.06" cy="6.78" r="1.05" />
@@ -225,7 +225,7 @@
                     </div>
                     <h4 class="ifKnapptittel">Historie</h4>
                 </button>
-                <button class="ifKnapp" data-target="kultur">
+                <button class="ifKnapp" data-knapp="kultur">
                     <div class="ifKnappBilde">
                         <svg class="seksjonsikon" viewBox="0 0 50 50">
                             <path
@@ -242,7 +242,7 @@
                     </div>
                     <h4 class="ifKnapptittel">Kultur</h4>
                 </button>
-                <button class="ifKnapp" data-target="sprak">
+                <button class="ifKnapp" data-knapp="sprak">
                     <div class="ifKnappBilde">
                         <svg class="seksjonsikon" viewBox="0 0 50 50">
                             <path
@@ -259,7 +259,7 @@
                     </div>
                     <h4 class="ifKnapptittel">Språk</h4>
                 </button>
-                <button class="ifKnapp" data-target="styresett">
+                <button class="ifKnapp" data-knapp="styresett">
                     <div class="ifKnappBilde">
                         <svg class="seksjonsikon" viewBox="0 0 50 50">
                             <path d="m37.84,10.21H14.58c-1.27,0-2.16.89-2.16,2v15.61" />
@@ -280,7 +280,7 @@
                     </div>
                     <h4 class="ifKnapptittel">Styresett</h4>
                 </button>
-                <button class="ifKnapp" data-target="okonomi">
+                <button class="ifKnapp" data-knapp="okonomi">
                     <div class="ifKnappBilde">
                         <svg class="seksjonsikon" viewBox="0 0 50 50">
                             <polygon points="41.8 16.35 41.8 16.35 41.8 16.35 41.8 16.35" />
@@ -298,7 +298,7 @@
                     </div>
                     <h4 class="ifKnapptittel">Økonomi</h4>
                 </button>
-                <button class="ifKnapp" data-target="teknologi">
+                <button class="ifKnapp" data-knapp="teknologi">
                     <div class="ifKnappBilde">
                         <svg class="seksjonsikon" viewBox="0 0 50 50">
                             <circle cx="28.97" cy="8.85" r="1" />
@@ -311,7 +311,7 @@
                     </div>
                     <h4 class="ifKnapptittel">Teknologi</h4>
                 </button>
-                <button class="ifKnapp" data-target="militaer">
+                <button class="ifKnapp" data-knapp="militaer">
                     <div class="ifKnappBilde">
                         <svg class="seksjonsikon" viewBox="0 0 50 50">
                             <line x1="9.73" y1="13.19" x2="32.68" y2="36.14" />
@@ -328,43 +328,43 @@
                 </button>
             </section>
             <section class="ifSeksjoner">
-                <div class="ifSeksjon" data-section="demografi">
+                <div class="ifSeksjon" data-seksjon="demografi">
                     <h2>Demografi</h2>
                     <p>Her er informasjon om demografi.</p>
                 </div>
-                <div class="ifSeksjon" data-section="etymologi">
+                <div class="ifSeksjon" data-seksjon="etymologi">
                     <h2>Etymologi</h2>
                     <p>Her er informasjon om etymologi.</p>
                 </div>
-                <div class="ifSeksjon" data-section="geografi">
+                <div class="ifSeksjon" data-seksjon="geografi">
                     <h2>Geografi</h2>
                     <p>Her er informasjon om geografi.</p>
                 </div>
-                <div class="ifSeksjon" data-section="historie">
+                <div class="ifSeksjon" data-seksjon="historie">
                     <h2>Historie</h2>
                     <p>Her er informasjon om historie.</p>
                 </div>
-                <div class="ifSeksjon" data-section="kultur">
+                <div class="ifSeksjon" data-seksjon="kultur">
                     <h2>Kultur</h2>
                     <p>Her er informasjon om kultur.</p>
                 </div>
-                <div class="ifSeksjon" data-section="sprak">
+                <div class="ifSeksjon" data-seksjon="sprak">
                     <h2>Språk</h2>
                     <p>Her er informasjon om språk.</p>
                 </div>
-                <div class="ifSeksjon" data-section="styresett">
+                <div class="ifSeksjon" data-seksjon="styresett">
                     <h2>Styresett</h2>
                     <p>Her er informasjon om styresett.</p>
                 </div>
-                <div class="ifSeksjon" data-section="okonomi">
+                <div class="ifSeksjon" data-seksjon="okonomi">
                     <h2>Økonomi</h2>
                     <p>Her er informasjon om Økonomi.</p>
                 </div>
-                <div class="ifSeksjon" data-section="teknologi">
+                <div class="ifSeksjon" data-seksjon="teknologi">
                     <h2>Teknologi</h2>
                     <p>Her er informasjon om Teknologi.</p>
                 </div>
-                <div class="ifSeksjon" data-section="militaer">
+                <div class="ifSeksjon" data-seksjon="militaer">
                     <h2>Militær</h2>
                     <p>Her er informasjon om Militær.</p>
                 </div>

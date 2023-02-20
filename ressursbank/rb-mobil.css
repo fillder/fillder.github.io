@@ -1,4 +1,18 @@
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1350px) {
+   h5 {
+      /* Oppsummeringstekst */
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      line-height: 1.5;
+      font-size: 1rem;
+   }
+   p {
+      /* brødtekst */
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      line-height: 1.5;
+      font-size: 0.9rem;
+   }
    .gridBeholder {
       display: grid;
       grid-gap: 1rem;
@@ -41,7 +55,21 @@
       padding-block: 0.1rem;
    }
 }
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 800px) {
+   h5 {
+      /* Oppsummeringstekst */
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      line-height: 1.5;
+      font-size: 0.9rem;
+   }
+   p {
+      /* brødtekst */
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      line-height: 1.5;
+      font-size: 0.7rem;
+   }
    .gridBeholder {
       display: grid;
       grid-gap: 1rem;
@@ -53,5 +81,35 @@
          "iF iF"
          "iH iH"
          "gI aK";
+   }
+}
+@media screen and (max-width: 600px) {
+   h5 {
+      /* Oppsummeringstekst */
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      line-height: 1.5;
+      font-size: 1rem;
+   }
+   p {
+      /* brødtekst */
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      line-height: 1.5;
+      font-size: 0.9rem;
+   }
+   .gridBeholder {
+      display: grid;
+      grid-gap: 1rem;
+      padding: 1rem;
+      width: 100%;
+      grid-template-columns: auto;
+      grid-template-areas:
+         "fB"
+         "oS"
+         "iF"
+         "iH"
+         "gI"
+         "aK";
    }
 }

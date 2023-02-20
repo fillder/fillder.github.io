@@ -1,23 +1,26 @@
-// Hent alle knappelementene
+// Henter alle knappelementene
 const ifKnapper = document.querySelectorAll('.ifKnapp');
 
-// Lagre en referanse til den forrige synlige seksjonen
+// Lagrer en referanse til den forrige synlige seksjonen
 let forrigeSeksjon = null;
 
-// Legg til en hendelseslytter for klikk på hver knapp
+// Legger til en hendelseslytter for klikk på hver knapp
 ifKnapper.forEach(knapp => {
   knapp.addEventListener('click', () => {
-    // Hent ID-en til innholdsseksjonen som tilsvarer knappen
+    // Henter ID-en til innholdsseksjonen som tilsvarer knappen
     const seksjonID = knapp.dataset.seksjon;
 
-    // Skjul den forrige synlige seksjonen hvis det finnes en
-    if (forrigeSeksjon) {
-      forrigeSeksjon.style.display = 'none';
+    // Skjuler den forrige synlige seksjonen hvis det finnes en
+    if (forrigeSeksjon !== null) {
+      forrigeSeksjon.classList.remove('synlig');
     }
 
-    // Vis den nye seksjonen og oppdater den forrige synlige referansen
-    const nySeksjon = document.getElementById(seksjonID);
-    nySeksjon.style.display = 'block';
-    forrigeSeksjon = nySeksjon;
+    // Henter ID-en til knappen som ble klikket på
+    const knappID = knapp.dataset.knapp;
+    // Henter den tilsvarende seksjonen og gjør den synlig
+    document.querySelector('.ifSeksjon[data-seksjon="' + knappID + '"]').classList.add('synlig');
+
+    // Oppdaterer referansen til forrige synlige seksjon
+    forrigeSeksjon = document.querySelector('.ifSeksjon[data-seksjon="' + knappID + '"]');
   });
 });
