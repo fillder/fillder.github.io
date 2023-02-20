@@ -10,17 +10,27 @@ ifKnapper.forEach(knapp => {
     // Henter ID-en til innholdsseksjonen som tilsvarer knappen
     const seksjonID = knapp.dataset.seksjon;
 
-    // Skjuler den forrige synlige seksjonen hvis det finnes en
-    if (forrigeSeksjon !== null) {
+    // Henter ID-en til knappen som ble klikket på
+    const knappID = knapp.dataset.knapp;
+
+    // Henter den tilsvarende seksjonen
+    const seksjon = document.querySelector('.ifSeksjon[data-seksjon="' + knappID + '"]');
+
+    // Skjuler den forrige synlige seksjonen hvis det finnes en, med mindre det er den samme seksjonen som den vi klikket på
+    if (forrigeSeksjon !== null && forrigeSeksjon !== seksjon) {
       forrigeSeksjon.classList.remove('synlig');
     }
 
-    // Henter ID-en til knappen som ble klikket på
-    const knappID = knapp.dataset.knapp;
-    // Henter den tilsvarende seksjonen og gjør den synlig
-    document.querySelector('.ifSeksjon[data-seksjon="' + knappID + '"]').classList.add('synlig');
+    // Hvis seksjonen allerede er synlig, skjul den
+    if (seksjon.classList.contains('synlig')) {
+      seksjon.classList.remove('synlig');
+    } else { // Ellers gjør den synlig
+      seksjon.classList.add('synlig');
+    }
 
     // Oppdaterer referansen til forrige synlige seksjon
-    forrigeSeksjon = document.querySelector('.ifSeksjon[data-seksjon="' + knappID + '"]');
+    forrigeSeksjon = seksjon;
+
+    // console.log(`Klikk på ${knappID}. Seksjon synlighet: ${seksjon.classList.contains('synlig')}`);
   });
 });
