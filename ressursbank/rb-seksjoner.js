@@ -13,19 +13,40 @@ ifKnapper.forEach(knapp => {
     // Henter ID-en til knappen som ble klikket på
     const knappID = knapp.dataset.knapp;
 
+    // Henter ID-en til fargen for knappen som ble klikket på
+    const farge = knapp.dataset.farge;
+
     // Henter den tilsvarende seksjonen
     const seksjon = document.querySelector('.ifSeksjon[data-seksjon="' + knappID + '"]');
 
+    // Fjerner aktiv klasse fra forrige knapp og setter tilbake opprinnelig farge
+    const aktivKnapp = document.querySelector('.ifKnapp.aktiv');
+    if (aktivKnapp !== null) {
+      const aktivFarge = aktivKnapp.dataset.farge;
+      aktivKnapp.classList.remove('aktiv');
+      aktivKnapp.querySelector('.ifKnappIkon').style.stroke = 'var(--clr-bakgrunn)';
+      aktivKnapp.querySelector('.ifKnappIkon svg circle').style.fill = 'var(--clr-bakgrunn)';
+      aktivKnapp.querySelector('.ifKnapptittel').style.color = 'var(--clr-boks)';
+    }
+
     // Skjuler den forrige synlige seksjonen hvis det finnes en, med mindre det er den samme seksjonen som den vi klikket på
     if (forrigeSeksjon !== null && forrigeSeksjon !== seksjon) {
+      forrigeSeksjon.style.maxHeight = '0px';
       forrigeSeksjon.classList.remove('synlig');
     }
 
-    // Hvis seksjonen allerede er synlig, skjul den
+    // Hvis seksjonen allerede er synlig, skjul den og fjern aktiv-status
     if (seksjon.classList.contains('synlig')) {
+      seksjon.style.maxHeight = '0px'; // Setter max-height til 0
       seksjon.classList.remove('synlig');
-    } else { // Ellers gjør den synlig
+    } else { // Ellers gjør den synlig og legg til aktiv-status
+      const høyde = seksjon.scrollHeight; // Måler høyden på seksjonen og setter max-height til denne verdien
+      seksjon.style.maxHeight = høyde + 'px';
       seksjon.classList.add('synlig');
+      knapp.classList.add('aktiv');
+      knapp.querySelector('.ifKnappIkon').style.stroke = 'var(--aktiv-farge)';
+      knapp.querySelector('.ifKnappIkon svg circle').style.fill = 'var(--aktiv-farge)';
+      knapp.querySelector('.ifKnapptittel').style.color = 'var(--aktiv-farge)';
     }
 
     // Oppdaterer referansen til forrige synlige seksjon

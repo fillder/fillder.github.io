@@ -205,7 +205,7 @@ ion-icon {
 }
 
 /*___gjembart innhold___*/
-.innhold {
+.ifSeksjoner {
    grid-area: iH;
 }
 
@@ -233,29 +233,13 @@ ion-icon {
    margin: 0.2rem;
    align-items: center;
 }
-.ifKnappBilde {
-   background-color: var(--clr-tekst);
+.ifKnappIkon {
+   background-color: var(--clr-ramme);
    width: 50px;
    height: 50px;
    border-radius: 50%;
    outline: 4px solid var(--clr-boks);
    z-index: 4;
-}
-.ifKnapptittel {
-   background-color: var(--clr-tekst);
-   color: var(--clr-boks);
-   padding: 0.6rem;
-   border-radius: 0.5rem;
-   margin-left: -0.5rem;
-   padding-left: 1rem;
-   z-index: 3;
-}
-/*____Seksjonsknappikoner___*/
-.seksjonsikon line,
-path,
-polygon,
-rect,
-polyline {
    stroke-linecap: round;
    stroke-linejoin: round;
    stroke-width: 2;
@@ -263,11 +247,19 @@ polyline {
    stroke: var(--clr-bakgrunn);
    fill: none;
 }
-.seksjonsikon circle {
+.ifKnappIkon svg circle {
    fill: var(--clr-bakgrunn);
 }
+.ifKnapptittel {
+   background-color: var(--clr-ramme);
+   color: var(--clr-boks);
+   padding: 0.6rem;
+   border-radius: 0.5rem;
+   margin-left: -0.5rem;
+   padding-left: 1rem;
+   z-index: 3;
+}
 /*____Seksjonsknapper___*/
-
 .ifSeksjon {
    max-height: 0;
    overflow: hidden;
@@ -280,4 +272,46 @@ polyline {
 .ifSeksjon:not(.synlig) {
    max-height: 0;
    transition: max-height 0.3s ease-out;
+}
+/*____knappfarger___*/
+.ifKnapp.aktiv .ifKnappIkon {
+   stroke: var(--aktiv-farge);
+}
+
+.ifKnapp.aktiv .ifKnappIkon svg circle {
+   fill: var(--aktiv-farge);
+}
+
+.ifKnapp.aktiv .ifKnapptittel {
+   color: var(--aktiv-farge);
+}
+.ifKnapp.aktiv[data-farge="safir"] {
+   --aktiv-farge: var(--clr-safir);
+}
+.ifKnapp.aktiv[data-farge="akvamarin"] {
+   --aktiv-farge: var(--clr-akvamarin);
+}
+.ifKnapp.aktiv[data-farge="amazonitt"] {
+   --aktiv-farge: var(--clr-amazonitt);
+}
+.ifKnapp.aktiv[data-farge="smaragd"] {
+   --aktiv-farge: var(--clr-smaragd);
+}
+.ifKnapp.aktiv[data-farge="citrin"] {
+   --aktiv-farge: var(--clr-citrin);
+}
+.ifKnapp.aktiv[data-farge="spessartin"] {
+   --aktiv-farge: var(--clr-spessartin);
+}
+.ifKnapp.aktiv[data-farge="rubin"] {
+   --aktiv-farge: var(--clr-rubin);
+}
+.ifKnapp.aktiv[data-farge="thulitt"] {
+   --aktiv-farge: var(--clr-thulitt);
+}
+.ifKnapp.aktiv[data-farge="kunzitt"] {
+   --aktiv-farge: var(--clr-kunzitt);
+}
+.ifKnapp.aktiv[data-farge="ametyst"] {
+   --aktiv-farge: var(--clr-ametyst);
 }
