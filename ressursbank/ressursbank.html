@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="/stilark.css" />
     <link rel="stylesheet" type="text/css" href="/ressursbank/rb-design.css" />
     <link rel="stylesheet" type="text/css" href="/ressursbank/rb-dag_natt.css" />
+    <link rel="stylesheet" type="text/css" href="/ressursbank/rb-mobil.css" />
     <link rel="icon" href="/bilder/skolelogo.svg" type="image/svg+xml">
     <link rel="shortcut icon" href="/bilder/skolelogo.svg">
     <link rel="apple-touch-icon" href="/bilder/skolelogo.svg">
@@ -33,22 +34,22 @@
         <div>
             <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
                 <svg class="svg-anim" viewBox="0 70 100 100">
-                    <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-linecap="round" stroke-width="6"
-                        stroke-dasharray="20" stroke-dashoffset="0" />
-                    <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-linecap="round" stroke-width="6"
-                        stroke-dasharray="20" stroke-dashoffset="0" />
-                    <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-linecap="round" stroke-width="6"
-                        stroke-dasharray="20" stroke-dashoffset="0" />
-                    <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-linecap="round" stroke-width="6"
-                        stroke-dasharray="20" stroke-dashoffset="0" />
-                    <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-linecap="round" stroke-width="6"
-                        stroke-dasharray="20" stroke-dashoffset="0" />
-                    <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-linecap="round" stroke-width="6"
-                        stroke-dasharray="20" stroke-dashoffset="0" />
-                    <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-linecap="round" stroke-width="6"
-                        stroke-dasharray="20" stroke-dashoffset="0" />
-                    <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-linecap="round" stroke-width="6"
-                        stroke-dasharray="20" stroke-dashoffset="0" />
+                    <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-width="6" stroke-dasharray="20"
+                        stroke-dashoffset="0" />
+                    <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-width="6" stroke-dasharray="20"
+                        stroke-dashoffset="0" />
+                    <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-width="6" stroke-dasharray="20"
+                        stroke-dashoffset="0" />
+                    <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-width="6" stroke-dasharray="20"
+                        stroke-dashoffset="0" />
+                    <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-width="6" stroke-dasharray="20"
+                        stroke-dashoffset="0" />
+                    <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-width="6" stroke-dasharray="20"
+                        stroke-dashoffset="0" />
+                    <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-width="6" stroke-dasharray="20"
+                        stroke-dashoffset="0" />
+                    <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-width="6" stroke-dasharray="20"
+                        stroke-dashoffset="0" />
                     <circle class="sun" cx="50" cy="120" r="20" />
                     <circle class="moon" cx="135" cy="40" r="40" />
                 </svg>
@@ -65,106 +66,309 @@
         </div>
     </header>
     <main>
-        <section class="gridBeholder">
+        <div class="gridBeholder">
             <section class="faktaboks rb-ramme">
-                <span class="fbBilde"><img src="rb-bilder/IM-logo-01.png" alt="nesten kvadratisk bilde"></span>
-                <span class="fbInnhold">
-                    <h2>Fraksjon</h2>
+                <img class="fbBilde" src="rb-bilder/IM-logo-01.png" alt="nesten kvadratisk bilde">
+                <div class="fbInnhold">
+                    <span class="fbtittel">
+                        <h2>Fraksjon</h2>
+                    </span>
                     <ul class="fbListe">
                         <li class="fbListeElem">
-                            <p><b>Hovedkvarter</b></p>
-                            <p>N/A (dømt til eksil)</p>
+                            <p><b>Hovedkvarter:</b></p>
+                            <p> N/A (dømt til eksil)</p>
                         </li>
                         <li class="fbListeElem">
-                            <p><b>Leder</b></p>
-                            <p>Sir Bob “ikke-kriminell-i-det-hele-tatt” den Ærlige</p>
+                            <p><b>Leder:</b></p>
+                            <p> Sir Bob “ikke-kriminell-i-det-hele-tatt”</p>
                         </li>
                         <li class="fbListeElem">
-                            <p><b>Motto</b></p>
+                            <p><b>Motto:</b></p>
                             <p>For [sted som ikke finnes lengre]</p>
                         </li>
                         <li class="fbListeElem">
-                            <p><b>Farger/uniform</b></p>
-                            <p>Hvit bekledning med en rød Sjøsausnegle</p>
+                            <p><b>Farger/uniform:</b></p>
+                            <p>Hvit bekledning med rød Sjøsausnegle</p>
                         </li>
                         <li class="fbListeElem">
-                            <p><b>Mål</b></p>
+                            <p><b>Mål:</b></p>
                             <p>Ta tilbake sitt hjemland</p>
                         </li>
                         <li class="fbListeElem">
-                            <p><b>Aktivitet</b></p>
+                            <p><b>Aktivitet:</b></p>
                             <p>ca. 1462 - d.d.</p>
                         </li>
                     </ul>
                     <ul class="fbListe">
                         <li class="fbListeElem">
-                            <p><b>Troskap</b></p>
+                            <p><b>Troskap:</b></p>
                             <p>Den gamle Føderasjonen</p>
                         </li>
                         <li class="fbListeElem">
-                            <p><b>Type</b></p>
+                            <p><b>Type:</b></p>
                             <p>Sekulær Ridderorden</p>
                         </li>
                         <li class="fbListeElem">
-                            <p><b>Størrelse</b></p>
+                            <p><b>Størrelse:</b></p>
                             <p>ca. 1450 (5% av historisk rekord)</p>
                         </li>
                         <li class="fbListeElem">
-                            <p><b>Medlemmer</b></p>
+                            <p><b>Medlemmer:</b></p>
                             <p>Riddere av Sjøsausneglen</p>
                         </li>
                         <li class="fbListeElem">
-                            <p><b>Alias</b></p>
+                            <p><b>Alias:</b></p>
                             <p>Foræderridere / Helgenene av Sjøsausneglen</p>
                         </li>
                     </ul>
-                </span>
+                </div>
             </section>
             <section class="oversikt rb-ramme">
                 <article class="oppsummering ">
-                    <p>Pimpa selfiepinne, dumpstra i utsimningsbassäng foliehatt, livslogga i app. Mjuk betalvägg
-                        matsvinnsbutik.
-                        Temakonfirmation viagra selfie. Robotfälla knarkometer, klickfarm fastän cringe är
-                        självkarantän.
-                        Genuskänslig
-                        villamatta inte morotsmobb i vattkoppsgodis i danseoke på obror jasminmöte. Trollfilter
-                        gångpeng.
-                        Närvaropeng
-                        klimatmat bröllopsklänning att metrosexualitet e-demokrati linjär tv. Härgjord faktaresistens
-                        räddningskort
-                        stjärtfluss, stalker.
+                    <h2>Sjøsausneglene</h2>
+                    <h5>Pimpa selfiepinne, dumpstra i utsimningsbassäng foliehatt, livslogga i app. Mjuk betalvägg
+                        matsvinnsbutik.Temakonfirmation viagra selfie. Robotfälla knarkometer, klickfarm fastän cringe
+                        är
+                        självkarantän.Genuskänslig villamatta inte morotsmobb i vattkoppsgodis i danseoke på obror
+                        jasminmöte. Trollfilter
+                        gångpeng.Närvaropeng klimatmat bröllopsklänning att metrosexualitet e-demokrati linjär tv.
+                        Härgjord
+                        faktaresistens
+                        räddningskort stjärtfluss, stalker.
 
-                        Källtillit prio och plastis en carpa. Resultatvarna ofast jobb. Ekodukt flyttstajla guldsot
-                        direktare: när
-                        nätläkare, gågging. Naturvin klimatmat som snålsurfa plastbanta, flexicurity curla haffa. Du kan
-                        vara drabbad.
-                        Benim parkera bussen krisväska, utan e-cigarett ljudaffisch danseoke norsk karaoke ifall
-                        stadsutglesning
-                        aspludd romkom. Näthat rondellhund krympflation respektive legga becknarväska trafficking för
-                        kamikazetips
-                        inte bilsurfa kreativ skolgång av
-                    </p>
+                        <br>Källtillit prio och plastis en carpa. Resultatvarna ofast jobb. Ekodukt flyttstajla guldsot
+                        direktare: när nätläkare, gågging. Naturvin klimatmat som snålsurfa plastbanta, flexicurity
+                        curla
+                        haffa. Du kan
+                        vara drabbad. Benim parkera bussen krisväska, utan e-cigarett ljudaffisch danseoke norsk karaoke
+                        ifall
+                        stadsutglesning aspludd romkom. Näthat rondellhund krympflation respektive legga becknarväska
+                        trafficking för
+                        kamikazetips inte bilsurfa kreativ skolgång av
+                    </h5>
                 </article>
             </section>
             <section class="innholdsfortegnelse rb-ramme">
-                <ul class="ifKnapper">
-                    <li class="ifKnapp"><span class="ifKnappBilde"></span><span class="ifKnapptittel">Demografi</span>
-                    </li>
-                    <li class="ifKnapp"><span class="ifKnappBilde"></span><span class="ifKnapptittel">Etymologi</span>
-                    </li>
-                    <li class="ifKnapp"><span class="ifKnappBilde"></span><span class="ifKnapptittel">Geografi</span>
-                    </li>
-                    <li class="ifKnapp"><span class="ifKnappBilde"></span><span class="ifKnapptittel">Historie</span>
-                    </li>
-                    <li class="ifKnapp"><span class="ifKnappBilde"></span><span class="ifKnapptittel">Kultur</span></li>
-                    <li class="ifKnapp"><span class="ifKnappBilde"></span><span class="ifKnapptittel">Språk</span></li>
-                    <li class="ifKnapp"><span class="ifKnappBilde"></span><span class="ifKnapptittel">Styresett</span>
-                    </li>
-                    <li class="ifKnapp"><span class="ifKnappBilde"></span><span class="ifKnapptittel">Økonomi</span>
-                    </li>
-                </ul>
+                <button class="ifKnapp" data-target="demografi">
+                    <div class="ifKnappBilde">
+                        <svg class="seksjonsikon" viewBox="0 0 50 50">
+                            <line x1="32.29" y1="16.94" x2="38.28" y2="10.95" />
+                            <line x1="25" y1="28.66" x2="25" y2="35.87" />
+                            <line x1="5.68" y1="25" x2="14.13" y2="25" />
+                            <path d="m16.03,42.12c-6.16-3.23-10.35-9.69-10.35-17.12,0-8.82,5.91-16.27,14-18.58" />
+                            <path d="m44.17,22.54c.1.81.16,1.63.16,2.46,0,10.67-8.65,19.32-19.32,19.32" />
+                            <path d="m28.4,5.98c7.19,1.28,13.01,6.54,15.1,13.42" />
+                            <path
+                                d="m35.87,25c0,6-4.86,10.87-10.87,10.87s-10.87-4.86-10.87-10.87c0-2.96,1.18-5.64,3.1-7.6s4.72-3.27,7.77-3.27c6,0,10.87,4.86,10.87,10.87Z" />
+                            <circle cx="24.06" cy="5.56" r="1" />
+                            <circle cx="20.34" cy="43.78" r="1" />
+                            <path
+                                d="m28.66,25c0,2.02-1.64,3.66-3.66,3.66s-3.66-1.64-3.66-3.66,1.64-3.66,3.66-3.66c.89,0,1.7.32,2.33.84" />
+                        </svg>
+                    </div>
+                    <h3 class="ifKnapptittel">Demografi</h3>
+                </button>
+                <button class="ifKnapp" data-target="etymologi">
+                    <div class="ifKnappBilde">
+                        <svg class="seksjonsikon" viewBox="0 0 50 50">
+                            <path d="m24.57,23.15c-.88,1.16-2.28,1.92-3.85,1.92s-3.03-.79-3.91-2" />
+                            <path
+                                d="m24.75,12.1c2.99,1.48,5.05,4.57,5.05,8.14,0,5.01-4.07,9.08-9.08,9.08s-9.08-4.07-9.08-9.08c0-3.57,2.06-6.66,5.05-8.14" />
+                            <path
+                                d="m9.18,15.41c1.89-4.51,6.34-7.67,11.54-7.67,6.9,0,12.5,5.6,12.5,12.5s-5.6,12.5-12.5,12.5c-5.53,0-10.22-3.59-11.87-8.56" />
+                            <path d="m27.74,30.58l7.9,9.04s2.41,2.59,5,0,0-5,0-5l-9.04-7.9" />
+                            <circle cx="8.38" cy="19.83" r="1" />
+                            <circle cx="20.57" cy="10.97" r="1" />
+                        </svg>
+                    </div>
+                    <h3 class="ifKnapptittel">Etymologi</h3>
+                </button>
+                <button class="ifKnapp" data-target="geografi">
+                    <div class="ifKnappBilde">
+                        <svg class="seksjonsikon" viewBox="0 0 50 50">
+                            <circle cx="12.79" cy="33.61" r="1.05" />
+                            <circle cx="33.53" cy="23.2" r="1.05" />
+                            <circle cx="26.16" cy="13.95" r="1.05" />
+                            <path d="m33.53,19.33v-6.49c0-1.96,1.59-3.56,3.56-3.56s3.56,1.59,3.56,3.56v25" />
+                            <line x1="29.28" y1="13.95" x2="33.53" y2="13.95" />
+                            <line x1="23.04" y1="13.95" x2="16.47" y2="13.95" />
+                            <path
+                                d="m33.53,27.28v9.88c0-1.96,1.59-3.56,3.56-3.56s3.56,1.59,3.56,3.56-1.59,3.56-3.56,3.56H12.91c-1.96,0-3.56-1.59-3.56-3.56,0-.97.39-1.85,1.02-2.49" />
+                            <polyline
+                                points="33.53 18.23 26.68 17.32 24.64 19.46 25.24 21.36 27.67 23.7 26.93 25.55 30.13 28.48 30.31 32.87 33.53 33.55" />
+                            <polyline
+                                points="18.92 24.25 21.29 23.56 23.04 27.78 25.58 29.5 25.86 34.95 22.87 37.67 20.06 34.89 16.47 33.19" />
+                            <path
+                                d="m9.35,31.58V12.84c0-1.96,1.59-3.56,3.56-3.56s3.56,1.59,3.56,3.56v24.32c0-1.1-.5-2.09-1.29-2.74" />
+                        </svg>
+                    </div>
+                    <h3 class="ifKnapptittel">Geografi</h3>
+                </button>
+                <button class="ifKnapp" data-target="historie">
+                    <div class="ifKnappBilde">
+                        <svg class="seksjonsikon" viewBox="0 0 50 50">
+                            <circle cx="19.06" cy="6.78" r="1.05" />
+                            <polyline points="33.19 24.71 34.81 24.71 34.81 21.57 30.47 21.57 30.47 29.34" />
+                            <polyline points="26.35 24.71 27.97 24.71 27.97 21.57 23.63 21.57 23.63 29.34" />
+                            <polyline points="19.51 24.71 21.13 24.71 21.13 21.57 16.79 21.57 16.79 29.34" />
+                            <line x1="29.52" y1="29.34" x2="35.03" y2="29.34" />
+                            <line x1="14.97" y1="29.34" x2="20.49" y2="29.34" />
+                            <circle cx="26.56" cy="29.34" r="1.05" />
+                            <path d="m31,40.37c-.88,1.55-1.48,2.49-1.48,2.49" />
+                            <path d="m33.23,12.07s5.5,5.06,4.58,11.21c-.73,4.86-3.3,10.52-5.39,14.5" />
+                            <line x1="13.13" y1="18.16" x2="30.47" y2="18.16" />
+                            <line x1="14.97" y1="42.87" x2="34.89" y2="42.87" />
+                            <polyline points="22.57 6.78 36.85 6.78 33.23 12.07 25.12 12.07" />
+                            <path d="m17.01,12.07s-5.5,5.06-4.58,11.21c1.28,8.55,8.28,19.58,8.28,19.58" />
+                            <polyline points="15.81 6.78 13.39 6.78 17.01 12.07 25.12 12.07" />
+                        </svg>
+                    </div>
+                    <h3 class="ifKnapptittel">Historie</h3>
+                </button>
+                <button class="ifKnapp" data-target="kultur">
+                    <div class="ifKnappBilde">
+                        <svg class="seksjonsikon" viewBox="0 0 50 50">
+                            <path
+                                d="m32.59,40.58c-2.27,1.36-4.87,2.09-7.59,2.09-3.95,0-7.66-1.54-10.45-4.33-5.72-5.72-5.76-15.01-.11-20.78v-2.93c-2.02,0-3.65-1.63-3.65-3.65s1.63-3.65,3.65-3.65,3.65,1.63,3.65,3.65v10c-2.97,2.97-3.63,7.36-1.98,10.97" />
+                            <path
+                                d="m20.34,36.49c3.71,2.01,8.44,1.45,11.58-1.68,3.82-3.82,3.82-10.01,0-13.82v-10c0-2.02,1.63-3.65,3.65-3.65s3.65,1.63,3.65,3.65-1.63,3.65-3.65,3.65v2.93c5.03,5.14,5.55,13.07,1.56,18.79" />
+                            <line x1="28.67" y1="34.15" x2="28.67" y2="13.7" />
+                            <line x1="25" y1="34.15" x2="25" y2="13.7" />
+                            <line x1="21.33" y1="34.15" x2="21.33" y2="13.7" />
+                            <line x1="18.09" y1="13.7" x2="31.91" y2="13.7" />
+                            <circle cx="35.05" cy="38.81" r="1" />
+                            <circle cx="17.82" cy="34.45" r="1" />
+                        </svg>
+                    </div>
+                    <h3 class="ifKnapptittel">Kultur</h3>
+                </button>
+                <button class="ifKnapp" data-target="sprak">
+                    <div class="ifKnappBilde">
+                        <svg class="seksjonsikon" viewBox="0 0 50 50">
+                            <path
+                                d="m26.66,27.56h1.52c.97,5.17,4.73,9.52,9.86,11.75,1.54.61,3.28-.14,3.89-1.68.61-1.54-.14-3.28-1.68-3.89-2.86-1.29-5.02-3.51-5.89-6.17h3.59c.47,0,.92-.12,1.3-.34" />
+                            <path
+                                d="m12.88,11.01c-.33-.17-.66-.32-1-.47-1.54-.61-3.28.14-3.89,1.68-.61,1.54.14,3.28,1.68,3.89,2.86,1.29,5.02,3.51,5.89,6.17h-3.59c-1.46,0-2.63,1.18-2.63,2.63s1.18,2.63,2.63,2.63h3.59c-.87,2.66-3.04,4.89-5.89,6.17-1.54.61-2.29,2.35-1.68,3.89s2.35,2.29,3.89,1.68c5.13-2.23,8.89-6.58,9.86-11.75h2.32" />
+                            <path
+                                d="m39.21,22.61c-.37-.2-.8-.32-1.26-.32h-3.59c.87-2.66,3.04-4.89,5.89-6.17,1.54-.61,2.29-2.35,1.68-3.89-.61-1.54-2.35-2.29-3.89-1.68-5.13,2.23-8.89,6.58-9.86,11.75h-6.46c-.57-3.03-2.09-5.78-4.29-7.98" />
+                            <circle cx="15.17" cy="12.37" r="1.05" />
+                            <circle cx="19.03" cy="38.76" r="1.05" />
+                            <circle cx="40.62" cy="24.92" r="1.05" />
+                            <circle cx="27.13" cy="12.89" r="2.01" />
+                        </svg>
+                    </div>
+                    <h3 class="ifKnapptittel">Språk</h3>
+                </button>
+                <button class="ifKnapp" data-target="styresett">
+                    <div class="ifKnappBilde">
+                        <svg class="seksjonsikon" viewBox="0 0 50 50">
+                            <path d="m37.84,10.21H14.58c-1.27,0-2.16.89-2.16,2v15.61" />
+                            <line x1="15.37" y1="29.93" x2="30.58" y2="29.93" />
+                            <line x1="15.37" y1="27.07" x2="30.58" y2="27.07" />
+                            <line x1="15.37" y1="24.22" x2="30.58" y2="24.22" />
+                            <line x1="15.37" y1="21.37" x2="30.58" y2="21.37" />
+                            <line x1="15.37" y1="18.51" x2="30.58" y2="18.51" />
+                            <line x1="24.7" y1="32.78" x2="30.58" y2="32.78" />
+                            <line x1="15.37" y1="15.66" x2="21.24" y2="15.66" />
+                            <line x1="12.42" y1="30.75" x2="12.42" y2="37.59" />
+                            <path
+                                d="m33.94,29.88v7.71c0,2.16-1.75,3.91-3.91,3.91s-3.91-1.75-3.91-3.91H8.92c0,2.16,1.75,3.91,3.91,3.91h8.83" />
+                            <path d="m36.7,14.12h5.05c0-2.16-1.75-3.91-3.91-3.91s-3.91,1.75-3.91,3.91v7.71" />
+                            <circle cx="33.94" cy="26.14" r="1" />
+                            <circle cx="24.33" cy="41.49" r="1" />
+                        </svg>
+                    </div>
+                    <h3 class="ifKnapptittel">Styresett</h3>
+                </button>
+                <button class="ifKnapp" data-target="okonomi">
+                    <div class="ifKnappBilde">
+                        <svg class="seksjonsikon" viewBox="0 0 50 50">
+                            <polygon points="41.8 16.35 41.8 16.35 41.8 16.35 41.8 16.35" />
+                            <rect x="31.59" y="18.3" width="3.21" height="13.58" />
+                            <polyline points="26.73 26.32 26.73 31.88 23.51 31.88 23.51 18.3 26.73 18.3 26.73 23.57" />
+                            <rect x="15.44" y="18.3" width="3.21" height="13.58" />
+                            <polyline points="37.24 15.43 37.24 18.3 12.85 18.3 12.85 15.43" />
+                            <polyline
+                                points="36.72 11.2 40.18 12.57 40.18 15.43 9.9 15.43 9.9 12.57 25.04 6.57 30.02 8.55" />
+                            <polyline points="12.85 34.74 12.85 31.88 37.24 31.88 37.24 34.74" />
+                            <polyline points="16.18 38.32 40.18 38.32 40.18 34.74 9.9 34.74 9.9 38.32" />
+                            <circle cx="13.07" cy="38.32" r="1" />
+                            <circle cx="33.51" cy="10" r="1" />
+                        </svg>
+                    </div>
+                    <h3 class="ifKnapptittel">Økonomi</h3>
+                </button>
+                <button class="ifKnapp" data-target="teknologi">
+                    <div class="ifKnappBilde">
+                        <svg class="seksjonsikon" viewBox="0 0 50 50">
+                            <circle cx="28.97" cy="8.85" r="1" />
+                            <circle cx="18.05" cy="32.74" r="1" />
+                            <path
+                                d="m18.02,35.82v8.88s1.63.98,4.57,1.32v-13.4h4.88v13.28c1.39-.21,2.92-.59,4.57-1.2v-17.82c0,2.53,2.05,4.59,4.59,4.59s4.59-2.05,4.59-4.59-2.05-4.59-4.59-4.59H13.43c-2.53,0-4.59,2.05-4.59,4.59s2.05,4.59,4.59,4.59,4.59-2.05,4.59-4.59h11.27" />
+                            <path
+                                d="m27.02,7.14s-2.43-2.95-4.9-3.96c0,0,2.11,4.24.65,6.5s-2.75,4.41-2.75,4.41c0,0-.75-3.27-1.99-4.41,0,0,.78,3.01-1.43,5.96s-.32,5.96.78,6.65h3.02s-.28-1.91.9-3.21,1.71-2.84,1.7-3.87c0,0,.77,2.44.77,3.52,0,0,4.02-3.6,2.47-7.72,0,0,5.65,6.32,2.63,11.29h3.59s5.42-4.68-1.47-11.52" />
+                        </svg>
+                    </div>
+                    <h3 class="ifKnapptittel">Teknologi</h3>
+                </button>
+                <button class="ifKnapp" data-target="militaer">
+                    <div class="ifKnappBilde">
+                        <svg class="seksjonsikon" viewBox="0 0 50 50">
+                            <line x1="9.73" y1="13.19" x2="32.68" y2="36.14" />
+                            <line x1="14.35" y1="8.94" x2="36.28" y2="30.87" />
+                            <path d="m36.28,30.87c2.33-4.77,3.35-9.59,3.77-13.25" />
+                            <path d="m20.75,40.28c1.28,1.17,2.7,2.27,4.29,3.27,3.2-2.02,5.73-4.43,7.74-7.02" />
+                            <path
+                                d="m40.31,11.33c-5.63-4.07-15.27-4.74-15.27-4.74,0,0-9.64.67-15.27,4.74,0,0-1.1,15.44,8.71,26.62" />
+                            <circle cx="34.78" cy="33.74" r="1" />
+                            <circle cx="40.31" cy="14.68" r="1" />
+                        </svg>
+                    </div>
+                    <h3 class="ifKnapptittel">Militær</h3>
+                </button>
             </section>
-            <section class="rb-ramme innhold">
+            <section class="ifSeksjoner">
+                <div class="ifSeksjon" data-section="demografi">
+                    <h2>Demografi</h2>
+                    <p>Her er informasjon om demografi.</p>
+                </div>
+                <div class="ifSeksjon" data-section="etymologi">
+                    <h2>Etymologi</h2>
+                    <p>Her er informasjon om etymologi.</p>
+                </div>
+                <div class="ifSeksjon" data-section="geografi">
+                    <h2>Geografi</h2>
+                    <p>Her er informasjon om geografi.</p>
+                </div>
+                <div class="ifSeksjon" data-section="historie">
+                    <h2>Historie</h2>
+                    <p>Her er informasjon om historie.</p>
+                </div>
+                <div class="ifSeksjon" data-section="kultur">
+                    <h2>Kultur</h2>
+                    <p>Her er informasjon om kultur.</p>
+                </div>
+                <div class="ifSeksjon" data-section="sprak">
+                    <h2>Språk</h2>
+                    <p>Her er informasjon om språk.</p>
+                </div>
+                <div class="ifSeksjon" data-section="styresett">
+                    <h2>Styresett</h2>
+                    <p>Her er informasjon om styresett.</p>
+                </div>
+                <div class="ifSeksjon" data-section="okonomi">
+                    <h2>Økonomi</h2>
+                    <p>Her er informasjon om Økonomi.</p>
+                </div>
+                <div class="ifSeksjon" data-section="teknologi">
+                    <h2>Teknologi</h2>
+                    <p>Her er informasjon om Teknologi.</p>
+                </div>
+                <div class="ifSeksjon" data-section="militaer">
+                    <h2>Militær</h2>
+                    <p>Her er informasjon om Militær.</p>
+                </div>
+                <!-- <section class="rb-ramme innhold">
                 <div class="seksjonstittel">
                     <h2>Ekamensseminar</h2>
                     <h3>1. februar 2023</h3>
@@ -178,17 +382,29 @@
                     <details>
 
                     </details>
-                </div>
+                </div> -->
             </section>
             <section class="galleri">
             </section>
 
             <section class="artikler">
             </section>
-        </section>
+        </div>
     </main>
     <footer>
-        En footer
+
+
+
+
+        <svg viewBox="0 0 50 50">
+
+        </svg>
+        <svg viewBox="0 0 50 50">
+
+        </svg>
+
+
+
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

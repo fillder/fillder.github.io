@@ -70,15 +70,3 @@ video {
    --clr-skolefarge1: #ef7c00;
    --clr-skolefarge2: #ffffff;
 }
-/*______ fargedeklarering ______*/
-
-/*______ Skolelogo ______*/
-.skolelogo {
-   width: clamp(2rem, 3vw, 4rem);
-}
-.skolefarge1 {
-   fill: var(--clr-skolefarge1);
-}
-.skolefarge2 {
-   fill: var(--clr-skolefarge2);
-}

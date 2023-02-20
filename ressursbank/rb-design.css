@@ -15,7 +15,7 @@ h3 {
    /* Fagtittel */
    font-family: "Roboto Slab", serif;
    font-weight: 500;
-   font-size: clamp(0.6rem, 1.4vw, 1.7rem);
+   font-size: clamp(0.7rem, 9vw, 1.1rem);
 }
 h4 {
    /* Dato */
@@ -26,8 +26,9 @@ h4 {
 h5 {
    /* lærer */
    font-family: "Roboto", sans-serif;
-   font-weight: 500;
-   font-size: clamp(0.6rem, 1vw, 1.3rem);
+   font-weight: 300;
+   line-height: 1.5;
+   font-size: clamp(0.8rem, 1vw, 1.6rem);
 }
 h6 {
    /* klokkelsett */
@@ -40,7 +41,7 @@ p {
    font-family: "Roboto", sans-serif;
    font-weight: 300;
    line-height: 1.5;
-   font-size: clamp(0.6rem, 0.9vw, 1.2rem);
+   font-size: clamp(0.7rem, 0.9vw, 1.1rem);
 }
 i {
    font-style: italic;
@@ -147,14 +148,13 @@ ion-icon {
    fill: var(--clr-tekst);
 }
 
-/*Wikioppsett*/
 .gridBeholder {
-   width: 80%;
    display: grid;
    grid-gap: 1rem;
    padding: 1rem;
+   width: 80%;
    margin-inline: auto;
-   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-columns: repeat(3, 1fr);
    grid-template-areas:
       "fB fB fB"
       "oS oS iF"
@@ -164,27 +164,41 @@ ion-icon {
 /*___Faktaboks___*/
 .faktaboks {
    grid-area: fB;
-}
-.fbBilde,
-.fbInnhold {
-   display: inline-block;
-}
-.fbBilde {
-   padding: 1rem;
-   height: 16rem;
-   width: 16rem;
+   display: grid;
+   grid-template-columns: 0.8fr 2.2fr;
 }
 
-.fbListeElem {
-   display: flex;
+.fbBilde {
+   padding: 1rem;
+   width: 100%;
+   max-height: 100%;
+   object-fit: cover;
 }
-.fbListeElem p {
-   display: inline; /* faktaboks-lista har overskriftene på samme linje som punktene*/
+.fbtittel {
+   padding-bottom: 1rem;
+   grid-column: 1 / span 2;
+}
+.fbInnhold {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: auto 1fr;
+   list-style: none;
+   padding: 1rem;
+}
+.fbListeElem {
+   display: grid;
+   grid-template-columns: 1fr minmax(150px, 2fr);
+   grid-gap: 10px;
+   padding-block: 0.2rem;
 }
 
 /*___Oversikt og Innholdfortegnelse____*/
 .oversikt {
    grid-area: oS;
+   padding: 1rem;
+}
+.oversikt h2 {
+   padding-bottom: 0.5rem;
 }
 .innholdsfortegnelse {
    grid-area: iF;
@@ -206,11 +220,49 @@ ion-icon {
    grid-area: aK;
    border: 2px solid lightblue;
 }
-
-/*____Main-lister  felles___*/
-ul {
-   list-style-type: none;
+/*____Seksjonsknapper___*/
+.innholdsfortegnelse {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 0.2rem;
+   justify-content: center;
 }
-li {
-   list-style-position: inside; /*listepunktene holder seg innenfor listeboksen*/
+.ifKnapp {
+   display: grid;
+   grid-template-columns: auto 1fr;
+   margin: 0.2rem;
+   align-items: end;
+}
+.ifKnappBilde {
+   background-color: var(--clr-tekst);
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   outline: 4px solid var(--clr-boks);
+   z-index: 4;
+}
+.ifKnapptittel {
+   background-color: var(--clr-tekst);
+   width: 8rem;
+   height: auto;
+   padding: 0.6rem;
+   border-radius: 0.5rem;
+   margin-left: -1rem;
+   z-index: 3;
+}
+/*____Seksjonsknappikoner___*/
+.seksjonsikon line,
+path,
+polygon,
+rect,
+polyline {
+   stroke-linecap: round;
+   stroke-linejoin: round;
+   stroke-width: 2;
+   stroke-miterlimit: 10;
+   stroke: var(--clr-bakgrunn);
+   fill: none;
+}
+.seksjonsikon circle {
+   fill: var(--clr-bakgrunn);
 }
