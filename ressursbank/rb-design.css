@@ -267,13 +267,17 @@ polyline {
    fill: var(--clr-bakgrunn);
 }
 /*____Seksjonsknapper___*/
-.ifSeksjoner {
-   display: flex;
-   flex-direction: column;
-}
+
 .ifSeksjon {
-   display: none;
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.3s ease-out;
 }
-.synlig {
-   display: block;
+.ifSeksjon.synlig {
+   max-height: 100vh;
+   transition: max-height 0.3s ease-in;
+}
+.ifSeksjon:not(.synlig) {
+   max-height: 0;
+   transition: max-height 0.3s ease-out;
 }
