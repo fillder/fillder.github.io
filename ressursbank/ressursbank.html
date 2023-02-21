@@ -20,6 +20,7 @@
     <link rel="apple-touch-icon" href="/bilder/skolelogo.svg">
     <script type="module" src="/script/dag-natt.js"></script>
     <script type="module" src="rb-seksjoner.js"></script>
+    <script type="module" src="rb-bildekarusell.js"></script>
     <title>IM-ressursbank</title>
 </head>
 
@@ -399,7 +400,7 @@
                 </div> -->
             </section>
             <section class="galleri">
-                <div class="galleri-grid">
+                <div class="galleri-grid rb-ramme">
                     <img src="rb-bilder/00707-trollsopprune.jpg" class="miniatyrbilde"
                         alt="miniatyrbilde av trollsopprune">
                     <img src="rb-bilder/00708-jungel.jpg" class="miniatyrbilde" alt="miniatyrbilde av jungel">
@@ -416,45 +417,132 @@
                     <img src="rb-bilder/00722-eksplosiv_megaflora.jpg" class="miniatyrbilde"
                         alt="miniatyrbilde av eksplosiv megaflora">
                 </div>
-                <div class="bildekarusell rb-ramme">
-                    <div class="karusellramme">
-                        <img src="rb-bilder/00707-trollsopprune.jpg" class="karusellbilde"
-                            alt="bildefremvisning av trollsopprune">
+                <div class="bildefremvisning">
+                    <div class="bildefremvisning">
                     </div>
-                    <div class="karusellramme">
-                        <img src="rb-bilder/00708-jungel.jpg" class="karusellbilde" alt="bildefremvisning av jungel">
+                    <div>
+                        <svg class="kryss" viewBox="0 0 50 50">
+                            <line x1="9.73" y1="13.19" x2="32.68" y2="36.14" />
+                            <line x1="14.35" y1="8.94" x2="36.28" y2="30.87" />
+                            <path d="m36.28,30.87c2.33-4.77,3.35-9.59,3.77-13.25" />
+                            <path d="m20.75,40.28c1.28,1.17,2.7,2.27,4.29,3.27,3.2-2.02,5.73-4.43,7.74-7.02" />
+                            <path
+                                d="m40.31,11.33c-5.63-4.07-15.27-4.74-15.27-4.74,0,0-9.64.67-15.27,4.74,0,0-1.1,15.44,8.71,26.62" />
+                            <circle cx="34.78" cy="33.74" r="1" />
+                            <circle cx="40.31" cy="14.68" r="1" />
+                        </svg>
                     </div>
-                    <div class="karusellramme">
-                        <img src="rb-bilder/00709-sump.jpg" class="karusellbilde" alt="bildefremvisning av sump">
-                    </div>
-                    <div class="karusellramme">
-                        <img src="rb-bilder/00712-sumpvann.jpg" class="karusellbilde"
-                            alt="bildefremvisning av sumpvann">
-                    </div>
-                    <div class="karusellramme">
-                        <img src="rb-bilder/00713-forlatt_sumpfolklandsby.jpg" class="karusellbilde"
-                            alt="bildefremvisning av forlatt sumpfolklandsby">
-                    </div>
-                    <div class="karusellramme">
-                        <img src="rb-bilder/00715-lysende_landskap.jpg" class="karusellbilde"
-                            alt="bildefremvisning av lysende landskap">
-                    </div>
-                    <div class="karusellramme">
-                        <img src="rb-bilder/00718-ukjent_land_forbi_sumpen.jpg" class="karusellbilde"
-                            alt="bildefremvisning av ukjent land forbi sumpen">
-                    </div>
-                    <div class="karusellramme">
-                        <img src="rb-bilder/00720-lysende_megaflora.jpg" class="karusellbilde"
-                            alt="bildefremvisning av lysende megaflora">
-                    </div>
-                    <div class="karusellramme">
-                        <img src="rb-bilder/00722-eksplosiv_megaflora.jpg" class="karusellbilde"
-                            alt="bildefremvisning av eksplosiv megaflora">
+                    <div class=bildekarusell>
+                        <div class="karusellramme">
+                            <img src="rb-bilder/00707-trollsopprune.jpg" class="karusellbilde"
+                                alt="bildefremvisning av trollsopprune">
+                        </div>
+                        <div class="karusellramme">
+                            <img src="rb-bilder/00708-jungel.jpg" class="karusellbilde"
+                                alt="bildefremvisning av jungel">
+                        </div>
+                        <div class="karusellramme">
+                            <img src="rb-bilder/00709-sump.jpg" class="karusellbilde" alt="bildefremvisning av sump">
+                        </div>
+                        <div class="karusellramme">
+                            <img src="rb-bilder/00712-sumpvann.jpg" class="karusellbilde"
+                                alt="bildefremvisning av sumpvann">
+                        </div>
+                        <div class="karusellramme">
+                            <img src="rb-bilder/00713-forlatt_sumpfolklandsby.jpg" class="karusellbilde"
+                                alt="bildefremvisning av forlatt sumpfolklandsby">
+                        </div>
+                        <div class="karusellramme">
+                            <img src="rb-bilder/00715-lysende_landskap.jpg" class="karusellbilde"
+                                alt="bildefremvisning av lysende landskap">
+                        </div>
+                        <div class="karusellramme">
+                            <img src="rb-bilder/00718-ukjent_land_forbi_sumpen.jpg" class="karusellbilde"
+                                alt="bildefremvisning av ukjent land forbi sumpen">
+                        </div>
+                        <div class="karusellramme">
+                            <img src="rb-bilder/00720-lysende_megaflora.jpg" class="karusellbilde"
+                                alt="bildefremvisning av lysende megaflora">
+                        </div>
+                        <div class="karusellramme">
+                            <img src="rb-bilder/00722-eksplosiv_megaflora.jpg" class="karusellbilde"
+                                alt="bildefremvisning av eksplosiv megaflora">
+                        </div>
                     </div>
                 </div>
             </section>
-
-            <section class="artikler">
+            <section class="rb-ramme artikler">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Relevante artikler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="td-kategori">1. Verden</td>
+                            <td>
+                                <span>Setting</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-kategori">2. Intelligente raser</td>
+                            <td>
+                                <span>i4N (Mennesker)</span>
+                                <p> • </p>
+                                <span>i4H (Menneskelige)</span>
+                                <p> • </p>
+                                <span>i6 (Fremmede)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-kategori">3. Sivilisasjoner</td>
+                            <td>
+                                <span>Føderasjonen</span>
+                                <p> • </p>
+                                <span>Imperiet</span>
+                                <p> • </p>
+                                <span>To-faktornasjonen</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-kategori">4. Magisystemet</td>
+                            <td>
+                                <span>Origon</span>
+                                <p> • </p>
+                                <span>Trollsopp</span>
+                                <p> • </p>
+                                <span>Levedne Planter</span>
+                                <p> • </p>
+                                <span>Algegreier</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-kategori">5. Geografi</td>
+                            <td>
+                                <span>Klima</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-kategori">6. Flora</td>
+                            <td>
+                                <span>Alkymiflora</span>
+                                <p> • </p>
+                                <span>Vanlig flora</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-kategori">7. Fauna</td>
+                            <td>
+                                <span>i4N (Overflatedyr)</span>
+                                <p> • </p>
+                                <span>i4H (Undergrunnsdyr)</span>
+                                <p> • </p>
+                                <span>i6 (Amfibier, Øgler og reptiler)</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
         </div>
     </main>

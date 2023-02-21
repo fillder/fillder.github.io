@@ -164,35 +164,29 @@ main {
    padding-block: 0.2rem;
 }
 
-/*___Oversikt og Innholdfortegnelse____*/
+/*______ Maingrid-seksjonplasseringer ______*/
 .oversikt {
+   /* Oppsummering */
    grid-area: oS;
-   padding: 1rem;
-}
-.oversikt h2 {
-   padding-bottom: 0.5rem;
 }
 .innholdsfortegnelse {
+   /* seksjonknapper */
    grid-area: iF;
 }
-
-/*___gjembart innhold___*/
 .ifSeksjoner {
+   /* gjembart seksjon */
    grid-area: iH;
 }
-
-/*___galleri___*/
 .galleri {
+   /* galleri */
    grid-area: gI;
-   border: 2px solid yellow;
 }
 
-/*___relevante artikler___*/
 .artikler {
+   /*relevante artikler*/
    grid-area: aK;
-   border: 2px solid lightblue;
 }
-/*____Seksjonsknapper___*/
+/*______ Seksjonsknapper ______*/
 .innholdsfortegnelse {
    display: flex;
    flex-wrap: wrap;
@@ -221,6 +215,7 @@ main {
 }
 .ifKnappIkon svg circle {
    fill: var(--clr-tekst);
+   stroke: none;
 }
 .ifKnapptittel {
    background-color: var(--clr-ramme);
@@ -231,21 +226,7 @@ main {
    padding-left: 1rem;
    z-index: 3;
 }
-/*____Seksjonsknapper___*/
-.ifSeksjon {
-   max-height: 0;
-   overflow: hidden;
-   transition: max-height 0.3s ease-out;
-}
-.ifSeksjon.synlig {
-   max-height: 100vh;
-   transition: max-height 0.3s ease-in;
-}
-.ifSeksjon:not(.synlig) {
-   max-height: 0;
-   transition: max-height 0.3s ease-out;
-}
-/*____knappfarger___*/
+/*______ Seksjonsknappfarger ______*/
 .ifKnapp.aktiv .ifKnappIkon {
    stroke: var(--aktiv-farge);
 }
@@ -286,6 +267,94 @@ main {
 }
 .ifKnapp.aktiv[data-farge="ametyst"] {
    --aktiv-farge: var(--clr-ametyst);
+}
+/*______ Seksjonanimasjon ______*/
+.ifSeksjon {
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.3s ease-out;
+}
+.ifSeksjon.synlig {
+   max-height: 100vh;
+   transition: max-height 0.3s ease-in;
+}
+.ifSeksjon:not(.synlig) {
+   max-height: 0;
+   transition: max-height 0.3s ease-out;
+}
+/*______ Bildegelleri ______*/
+.galleri {
+   margin: 0 auto;
+   position: relative;
+}
+.galleri-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   grid-gap: 10px;
+}
+.miniatyrbilde {
+   width: 100%;
+   height: auto;
+   cursor: pointer;
+}
+.bildekarusell {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: 100;
+   background-color: rgba(0, 0, 0, 0.7);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   display: none;
+}
+.karusellramme {
+   padding: 0.2rem;
+   height: 100px;
+   margin: auto;
+}
+.karusellbilde {
+   height: 100%;
+   object-fit: contain;
+}
+.bildefremvisning {
+   outline: 2px solid aquamarine;
+   width: 90%;
+   height: auto;
+}
+.kryss {
+   width: 50px;
+   height: 50px;
+   stroke: var(--clr-tekst);
+   fill: none;
+}
+/*______ Artikkelområde ______*/
+table {
+   width: 100%;
+}
+
+td:first-child {
+   width: 30%;
+}
+
+td:last-child {
+   width: 70%;
+}
+tr {
+   padding-block: 1rem;
+}
+thead {
+   background-color: var(--clr-ramme);
+}
+.td-kategori {
+   background-color: var(--clr-ramme);
+   padding: 0.3rem;
+}
+td span,
+td p {
+   display: inline-block;
 }
 /*______ footer ______*/
 footer {
