@@ -1,13 +1,13 @@
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1200px) {
    h5 {
-      font-size: 1rem;
+      font-size: 0.9rem;
    }
    p {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
    }
    .gridBeholder {
       width: 90%;
-      grid-template-columns: 1.5fr 2.5fr;
+      grid-template-columns: 1.4fr 2.4fr;
       grid-template-areas:
          "fB oS"
          "fB iF"
@@ -18,6 +18,7 @@
    .faktaboks {
       display: flex;
       flex-direction: column;
+      max-height: none;
    }
    .fbtittel {
       text-align: center;
@@ -28,11 +29,12 @@
    }
    .fbListeElem {
       padding-block: 0.1rem;
+      grid-template-columns: 1.2fr minmax(100px, 2fr);
    }
 }
 @media screen and (max-width: 800px) {
    h5 {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
    }
    p {
       font-size: 0.7rem;
@@ -41,7 +43,7 @@
       padding-inline: 1rem;
       padding-block: 2rem;
       width: 100%;
-      grid-template-columns: 1.5fr 2.5fr;
+      grid-template-columns: 1fr 1.2fr;
       grid-template-areas:
          "fB oS"
          "iF iF"
@@ -49,7 +51,7 @@
          "gI aK";
    }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
    h5 {
       font-size: 1rem;
    }

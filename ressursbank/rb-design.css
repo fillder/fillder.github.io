@@ -28,7 +28,7 @@ h5 {
    font-family: "Roboto", sans-serif;
    font-weight: 300;
    line-height: 1.5;
-   font-size: clamp(0.8rem, 1vw, 1.1rem);
+   font-size: clamp(0.8rem, 1vw, 1.3rem);
 }
 h6 {
    /* tall */
@@ -41,7 +41,7 @@ p {
    font-family: "Roboto", sans-serif;
    font-weight: 300;
    line-height: 1.5;
-   font-size: clamp(0.7rem, 0.9vw, 1.1rem);
+   font-size: clamp(0.9rem, 0.9vw, 1.1rem);
 }
 i {
    font-style: italic;
@@ -54,7 +54,7 @@ body {
    /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
    background-color: var(--clr-fremheving);
    color: var(--clr-tekst);
-   max-width: 1600px;
+   max-width: 2000px;
    margin: auto;
    display: grid;
    grid-template-rows:
@@ -126,10 +126,11 @@ main {
    padding-block: 2rem;
    width: 80%;
    margin-inline: auto;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: auto 1fr 1fr;
    grid-template-areas:
       "fB fB fB"
-      "oS oS iF"
+      "oS oS oS"
+      "iF iF iF"
       "iH iH iH"
       "gI aK aK";
 }
@@ -139,6 +140,7 @@ main {
    display: grid;
    gap: 1rem;
    grid-template-columns: 0.8fr 2.2fr;
+   max-height: 300px;
 }
 .fbBilde {
    width: 100%;
@@ -157,7 +159,7 @@ main {
 }
 .fbListeElem {
    display: grid;
-   grid-template-columns: 1fr minmax(150px, 2fr);
+   grid-template-columns: 0.8fr minmax(100px, 2fr);
    grid-gap: 10px;
    padding-block: 0.2rem;
 }
