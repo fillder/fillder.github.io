@@ -118,39 +118,12 @@ main {
    border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
    border-width: 2px 2px 6px 6px;
    border-style: solid;
-}
-.seksjon {
-   margin-block: 2rem;
-}
-.seksjonstittel {
-   background-color: var(--clr-ramme);
-   border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
-   border-top-left-radius: clamp(0.6rem, 1.8rem, 0.8vw);
-}
-.seksjonsbeskrivelse {
    padding: 1rem;
 }
-.seksjonsressurser {
-   padding: 2rem;
-}
-/*______ footer ______*/
-footer {
-   height: 3rem;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   place-content: center;
-}
-/*______ ikoner ______*/
-ion-icon {
-   font-size: clamp(2rem, 3vw, 4rem);
-   fill: var(--clr-tekst);
-}
-
 .gridBeholder {
    display: grid;
    grid-gap: 1rem;
-   padding: 1rem;
+   padding-block: 2rem;
    width: 80%;
    margin-inline: auto;
    grid-template-columns: repeat(3, 1fr);
@@ -164,17 +137,16 @@ ion-icon {
 .faktaboks {
    grid-area: fB;
    display: grid;
+   gap: 1rem;
    grid-template-columns: 0.8fr 2.2fr;
 }
-
 .fbBilde {
-   padding: 1rem;
    width: 100%;
    max-height: 100%;
    object-fit: cover;
+   border-radius: 1rem;
 }
 .fbtittel {
-   padding-bottom: 1rem;
    grid-column: 1 / span 2;
 }
 .fbInnhold {
@@ -182,7 +154,6 @@ ion-icon {
    grid-template-columns: repeat(2, 1fr);
    grid-template-rows: auto 1fr;
    list-style: none;
-   padding: 1rem;
 }
 .fbListeElem {
    display: grid;
@@ -313,4 +284,17 @@ ion-icon {
 }
 .ifKnapp.aktiv[data-farge="ametyst"] {
    --aktiv-farge: var(--clr-ametyst);
+}
+/*______ footer ______*/
+footer {
+   height: 3rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   place-content: center;
+}
+/*______ ikoner ______*/
+ion-icon {
+   font-size: clamp(2rem, 3vw, 4rem);
+   fill: var(--clr-tekst);
 }

@@ -1,22 +1,11 @@
 @media screen and (max-width: 1350px) {
    h5 {
-      /* Oppsummeringstekst */
-      font-family: "Roboto", sans-serif;
-      font-weight: 300;
-      line-height: 1.5;
       font-size: 1rem;
    }
    p {
-      /* brødtekst */
-      font-family: "Roboto", sans-serif;
-      font-weight: 300;
-      line-height: 1.5;
       font-size: 0.9rem;
    }
    .gridBeholder {
-      display: grid;
-      grid-gap: 1rem;
-      padding: 1rem;
       width: 90%;
       grid-template-columns: 1.5fr 2.5fr;
       grid-template-areas:
@@ -27,53 +16,30 @@
    }
    /*___Faktaboks___*/
    .faktaboks {
-      grid-area: fB;
       display: flex;
       flex-direction: column;
    }
-
-   .fbBilde {
-      padding: 0.5rem;
-      width: 100%;
-      max-height: 100%;
-      object-fit: cover;
-   }
    .fbtittel {
-      padding-bottom: 1rem;
       text-align: center;
    }
    .fbInnhold {
       display: flex;
       flex-direction: column;
-      list-style: none;
-      padding: 0rem 0.5rem 0.5rem 0.5rem;
    }
    .fbListeElem {
-      display: grid;
-      grid-template-columns: 1fr minmax(150px, 2fr);
-      grid-gap: 10px;
       padding-block: 0.1rem;
    }
 }
 @media screen and (max-width: 800px) {
    h5 {
-      /* Oppsummeringstekst */
-      font-family: "Roboto", sans-serif;
-      font-weight: 300;
-      line-height: 1.5;
       font-size: 0.9rem;
    }
    p {
-      /* brødtekst */
-      font-family: "Roboto", sans-serif;
-      font-weight: 300;
-      line-height: 1.5;
       font-size: 0.7rem;
    }
    .gridBeholder {
-      display: grid;
-      grid-gap: 1rem;
-      padding: 1rem;
+      padding-inline: 1rem;
+      padding-block: 2rem;
       width: 100%;
       grid-template-columns: 1.5fr 2.5fr;
       grid-template-areas:
@@ -85,24 +51,12 @@
 }
 @media screen and (max-width: 600px) {
    h5 {
-      /* Oppsummeringstekst */
-      font-family: "Roboto", sans-serif;
-      font-weight: 300;
-      line-height: 1.5;
       font-size: 1rem;
    }
    p {
-      /* brødtekst */
-      font-family: "Roboto", sans-serif;
-      font-weight: 300;
-      line-height: 1.5;
       font-size: 0.9rem;
    }
    .gridBeholder {
-      display: grid;
-      grid-gap: 1rem;
-      padding: 1rem;
-      width: 100%;
       grid-template-columns: auto;
       grid-template-areas:
          "fB"
