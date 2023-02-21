@@ -18,10 +18,10 @@
       grid-gap: 1rem;
       padding: 1rem;
       width: 90%;
-      grid-template-columns: 2.5fr 1.5fr;
+      grid-template-columns: 1.5fr 2.5fr;
       grid-template-areas:
-         "oS fB"
-         "iF fB"
+         "fB oS"
+         "fB iF"
          "iH iH"
          "gI aK";
    }
@@ -75,9 +75,9 @@
       grid-gap: 1rem;
       padding: 1rem;
       width: 100%;
-      grid-template-columns: 2.5fr 1.5fr;
+      grid-template-columns: 1.5fr 2.5fr;
       grid-template-areas:
-         "oS fB"
+         "fB oS"
          "iF iF"
          "iH iH"
          "gI aK";

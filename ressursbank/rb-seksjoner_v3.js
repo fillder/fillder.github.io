@@ -4,7 +4,6 @@ const ifKnapper = document.querySelectorAll('.ifKnapp');
 // Lagrer en referanse til den forrige synlige seksjonen
 let forrigeSeksjon = null;
 
-// Henter den lagrede id-en til den aktive knappen fra local storage
 let aktivKnappID = localStorage.getItem('aktivKnapp');
 
 // Legger til en hendelseslytter for klikk på hver knapp
@@ -43,7 +42,7 @@ ifKnapper.forEach(knapp => {
     if (seksjon.classList.contains('synlig')) {
       seksjon.style.maxHeight = '0px'; // Setter max-height til 0
       seksjon.classList.remove('synlig');
-      localStorage.removeItem('aktivKnapp'); // Fjerner den lagrede id-en til den aktive knappen fra local storage
+      localStorage.removeItem('aktivKnapp');
     } else { // Ellers gjør den synlig og legg til aktiv-status
       const mHeight = seksjon.scrollHeight; // Måler høyden på seksjonen og setter max-height til denne verdien
       seksjon.style.maxHeight = mHeight + 'px';
@@ -52,7 +51,7 @@ ifKnapper.forEach(knapp => {
       knapp.querySelector('.ifKnappIkon').style.stroke = 'var(--aktiv-farge)';
       knapp.querySelector('.ifKnappIkon svg circle').style.fill = 'var(--aktiv-farge)';
       knapp.querySelector('.ifKnapptittel').style.color = 'var(--aktiv-farge)';
-      localStorage.setItem('aktivKnapp', knappID); // Lagrer id-en til den aktive knappen i local storage
+      localStorage.setItem('aktivKnapp', knappID);
     }
 
     // Oppdaterer referansen til forrige synlige seksjon
@@ -60,7 +59,6 @@ ifKnapper.forEach(knapp => {
 
     // console.log(`Klikk på ${knappID}. Seksjon synlighet: ${seksjon.classList.contains('synlig')}`);
   });
-
   // Aktiver knappen som var aktiv da siden ble lastet inn på nytt
   if (knapp.dataset.knapp === aktivKnappID) {
     knapp.click();

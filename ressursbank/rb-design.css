@@ -135,7 +135,6 @@ main {
 }
 /*______ footer ______*/
 footer {
-   outline: 2px solid greenyellow;
    height: 3rem;
    display: flex;
    justify-content: space-between;
@@ -244,15 +243,15 @@ ion-icon {
    stroke-linejoin: round;
    stroke-width: 2;
    stroke-miterlimit: 10;
-   stroke: var(--clr-bakgrunn);
+   stroke: var(--clr-tekst);
    fill: none;
 }
 .ifKnappIkon svg circle {
-   fill: var(--clr-bakgrunn);
+   fill: var(--clr-tekst);
 }
 .ifKnapptittel {
    background-color: var(--clr-ramme);
-   color: var(--clr-boks);
+   color: var(--clr-tekst);
    padding: 0.6rem;
    border-radius: 0.5rem;
    margin-left: -0.5rem;
