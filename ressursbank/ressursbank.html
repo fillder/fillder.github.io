@@ -74,7 +74,7 @@
                     <span class="fbtittel">
                         <h2>Fraksjon</h2>
                     </span>
-                    <ul class="fbListe">
+                    <ul class="fbListe"><!--- infokolonne 1 -->
                         <li class="fbListeElem">
                             <p><b>Hovedkvarter:</b></p>
                             <p> N/A (dømt til eksil)</p>
@@ -100,7 +100,7 @@
                             <p>ca. 1462 - d.d.</p>
                         </li>
                     </ul>
-                    <ul class="fbListe">
+                    <ul class="fbListe"><!--- infokolonne 2 -->
                         <li class="fbListeElem">
                             <p><b>Troskap:</b></p>
                             <p>Den gamle Føderasjonen</p>
@@ -424,65 +424,83 @@
                         <path
                             d="m39.02,23.19L3.21.33C1.81-.56,0,.46,0,2.14v45.72c0,1.68,1.81,2.7,3.21,1.81l35.81-22.86c1.31-.84,1.31-2.79,0-3.62Z" />
                     </svg>
+                    <div class="sideTeller">
+                        <span class="gjeldendeSiden"></span>
+                        <span class="sideSkille">/</span>
+                        <span class="siderTotalt"></span>
+                    </div>
                 </div>
                 <div class="bildefremvisning">
-                    <div class="fokusvindu">
-                    </div>
-                    <svg class="fokuspil fokuspil-tilbake" viewBox="0 0 40 50" alt="forrige bildegruppe">
-                        <path
-                            d="m.98,26.81l35.81,22.86c1.4.89,3.21-.13,3.21-1.81V2.14c0-1.68-1.81-2.7-3.21-1.81L.98,23.19c-1.31.84-1.31,2.79,0,3.62Z" />
-                    </svg>
-                    <svg class="fokuspil fokuspil-neste" viewBox="0 0 40 50" alt="neste bildegruppe">
-                        <path
-                            d="m39.02,23.19L3.21.33C1.81-.56,0,.46,0,2.14v45.72c0,1.68,1.81,2.7,3.21,1.81l35.81-22.86c1.31-.84,1.31-2.79,0-3.62Z" />
-                    </svg>
-                    <div>
-                        <svg class="kryss" viewBox="0 0 50 50">
-                            <line x1="9.73" y1="13.19" x2="32.68" y2="36.14" />
-                            <line x1="14.35" y1="8.94" x2="36.28" y2="30.87" />
-                            <path d="m36.28,30.87c2.33-4.77,3.35-9.59,3.77-13.25" />
-                            <path d="m20.75,40.28c1.28,1.17,2.7,2.27,4.29,3.27,3.2-2.02,5.73-4.43,7.74-7.02" />
-                            <path
-                                d="m40.31,11.33c-5.63-4.07-15.27-4.74-15.27-4.74,0,0-9.64.67-15.27,4.74,0,0-1.1,15.44,8.71,26.62" />
-                            <circle cx="34.78" cy="33.74" r="1" />
-                            <circle cx="40.31" cy="14.68" r="1" />
-                        </svg>
-                    </div>
-                    <div class=bildekarusell>
-                        <div class="karusellramme">
-                            <img src="rb-bilder/00707-trollsopprune.jpg" class="karusellbilde"
-                                alt="bildefremvisning av trollsopprune">
+                    <div class="fokusramme rb-ramme">
+                        <div class="fokusrammeHeader">
+                            <div class="fokusbildeTittel">
+                                <h3 class="tittelTekst">Testtittel</h3>
+                            </div>
+                            <svg class="kryss" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="25" cy="25" r="22.5" />
+                                <line x1="15" y1="15" x2="35" y2="35" />
+                                <line x1="35" y1="15" x2="15" y2="35" />
+                            </svg>
                         </div>
-                        <div class="karusellramme">
-                            <img src="rb-bilder/00708-jungel.jpg" class="karusellbilde"
-                                alt="bildefremvisning av jungel">
+                        <div class="fokusKarusell">
+                            <svg class="fokuspil fokuspil-tilbake" viewBox="0 0 40 50" alt="forrige bildegruppe">
+                                <path
+                                    d="m.98,26.81l35.81,22.86c1.4.89,3.21-.13,3.21-1.81V2.14c0-1.68-1.81-2.7-3.21-1.81L.98,23.19c-1.31.84-1.31,2.79,0,3.62Z" />
+                            </svg>
+                            <div class="fokusvindu">
+                            </div>
+                            <svg class="fokuspil fokuspil-neste" viewBox="0 0 40 50" alt="neste bildegruppe">
+                                <path
+                                    d="m39.02,23.19L3.21.33C1.81-.56,0,.46,0,2.14v45.72c0,1.68,1.81,2.7,3.21,1.81l35.81-22.86c1.31-.84,1.31-2.79,0-3.62Z" />
+                            </svg>
                         </div>
-                        <div class="karusellramme">
-                            <img src="rb-bilder/00709-sump.jpg" class="karusellbilde" alt="bildefremvisning av sump">
+                        <div class="fokusrammeInfo">
+                            <div class="bildetekst">
+                                <p class="altTekst">Her skal beskrivelsen til bilde være</p>
+                            </div>
+                            <div class="bildeTeller">
+                                <span class="gjeldendeBilde"></span>
+                                <span class="bildeSkille">/</span>
+                                <span class="bilderTotalt"></span>
+                            </div>
                         </div>
-                        <div class="karusellramme">
-                            <img src="rb-bilder/00712-sumpvann.jpg" class="karusellbilde"
-                                alt="bildefremvisning av sumpvann">
-                        </div>
-                        <div class="karusellramme">
-                            <img src="rb-bilder/00713-forlatt_sumpfolklandsby.jpg" class="karusellbilde"
-                                alt="bildefremvisning av forlatt sumpfolklandsby">
-                        </div>
-                        <div class="karusellramme">
-                            <img src="rb-bilder/00715-lysende_landskap.jpg" class="karusellbilde"
-                                alt="bildefremvisning av lysende landskap">
-                        </div>
-                        <div class="karusellramme">
-                            <img src="rb-bilder/00718-ukjent_land_forbi_sumpen.jpg" class="karusellbilde"
-                                alt="bildefremvisning av ukjent land forbi sumpen">
-                        </div>
-                        <div class="karusellramme">
-                            <img src="rb-bilder/00720-lysende_megaflora.jpg" class="karusellbilde"
-                                alt="bildefremvisning av lysende megaflora">
-                        </div>
-                        <div class="karusellramme">
-                            <img src="rb-bilder/00722-eksplosiv_megaflora.jpg" class="karusellbilde"
-                                alt="bildefremvisning av eksplosiv megaflora">
+                        <div class=bildekarusell>
+                            <div class="karusellramme">
+                                <img src="rb-bilder/00707-trollsopprune.jpg" class="karusellbilde"
+                                    alt="bildefremvisning av trollsopprune">
+                            </div>
+                            <div class="karusellramme">
+                                <img src="rb-bilder/00708-jungel.jpg" class="karusellbilde"
+                                    alt="bildefremvisning av jungel">
+                            </div>
+                            <div class="karusellramme">
+                                <img src="rb-bilder/00709-sump.jpg" class="karusellbilde"
+                                    alt="bildefremvisning av sump">
+                            </div>
+                            <div class="karusellramme">
+                                <img src="rb-bilder/00712-sumpvann.jpg" class="karusellbilde"
+                                    alt="bildefremvisning av sumpvann">
+                            </div>
+                            <div class="karusellramme">
+                                <img src="rb-bilder/00713-forlatt_sumpfolklandsby.jpg" class="karusellbilde"
+                                    alt="bildefremvisning av forlatt sumpfolklandsby">
+                            </div>
+                            <div class="karusellramme">
+                                <img src="rb-bilder/00715-lysende_landskap.jpg" class="karusellbilde"
+                                    alt="bildefremvisning av lysende landskap">
+                            </div>
+                            <div class="karusellramme">
+                                <img src="rb-bilder/00718-ukjent_land_forbi_sumpen.jpg" class="karusellbilde"
+                                    alt="bildefremvisning av ukjent land forbi sumpen">
+                            </div>
+                            <div class="karusellramme">
+                                <img src="rb-bilder/00720-lysende_megaflora.jpg" class="karusellbilde"
+                                    alt="bildefremvisning av lysende megaflora">
+                            </div>
+                            <div class="karusellramme">
+                                <img src="rb-bilder/00722-eksplosiv_megaflora.jpg" class="karusellbilde"
+                                    alt="bildefremvisning av eksplosiv megaflora">
+                            </div>
                         </div>
                     </div>
                 </div>

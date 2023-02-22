@@ -7,7 +7,7 @@
    }
    .gridBeholder {
       width: 90%;
-      grid-template-columns: 1.4fr 2.4fr;
+      grid-template-columns: 1.6fr 2.2fr;
       grid-template-areas:
          "fB oS"
          "fB iF"
@@ -43,12 +43,13 @@
       padding-inline: 1rem;
       padding-block: 2rem;
       width: 100%;
-      grid-template-columns: 1fr 1.2fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-areas:
          "fB oS"
          "iF iF"
          "iH iH"
-         "gI aK";
+         "gI gI"
+         "aK aK";
    }
 }
 @media screen and (max-width: 500px) {
