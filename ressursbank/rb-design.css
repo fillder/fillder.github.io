@@ -299,10 +299,10 @@ main {
    height: 100%;
 }
 .galleri-grid img:nth-child(n + 5) {
-   /* velger femte og senere bilder */
-   display: none; /* skjuler dem */
+   display: none;
 }
-.pil {
+.pil,
+.fokuspil {
    position: absolute;
    top: 50%;
    width: 40px;
@@ -314,24 +314,28 @@ main {
    transition: opacity 0.2s ease-in-out;
 }
 .pil:hover,
-.pil:focus {
+.pil:focus,
+.fokuspil:hover,
+.fokuspil:focus {
    opacity: 1;
 }
-.pil-neste {
-   left: 0;
+.pil-neste,
+.fokuspil-neste {
+   right: 0;
    height: 100%;
    width: 60px;
    padding-inline-start: 10px;
    padding-inline-end: 30px;
-   background-image: radial-gradient(farthest-side at 30% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+   background-image: radial-gradient(farthest-side at 70% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
-.pil-tilbake {
-   right: 0;
+.pil-tilbake,
+.fokuspil-tilbake {
+   left: 0;
    height: 100%;
    width: 60px;
    padding-inline-end: 10px;
    padding-inline-start: 30px;
-   background-image: radial-gradient(farthest-side at 70% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+   background-image: radial-gradient(farthest-side at 30% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
 .miniatyrbilde {
    width: 100%;
@@ -363,22 +367,26 @@ main {
 }
 .bildekarusell {
    display: flex;
-   outline: 2px solid greenyellow;
 }
 .karusellramme {
    padding: 0.2rem;
    height: 100px;
    margin: auto;
 }
+.karusellramme.aktiv {
+   border: 2px solid var(--clr-ramme);
+   border-radius: 0.4rem;
+}
 .karusellbilde {
    width: 100%;
    height: 100%;
    object-fit: cover;
+   cursor: pointer;
 }
 .fokusvindu {
    position: relative;
    place-content: center;
-   outline: 2px solid aquamarine;
+   margin-bottom: 2rem;
 }
 .kryss {
    position: absolute;
@@ -395,8 +403,8 @@ main {
 table {
    width: 100%;
 }
-tr {
-   padding-block: 1rem;
+th {
+   padding-block: 0.5rem;
 }
 thead {
    background-color: var(--clr-ramme);

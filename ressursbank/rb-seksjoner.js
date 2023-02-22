@@ -1,29 +1,15 @@
-// Henter alle knappelementene
-const ifKnapper = document.querySelectorAll('.ifKnapp');
-
-// Lagrer en referanse til den forrige synlige seksjonen
-let forrigeSeksjon = null;
-
-// Henter den lagrede id-en til den aktive knappen fra local storage
-let aktivKnappID = localStorage.getItem('aktivKnapp');
+const ifKnapper = document.querySelectorAll('.ifKnapp');// Henter alle knappelementene
+let forrigeSeksjon = null;// Lagrer en referanse til den forrige synlige seksjonen
+let aktivKnappID = localStorage.getItem('aktivKnapp');// Henter den lagrede id-en til den aktive knappen fra local storage
 
 // Legger til en hendelseslytter for klikk på hver knapp
 ifKnapper.forEach(knapp => {
   knapp.addEventListener('click', () => {
-    // Henter ID-en til innholdsseksjonen som tilsvarer knappen
-    const seksjonID = knapp.dataset.seksjon;
-
-    // Henter ID-en til knappen som ble klikket på
-    const knappID = knapp.dataset.knapp;
-
-    // Henter ID-en til fargen for knappen som ble klikket på
-    const farge = knapp.dataset.farge;
-
-    // Henter den tilsvarende seksjonen
-    const seksjon = document.querySelector('.ifSeksjon[data-seksjon="' + knappID + '"]');
-
-    // Fjerner aktiv klasse fra forrige knapp og setter tilbake opprinnelig farge
-    const aktivKnapp = document.querySelector('.ifKnapp.aktiv');
+    const seksjonID = knapp.dataset.seksjon; // Henter ID-en til innholdsseksjonen som tilsvarer knappen
+    const knappID = knapp.dataset.knapp; // Henter ID-en til knappen som ble klikket på
+    const farge = knapp.dataset.farge; // Henter ID-en til fargen for knappen som ble klikket på
+    const seksjon = document.querySelector('.ifSeksjon[data-seksjon="' + knappID + '"]');  // Henter den tilsvarende seksjonen
+    const aktivKnapp = document.querySelector('.ifKnapp.aktiv'); // Fjerner aktiv klasse fra forrige knapp og setter tilbake opprinnelig farge
 
     if (aktivKnapp !== null) {
       const aktivFarge = aktivKnapp.dataset.farge;
