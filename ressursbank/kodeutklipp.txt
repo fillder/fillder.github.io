@@ -18,33 +18,48 @@ function visBilde(bildeSrc) {
 }
 
 
-// Henter bildekarusell-elementet fra HTML
+// Henter bildekarusellelementet fra HTML-dokumentet
 const bildekarusell = document.querySelector('.bildekarusell');
 
-// Henter alle miniatyrbilder fra HTML
+// Henter alle miniatyrbildelementene fra HTML-dokumentet
 const miniatyrbilder = document.querySelectorAll('.miniatyrbilde');
 
-// Går gjennom alle miniatyrbilder og legger til klikkhendelseslyttere
-miniatyrbilder.forEach((miniatyrbilde) => {
-    // Når et miniatyrbilde klikkes på, viser bildekarusellen og setter riktig bilde
-    miniatyrbilde.addEventListener('click', () => {
-        bildekarusell.style.display = 'flex'; // viser bildekarusellen når et miniatyrbilde klikkes på
-        visBilde(miniatyrbilde.src); // viser riktig bilde i bildekarusellen
-    });
-});
-// Henter alle bildene fra HTML
+// Henter bakgrunnsområdet for bildekarusellen fra HTML-dokumentet
+const bakgrunn = document.querySelector('.bildekarusell');
+
 const bilder = document.querySelectorAll('.karusellbilde');
 
-// Går gjennom alle bildene og legger til klikkhendelseslyttere
-bilder.forEach((bilde) => {
-  // Når et bilde klikkes på, skjuler bildekarusellen igjen
-  bilde.addEventListener('click', () => {
-    bildekarusell.style.display = 'none'; // skjuler bildekarusellen igjen
-  });
+// Legger til klikk-lytter på bakgrunnsområdet for bildekarusellen
+bakgrunn.addEventListener('click', (event) => {
+    // Sjekker om klikket var på bakgrunnsområdet, og ikke på et bilde i bildekarusellen
+    if (event.target === bakgrunn) {
+        // Skjuler bildekarusellen hvis klikket var utenfor
+        bildekarusell.style.display = 'none';
+    }
 });
 
-// Hjelpefunksjon for å vise riktig bilde i bildekarusellen
+// Legger til klikk-lytter på alle miniatyrbildene
+miniatyrbilder.forEach((miniatyrbilde) => {
+    miniatyrbilde.addEventListener('click', () => {
+       // Viser bildekarusellen når miniatyrbildet blir klikket på
+       bildekarusell.style.display = 'flex'; 
+       // Viser valgte bilde i bildekarusellen
+       visBilde(miniatyrbilde.src);
+    });
+});
+
+// Legger til klikk-lytter på alle bildeelementene i bildekarusellen
+bilder.forEach((bilde) => {
+    bilde.addEventListener('click', (event) => {
+        // Stopper klikk-lytteren på bakgrunnen fra å kjøre når et bilde i bildekarusellen blir klikket på
+        event.stopPropagation();
+        // Skjuler bildekarusellen når et bilde i bildekarusellen blir klikket på
+        bildekarusell.style.display = 'none'; 
+    });
+});
+
+// Funksjon som viser bilde i bildekarusellen
 function visBilde(bildeSrc) {
-  const visningsBilde = bildekarusell.querySelector('img');
-  visningsBilde.src = bildeSrc;
+    const visningsBilde = bildekarusell.querySelector('img');
+    visningsBilde.src = bildeSrc;
 }

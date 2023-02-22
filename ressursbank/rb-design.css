@@ -126,7 +126,7 @@ main {
    padding-block: 2rem;
    width: 80%;
    margin-inline: auto;
-   grid-template-columns: auto 1fr 1fr;
+   grid-template-columns: repeat(3, 1fr);
    grid-template-areas:
       "fB fB fB"
       "oS oS oS"
@@ -198,6 +198,13 @@ main {
    grid-template-columns: auto 1fr;
    margin: 0.2rem;
    align-items: center;
+   cursor: pointer;
+   transform-origin: center;
+   transition: transform 0.3s ease-in-out;
+}
+.ifKnapp:hover,
+.ifKnapp:focus {
+   transform: scale(1.05);
 }
 .ifKnappIkon {
    background-color: var(--clr-ramme);
@@ -283,21 +290,64 @@ main {
    transition: max-height 0.3s ease-out;
 }
 /*______ Bildegelleri ______*/
-.galleri {
-   margin: 0 auto;
-   position: relative;
-}
 .galleri-grid {
+   position: relative;
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 1fr);
    grid-gap: 10px;
+   height: 100%;
+}
+.galleri-grid img:nth-child(n + 5) {
+   /* velger femte og senere bilder */
+   display: none; /* skjuler dem */
+}
+.pil {
+   position: absolute;
+   top: 50%;
+   width: 40px;
+   height: 50px;
+   transform: translateY(-50%);
+   fill: var(--clr-tekst);
+   cursor: pointer;
+   opacity: 0.2;
+   transition: opacity 0.2s ease-in-out;
+}
+.pil:hover,
+.pil:focus {
+   opacity: 1;
+}
+.pil-neste {
+   left: 0;
+   height: 100%;
+   width: 60px;
+   padding-inline-start: 10px;
+   padding-inline-end: 30px;
+   background-image: radial-gradient(farthest-side at 30% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+.pil-tilbake {
+   right: 0;
+   height: 100%;
+   width: 60px;
+   padding-inline-end: 10px;
+   padding-inline-start: 30px;
+   background-image: radial-gradient(farthest-side at 70% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
 .miniatyrbilde {
    width: 100%;
-   height: auto;
+   height: 100%;
+   object-fit: cover;
    cursor: pointer;
+   transform-origin: center;
+   transition: transform 0.3s ease-in-out;
+   border-radius: 0.4rem;
 }
-.bildekarusell {
+.miniatyrbilde:hover,
+.miniatyrbilde:focus {
+   outline: 2px solid var(--clr-ramme);
+}
+
+.bildefremvisning {
    position: fixed;
    top: 0;
    left: 0;
@@ -306,9 +356,14 @@ main {
    z-index: 100;
    background-color: rgba(0, 0, 0, 0.7);
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
    display: none;
+}
+.bildekarusell {
+   display: flex;
+   outline: 2px solid greenyellow;
 }
 .karusellramme {
    padding: 0.2rem;
@@ -316,31 +371,29 @@ main {
    margin: auto;
 }
 .karusellbilde {
+   width: 100%;
    height: 100%;
-   object-fit: contain;
+   object-fit: cover;
 }
-.bildefremvisning {
+.fokusvindu {
+   position: relative;
+   place-content: center;
    outline: 2px solid aquamarine;
-   width: 90%;
-   height: auto;
 }
 .kryss {
+   position: absolute;
+   top: 10px;
+   right: 10px;
    width: 50px;
    height: 50px;
    stroke: var(--clr-tekst);
    fill: none;
+   cursor: pointer;
+   transform: translate(-50%, 50%);
 }
 /*______ Artikkelområde ______*/
 table {
    width: 100%;
-}
-
-td:first-child {
-   width: 30%;
-}
-
-td:last-child {
-   width: 70%;
 }
 tr {
    padding-block: 1rem;
@@ -350,7 +403,11 @@ thead {
 }
 .td-kategori {
    background-color: var(--clr-ramme);
-   padding: 0.3rem;
+   padding-inline: 1rem;
+   padding-block: 0.4rem;
+}
+.td-innhold {
+   padding-inline: 1rem;
 }
 td span,
 td p {
