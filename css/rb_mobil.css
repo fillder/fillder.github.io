@@ -9,10 +9,9 @@
       width: 90%;
       grid-template-columns: 1.6fr 2.2fr;
       grid-template-areas:
-         "fB oS"
-         "fB iF"
+         "oS iF"
          "iH iH"
-         "gI aK";
+         "aK aK";
    }
    /*___Faktaboks___*/
    .faktaboks {

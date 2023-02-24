@@ -10,16 +10,12 @@ a {
    text-decoration: none;
 }
 /*______ Dag/natt-tema ______*/
-.dag-natt {
-   width: clamp(2rem, 3vw, 4rem);
-   height: clamp(2rem, 3vh, 4rem);
-}
 .sun {
    fill: var(--clr-tekst);
    stroke: var(--clr-tekst);
 }
 .moon {
-   fill: var(--clr-ramme);
+   fill: var(--clr-bakgrunn);
 }
 /*______ Animasjoner ______*/
 .moonAnim {

@@ -54,7 +54,7 @@ body {
    /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
    background-color: var(--clr-fremheving);
    color: var(--clr-tekst);
-   max-width: 2000px;
+   max-width: 1600px;
    margin: auto;
    display: grid;
    grid-template-rows:
@@ -65,14 +65,24 @@ body {
 }
 /*______ Navigasjon ______*/
 nav {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding-block: 0.5rem;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   place-content: center;
    padding-inline: 1rem;
-   background-color: var(--clr-ramme);
+   background-color: var(--clr-bakgrunn);
+   border-bottom: 2px solid var(--clr-ramme);
+   height: 50px;
+   z-index: 150;
+   box-shadow: 0px 2px 10px 0px black;
 }
 /*______ headerområde ______*/
+header {
+   margin-top: 50px;
+}
 .hero {
    position: relative;
    display: flex;
@@ -94,18 +104,45 @@ nav {
    position: absolute;
    top: 20px;
    left: 20px;
-   padding: 5px 20px 10px 15px; /* top | right | bottom | left */
+   padding: 0px 10px 7.5px 7.5px; /* top | right | bottom | left */
    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
    border-radius: 0.2rem;
    color: whitesmoke;
    text-decoration: underline #ff9100 4px;
    text-underline-offset: 4px;
 }
-.hero-emblem {
-   position: relative; /*flytter ikonet relativt i forhold til bannerbildet */
-   bottom: -50%; /*Skyver ikonet 50% av egen størrelse nedover fra banneren */
-   transform: translateX(-50%); /*flytter origin til midten av objektet*/
+.hjem {
+   display: flex;
+   align-items: center;
 }
+.hjem svg {
+   width: 30px;
+   height: 30px;
+   cursor: pointer;
+   fill: var(--clr-tekst);
+   margin-inline-end: 0.5rem;
+}
+.logo {
+   align-items: center;
+   place-self: center;
+   font-family: "Roboto Slab", serif;
+   font-weight: 700;
+   font-size: 30px;
+}
+.modusikon {
+   place-self: end;
+}
+.dag-natt {
+   width: 30px;
+   height: 30px;
+}
+/* .hero-emblem {
+   position: relative; 
+   bottom: -50%;
+   transform: translateX(-50%); 
+   width: 4rem;
+   height: 4rem;
+} */
 /*______ hovedinnhold ______*/
 main {
    background-color: var(--clr-bakgrunn);
@@ -129,42 +166,10 @@ main {
    margin-inline: auto;
    grid-template-columns: repeat(3, 1fr);
    grid-template-areas:
-      "fB fB fB"
-      "oS oS oS"
-      "iF iF iF"
+      "oS oS iF"
       "iH iH iH"
-      "gI aK aK";
+      "aK aK aK";
 }
-/*___Faktaboks___*/
-.faktaboks {
-   grid-area: fB;
-   display: grid;
-   gap: 1rem;
-   grid-template-columns: 0.8fr 2.2fr;
-   max-height: 300px;
-}
-.fbBilde {
-   width: 100%;
-   max-height: 100%;
-   object-fit: cover;
-   border-radius: 1rem;
-}
-.fbtittel {
-   grid-column: 1 / span 2;
-}
-.fbInnhold {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   grid-template-rows: auto 1fr;
-   list-style: none;
-}
-.fbListeElem {
-   display: grid;
-   grid-template-columns: 0.8fr minmax(100px, 2fr);
-   grid-gap: 10px;
-   padding-block: 0.2rem;
-}
-
 /*______ Maingrid-seksjonplasseringer ______*/
 .oversikt {
    /* Oppsummering */
@@ -178,10 +183,9 @@ main {
    /* gjembart seksjon */
    grid-area: iH;
 }
-.galleri {
-   /* galleri */
+/* .galleri {
    grid-area: gI;
-}
+} */
 
 .artikler {
    /*relevante artikler*/
@@ -290,215 +294,6 @@ main {
    max-height: 0;
    transition: max-height 0.3s ease-out;
 }
-/*______ Bildegelleri ______*/
-.galleri-grid {
-   position: relative;
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   grid-template-rows: repeat(2, 1fr);
-   grid-gap: 10px;
-   height: 100%;
-}
-.galleri-grid img:nth-child(n + 5) {
-   display: none;
-}
-.pil {
-   position: absolute;
-   top: 50%;
-   width: 40px;
-   height: 50px;
-   transform: translateY(-50%);
-   fill: var(--clr-tekst);
-   cursor: pointer;
-   opacity: 0.2;
-   transition: opacity 0.2s ease-in-out;
-}
-.pil:hover,
-.pil:focus {
-   opacity: 1;
-}
-.pil-neste {
-   right: 0;
-   height: 100%;
-   width: 60px;
-   padding-inline-start: 10px;
-   padding-inline-end: 30px;
-   background-image: radial-gradient(farthest-side at 70% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-}
-.pil-tilbake {
-   left: 0;
-   height: 100%;
-   width: 60px;
-   padding-inline-end: 10px;
-   padding-inline-start: 30px;
-   background-image: radial-gradient(farthest-side at 30% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-}
-.miniatyrbilde {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   cursor: pointer;
-   transform-origin: center;
-   transition: transform 0.3s ease-in-out;
-   border-radius: 0.4rem;
-}
-.miniatyrbilde:hover,
-.miniatyrbilde:focus {
-   outline: 2px solid var(--clr-ramme);
-}
-.sideTeller {
-   position: absolute;
-   bottom: 0;
-   left: 50%;
-   transform: translateX(-50%);
-   padding-bottom: 0.2rem;
-}
-.gjeldendeSiden,
-.siderTotalt,
-.sideSkille {
-   font-family: "Roboto Mono", monospace;
-   font-weight: 500;
-   font-size: 1.2rem;
-   margin-inline: 0.2rem;
-   color: var(--clr-tekst);
-}
-.bildefremvisning {
-   position: fixed;
-   top: 0;
-   left: 0;
-   height: 100%;
-   width: 100%;
-   z-index: 100;
-   background-color: rgba(0, 0, 0, 0.8);
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   display: none;
-}
-.fokusramme {
-   margin: auto;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   align-items: center;
-}
-.fokusrammeHeader {
-   display: flex;
-   width: 100%;
-   justify-content: space-between;
-   align-items: center;
-}
-.kryss {
-   width: 50px;
-   height: 50px;
-   stroke: var(--clr-tekst);
-   cursor: pointer;
-   fill: var(--clr-bakgrunn);
-   stroke-linecap: round;
-   stroke-linejoin: round;
-   stroke-width: 4;
-   stroke-miterlimit: 10;
-}
-.fokusKarusell {
-   display: grid;
-   grid-template-areas: "overlapp";
-}
-.fokusKarusell > * {
-   grid-area: overlapp;
-}
-.fokuspil {
-   width: 40px;
-   height: 50px;
-   fill: var(--clr-tekst);
-   cursor: pointer;
-   opacity: 0.2;
-   transition: opacity 0.2s ease-in-out;
-}
-.fokuspil:hover,
-.fokuspil:focus {
-   opacity: 1;
-}
-.fokuspil-neste {
-   place-self: end;
-   height: 100%;
-   width: 60px;
-   padding-inline-start: 30px;
-   padding-inline-end: 10px;
-   background-image: radial-gradient(farthest-side at 70% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-   z-index: 200;
-}
-.fokuspil-tilbake {
-   place-self: start;
-   height: 100%;
-   width: 60px;
-   padding-inline-end: 30px;
-   padding-inline-start: 10px;
-   background-image: radial-gradient(farthest-side at 30% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-   z-index: 200;
-}
-.fokusvindu {
-   margin-block: 1rem;
-   z-index: 190;
-   object-fit: contain;
-   outline: 0.1rem solid var(--clr-ramme);
-   max-width: 100%;
-}
-.fokusrammeInfo {
-   display: flex;
-   width: 100%;
-   justify-content: space-between;
-   align-items: center;
-   margin-bottom: 1rem;
-}
-.bildekarusell {
-   display: flex;
-   max-width: 100%;
-   overflow-x: auto;
-   width: 100%;
-}
-.alttekst {
-   color: var(--clr-tekst);
-   font-size: 1.6rem;
-   margin: 0;
-   padding: 0;
-   line-height: 1.5;
-}
-.bildeTeller {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-.gjeldendeBilde,
-.bilderTotalt,
-.bildeSkille {
-   font-family: "Roboto Mono", monospace;
-   font-weight: 500;
-   font-size: 1.6rem;
-   margin-inline: 0.2rem;
-   color: var(--clr-tekst);
-}
-.karusellramme {
-   padding: 0.2rem;
-   height: 100px;
-   margin: auto;
-   filter: grayscale(80%);
-}
-.karusellramme:hover,
-.karusellramme:focus {
-   filter: none;
-}
-.karusellramme.aktiv {
-   border: 2px solid var(--clr-ramme);
-   border-radius: 0.4rem;
-   filter: none;
-}
-.karusellbilde {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   cursor: pointer;
-}
 /*______ Artikkelområde ______*/
 table {
    width: 100%;
@@ -536,9 +331,8 @@ footer {
    justify-content: space-between;
    align-items: center;
    place-content: center;
-}
-/*______ ikoner ______*/
-ion-icon {
-   font-size: clamp(2rem, 3vw, 4rem);
-   fill: var(--clr-tekst);
+   background-color: var(--clr-bakgrunn);
+   border-top: 2px solid var(--clr-ramme);
+   height: 50px;
+   box-shadow: 0px -2px 10px 0px black;
 }
