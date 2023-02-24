@@ -59,7 +59,6 @@ body {
    display: grid;
    grid-template-rows:
       auto
-      auto
       1fr
       auto;
 }
@@ -194,7 +193,8 @@ main {
 /*______ Seksjonsknapper ______*/
 .innholdsfortegnelse {
    display: flex;
-   flex-wrap: wrap;
+   flex-direction: column;
+   flex-wrap: nowrap;
    justify-content: space-evenly;
    place-content: center;
 }
@@ -207,8 +207,7 @@ main {
    transform-origin: center;
    transition: transform 0.3s ease-in-out;
 }
-.ifKnapp:hover,
-.ifKnapp:focus {
+.ifKnapp:hover {
    transform: scale(1.05);
 }
 .ifKnappIkon {
@@ -294,6 +293,72 @@ main {
    max-height: 0;
    transition: max-height 0.3s ease-out;
 }
+.ifSekskonListe {
+   list-style: none;
+}
+.seksjons-safir {
+   text-decoration: underline var(--clr-safir) 3px;
+   text-underline-offset: 3px;
+   margin-inline-start: 1rem;
+   margin-block-end: 1rem;
+}
+.seksjons-akvamarin {
+   text-decoration: underline var(--clr-akvamarin) 3px;
+   text-underline-offset: 3px;
+   margin-inline-start: 1rem;
+   margin-block-end: 1rem;
+}
+.seksjons-amazonitt {
+   text-decoration: underline var(--clr-amazonitt) 3px;
+   text-underline-offset: 3px;
+   margin-inline-start: 1rem;
+   margin-block-end: 1rem;
+}
+.seksjons-smaragd {
+   text-decoration: underline var(--clr-smaragd) 3px;
+   text-underline-offset: 3px;
+   margin-inline-start: 1rem;
+   margin-block-end: 1rem;
+}
+.seksjons-citrin {
+   text-decoration: underline var(--clr-citrin) 3px;
+   text-underline-offset: 3px;
+   margin-inline-start: 1rem;
+   margin-block-end: 1rem;
+}
+.seksjons-spessartin {
+   text-decoration: underline var(--clr-spessartin) 3px;
+   text-underline-offset: 3px;
+   margin-inline-start: 1rem;
+   margin-block-end: 1rem;
+}
+.seksjons-rubin {
+   text-decoration: underline var(--clr-rubin) 3px;
+   text-underline-offset: 3px;
+   margin-inline-start: 1rem;
+   margin-block-end: 1rem;
+}
+.seksjons-thulitt {
+   text-decoration: underline var(--clr-thulitt) 3px;
+   text-underline-offset: 3px;
+   margin-inline-start: 1rem;
+   margin-block-end: 1rem;
+}
+.seksjons-kunzitt {
+   text-decoration: underline var(--clr-kunzitt) 3px;
+   text-underline-offset: 3px;
+   margin-inline-start: 1rem;
+   margin-block-end: 1rem;
+}
+.seksjons-ametyst {
+   text-decoration: underline var(--clr-ametyst) 3px;
+   text-underline-offset: 3px;
+   margin-inline-start: 1rem;
+   margin-block-end: 1rem;
+}
+.seksjonikon {
+   display: flex;
+}
 /*______ Artikkelområde ______*/
 table {
    width: 100%;
@@ -312,6 +377,7 @@ thead {
    font-weight: 300;
    line-height: 1.5;
    font-size: clamp(0.9rem, 0.9vw, 1.1rem);
+   width: 30%;
 }
 .td-innhold {
    padding-inline: 1rem;
@@ -326,6 +392,7 @@ td p {
 }
 /*______ footer ______*/
 footer {
+   width: 100%;
    height: 3rem;
    display: flex;
    justify-content: space-between;
