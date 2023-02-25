@@ -108,7 +108,12 @@
       border-radius: 50%;
       /* border: 2px solid red; */
    }
-   .navigasjon ul li a svg {
+   /*______ dageikoner ______*/
+   .navIkoner {
+      width: 100%;
+      height: 100%;
+   }
+   .navigasjon ul li a img {
       margin: 22%;
    }
    .navigasjon ul li a .nav-text {
