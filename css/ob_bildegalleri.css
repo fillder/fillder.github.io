@@ -1,0 +1,209 @@
+/*______ Bildegelleri ______*/
+.galleri-grid {
+   position: relative;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   grid-gap: 10px;
+   height: 100%;
+}
+.galleri-grid img:nth-child(n + 5) {
+   display: none;
+}
+.pil {
+   position: absolute;
+   top: 50%;
+   width: 40px;
+   height: 50px;
+   transform: translateY(-50%);
+   fill: var(--clr-tekst);
+   cursor: pointer;
+   opacity: 0.2;
+   transition: opacity 0.2s ease-in-out;
+}
+.pil:hover,
+.pil:focus {
+   opacity: 1;
+}
+.pil-neste {
+   right: 0;
+   height: 100%;
+   width: 60px;
+   padding-inline-start: 10px;
+   padding-inline-end: 30px;
+   background-image: radial-gradient(farthest-side at 70% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+.pil-tilbake {
+   left: 0;
+   height: 100%;
+   width: 60px;
+   padding-inline-end: 10px;
+   padding-inline-start: 30px;
+   background-image: radial-gradient(farthest-side at 30% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+.miniatyrbilde {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   cursor: pointer;
+   transform-origin: center;
+   transition: transform 0.3s ease-in-out;
+   border-radius: 0.4rem;
+}
+.miniatyrbilde:hover,
+.miniatyrbilde:focus {
+   outline: 2px solid var(--clr-ramme);
+}
+.sideTeller {
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   padding-bottom: 0.2rem;
+}
+.gjeldendeSiden,
+.siderTotalt,
+.sideSkille {
+   font-family: "Roboto Mono", monospace;
+   font-weight: 500;
+   font-size: 1.2rem;
+   margin-inline: 0.2rem;
+   color: var(--clr-tekst);
+}
+.bildefremvisning {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: 100;
+   background-color: rgba(0, 0, 0, 0.8);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   display: none;
+}
+.fokusramme {
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+.fokusrammeHeader {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+}
+.kryss {
+   width: 50px;
+   height: 50px;
+   stroke: var(--clr-tekst);
+   cursor: pointer;
+   fill: var(--clr-bakgrunn);
+   stroke-linecap: round;
+   stroke-linejoin: round;
+   stroke-width: 4;
+   stroke-miterlimit: 10;
+}
+.fokusKarusell {
+   display: grid;
+   grid-template-areas: "overlapp";
+}
+.fokusKarusell > * {
+   grid-area: overlapp;
+}
+.fokuspil {
+   width: 40px;
+   height: 50px;
+   fill: var(--clr-tekst);
+   cursor: pointer;
+   opacity: 0.2;
+   transition: opacity 0.2s ease-in-out;
+}
+.fokuspil:hover,
+.fokuspil:focus {
+   opacity: 1;
+}
+.fokuspil-neste {
+   place-self: end;
+   height: 100%;
+   width: 60px;
+   padding-inline-start: 30px;
+   padding-inline-end: 10px;
+   background-image: radial-gradient(farthest-side at 70% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+   z-index: 200;
+}
+.fokuspil-tilbake {
+   place-self: start;
+   height: 100%;
+   width: 60px;
+   padding-inline-end: 30px;
+   padding-inline-start: 10px;
+   background-image: radial-gradient(farthest-side at 30% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+   z-index: 200;
+}
+.fokusvindu {
+   margin-block: 1rem;
+   z-index: 190;
+   object-fit: contain;
+   outline: 0.1rem solid var(--clr-ramme);
+   max-width: 100%;
+}
+.fokusrammeInfo {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 1rem;
+}
+.bildekarusell {
+   display: flex;
+   max-width: 100%;
+   overflow-x: auto;
+   width: 100%;
+}
+.alttekst {
+   color: var(--clr-tekst);
+   font-size: 1.6rem;
+   margin: 0;
+   padding: 0;
+   line-height: 1.5;
+}
+.bildeTeller {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.gjeldendeBilde,
+.bilderTotalt,
+.bildeSkille {
+   font-family: "Roboto Mono", monospace;
+   font-weight: 500;
+   font-size: 1.6rem;
+   margin-inline: 0.2rem;
+   color: var(--clr-tekst);
+}
+.karusellramme {
+   padding: 0.2rem;
+   height: 100px;
+   margin: auto;
+   filter: grayscale(80%);
+}
+.karusellramme:hover,
+.karusellramme:focus {
+   filter: none;
+}
+.karusellramme.aktiv {
+   border: 2px solid var(--clr-ramme);
+   border-radius: 0.4rem;
+   filter: none;
+}
+.karusellbilde {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   cursor: pointer;
+}

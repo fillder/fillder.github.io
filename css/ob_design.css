@@ -1,0 +1,466 @@
+/*______ Skrifttype ______*/
+h1 {
+   /* Sideittel */
+   font-family: "Roboto Slab", serif;
+   font-weight: 300;
+   font-size: clamp(2rem, 3vw, 4rem);
+}
+h2 {
+   /* Infoboks */
+   font-family: "Roboto Slab", serif;
+   font-weight: 700;
+   font-size: clamp(1.7rem, 2vw, 2.3rem);
+}
+h3 {
+   /* Oppsummeringstittel */
+   font-family: "Roboto Slab", serif;
+   font-weight: 500;
+   font-size: 1.5rem;
+}
+h4 {
+   /* Knapptekst */
+   font-family: "Roboto Slab", serif;
+   font-weight: 500;
+   font-size: clamp(0.7rem, 9vw, 1.1rem);
+}
+h5 {
+   /* Oppsummeringstekst */
+   font-family: "Roboto", sans-serif;
+   font-weight: 300;
+   line-height: 1.5;
+   font-size: clamp(0.8rem, 1vw, 1.3rem);
+}
+h6 {
+   /* tall */
+   font-family: "Roboto Mono", monospace;
+   font-weight: 500;
+   font-size: clamp(0.4rem, 0.8vw, 1.1rem);
+}
+p {
+   /* brødtekst */
+   font-family: "Roboto", sans-serif;
+   font-weight: 300;
+   line-height: 1.5;
+   font-size: clamp(0.9rem, 0.9vw, 1.1rem);
+}
+i {
+   font-style: italic;
+}
+b {
+   font-weight: 500;
+}
+/*____Main grid____*/
+body {
+   /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
+   background-color: var(--clr-fremheving);
+   color: var(--clr-tekst);
+   margin: auto;
+   display: grid;
+   grid-template-rows:
+      auto
+      1fr
+      auto;
+}
+/*______ Navigasjon ______*/
+nav {
+   position: fixed;
+   top: 0;
+   left: 0;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   place-content: center;
+   padding-inline: 1rem;
+   background-color: var(--clr-fremheving);
+   border-bottom: 2px solid var(--clr-ramme);
+   height: 50px;
+   z-index: 150;
+   width: 100%;
+   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+}
+/*______ headerområde ______*/
+header {
+   margin-top: 50px;
+}
+.hero {
+   position: relative;
+   height: 350px; /* Sett høyden på banneret etter behov */
+   max-width: 1600px;
+   left: 50%;
+   transform: translateX(-50%);
+}
+.hero-bilde {
+   /* Stil for bannerbildet */
+   position: absolute;
+   top: 0;
+
+   width: 100%;
+   height: 100%;
+   object-fit: cover; /* Sørger for at bildet fyller hele banneret */
+   object-position: bottom;
+}
+.hero-tittel {
+   position: absolute;
+   top: 20px;
+   left: 20px;
+   padding: 0px 10px 7.5px 7.5px; /* top | right | bottom | left */
+   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
+   border-radius: 0.2rem;
+   color: whitesmoke;
+   text-decoration: underline #ff9100 4px;
+   text-underline-offset: 4px;
+}
+.hjem {
+   display: flex;
+   align-items: center;
+}
+.hjem svg {
+   width: 30px;
+   height: 30px;
+   cursor: pointer;
+   fill: var(--clr-tekst);
+   margin-inline-end: 0.5rem;
+}
+.logo {
+   align-items: center;
+   place-self: center;
+   font-family: "Roboto Slab", serif;
+   font-weight: 700;
+   font-size: 30px;
+}
+.modusikon {
+   place-self: end;
+}
+.dag-natt {
+   width: 30px;
+   height: 30px;
+}
+/* .hero-emblem {
+   position: relative; 
+   bottom: -50%;
+   transform: translateX(-50%); 
+   width: 4rem;
+   height: 4rem;
+} */
+/*______ hovedinnhold ______*/
+main {
+   background-color: var(--clr-bakgrunn);
+   max-width: 1600px;
+   margin-inline: auto;
+}
+.ob-ramme {
+   background-color: var(--clr-boks);
+   border-color: var(--clr-ramme);
+   border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
+   border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
+   border-bottom-left-radius: clamp(0.5rem, 0.6rem, 0.8vw);
+   border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
+   border-width: 2px 2px 6px 6px;
+   border-style: solid;
+}
+.ob-ramme-rund {
+   background-color: var(--clr-boks);
+   border-color: var(--clr-ramme);
+   border-radius: 50%;
+   border-width: 2px 2px 6px 6px;
+   border-radius: 50;
+   border-style: solid;
+}
+.gridBeholder {
+   display: grid;
+   grid-gap: 1rem;
+   margin-block: 3rem;
+   column-gap: 1rem;
+   row-gap: 2rem;
+   width: 90%;
+   height: 90%;
+   margin-inline: auto;
+   grid-template-columns: repeat(5, 1fr);
+   grid-template-rows: 1fr 1fr auto auto;
+   grid-template-areas:
+      "gra tre fot fil ani"
+      "lyd dri pro web kun"
+      "inf inf inf inf inf"
+      "tek tek tek tek tek";
+   /*
+   gra = 2D-grafikk
+   tre = 3D-grafikk 
+   fot = Fotografi
+   fil = Film
+   ani = Animasjon
+   lyd = Lyddesign
+   dri = Drift
+   pro = Programvareutvikling
+   web = Webutvikling
+   kun = Kunstig intelligens
+   */
+}
+.gridBeholder > * {
+   display: grid;
+   place-items: center;
+}
+/*______ Grid area ______*/
+.to-d_grafikk {
+   grid-area: gra;
+}
+.tre-d_grafikk {
+   grid-area: tre;
+}
+.fotografi {
+   grid-area: fot;
+}
+.film {
+   grid-area: fil;
+}
+.animasjon {
+   grid-area: ani;
+}
+.lyddesign {
+   grid-area: lyd;
+}
+.drift {
+   grid-area: dri;
+}
+.utvikling {
+   grid-area: pro;
+}
+.webutvikling {
+   grid-area: web;
+}
+.kunstig-intelligens {
+   grid-area: kun;
+}
+.tekstGrid {
+   grid-area: tek;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 2rem;
+   margin-block-start: 1rem;
+   margin-block-end: 2rem;
+}
+.infoKnapper {
+   grid-area: inf;
+   margin-block-start: 2rem;
+   margin-block-end: 1rem;
+}
+/*______ kategoriIkoner ______*/
+.kategoriIkon {
+   position: relative;
+   width: 180px;
+   height: 180px;
+   margin: auto;
+   padding: 2rem;
+   z-index: 110;
+}
+.svgIkon {
+   width: 100%;
+   height: 100%;
+}
+.kategoriTittel {
+   position: relative;
+   margin-top: -1rem;
+   width: 220px;
+   z-index: 100;
+   padding: 1rem;
+   text-align: center;
+}
+/*______ Masker ______*/
+.maskeGrafisk {
+   background-color: var(--clr-rubin);
+   -webkit-mask: url(/images/svg/ob_1_2d-grafikk.svg) no-repeat center;
+   mask: url(/images/svg/ob_1_2d-grafikk.svg) no-repeat center;
+}
+.maskeTreD {
+   background-color: var(--clr-spessartin);
+   -webkit-mask: url(/images/svg/ob_2_3d-grafikk.svg) no-repeat center;
+   mask: url(/images/svg/ob_2_3d-grafikk.svg) no-repeat center;
+}
+.maskeFoto {
+   background-color: var(--clr-citrin);
+   -webkit-mask: url(/images/svg/ob_3_foto.svg) no-repeat center;
+   mask: url(/images/svg/ob_3_foto.svg) no-repeat center;
+}
+.maskeFilm {
+   background-color: var(--clr-smaragd);
+   -webkit-mask: url(/images/svg/ob_4_film.svg) no-repeat center;
+   mask: url(/images/svg/ob_4_film.svg) no-repeat center;
+}
+.maskeAnim {
+   background-color: var(--clr-amazonitt);
+   -webkit-mask: url(/images/svg/ob_5_animasjon.svg) no-repeat center;
+   mask: url(/images/svg/ob_5_animasjon.svg) no-repeat center;
+}
+.maskeLyd {
+   background-color: var(--clr-akvamarin);
+   -webkit-mask: url(/images/svg/ob_6_lyddesign.svg) no-repeat center;
+   mask: url(/images/svg/ob_6_lyddesign.svg) no-repeat center;
+}
+.maskeDrift {
+   background-color: var(--clr-safir);
+   -webkit-mask: url(/images/svg/ob_7_drift.svg) no-repeat center;
+   mask: url(/images/svg/ob_7_drift.svg) no-repeat center;
+}
+.maskeUtvikling {
+   background-color: var(--clr-ametyst);
+   -webkit-mask: url(/images/svg/ob_8_utvikling.svg) no-repeat center;
+   mask: url(/images/svg/ob_8_utvikling.svg) no-repeat center;
+}
+.maskeWeb {
+   background-color: var(--clr-kunzitt);
+   -webkit-mask: url(/images/svg/ob_9_web.svg) no-repeat center;
+   mask: url(/images/svg/ob_9_web.svg) no-repeat center;
+}
+.maskeKi {
+   background-color: var(--clr-thulitt);
+   -webkit-mask: url(/images/svg/ob_10_ai.svg) no-repeat center;
+   mask: url(/images/svg/ob_10_ai.svg) no-repeat center;
+}
+.knappHover {
+   transition: transform 0.3s ease-in-out;
+   transform: scale(1);
+}
+.knappHover:hover {
+   transition: transform 0.3s ease-in-out;
+   transform: scale(1.05);
+}
+/*______ tekstFarger ______*/
+.rubinTekst {
+   color: var(--clr-rubin);
+}
+.spessartinTekst {
+   color: var(--clr-spessartin);
+}
+.citrinTekst {
+   color: var(--clr-citrin);
+}
+.smaragdTekst {
+   color: var(--clr-smaragd);
+}
+.amazonittTekst {
+   color: var(--clr-amazonitt);
+}
+.akvamarinTekst {
+   color: var(--clr-akvamarin);
+}
+.safirTekst {
+   color: var(--clr-safir);
+}
+.ametystTekst {
+   color: var(--clr-ametyst);
+}
+.kunzittTekst {
+   color: var(--clr-kunzitt);
+}
+.thulittTekst {
+   color: var(--clr-thulitt);
+}
+.rubinDekorasjon {
+   text-decoration: 3px underline var(--clr-rubin);
+}
+/*______ dekorasjonsFarger ______*/
+.spessartinDekorasjon {
+   text-decoration: 3px underline var(--clr-spessartin);
+}
+.citrinDekorasjon {
+   text-decoration: 3px underline var(--clr-citrin);
+}
+.smaragdDekorasjon {
+   text-decoration: 3px underline var(--clr-smaragd);
+}
+.amazonittDekorasjon {
+   text-decoration: 3px underline var(--clr-amazonitt);
+}
+.akvamarinDekorasjon {
+   text-decoration: 3px underline var(--clr-akvamarin);
+}
+.safirDekorasjon {
+   text-decoration: 3px underline var(--clr-safir);
+}
+.ametystDekorasjon {
+   text-decoration: 3px underline var(--clr-ametyst);
+}
+.kunzittDekorasjon {
+   text-decoration: 3px underline var(--clr-kunzitt);
+}
+.thulittDekorasjon {
+   text-decoration: 3px underline var(--clr-thulitt);
+}
+/*______ infoKnapper ______*/
+.infoKnapper {
+   display: flex;
+   justify-content: space-around;
+}
+.flexInfoKnapp {
+   display: flex;
+   align-items: center;
+   margin: 1rem;
+}
+.infoKnappIkon {
+   position: relative;
+   width: 100px;
+   height: 100px;
+   z-index: 110;
+   padding: 1rem;
+}
+.infoKnappTittel {
+   position: relative;
+   min-width: 300px;
+   padding: 1rem;
+   margin-inline-start: -2rem;
+   color: var(--clr-tekst);
+   z-index: 100;
+}
+.portfolio {
+   width: 100%;
+   height: 100%;
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_ikon_portfolio.svg) no-repeat center;
+   mask: url(/images/svg/ob_ikon_portfolio.svg) no-repeat center;
+}
+.suksesskriterer {
+   width: 100%;
+   height: 100%;
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_ikon_suksesskriterer.svg) no-repeat center;
+   mask: url(/images/svg/ob_ikon_suksesskriterer.svg) no-repeat center;
+}
+.visuell-logg {
+   width: 100%;
+   height: 100%;
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_ikon_visuell-logg.svg) no-repeat center;
+   mask: url(/images/svg/ob_ikon_visuell-logg.svg) no-repeat center;
+}
+/*______ tekst bokser ______*/
+.teksInnhold {
+   display: grid;
+   grid-template-columns: auto 1fr;
+   padding: 1rem;
+   gap: 1rem;
+   height: 100%;
+   background-color: var(--clr-fremheving);
+   border: 2px solid var(--clr-ramme);
+   border-radius: 1rem;
+}
+.tittelIkon {
+   display: flex;
+   flex-direction: column;
+   place-items: start;
+}
+.maskeSpice {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_spiciness-gradient.svg) no-repeat center;
+   mask: url(/images/svg/ob_spiciness-gradient.svg) no-repeat center;
+}
+/*______ footer ______*/
+footer {
+   height: 3rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   place-content: center;
+   background-color: var(--clr-fremheving);
+   border-top: 2px solid var(--clr-ramme);
+   height: 50px;
+   width: 100%;
+   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+}

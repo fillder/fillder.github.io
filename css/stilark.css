@@ -29,11 +29,17 @@ video {
 }
 /*______ Fargekoder ______*/
 :root {
-   --clr-bakgrunn: #efefef;
+   /* --clr-bakgrunn: #efefef;
    --clr-tekst: #3e4247;
    --clr-boks: #fefefe;
    --clr-ramme: #c7c9ca;
-   --clr-fremheving: #cccccc;
+   --clr-fremheving: #cccccc; */
+
+   --clr-bakgrunn: #cbcccc;
+   --clr-tekst: #3e4247;
+   --clr-boks: #e5e6e7;
+   --clr-ramme: #f5f5f5;
+   --clr-fremheving: #f3f4f4;
 
    --clr-safir: #2c6ad6; /*programfag og drift*/
    --clr-akvamarin: #257da5; /*yff og lyddesign*/

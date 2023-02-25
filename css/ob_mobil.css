@@ -1,0 +1,80 @@
+@media screen and (max-width: 1320px) {
+   .gridBeholder {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(auto-min, 1fr);
+      grid-template-areas:
+         "gra tre fot fil"
+         "ani lyd dri pro"
+         "... web kun ..."
+         "inf inf inf inf"
+         "tek tek tek tek";
+   }
+   .infoKnapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin-block-end: 0rem;
+   }
+}
+@media screen and (max-width: 1000px) {
+   .gridBeholder {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(auto-min, 1fr);
+      grid-template-areas:
+         "gra tre fot"
+         "fil ani lyd"
+         "dri pro web"
+         "... kun ..."
+         "inf inf inf"
+         "inf inf inf"
+         "tek tek tek";
+   }
+}
+@media screen and (max-width: 800px) {
+   .gridBeholder {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(auto-min, 1fr);
+      grid-template-areas:
+         "gra tre"
+         "fot fil"
+         "ani lyd"
+         "dri pro"
+         "web kun"
+         "inf inf"
+         "tek tek";
+   }
+   .infoKnappTittel {
+      min-width: 250px;
+      padding-inline-start: 2rem;
+   }
+   .tekstGrid {
+      grid-area: tek;
+      display: grid;
+      padding: 2rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 2rem;
+      margin-block: 0rem;
+   }
+}
+@media screen and (max-width: 560px) {
+   .gridBeholder {
+      width: 100%;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto, 1fr);
+      grid-template-areas:
+         "gra"
+         "tre"
+         "fot"
+         "fil"
+         "ani"
+         "lyd"
+         "dri"
+         "pro"
+         "web"
+         "kun"
+         "inf"
+         "inf"
+         "tek"
+         "tek";
+   }
+}
