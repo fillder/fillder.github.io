@@ -113,7 +113,7 @@ body {
    color: var(--clr-kunzitt);
    fill: var(--clr-kunzitt);
 }
-.farge-ig {
+.farge-workshop {
    color: var(--clr-ametyst);
    fill: var(--clr-ametyst);
 }
@@ -200,4 +200,16 @@ main {
 }
 .navigasjon {
    display: none;
+}
+
+.svgIkon {
+   position: relative;
+   width: 50px;
+   height: 25px;
+   z-index: 110;
+}
+.maskeWorkshop {
+   background-color: var(--clr-ametyst);
+   -webkit-mask: url(/images/svg/tp_fagikon-workshop.svg) no-repeat center;
+   mask: url(/images/svg/tp_fagikon-workshop.svg) no-repeat center;
 }
