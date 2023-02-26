@@ -4,7 +4,7 @@
    stroke: var(--clr-tekst);
 }
 .moon {
-   fill: var(--clr-fremheving);
+   fill: var(--clr-tekstRamme);
 }
 /*______ Animasjoner ______*/
 .moonAnim {

@@ -18,8 +18,6 @@ main {
 /*______ fargedeklarering ______*/
 body {
    /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
-   background-color: var(--clr-fremheving);
-   color: var(--clr-tekst);
    margin: auto;
    display: grid;
    grid-template-rows:
@@ -78,21 +76,17 @@ body {
    fill: var(--clr-skolefarge2);
 }
 /*______ Boksdesign ______*/
-.ramme {
-   padding-inline: 0.6vw;
-   padding-block: 0.4vw;
-}
 main {
    display: flex;
    gap: 0.5rem;
    justify-content: space-between;
    min-width: 340px;
-   background-color: var(--clr-bakgrunn);
+   background-color: var(--clr-main);
    max-width: 1600px;
    padding-inline: 1vw;
    margin-inline: auto;
    margin-top: 50px;
-   box-shadow: 0 5rem 0 0rem var(--clr-bakgrunn);
+   box-shadow: 0 5rem 0 0rem var(--clr-main);
 }
 main {
    text-align: center;

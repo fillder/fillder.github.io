@@ -29,24 +29,25 @@ video {
 }
 /*______ Fargekoder ______*/
 :root {
-   /* --clr-bakgrunn: #efefef;
+   /* --clr-main: #efefef;
    --clr-tekst: #3e4247;
    --clr-boks: #fefefe;
    --clr-ramme: #c7c9ca;
-   --clr-fremheving: #cccccc; */
+   --clr-tekstBoks: #cccccc; */
 
-   --clr-bakgrunn: #cbcccc;
+   --clr-main: #dbdbdb;
    --clr-tekst: #3e4247;
-   --clr-boks: #e5e6e7;
-   --clr-ramme: #f5f5f5;
-   --clr-fremheving: #f3f4f4;
+   --clr-ramme: #f5f5f6;
+   --clr-ixDRamme: #e5e6e7;
+   --clr-tekstRamme: #ececec;
+   --clr-bakgrunn: #c8c8c8;
 
-   --clr-safir: #2c6ad6; /*programfag og drift*/
-   --clr-akvamarin: #257da5; /*yff og lyddesign*/
+   --clr-safir: #367fff; /*programfag og drift*/
+   --clr-akvamarin: #1892ba; /*yff og lyddesign*/
    --clr-amazonitt: #228468; /*kroppsøving og animasjon*/
    --clr-smaragd: #518238; /*naturfag og film-vfx*/
-   --clr-citrin: #8b7403; /*matte og fotografi*/
-   --clr-spessartin: #9e500b; /*engelsk og 3d-grafikk*/
+   --clr-citrin: #a18603; /*matte og fotografi*/
+   --clr-spessartin: #d1690f; /*engelsk og 3d-grafikk*/
    --clr-rubin: #d24040; /*norsk, hoytid og 2d-grafikk*/
    --clr-thulitt: #b44f99; /*forum og innovasjon*/
    --clr-kunzitt: #9a5daf; /*midttime og teknologi*/
@@ -56,11 +57,12 @@ video {
    --clr-skolefarge2: #000000;
 }
 .darkmode {
-   --clr-bakgrunn: #14151f;
+   --clr-main: #14151f;
    --clr-tekst: #a8a8a8;
-   --clr-boks: #262738;
    --clr-ramme: #57637a;
-   --clr-fremheving: #0b0c13;
+   --clr-ixDRamme: #0b0c13;
+   --clr-tekstRamme: #262738;
+   --clr-bakgrunn: #07070b;
 
    --clr-safir: #1fa6e2; /*programfag og drift*/
    --clr-akvamarin: #33c9c4; /*yff og lyddesign*/
@@ -75,6 +77,21 @@ video {
 
    --clr-skolefarge1: #ef7c00;
    --clr-skolefarge2: #ffffff;
+}
+/*______ Skolelogo ______*/
+.skolefarge1 {
+   fill: var(--clr-skolefarge1);
+}
+.skolefarge2 {
+   fill: var(--clr-skolefarge2);
+}
+/*______ Bakgrunn- og tekstfarge ______*/
+body {
+   background-color: var(--clr-bakgrunn);
+   color: var(--clr-tekst);
+}
+main {
+   background-color: var(--clr-main);
 }
 /*______ Skrifttype ______*/
 h1,
@@ -157,7 +174,7 @@ nav {
    grid-template-columns: 0.2fr 1fr 0.2fr;
    grid-template-rows: 1fr;
    place-content: center;
-   background-color: var(--clr-fremheving);
+   background-color: var(--clr-tekstRamme);
    border-bottom: 3px solid var(--clr-ramme);
    height: 50px;
    width: 100%;
@@ -223,16 +240,32 @@ nav {
    opacity: 0.2;
 }
 /*______ Main ______*/
-.ramme {
-   background-color: var(--clr-boks);
-   border-color: var(--clr-ramme);
+.boksRamme {
    border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
    border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
    border-bottom-left-radius: clamp(0.5rem, 0.6rem, 0.8vw);
    border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
-   border-width: 2px 2px 6px 6px;
    border-style: solid;
 }
+.rundRamme {
+   border-radius: 50rem;
+   border-style: solid;
+}
+.tekst {
+   background-color: var(--clr-tekstRamme);
+   border-color: var(--clr-ramme);
+   border-width: 1px 1px 3px 3px;
+   padding-inline: 1rem;
+   padding-block: 0.5rem;
+}
+.interaktiv {
+   background-color: var(--clr-ixDRamme);
+   border-color: var(--clr-ramme);
+   border-width: 2px 2px 6px 6px;
+   padding-inline: 1rem;
+   padding-block: 0.5rem;
+}
+
 /*______ footer ______*/
 footer {
    height: 3rem;
@@ -240,7 +273,7 @@ footer {
    justify-content: space-between;
    align-items: center;
    place-content: center;
-   background-color: var(--clr-fremheving);
+   background-color: var(--clr-tekstRamme);
    border-top: 3px solid var(--clr-ramme);
    height: 50px;
    width: 100%;

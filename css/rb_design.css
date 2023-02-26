@@ -1,8 +1,6 @@
 /*____Main grid____*/
 body {
    /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
-   background-color: var(--clr-fremheving);
-   color: var(--clr-tekst);
    max-width: 1600px;
    margin: auto;
    display: grid;
@@ -53,12 +51,6 @@ header {
    height: 4rem;
 } */
 /*______ hovedinnhold ______*/
-main {
-   background-color: var(--clr-bakgrunn);
-}
-.ramme {
-   padding: 1rem;
-}
 .gridBeholder {
    display: grid;
    grid-gap: 1rem;
@@ -117,7 +109,7 @@ main {
    width: 50px;
    height: 50px;
    border-radius: 50%;
-   outline: 4px solid var(--clr-boks);
+   outline: 4px solid var(--clr-tekst);
    z-index: 4;
    stroke-linecap: round;
    stroke-linejoin: round;
