@@ -91,7 +91,7 @@ main {
    ani = Animasjon
    lyd = Lyddesign
    dri = Drift
-   pro = Programvareutvikling
+   pro = Programmering
    web = Webutvikling
    kun = Kunstig intelligens
    */
@@ -103,104 +103,33 @@ main {
 /*______ Grid area ______*/
 .to-d_grafikk {
    grid-area: gra;
-   text-decoration: none;
-   transition: text-decoration 0.3s ease-in-out;
 }
 .tre-d_grafikk {
    grid-area: tre;
-   text-decoration: none;
-   transition: text-decoration 0.3s ease-in-out;
 }
 .fotografi {
    grid-area: fot;
-   text-decoration: none;
-   transition: text-decoration 0.3s ease-in-out;
 }
 .film {
    grid-area: fil;
-   text-decoration: none;
-   transition: text-decoration 0.3s ease-in-out;
 }
 .animasjon {
    grid-area: ani;
-   text-decoration: none;
-   transition: text-decoration 0.3s ease-in-out;
 }
 .lyddesign {
    grid-area: lyd;
-   text-decoration: none;
-   transition: text-decoration 0.3s ease-in-out;
 }
 .drift {
    grid-area: dri;
-   text-decoration: none;
-   transition: text-decoration 0.3s ease-in-out;
 }
-.utvikling {
+.programmering {
    grid-area: pro;
-   text-decoration: none;
-   transition: text-decoration 0.3s ease-in-out;
 }
 .webutvikling {
    grid-area: web;
-   text-decoration: none;
-   transition: text-decoration 0.3s ease-in-out;
 }
 .kunstig-intelligens {
    grid-area: kun;
-   text-decoration: none;
-   transition: text-decoration 0.3s ease-in-out;
-}
-/*______ TittelHover ______*/
-.to-d_grafikk:hover,
-.to-d_grafikk:focus {
-   text-decoration: 3px underline var(--clr-rubin);
-   transition: text-decoration 0.3s ease-in-out;
-}
-.tre-d_grafikk:hover,
-.tre-d_grafikk:focus {
-   text-decoration: 3px underline var(--clr-spessartin);
-   transition: text-decoration 0.3s ease-in-out;
-}
-.fotografi:hover,
-.fotografi:focus {
-   text-decoration: 3px underline var(--clr-citrin);
-   transition: text-decoration 0.3s ease-in-out;
-}
-.film:hover,
-.film:focus {
-   text-decoration: 3px underline var(--clr-smaragd);
-   transition: text-decoration 0.3s ease-in-out;
-}
-.animasjon:hover,
-.animasjon:focus {
-   text-decoration: 3px underline var(--clr-amazonitt);
-   transition: text-decoration 0.3s ease-in-out;
-}
-.lyddesign:hover,
-.lyddesign:focus {
-   text-decoration: 3px underline var(--clr-akvamarin);
-   transition: text-decoration 0.3s ease-in-out;
-}
-.drift:hover,
-.drift:focus {
-   text-decoration: 3px underline var(--clr-safir);
-   transition: text-decoration 0.3s ease-in-out;
-}
-.utvikling:hover,
-.utvikling:focus {
-   text-decoration: 3px underline var(--clr-ametyst);
-   transition: text-decoration 0.3s ease-in-out;
-}
-.webutvikling:hover,
-.webutvikling:focus {
-   text-decoration: 3px underline var(--clr-kunzitt);
-   transition: text-decoration 0.3s ease-in-out;
-}
-.kunstig-intelligens:hover,
-.kunstig-intelligens:focus {
-   text-decoration: 3px underline var(--clr-thulitt);
-   transition: text-decoration 0.3s ease-in-out;
 }
 .tekstGrid {
    grid-area: tek;
@@ -215,6 +144,7 @@ main {
    margin-block-start: 2rem;
    margin-block-end: 1rem;
 }
+
 /*______ kategoriIkoner ______*/
 .kategoriIkon {
    position: relative;
@@ -228,7 +158,7 @@ main {
    width: 100%;
    height: 100%;
 }
-.kategoriTittel {
+.kategoriRamme {
    position: relative;
    margin-top: -1rem;
    width: 220px;
@@ -272,10 +202,10 @@ main {
    -webkit-mask: url(/images/svg/ob_7_drift.svg) no-repeat center;
    mask: url(/images/svg/ob_7_drift.svg) no-repeat center;
 }
-.maskeUtvikling {
+.maskeProgrammering {
    background-color: var(--clr-ametyst);
-   -webkit-mask: url(/images/svg/ob_8_utvikling.svg) no-repeat center;
-   mask: url(/images/svg/ob_8_utvikling.svg) no-repeat center;
+   -webkit-mask: url(/images/svg/ob_8_programmering.svg) no-repeat center;
+   mask: url(/images/svg/ob_8_programmering.svg) no-repeat center;
 }
 .maskeWeb {
    background-color: var(--clr-kunzitt);
@@ -287,13 +217,91 @@ main {
    -webkit-mask: url(/images/svg/ob_10_ai.svg) no-repeat center;
    mask: url(/images/svg/ob_10_ai.svg) no-repeat center;
 }
-.knappHover {
+/*______ TittelHover ______*/
+.hover2d,
+.hover3d,
+.hoverFoto,
+.hoverFilm,
+.hoverAnimasjon,
+.hoverLyd,
+.hoverDrift,
+.hoverProgrammering,
+.hoverWeb,
+.hoverKi {
+   transition: text-decoration 0.3s ease-in-out;
    transition: transform 0.3s ease-in-out;
+   text-decoration: none;
    transform: scale(1);
 }
-.knappHover:hover {
+.hover2d:hover,
+.hover2d:focus {
+   transition: text-decoration 0.3s ease-in-out;
    transition: transform 0.3s ease-in-out;
-   transform: scale(1.05);
+   text-decoration: 3px underline var(--clr-rubin);
+   transform: scale(1.02);
+}
+.hover3d:hover,
+.hover3d:focus {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-spessartin);
+   transform: scale(1.02);
+}
+.hoverFoto:hover,
+.hoverFoto:focus {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-citrin);
+   transform: scale(1.02);
+}
+.hoverFilm:hover,
+.hoverFilm:focus {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-smaragd);
+   transform: scale(1.02);
+}
+.hoverAnimasjon:hover,
+.hoverAnimasjon:focus {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-amazonitt);
+   transform: scale(1.02);
+}
+.hoverLyd:hover,
+.hoverLyd:focus {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-akvamarin);
+   transform: scale(1.02);
+}
+.hoverDrift:hover,
+.hoverDrift:focus {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-safir);
+   transform: scale(1.02);
+}
+.hoverProgrammering:hover,
+.hoverProgrammering:focus {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-ametyst);
+   transform: scale(1.02);
+}
+.hoverWeb:hover,
+.hoverWeb:focus {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-kunzitt);
+   transform: scale(1.02);
+}
+.hoverKi:hover,
+.hoverKi:focus {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-thulitt);
+   transform: scale(1.02);
 }
 /*______ tekstFarger ______*/
 .rubinTekst {
@@ -364,8 +372,20 @@ main {
 }
 .flexInfoKnapp {
    display: flex;
+   text-align: center;
    align-items: center;
    margin: 1rem;
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: none;
+   transform: scale(1);
+}
+.flexInfoKnapp:hover,
+.flexInfoKnapp:focus {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-tekst);
+   transform: scale(1.02);
 }
 .infoKnappIkon {
    position: relative;
