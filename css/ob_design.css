@@ -1,59 +1,7 @@
-/*______ Skrifttype ______*/
-h1 {
-   /* Sideittel */
-   font-family: "Roboto Slab", serif;
-   font-weight: 300;
-   font-size: clamp(2rem, 3vw, 4rem);
-}
-h2 {
-   /* Infoboks */
-   font-family: "Roboto Slab", serif;
-   font-weight: 700;
-   font-size: clamp(1.7rem, 2vw, 2.3rem);
-}
-h3 {
-   /* Oppsummeringstittel */
-   font-family: "Roboto Slab", serif;
-   font-weight: 500;
-   font-size: 1.5rem;
-}
-h4 {
-   /* Knapptekst */
-   font-family: "Roboto Slab", serif;
-   font-weight: 500;
-   font-size: clamp(0.7rem, 9vw, 1.1rem);
-}
-h5 {
-   /* Oppsummeringstekst */
-   font-family: "Roboto", sans-serif;
-   font-weight: 300;
-   line-height: 1.5;
-   font-size: clamp(0.8rem, 1vw, 1.3rem);
-}
-h6 {
-   /* tall */
-   font-family: "Roboto Mono", monospace;
-   font-weight: 500;
-   font-size: clamp(0.4rem, 0.8vw, 1.1rem);
-}
-p {
-   /* brødtekst */
-   font-family: "Roboto", sans-serif;
-   font-weight: 300;
-   line-height: 1.5;
-   font-size: clamp(0.9rem, 0.9vw, 1.1rem);
-}
-i {
-   font-style: italic;
-}
-b {
-   font-weight: 500;
-}
 /*____Main grid____*/
 body {
    /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
    background-color: var(--clr-fremheving);
-   color: var(--clr-tekst);
    margin: auto;
    display: grid;
    grid-template-rows:
@@ -89,9 +37,11 @@ header {
    padding: 0px 10px 7.5px 7.5px; /* top | right | bottom | left */
    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
    border-radius: 0.2rem;
-   color: whitesmoke;
    text-decoration: underline #ff9100 4px;
    text-underline-offset: 4px;
+}
+.hero-tittel h1 {
+   color: whitesmoke;
 }
 /* .hero-emblem {
    position: relative; 
@@ -101,20 +51,13 @@ header {
    height: 4rem;
 } */
 /*______ hovedinnhold ______*/
+h3 {
+   font-weight: 500;
+}
 main {
    background-color: var(--clr-bakgrunn);
    max-width: 1600px;
    margin-inline: auto;
-}
-.ob-ramme {
-   background-color: var(--clr-boks);
-   border-color: var(--clr-ramme);
-   border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
-   border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
-   border-bottom-left-radius: clamp(0.5rem, 0.6rem, 0.8vw);
-   border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
-   border-width: 2px 2px 6px 6px;
-   border-style: solid;
 }
 .ob-ramme-rund {
    background-color: var(--clr-boks);
@@ -160,33 +103,104 @@ main {
 /*______ Grid area ______*/
 .to-d_grafikk {
    grid-area: gra;
+   text-decoration: none;
+   transition: text-decoration 0.3s ease-in-out;
 }
 .tre-d_grafikk {
    grid-area: tre;
+   text-decoration: none;
+   transition: text-decoration 0.3s ease-in-out;
 }
 .fotografi {
    grid-area: fot;
+   text-decoration: none;
+   transition: text-decoration 0.3s ease-in-out;
 }
 .film {
    grid-area: fil;
+   text-decoration: none;
+   transition: text-decoration 0.3s ease-in-out;
 }
 .animasjon {
    grid-area: ani;
+   text-decoration: none;
+   transition: text-decoration 0.3s ease-in-out;
 }
 .lyddesign {
    grid-area: lyd;
+   text-decoration: none;
+   transition: text-decoration 0.3s ease-in-out;
 }
 .drift {
    grid-area: dri;
+   text-decoration: none;
+   transition: text-decoration 0.3s ease-in-out;
 }
 .utvikling {
    grid-area: pro;
+   text-decoration: none;
+   transition: text-decoration 0.3s ease-in-out;
 }
 .webutvikling {
    grid-area: web;
+   text-decoration: none;
+   transition: text-decoration 0.3s ease-in-out;
 }
 .kunstig-intelligens {
    grid-area: kun;
+   text-decoration: none;
+   transition: text-decoration 0.3s ease-in-out;
+}
+/*______ TittelHover ______*/
+.to-d_grafikk:hover,
+.to-d_grafikk:focus {
+   text-decoration: 3px underline var(--clr-rubin);
+   transition: text-decoration 0.3s ease-in-out;
+}
+.tre-d_grafikk:hover,
+.tre-d_grafikk:focus {
+   text-decoration: 3px underline var(--clr-spessartin);
+   transition: text-decoration 0.3s ease-in-out;
+}
+.fotografi:hover,
+.fotografi:focus {
+   text-decoration: 3px underline var(--clr-citrin);
+   transition: text-decoration 0.3s ease-in-out;
+}
+.film:hover,
+.film:focus {
+   text-decoration: 3px underline var(--clr-smaragd);
+   transition: text-decoration 0.3s ease-in-out;
+}
+.animasjon:hover,
+.animasjon:focus {
+   text-decoration: 3px underline var(--clr-amazonitt);
+   transition: text-decoration 0.3s ease-in-out;
+}
+.lyddesign:hover,
+.lyddesign:focus {
+   text-decoration: 3px underline var(--clr-akvamarin);
+   transition: text-decoration 0.3s ease-in-out;
+}
+.drift:hover,
+.drift:focus {
+   text-decoration: 3px underline var(--clr-safir);
+   transition: text-decoration 0.3s ease-in-out;
+}
+.utvikling:hover,
+.utvikling:focus {
+   text-decoration: 3px underline var(--clr-ametyst);
+   transition: text-decoration 0.3s ease-in-out;
+}
+.webutvikling:hover,
+.webutvikling:focus {
+   text-decoration: 3px underline var(--clr-kunzitt);
+   transition: text-decoration 0.3s ease-in-out;
+}
+.kunstig-intelligens:hover,
+.kunstig-intelligens:focus {
+   text-decoration: 3px underline var(--clr-thulitt);
+   transition: text-decoration 0.3s ease-in-out;
 }
 .tekstGrid {
    grid-area: tek;
@@ -312,10 +326,10 @@ main {
 .thulittTekst {
    color: var(--clr-thulitt);
 }
+/*______ dekorasjonsFarger ______*/
 .rubinDekorasjon {
    text-decoration: 3px underline var(--clr-rubin);
 }
-/*______ dekorasjonsFarger ______*/
 .spessartinDekorasjon {
    text-decoration: 3px underline var(--clr-spessartin);
 }
@@ -365,7 +379,6 @@ main {
    min-width: 300px;
    padding: 1rem;
    margin-inline-start: -2rem;
-   color: var(--clr-tekst);
    z-index: 100;
 }
 .portfolio {

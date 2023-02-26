@@ -7,7 +7,7 @@
    }
    .gridBeholder {
       width: 90%;
-      grid-template-columns: 1.6fr 2.2fr;
+      grid-template-columns: 1fr 1.2;
       grid-template-areas:
          "oS iF"
          "iH iH"
@@ -31,27 +31,7 @@
       grid-template-columns: 1.2fr minmax(100px, 2fr);
    }
 }
-@media screen and (max-width: 800px) {
-   h5 {
-      font-size: 0.8rem;
-   }
-   p {
-      font-size: 0.7rem;
-   }
-   .gridBeholder {
-      padding-inline: 1rem;
-      padding-block: 2rem;
-      width: 100%;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas:
-         "fB oS"
-         "iF iF"
-         "iH iH"
-         "gI gI"
-         "aK aK";
-   }
-}
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
    h5 {
       font-size: 1rem;
    }
@@ -67,5 +47,8 @@
          "iH"
          "gI"
          "aK";
+   }
+   .logo span {
+      display: none;
    }
 }

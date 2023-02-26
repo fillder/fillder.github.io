@@ -27,33 +27,37 @@
 
 <body>
     <nav>
-        <div class="hjem maskeHjem"></div>
+        <button type="button" alt="hjem" title="hjem">
+            <div class="hjem maskeHjem"></div>
+        </button>
         <div class="logo">
-            <span>OPPDRAGSBANK</span>
+            <h1><b>OPPDRAGSBANK</b></h1>
         </div>
-        <div class="modusikon">
-            <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
-                <svg class="svg-anim" viewBox="0 70 100 100">
-                    <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-width="6" stroke-dasharray="20"
-                        stroke-dashoffset="0" />
-                    <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-width="6" stroke-dasharray="20"
-                        stroke-dashoffset="0" />
-                    <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-width="6" stroke-dasharray="20"
-                        stroke-dashoffset="0" />
-                    <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-width="6" stroke-dasharray="20"
-                        stroke-dashoffset="0" />
-                    <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-width="6" stroke-dasharray="20"
-                        stroke-dashoffset="0" />
-                    <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-width="6" stroke-dasharray="20"
-                        stroke-dashoffset="0" />
-                    <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-width="6" stroke-dasharray="20"
-                        stroke-dashoffset="0" />
-                    <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-width="6" stroke-dasharray="20"
-                        stroke-dashoffset="0" />
-                    <circle class="sun" cx="50" cy="120" r="20" />
-                    <circle class="moon" cx="135" cy="40" r="40" />
-                </svg>
-            </button>
+        <div class="flexHoyre">
+            <div class="modusikon">
+                <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
+                    <svg class="svg-anim" viewBox="0 70 100 100">
+                        <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-width="6" stroke-dasharray="20"
+                            stroke-dashoffset="0" />
+                        <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-width="6" stroke-dasharray="20"
+                            stroke-dashoffset="0" />
+                        <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-width="6" stroke-dasharray="20"
+                            stroke-dashoffset="0" />
+                        <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-width="6" stroke-dasharray="20"
+                            stroke-dashoffset="0" />
+                        <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-width="6" stroke-dasharray="20"
+                            stroke-dashoffset="0" />
+                        <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-width="6" stroke-dasharray="20"
+                            stroke-dashoffset="0" />
+                        <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-width="6"
+                            stroke-dasharray="20" stroke-dashoffset="0" />
+                        <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-width="6" stroke-dasharray="20"
+                            stroke-dashoffset="0" />
+                        <circle class="sun" cx="50" cy="120" r="20" />
+                        <circle class="moon" cx="135" cy="40" r="40" />
+                    </svg>
+                </button>
+            </div>
         </div>
     </nav>
     <header class="hero">
@@ -71,7 +75,7 @@
                     <div class="ob-ramme-rund kategoriIkon">
                         <div class="svgIkon maskeGrafisk"></div>
                     </div>
-                    <h3 class="ramme kategoriTittel rubinTekst">2D-grafikk</h3>
+                    <h3 class="ramme kategoriTittel">2D-grafikk</h3>
                 </button>
             </section>
             <section class="tre-d_grafikk">
@@ -79,7 +83,7 @@
                     <div class="ob-ramme-rund kategoriIkon">
                         <div class="svgIkon maskeTreD"></div>
                     </div>
-                    <h3 class="ramme kategoriTittel spessartinTekst">3D-grafikk</h3>
+                    <h3 class="ramme kategoriTittel">3D-grafikk</h3>
                 </button>
             </section>
             <section class="fotografi">
@@ -87,7 +91,7 @@
                     <div class="ob-ramme-rund kategoriIkon">
                         <div class="svgIkon maskeFoto"></div>
                     </div>
-                    <h3 class="ramme kategoriTittel citrinTekst">Fotografi</h3>
+                    <h3 class="ramme kategoriTittel">Fotografi</h3>
                 </button>
             </section>
             <section class="film">
@@ -95,7 +99,7 @@
                     <div class="ob-ramme-rund kategoriIkon">
                         <div class="svgIkon maskeFilm"></div>
                     </div>
-                    <h3 class="ramme kategoriTittel smaragdTekst">Film og VFX</h3>
+                    <h3 class="ramme kategoriTittel">Film og VFX</h3>
                 </button>
             </section>
             <section class="animasjon">
@@ -103,7 +107,7 @@
                     <div class="ob-ramme-rund kategoriIkon">
                         <div class="svgIkon maskeAnim"></div>
                     </div>
-                    <h3 class="ramme kategoriTittel amazonittTekst">Animasjon</h3>
+                    <h3 class="ramme kategoriTittel">Animasjon</h3>
                 </button>
             </section>
             <section class="lyddesign">
@@ -111,7 +115,7 @@
                     <div class="ob-ramme-rund kategoriIkon">
                         <div class="svgIkon maskeLyd"></div>
                     </div>
-                    <h3 class="ramme kategoriTittel akvamarinTekst">Lyddesign</h3>
+                    <h3 class="ramme kategoriTittel">Lyddesign</h3>
                 </button>
             </section>
             <section class="drift">
@@ -119,7 +123,7 @@
                     <div class="ob-ramme-rund kategoriIkon">
                         <div class="svgIkon maskeDrift"></div>
                     </div>
-                    <h3 class="ramme kategoriTittel safirTekst">Drift</h3>
+                    <h3 class="ramme kategoriTittel">Drift</h3>
                 </button>
             </section>
             <section class="utvikling">
@@ -127,7 +131,7 @@
                     <div class="ob-ramme-rund kategoriIkon">
                         <div class="svgIkon maskeUtvikling"></div>
                     </div>
-                    <h3 class="ramme kategoriTittel ametystTekst">Programmering</h3>
+                    <h3 class="ramme kategoriTittel">Programmering</h3>
                 </button>
             </section>
             <section class="webutvikling">
@@ -135,7 +139,7 @@
                     <div class="ob-ramme-rund kategoriIkon">
                         <div class="svgIkon maskeWeb "></div>
                     </div>
-                    <h3 class="ramme kategoriTittel kunzittTekst">Webutvikling</h3>
+                    <h3 class="ramme kategoriTittel">Webutvikling</h3>
                 </button>
             </section>
             <section class="kunstig-intelligens">
@@ -143,7 +147,7 @@
                     <div class="ob-ramme-rund kategoriIkon">
                         <div class="svgIkon maskeKi"></div>
                     </div>
-                    <h3 class="ramme kategoriTittel thulittTekst">AI-teknologi</h3>
+                    <h3 class="ramme kategoriTittel">AI-teknologi</h3>
                 </button>
             </section>
             <section class="infoKnapper">
