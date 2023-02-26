@@ -97,11 +97,11 @@ nav {
    grid-template-rows: 1fr;
    place-content: center;
    background-color: var(--clr-fremheving);
-   border-bottom: 2px solid var(--clr-ramme);
+   border-bottom: 3px solid var(--clr-ramme);
    height: 50px;
    width: 100%;
    z-index: 150;
-   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
 }
 .hjem {
    display: flex;
@@ -169,8 +169,8 @@ footer {
    align-items: center;
    place-content: center;
    background-color: var(--clr-fremheving);
-   border-top: 2px solid var(--clr-ramme);
+   border-top: 3px solid var(--clr-ramme);
    height: 50px;
    width: 100%;
-   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
 }

@@ -25,7 +25,9 @@
    nav {
       grid-template-columns: 1fr;
    }
-
+   .logo span {
+      display: none;
+   }
    .hjem {
       display: none;
    }

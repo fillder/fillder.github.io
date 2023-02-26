@@ -170,6 +170,13 @@ main {
    align-items: center;
    margin-bottom: 2%;
 }
+.man,
+.tir,
+.ons,
+.tor,
+.fre {
+   margin-block-start: 1rem;
+}
 .gruppe-xy {
    display: grid;
    grid-template-columns: 1fr 1fr;
