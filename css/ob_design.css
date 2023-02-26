@@ -61,22 +61,6 @@ body {
       1fr
       auto;
 }
-/*______ Navigasjon ______*/
-nav {
-   position: fixed;
-   top: 0;
-   left: 0;
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   place-content: center;
-   padding-inline: 1rem;
-   background-color: var(--clr-fremheving);
-   border-bottom: 2px solid var(--clr-ramme);
-   height: 50px;
-   z-index: 150;
-   width: 100%;
-   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
-}
 /*______ headerområde ______*/
 header {
    margin-top: 50px;
@@ -108,31 +92,6 @@ header {
    color: whitesmoke;
    text-decoration: underline #ff9100 4px;
    text-underline-offset: 4px;
-}
-.hjem {
-   display: flex;
-   align-items: center;
-}
-.hjem svg {
-   width: 30px;
-   height: 30px;
-   cursor: pointer;
-   fill: var(--clr-tekst);
-   margin-inline-end: 0.5rem;
-}
-.logo {
-   align-items: center;
-   place-self: center;
-   font-family: "Roboto Slab", serif;
-   font-weight: 700;
-   font-size: 30px;
-}
-.modusikon {
-   place-self: end;
-}
-.dag-natt {
-   width: 30px;
-   height: 30px;
 }
 /* .hero-emblem {
    position: relative; 
@@ -450,17 +409,4 @@ main {
    background-color: var(--clr-tekst);
    -webkit-mask: url(/images/svg/ob_spiciness-gradient.svg) no-repeat center;
    mask: url(/images/svg/ob_spiciness-gradient.svg) no-repeat center;
-}
-/*______ footer ______*/
-footer {
-   height: 3rem;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   place-content: center;
-   background-color: var(--clr-fremheving);
-   border-top: 2px solid var(--clr-ramme);
-   height: 50px;
-   width: 100%;
-   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
 }

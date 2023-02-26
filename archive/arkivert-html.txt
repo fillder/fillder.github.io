@@ -1,0 +1,30 @@
+<nav class="navigasjon">
+    <ul>
+        <li class="list active">
+            <a href="#dag1" target="_self">
+                <img class="navIkoner" src="/images/svg/tp_dag-1_mandag.svg" alt="Mandag" title="Mandag" />
+            </a>
+        </li>
+        <li class="list">
+            <a href="#dag2" target="_self">
+                <img class="navIkoner" src="/images/svg/tp_dag-2_tirsdag.svg" alt="Tirsdag" title="Tirsdag" />
+            </a>
+        </li>
+        <li class="list">
+            <a href="#dag3" target="_self">
+                <img class="navIkoner" src="/images/svg/tp_dag-3_onsdag.svg" alt="Onsdag" title="Onsdag" />
+            </a>
+        </li>
+        <li class="list">
+            <a href="#dag4" target="_self">
+                <img class="navIkoner" src="/images/svg/tp_dag-4_torsdag.svg" alt="Torsdag" title="Torsdag" />
+            </a>
+        </li>
+        <li class="list">
+            <a href="#dag5" target="_self">
+                <img class="navIkoner" src="/images/svg/tp_dag-5_fredag.svg" alt="Fredag" title="Fredag" />
+            </a>
+        </li>
+        <li class="indikator"></li>
+    </ul>
+</nav>

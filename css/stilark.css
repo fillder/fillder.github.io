@@ -76,3 +76,101 @@ video {
    --clr-skolefarge1: #ef7c00;
    --clr-skolefarge2: #ffffff;
 }
+/*______ Knapper ______*/
+button {
+   background-color: transparent;
+   border: none;
+   background: none;
+   cursor: pointer;
+}
+a {
+   cursor: pointer;
+   text-decoration: none;
+}
+/*______ Navigasjon ______*/
+nav {
+   position: fixed;
+   top: 0;
+   left: 0;
+   display: grid;
+   grid-template-columns: 0.2fr 1fr 0.2fr;
+   grid-template-rows: 1fr;
+   place-content: center;
+   background-color: var(--clr-fremheving);
+   border-bottom: 2px solid var(--clr-ramme);
+   height: 50px;
+   width: 100%;
+   z-index: 150;
+   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+}
+.hjem {
+   display: flex;
+   align-items: center;
+   justify-content: start;
+   width: 35px;
+   height: 35px;
+   cursor: pointer;
+   margin-inline: 1rem;
+}
+.maskeHjem {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/nav_hjem.svg) no-repeat center;
+   mask: url(/images/svg/nav_hjem.svg) no-repeat center;
+}
+.logo {
+   display: flex;
+   align-items: center;
+   place-self: center;
+   font-family: "Roboto Slab", serif;
+   font-weight: 700;
+   font-size: 30px;
+}
+.maskeTilbake {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/nav_pil-tilbake.svg) no-repeat center;
+   mask: url(/images/svg/nav_pil-tilbake.svg) no-repeat center;
+}
+.maskeNeste {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/nav_pil-neste.svg) no-repeat center;
+   mask: url(/images/svg/nav_pil-neste.svg) no-repeat center;
+}
+.logo > * {
+   margin-inline: 1rem;
+}
+.flexHoyre {
+   display: flex;
+   align-items: center;
+   justify-content: end;
+}
+.flexHoyre > * {
+   margin-inline: 1rem;
+}
+.dag-natt {
+   width: 35px;
+   height: 35px;
+}
+.skolelogo {
+   width: 30px;
+   height: 30px;
+}
+.pil {
+   width: 24px;
+   height: 30px;
+}
+.utilgjengelig {
+   opacity: 0.2;
+}
+/*______ footer ______*/
+footer {
+   height: 3rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   place-content: center;
+   background-color: var(--clr-fremheving);
+   border-top: 2px solid var(--clr-ramme);
+   height: 50px;
+   width: 100%;
+   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+}
