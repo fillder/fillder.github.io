@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;0,700;1,300&family=Roboto+Slab:wght@300;500;700&family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/stilark.css" />
+    <link rel="stylesheet" type="text/css" href="/css/dag-natt.css" />
+    <link rel="stylesheet" type="text/css" href="/css/ob_design.css" />
+    <link rel="stylesheet" type="text/css" href="/css/ob_mobil.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="/css/ob_bildegalleri.css" /> -->
+    <link rel="icon" href="/images/ico/skolelogo.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/images/ico/skolelogo.svg">
+    <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg">
+    <script type="module" src="/js/dag-natt.js"></script>
+    <!-- <script type="module" src="/js/rb_seksjoner.js"></script> -->
+    <!-- <script type="module" src="/js/rb_bildekarusell.js"></script> -->
+    <title>Oppdragsbank</title>
+</head>
+
+<body>
+    <nav>
+        <button type="button" alt="hjem" title="hjem">
+            <div class="hjem maskeHjem"></div>
+        </button>
+        <div class="logo">
+            <h1><b>OPPDRAGSBANK</b></h1>
+        </div>
+        <div class="flexHoyre">
+            <div class="modusikon">
+                <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
+                    <svg class="svg-anim" viewBox="0 70 100 100">
+                        <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-width="6" stroke-dasharray="20"
+                            stroke-dashoffset="0" />
+                        <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-width="6" stroke-dasharray="20"
+                            stroke-dashoffset="0" />
+                        <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-width="6" stroke-dasharray="20"
+                            stroke-dashoffset="0" />
+                        <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-width="6" stroke-dasharray="20"
+                            stroke-dashoffset="0" />
+                        <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-width="6" stroke-dasharray="20"
+                            stroke-dashoffset="0" />
+                        <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-width="6" stroke-dasharray="20"
+                            stroke-dashoffset="0" />
+                        <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-width="6"
+                            stroke-dasharray="20" stroke-dashoffset="0" />
+                        <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-width="6" stroke-dasharray="20"
+                            stroke-dashoffset="0" />
+                        <circle class="sun" cx="50" cy="120" r="20" />
+                        <circle class="moon" cx="135" cy="40" r="40" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <header class="hero">
+        <img class="hero-bilde" src="/images/ob_kategoribanner-2_3d.png" alt="bilde av en skjerm med kode">
+        <div class="hero-tittel">
+            <h1><b>2. 3D-grafikk</b></h1>
+        </div>
+        <div class="hero-emblem ob-ramme-rund" data-ikon="treD_grafikkIkon">
+            <div class="svgIkon maskeTreD"></div>
+        </div>
+    </header>
+    <main>
+        <div class="gridBeholderkategori">
+            <section class="oppdrag oppdragsboks ramme" data-seksjon="treD_grafikk">
+                <div class="oppdragsListe">
+                    <div class="oppdragsListeElement">
+                        <h3 class="spessartinDekorasjon">2.1. Opplæring</h3>
+
+                    </div>
+                    <div class="oppdragsListeElement">
+                        <h3 class="spessartinDekorasjon">2.2. Oppdrag</h3>
+                        <ul>
+                            <li>
+                                <h5>3D-modellering: Gjenskap et spillobjekt</h5>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="oppdragsListeElement">
+                        <h3 class="spessartinDekorasjon">2.3. Nettressurser</h3>
+                    </div>
+                </div>
+                <div>
+                    <h3>spiciness</h3>
+                </div>
+                <div>
+                    <h3>tid</h3>
+                </div>
+            </section>
+            <!-- <section class="galleri">
+                <div class="galleri-grid rb-ramme" id="galleri-grid">
+                    <img src="images/img1.png" class="miniatyrbilde" alt="alt1">
+                    <img src="images/img2.png" class="miniatyrbilde" alt="alt2">
+                    <img src="images/img3.png" class="miniatyrbilde" alt="alt3">
+                    <img src="images/img4.png" class="miniatyrbilde" alt="alt4">
+                    <svg class="pil pil-tilbake" viewBox="0 0 40 50" alt="forrige bildegruppe">
+                        <path
+                            d="m.98,26.81l35.81,22.86c1.4.89,3.21-.13,3.21-1.81V2.14c0-1.68-1.81-2.7-3.21-1.81L.98,23.19c-1.31.84-1.31,2.79,0,3.62Z" />
+                    </svg>
+                    <svg class="pil pil-neste" viewBox="0 0 40 50" alt="neste bildegruppe">
+                        <path
+                            d="m39.02,23.19L3.21.33C1.81-.56,0,.46,0,2.14v45.72c0,1.68,1.81,2.7,3.21,1.81l35.81-22.86c1.31-.84,1.31-2.79,0-3.62Z" />
+                    </svg>
+                    <div class="sideTeller">
+                        <span class="gjeldendeSiden"></span>
+                        <span class="sideSkille">/</span>
+                        <span class="siderTotalt"></span>
+                    </div>
+                </div>
+                <div class="bildefremvisning">
+                    <div class="fokusramme rb-ramme">
+                        <div class="fokusrammeHeader">
+                            <div class="fokusbildeTittel">
+                                <h3 class="tittelTekst"></h3>
+                            </div>
+                            <svg class="kryss" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="25" cy="25" r="22.5" />
+                                <line x1="15" y1="15" x2="35" y2="35" />
+                                <line x1="35" y1="15" x2="15" y2="35" />
+                            </svg>
+                        </div>
+                        <div class="fokusKarusell">
+                            <svg class="fokuspil fokuspil-tilbake" viewBox="0 0 40 50" alt="forrige bildegruppe">
+                                <path
+                                    d="m.98,26.81l35.81,22.86c1.4.89,3.21-.13,3.21-1.81V2.14c0-1.68-1.81-2.7-3.21-1.81L.98,23.19c-1.31.84-1.31,2.79,0,3.62Z" />
+                            </svg>
+                            <div class="fokusvindu">
+                            </div>
+                            <svg class="fokuspil fokuspil-neste" viewBox="0 0 40 50" alt="neste bildegruppe">
+                                <path
+                                    d="m39.02,23.19L3.21.33C1.81-.56,0,.46,0,2.14v45.72c0,1.68,1.81,2.7,3.21,1.81l35.81-22.86c1.31-.84,1.31-2.79,0-3.62Z" />
+                            </svg>
+                        </div>
+                        <div class="fokusrammeInfo">
+                            <div class="bildetekst">
+                                <p class="altTekst"></p>
+                            </div>
+                            <div class="bildeTeller">
+                                <span class="gjeldendeBilde"></span>
+                                <span class="bildeSkille">/</span>
+                                <span class="bilderTotalt"></span>
+                            </div>
+                        </div>
+                        <div class=bildekarusell>
+                            <div class="karusellramme">
+                                <img src="images/img1.png" class="karusellbilde" alt="alt1">
+                            </div>
+                            <div class="karusellramme">
+                                <img src="images/img2.png" class="karusellbilde" alt="alt2">
+                            </div>
+                            <div class="karusellramme">
+                                <img src="images/img3.png" class="karusellbilde" alt="alt3">
+                            </div>
+                            <div class="karusellramme">
+                                <img src="images/img4.png" class="karusellbilde" alt="alt4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+        </div>
+    </main>
+    <footer>
+        <p> Denne nettsiden er designet og utviklet av Marius Strøm Riseth // Fyrstikkalléen videregående skole • F21
+            vgs</p>
+    </footer>
+</body>
+
+</html>

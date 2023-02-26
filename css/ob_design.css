@@ -43,21 +43,28 @@ header {
 .hero-tittel h1 {
    color: whitesmoke;
 }
-/* .hero-emblem {
-   position: relative; 
-   bottom: -50%;
-   transform: translateX(-50%); 
-   width: 4rem;
-   height: 4rem;
-} */
+.hero-emblem {
+   position: relative;
+   bottom: -84%;
+   /* transform: translateX(-50%); */
+   width: 120px;
+   height: 120px;
+   margin: auto;
+   padding: 0.8rem;
+   z-index: 110;
+}
 /*______ hovedinnhold ______*/
 h3 {
    font-weight: 500;
 }
 main {
    background-color: var(--clr-bakgrunn);
+   width: 100%;
    max-width: 1600px;
    margin-inline: auto;
+}
+.ramme {
+   padding: 1rem;
 }
 .ob-ramme-rund {
    background-color: var(--clr-boks);
@@ -67,6 +74,7 @@ main {
    border-radius: 50;
    border-style: solid;
 }
+/*______ Grid hovedside ______*/
 .gridBeholder {
    display: grid;
    grid-gap: 1rem;
@@ -83,28 +91,15 @@ main {
       "lyd dri pro web kun"
       "inf inf inf inf inf"
       "tek tek tek tek tek";
-   /*
-   gra = 2D-grafikk
-   tre = 3D-grafikk 
-   fot = Fotografi
-   fil = Film
-   ani = Animasjon
-   lyd = Lyddesign
-   dri = Drift
-   pro = Programmering
-   web = Webutvikling
-   kun = Kunstig intelligens
-   */
 }
 .gridBeholder > * {
    display: grid;
    place-items: center;
 }
-/*______ Grid area ______*/
-.to-d_grafikk {
+.toD_grafikk {
    grid-area: gra;
 }
-.tre-d_grafikk {
+.treD_grafikk {
    grid-area: tre;
 }
 .fotografi {
@@ -144,7 +139,6 @@ main {
    margin-block-start: 2rem;
    margin-block-end: 1rem;
 }
-
 /*______ kategoriIkoner ______*/
 .kategoriIkon {
    position: relative;
@@ -165,6 +159,180 @@ main {
    z-index: 100;
    padding: 1rem;
    text-align: center;
+}
+/*______ infoKnapper ______*/
+.infoKnapper {
+   display: flex;
+   justify-content: space-around;
+}
+.infoKnappIkon {
+   position: relative;
+   width: 100px;
+   height: 100px;
+   z-index: 110;
+   padding: 1rem;
+}
+.infoKnappTittel {
+   position: relative;
+   min-width: 300px;
+   padding: 1rem;
+   margin-inline-start: -2rem;
+   z-index: 100;
+}
+/*______ tekst bokser ______*/
+.teksInnhold {
+   display: grid;
+   grid-template-columns: auto 1fr;
+   padding: 1rem;
+   gap: 1rem;
+   height: 100%;
+   background-color: var(--clr-fremheving);
+   border: 2px solid var(--clr-ramme);
+   border-radius: 1rem;
+}
+.tittelIkon {
+   display: flex;
+   flex-direction: column;
+   place-items: start;
+}
+/*______  Grid kategoriside  ______*/
+.gridBeholderkategori {
+   display: grid;
+   grid-gap: 1rem;
+   margin-block: 3rem;
+   column-gap: 1rem;
+   row-gap: 2rem;
+   width: 80%;
+   height: auto;
+   margin-inline: auto;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: 1fr auto auto;
+   grid-template-areas:
+      "opp opp opp"
+      "eks eks res"
+      "gal gal gal";
+   /*
+   opp = Oppdrag
+   eks = Ekstra info 
+   res = Nettressurser
+   gal = Galleri
+   */
+}
+.oppdrag {
+   grid-area: opp;
+}
+.ekstra-info {
+   grid-area: eks;
+}
+.nett-ressurser {
+   grid-area: res;
+}
+.bildegalleri {
+   grid-area: gal;
+}
+/*______ Katergoriside ______*/
+.oppdragsboks {
+   display: grid;
+   grid-template-columns: 1fr auto auto;
+   background-color: var(--clr-fremheving);
+}
+.oppdragsListe {
+   width: max-content;
+}
+.oppdragsListeElement {
+   margin-bottom: 1rem;
+}
+ul li h5::before {
+   list-style: none;
+   content: "•";
+   font-family: "Roboto Slab", serif;
+   color: var(--clr-spessartin);
+   font-weight: 700;
+   display: inline-block;
+   width: 1rem;
+   margin-inline-start: 1rem;
+}
+.oppdragsListeElement ul li {
+   border: solid var(--clr-spessartin);
+   background-color: var(--clr-boks);
+   border-radius: 50rem;
+   border-width: 1px 1px 3px 3px;
+   padding-block: 0.5rem;
+   padding-inline-end: 2rem;
+   margin: 0.5rem;
+}
+
+/*______ tekstFarger ______*/
+.rubinTekst {
+   color: var(--clr-rubin);
+}
+.spessartinTekst {
+   color: var(--clr-spessartin);
+}
+.citrinTekst {
+   color: var(--clr-citrin);
+}
+.smaragdTekst {
+   color: var(--clr-smaragd);
+}
+.amazonittTekst {
+   color: var(--clr-amazonitt);
+}
+.akvamarinTekst {
+   color: var(--clr-akvamarin);
+}
+.safirTekst {
+   color: var(--clr-safir);
+}
+.ametystTekst {
+   color: var(--clr-ametyst);
+}
+.kunzittTekst {
+   color: var(--clr-kunzitt);
+}
+.thulittTekst {
+   color: var(--clr-thulitt);
+}
+/*______ dekorasjonsFarger ______*/
+.rubinDekorasjon {
+   text-decoration: 2px underline var(--clr-rubin);
+   text-underline-offset: 3px;
+}
+.spessartinDekorasjon {
+   text-decoration: 2px underline var(--clr-spessartin);
+   text-underline-offset: 3px;
+}
+.citrinDekorasjon {
+   text-decoration: 2px underline var(--clr-citrin);
+   text-underline-offset: 3px;
+}
+.smaragdDekorasjon {
+   text-decoration: 2px underline var(--clr-smaragd);
+   text-underline-offset: 3px;
+}
+.amazonittDekorasjon {
+   text-decoration: 2px underline var(--clr-amazonitt);
+   text-underline-offset: 3px;
+}
+.akvamarinDekorasjon {
+   text-decoration: 2px underline var(--clr-akvamarin);
+   text-underline-offset: 3px;
+}
+.safirDekorasjon {
+   text-decoration: 2px underline var(--clr-safir);
+   text-underline-offset: 3px;
+}
+.ametystDekorasjon {
+   text-decoration: 2px underline var(--clr-ametyst);
+   text-underline-offset: 3px;
+}
+.kunzittDekorasjon {
+   text-decoration: 2px underline var(--clr-kunzitt);
+   text-underline-offset: 3px;
+}
+.thulittDekorasjon {
+   text-decoration: 2px underline var(--clr-thulitt);
+   text-underline-offset: 3px;
 }
 /*______ Masker ______*/
 .maskeGrafisk {
@@ -216,6 +384,32 @@ main {
    background-color: var(--clr-thulitt);
    -webkit-mask: url(/images/svg/ob_10_ai.svg) no-repeat center;
    mask: url(/images/svg/ob_10_ai.svg) no-repeat center;
+}
+.portfolio {
+   width: 100%;
+   height: 100%;
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_ikon_portfolio.svg) no-repeat center;
+   mask: url(/images/svg/ob_ikon_portfolio.svg) no-repeat center;
+}
+.suksesskriterer {
+   width: 100%;
+   height: 100%;
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_ikon_suksesskriterer.svg) no-repeat center;
+   mask: url(/images/svg/ob_ikon_suksesskriterer.svg) no-repeat center;
+}
+.visuell-logg {
+   width: 100%;
+   height: 100%;
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_ikon_visuell-logg.svg) no-repeat center;
+   mask: url(/images/svg/ob_ikon_visuell-logg.svg) no-repeat center;
+}
+.maskeSpice {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_spiciness-gradient.svg) no-repeat center;
+   mask: url(/images/svg/ob_spiciness-gradient.svg) no-repeat center;
 }
 /*______ TittelHover ______*/
 .hover2d,
@@ -303,73 +497,6 @@ main {
    text-decoration: 3px underline var(--clr-thulitt);
    transform: scale(1.02);
 }
-/*______ tekstFarger ______*/
-.rubinTekst {
-   color: var(--clr-rubin);
-}
-.spessartinTekst {
-   color: var(--clr-spessartin);
-}
-.citrinTekst {
-   color: var(--clr-citrin);
-}
-.smaragdTekst {
-   color: var(--clr-smaragd);
-}
-.amazonittTekst {
-   color: var(--clr-amazonitt);
-}
-.akvamarinTekst {
-   color: var(--clr-akvamarin);
-}
-.safirTekst {
-   color: var(--clr-safir);
-}
-.ametystTekst {
-   color: var(--clr-ametyst);
-}
-.kunzittTekst {
-   color: var(--clr-kunzitt);
-}
-.thulittTekst {
-   color: var(--clr-thulitt);
-}
-/*______ dekorasjonsFarger ______*/
-.rubinDekorasjon {
-   text-decoration: 3px underline var(--clr-rubin);
-}
-.spessartinDekorasjon {
-   text-decoration: 3px underline var(--clr-spessartin);
-}
-.citrinDekorasjon {
-   text-decoration: 3px underline var(--clr-citrin);
-}
-.smaragdDekorasjon {
-   text-decoration: 3px underline var(--clr-smaragd);
-}
-.amazonittDekorasjon {
-   text-decoration: 3px underline var(--clr-amazonitt);
-}
-.akvamarinDekorasjon {
-   text-decoration: 3px underline var(--clr-akvamarin);
-}
-.safirDekorasjon {
-   text-decoration: 3px underline var(--clr-safir);
-}
-.ametystDekorasjon {
-   text-decoration: 3px underline var(--clr-ametyst);
-}
-.kunzittDekorasjon {
-   text-decoration: 3px underline var(--clr-kunzitt);
-}
-.thulittDekorasjon {
-   text-decoration: 3px underline var(--clr-thulitt);
-}
-/*______ infoKnapper ______*/
-.infoKnapper {
-   display: flex;
-   justify-content: space-around;
-}
 .flexInfoKnapp {
    display: flex;
    text-align: center;
@@ -386,60 +513,4 @@ main {
    transition: transform 0.3s ease-in-out;
    text-decoration: 3px underline var(--clr-tekst);
    transform: scale(1.02);
-}
-.infoKnappIkon {
-   position: relative;
-   width: 100px;
-   height: 100px;
-   z-index: 110;
-   padding: 1rem;
-}
-.infoKnappTittel {
-   position: relative;
-   min-width: 300px;
-   padding: 1rem;
-   margin-inline-start: -2rem;
-   z-index: 100;
-}
-.portfolio {
-   width: 100%;
-   height: 100%;
-   background-color: var(--clr-tekst);
-   -webkit-mask: url(/images/svg/ob_ikon_portfolio.svg) no-repeat center;
-   mask: url(/images/svg/ob_ikon_portfolio.svg) no-repeat center;
-}
-.suksesskriterer {
-   width: 100%;
-   height: 100%;
-   background-color: var(--clr-tekst);
-   -webkit-mask: url(/images/svg/ob_ikon_suksesskriterer.svg) no-repeat center;
-   mask: url(/images/svg/ob_ikon_suksesskriterer.svg) no-repeat center;
-}
-.visuell-logg {
-   width: 100%;
-   height: 100%;
-   background-color: var(--clr-tekst);
-   -webkit-mask: url(/images/svg/ob_ikon_visuell-logg.svg) no-repeat center;
-   mask: url(/images/svg/ob_ikon_visuell-logg.svg) no-repeat center;
-}
-/*______ tekst bokser ______*/
-.teksInnhold {
-   display: grid;
-   grid-template-columns: auto 1fr;
-   padding: 1rem;
-   gap: 1rem;
-   height: 100%;
-   background-color: var(--clr-fremheving);
-   border: 2px solid var(--clr-ramme);
-   border-radius: 1rem;
-}
-.tittelIkon {
-   display: flex;
-   flex-direction: column;
-   place-items: start;
-}
-.maskeSpice {
-   background-color: var(--clr-tekst);
-   -webkit-mask: url(/images/svg/ob_spiciness-gradient.svg) no-repeat center;
-   mask: url(/images/svg/ob_spiciness-gradient.svg) no-repeat center;
 }
