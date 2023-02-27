@@ -70,7 +70,7 @@ main {
    display: flex;
    gap: 0.5rem;
    justify-content: space-between;
-   min-width: 340px;
+   /* min-width: 340px; */
    background-color: var(--clr-main);
    max-width: 1600px;
    padding-inline: 1vw;

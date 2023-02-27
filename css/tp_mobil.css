@@ -1,8 +1,4 @@
 @media (max-width: 1200px) {
-   .svgIkon {
-      width: 40px;
-      height: 20px;
-   }
    .gruppe-xy {
       display: flex;
       flex-wrap: wrap;
@@ -13,9 +9,6 @@
       flex-wrap: wrap;
       justify-content: space-around;
    }
-}
-/*______ mobilversjon ______*/
-@media (max-width: 1200px) {
    .svgIkon {
       width: 30px;
       height: 15px;
@@ -44,6 +37,7 @@
       overflow-x: auto;
       gap: 10rem;
       grid-auto-columns: 100%;
+      margin-inline: auto;
    }
 
    h1 {
