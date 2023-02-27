@@ -239,6 +239,10 @@ nav {
 .utilgjengelig {
    opacity: 0.2;
 }
+.svgIkon {
+   width: 100%;
+   height: 100%;
+}
 /*______ Main ______*/
 .boksRamme {
    border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
@@ -258,17 +262,17 @@ nav {
    padding-inline: 1rem;
    padding-block: 0.5rem;
 }
-.ixDStor {
+.ixD {
    background-color: var(--clr-ixDRamme);
    border-color: var(--clr-ramme);
-   border-width: 2px 2px 6px 6px;
-   padding-inline: 1rem;
-   padding-block: 0.5rem;
 }
-.ixDLiten {
-   background-color: var(--clr-ixDRamme);
-   border-color: var(--clr-ramme);
+
+.sPad {
    border-width: 1px 1px 3px 3px;
+}
+
+.lPad {
+   border-width: 2px 2px 6px 6px;
 }
 
 /*______ footer ______*/

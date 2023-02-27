@@ -110,13 +110,7 @@ header {
    width: 50px;
    height: 50px;
    z-index: 4;
-   stroke-linecap: round;
-   stroke-linejoin: round;
-   stroke-width: 2;
-   stroke-miterlimit: 10;
-   stroke: var(--clr-tekst);
-   fill: none;
-   padding: 0;
+   padding: 0.4rem;
 }
 .ifKnappIkon svg circle {
    fill: var(--clr-tekst);
@@ -139,7 +133,6 @@ header {
 .ifKnapp.aktiv .ifKnappIkon {
    stroke: var(--aktiv-farge);
 }
-
 .ifKnapp.aktiv .ifKnappIkon svg circle {
    fill: var(--aktiv-farge);
 }
@@ -193,81 +186,100 @@ header {
 .ifSekskonListe {
    list-style: none;
 }
+.ifSeksjonsGrid {
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   grid-template-areas:
+      "sek kna"
+      "det det";
+   gap: 1rem;
+}
+.seksjonInfo {
+   grid-area: sek;
+}
+.seksjonRessurser {
+   grid-area: kna;
+}
+.seksjonDetaljer {
+   grid-area: det;
+   column-span: 1/2;
+}
+.seksjonikon {
+   display: flex;
+}
+.seksjonikon .ifKnappIkon {
+   margin-inline-end: 1rem;
+}
+
 .seksjons-safir {
    text-decoration: underline var(--clr-safir) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-akvamarin {
    text-decoration: underline var(--clr-akvamarin) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-amazonitt {
    text-decoration: underline var(--clr-amazonitt) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-smaragd {
    text-decoration: underline var(--clr-smaragd) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-citrin {
    text-decoration: underline var(--clr-citrin) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-spessartin {
    text-decoration: underline var(--clr-spessartin) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-rubin {
    text-decoration: underline var(--clr-rubin) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-thulitt {
    text-decoration: underline var(--clr-thulitt) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-kunzitt {
    text-decoration: underline var(--clr-kunzitt) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-ametyst {
    text-decoration: underline var(--clr-ametyst) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
-.seksjonikon {
-   display: flex;
-}
-/*______ Artikkelområde ______*/
+/*______ Tabeller ______*/
 table {
    width: 100%;
+   margin-block-end: 1rem;
 }
-th {
-   padding-block: 0.5rem;
+table,
+th,
+td {
+   border: 1px solid;
+   border-radius: 5px 5px 10px 10px;
 }
 thead {
    background-color: var(--clr-ramme);
 }
+th {
+   padding-block: 0.5rem;
+   padding-inline: 1rem;
+}
 .td-kategori {
-   background-color: var(--clr-ramme);
    padding-inline: 1rem;
    padding-block: 0.4rem;
    font-family: "Roboto", sans-serif;
@@ -286,4 +298,82 @@ thead {
 td span,
 td p {
    display: inline-block;
+}
+/*______ Detaljeliste ______*/
+details > summary {
+   font-family: "Roboto", sans-serif;
+   font-size: clamp(0.9rem, 9vw, 1.2rem);
+   font-weight: 500;
+   padding-block: 0.5rem;
+   padding-inline: 1rem;
+   cursor: pointer;
+   border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
+   border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
+   border-bottom-left-radius: clamp(0.5rem, 0.6rem, 0.8vw);
+   border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
+   border-width: 1px 1px 3px 3px;
+   border-style: solid;
+   border-color: var(--clr-ramme);
+}
+details[open] > summary {
+   border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
+   border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 0;
+   border-width: 1px 1px 1px 3px;
+}
+.detaljeRamme {
+   border-bottom-left-radius: clamp(0.5rem, 0.6rem, 0.8vw);
+   border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
+   border-top-right-radius: 0;
+   border-top-left-radius: 0;
+   border-width: 1px 1px 3px 3px;
+   border-style: solid;
+   border-color: var(--clr-ramme);
+   background-color: var(--clr-tekstRamme);
+   padding-inline: 1rem;
+}
+details div h5 {
+   padding-block-start: 0.5rem;
+}
+details div p {
+   padding-block-end: 1rem;
+}
+
+.maskeDialog {
+   -webkit-mask: url(/images/svg/rb_ikon-dialog.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-dialog.svg) no-repeat center;
+}
+.maskeEksamen {
+   -webkit-mask: url(/images/svg/rb_ikon-eksamen.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-eksamen.svg) no-repeat center;
+}
+.maskeLk20 {
+   -webkit-mask: url(/images/svg/rb_ikon-lk20.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-lk20.svg) no-repeat center;
+}
+.maskeTverrfaglig {
+   -webkit-mask: url(/images/svg/rb_ikon-tverrfaglig.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-tverrfaglig.svg) no-repeat center;
+}
+.maskeYFF {
+   -webkit-mask: url(/images/svg/rb_ikon-yff.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-yff.svg) no-repeat center;
+}
+.maskeIT {
+   -webkit-mask: url(/images/svg/rb_ikon-it.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-it.svg) no-repeat center;
+}
+.maskeMP {
+   -webkit-mask: url(/images/svg/rb_ikon-mp.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-mp.svg) no-repeat center;
+}
+.maskeVurdering {
+   -webkit-mask: url(/images/svg/rb_ikon-vurdering.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-vurdering.svg) no-repeat center;
+}
+.svgIkon {
+   background-color: var(--clr-tekst);
+   width: 100%;
+   height: 100%;
 }
