@@ -44,7 +44,6 @@
       overflow-x: auto;
       gap: 10rem;
       grid-auto-columns: 100%;
-      margin-inline: 1rem;
    }
 
    h1 {
@@ -110,7 +109,6 @@
       overflow-x: auto;
       gap: 10rem;
       grid-auto-columns: 100%;
-      margin-bottom: 5rem;
    }
    h1 {
       font-size: 2rem;
