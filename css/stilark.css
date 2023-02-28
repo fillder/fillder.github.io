@@ -256,6 +256,13 @@ nav {
    border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
    border-style: solid;
 }
+.tabellRamme {
+   border-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+   border-color: var(--clr-ramme);
+   border-width: 1px;
+   border-style: solid;
+}
 .rundRamme {
    border-radius: 50rem;
    border-style: solid;
@@ -269,6 +276,10 @@ nav {
 .tab {
    background-color: var(--clr-tabellBoks);
 }
+.xSB {
+   border-color: var(--clr-ramme);
+   border-width: 0.5px 0.5px 1.5px 1.5px;
+}
 .sB {
    border-color: var(--clr-ramme);
    border-width: 1px 1px 3px 3px;
@@ -276,6 +287,10 @@ nav {
 .lB {
    border-width: 2px 2px 6px 6px;
    border-color: var(--clr-ramme);
+}
+.xSP {
+   padding-block: 0.25rem;
+   padding-inline: 0.5rem;
 }
 .sP {
    padding-block: 0.5rem;

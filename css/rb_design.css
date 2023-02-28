@@ -141,7 +141,7 @@ header {
 }
 .ifSeksjonsGrid {
    display: grid;
-   grid-template-columns: 1fr auto;
+   grid-template-columns: 1fr 0.6fr;
    grid-template-areas:
       "sI1 kna"
       "sI2 kna"
@@ -171,35 +171,19 @@ table {
    width: 100%;
    margin-block-end: 1rem;
 }
-table,
-th,
-td {
-   border: 1px solid;
-   /* border-radius: 5px 5px 10px 10px; */
-}
-th {
-   padding-block: 0.5rem;
-   padding-inline: 1rem;
-}
 .td-kategori {
-   padding-inline: 1rem;
-   padding-block: 0.4rem;
    font-family: "Roboto", sans-serif;
    font-weight: 300;
    line-height: 1.5;
    font-size: clamp(0.9rem, 0.9vw, 1.1rem);
-   width: 30%;
+   /* width: 30%; */
 }
-.td-innhold {
-   padding-inline: 1rem;
-   font-family: "Roboto", sans-serif;
-   font-weight: 300;
-   line-height: 1.5;
-   font-size: clamp(0.9rem, 0.9vw, 1.1rem);
+.td-kategori a button {
+   margin-block: 0.25rem;
+   margin-inline-start: 0.25rem;
 }
-td span,
-td p {
-   display: inline-block;
+table thead tr th a {
+   display: none;
 }
 /*______ Liste ______*/
 ul {
@@ -226,12 +210,17 @@ ul li a button {
 .fylkesTittel {
    display: flex;
    align-items: center;
-   margin-block-start: 1rem;
+   padding-block: 0.5rem;
 }
 .fylkesTittel img {
    width: 30px;
    height: 30px;
-   margin-inline-end: 0.5rem;
+   margin-inline: 0.5rem;
+}
+table tbody tr td {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
 }
 /*______ Detaljeliste ______*/
 details {

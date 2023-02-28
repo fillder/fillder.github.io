@@ -51,4 +51,24 @@
    .logo span {
       display: none;
    }
+   .ifSeksjonsGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+         "sI1"
+         "sI2"
+         "kna"
+         "det";
+      gap: 1rem;
+   }
+   table tbody {
+      display: none;
+   }
+   table thead tr th a {
+      display: block;
+      margin-inline-end: 0.5rem;
+   }
+   .fylkesTittel {
+      justify-content: space-between;
+   }
 }
