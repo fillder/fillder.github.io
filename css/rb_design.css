@@ -141,7 +141,7 @@ header {
 }
 .ifSeksjonsGrid {
    display: grid;
-   grid-template-columns: 1fr auto;
+   grid-template-columns: 1fr 0.5fr;
    grid-template-areas:
       "sI1 sI1"
       "sI2 kna"
@@ -236,6 +236,16 @@ button {
 button:hover {
    transition: transform 0.3s ease-in-out;
    transform: scale(1.04);
+}
+.eksamensOppaver {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   text-align: center;
+   padding: 0.5rem;
+}
+.eksamensOppaver button {
+   margin-top: 0.25rem;
 }
 /*______ Detaljeliste ______*/
 details {
