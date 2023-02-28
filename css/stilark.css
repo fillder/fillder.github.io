@@ -38,8 +38,9 @@ video {
    --clr-main: #d0d2d2;
    --clr-tekst: #3e4247;
    --clr-ramme: #f5f5f6;
-   --clr-ixDRamme: #e5e6e7;
-   --clr-tekstRamme: #ececec;
+   --clr-ixDBoks: #b9bec2;
+   --clr-tabellBoks: #cacacf;
+   --clr-tekstBoks: #ececec;
    --clr-bakgrunn: #b7b5b5;
 
    --clr-safir: #367fff; /*programfag og drift*/
@@ -60,8 +61,9 @@ video {
    --clr-main: #14151f;
    --clr-tekst: #a8a8a8;
    --clr-ramme: #57637a;
-   --clr-ixDRamme: #0b0c13;
-   --clr-tekstRamme: #262738;
+   --clr-ixDBoks: #0b0c13;
+   --clr-tabellBoks: #1c1f2c;
+   --clr-tekstBoks: #262738;
    --clr-bakgrunn: #07070b;
 
    --clr-safir: #1fa6e2; /*programfag og drift*/
@@ -174,7 +176,7 @@ nav {
    grid-template-columns: 0.2fr 1fr 0.2fr;
    grid-template-rows: 1fr;
    place-content: center;
-   background-color: var(--clr-tekstRamme);
+   background-color: var(--clr-tekstBoks);
    border-bottom: 3px solid var(--clr-ramme);
    height: 50px;
    width: 100%;
@@ -241,10 +243,17 @@ nav {
 }
 /*______ Main ______*/
 .boksRamme {
-   border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
-   border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
-   border-bottom-left-radius: clamp(0.5rem, 0.6rem, 0.8vw);
-   border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
+   border-top-right-radius: clamp(0.2rem, 0.4rem, 0.6vw);
+   border-top-left-radius: clamp(0.8rem, 1.2rem, 1.2vw);
+   border-bottom-left-radius: clamp(0.2rem, 0.4rem, 0.6vw);
+   border-bottom-right-radius: clamp(0.8rem, 1.2rem, 1.2vw);
+   border-style: solid;
+}
+.sBoksRamme {
+   border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+   border-bottom-left-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
    border-style: solid;
 }
 .rundRamme {
@@ -252,18 +261,21 @@ nav {
    border-style: solid;
 }
 .tekst {
-   background-color: var(--clr-tekstRamme);
-   border-color: var(--clr-ramme);
+   background-color: var(--clr-tekstBoks);
 }
 .ixD {
-   background-color: var(--clr-ixDRamme);
-   border-color: var(--clr-ramme);
+   background-color: var(--clr-ixDBoks);
+}
+.tab {
+   background-color: var(--clr-tabellBoks);
 }
 .sB {
+   border-color: var(--clr-ramme);
    border-width: 1px 1px 3px 3px;
 }
 .lB {
    border-width: 2px 2px 6px 6px;
+   border-color: var(--clr-ramme);
 }
 .sP {
    padding-block: 0.5rem;
@@ -281,7 +293,7 @@ footer {
    justify-content: space-between;
    align-items: center;
    place-content: center;
-   background-color: var(--clr-tekstRamme);
+   background-color: var(--clr-tekstBoks);
    border-top: 3px solid var(--clr-ramme);
    height: 50px;
    width: 100%;

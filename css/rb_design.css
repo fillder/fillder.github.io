@@ -43,13 +43,6 @@ header {
 .hero-tittel h1 {
    color: whitesmoke;
 }
-/* .hero-emblem {
-   position: relative; 
-   bottom: -50%;
-   transform: translateX(-50%); 
-   width: 4rem;
-   height: 4rem;
-} */
 /*______ hovedinnhold ______*/
 .gridBeholder {
    display: grid;
@@ -129,46 +122,6 @@ header {
 .utilgjengelg:hover {
    transform: none;
 }
-/*______ Seksjonsknappfarger ______*/
-.ifKnapp.aktiv .ifKnappIkon {
-   stroke: var(--aktiv-farge);
-}
-.ifKnapp.aktiv .ifKnappIkon svg circle {
-   fill: var(--aktiv-farge);
-}
-.ifKnapp.aktiv .ifKnapptittel {
-   color: var(--aktiv-farge);
-}
-.ifKnapp.aktiv[data-farge="safir"] {
-   --aktiv-farge: var(--clr-safir);
-}
-.ifKnapp.aktiv[data-farge="akvamarin"] {
-   --aktiv-farge: var(--clr-akvamarin);
-}
-.ifKnapp.aktiv[data-farge="amazonitt"] {
-   --aktiv-farge: var(--clr-amazonitt);
-}
-.ifKnapp.aktiv[data-farge="smaragd"] {
-   --aktiv-farge: var(--clr-smaragd);
-}
-.ifKnapp.aktiv[data-farge="citrin"] {
-   --aktiv-farge: var(--clr-citrin);
-}
-.ifKnapp.aktiv[data-farge="spessartin"] {
-   --aktiv-farge: var(--clr-spessartin);
-}
-.ifKnapp.aktiv[data-farge="rubin"] {
-   --aktiv-farge: var(--clr-rubin);
-}
-.ifKnapp.aktiv[data-farge="thulitt"] {
-   --aktiv-farge: var(--clr-thulitt);
-}
-.ifKnapp.aktiv[data-farge="kunzitt"] {
-   --aktiv-farge: var(--clr-kunzitt);
-}
-.ifKnapp.aktiv[data-farge="ametyst"] {
-   --aktiv-farge: var(--clr-ametyst);
-}
 /*______ Seksjonanimasjon ______*/
 .ifSeksjon {
    max-height: 0;
@@ -188,14 +141,18 @@ header {
 }
 .ifSeksjonsGrid {
    display: grid;
-   grid-template-columns: 2fr 1fr;
+   grid-template-columns: 1fr auto;
    grid-template-areas:
-      "sek kna"
+      "sI1 kna"
+      "sI2 kna"
       "det det";
    gap: 1rem;
 }
-.seksjonInfo {
-   grid-area: sek;
+.seksjonInfo1 {
+   grid-area: sI1;
+}
+.seksjonInfo2 {
+   grid-area: sI2;
 }
 .seksjonRessurser {
    grid-area: kna;
@@ -209,57 +166,6 @@ header {
 .seksjonikon .ifKnappIkon {
    margin-inline-end: 1rem;
 }
-
-.seksjons-safir {
-   text-decoration: underline var(--clr-safir) 3px;
-   text-underline-offset: 3px;
-   margin-block-end: 1rem;
-}
-.seksjons-akvamarin {
-   text-decoration: underline var(--clr-akvamarin) 3px;
-   text-underline-offset: 3px;
-   margin-block-end: 1rem;
-}
-.seksjons-amazonitt {
-   text-decoration: underline var(--clr-amazonitt) 3px;
-   text-underline-offset: 3px;
-   margin-block-end: 1rem;
-}
-.seksjons-smaragd {
-   text-decoration: underline var(--clr-smaragd) 3px;
-   text-underline-offset: 3px;
-   margin-block-end: 1rem;
-}
-.seksjons-citrin {
-   text-decoration: underline var(--clr-citrin) 3px;
-   text-underline-offset: 3px;
-   margin-block-end: 1rem;
-}
-.seksjons-spessartin {
-   text-decoration: underline var(--clr-spessartin) 3px;
-   text-underline-offset: 3px;
-   margin-block-end: 1rem;
-}
-.seksjons-rubin {
-   text-decoration: underline var(--clr-rubin) 3px;
-   text-underline-offset: 3px;
-   margin-block-end: 1rem;
-}
-.seksjons-thulitt {
-   text-decoration: underline var(--clr-thulitt) 3px;
-   text-underline-offset: 3px;
-   margin-block-end: 1rem;
-}
-.seksjons-kunzitt {
-   text-decoration: underline var(--clr-kunzitt) 3px;
-   text-underline-offset: 3px;
-   margin-block-end: 1rem;
-}
-.seksjons-ametyst {
-   text-decoration: underline var(--clr-ametyst) 3px;
-   text-underline-offset: 3px;
-   margin-block-end: 1rem;
-}
 /*______ Tabeller ______*/
 table {
    width: 100%;
@@ -269,10 +175,7 @@ table,
 th,
 td {
    border: 1px solid;
-   border-radius: 5px 5px 10px 10px;
-}
-thead {
-   background-color: var(--clr-ramme);
+   /* border-radius: 5px 5px 10px 10px; */
 }
 th {
    padding-block: 0.5rem;
@@ -342,35 +245,36 @@ details > summary {
    padding-block: 0.5rem;
    padding-inline: 1rem;
    cursor: pointer;
-   border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
-   border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
-   border-bottom-left-radius: clamp(0.5rem, 0.6rem, 0.8vw);
-   border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
+   border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+   border-bottom-left-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
    border-width: 1px 1px 3px 3px;
    border-style: solid;
    border-color: var(--clr-ramme);
 }
 details[open] > summary {
-   border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
-   border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
+   border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
    border-bottom-left-radius: 0;
    border-bottom-right-radius: 0;
    border-width: 1px 1px 1px 3px;
 }
 .detaljeRamme {
-   border-bottom-left-radius: clamp(0.5rem, 0.6rem, 0.8vw);
-   border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
+   border-bottom-left-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
    border-top-right-radius: 0;
    border-top-left-radius: 0;
    border-width: 1px 1px 3px 3px;
    border-style: solid;
    border-color: var(--clr-ramme);
-   background-color: var(--clr-ixDRamme);
+   background-color: var(--clr-ixDBoks);
    padding: 1rem;
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    gap: 1rem;
 }
+/*______ svgMasker ______*/
 .maskeDialog {
    -webkit-mask: url(/images/svg/rb_ikon-dialog.svg) no-repeat center;
    mask: url(/images/svg/rb_ikon-dialog.svg) no-repeat center;
@@ -407,4 +311,95 @@ details[open] > summary {
    background-color: var(--clr-tekst);
    width: 100%;
    height: 100%;
+}
+/*______ Seksjonsknappfarger ______*/
+.ifKnapp.aktiv .ifKnappIkon {
+   stroke: var(--aktiv-farge);
+}
+.ifKnapp.aktiv .ifKnappIkon svg circle {
+   fill: var(--aktiv-farge);
+}
+.ifKnapp.aktiv .ifKnapptittel {
+   color: var(--aktiv-farge);
+}
+.ifKnapp.aktiv[data-farge="safir"] {
+   --aktiv-farge: var(--clr-safir);
+}
+.ifKnapp.aktiv[data-farge="akvamarin"] {
+   --aktiv-farge: var(--clr-akvamarin);
+}
+.ifKnapp.aktiv[data-farge="amazonitt"] {
+   --aktiv-farge: var(--clr-amazonitt);
+}
+.ifKnapp.aktiv[data-farge="smaragd"] {
+   --aktiv-farge: var(--clr-smaragd);
+}
+.ifKnapp.aktiv[data-farge="citrin"] {
+   --aktiv-farge: var(--clr-citrin);
+}
+.ifKnapp.aktiv[data-farge="spessartin"] {
+   --aktiv-farge: var(--clr-spessartin);
+}
+.ifKnapp.aktiv[data-farge="rubin"] {
+   --aktiv-farge: var(--clr-rubin);
+}
+.ifKnapp.aktiv[data-farge="thulitt"] {
+   --aktiv-farge: var(--clr-thulitt);
+}
+.ifKnapp.aktiv[data-farge="kunzitt"] {
+   --aktiv-farge: var(--clr-kunzitt);
+}
+.ifKnapp.aktiv[data-farge="ametyst"] {
+   --aktiv-farge: var(--clr-ametyst);
+}
+/*______ Dekorasjonsfarger ______*/
+.seksjons-safir {
+   text-decoration: underline var(--clr-safir) 3px;
+   text-underline-offset: 3px;
+   margin-block-end: 1rem;
+}
+.seksjons-akvamarin {
+   text-decoration: underline var(--clr-akvamarin) 3px;
+   text-underline-offset: 3px;
+   margin-block-end: 1rem;
+}
+.seksjons-amazonitt {
+   text-decoration: underline var(--clr-amazonitt) 3px;
+   text-underline-offset: 3px;
+   margin-block-end: 1rem;
+}
+.seksjons-smaragd {
+   text-decoration: underline var(--clr-smaragd) 3px;
+   text-underline-offset: 3px;
+   margin-block-end: 1rem;
+}
+.seksjons-citrin {
+   text-decoration: underline var(--clr-citrin) 3px;
+   text-underline-offset: 3px;
+   margin-block-end: 1rem;
+}
+.seksjons-spessartin {
+   text-decoration: underline var(--clr-spessartin) 3px;
+   text-underline-offset: 3px;
+   margin-block-end: 1rem;
+}
+.seksjons-rubin {
+   text-decoration: underline var(--clr-rubin) 3px;
+   text-underline-offset: 3px;
+   margin-block-end: 1rem;
+}
+.seksjons-thulitt {
+   text-decoration: underline var(--clr-thulitt) 3px;
+   text-underline-offset: 3px;
+   margin-block-end: 1rem;
+}
+.seksjons-kunzitt {
+   text-decoration: underline var(--clr-kunzitt) 3px;
+   text-underline-offset: 3px;
+   margin-block-end: 1rem;
+}
+.seksjons-ametyst {
+   text-decoration: underline var(--clr-ametyst) 3px;
+   text-underline-offset: 3px;
+   margin-block-end: 1rem;
 }
