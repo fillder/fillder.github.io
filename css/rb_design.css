@@ -202,7 +202,6 @@ header {
 }
 .seksjonDetaljer {
    grid-area: det;
-   column-span: 1/2;
 }
 .seksjonikon {
    display: flex;
@@ -299,7 +298,43 @@ td span,
 td p {
    display: inline-block;
 }
+/*______ Liste ______*/
+ul {
+   list-style: none; /* Remove default bullets */
+   margin-block-end: 1rem;
+}
+ul li {
+   margin-left: 2em;
+}
+ul li p::before {
+   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+   color: var(--clr-citrin); /* Change the color */
+   font-weight: bold; /* If you want it to be bold */
+   display: inline-block; /* Needed to add space between the bullet and the text */
+   width: 1em; /* Also needed for space (tweak if needed) */
+   margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+ul li a button {
+   margin-left: -1em;
+}
+.seksjonRessurser div a button {
+   margin-block: 0.3rem;
+}
+.fylkesTittel {
+   display: flex;
+   align-items: center;
+   margin-block-start: 1rem;
+}
+.fylkesTittel img {
+   width: 30px;
+   height: 30px;
+   margin-inline-end: 0.5rem;
+}
 /*______ Detaljeliste ______*/
+details {
+   grid-column: span 2;
+   padding-block: 0.5rem;
+}
 details > summary {
    font-family: "Roboto", sans-serif;
    font-size: clamp(0.9rem, 9vw, 1.2rem);
@@ -330,16 +365,12 @@ details[open] > summary {
    border-width: 1px 1px 3px 3px;
    border-style: solid;
    border-color: var(--clr-ramme);
-   background-color: var(--clr-tekstRamme);
-   padding-inline: 1rem;
+   background-color: var(--clr-ixDRamme);
+   padding: 1rem;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 1rem;
 }
-details div h5 {
-   padding-block-start: 0.5rem;
-}
-details div p {
-   padding-block-end: 1rem;
-}
-
 .maskeDialog {
    -webkit-mask: url(/images/svg/rb_ikon-dialog.svg) no-repeat center;
    mask: url(/images/svg/rb_ikon-dialog.svg) no-repeat center;
