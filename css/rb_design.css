@@ -141,9 +141,9 @@ header {
 }
 .ifSeksjonsGrid {
    display: grid;
-   grid-template-columns: 1fr 0.6fr;
+   grid-template-columns: 1fr auto;
    grid-template-areas:
-      "sI1 kna"
+      "sI1 sI1"
       "sI2 kna"
       "det det";
    gap: 1rem;
@@ -166,32 +166,13 @@ header {
 .seksjonikon .ifKnappIkon {
    margin-inline-end: 1rem;
 }
-/*______ Tabeller ______*/
-table {
-   width: 100%;
-   margin-block-end: 1rem;
-}
-.td-kategori {
-   font-family: "Roboto", sans-serif;
-   font-weight: 300;
-   line-height: 1.5;
-   font-size: clamp(0.9rem, 0.9vw, 1.1rem);
-   /* width: 30%; */
-}
-.td-kategori a button {
-   margin-block: 0.25rem;
-   margin-inline-start: 0.25rem;
-}
-table thead tr th a {
-   display: none;
-}
 /*______ Liste ______*/
 ul {
    list-style: none; /* Remove default bullets */
    margin-block-end: 1rem;
 }
 ul li {
-   margin-left: 2em;
+   margin-left: 1em;
 }
 ul li p::before {
    content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
@@ -204,8 +185,29 @@ ul li p::before {
 ul li a button {
    margin-left: -1em;
 }
-.seksjonRessurser div a button {
-   margin-block: 0.3rem;
+.toKolloner {
+   display: grid;
+   grid-template-columns: 1fr 0.75fr;
+   gap: 1rem;
+}
+/*______ Tabeller ______*/
+table {
+   width: 100%;
+   margin-block-end: 1rem;
+}
+th {
+   display: flex;
+   justify-content: space-between;
+   margin-inline: 1rem;
+   margin-block: 0.5rem;
+}
+td {
+   border-top: 1px solid var(--clr-ramme);
+}
+table tbody tr td {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
 }
 .fylkesTittel {
    display: flex;
@@ -217,10 +219,23 @@ ul li a button {
    height: 30px;
    margin-inline: 0.5rem;
 }
-table tbody tr td {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+tfoot {
+   text-align: center;
+   margin-block: 4rem;
+}
+.tabMob {
+   display: none;
+}
+table tbody tr td p {
+   margin-inline-end: 0.5rem;
+}
+button {
+   transition: transform 0.3s ease-in-out;
+   transform: scale(1);
+}
+button:hover {
+   transition: transform 0.3s ease-in-out;
+   transform: scale(1.04);
 }
 /*______ Detaljeliste ______*/
 details {

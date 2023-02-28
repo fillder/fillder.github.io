@@ -256,13 +256,6 @@ nav {
    border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
    border-style: solid;
 }
-.tabellRamme {
-   border-radius: clamp(0.1rem, 0.2rem, 0.3vw);
-   border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
-   border-color: var(--clr-ramme);
-   border-width: 1px;
-   border-style: solid;
-}
 .rundRamme {
    border-radius: 50rem;
    border-style: solid;
