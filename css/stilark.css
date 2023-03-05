@@ -35,14 +35,15 @@ video {
    --clr-ramme: #c7c9ca;
    --clr-tekstBoks: #cccccc; */
 
-   --clr-main: #d0d2d2;
+   --clr-main: #d3d3d3;
    --clr-tekst: #3e4247;
-   --clr-ramme: #f5f5f6;
-   --clr-ixDRamme: #e5e6e7;
-   --clr-tekstRamme: #ececec;
-   --clr-bakgrunn: #b7b5b5;
+   --clr-ramme: #f5f6f5;
+   --clr-ixDBoks: #b9bec2;
+   --clr-tabellBoks: #d4d4d8;
+   --clr-tekstBoks: #dfdfdf;
+   --clr-bakgrunn: #b6b6b6;
 
-   --clr-safir: #367fff; /*programfag og drift*/
+   --clr-safir: #367fff; /*programfag og drzift*/
    --clr-akvamarin: #1892ba; /*yff og lyddesign*/
    --clr-amazonitt: #228468; /*kroppsøving og animasjon*/
    --clr-smaragd: #518238; /*naturfag og film-vfx*/
@@ -60,8 +61,9 @@ video {
    --clr-main: #14151f;
    --clr-tekst: #a8a8a8;
    --clr-ramme: #57637a;
-   --clr-ixDRamme: #0b0c13;
-   --clr-tekstRamme: #262738;
+   --clr-ixDBoks: #0b0c13;
+   --clr-tabellBoks: #1c1e2c;
+   --clr-tekstBoks: #262738;
    --clr-bakgrunn: #07070b;
 
    --clr-safir: #1fa6e2; /*programfag og drift*/
@@ -174,7 +176,7 @@ nav {
    grid-template-columns: 0.2fr 1fr 0.2fr;
    grid-template-rows: 1fr;
    place-content: center;
-   background-color: var(--clr-tekstRamme);
+   background-color: var(--clr-tekstBoks);
    border-bottom: 3px solid var(--clr-ramme);
    height: 50px;
    width: 100%;
@@ -241,10 +243,17 @@ nav {
 }
 /*______ Main ______*/
 .boksRamme {
-   border-top-right-radius: clamp(0.1rem, 0.4rem, 0.6vw);
-   border-top-left-radius: clamp(1rem, 1.8rem, 1.2vw);
-   border-bottom-left-radius: clamp(0.5rem, 0.6rem, 0.8vw);
-   border-bottom-right-radius: clamp(1rem, 1.8rem, 1.2vw);
+   border-top-right-radius: clamp(0.2rem, 0.4rem, 0.6vw);
+   border-top-left-radius: clamp(0.8rem, 1.2rem, 1.2vw);
+   border-bottom-left-radius: clamp(0.2rem, 0.4rem, 0.6vw);
+   border-bottom-right-radius: clamp(0.8rem, 1.2rem, 1.2vw);
+   border-style: solid;
+}
+.sBoksRamme {
+   border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+   border-bottom-left-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
    border-style: solid;
 }
 .rundRamme {
@@ -252,25 +261,180 @@ nav {
    border-style: solid;
 }
 .tekst {
-   background-color: var(--clr-tekstRamme);
+   background-color: var(--clr-tekstBoks);
+}
+.ixD {
+   background-color: var(--clr-ixDBoks);
+}
+.tab {
+   background-color: var(--clr-tabellBoks);
+   border-radius: clamp(0.2rem, 0.4rem, 0.6vw);
+}
+.xSB {
+   border-color: var(--clr-ramme);
+   border-width: 0.5px 0.5px 1.5px 1.5px;
+}
+.sB {
    border-color: var(--clr-ramme);
    border-width: 1px 1px 3px 3px;
-   padding-inline: 1rem;
-   padding-block: 0.5rem;
 }
-.ixDStor {
-   background-color: var(--clr-ixDRamme);
-   border-color: var(--clr-ramme);
+.lB {
    border-width: 2px 2px 6px 6px;
-   padding-inline: 1rem;
-   padding-block: 0.5rem;
-}
-.ixDLiten {
-   background-color: var(--clr-ixDRamme);
    border-color: var(--clr-ramme);
-   border-width: 1px 1px 3px 3px;
+}
+.xSP {
+   padding-block: 0.25rem;
+   padding-inline: 0.5rem;
+}
+.sP {
+   padding-block: 0.5rem;
+   padding-inline: 1rem;
 }
 
+.lP {
+   padding: 1rem;
+}
+/*______ svgIkon ______*/
+.svgIkon {
+   background-color: var(--clr-tekst);
+   width: 100%;
+   height: 100%;
+}
+/*______ tekstFarger ______*/
+.rubinTekst {
+   color: var(--clr-rubin);
+}
+.spessartinTekst {
+   color: var(--clr-spessartin);
+}
+.citrinTekst {
+   color: var(--clr-citrin);
+}
+.smaragdTekst {
+   color: var(--clr-smaragd);
+}
+.amazonittTekst {
+   color: var(--clr-amazonitt);
+}
+.akvamarinTekst {
+   color: var(--clr-akvamarin);
+}
+.safirTekst {
+   color: var(--clr-safir);
+}
+.ametystTekst {
+   color: var(--clr-ametyst);
+}
+.kunzittTekst {
+   color: var(--clr-kunzitt);
+}
+.thulittTekst {
+   color: var(--clr-thulitt);
+}
+
+.rubinBak {
+   background-color: var(--clr-rubin);
+}
+.spessartinBak {
+   background-color: var(--clr-spessartin);
+}
+.citrinBak {
+   background-color: var(--clr-citrin);
+}
+.smaragdBak {
+   background-color: var(--clr-smaragd);
+}
+.amazonittBak {
+   background-color: var(--clr-amazonitt);
+}
+.akvamarinBak {
+   background-color: var(--clr-akvamarin);
+}
+.safirBak {
+   background-color: var(--clr-safir);
+}
+.ametystBak {
+   background-color: var(--clr-ametyst);
+}
+.kunzittBak {
+   background-color: var(--clr-kunzitt);
+}
+.thulittBak {
+   background-color: var(--clr-thulitt);
+}
+/*______ BorderFarger ______*/
+.rubinRamme {
+   border-color: var(--clr-rubin);
+}
+.spessartinRamme {
+   border-color: var(--clr-spessartin);
+}
+.citrinRamme {
+   border-color: var(--clr-citrin);
+}
+.smaragdRamme {
+   border-color: var(--clr-smaragd);
+}
+.amazonittRamme {
+   border-color: var(--clr-amazonitt);
+}
+.akvamarinRamme {
+   border-color: var(--clr-akvamarin);
+}
+.safirRamme {
+   border-color: var(--clr-safir);
+}
+.ametystRamme {
+   border-color: var(--clr-ametyst);
+}
+.kunzittRamme {
+   border-color: var(--clr-kunzitt);
+}
+.thulittRamme {
+   border-color: var(--clr-thulitt);
+}
+
+/*______ DeksFarger ______*/
+.rubinDek {
+   text-decoration: 2px underline var(--clr-rubin);
+   text-underline-offset: 3px;
+}
+.spessartinDek {
+   text-decoration: 2px underline var(--clr-spessartin);
+   text-underline-offset: 3px;
+}
+.citrinDek {
+   text-decoration: 2px underline var(--clr-citrin);
+   text-underline-offset: 3px;
+}
+.smaragdDek {
+   text-decoration: 2px underline var(--clr-smaragd);
+   text-underline-offset: 3px;
+}
+.amazonittDek {
+   text-decoration: 2px underline var(--clr-amazonitt);
+   text-underline-offset: 3px;
+}
+.akvamarinDek {
+   text-decoration: 2px underline var(--clr-akvamarin);
+   text-underline-offset: 3px;
+}
+.safirDek {
+   text-decoration: 2px underline var(--clr-safir);
+   text-underline-offset: 3px;
+}
+.ametystDek {
+   text-decoration: 2px underline var(--clr-ametyst);
+   text-underline-offset: 3px;
+}
+.kunzittDek {
+   text-decoration: 2px underline var(--clr-kunzitt);
+   text-underline-offset: 3px;
+}
+.thulittDek {
+   text-decoration: 2px underline var(--clr-thulitt);
+   text-underline-offset: 3px;
+}
 /*______ footer ______*/
 footer {
    height: 3rem;
@@ -278,7 +442,7 @@ footer {
    justify-content: space-between;
    align-items: center;
    place-content: center;
-   background-color: var(--clr-tekstRamme);
+   background-color: var(--clr-tekstBoks);
    border-top: 3px solid var(--clr-ramme);
    height: 50px;
    width: 100%;

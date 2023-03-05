@@ -70,15 +70,12 @@ main {
    display: flex;
    gap: 0.5rem;
    justify-content: space-between;
-   /* min-width: 340px; */
    background-color: var(--clr-main);
    max-width: 1600px;
-   padding-inline: 1vw;
+   padding-inline: 2rem;
    margin-inline: auto;
    margin-top: 50px;
    box-shadow: 0 5rem 0 0rem var(--clr-main);
-}
-main {
    text-align: center;
 }
 .fagtittel {
@@ -159,4 +156,28 @@ main {
 }
 footer {
    margin-top: 5rem;
+}
+
+.maskeForrigeDag {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/tp_pilForrigeDag.svg) no-repeat center;
+   mask: url(/images/svg/tp_pilForrigeDag.svg) no-repeat center;
+}
+.maskeNesteDag {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/tp_pilNesteDag.svg) no-repeat center;
+   mask: url(/images/svg/tp_pilNesteDag.svg) no-repeat center;
+}
+.dagPil {
+   width: 2rem;
+   height: 100%;
+}
+.pilNeste,
+.pilForrige {
+   display: none;
+}
+.pilForrige[disabled],
+.pilNeste[disabled] {
+   opacity: 0.2;
+   cursor: default;
 }

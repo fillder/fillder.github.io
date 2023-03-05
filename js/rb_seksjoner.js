@@ -1,4 +1,6 @@
 const ifKnapper = document.querySelectorAll('.ifKnapp');// Henter alle knappelementene
+const detailsElements = document.querySelectorAll('details');
+
 let forrigeSeksjon = null;// Lagrer en referanse til den forrige synlige seksjonen
 let aktivKnappID = localStorage.getItem('aktivKnapp');// Henter den lagrede id-en til den aktive knappen fra local storage
 
@@ -10,12 +12,11 @@ ifKnapper.forEach(knapp => {
     const farge = knapp.dataset.farge; // Henter ID-en til fargen for knappen som ble klikket på
     const seksjon = document.querySelector('.ifSeksjon[data-seksjon="' + knappID + '"]');  // Henter den tilsvarende seksjonen
     const aktivKnapp = document.querySelector('.ifKnapp.aktiv'); // Fjerner aktiv klasse fra forrige knapp og setter tilbake opprinnelig farge
-
+    
     if (aktivKnapp !== null) {
       const aktivFarge = aktivKnapp.dataset.farge;
       aktivKnapp.classList.remove('aktiv');
-      aktivKnapp.querySelector('.ifKnappIkon').style.stroke = 'var(--clr-tekst)';
-      aktivKnapp.querySelector('.ifKnappIkon svg circle').style.fill = 'var(--clr-tekst)';
+      aktivKnapp.querySelector('.svgIkon').style.background = 'var(--clr-tekst)';
       aktivKnapp.querySelector('.ifKnapptittel').style.color = 'var(--clr-tekst)';
     }
 
@@ -35,8 +36,7 @@ ifKnapper.forEach(knapp => {
       seksjon.style.maxHeight = mHeight + 'px';
       seksjon.classList.add('synlig');
       knapp.classList.add('aktiv');
-      knapp.querySelector('.ifKnappIkon').style.stroke = 'var(--aktiv-farge)';
-      knapp.querySelector('.ifKnappIkon svg circle').style.fill = 'var(--aktiv-farge)';
+      knapp.querySelector('.svgIkon').style.background = 'var(--aktiv-farge)';
       knapp.querySelector('.ifKnapptittel').style.color = 'var(--aktiv-farge)';
       localStorage.setItem('aktivKnapp', knappID); // Lagrer id-en til den aktive knappen i local storage
     }
@@ -45,10 +45,30 @@ ifKnapper.forEach(knapp => {
     forrigeSeksjon = seksjon;
 
     // console.log(`Klikk på ${knappID}. Seksjon synlighet: ${seksjon.classList.contains('synlig')}`);
+    detailsElements.forEach(detailsEl => {
+      detailsEl.addEventListener('click', () => {
+        const sectionEl = detailsEl.closest('.ifSeksjon');
+        if (sectionEl && sectionEl.classList.contains('synlig')) {
+          // Legger til en kort timeout før du oppdaterer maks-høyden
+          setTimeout(() => {
+            const mHeight = sectionEl.scrollHeight;
+            sectionEl.style.maxHeight = mHeight + 'px';
+          }, 100);
+        }
+      });
+    });
   });
 
+  // Aktiver knappen som var aktiv da siden ble lastet inn på nytt
+if (aktivKnappID) {
+  const aktivKnapp = document.querySelector(`.ifKnapp[data-knapp="${aktivKnappID}"]`);
+  if (aktivKnapp) {
+    aktivKnapp.click();
+  }
+}
   // Aktiver knappen som var aktiv da siden ble lastet inn på nytt
   if (knapp.dataset.knapp === aktivKnappID) {
     knapp.click();
   }
 });
+

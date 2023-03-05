@@ -1,624 +1,662 @@
 <!DOCTYPE html>
 <html lang="no">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="color-scheme" content="dark light" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;0,700;1,300&family=Roboto+Slab:wght@300;500;700&family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="/css/stilark.css" />
+      <link rel="stylesheet" type="text/css" href="/css/dag-natt.css" />
+      <link rel="stylesheet" type="text/css" href="/css/rb_design.css" />
+      <link rel="stylesheet" type="text/css" href="/css/rb_mobil.css" />
+      <!-- <link rel="stylesheet" type="text/css" href="/css/rb_bildegalleri.css" /> -->
+      <link rel="icon" href="/images/ico/skolelogo.svg" type="image/svg+xml" />
+      <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
+      <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
+      <script type="module" src="/js/dag-natt.js"></script>
+      <script type="module" src="/js/rb_seksjoner.js"></script>
+      <!-- <script type="module" src="/js/rb_bildekarusell.js"></script> -->
+      <title>IM-ressursbank</title>
+   </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark light" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;0,700;1,300&family=Roboto+Slab:wght@300;500;700&family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/stilark.css" />
-    <link rel="stylesheet" type="text/css" href="/css/dag-natt.css" />
-    <link rel="stylesheet" type="text/css" href="/css/rb_design.css" />
-    <link rel="stylesheet" type="text/css" href="/css/rb_mobil.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="/css/rb_bildegalleri.css" /> -->
-    <link rel="icon" href="/images/ico/skolelogo.svg" type="image/svg+xml">
-    <link rel="shortcut icon" href="/images/ico/skolelogo.svg">
-    <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg">
-    <script type="module" src="/js/dag-natt.js"></script>
-    <script type="module" src="/js/rb_seksjoner.js"></script>
-    <!-- <script type="module" src="/js/rb_bildekarusell.js"></script> -->
-    <title>IM-ressursbank</title>
-</head>
-
-<body>
-    <nav>
-        <button type="button" alt="hjem" title="hjem">
+   <body>
+      <nav>
+         <button type="button" alt="hjem" title="hjem">
             <div class="hjem maskeHjem"></div>
-        </button>
-        <div class="logo">
-            <h1><b><span>IM-</span>RESSURSBANK</b></h1>
-        </div>
-        <div class="flexHoyre">
+         </button>
+         <div class="logo">
+            <h1>
+               <b><span>IM-</span>RESSURSBANK</b>
+            </h1>
+         </div>
+         <div class="flexHoyre">
             <div class="modusikon">
-                <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
-                    <svg class="svg-anim" viewBox="0 70 100 100">
-                        <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-width="6" stroke-dasharray="20"
-                            stroke-dashoffset="0" />
-                        <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-width="6" stroke-dasharray="20"
-                            stroke-dashoffset="0" />
-                        <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-width="6" stroke-dasharray="20"
-                            stroke-dashoffset="0" />
-                        <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-width="6" stroke-dasharray="20"
-                            stroke-dashoffset="0" />
-                        <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-width="6" stroke-dasharray="20"
-                            stroke-dashoffset="0" />
-                        <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-width="6" stroke-dasharray="20"
-                            stroke-dashoffset="0" />
-                        <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-width="6"
-                            stroke-dasharray="20" stroke-dashoffset="0" />
-                        <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-width="6" stroke-dasharray="20"
-                            stroke-dashoffset="0" />
-                        <circle class="sun" cx="50" cy="120" r="20" />
-                        <circle class="moon" cx="135" cy="40" r="40" />
-                    </svg>
-                </button>
+               <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
+                  <svg class="svg-anim" viewBox="0 70 100 100">
+                     <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <circle class="sun" cx="50" cy="120" r="20" />
+                     <circle class="moon" cx="135" cy="40" r="40" />
+                  </svg>
+               </button>
             </div>
-        </div>
-    </nav>
-    <header class="hero">
-        <img class="hero-bilde" src="images/rb-banner.png" alt="bilde av en skjerm med kode">
-        <div class="hero-tittel">
+         </div>
+      </nav>
+      <header class="hero">
+         <img class="hero-bilde" src="images/rb-banner.png" alt="bilde av en skjerm med kode" />
+         <div class="hero-tittel">
             <h1><b>Hovedside</b></h1>
-        </div>
-        <!-- <div class="hero-emblem">
+         </div>
+         <!-- <div class="hero-emblem">
         </div> -->
-    </header>
-    <main>
-        <div class="gridBeholder">
-            <section class="oversikt boksRamme tekst">
-                <article class="oppsummering ">
-                    <h2>Velkommen</h2>
-                    <h5>Dette er starten på en ressursbank for informasjonsteknologi og medieproduksjon. Rammeverket er
-                        fremdeles under konstruksjon, men ressurser legges til fortløpende gjennom utviklingen. Akkurat
-                        nå er det kun seksjon for eksamen som har innhold, da dette er et tema mange jobber med for
-                        tiden. Det er til dags dato få skoler som har gjennomført eksamen eller
-                        prøve-eksamen på IM, det er derfor behov for å utarbeide dette temaet videre etterhvert som mer
-                        erfaring samles. Bidrag i form av oppgavetekster, erfaringer og ressurser er varmt velkommen og
-                        kan sendes til e-post: marius.riseth@osloskolen.no, slik at det kan lastes opp her.
-                    </h5>
-                </article>
+      </header>
+      <main>
+         <div class="gridBeholder">
+            <section class="oversikt boksRamme tekst sP lB">
+               <article class="oppsummering">
+                  <h2>Velkommen</h2>
+                  <h5>
+                     Dette er starten på en ressursbank for informasjonsteknologi og medieproduksjon. Rammeverket er fremdeles under konstruksjon, men ressurser legges til fortløpende gjennom utviklingen. Akkurat nå er det kun seksjon for eksamen som har innhold, da dette er et tema mange jobber med for tiden. Det er til dags dato få skoler som har gjennomført eksamen eller prøve-eksamen på IM, det er derfor behov for å utarbeide dette temaet videre etterhvert som mer erfaring samles. Bidrag i form av oppgavetekster, erfaringer og ressurser er varmt velkommen og kan sendes til e-post:
+                     marius.riseth@osloskolen.no, slik at det kan lastes opp her.
+                  </h5>
+               </article>
             </section>
-            <section class="innholdsfortegnelse boksRamme tekst">
-                <div class="ifKnapp utilgjengelig"> <!--  data-knapp="informasjonsteknologi" data-farge="safir" -->
-                    <div class="ifKnappIkon rundRamme ixDLiten">
-                        <svg viewBox="0 0 50 50">
-                            <line x1="32.29" y1="16.94" x2="38.28" y2="10.95" />
-                            <line x1="25" y1="28.66" x2="25" y2="35.87" />
-                            <line x1="5.68" y1="25" x2="14.13" y2="25" />
-                            <path d="m16.03,42.12c-6.16-3.23-10.35-9.69-10.35-17.12,0-8.82,5.91-16.27,14-18.58" />
-                            <path d="m44.17,22.54c.1.81.16,1.63.16,2.46,0,10.67-8.65,19.32-19.32,19.32" />
-                            <path d="m28.4,5.98c7.19,1.28,13.01,6.54,15.1,13.42" />
-                            <path
-                                d="m35.87,25c0,6-4.86,10.87-10.87,10.87s-10.87-4.86-10.87-10.87c0-2.96,1.18-5.64,3.1-7.6s4.72-3.27,7.77-3.27c6,0,10.87,4.86,10.87,10.87Z" />
-                            <circle cx="24.06" cy="5.56" r="1" />
-                            <circle cx="20.34" cy="43.78" r="1" />
-                            <path
-                                d="m28.66,25c0,2.02-1.64,3.66-3.66,3.66s-3.66-1.64-3.66-3.66,1.64-3.66,3.66-3.66c.89,0,1.7.32,2.33.84" />
-                        </svg>
-                    </div>
-                    <h4 class="ifKnapptittel boksRamme ixDLiten">Informasjonsteknologi</h4>
-                </div>
-                <div class="ifKnapp utilgjengelig"> <!--  data-knapp="medieproduksjon" data-farge="akvamarin" -->
-                    <div class="ifKnappIkon rundRamme ixDLiten">
-                        <svg viewBox="0 0 50 50">
-                            <path d="m24.57,23.15c-.88,1.16-2.28,1.92-3.85,1.92s-3.03-.79-3.91-2" />
-                            <path
-                                d="m24.75,12.1c2.99,1.48,5.05,4.57,5.05,8.14,0,5.01-4.07,9.08-9.08,9.08s-9.08-4.07-9.08-9.08c0-3.57,2.06-6.66,5.05-8.14" />
-                            <path
-                                d="m9.18,15.41c1.89-4.51,6.34-7.67,11.54-7.67,6.9,0,12.5,5.6,12.5,12.5s-5.6,12.5-12.5,12.5c-5.53,0-10.22-3.59-11.87-8.56" />
-                            <path d="m27.74,30.58l7.9,9.04s2.41,2.59,5,0,0-5,0-5l-9.04-7.9" />
-                            <circle cx="8.38" cy="19.83" r="1" />
-                            <circle cx="20.57" cy="10.97" r="1" />
-                        </svg>
-                    </div>
-                    <h4 class="ifKnapptittel boksRamme ixDLiten">Medieproduksjon</h4>
-                </div>
-                <div class="ifKnapp utilgjengelig"> <!--  data-knapp="laereplan" data-farge="amazonitt" -->
-                    <div class="ifKnappIkon rundRamme ixDLiten">
-                        <svg viewBox="0 0 50 50">
-                            <circle cx="12.79" cy="33.61" r="1.05" />
-                            <circle cx="33.53" cy="23.2" r="1.05" />
-                            <circle cx="26.16" cy="13.95" r="1.05" />
-                            <path d="m33.53,19.33v-6.49c0-1.96,1.59-3.56,3.56-3.56s3.56,1.59,3.56,3.56v25" />
-                            <line x1="29.28" y1="13.95" x2="33.53" y2="13.95" />
-                            <line x1="23.04" y1="13.95" x2="16.47" y2="13.95" />
-                            <path
-                                d="m33.53,27.28v9.88c0-1.96,1.59-3.56,3.56-3.56s3.56,1.59,3.56,3.56-1.59,3.56-3.56,3.56H12.91c-1.96,0-3.56-1.59-3.56-3.56,0-.97.39-1.85,1.02-2.49" />
-                            <polyline
-                                points="33.53 18.23 26.68 17.32 24.64 19.46 25.24 21.36 27.67 23.7 26.93 25.55 30.13 28.48 30.31 32.87 33.53 33.55" />
-                            <polyline
-                                points="18.92 24.25 21.29 23.56 23.04 27.78 25.58 29.5 25.86 34.95 22.87 37.67 20.06 34.89 16.47 33.19" />
-                            <path
-                                d="m9.35,31.58V12.84c0-1.96,1.59-3.56,3.56-3.56s3.56,1.59,3.56,3.56v24.32c0-1.1-.5-2.09-1.29-2.74" />
-                        </svg>
-                    </div>
-                    <h4 class="ifKnapptittel boksRamme ixDLiten">Læreplan</h4>
-                </div>
-                <div class="ifKnapp utilgjengelig"> <!--  data-knapp="vurdering" data-farge="smaragd" -->
-                    <div class="ifKnappIkon rundRamme ixDLiten">
-                        <svg viewBox="0 0 50 50">
-                            <circle cx="19.06" cy="6.78" r="1.05" />
-                            <polyline points="33.19 24.71 34.81 24.71 34.81 21.57 30.47 21.57 30.47 29.34" />
-                            <polyline points="26.35 24.71 27.97 24.71 27.97 21.57 23.63 21.57 23.63 29.34" />
-                            <polyline points="19.51 24.71 21.13 24.71 21.13 21.57 16.79 21.57 16.79 29.34" />
-                            <line x1="29.52" y1="29.34" x2="35.03" y2="29.34" />
-                            <line x1="14.97" y1="29.34" x2="20.49" y2="29.34" />
-                            <circle cx="26.56" cy="29.34" r="1.05" />
-                            <path d="m31,40.37c-.88,1.55-1.48,2.49-1.48,2.49" />
-                            <path d="m33.23,12.07s5.5,5.06,4.58,11.21c-.73,4.86-3.3,10.52-5.39,14.5" />
-                            <line x1="13.13" y1="18.16" x2="30.47" y2="18.16" />
-                            <line x1="14.97" y1="42.87" x2="34.89" y2="42.87" />
-                            <polyline points="22.57 6.78 36.85 6.78 33.23 12.07 25.12 12.07" />
-                            <path d="m17.01,12.07s-5.5,5.06-4.58,11.21c1.28,8.55,8.28,19.58,8.28,19.58" />
-                            <polyline points="15.81 6.78 13.39 6.78 17.01 12.07 25.12 12.07" />
-                        </svg>
-                    </div>
-                    <h4 class="ifKnapptittel boksRamme ixDLiten">Vurdering</h4>
-                </div>
-                <button class="ifKnapp knappHover" data-knapp="eksamen" data-farge="citrin">
-                    <div class="ifKnappIkon rundRamme ixDLiten">
-                        <svg viewBox="0 0 50 50">
-                            <path
-                                d="m32.59,40.58c-2.27,1.36-4.87,2.09-7.59,2.09-3.95,0-7.66-1.54-10.45-4.33-5.72-5.72-5.76-15.01-.11-20.78v-2.93c-2.02,0-3.65-1.63-3.65-3.65s1.63-3.65,3.65-3.65,3.65,1.63,3.65,3.65v10c-2.97,2.97-3.63,7.36-1.98,10.97" />
-                            <path
-                                d="m20.34,36.49c3.71,2.01,8.44,1.45,11.58-1.68,3.82-3.82,3.82-10.01,0-13.82v-10c0-2.02,1.63-3.65,3.65-3.65s3.65,1.63,3.65,3.65-1.63,3.65-3.65,3.65v2.93c5.03,5.14,5.55,13.07,1.56,18.79" />
-                            <line x1="28.67" y1="34.15" x2="28.67" y2="13.7" />
-                            <line x1="25" y1="34.15" x2="25" y2="13.7" />
-                            <line x1="21.33" y1="34.15" x2="21.33" y2="13.7" />
-                            <line x1="18.09" y1="13.7" x2="31.91" y2="13.7" />
-                            <circle cx="35.05" cy="38.81" r="1" />
-                            <circle cx="17.82" cy="34.45" r="1" />
-                        </svg>
-                    </div>
-                    <h4 class="ifKnapptittel boksRamme ixDLiten">Eksamen</h4>
-                </button>
-                <div class="ifKnapp utilgjengelig"> <!-- data-knapp="yff" data-farge="spessartin" -->
-                    <div class="ifKnappIkon rundRamme ixDLiten">
-                        <svg viewBox="0 0 50 50">
-                            <path
-                                d="m26.66,27.56h1.52c.97,5.17,4.73,9.52,9.86,11.75,1.54.61,3.28-.14,3.89-1.68.61-1.54-.14-3.28-1.68-3.89-2.86-1.29-5.02-3.51-5.89-6.17h3.59c.47,0,.92-.12,1.3-.34" />
-                            <path
-                                d="m12.88,11.01c-.33-.17-.66-.32-1-.47-1.54-.61-3.28.14-3.89,1.68-.61,1.54.14,3.28,1.68,3.89,2.86,1.29,5.02,3.51,5.89,6.17h-3.59c-1.46,0-2.63,1.18-2.63,2.63s1.18,2.63,2.63,2.63h3.59c-.87,2.66-3.04,4.89-5.89,6.17-1.54.61-2.29,2.35-1.68,3.89s2.35,2.29,3.89,1.68c5.13-2.23,8.89-6.58,9.86-11.75h2.32" />
-                            <path
-                                d="m39.21,22.61c-.37-.2-.8-.32-1.26-.32h-3.59c.87-2.66,3.04-4.89,5.89-6.17,1.54-.61,2.29-2.35,1.68-3.89-.61-1.54-2.35-2.29-3.89-1.68-5.13,2.23-8.89,6.58-9.86,11.75h-6.46c-.57-3.03-2.09-5.78-4.29-7.98" />
-                            <circle cx="15.17" cy="12.37" r="1.05" />
-                            <circle cx="19.03" cy="38.76" r="1.05" />
-                            <circle cx="40.62" cy="24.92" r="1.05" />
-                            <circle cx="27.13" cy="12.89" r="2.01" />
-                        </svg>
-                    </div>
-                    <h4 class="ifKnapptittel boksRamme ixDLiten">YFF</h4>
-                </div>
-                <!-- <button class="ifKnapp utilgjengelig" data-knapp="???" data-farge="rubin">
-                    <div class="ifKnappIkon rundRamme ixDLiten">
-                        <svg viewBox="0 0 50 50">
-                            <path d="m37.84,10.21H14.58c-1.27,0-2.16.89-2.16,2v15.61" />
-                            <line x1="15.37" y1="29.93" x2="30.58" y2="29.93" />
-                            <line x1="15.37" y1="27.07" x2="30.58" y2="27.07" />
-                            <line x1="15.37" y1="24.22" x2="30.58" y2="24.22" />
-                            <line x1="15.37" y1="21.37" x2="30.58" y2="21.37" />
-                            <line x1="15.37" y1="18.51" x2="30.58" y2="18.51" />
-                            <line x1="24.7" y1="32.78" x2="30.58" y2="32.78" />
-                            <line x1="15.37" y1="15.66" x2="21.24" y2="15.66" />
-                            <line x1="12.42" y1="30.75" x2="12.42" y2="37.59" />
-                            <path
-                                d="m33.94,29.88v7.71c0,2.16-1.75,3.91-3.91,3.91s-3.91-1.75-3.91-3.91H8.92c0,2.16,1.75,3.91,3.91,3.91h8.83" />
-                            <path d="m36.7,14.12h5.05c0-2.16-1.75-3.91-3.91-3.91s-3.91,1.75-3.91,3.91v7.71" />
-                            <circle cx="33.94" cy="26.14" r="1" />
-                            <circle cx="24.33" cy="41.49" r="1" />
-                        </svg>
-                    </div>
-                    <h4 class="ifKnapptittel boksRamme ixDLiten">???</h4>
-                </button>
-                <button class="ifKnapp utilgjengelig" data-knapp="???" data-farge="thulitt">
-                    <div class="ifKnappIkon rundRamme ixDLiten">
-                        <svg viewBox="0 0 50 50">
-                            <polygon points="41.8 16.35 41.8 16.35 41.8 16.35 41.8 16.35" />
-                            <rect x="31.59" y="18.3" width="3.21" height="13.58" />
-                            <polyline points="26.73 26.32 26.73 31.88 23.51 31.88 23.51 18.3 26.73 18.3 26.73 23.57" />
-                            <rect x="15.44" y="18.3" width="3.21" height="13.58" />
-                            <polyline points="37.24 15.43 37.24 18.3 12.85 18.3 12.85 15.43" />
-                            <polyline
-                                points="36.72 11.2 40.18 12.57 40.18 15.43 9.9 15.43 9.9 12.57 25.04 6.57 30.02 8.55" />
-                            <polyline points="12.85 34.74 12.85 31.88 37.24 31.88 37.24 34.74" />
-                            <polyline points="16.18 38.32 40.18 38.32 40.18 34.74 9.9 34.74 9.9 38.32" />
-                            <circle cx="13.07" cy="38.32" r="1" />
-                            <circle cx="33.51" cy="10" r="1" />
-                        </svg>
-                    </div>
-                    <h4 class="ifKnapptittel boksRamme ixDLiten">???</h4>
-                </button>
-                <button class="ifKnapp utilgjengelig" data-knapp="???" data-farge="kunzitt">
-                    <div class="ifKnappIkon rundRamme ixDLiten">
-                        <svg viewBox="0 0 50 50">
-                            <circle cx="28.97" cy="8.85" r="1" />
-                            <circle cx="18.05" cy="32.74" r="1" />
-                            <path
-                                d="m18.02,35.82v8.88s1.63.98,4.57,1.32v-13.4h4.88v13.28c1.39-.21,2.92-.59,4.57-1.2v-17.82c0,2.53,2.05,4.59,4.59,4.59s4.59-2.05,4.59-4.59-2.05-4.59-4.59-4.59H13.43c-2.53,0-4.59,2.05-4.59,4.59s2.05,4.59,4.59,4.59,4.59-2.05,4.59-4.59h11.27" />
-                            <path
-                                d="m27.02,7.14s-2.43-2.95-4.9-3.96c0,0,2.11,4.24.65,6.5s-2.75,4.41-2.75,4.41c0,0-.75-3.27-1.99-4.41,0,0,.78,3.01-1.43,5.96s-.32,5.96.78,6.65h3.02s-.28-1.91.9-3.21,1.71-2.84,1.7-3.87c0,0,.77,2.44.77,3.52,0,0,4.02-3.6,2.47-7.72,0,0,5.65,6.32,2.63,11.29h3.59s5.42-4.68-1.47-11.52" />
-                        </svg>
-                    </div>
-                    <h4 class="ifKnapptittel boksRamme ixDLiten">???</h4>
-                </button>
-                <button class="ifKnapp utilgjengelig" data-knapp="???" data-farge="ametyst">
-                    <div class="ifKnappIkon rundRamme ixDLiten">
-                        <svg viewBox="0 0 50 50">
-                            <line x1="9.73" y1="13.19" x2="32.68" y2="36.14" />
-                            <line x1="14.35" y1="8.94" x2="36.28" y2="30.87" />
-                            <path d="m36.28,30.87c2.33-4.77,3.35-9.59,3.77-13.25" />
-                            <path d="m20.75,40.28c1.28,1.17,2.7,2.27,4.29,3.27,3.2-2.02,5.73-4.43,7.74-7.02" />
-                            <path
-                                d="m40.31,11.33c-5.63-4.07-15.27-4.74-15.27-4.74,0,0-9.64.67-15.27,4.74,0,0-1.1,15.44,8.71,26.62" />
-                            <circle cx="34.78" cy="33.74" r="1" />
-                            <circle cx="40.31" cy="14.68" r="1" />
-                        </svg>
-                    </div>
-                    <h4 class="ifKnapptittel boksRamme ixDLiten">???</h4>
-                </button> -->
+            <section class="innholdsfortegnelse boksRamme tekst sP lB">
+               <div class="ifKnapp utilgjengelig">
+                  <!--  data-knapp="informasjonsteknologi" data-farge="safir" -->
+                  <div class="ifKnappIkon rundRamme ixD">
+                     <div class="svgIkon maskeIT"></div>
+                  </div>
+                  <h4 class="ifKnapptittel boksRamme ixD sB">Informasjonsteknologi</h4>
+               </div>
+               <div class="ifKnapp utilgjengelig">
+                  <!--  data-knapp="medieproduksjon" data-farge="akvamarin" -->
+                  <div class="ifKnappIkon rundRamme ixD">
+                     <div class="svgIkon maskeMP"></div>
+                  </div>
+                  <h4 class="ifKnapptittel boksRamme ixD sB">Medieproduksjon</h4>
+               </div>
+               <div class="ifKnapp utilgjengelig">
+                  <!--  data-knapp="laereplan" data-farge="amazonitt" -->
+                  <div class="ifKnappIkon rundRamme ixD">
+                     <div class="svgIkon maskeLk20"></div>
+                  </div>
+                  <h4 class="ifKnapptittel boksRamme ixD sB">Læreplan</h4>
+               </div>
+               <div class="ifKnapp utilgjengelig">
+                  <!--  data-knapp="vurdering" data-farge="smaragd" -->
+                  <div class="ifKnappIkon rundRamme ixD">
+                     <div class="svgIkon maskeVurdering"></div>
+                  </div>
+                  <h4 class="ifKnapptittel boksRamme ixD sB">Vurdering</h4>
+               </div>
+               <button class="ifKnapp knappHover" data-knapp="eksamen" data-farge="citrin">
+                  <div class="ifKnappIkon rundRamme ixD sB">
+                     <div class="svgIkon maskeEksamen"></div>
+                  </div>
+                  <h4 class="ifKnapptittel boksRamme ixD sB">Eksamen</h4>
+               </button>
+               <div class="ifKnapp utilgjengelig">
+                  <!-- data-knapp="yff" data-farge="spessartin" -->
+                  <div class="ifKnappIkon rundRamme ixD">
+                     <div class="svgIkon maskeYFF"></div>
+                  </div>
+                  <h4 class="ifKnapptittel boksRamme ixD sB">YFF</h4>
+               </div>
             </section>
             <section class="ifSeksjoner">
-                <div class="ifSeksjon" data-seksjon="informasjonsteknologi">
-                    <div class="boksRamme tekst">
-                        <div class="seksjonikon">
-                            <div class="rundRamme tekst ifKnappIkon">
-                                <svg viewBox="0 0 50 50">
-                                    <line x1="32.29" y1="16.94" x2="38.28" y2="10.95" />
-                                    <line x1="25" y1="28.66" x2="25" y2="35.87" />
-                                    <line x1="5.68" y1="25" x2="14.13" y2="25" />
-                                    <path
-                                        d="m16.03,42.12c-6.16-3.23-10.35-9.69-10.35-17.12,0-8.82,5.91-16.27,14-18.58" />
-                                    <path d="m44.17,22.54c.1.81.16,1.63.16,2.46,0,10.67-8.65,19.32-19.32,19.32" />
-                                    <path d="m28.4,5.98c7.19,1.28,13.01,6.54,15.1,13.42" />
-                                    <path
-                                        d="m35.87,25c0,6-4.86,10.87-10.87,10.87s-10.87-4.86-10.87-10.87c0-2.96,1.18-5.64,3.1-7.6s4.72-3.27,7.77-3.27c6,0,10.87,4.86,10.87,10.87Z" />
-                                    <circle cx="24.06" cy="5.56" r="1" />
-                                    <circle cx="20.34" cy="43.78" r="1" />
-                                    <path
-                                        d="m28.66,25c0,2.02-1.64,3.66-3.66,3.66s-3.66-1.64-3.66-3.66,1.64-3.66,3.66-3.66c.89,0,1.7.32,2.33.84" />
-                                </svg>
-                            </div>
-                            <h2 class="seksjons-safir">Informasjonsteknologi</h2>
+               <div class="ifSeksjon" data-seksjon="informasjonsteknologi">
+                  <div class="boksRamme tekst sP lB">
+                     <div class="seksjonikon">
+                        <div class="ifKnappIkon rundRamme ixD">
+                           <div class="svgIkon maskeIT"></div>
                         </div>
-                        <p>Her er informasjon om Informasjonsteknologi</p>
-                    </div>
-                </div>
-                <div class="ifSeksjon" data-seksjon="medieproduksjon">
-                    <div class="boksRamme tekst">
-                        <div class="seksjonikon">
-                            <div class="rundRamme tekst ifKnappIkon">
-                                <svg viewBox="0 0 50 50">
-                                    <path d="m24.57,23.15c-.88,1.16-2.28,1.92-3.85,1.92s-3.03-.79-3.91-2" />
-                                    <path
-                                        d="m24.75,12.1c2.99,1.48,5.05,4.57,5.05,8.14,0,5.01-4.07,9.08-9.08,9.08s-9.08-4.07-9.08-9.08c0-3.57,2.06-6.66,5.05-8.14" />
-                                    <path
-                                        d="m9.18,15.41c1.89-4.51,6.34-7.67,11.54-7.67,6.9,0,12.5,5.6,12.5,12.5s-5.6,12.5-12.5,12.5c-5.53,0-10.22-3.59-11.87-8.56" />
-                                    <path d="m27.74,30.58l7.9,9.04s2.41,2.59,5,0,0-5,0-5l-9.04-7.9" />
-                                    <circle cx="8.38" cy="19.83" r="1" />
-                                    <circle cx="20.57" cy="10.97" r="1" />
-                                </svg>
-                            </div>
-                            <h2 class="seksjons-akvamarin">Medieproduksjon</h2>
+                        <h2 class="seksjons-safir">Informasjonsteknologi</h2>
+                     </div>
+                     <p>Her er informasjon om Informasjonsteknologi</p>
+                  </div>
+               </div>
+               <div class="ifSeksjon" data-seksjon="medieproduksjon">
+                  <div class="boksRamme tekst sP lB">
+                     <div class="seksjonikon">
+                        <div class="ifKnappIkon rundRamme ixD">
+                           <div class="svgIkon maskeMP"></div>
                         </div>
-                        <p>Her er informasjon om Medieproduksjon</p>
-                    </div>
-                </div>
-                <div class="ifSeksjon" data-seksjon="laereplan">
-                    <div class="boksRamme tekst">
-                        <div class="seksjonikon">
-                            <div class="rundRamme tekst ifKnappIkon">
-                                <svg viewBox="0 0 50 50">
-                                    <circle cx="12.79" cy="33.61" r="1.05" />
-                                    <circle cx="33.53" cy="23.2" r="1.05" />
-                                    <circle cx="26.16" cy="13.95" r="1.05" />
-                                    <path d="m33.53,19.33v-6.49c0-1.96,1.59-3.56,3.56-3.56s3.56,1.59,3.56,3.56v25" />
-                                    <line x1="29.28" y1="13.95" x2="33.53" y2="13.95" />
-                                    <line x1="23.04" y1="13.95" x2="16.47" y2="13.95" />
-                                    <path
-                                        d="m33.53,27.28v9.88c0-1.96,1.59-3.56,3.56-3.56s3.56,1.59,3.56,3.56-1.59,3.56-3.56,3.56H12.91c-1.96,0-3.56-1.59-3.56-3.56,0-.97.39-1.85,1.02-2.49" />
-                                    <polyline
-                                        points="33.53 18.23 26.68 17.32 24.64 19.46 25.24 21.36 27.67 23.7 26.93 25.55 30.13 28.48 30.31 32.87 33.53 33.55" />
-                                    <polyline
-                                        points="18.92 24.25 21.29 23.56 23.04 27.78 25.58 29.5 25.86 34.95 22.87 37.67 20.06 34.89 16.47 33.19" />
-                                    <path
-                                        d="m9.35,31.58V12.84c0-1.96,1.59-3.56,3.56-3.56s3.56,1.59,3.56,3.56v24.32c0-1.1-.5-2.09-1.29-2.74" />
-                                </svg>
-                            </div>
-                            <h2 class="seksjons-amazonitt">Læreplan</h2>
+                        <h2 class="seksjons-akvamarin">Medieproduksjon</h2>
+                     </div>
+                     <p>Her er informasjon om Medieproduksjon</p>
+                  </div>
+               </div>
+               <div class="ifSeksjon" data-seksjon="laereplan">
+                  <div class="boksRamme tekst sP lB">
+                     <div class="seksjonikon">
+                        <div class="ifKnappIkon rundRamme ixD">
+                           <div class="svgIkon maskeLk20"></div>
                         </div>
-                        <p>Her er informasjon om Læreplan</p>
-                    </div>
-                </div>
-                <div class="ifSeksjon" data-seksjon="vurdering">
-                    <div class="boksRamme tekst">
-                        <div class="seksjonikon">
-                            <div class="rundRamme tekst ifKnappIkon">
-                                <svg viewBox="0 0 50 50">
-                                    <path
-                                        d="m32.59,40.58c-2.27,1.36-4.87,2.09-7.59,2.09-3.95,0-7.66-1.54-10.45-4.33-5.72-5.72-5.76-15.01-.11-20.78v-2.93c-2.02,0-3.65-1.63-3.65-3.65s1.63-3.65,3.65-3.65,3.65,1.63,3.65,3.65v10c-2.97,2.97-3.63,7.36-1.98,10.97" />
-                                    <path
-                                        d="m20.34,36.49c3.71,2.01,8.44,1.45,11.58-1.68,3.82-3.82,3.82-10.01,0-13.82v-10c0-2.02,1.63-3.65,3.65-3.65s3.65,1.63,3.65,3.65-1.63,3.65-3.65,3.65v2.93c5.03,5.14,5.55,13.07,1.56,18.79" />
-                                    <line x1="28.67" y1="34.15" x2="28.67" y2="13.7" />
-                                    <line x1="25" y1="34.15" x2="25" y2="13.7" />
-                                    <line x1="21.33" y1="34.15" x2="21.33" y2="13.7" />
-                                    <line x1="18.09" y1="13.7" x2="31.91" y2="13.7" />
-                                    <circle cx="35.05" cy="38.81" r="1" />
-                                    <circle cx="17.82" cy="34.45" r="1" />
-                                </svg>
-                            </div>
-                            <h2 class="seksjons-smaragd">Vurdering</h2>
+                        <h2 class="seksjons-amazonitt">Læreplan</h2>
+                     </div>
+                     <p>Her er informasjon om Læreplan</p>
+                  </div>
+               </div>
+               <div class="ifSeksjon" data-seksjon="vurdering">
+                  <div class="boksRamme tekst sP lB">
+                     <div class="seksjonikon">
+                        <div class="ifKnappIkon rundRamme ixD">
+                           <div class="svgIkon maskeVurdering"></div>
                         </div>
-                        <p>Her er informasjon om vurdering</p>
-                    </div>
-                </div>
-                <div class="ifSeksjon" data-seksjon="eksamen">
-                    <div class="boksRamme tekst">
+                        <h2 class="seksjons-smaragd">Vurdering</h2>
+                     </div>
+                     <p>Her er informasjon om vurdering</p>
+                  </div>
+               </div>
+               <section class="ifSeksjon" data-seksjon="eksamen">
+                  <div class="ifSeksjonsGrid">
+                     <div class="boksRamme tekst seksjonInfo1 sP lB">
                         <div class="seksjonikon">
-                            <div class="rundRamme tekst ifKnappIkon">
-                                <svg viewBox="0 0 50 50">
-                                    <path
-                                        d="m32.59,40.58c-2.27,1.36-4.87,2.09-7.59,2.09-3.95,0-7.66-1.54-10.45-4.33-5.72-5.72-5.76-15.01-.11-20.78v-2.93c-2.02,0-3.65-1.63-3.65-3.65s1.63-3.65,3.65-3.65,3.65,1.63,3.65,3.65v10c-2.97,2.97-3.63,7.36-1.98,10.97" />
-                                    <path
-                                        d="m20.34,36.49c3.71,2.01,8.44,1.45,11.58-1.68,3.82-3.82,3.82-10.01,0-13.82v-10c0-2.02,1.63-3.65,3.65-3.65s3.65,1.63,3.65,3.65-1.63,3.65-3.65,3.65v2.93c5.03,5.14,5.55,13.07,1.56,18.79" />
-                                    <line x1="28.67" y1="34.15" x2="28.67" y2="13.7" />
-                                    <line x1="25" y1="34.15" x2="25" y2="13.7" />
-                                    <line x1="21.33" y1="34.15" x2="21.33" y2="13.7" />
-                                    <line x1="18.09" y1="13.7" x2="31.91" y2="13.7" />
-                                    <circle cx="35.05" cy="38.81" r="1" />
-                                    <circle cx="17.82" cy="34.45" r="1" />
-                                </svg>
-                            </div>
-                            <h2 class="seksjons-citrin">Eksamen</h2>
+                           <div class="ifKnappIkon rundRamme ixD sB">
+                              <div class="svgIkon maskeEksamen"></div>
+                           </div>
+                           <h2 class="seksjons-citrin">Eksamen</h2>
                         </div>
-                        <p>Her er informasjon om Eksamen</p>
-                    </div>
-                </div>
-                <div class="ifSeksjon" data-seksjon="yff">
-                    <div class="boksRamme tekst">
-                        <div class="seksjonikon">
-                            <div class="rundRamme tekst ifKnappIkon">
-                                <svg viewBox="0 0 50 50">
-                                    <path
-                                        d="m26.66,27.56h1.52c.97,5.17,4.73,9.52,9.86,11.75,1.54.61,3.28-.14,3.89-1.68.61-1.54-.14-3.28-1.68-3.89-2.86-1.29-5.02-3.51-5.89-6.17h3.59c.47,0,.92-.12,1.3-.34" />
-                                    <path
-                                        d="m12.88,11.01c-.33-.17-.66-.32-1-.47-1.54-.61-3.28.14-3.89,1.68-.61,1.54.14,3.28,1.68,3.89,2.86,1.29,5.02,3.51,5.89,6.17h-3.59c-1.46,0-2.63,1.18-2.63,2.63s1.18,2.63,2.63,2.63h3.59c-.87,2.66-3.04,4.89-5.89,6.17-1.54.61-2.29,2.35-1.68,3.89s2.35,2.29,3.89,1.68c5.13-2.23,8.89-6.58,9.86-11.75h2.32" />
-                                    <path
-                                        d="m39.21,22.61c-.37-.2-.8-.32-1.26-.32h-3.59c.87-2.66,3.04-4.89,5.89-6.17,1.54-.61,2.29-2.35,1.68-3.89-.61-1.54-2.35-2.29-3.89-1.68-5.13,2.23-8.89,6.58-9.86,11.75h-6.46c-.57-3.03-2.09-5.78-4.29-7.98" />
-                                    <circle cx="15.17" cy="12.37" r="1.05" />
-                                    <circle cx="19.03" cy="38.76" r="1.05" />
-                                    <circle cx="40.62" cy="24.92" r="1.05" />
-                                    <circle cx="27.13" cy="12.89" r="2.01" />
-                                </svg>
-                            </div>
-                            <h2 class="seksjons-spessartin">Yrkesfaglig fordypning</h2>
+                        <div class="toKolloner">
+                           <div>
+                              <h3 class="tabDesk">Individuell vurdering av eksamen</h3>
+                              <h3 class="tabMob">Individuell vurdering</h3>
+                              <ul>
+                                 <li>
+                                    <a rel="noopener" target="_blank" alt="lenke til udir" href="https://www.udir.no/regelverkstolkninger/opplaring/Vurdering/udir-2-2020-individuell-vurdering/v.-eksamen/">
+                                       <button class="xSP" type="button" tittel="lenke til udir">
+                                          <h6 class="rundRamme ixD xSP xSB tabDesk">Rundskriv Udir-2-2020 [åpner ny fane]</h6>
+                                          <h6 class="rundRamme ixD xSP xSB tabMob">Rundskriv Udir-2-2020</h6>
+                                       </button>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <p>Eksamensoppgaven bør være såpass åpen at eleven kan ta egne valg for innhold og form</p>
+                                 </li>
+                                 <li>
+                                    <p>Hvor mye av læreplanen som blir testet vil variere basert på eksamensform, tidsramme og hvordan kompetansemålene er formulert.</p>
+                                 </li>
+                                 <li>
+                                    <p>Målet med eksamen er å gi elevene mulighet til å vise sin kompetanse i så stor del av faget som mulig, gitt eksamensformen.</p>
+                                 </li>
+                                 <li>
+                                    <p>Tverrfaglige eksamener skal ta utgangspunkt i eller være i samsvar med helheten i læreplanene som inngår i eksamenen (FOL §3-25).</p>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div>
+                              <h3>§ 3-22 Om eksamen</h3>
+                              <ul>
+                                 <li>
+                                    <a rel="noopener" target="_blank" alt="lenke til udir" href="https://lovdata.no/forskrift/2006-06-23-724/§3-22">
+                                       <button class="xSP" type="button" tittel="lenke til udir">
+                                          <h6 class="rundRamme ixD xSP xSB tabDesk">Forskrift til opplæringslov [åpner ny fane]</h6>
+                                          <h6 class="rundRamme ixD xSP xSB tabMob">Opplæringslov [nettside]</h6>
+                                       </button>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <p>Eksamen skal være i samsvar med kompetansemålene i læreplanen.</p>
+                                 </li>
+                                 <li>
+                                    <p>Eksamen skal gi eleven anledning til å vise sin kompetanse i så stor del av faget som mulig ut fra eksamensformene.</p>
+                                 </li>
+                                 <li>
+                                    <p>Eksamenskarakteren skal være uttrykk for kompetansen den enkelte elev viser på eksamen.</p>
+                                 </li>
+                                 <li>
+                                    <p>Eleven skal få anledning til å vise sin helhetlige kompetanse i faget.</p>
+                                 </li>
+                              </ul>
+                           </div>
                         </div>
-                        <p>Her er informasjon om Yrkesfaglig fordypning</p>
-                    </div>
-                </div>
-                <!-- <div class="ifSeksjon" data-seksjon="???">
-                    <div class="boksRamme tekst">
-                        <div class="seksjonikon">
-<div class="rundRamme tekst ifKnappIkon">
-                                <svg viewBox="0 0 50 50">
-                                    <path d="m37.84,10.21H14.58c-1.27,0-2.16.89-2.16,2v15.61" />
-                                    <line x1="15.37" y1="29.93" x2="30.58" y2="29.93" />
-                                    <line x1="15.37" y1="27.07" x2="30.58" y2="27.07" />
-                                    <line x1="15.37" y1="24.22" x2="30.58" y2="24.22" />
-                                    <line x1="15.37" y1="21.37" x2="30.58" y2="21.37" />
-                                    <line x1="15.37" y1="18.51" x2="30.58" y2="18.51" />
-                                    <line x1="24.7" y1="32.78" x2="30.58" y2="32.78" />
-                                    <line x1="15.37" y1="15.66" x2="21.24" y2="15.66" />
-                                    <line x1="12.42" y1="30.75" x2="12.42" y2="37.59" />
-                                    <path
-                                        d="m33.94,29.88v7.71c0,2.16-1.75,3.91-3.91,3.91s-3.91-1.75-3.91-3.91H8.92c0,2.16,1.75,3.91,3.91,3.91h8.83" />
-                                    <path d="m36.7,14.12h5.05c0-2.16-1.75-3.91-3.91-3.91s-3.91,1.75-3.91,3.91v7.71" />
-                                    <circle cx="33.94" cy="26.14" r="1" />
-                                    <circle cx="24.33" cy="41.49" r="1" />
-                                </svg>
-                            </div>
-                            <h2 class="seksjons-rubin">???</h2>
+                     </div>
+                     <div class="sBoksRamme tekst seksjonInfo2 sP lB">
+                        <h2 class="seksjons-citrin">Lokale føringer</h2>
+                        <table class="sBoksRamme sB tab">
+                           <thead class="ixD">
+                              <tr>
+                                 <th>
+                                    <h3>Fylkeskommune</h3>
+                                    <h3>Retningsliner</h3>
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <div class="fylkesTittel">
+                                       <img src="/images/svg/rb/fylkesskjold_troms-og-finnmark.svg" alt="Våpenskjold Troms og Finnmark" />
+                                       <h5>Troms og Finmark</h5>
+                                    </div>
+                                    <a rel="noopener" target="_blank" alt="PDF om Generelle for Troms of Finmark" href="/rb_filer/retningslinjer-for-eksamen_troms-og-finnmark.pdf">
+                                       <button type="button" tittel="lenke til udir">
+                                          <h6 class="rundRamme ixD xSP xSB tabDesk">Generelle [PDF]</h6>
+                                          <h6 class="rundRamme ixD xSP xSB tabMob">Gen. [PDF]</h6>
+                                       </button>
+                                    </a>
+                                 </td>
+                              </tr>
+                           </tbody>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <div class="fylkesTittel">
+                                       <img src="/images/svg/rb/fylkesskjold_nordland.svg" alt="Våpenskjold Nordland" />
+                                       <h5>Nordland</h5>
+                                    </div>
+                                    <a rel="noopener" target="_blank" alt="PDF om Generelle for Nordland" href="/rb_filer/retningslinjer-for-eksamen_nordland.pdf">
+                                       <button type="button" tittel="lenke til udir">
+                                          <h6 class="rundRamme ixD xSP xSB tabDesk">Generelle [PDF]</h6>
+                                          <h6 class="rundRamme ixD xSP xSB tabMob">Gen. [PDF]</h6>
+                                       </button>
+                                    </a>
+                                 </td>
+                              </tr>
+                           </tbody>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <div class="fylkesTittel">
+                                       <img src="/images/svg/rb/fylkesskjold_troendelag.svg" alt="Våpenskjold Trøndelag" />
+                                       <h5>Trøndelag</h5>
+                                    </div>
+                                    <a rel="noopener" target="_blank" alt="Lenke til nettside om Generelle for Trøndelag" href="https://www.trondelagfylke.no/en/vare-tjenester/utdanning/Eksamen/privatisteksamen/praktisk-eksamen/tverrfaglig-praktisk-eksamen-vg1-vg2-og-vg3-yf/">
+                                       <button type="button" tittel="lenke til udir">
+                                          <h6 class="rundRamme ixD xSP xSB tabDesk">Generelle [nettside]</h6>
+                                          <h6 class="rundRamme ixD xSP xSB tabMob">Gen. [nett]</h6>
+                                       </button>
+                                    </a>
+                                 </td>
+                              </tr>
+                           </tbody>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <div class="fylkesTittel">
+                                       <img src="/images/svg/rb/fylkesskjold_moere-og-romsdal.svg" alt="Våpenskjold Møre og Romsdal" />
+                                       <h5>Møre og Romsdal</h5>
+                                    </div>
+                                    <p class="tabDesk">Nye retningslinjer under utredning</p>
+                                    <p class="tabMob">Under utredning</p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <div class="fylkesTittel">
+                                       <img src="/images/svg/rb/fylkesskjold_innlandet.svg" alt="Våpenskjold Innlandet" />
+                                       <h5>Innlandet</h5>
+                                    </div>
+                                    <div>
+                                       <a rel="noopener" target="_blank" alt="PDF om Generelle for Innlandet" href="/rb_filer/retningslinjer-for-eksamen_innlandet_generell.pdf">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB tabDesk">Generelle [PDF]</h6>
+                                             <h6 class="rundRamme ixD xSP xSB tabMob">Gen. [PDF]</h6>
+                                          </button>
+                                       </a>
+                                       <a rel="noopener" target="_blank" alt="PDF om retningslinjer for eksamen i medieproduksjon Innlandet" href="/rb_filer/retningslinjer-for-eksamen_innlandet_medieproduksjon.pdf">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB tabDesk">Medieproduksjon [PDF]</h6>
+                                             <h6 class="rundRamme ixD xSP xSB tabMob">MP [PDF]</h6>
+                                          </button>
+                                       </a>
+                                       <a rel="noopener" target="_blank" alt="PDF om retningslinjer for eksamen i ikt Innlandet" href="/rb_filer/retningslinjer-for-eksamen_innlandet_ikt.pdf">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB tabDesk">Informasjonsteknologi [PDF]</h6>
+                                             <h6 class="rundRamme ixD xSP xSB tabMob">IT [PDF]</h6>
+                                          </button>
+                                       </a>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <div class="fylkesTittel">
+                                       <img src="/images/svg/rb/fylkesskjold_vestland.svg" alt="Våpenskjold Vestland" />
+                                       <h5>Vestland</h5>
+                                    </div>
+                                    <a rel="noopener" target="_blank" alt="Lenke til nettside om Generelle for Verstland" href="https://www.vestlandfylke.no/utdanning-og-karriere/elev/eksamen-og-standpunkt/retningslinjer-m-mp-og-p-eksamen---elev/munnleg-m-eksamen3/">
+                                       <button type="button" tittel="lenke til udir">
+                                          <h6 class="rundRamme ixD xSP xSB tabDesk">Generelle [nettside]</h6>
+                                          <h6 class="rundRamme ixD xSP xSB tabMob">Gen. [nett]</h6>
+                                       </button>
+                                    </a>
+                                 </td>
+                              </tr>
+                           </tbody>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <div class="fylkesTittel">
+                                       <img src="/images/svg/rb/fylkesskjold_viken.svg" alt="Våpenskjold Viken" />
+                                       <h5>Viken</h5>
+                                    </div>
+                                    <div>
+                                       <a rel="noopener" target="_blank" alt="Lenke til nettside om retningslinjer for eksamen i ikt Viken" href="https://viken.no/tjenester/skole-og-opplaring/eksamen-og-vitnemal/eksamen-for-elever/gjennomforing-av-eksamen/rammedokumenter-for-eleveksamen-i-lk20/praktisk-eksamen/praktisk-tverrfaglig-eksamen-i-informasjonsteknologi-eleveksamen.127677.aspx?fbclid=IwAR0IPe690CM9DqFM8kqqzJ8XwSqDjCVLAUXNtT-0a-y9nzxqQgfEnsOXcBQ">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB tabDesk">Informasjonsteknologi [nettside]</h6>
+                                             <h6 class="rundRamme ixD xSP xSB tabMob">IT [nett]</h6>
+                                          </button>
+                                       </a>
+                                       <a rel="noopener" target="_blank" alt="Lenke til nettside om retningslinjer for eksamen i medieproduksjon Viken" href="https://viken.no/tjenester/skole-og-opplaring/eksamen-og-vitnemal/eksamen-for-elever/gjennomforing-av-eksamen/rammedokumenter-for-eleveksamen-i-lk20/praktisk-eksamen/praktisk-tverrfaglig-eksamen-i-medieproduksjon-eleveksamen.127674.aspx">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB tabDesk">Medieproduksjon [nettside]</h6>
+                                             <h6 class="rundRamme ixD xSP xSB tabMob">MP [nett]</h6>
+                                          </button>
+                                       </a>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <div class="fylkesTittel">
+                                       <img src="/images/svg/rb/fylkesskjold_oslo.svg" alt="Våpenskjold Oslo" />
+                                       <h5>Oslo</h5>
+                                    </div>
+                                    <div>
+                                       <a rel="noopener" target="_blank" alt="Lenke til nettside om Generelle for Oslo" href="https://www.oslo.kommune.no/skole-og-utdanning/eksamen-og-elevvurdering/eksamen/eksamen-i-videregaende-skole/#toc-4">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB tabDesk">Generelle [nettside]</h6>
+                                             <h6 class="rundRamme ixD xSP xSB tabMob">Gen. [nett]</h6>
+                                          </button>
+                                       </a>
+                                       <a rel="noopener" target="_blank" alt="PDF om Generelle for Oslo" href="https://marienlyst.osloskolen.no/siteassets/bildekarusell/eksamen-19/retningslinjer-for-eksamensavvikling-i-osloskolen-2019.pdf">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB tabDesk">Generelle [PDF]</h6>
+                                             <h6 class="rundRamme ixD xSP xSB tabMob">Gen. [PDF]</h6>
+                                          </button>
+                                       </a>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <div class="fylkesTittel">
+                                       <img src="/images/svg/rb/fylkesskjold_vestfold-og-telemark.svg" alt="Våpenskjold Vestfold og Telemark" />
+                                       <h5>Vestfold og Telemark</h5>
+                                    </div>
+                                    <a rel="noopener" target="_blank" alt="Lenke til nettside om Generelle for Vestfold og Telemark" href="https://www.vtfk.no/meny/tjenester/opplaring-og-folkehelse/eksamen/eksamen-for-elever/gjennomfore-eksamen/">
+                                       <button type="button" tittel="lenke til udir">
+                                          <h6 class="rundRamme ixD xSP xSB tabDesk">Generelle [nettside]</h6>
+                                          <h6 class="rundRamme ixD xSP xSB tabMob">Gen. [nett]</h6>
+                                       </button>
+                                    </a>
+                                 </td>
+                              </tr>
+                           </tbody>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <div class="fylkesTittel">
+                                       <img src="/images/svg/rb/fylkesskjold_rogaland.svg" alt="Våpenskjold Rogaland" />
+                                       <h5>Rogaland</h5>
+                                    </div>
+                                    <a rel="noopener" target="_blank" alt="lenke til udir" href="/rb_filer/retningslinjer-for-eksamen_rogaland_generell.pdf">
+                                       <button type="button" tittel="lenke til udir">
+                                          <h6 class="rundRamme ixD xSP xSB tabDesk">Generelle [PDF]</h6>
+                                          <h6 class="rundRamme ixD xSP xSB tabMob">Gen. [PDF]</h6>
+                                       </button>
+                                    </a>
+                                 </td>
+                              </tr>
+                           </tbody>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <div class="fylkesTittel">
+                                       <img src="/images/svg/rb/fylkesskjold_agder.svg" alt="Våpenskjold Agder" />
+                                       <h5>Agder</h5>
+                                    </div>
+                                    <div>
+                                       <a rel="noopener" target="_blank" alt="lenke til udir" href="https://agderfk.no/vare-tjenester/skole-og-opplaring/eksamen/retningslinjer-for-eksamen/fagspesifikke-retningslinjer-for-eksamen/tverrfaglig-eksamen-vg2-og-vg3-yrkesfag/informasjonsteknologi-vg2.40215.aspx">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB tabDesk">Informasjonsteknologi [nettside]</h6>
+                                             <h6 class="rundRamme ixD xSP xSB tabMob">IT [nett]</h6>
+                                          </button>
+                                       </a>
+                                       <a rel="noopener" target="_blank" alt="lenke til udir" href="https://agderfk.no/vare-tjenester/skole-og-opplaring/eksamen/retningslinjer-for-eksamen/fagspesifikke-retningslinjer-for-eksamen/tverrfaglig-eksamen-vg2-og-vg3-yrkesfag/medieproduksjon.39518.aspx">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB tabDesk">MP [nett]</h6>
+                                             <h6 class="rundRamme ixD xSP xSB tabMob">MP [nett]</h6>
+                                          </button>
+                                       </a>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                           <tfoot class="ixD">
+                              <tr>
+                                 <td class="sP">
+                                    <p>Gen. = Generelle retningslinjer // MP = Medieproduksjon // IT = Informasjonsteknologi</p>
+                                 </td>
+                              </tr>
+                           </tfoot>
+                        </table>
+                     </div>
+                     <div class="boksRamme tekst sP lB">
+                        <h2 class="seksjons-citrin">Eksamensoppgaver</h2>
+                        <table class="sBoksRamme sB tab">
+                           <thead class="ixD">
+                              <tr>
+                                 <th>
+                                    <h5>Informasjonsteknologi</h5>
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td class="eksamensOppaver">
+                                    <h5>Prøve-eksamen IT 2022</h5>
+                                    <p>Laget av Elvebakken- og F21 VGS, åpen eksamen der elevene selv definerte store deler av oppdraget</p>
+                                    <div>
+                                       <a rel="noopener" target="_blank" alt="" href="/rb_filer/prove-eksamen-ikt_oslo-2022.pdf">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB">Prøve-eksane IKT [PDF]</h6>
+                                          </button>
+                                       </a>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table class="sBoksRamme sB tab">
+                           <thead class="ixD">
+                              <tr>
+                                 <th>
+                                    <h3>Medieproduksjon</h3>
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td class="eksamensOppaver">
+                                    <h5>Informasjonskampanje Bama Gruppen AS</h5>
+                                    <p>Laget av Hamar Katedralskole, inspirert av lærefagene</p>
+                                    <div>
+                                       <a rel="noopener" target="_blank" alt="" href="/rb_filer/oppgavetekst-mp-forberedelse_hamar-katedralskole.pdf">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB">Forberedelse[PDF]</h6>
+                                          </button>
+                                       </a>
+                                       <a rel="noopener" target="_blank" alt="" href="/rb_filer/oppgavetekst-mp-praktisk-del_hamar-katedralskole.pdf">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB">Praktisk del[PDF]</h6>
+                                          </button>
+                                       </a>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                           <tbody>
+                              <tr>
+                                 <td class="eksamensOppaver">
+                                    <h5>NM worldskills</h5>
+                                    <p>Laget av Charlottenlund vgs som øvingsoppgaver mot eksamen, inspirert av lærefagene</p>
+                                    <div>
+                                       <a rel="noopener" target="_blank" alt="" href="/rb_filer/medieproduksjon-nm_oppgavetekst-medieteknikker.pdf">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB">Medieteknikk[PDF]</h6>
+                                          </button>
+                                       </a>
+                                       <a rel="noopener" target="_blank" alt="" href="/rb_filer/medieproduksjon-nm_oppgavetekst-mediedesigner.pdf">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB">Mediedesign[PDF]</h6>
+                                          </button>
+                                       </a>
+                                       <a rel="noopener" target="_blank" alt="" href="/rb_filer/medieproduksjon-nm_oppgavetekst-innholdsprodusent.pdf">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB">Innholdsproduksjon[PDF]</h6>
+                                          </button>
+                                       </a>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                           <tbody>
+                              <tr>
+                                 <td class="eksamensOppaver">
+                                    <h5>Prøve-eksamen MP 2022</h5>
+                                    <p>Laget av Elvebakken- og F21 VGS, åpen eksamen der elevene selv definerte store deler av oppdraget</p>
+                                    <div>
+                                       <a rel="noopener" target="_blank" alt="" href="/rb_filer/prove-eksamen-medieproduksjon_oslo-2022.pdf">
+                                          <button type="button" tittel="lenke til udir">
+                                             <h6 class="rundRamme ixD xSP xSB">Prøve-eksane MP [PDF]</h6>
+                                          </button>
+                                       </a>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <section class="seksjonDetaljer boksRamme tekst sP lB">
+                        <h2 class="seksjons-citrin">Eksamensseminaret 2023</h2>
+                        <p>1. februar 2023 ble det arrangert et eksamensseminar i Oslo av Mediepedagogene. Formålet med seminaret var å diskutere status og avvikling for praktisk eksamen på IM og MK. 16 IM-lærere fra åtte ulike fylker var representert. Hoveddelen av seminaret var avvsatt til å jobbe gruppevis med problemstillinger, erfaringsdeling og idémyldring til nye eksamensopgpaver. Under finner dere noe av det som ble jobbet frem under eksamensseminar.</p>
+                        <details>
+                           <summary class="ixD">Erfaringsdeling</summary>
+                           <h5>Eksamensseminaret startet med at lærerne presenterte seg selv og sine erfaringer med eksamensarbeid. Generelt sett kom det fort frem at de færreste av skolene hadde gjennomført eksamen eller prøve-eksamen siden IM ble startet opp. Under er en oppsummering av hva hver av skolene jobbet med.</h5>
+                           <div class="detaljeRamme">
+                              <div>
+                                 <h5>Akademiet Drammen</h5>
+                                 <p>
+                                    I 2022 gjennomførte de en casebasert prøveeksamen i medieproduksjon. Elevene hadde 24 timer til forberedelse og 5 timer på eksamensdagen, der de skulle utvikle et produkt for selskapet Rett Hjem AS. Under eksamen ble det introdusert en vri på casen som endret hvordan elevene skulle fullføre produktet. Elevene gjorde det bra på produksjonsdelen, men det ble oppdaget mangler i deres teoretiske kunnskap i begrunnelse av valgene deres under spørsmålsrundene med sensorene. De tror at noe av grunnen kan være bredden på læreplanen, og at det ikke er nok tid med
+                                    hvert tema. De ser også et behov for å jobbe mer med å knytte sammen kompetansemålene på VG1 og VG2 i større grad. Skolen håpet på å kunne tilby 2IT neste år, men inntil videre er det satt på is.
+                                 </p>
+                              </div>
+                              <div>
+                                 <h5>Romsdal VGS</h5>
+                                 <p>
+                                    Gjennomførte en prøve-eksamen i 2022 med fire elever i ett stort klasserom. Det ble opplevd noen utfordringer med vurdering underveis, da noen elever hadde problemer med konsentrasjon i et åpent klasserom og kunne bli stresset av å bli overhørt. Skolen så derfor behovet for å ta hensyn til dette i fremtidige eksamener. Modellen for eksamen bestod av en generell og en spisset del, og elevene var fornøyde med gjennomføringen av prøve-eksamen. En utfordring skolen så var at sensorene ofte hadde spisset kompetanse, noe som kan gjøre det vanskelig for dem å
+                                    veilede i fagområder de ikke har kunnskap om. Skolen har diskutert å ha flere sensorer eller en ekstern og en intern sensor, men det er vanskelig å finne personer med bred nok kompetanse til å kunne vurdere hele bredden. Skolen har også diskutert hvordan de kan kvalitetssikre sensuren når det krever tre faglærere til vanlig. Det har også vært diskusjoner rundt hva som er undervisning og hva som er tilstedeværelse for faglærere under eksamen. Skolen ser behovet for å avklare dette og lage tydelige retningslinjer for fremtidige eksamener.
+                                 </p>
+                              </div>
+                              <div>
+                                 <h5>Elvebakken- og F21 VGS</h5>
+                                 <p>
+                                    Gjennomførte en tre timers casebasert prøveeksamen våren 2022, der elevene i stor grad fikk definere rammene for oppgaven selv. Skolene brukte hverandres lærere som eksterne sensorer. Eksamensdagen startet med en innsjekk i grupper, der sensor ble kjent med elevene uten å gå inn på det faglige. Underveis hadde sensor individuelle statusrapporter med hver elev for å følge opp hva de jobbet med og hvordan de løste eventuelle problemer. Erfaringene fra prøveeksamenen var generelt positive. Elevene likte den åpne formen på oppgavene godt, og det var nyttig å
+                                    jobbe på tvers av skolene, noe som førte til gode diskusjoner om vurdering og veiledning underveis. Forbedringspotensialene inkluderte å ha fem timer fremfor tre timer til rådighet og å ha et system for hvor mye tid sensor skal bruke på hver elev. Det var også en utfordring rundt kompetansebredde, da faglærere gjerne har noe spisset kompetanse, som kan være en svakhet i så åpne eksamensformer. Det kunne derfor vært nyttig om ekstern sensor kunne få mer informasjon om elevene på forhånd for å kunne være bedre forberedt.
+                                 </p>
+                                 <p>Oppgaveteksten ligger vedlagt i fanen over</p>
+                              </div>
+                              <div>
+                                 <h5>Glemmen VGS</h5>
+                                 <p>
+                                    har ikke gjennomført eksamen ennå, men har satt sammen en gruppe som utarbeider oppgaver. Medieproduksjon har kommet lengst og baserer seg på erfaringer fra gamle MK-yrkesfag. Eksamenssettet for IKT er ikke ferdig ennå. Skolen tillater gruppearbeid under eksamen og har diskutert ulike måter det kan gjøres på. For eksempel kan elevene i Film samarbeide om å lage råmateriale, mens hver elev må klippe og levere sitt eget produkt. I IKT kan elevene samarbeide om problemstillinger og konseptutvikling, men selve produktet må være individuelt. På tidligere
+                                    eksamener på MK har skolen hatt uformelle samtaler med sensor før eksamensdagen for å forberede dem bedre. De har også forsøkt å utforme eksamen med nøkkelord, for eksempel «grenseløs(t)», for å gi elevene mulighet til å definere rammene og produktet. Glemmen VGS har god erfaring med å bruke faglærere som eksterne sensorer på tvers med naboskoler for å oppnå en god sensur. Utenom eksamen har skolen eksperimentert med å splitte YFF inn i IKT og medieproduksjon for å gi elevene muligheten til å spesialisere seg. Dette har fungert bra, og elevene får evaluere
+                                    progresjonen og velge videre fordypning etter noen uker. Skolen jobber også tverrfaglig i programfagene og har gode erfaringer med yrkesretta oppdrag i samarbeid med fellesfagene.
+                                 </p>
+                              </div>
+                              <div>
+                                 <h5>Hamar Katedralskole</h5>
+                                 <p>
+                                    Skolen satser stort på å yrkesrette utdanningen og ønsker å få alle elevene ut i lære. Som en del av dette har de definert nye vurderingskriterier som legger vekt på prosess, problemstilling og produksjon. Elevene får tidlig mulighet til å spesialisere seg innenfor sitt fagområde, og enkelte på VG1 har allerede begynt å jobbe mye med programvare som Indesign for trykk eller Unity for spillutvikling. Skolen mener det er viktigere å se på hva elevene kan enn hva de ikke kan i læreplanen. Når det gjelder eksamen, har skolen utarbeidet en modell som tar sikte på
+                                    å imøtekomme lærefagene. Elevene får 48 timer forberedelsestid, hvor de kan generere råmateriale som kan brukes på eksamensdagen. I mediedesign kan de for eksempel lage en designprofil for et grafisk produkt, i innholdsproduksjon kan de filme råmateriale som kan brukes til redigering på eksamensdagen, og i medieteknikk kan de planlegge en sanntidsproduksjon med rigging. Skolen tillater også gruppearbeid under eksamen, men produktet skal være individuelt. De har også vært i kontakt med eksamenskontoret i fylket, og det har blitt avklart at eksamen ikke skal
+                                    være like stor som en fagbrevprøve, men den skal kunne dekke flere fag.
+                                 </p>
+                                 <p>Ferdig oppgavesett for medieproduksjon ligger vedlagt i fanen over</p>
+                              </div>
+                              <div>
+                                 <h5>Charlottenlund VGS</h5>
+                                 <p>Har vært med på å definere og arrangere NM i medieproduksjon, som de har brukt som en erstatning til prøveeksamen. Disse oppgavene er inspirert av lærefagene, og de vurderer nå å bruke dette som et grunnlag til en endelig eksamensform.</p>
+                                 <p>Oppgavetekstene for NM i Medieproduksjon finnes fanen over</p>
+                              </div>
+                           </div>
+                        </details>
+                        <details>
+                           <summary class="ixD">Idémyldringer</summary>
+                           <div class="detaljeRamme">
+                              <h5>Tema 1</h5>
+                              <p>referat tema 1</p>
+                           </div>
+                        </details>
+                        <details>
+                           <summary class="ixD">Problemstillinger til diskusjon</summary>
+                           <div class="detaljeRamme">
+                              <div>
+                                 <h5>1. Nytt eller videreutvikling av arbeid?</h5>
+                                 <p>Hva er fordelene og ulempene med å tillate at eksamen tar utgangspunkt i et påbegynt arbeid eller at skolen deler ut råmateriale? Finnes det andre metoder for å håndtere begrensningene med fem timers produksjonstid?</p>
+                              </div>
+                              <div>
+                                 <h5>2. Spesialisering vs. bredde - hvor mye bør eksamen dekke?</h5>
+                                 <p>Bør eksamen fokusere på å dekke et bredt spekter av læreplanen eller bør den inspireres mer av lærefagene og fagprøven for å vise mer spisset kompetanse? Hva er fordelene og ulempene med begge tilnærmingene, spesielt for elever som ikke har fått læreplass enda?</p>
+                              </div>
+                              <div>
+                                 <h5>3. Gruppearbeid eller individuelt?</h5>
+                                 <p>Hva er fordeler og ulemper med gruppebasert eksamen? Hvordan kan man organisere gruppearbeid og sikre god vurderingskvalitet og mulighet til å vise individuell kompetanse for alle på gruppen?</p>
+                              </div>
+                              <div>
+                                 <h5>4. Kunstig assistanse</h5>
+                                 <p>Bør eksamenssettet tilpasses eller begrenses på grunn av AI-verktøy som elever kan bruke på eksamensdagen? Hva er fordeler og ulemper ved å tillate bruk av AI-verktøy på eksamen?</p>
+                              </div>
+                              <div>
+                                 <h5>5. Ekstern sensor</h5>
+                                 <p>Hvordan kan eksamen organiseres slik at ekstern sensor er mest mulig forberedt? Bør sensor få mer innsyn i elevenes forberedelse eller møte elevene på forhånd? Hvordan kan sensor best fordele tiden sin på eksamensdagen?</p>
+                              </div>
+                              <div>
+                                 <h5>6. Vurdering av forberedelse</h5>
+                                 <p>Er det en fordel eller ulempe for elevene at forberedelsesdagen(e) ikke skal vurderes, med mindre råmateriale eller kilder blir tatt med på eksamensdagen? Er det argumenter for at forberedelsesprosessen burde spille en større rolle i vurderingen?</p>
+                              </div>
+                              <div>
+                                 <h5>7. Veiledning eller skjult undervisning?</h5>
+                                 <p>Når oppgaven er åpen og lar elevene definere rammene for eksamen selv, kan det være utfordrende for svakere elever. Hvis faglærer bidrar med å sette opp case og kommunikasjonsstrategi, kan det oppstå tvil om hvor grensen går mellom veiledning og skjult undervisning. Hva er en rimelig balanse mellom å veilede elever og la dem arbeide selvstendig?</p>
+                              </div>
+                           </div>
+                        </details>
+                     </section>
+                  </div>
+               </section>
+               <div class="ifSeksjon" data-seksjon="yff">
+                  <div class="boksRamme tekst sP lB">
+                     <div class="seksjonikon">
+                        <div class="ifKnappIkon rundRamme ixD">
+                           <div class="svgIkon maskeYFF"></div>
                         </div>
-                        <p>Her er informasjon om ???.</p>
-                    </div>
-                </div>
-                <div class="ifSeksjon" data-seksjon="???">
-                    <div class="boksRamme tekst">
-                        <div class="seksjonikon">
-<div class="rundRamme tekst ifKnappIkon">
-                                <svg viewBox="0 0 50 50">
-                                    <polygon points="41.8 16.35 41.8 16.35 41.8 16.35 41.8 16.35" />
-                                    <rect x="31.59" y="18.3" width="3.21" height="13.58" />
-                                    <polyline
-                                        points="26.73 26.32 26.73 31.88 23.51 31.88 23.51 18.3 26.73 18.3 26.73 23.57" />
-                                    <rect x="15.44" y="18.3" width="3.21" height="13.58" />
-                                    <polyline points="37.24 15.43 37.24 18.3 12.85 18.3 12.85 15.43" />
-                                    <polyline
-                                        points="36.72 11.2 40.18 12.57 40.18 15.43 9.9 15.43 9.9 12.57 25.04 6.57 30.02 8.55" />
-                                    <polyline points="12.85 34.74 12.85 31.88 37.24 31.88 37.24 34.74" />
-                                    <polyline points="16.18 38.32 40.18 38.32 40.18 34.74 9.9 34.74 9.9 38.32" />
-                                    <circle cx="13.07" cy="38.32" r="1" />
-                                    <circle cx="33.51" cy="10" r="1" />
-                                </svg>
-                            </div>
-                            <h2 class="seksjons-thulitt">???</h2>
-                        </div>
-                        <p>Her er informasjon om ???.</p>
-                    </div>
-                </div>
-                <div class="ifSeksjon" data-seksjon="???">
-                    <div class="boksRamme tekst">
-                        <div class="seksjonikon">
-<div class="rundRamme tekst ifKnappIkon">
-                                <svg viewBox="0 0 50 50">
-                                    <circle cx="28.97" cy="8.85" r="1" />
-                                    <circle cx="18.05" cy="32.74" r="1" />
-                                    <path
-                                        d="m18.02,35.82v8.88s1.63.98,4.57,1.32v-13.4h4.88v13.28c1.39-.21,2.92-.59,4.57-1.2v-17.82c0,2.53,2.05,4.59,4.59,4.59s4.59-2.05,4.59-4.59-2.05-4.59-4.59-4.59H13.43c-2.53,0-4.59,2.05-4.59,4.59s2.05,4.59,4.59,4.59,4.59-2.05,4.59-4.59h11.27" />
-                                    <path
-                                        d="m27.02,7.14s-2.43-2.95-4.9-3.96c0,0,2.11,4.24.65,6.5s-2.75,4.41-2.75,4.41c0,0-.75-3.27-1.99-4.41,0,0,.78,3.01-1.43,5.96s-.32,5.96.78,6.65h3.02s-.28-1.91.9-3.21,1.71-2.84,1.7-3.87c0,0,.77,2.44.77,3.52,0,0,4.02-3.6,2.47-7.72,0,0,5.65,6.32,2.63,11.29h3.59s5.42-4.68-1.47-11.52" />
-                                </svg>
-                            </div>
-                            <h2 class="seksjons-kunzitt">???</h2>
-                        </div>
-                        <p>Her er informasjon om ???.</p>
-                    </div>
-                </div>
-                <div class="ifSeksjon" data-seksjon="???">
-                    <div class="boksRamme tekst">
-                        <div class="seksjonikon">
-<div class="rundRamme tekst ifKnappIkon">
-                                <svg viewBox="0 0 50 50">
-                                    <line x1="9.73" y1="13.19" x2="32.68" y2="36.14" />
-                                    <line x1="14.35" y1="8.94" x2="36.28" y2="30.87" />
-                                    <path d="m36.28,30.87c2.33-4.77,3.35-9.59,3.77-13.25" />
-                                    <path d="m20.75,40.28c1.28,1.17,2.7,2.27,4.29,3.27,3.2-2.02,5.73-4.43,7.74-7.02" />
-                                    <path
-                                        d="m40.31,11.33c-5.63-4.07-15.27-4.74-15.27-4.74,0,0-9.64.67-15.27,4.74,0,0-1.1,15.44,8.71,26.62" />
-                                    <circle cx="34.78" cy="33.74" r="1" />
-                                    <circle cx="40.31" cy="14.68" r="1" />
-                                </svg>
-                            </div>
-                            <h2 class="seksjons-ametyst">???</h2>
-                        </div>
-                        <p>Her er informasjon om ???.</p>
-                    </div>
-                </div> -->
+                        <h2 class="seksjons-spessartin">Yrkesfaglig fordypning</h2>
+                     </div>
+                     <p>Her er informasjon om Yrkesfaglig fordypning</p>
+                  </div>
+               </div>
             </section>
-            <!-- <section class="galleri">
-                <div class="galleri-grid ramme" id="galleri-grid">
-                    <img src="images/img1.png" class="miniatyrbilde" alt="alt1">
-                    <img src="images/img2.png" class="miniatyrbilde" alt="alt2">
-                    <img src="images/img3.png" class="miniatyrbilde" alt="alt3">
-                    <img src="images/img4.png" class="miniatyrbilde" alt="alt4">
-                    <svg class="pil pil-tilbake" viewBox="0 0 40 50" alt="forrige bildegruppe">
-                        <path
-                            d="m.98,26.81l35.81,22.86c1.4.89,3.21-.13,3.21-1.81V2.14c0-1.68-1.81-2.7-3.21-1.81L.98,23.19c-1.31.84-1.31,2.79,0,3.62Z" />
-                    </svg>
-                    <svg class="pil pil-neste" viewBox="0 0 40 50" alt="neste bildegruppe">
-                        <path
-                            d="m39.02,23.19L3.21.33C1.81-.56,0,.46,0,2.14v45.72c0,1.68,1.81,2.7,3.21,1.81l35.81-22.86c1.31-.84,1.31-2.79,0-3.62Z" />
-                    </svg>
-                    <div class="sideTeller">
-                        <span class="gjeldendeSiden"></span>
-                        <span class="sideSkille">/</span>
-                        <span class="siderTotalt"></span>
-                    </div>
-                </div>
-                <div class="bildefremvisning">
-                    <div class="fokusramme ramme">
-                        <div class="fokusrammeHeader">
-                            <div class="fokusbildeTittel">
-                                <h3 class="tittelTekst"></h3>
-                            </div>
-                            <svg class="kryss" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="25" cy="25" r="22.5" />
-                                <line x1="15" y1="15" x2="35" y2="35" />
-                                <line x1="35" y1="15" x2="15" y2="35" />
-                            </svg>
-                        </div>
-                        <div class="fokusKarusell">
-                            <svg class="fokuspil fokuspil-tilbake" viewBox="0 0 40 50" alt="forrige bildegruppe">
-                                <path
-                                    d="m.98,26.81l35.81,22.86c1.4.89,3.21-.13,3.21-1.81V2.14c0-1.68-1.81-2.7-3.21-1.81L.98,23.19c-1.31.84-1.31,2.79,0,3.62Z" />
-                            </svg>
-                            <div class="fokusvindu">
-                            </div>
-                            <svg class="fokuspil fokuspil-neste" viewBox="0 0 40 50" alt="neste bildegruppe">
-                                <path
-                                    d="m39.02,23.19L3.21.33C1.81-.56,0,.46,0,2.14v45.72c0,1.68,1.81,2.7,3.21,1.81l35.81-22.86c1.31-.84,1.31-2.79,0-3.62Z" />
-                            </svg>
-                        </div>
-                        <div class="fokusrammeInfo">
-                            <div class="bildetekst">
-                                <p class="altTekst"></p>
-                            </div>
-                            <div class="bildeTeller">
-                                <span class="gjeldendeBilde"></span>
-                                <span class="bildeSkille">/</span>
-                                <span class="bilderTotalt"></span>
-                            </div>
-                        </div>
-                        <div class=bildekarusell>
-                            <div class="karusellramme">
-                                <img src="images/img1.png" class="karusellbilde" alt="alt1">
-                            </div>
-                            <div class="karusellramme">
-                                <img src="images/img2.png" class="karusellbilde" alt="alt2">
-                            </div>
-                            <div class="karusellramme">
-                                <img src="images/img3.png" class="karusellbilde" alt="alt3">
-                            </div>
-                            <div class="karusellramme">
-                                <img src="images/img4.png" class="karusellbilde" alt="alt4">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
-            <!-- <section class="ramme artikler">
-                <table>
-                    <thead>
-                        <tr>
-                            <th colspan="2">
-                                <h3>Snarveismeny</h3>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="td-kategori">1. Informasjonsteknologi</td>
-                            <td class="td-innhold">
-                                <span>???</span>
-                                <p> • </p>
-                        </tr>
-                        <tr>
-                            <td class="td-kategori">2. Medieproduksjon</td>
-                            <td class="td-innhold">
-                                <span>???</span>
-                                <p> • </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td-kategori">3. Lærepkan</td>
-                            <td class="td-innhold">
-                                <span>???</span>
-                                <p> • </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td-kategori">4. Vurdering</td>
-                            <td class="td-innhold">
-                                <span>???</span>
-                                <p> • </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td-kategori">5. Eksamen</td>
-                            <td class="td-innhold">
-                                <span>???</span>
-                                <p> • </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td-kategori">6. Yrkesfaglig fordypning</td>
-                            <td class="td-innhold">
-                                <span>???</span>
-                                <p> • </p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section> -->
-        </div>
-    </main>
-    <footer>
-        Denne nettsiden er designet og utviklet av Marius Strøm Riseth // Fyrstikkalléen videregående skole • F21 vgs
-    </footer>
-</body>
-
+         </div>
+      </main>
+      <footer>Denne nettsiden er designet og utviklet av Marius Strøm Riseth // Fyrstikkalléen videregående skole • F21 vgs</footer>
+   </body>
 </html>

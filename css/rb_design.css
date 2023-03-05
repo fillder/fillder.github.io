@@ -43,13 +43,6 @@ header {
 .hero-tittel h1 {
    color: whitesmoke;
 }
-/* .hero-emblem {
-   position: relative; 
-   bottom: -50%;
-   transform: translateX(-50%); 
-   width: 4rem;
-   height: 4rem;
-} */
 /*______ hovedinnhold ______*/
 .gridBeholder {
    display: grid;
@@ -110,13 +103,7 @@ header {
    width: 50px;
    height: 50px;
    z-index: 4;
-   stroke-linecap: round;
-   stroke-linejoin: round;
-   stroke-width: 2;
-   stroke-miterlimit: 10;
-   stroke: var(--clr-tekst);
-   fill: none;
-   padding: 0;
+   padding: 0.5rem;
 }
 .ifKnappIkon svg circle {
    fill: var(--clr-tekst);
@@ -135,11 +122,209 @@ header {
 .utilgjengelg:hover {
    transform: none;
 }
+/*______ Seksjonanimasjon ______*/
+.ifSeksjon {
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.3s ease-out;
+}
+.ifSeksjon.synlig {
+   max-height: 100vh;
+   transition: max-height 0.3s ease-in;
+}
+.ifSeksjon:not(.synlig) {
+   max-height: 0;
+   transition: max-height 0.3s ease-out;
+}
+.ifSekskonListe {
+   list-style: none;
+}
+.ifSeksjonsGrid {
+   display: grid;
+   grid-template-columns: 1fr 0.5fr;
+   grid-template-areas:
+      "sI1 sI1"
+      "sI2 kna"
+      "det det";
+   gap: 1rem;
+}
+.seksjonInfo1 {
+   grid-area: sI1;
+}
+.seksjonInfo2 {
+   grid-area: sI2;
+}
+.seksjonRessurser {
+   grid-area: kna;
+}
+.seksjonDetaljer {
+   grid-area: det;
+}
+.seksjonikon {
+   display: flex;
+}
+.seksjonikon .ifKnappIkon {
+   margin-inline-end: 1rem;
+}
+/*______ Liste ______*/
+ul {
+   list-style: none; /* Remove default bullets */
+   margin-block-end: 1rem;
+}
+ul li {
+   margin-left: 1em;
+}
+ul li p::before {
+   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+   color: var(--clr-citrin); /* Change the color */
+   font-weight: bold; /* If you want it to be bold */
+   display: inline-block; /* Needed to add space between the bullet and the text */
+   width: 1em; /* Also needed for space (tweak if needed) */
+   margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+ul li a button {
+   margin-left: -1em;
+}
+.toKolloner {
+   display: grid;
+   grid-template-columns: 1fr 0.75fr;
+   gap: 1rem;
+}
+/*______ Tabeller ______*/
+table {
+   width: 100%;
+   margin-block-end: 1rem;
+}
+th {
+   display: flex;
+   justify-content: space-between;
+   margin-inline: 1rem;
+   margin-block: 0.5rem;
+}
+td {
+   border-top: 1px solid var(--clr-ramme);
+}
+table tbody tr td {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.fylkesTittel {
+   display: flex;
+   align-items: center;
+   padding-block: 0.5rem;
+}
+.fylkesTittel img {
+   width: 30px;
+   height: 30px;
+   margin-inline: 0.5rem;
+}
+tfoot {
+   text-align: center;
+   margin-block: 4rem;
+}
+.tabMob {
+   display: none;
+}
+table tbody tr td p {
+   margin-inline-end: 0.5rem;
+}
+button {
+   transition: transform 0.3s ease-in-out;
+   transform: scale(1);
+}
+button:hover {
+   transition: transform 0.3s ease-in-out;
+   transform: scale(1.04);
+}
+.eksamensOppaver {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   text-align: center;
+   padding: 0.5rem;
+}
+.eksamensOppaver button {
+   margin-top: 0.25rem;
+}
+/*______ Detaljeliste ______*/
+details {
+   grid-column: span 2;
+   padding-block: 0.5rem;
+}
+details > summary {
+   font-family: "Roboto", sans-serif;
+   font-size: clamp(0.9rem, 9vw, 1.2rem);
+   font-weight: 500;
+   padding-block: 0.5rem;
+   padding-inline: 1rem;
+   cursor: pointer;
+   border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+   border-bottom-left-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+   border-width: 1px 1px 3px 3px;
+   border-style: solid;
+   border-color: var(--clr-ramme);
+}
+details[open] > summary {
+   border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 0;
+   border-width: 1px 1px 1px 3px;
+}
+.detaljeRamme {
+   border-bottom-left-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+   border-top-right-radius: 0;
+   border-top-left-radius: 0;
+   border-width: 1px 1px 3px 3px;
+   border-style: solid;
+   border-color: var(--clr-ramme);
+   background-color: var(--clr-ixDBoks);
+   padding: 1rem;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 1rem;
+}
+/*______ svgMasker ______*/
+.maskeDialog {
+   -webkit-mask: url(/images/svg/rb_ikon-dialog.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-dialog.svg) no-repeat center;
+}
+.maskeEksamen {
+   -webkit-mask: url(/images/svg/rb_ikon-eksamen.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-eksamen.svg) no-repeat center;
+}
+.maskeLk20 {
+   -webkit-mask: url(/images/svg/rb_ikon-lk20.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-lk20.svg) no-repeat center;
+}
+.maskeTverrfaglig {
+   -webkit-mask: url(/images/svg/rb_ikon-tverrfaglig.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-tverrfaglig.svg) no-repeat center;
+}
+.maskeYFF {
+   -webkit-mask: url(/images/svg/rb_ikon-yff.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-yff.svg) no-repeat center;
+}
+.maskeIT {
+   -webkit-mask: url(/images/svg/rb_ikon-it.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-it.svg) no-repeat center;
+}
+.maskeMP {
+   -webkit-mask: url(/images/svg/rb_ikon-mp.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-mp.svg) no-repeat center;
+}
+.maskeVurdering {
+   -webkit-mask: url(/images/svg/rb_ikon-vurdering.svg) no-repeat center;
+   mask: url(/images/svg/rb_ikon-vurdering.svg) no-repeat center;
+}
 /*______ Seksjonsknappfarger ______*/
 .ifKnapp.aktiv .ifKnappIkon {
    stroke: var(--aktiv-farge);
 }
-
 .ifKnapp.aktiv .ifKnappIkon svg circle {
    fill: var(--aktiv-farge);
 }
@@ -176,114 +361,54 @@ header {
 .ifKnapp.aktiv[data-farge="ametyst"] {
    --aktiv-farge: var(--clr-ametyst);
 }
-/*______ Seksjonanimasjon ______*/
-.ifSeksjon {
-   max-height: 0;
-   overflow: hidden;
-   transition: max-height 0.3s ease-out;
-}
-.ifSeksjon.synlig {
-   max-height: 100vh;
-   transition: max-height 0.3s ease-in;
-}
-.ifSeksjon:not(.synlig) {
-   max-height: 0;
-   transition: max-height 0.3s ease-out;
-}
-.ifSekskonListe {
-   list-style: none;
-}
+/*______ Dekorasjonsfarger ______*/
 .seksjons-safir {
    text-decoration: underline var(--clr-safir) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-akvamarin {
    text-decoration: underline var(--clr-akvamarin) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-amazonitt {
    text-decoration: underline var(--clr-amazonitt) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-smaragd {
    text-decoration: underline var(--clr-smaragd) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-citrin {
    text-decoration: underline var(--clr-citrin) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-spessartin {
    text-decoration: underline var(--clr-spessartin) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-rubin {
    text-decoration: underline var(--clr-rubin) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-thulitt {
    text-decoration: underline var(--clr-thulitt) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-kunzitt {
    text-decoration: underline var(--clr-kunzitt) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
 }
 .seksjons-ametyst {
    text-decoration: underline var(--clr-ametyst) 3px;
    text-underline-offset: 3px;
-   margin-inline-start: 1rem;
    margin-block-end: 1rem;
-}
-.seksjonikon {
-   display: flex;
-}
-/*______ Artikkelområde ______*/
-table {
-   width: 100%;
-}
-th {
-   padding-block: 0.5rem;
-}
-thead {
-   background-color: var(--clr-ramme);
-}
-.td-kategori {
-   background-color: var(--clr-ramme);
-   padding-inline: 1rem;
-   padding-block: 0.4rem;
-   font-family: "Roboto", sans-serif;
-   font-weight: 300;
-   line-height: 1.5;
-   font-size: clamp(0.9rem, 0.9vw, 1.1rem);
-   width: 30%;
-}
-.td-innhold {
-   padding-inline: 1rem;
-   font-family: "Roboto", sans-serif;
-   font-weight: 300;
-   line-height: 1.5;
-   font-size: clamp(0.9rem, 0.9vw, 1.1rem);
-}
-td span,
-td p {
-   display: inline-block;
 }
