@@ -14,7 +14,8 @@
       height: 15px;
    }
 }
-@media (max-width: 833px) or (orientation: portrait) {
+
+@media (max-width: 1100px) {
    nav {
       grid-template-columns: 1fr;
    }
@@ -31,12 +32,6 @@
       width: 50px;
       height: 25px;
    }
-   main {
-      display: grid;
-      min-width: 350px;
-      max-width: 500px;
-   }
-
    h1 {
       /* Tittel */
       font-size: 2rem;
@@ -71,15 +66,15 @@
       padding-block: 0.8vw;
       border-radius: 1.2rem 0.4rem 1.2rem 0.8rem;
    }
-   .tir,
-   .ons,
-   .tor,
-   .fre {
-      display: none;
+   /* .dag {
+      border-radius: 1rem;
+      width: 500px;
+      padding: 1rem;
    }
-      /* border-radius: 1rem;
-      width: clamp(350px, 80%, 500px);
-      padding: 1rem; */
+   .pilNeste,
+   .pilForrige {
+      display: block;
+   } */
    footer {
       display: none;
    }

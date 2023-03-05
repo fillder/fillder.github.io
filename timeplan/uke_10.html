@@ -11,14 +11,15 @@
       <link rel="stylesheet" type="text/css" href="/css/stilark.css" />
       <link rel="stylesheet" type="text/css" href="/css/dag-natt.css" />
       <link rel="stylesheet" type="text/css" href="/css/tp_design.css" />
-      <link rel="stylesheet" type="text/css" href="/css/tp_oppsett-standard.css" />
-      <!-- <link rel="stylesheet" type="text/css" href="/css/tp_mobil.css" /> -->
+      <link rel="stylesheet" type="text/css" href="/css/tp_oppsett-standard_kort-forum.css" />
+      <link rel="stylesheet" type="text/css" href="/css/tp_mobil_ny.css" />
       <link rel="icon" href="/images/ico/skolelogo.svg" type="image/svg+xml" />
       <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
       <script type="module" src="/js/dag-natt.js"></script>
+      <!-- <script type="module" src="/js/tp_mobil.js"></script> -->
       <!-- <script type="module" src="/js/tp_navigasjon.js"></script> -->
-      <title>Timeplan uke 4</title>
+      <title>Timeplan uke 10</title>
    </head>
 
    <body>
@@ -29,15 +30,13 @@
                <div class="hjem maskeHjem"></div>
             </button>
             <div class="logo">
-               <a href="/timeplan/uke_3.html" target="_self" alt="Timeplan uke 3" title="Timeplan uke 3">
+               <a href="/timeplan/uke_9.html" target="_self" alt="Timeplan uke 9" title="Timeplan uke 7">
                   <div class="pil maskeTilbake"></div>
                </a>
                <h1>
-                  <b><span>TIMEPLAN - </span>UKE 4</b>
+                  <b><span>TIMEPLAN - </span>UKE 10</b>
                </h1>
-               <a href="/timeplan/uke_5.html" target="_self" alt="Timeplan uke 5" title="Timeplan uke 5">
-                  <div class="pil maskeNeste"></div>
-               </a>
+               <div class="pil maskeNeste utilgjengelig"></div>
             </div>
             <div class="flexHoyre">
                <a class="skolelogo" href="https://f21.vgs.no" target="_self">
@@ -66,11 +65,14 @@
          </nav>
       </header>
       <main>
+         <button type="button" class="pilForrige">
+            <div class="maskeForrigeDag dagPil"></div>
+         </button>
          <!-- Mandags-økter -->
-         <div class="man" id="dag1">
+         <div class="man dag">
             <div class="mandag">
                <h2>Mandag</h2>
-               <h4>23. januar</h4>
+               <h4>6. mars</h4>
             </div>
             <div class="boksRamme tekst sP lB forum">
                <div class="fagtittel">
@@ -80,8 +82,7 @@
                </div>
                <div>
                   <h4 class="farge-forum">Auditoriet</h4>
-                  <h5>Marius, Stian og Jon</h5>
-                  <!-- <p><b>Tema:</b> Hvor går grensa mellom skaper og skapelse?</p> -->
+                  <h5>Jon og Marius</h5>
                </div>
             </div>
             <div class="boksRamme tekst sP lB programfag1">
@@ -91,11 +92,10 @@
                   <h6>10:00<br />11:25</h6>
                </div>
                <div>
-                  <h4 class="farge-programfag">G18-2IT / G18-1IM / TV-studio</h4>
-                  <h5>Stian, Jon, og Marius</h5>
-                  <p><b>1IMA</b>: JavaScript i G18-1IM</p>
-                  <p><b>1IMB</b>: Sanntidsproduksjon i TV-studio</p>
-                  <p><b>1IMC</b>: Visuell identitet i G18-2IT</p>
+                  <h4 class="farge-programfag">G18-1IM</h4>
+                  <h5>Jon og Torbjørn</h5>
+                  <p><b>Lyddesign</b></p>
+                  <p>Jobbing med prosjektoppgaven</p>
                </div>
             </div>
             <div class="boksRamme tekst sP lB engelsk1">
@@ -107,7 +107,7 @@
                <div class="gruppe-xy">
                   <div>
                      <h4 class="farge-engelsk">IMX: 203</h4>
-                     <h5>Stine Cecilie</h5>
+                     <h5>Vera Grønvold</h5>
                   </div>
                   <div>
                      <h4 class="farge-engelsk">IMY: G18</h4>
@@ -117,34 +117,42 @@
             </div>
          </div>
          <!-- Tirsdags-økter -->
-         <div class="tir" id="dag2">
+         <div class="tir dag">
             <div class="tirsdag">
                <h2>Tirsdag</h2>
-               <h4>24. januar</h4>
+               <h4>7. mars</h4>
             </div>
             <div class="boksRamme tekst sP lB ig">
                <div class="fagtittel">
-                  <div class="svgIkon maskeProgramfag"></div>
-                  <h3 class="farge-programfag">Programfag</h3>
+                  <div class="svgIkon maskeWorkshop"></div>
+                  <h3 class="farge-workshop">Workshop</h3>
                   <h6>08:15<br />11:25</h6>
                </div>
                <div>
-                  <h4 class="farge-programfag">G18-2IT / G18-1IM / TV-studio</h4>
-                  <h5>Lars, Jon, og Marius</h5>
-                  <p><b>1IMA</b>: JavaScript i G18-1IM</p>
-                  <p><b>1IMB</b>: Sanntidsproduksjon i TV-studio</p>
-                  <p><b>1IMC</b>: Visuell identitet i G18-2IT</p>
+                  <h4 class="farge-workshop">G18-1IM</h4>
+                  <h5>Jon, Bao og Endre</h5>
+                  <p>Oppstart i G18 etterfulgt av lignende opplegg som sist. Bao fortsetter i lydstudio og Endre med spillutvikling</p>
                </div>
             </div>
             <div class="boksRamme tekst sP lB matte1">
                <div class="fagtittel">
-                  <div class="svgIkon maskeMidttimen"></div>
-                  <h3 class="farge-midttimen">Konsert</h3>
-                  <h6>12:00<br />12.55</h6>
+                  <div class="svgIkon maskeMatte"></div>
+                  <h3 class="farge-matte">Matte</h3>
+                  <h6>12:10<br />12.55</h6>
                </div>
-               <div>
-                  <h4 class="farge-midttimen">Auditoriet kl 12.00</h4>
-                  <h5>Bendik Baksaas og Fredrik Høyer</h5>
+               <div class="gruppe-abc">
+                  <div>
+                     <h4 class="farge-matte">A: 316</h4>
+                     <h5>Thomas</h5>
+                  </div>
+                  <div>
+                     <h4 class="farge-matte">B: G18</h4>
+                     <h5>Vikar</h5>
+                  </div>
+                  <div>
+                     <h4 class="farge-matte">C: 203</h4>
+                     <h5>Lars Tore</h5>
+                  </div>
                </div>
             </div>
             <div class="boksRamme tekst sP lB programfag2">
@@ -154,78 +162,47 @@
                   <h6>13:05<br />14:35</h6>
                </div>
                <div>
-                  <h4 class="farge-programfag">G18-2IT / G18-1IM / TV-studio</h4>
-                  <h5>Stian, Jon, og Marius</h5>
-                  <p><b>1IMA</b>: JavaScript i G18-1IM</p>
-                  <p><b>1IMB</b>: Sanntidsproduksjon i TV-studio</p>
-                  <p><b>1IMC</b>: Visuell identitet i G18-2IT</p>
+                  <h4 class="farge-programfag">G18-1IM</h4>
+                  <h5>Jon og Marius</h5>
+                  <p><b>Lyddesign</b></p>
+                  <p>Jobbing med prosjektoppgaven</p>
                </div>
             </div>
          </div>
          <!-- Onsdags-økter -->
-         <div class="ons" id="dag3">
+         <div class="ons dag">
             <div class="onsdag">
                <h2>Onsdag</h2>
-               <h4>25. januar</h4>
+               <h4>8. mars</h4>
             </div>
             <div class="boksRamme tekst sP lB matte2">
                <div class="fagtittel">
-                  <div class="svgIkon maskeMatte"></div>
-                  <h3 class="farge-matte">Matte</h3>
-                  <h6>09:55<br />11.25</h6>
-               </div>
-               <div class="gruppe-abc">
-                  <div>
-                     <h4 class="farge-matte">A: 308</h4>
-                     <h5>Thomas</h5>
-                  </div>
-                  <div>
-                     <h4 class="farge-matte">B: G18</h4>
-                     <h5>Stian</h5>
-                  </div>
-                  <div>
-                     <h4 class="farge-matte">C: 203</h4>
-                     <h5>Lars Tore</h5>
-                  </div>
-               </div>
-            </div>
-            <div class="boksRamme tekst sP lB engelsk2">
-               <div class="fagtittel">
-                  <div class="svgIkon maskeEngelsk"></div>
-                  <h3 class="farge-engelsk">Engelsk</h3>
-                  <h6>12:10<br />13:40</h6>
-               </div>
-               <div class="gruppe-xy">
-                  <div>
-                     <h4 class="farge-engelsk">IMX: 203</h4>
-                     <h5>Stine Cecilie</h5>
-                  </div>
-                  <div>
-                     <h4 class="farge-engelsk">IMY: G18</h4>
-                     <h5>Runar</h5>
-                  </div>
-               </div>
-            </div>
-            <div class="boksRamme tekst sP lB programfag3">
-               <div class="fagtittel">
-                  <div class="svgIkon maskeProgramfag"></div>
-                  <h3 class="farge-programfag">Programfag</h3>
-                  <h6>13:50<br />15:44</h6>
+                  <div class="svgIkon maskeMidttimen"></div>
+                  <h3 class="farge-midttimen">Aktivitetsdag</h3>
+                  <h6>09:55<br />14.00</h6>
                </div>
                <div>
-                  <h4 class="farge-programfag">G18-2IT / G18-1IM / TV-studio</h4>
-                  <h5>Stian, Jon, og Marius</h5>
-                  <p><b>1IMA</b>: JavaScript i G18-1IM</p>
-                  <p><b>1IMB</b>: Sanntidsproduksjon i TV-studio</p>
-                  <p><b>1IMC</b>: Visuell identitet i G18-2IT</p>
+                  <div>
+                     <h4 class="farge-midttimen">Sognsvann</h4>
+                     <h5>Jon og Marius</h5>
+                     <p>10: Oppmøte med bommen</p>
+                     <p>10-11: Lage basecamp</p>
+                     <p>11-12: Valgfri aktivitet</p>
+                     <p>12-13.30: Liunsj og grilling av medbrakt mat på bålet (pinnebrød/pølser/mais med mer) </p>
+                     <p>13.30: Utsjekk </p><br>
+                     <p>Det er fantastiske skiforhold i Nordmarka om dagen, og det anbefales virkelig å forsøke seg på en skitur. Både frigo.no og bua.no låner ut langrennsutstyr hvis man ikke har eget. Det blir i tillegg mulighet til å låne langrennsutstyr oppe på Songsvann (som skolen kjører opp) men dette må da leveres tilbake etter vinteraktivitetsdagen.  
+                        Det er meldt kalde forhold, så det er viktig å ha på seg varmt tøy. Ulltøy er å anbefale. Det kan også være smart å ha med sitteunderlag og tøyskift i tilfelle man blir våt eller svett. 
+                        Husk vannflaske og mat til bålet! </p>
+                  </div>
                </div>
+            </div>
             </div>
          </div>
          <!-- Torsdags-økter -->
-         <div class="tor" id="dag4">
+         <div class="tor dag">
             <div class="torsdag">
                <h2>Torsdag</h2>
-               <h4>26. januar</h4>
+               <h4>9. mars</h4>
             </div>
             <div class="boksRamme tekst sP lB yff1">
                <div class="fagtittel">
@@ -234,11 +211,11 @@
                   <h6>08:15<br />11:25</h6>
                </div>
                <div>
-                  <h4 class="farge-yff">G18 / Fotostudio / Grafisk</h4>
-                  <h5>Marius, Stein og Åsa Maria</h5>
-                  <p><b>Åsa Maria:</b> Lysmaling i Fotostudio</p>
-                  <p><b>Stein:</b> iOS-programmering på Grafisk</p>
-                  <p>De som ikke har kurs jobber med CV eller oppdragsbank</p>
+                  <h4 class="farge-yff">G18-1IM og Grafisk</h4>
+                  <h5>Åsa Maria, Stein og Marius</h5>
+                  <p>Åsa Maria og Stein veileder i G18</p>
+                  <p>Marius kjører del 2 av Prototyping i Figma på Grafisk</p>
+                  <p>10:40-11:25 kommer Richard innom og tilbyr veiledning til de som jobber med lyd, og fortsetter etter lunsj</p>
                </div>
             </div>
             <div class="boksRamme tekst sP lB midttimen">
@@ -258,17 +235,16 @@
                   <h6>13:05<br />14:35</h6>
                </div>
                <div>
-                  <h4 class="farge-yff">G18</h4>
-                  <h5>Marius, Nicholas og Åsa Maria</h5>
-                  <p>Jobbing med CV eller oppdragsbank</p>
+                  <h4 class="farge-yff">G18-1IM</h4>
+                  <h5>Åsa Maria, Nicholas og Richard</h5>
                </div>
             </div>
          </div>
          <!-- Fredags-økter -->
-         <div class="fre" id="dag5">
+         <div class="fre dag">
             <div class="fredag">
                <h2>Fredag</h2>
-               <h4>27. januar</h4>
+               <h4>10. mars</h4>
             </div>
             <div class="boksRamme tekst sP lB programfag4">
                <div class="fagtittel">
@@ -277,11 +253,10 @@
                   <h6>08:15<br />11:25</h6>
                </div>
                <div>
-                  <h4 class="farge-programfag">G18-2IT / G18-1IM / TV-studio</h4>
-                  <h5>Stian, Jon, og Eirik</h5>
-                  <p><b>1IMA</b>: JavaScript i G18-1IM</p>
-                  <p><b>1IMB</b>: Sanntidsproduksjon i TV-studio</p>
-                  <p><b>1IMC</b>: Visuell identitet i G18-2IT</p>
+                  <h4 class="farge-programfag">G18-1IM</h4>
+                  <h5>Jon og Marius</h5>
+                  <p><b>Lyddesign</b></p>
+                  <p>Jobbing med prosjektoppgaven</p>
                </div>
             </div>
             <div class="boksRamme tekst sP lB naturfag">
@@ -319,6 +294,9 @@
                </div>
             </div>
          </div>
+         <button type="button" class="pilNeste">
+            <div class="maskeNesteDag dagPil"></div>
+         </button>
       </main>
       <footer>
          <p>Designet og utviklet av Marius Strøm Riseth // Fyrstikkalléen videregående skole • F21 vgs</p>

@@ -35,15 +35,15 @@ video {
    --clr-ramme: #c7c9ca;
    --clr-tekstBoks: #cccccc; */
 
-   --clr-main: #d0d2d2;
+   --clr-main: #d3d3d3;
    --clr-tekst: #3e4247;
-   --clr-ramme: #f5f5f6;
+   --clr-ramme: #f5f6f5;
    --clr-ixDBoks: #b9bec2;
    --clr-tabellBoks: #d4d4d8;
-   --clr-tekstBoks: #ececec;
-   --clr-bakgrunn: #b7b5b5;
+   --clr-tekstBoks: #dfdfdf;
+   --clr-bakgrunn: #b6b6b6;
 
-   --clr-safir: #367fff; /*programfag og drift*/
+   --clr-safir: #367fff; /*programfag og drzift*/
    --clr-akvamarin: #1892ba; /*yff og lyddesign*/
    --clr-amazonitt: #228468; /*kroppsøving og animasjon*/
    --clr-smaragd: #518238; /*naturfag og film-vfx*/
