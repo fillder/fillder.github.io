@@ -167,6 +167,17 @@ a {
    cursor: pointer;
    text-decoration: none;
 }
+a:link {
+   color: var(--clr-spessartin);
+   text-decoration: 3px solid var(--clr-spessartin);
+}
+a:visited {
+   color: var(--clr-spessartin);
+   text-decoration: none;
+}
+/* a:hover {
+} */
+/* a:active {} */
 /*______ Navigasjon ______*/
 nav {
    position: fixed;
