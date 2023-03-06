@@ -288,39 +288,7 @@ details[open] > summary {
    grid-template-columns: repeat(2, 1fr);
    gap: 1rem;
 }
-/*______ svgMasker ______*/
-.maskeDialog {
-   -webkit-mask: url(/images/svg/rb_ikon-dialog.svg) no-repeat center;
-   mask: url(/images/svg/rb_ikon-dialog.svg) no-repeat center;
-}
-.maskeEksamen {
-   -webkit-mask: url(/images/svg/rb_ikon-eksamen.svg) no-repeat center;
-   mask: url(/images/svg/rb_ikon-eksamen.svg) no-repeat center;
-}
-.maskeLk20 {
-   -webkit-mask: url(/images/svg/rb_ikon-lk20.svg) no-repeat center;
-   mask: url(/images/svg/rb_ikon-lk20.svg) no-repeat center;
-}
-.maskeTverrfaglig {
-   -webkit-mask: url(/images/svg/rb_ikon-tverrfaglig.svg) no-repeat center;
-   mask: url(/images/svg/rb_ikon-tverrfaglig.svg) no-repeat center;
-}
-.maskeYFF {
-   -webkit-mask: url(/images/svg/rb_ikon-yff.svg) no-repeat center;
-   mask: url(/images/svg/rb_ikon-yff.svg) no-repeat center;
-}
-.maskeIT {
-   -webkit-mask: url(/images/svg/rb_ikon-it.svg) no-repeat center;
-   mask: url(/images/svg/rb_ikon-it.svg) no-repeat center;
-}
-.maskeMP {
-   -webkit-mask: url(/images/svg/rb_ikon-mp.svg) no-repeat center;
-   mask: url(/images/svg/rb_ikon-mp.svg) no-repeat center;
-}
-.maskeVurdering {
-   -webkit-mask: url(/images/svg/rb_ikon-vurdering.svg) no-repeat center;
-   mask: url(/images/svg/rb_ikon-vurdering.svg) no-repeat center;
-}
+
 /*______ Seksjonsknappfarger ______*/
 .ifKnapp.aktiv .ifKnappIkon {
    stroke: var(--aktiv-farge);

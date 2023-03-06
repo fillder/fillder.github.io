@@ -44,7 +44,7 @@ header {
 }
 .hero-emblem {
    position: relative;
-   bottom: -84%;
+   bottom: -80%;
    /* transform: translateX(-50%); */
    width: 120px;
    height: 120px;
@@ -213,15 +213,6 @@ main {
    grid-area: gal;
 }
 /*______ Katergoriside ______*/
-.oppdragsListe {
-   /* width: max-content; */
-   margin-bottom: 1rem;
-}
-.oppdrag {
-   display: flex;
-   place-items: center;
-   margin-block: 1rem;
-}
 .spiciness {
    display: flex;
    place-items: center;
@@ -244,118 +235,6 @@ main {
 .spiciness h5 {
    display: inline-block;
 } */
-.tid div,
-.tid h5 {
-   display: inline-block;
-}
-/*______ Masker ______*/
-.maskeGrafisk {
-   background-color: var(--clr-rubin);
-   -webkit-mask: url(/images/svg/ob_1_2d-grafikk.svg) no-repeat center;
-   mask: url(/images/svg/ob_1_2d-grafikk.svg) no-repeat center;
-}
-.maskeTreD {
-   background-color: var(--clr-spessartin);
-   -webkit-mask: url(/images/svg/ob_2_3d-grafikk.svg) no-repeat center;
-   mask: url(/images/svg/ob_2_3d-grafikk.svg) no-repeat center;
-}
-.maskeFoto {
-   background-color: var(--clr-citrin);
-   -webkit-mask: url(/images/svg/ob_3_foto.svg) no-repeat center;
-   mask: url(/images/svg/ob_3_foto.svg) no-repeat center;
-}
-.maskeFilm {
-   background-color: var(--clr-smaragd);
-   -webkit-mask: url(/images/svg/ob_4_film.svg) no-repeat center;
-   mask: url(/images/svg/ob_4_film.svg) no-repeat center;
-}
-.maskeAnim {
-   background-color: var(--clr-amazonitt);
-   -webkit-mask: url(/images/svg/ob_5_animasjon.svg) no-repeat center;
-   mask: url(/images/svg/ob_5_animasjon.svg) no-repeat center;
-}
-.maskeLyd {
-   background-color: var(--clr-akvamarin);
-   -webkit-mask: url(/images/svg/ob_6_lyddesign.svg) no-repeat center;
-   mask: url(/images/svg/ob_6_lyddesign.svg) no-repeat center;
-}
-.maskeDrift {
-   background-color: var(--clr-safir);
-   -webkit-mask: url(/images/svg/ob_7_drift.svg) no-repeat center;
-   mask: url(/images/svg/ob_7_drift.svg) no-repeat center;
-}
-.maskeProgrammering {
-   background-color: var(--clr-ametyst);
-   -webkit-mask: url(/images/svg/ob_8_programmering.svg) no-repeat center;
-   mask: url(/images/svg/ob_8_programmering.svg) no-repeat center;
-}
-.maskeWeb {
-   background-color: var(--clr-kunzitt);
-   -webkit-mask: url(/images/svg/ob_9_web.svg) no-repeat center;
-   mask: url(/images/svg/ob_9_web.svg) no-repeat center;
-}
-.maskeKi {
-   background-color: var(--clr-thulitt);
-   -webkit-mask: url(/images/svg/ob_10_ai.svg) no-repeat center;
-   mask: url(/images/svg/ob_10_ai.svg) no-repeat center;
-}
-.portfolio {
-   width: 100%;
-   height: 100%;
-   background-color: var(--clr-tekst);
-   -webkit-mask: url(/images/svg/ob_ikon_portfolio.svg) no-repeat center;
-   mask: url(/images/svg/ob_ikon_portfolio.svg) no-repeat center;
-}
-.suksesskriterer {
-   width: 100%;
-   height: 100%;
-   background-color: var(--clr-tekst);
-   -webkit-mask: url(/images/svg/ob_ikon_suksesskriterer.svg) no-repeat center;
-   mask: url(/images/svg/ob_ikon_suksesskriterer.svg) no-repeat center;
-}
-.visuell-logg {
-   width: 100%;
-   height: 100%;
-   background-color: var(--clr-tekst);
-   -webkit-mask: url(/images/svg/ob_ikon_visuell-logg.svg) no-repeat center;
-   mask: url(/images/svg/ob_ikon_visuell-logg.svg) no-repeat center;
-}
-.maskeSpice0 {
-   -webkit-mask: url(/images/svg/ob_spiciness-0.svg) no-repeat center;
-   mask: url(/images/svg/ob_spiciness-0.svg) no-repeat center;
-}
-.maskeSpice20 {
-   -webkit-mask: url(/images/svg/ob_spiciness-20.svg) no-repeat center;
-   mask: url(/images/svg/ob_spiciness-20.svg) no-repeat center;
-}
-.maskeSpice40 {
-   -webkit-mask: url(/images/svg/ob_spiciness-40.svg) no-repeat center;
-   mask: url(/images/svg/ob_spiciness-40.svg) no-repeat center;
-}
-.maskeSpice60 {
-   -webkit-mask: url(/images/svg/ob_spiciness-60.svg) no-repeat center;
-   mask: url(/images/svg/ob_spiciness-60.svg) no-repeat center;
-}
-.maskeSpice80 {
-   -webkit-mask: url(/images/svg/ob_spiciness-80.svg) no-repeat center;
-   mask: url(/images/svg/ob_spiciness-80.svg) no-repeat center;
-}
-.maskeSpice100 {
-   -webkit-mask: url(/images/svg/ob_spiciness-100.svg) no-repeat center;
-   mask: url(/images/svg/ob_spiciness-100.svg) no-repeat center;
-}
-.maskeSpiceGrad {
-   -webkit-mask: url(/images/svg/ob_spiciness-gradient.svg) no-repeat center;
-   mask: url(/images/svg/ob_spiciness-gradient.svg) no-repeat center;
-}
-.maskeTidTimer {
-   -webkit-mask: url(/images/svg/ob_tid-timer.svg) no-repeat center;
-   mask: url(/images/svg/ob_tid-timer.svg) no-repeat center;
-}
-.maskeTidUker {
-   -webkit-mask: url(/images/svg/ob_tid-uker.svg) no-repeat center;
-   mask: url(/images/svg/ob_tid-uker.svg) no-repeat center;
-}
 .spiceIkon {
    width: 125px;
    height: 40px;
@@ -364,6 +243,78 @@ main {
    width: 40px;
    height: 40px;
 }
+/*______ Tabell ______*/
+table thead tr th {
+   padding-block: 0.5rem;
+   padding-inline: 1rem;
+   text-align: start;
+}
+
+table tbody tr td {
+   padding-block: 0.5rem;
+}
+.op_spice :first-child,
+.op_tid :first-child {
+   margin-inline-end: 1rem;
+}
+.op_knapp {
+   width: max-content;
+   display: flex;
+   transition: transform 0.3s ease-in-out;
+   transform: scale(1);
+}
+.op_knapp:nth-child(2) {
+   margin-inline-start: -1rem;
+}
+.op_knapp:hover,
+.op_knapp:focus-visible {
+   transition: transform 0.3s ease-in-out;
+   transform: scale(1.02);
+}
+.op_spice {
+   display: flex;
+   padding-inline: 1rem;
+   align-items: center;
+}
+.op_tid {
+   display: flex;
+   width: max-content;
+   padding-inline: 1rem;
+   align-items: center;
+}
+.oppdragsIkon {
+   position: relative;
+   width: 60px;
+   height: 60px;
+   z-index: 100;
+   padding: 0.4rem;
+}
+.op_ikon {
+   width: 100%;
+   height: 100%;
+}
+.oppdragsTittel {
+   position: relative;
+   padding-block: 0.5rem;
+   padding-inline-start: 3.5rem;
+   padding-inline-end: 2rem;
+   margin-inline-start: -2.5rem;
+   z-index: 90;
+}
+.oppdragsKnapp {
+   display: flex;
+   text-align: center;
+   align-items: center;
+   padding-inline: 1rem;
+   transition: transform 0.3s ease-in-out;
+   transform: scale(1);
+}
+.oppdragsKnapp:hover,
+.oppdragsKnapp:focus-visible {
+   transition: transform 0.3s ease-in-out;
+   transform: scale(1.02);
+}
+
 /*______ TittelHover ______*/
 .hover2d,
 .hover3d,
