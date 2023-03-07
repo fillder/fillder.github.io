@@ -200,16 +200,16 @@ main {
    gal = Galleri
    */
 }
-.oppdrag {
+.oppdragGrid {
    grid-area: opp;
 }
-.ekstra-info {
+.infoGrid {
    grid-area: eks;
 }
-.nett-ressurser {
+.ressursGrid {
    grid-area: res;
 }
-.bildegalleri {
+.bildeGrid {
    grid-area: gal;
 }
 /*______ Katergoriside ______*/
