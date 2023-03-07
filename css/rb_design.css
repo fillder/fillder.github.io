@@ -1,49 +1,4 @@
-/*____Main grid____*/
-body {
-   /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
-   max-width: 1600px;
-   margin: auto;
-   display: grid;
-   grid-template-rows:
-      auto
-      1fr
-      auto;
-}
-/*______ headerområde ______*/
-header {
-   margin-top: 50px;
-}
-.hero {
-   position: relative;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 350px; /* Sett høyden på banneret etter behov */
-}
-.hero-bilde {
-   /* Stil for bannerbildet */
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   object-fit: cover; /* Sørger for at bildet fyller hele banneret */
-   object-position: bottom;
-}
-.hero-tittel {
-   position: absolute;
-   top: 20px;
-   left: 20px;
-   padding: 0px 10px 7.5px 7.5px; /* top | right | bottom | left */
-   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
-   border-radius: 0.2rem;
-   text-decoration: underline #ff9100 4px;
-   text-underline-offset: 4px;
-}
-.hero-tittel h1 {
-   color: whitesmoke;
-}
-/*______ hovedinnhold ______*/
+/*______ Grid Ressursbank ______*/
 .gridBeholder {
    display: grid;
    grid-gap: 1rem;
@@ -57,46 +12,42 @@ header {
       "aK aK";
 }
 /*______ Maingrid-seksjonplasseringer ______*/
-.oversikt {
-   /* Oppsummering */
+.oversiktGrid {
    grid-area: oS;
 }
 .innholdsfortegnelse {
-   /* seksjonknapper */
    grid-area: iF;
-}
-.ifSeksjoner {
-   /* gjembart seksjon */
-   grid-area: iH;
-}
-/* .galleri {
-   grid-area: gI;
-} */
-
-.artikler {
-   /*relevante artikler*/
-   grid-area: aK;
-}
-/*______ Seksjonsknapper ______*/
-.innholdsfortegnelse {
    display: flex;
    flex-direction: column;
    flex-wrap: nowrap;
    justify-content: space-evenly;
    place-content: center;
 }
+.seksjonsGrid {
+   grid-area: iH;
+}
+/* .galleri {
+   grid-area: gI;
+} 
+.artiklerGrid {
+   grid-area: aK;
+} */
+/*______ ToC // Innholdsfortegnelse ______*/
 .ifKnapp {
    display: grid;
    grid-template-columns: auto 1fr;
    margin: 0.2rem;
    align-items: center;
 }
-.knappHover {
+.ifKnappIxD {
    cursor: pointer;
    transform-origin: center;
    transition: transform 0.3s ease-in-out;
+   transform: scale(1);
 }
-.knappHover:hover {
+.ifKnappIxD:hover,
+.ifKnappIxD:focus-visible {
+   transition: transform 0.3s ease-in-out;
    transform: scale(1.02);
 }
 .ifKnappIkon {
@@ -122,75 +73,48 @@ header {
 .utilgjengelg:hover {
    transform: none;
 }
-/*______ Seksjonanimasjon ______*/
-.ifSeksjon {
+/*______ Artikkelseksjoner ______*/
+.artikkelSeksjon {
    max-height: 0;
    overflow: hidden;
    transition: max-height 0.3s ease-out;
 }
-.ifSeksjon.synlig {
+.artikkelSeksjon.synlig {
    max-height: 100vh;
    transition: max-height 0.3s ease-in;
 }
-.ifSeksjon:not(.synlig) {
+.artikkelSeksjon:not(.synlig) {
    max-height: 0;
    transition: max-height 0.3s ease-out;
 }
-.ifSekskonListe {
-   list-style: none;
-}
-.ifSeksjonsGrid {
+.artikkelSeksjonsGrid {
    display: grid;
    grid-template-columns: 1fr 0.5fr;
    grid-template-areas:
-      "sI1 sI1"
-      "sI2 kna"
+      "aS1 aS1"
+      "aS2 kna"
       "det det";
    gap: 1rem;
 }
-.seksjonInfo1 {
-   grid-area: sI1;
+.artikkelInfo1 {
+   grid-area: aS1;
 }
-.seksjonInfo2 {
-   grid-area: sI2;
+.artikkelInfo2 {
+   grid-area: aS2;
 }
-.seksjonRessurser {
+.artikkelRessurser {
    grid-area: kna;
 }
-.seksjonDetaljer {
+.artikkelDetaljer {
    grid-area: det;
 }
-.seksjonikon {
+.artikkelIkon {
    display: flex;
 }
-.seksjonikon .ifKnappIkon {
+.artikkelIkon .ifKnappIkon {
    margin-inline-end: 1rem;
 }
-/*______ Liste ______*/
-ul {
-   list-style: none; /* Remove default bullets */
-   margin-block-end: 1rem;
-}
-ul li {
-   margin-left: 1em;
-}
-ul li p::before {
-   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-   color: var(--clr-citrin); /* Change the color */
-   font-weight: bold; /* If you want it to be bold */
-   display: inline-block; /* Needed to add space between the bullet and the text */
-   width: 1em; /* Also needed for space (tweak if needed) */
-   margin-left: -1em; /* Also needed for space (tweak if needed) */
-}
-ul li a button {
-   margin-left: -1em;
-}
-.toKolloner {
-   display: grid;
-   grid-template-columns: 1fr 0.75fr;
-   gap: 1rem;
-}
-/*______ Tabeller ______*/
+/*______ Ressursbank tabeller ______*/
 table {
    width: 100%;
    margin-block-end: 1rem;

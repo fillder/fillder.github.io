@@ -156,7 +156,7 @@ b {
 em {
    font-weight: 700;
 }
-/*______ Knapper ______*/
+/*______ Knapper og lenker ______*/
 button {
    background-color: transparent;
    border: none;
@@ -178,6 +178,17 @@ a:visited {
 /* a:hover {
 } */
 /* a:active {} */
+/*____Main grid____*/
+body {
+   /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
+   max-width: 1600px;
+   margin: auto;
+   display: grid;
+   grid-template-rows:
+      auto
+      1fr
+      auto;
+}
 /*______ Navigasjon ______*/
 nav {
    position: fixed;
@@ -203,7 +214,6 @@ nav {
    cursor: pointer;
    margin-inline: 1rem;
 }
-
 .logo {
    display: flex;
    align-items: center;
@@ -238,6 +248,47 @@ nav {
 .utilgjengelig {
    opacity: 0.2;
 }
+/*______ headerområde ______*/
+header {
+   margin-top: 50px;
+}
+.hero {
+   position: relative;
+   height: 350px; /* Sett høyden på banneret etter behov */
+   left: 50%;
+   transform: translateX(-50%);
+}
+.hero-bilde {
+   /* Stil for bannerbildet */
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover; /* Sørger for at bildet fyller hele banneret */
+   object-position: bottom;
+}
+.hero-tittel {
+   position: absolute;
+   top: 20px;
+   left: 20px;
+   padding: 0px 10px 7.5px 7.5px; /* top | right | bottom | left */
+   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
+   border-radius: 0.2rem;
+   text-decoration: underline #ff9100 4px;
+   text-underline-offset: 4px;
+}
+.hero-tittel h1 {
+   color: whitesmoke;
+}
+.hero-emblem {
+   position: relative;
+   bottom: -80%;
+   width: 120px;
+   height: 120px;
+   margin: auto;
+   padding: 0.8rem;
+   z-index: 110;
+}
 /*______ Main ______*/
 .boksRamme {
    border-top-right-radius: clamp(0.2rem, 0.4rem, 0.6vw);
@@ -269,14 +320,14 @@ nav {
 }
 .xSB {
    border-color: var(--clr-ramme);
-   border-width: 0.5px 0.5px 1.5px 1.5px;
+   border-width: 1.5px 1.5px 3px 3px;
 }
 .sB {
    border-color: var(--clr-ramme);
-   border-width: 1px 1px 3px 3px;
+   border-width: 2px 2px 4px 4px;
 }
 .lB {
-   border-width: 2px 2px 6px 6px;
+   border-width: 3px 3px 6px 6px;
    border-color: var(--clr-ramme);
 }
 .xSP {
@@ -290,6 +341,30 @@ nav {
 
 .lP {
    padding: 1rem;
+}
+/*______ Liste ______*/
+ul {
+   list-style: none; /* Remove default bullets */
+   margin-block-end: 1rem;
+}
+ul li {
+   margin-left: 1em;
+}
+ul li p::before {
+   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+   color: var(--clr-citrin); /* Change the color */
+   font-weight: bold; /* If you want it to be bold */
+   display: inline-block; /* Needed to add space between the bullet and the text */
+   width: 1em; /* Also needed for space (tweak if needed) */
+   margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+ul li a button {
+   margin-left: -1em;
+}
+.toKolloner {
+   display: grid;
+   grid-template-columns: 1fr 0.75fr;
+   gap: 1rem;
 }
 /*______ svgIkon ______*/
 .svgIkon {
