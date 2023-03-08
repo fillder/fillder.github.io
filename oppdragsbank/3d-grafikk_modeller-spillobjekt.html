@@ -13,12 +13,13 @@
       <link rel="stylesheet" type="text/css" href="/css/dag-natt.css" />
       <link rel="stylesheet" type="text/css" href="/css/ob_design.css" />
       <link rel="stylesheet" type="text/css" href="/css/ob_mobil.css" />
-      <!-- <link rel="stylesheet" type="text/css" href="/css/ob_bildegalleri.css" /> -->
+      <link rel="stylesheet" type="text/css" href="/css/ob_bildegalleri.css" />
       <link rel="icon" href="/images/ico/skolelogo.svg" type="image/svg+xml" />
       <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
       <script type="module" src="/js/dag-natt.js"></script>
-      <script type="module" src="/js/ob-bildekarusell.js"></script>
+      <script type="module" src="/js/ob_bildekarusell.js"></script>
+      <script type="module" src="/js/ob_oppdragsbilde.js"></script>
       <title>Oppdrag: Modeller spillopbjekt</title>
    </head>
 
@@ -60,32 +61,49 @@
       </header>
       <main>
          <div class="gridBeholderkategori">
-            <article class="sBoksRamme sB sP tekst oppdragGrid">
+            <section aria-labelledby="Oppdragsbeskrivelse" class="sBoksRamme sB tekst oppdragGrid">
+               <div id="spacer"></div>
                <img class="boksRamme sB oppdragsSideBilde" src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_1.jpg" alt="nesten kvadratisk bilde" />
-               <div class="oppdragsBeskrivelse">
-                  <h3 class="spessartinDek">Produkt</h3>
-                  <p>Et spillobjekt (game asset) som er inspirert av stilen til et spill.</p>
+               <div class="sP">
+                  <h2 id="Oppdragsbeskrivelse" class="spessartinDek">Produkt</h2>
+                  <p><em>Et spillobjekt (game asset) som er inspirert av stilen til et spill.</em></p>
                   <h3 class="spessartinDek">Beskrivelse</h3>
                   <p>
                      De fleste av oss har et eller flere favorittspill, enten om det er på konsoll, PC eller håndholdt. Velg et av disse spillene som har 3D-grafikk og la deg inspirere av omgivelsene i spillet. Mest sannsynlig har det noen særpreg som gjør det er gjenkjennelig. For eksempel har det
                      spillet Overwatch en tegneserielignende stil med overdrevne proporsjoner og fargerike omgivelser. Velg et objekt fra omgivelsene i spillet og prøv å gjenskap det i Blender. Her er det om å bruke referansebilder og være flinkt å se detaljer.
                   </p>
                   <h3 class="spessartinDek">Suksesskriterier</h3>
-                  <ul class="fbListe">
+                  <ul>
                      <li>
-                        <p><b>Hovedstat:</b>Mediedesign: Du utforsker det visuelle språket og har brukt kreative og spennende metoder for å skape et selvstendig uttrykk</p>
+                        <p><b>Mediedesign</b>: Du utforsker det visuelle språket og har brukt kreative og spennende metoder for å skape et selvstendig uttrykk</p>
                      </li>
                   </ul>
                </div>
-            </article>
-            <section class="sBoksRamme sB tekst infoGrid"></section>
-            <section class="sBoksRamme sB tekst ressursGrid"></section>
-            <section class="sBoksRamme sB tekst bildeGrid galleri">
+            </section>
+            <section aria-labelledby="Ekstra info" class="sBoksRamme sB sP tekst infoGrid">
+               <h3 id="ekstra-info" class="spessartinDek">Ekstra info</h3>
+               <p>
+                  Det kan være vanskelig å definere et prosjekt når man gjør sitt første dypdykk inn i 3D-verdenen. Dette Oppdraget er ment å svare på akkurat det. er du helt nybegynner kan det være lurt å velge noe enkelt, en boks eller en dør. Dersom du har litt erfaring og ønsker en utfordring
+                  kan du velge et kjøretøy, eller en bygning
+               </p>
+            </section>
+            <section aria-labelledby="Nettressurser" class="sBoksRamme sB sP tekst ressursGrid">
+               <h3 id="nettressurser" class="spessartinDek">Nettressurser</h3>
+               <ul>
+                  <li>
+                     <p>Polygon Runaway (YouTube) er en fin ressurs for små prosjekter</p>
+                  </li>
+                  <li>
+                     <p>Les hvordan 3D-kunstneren Georg Klein gjenskapte en gate fra Lisboa i stilen til Overwatch</p>
+                  </li>
+               </ul>
+            </section>
+
+            <section aria-labelledby="Bildegalleri" class="sBoksRamme sB tekst bildeGrid galleri">
                <div class="galleri-grid rb-ramme" id="galleri-grid">
-                  <img src="/bilder/00707-trollsopprune.jpg" class="miniatyrbilde" alt="miniatyrbilde av trollsopprune" />
-                  <img src="/bilder/00708-jungel.jpg" class="miniatyrbilde" alt="miniatyrbilde av jungel" />
-                  <img src="/bilder/00709-sump.jpg" class="miniatyrbilde" alt="miniatyrbilde av sump" />
-                  <img src="/bilder/00712-sumpvann.jpg" class="miniatyrbilde" alt="miniatyrbilde av sumpvann" />
+                  <img src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_2.jpg" class="miniatyrbilde" tittel="Valorant Lever Prop" />
+                  <img src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_3.jpg" class="miniatyrbilde" tittel="Mincraft Custom Props" />
+                  <img src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_4.jpg" class="miniatyrbilde" tittel="AmongUs Fan Art" />
                   <svg class="pil pil-tilbake" viewBox="0 0 40 50" alt="forrige bildegruppe">
                      <path d="m.98,26.81l35.81,22.86c1.4.89,3.21-.13,3.21-1.81V2.14c0-1.68-1.81-2.7-3.21-1.81L.98,23.19c-1.31.84-1.31,2.79,0,3.62Z" />
                   </svg>
@@ -98,133 +116,11 @@
                      <span class="siderTotalt"></span>
                   </div>
                </div>
-               <div class="bildefremvisning">
-                  <div class="fokusramme rb-ramme">
-                     <div class="fokusrammeHeader">
-                        <div class="fokusbildeTittel">
-                           <h3 class="tittelTekst">Testtittel</h3>
-                        </div>
-                        <svg class="kryss" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-                           <circle cx="25" cy="25" r="22.5" />
-                           <line x1="15" y1="15" x2="35" y2="35" />
-                           <line x1="35" y1="15" x2="15" y2="35" />
-                        </svg>
-                     </div>
-                     <div class="fokusKarusell">
-                        <svg class="fokuspil fokuspil-tilbake" viewBox="0 0 40 50" alt="forrige bildegruppe">
-                           <path d="m.98,26.81l35.81,22.86c1.4.89,3.21-.13,3.21-1.81V2.14c0-1.68-1.81-2.7-3.21-1.81L.98,23.19c-1.31.84-1.31,2.79,0,3.62Z" />
-                        </svg>
-                        <div class="fokusvindu"></div>
-                        <svg class="fokuspil fokuspil-neste" viewBox="0 0 40 50" alt="neste bildegruppe">
-                           <path d="m39.02,23.19L3.21.33C1.81-.56,0,.46,0,2.14v45.72c0,1.68,1.81,2.7,3.21,1.81l35.81-22.86c1.31-.84,1.31-2.79,0-3.62Z" />
-                        </svg>
-                     </div>
-                     <div class="fokusrammeInfo">
-                        <div class="bildetekst">
-                           <p class="altTekst">Her skal beskrivelsen til bilde være</p>
-                        </div>
-                        <div class="bildeTeller">
-                           <span class="gjeldendeBilde"></span>
-                           <span class="bildeSkille">/</span>
-                           <span class="bilderTotalt"></span>
-                        </div>
-                     </div>
-                     <div class="bildekarusell">
-                        <div class="karusellramme">
-                           <img src="/bilder/00707-trollsopprune.jpg" class="karusellbilde" alt="bildefremvisning av trollsopprune" title="trollsopprune" />
-                        </div>
-                        <div class="karusellramme">
-                           <img src="/bilder/00708-jungel.jpg" class="karusellbilde" alt="bildefremvisning av jungel" title="jungel" />
-                        </div>
-                        <div class="karusellramme">
-                           <img src="/bilder/00709-sump.jpg" class="karusellbilde" alt="bildefremvisning av sump" title="sump" />
-                        </div>
-                        <div class="karusellramme">
-                           <img src="/bilder/00712-sumpvann.jpg" class="karusellbilde" alt="bildefremvisning av sumpvann" title="sumpvann" />
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
-            <section class="rb-ramme artikler">
-               <table>
-                  <thead>
-                     <tr>
-                        <th colspan="2">
-                           <h3>Relevante artikler</h3>
-                        </th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr>
-                        <td class="td-kategori">1. Verden</td>
-                        <td class="td-innhold">
-                           <span>Setting</span>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="td-kategori">2. Intelligente raser</td>
-                        <td class="td-innhold">
-                           <span>i4N (Mennesker)</span>
-                           <p>•</p>
-                           <span>i4H (Menneskelige)</span>
-                           <p>•</p>
-                           <span>i6 (Fremmede)</span>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="td-kategori">3. Sivilisasjoner</td>
-                        <td class="td-innhold">
-                           <span>Føderasjonen</span>
-                           <p>•</p>
-                           <span>Imperiet</span>
-                           <p>•</p>
-                           <span>To-faktornasjonen</span>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="td-kategori">4. Magisystemet</td>
-                        <td class="td-innhold">
-                           <span>Origon</span>
-                           <p>•</p>
-                           <span>Trollsopp</span>
-                           <p>•</p>
-                           <span>Levedne Planter</span>
-                           <p>•</p>
-                           <span>Algegreier</span>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="td-kategori">5. Geografi</td>
-                        <td class="td-innhold">
-                           <span>Klima</span>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="td-kategori">6. Flora</td>
-                        <td class="td-innhold">
-                           <span>Alkymiflora</span>
-                           <p>•</p>
-                           <span>Vanlig flora</span>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="td-kategori">7. Fauna</td>
-                        <td class="td-innhold">
-                           <span>i4N (Overflatedyr)</span>
-                           <p>•</p>
-                           <span>i4H (Undergrunnsdyr)</span>
-                           <p>•</p>
-                           <span>i6 (Amfibier, Øgler og reptiler)</span>
-                        </td>
-                     </tr>
-                  </tbody>
-               </table>
             </section>
          </div>
       </main>
-      <footer></footer>
-      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <footer>
+         <p>Denne nettsiden er designet og utviklet av Marius Strøm Riseth // Fyrstikkalléen videregående skole • F21 vgs</p>
+      </footer>
    </body>
 </html>

@@ -377,3 +377,78 @@ function oppdaterDager() {
 
 window.addEventListener("resize", oppdaterDagerPerSide);
 
+Hei. Jeg jobber med å lage en responsiv nettside. Akkurat nå har jeg en kontainer med flere tekst elementer og et bilde. Bildet har fått en "position: absolute" og blitt plassert nederst i høyre hjørne. Jeg har også laget en "#spacer", som får samme størrelse som bildet ved hjelp av JavaScript.Det jeg ønsker å oppnå med #spacer er å fungere som en vegg for bildet, slik at teksten former seg rundt bildet fremfor å havne bak.Problemet er å få #spacer til å plassere seg samme sted som bildet. Kan vi bruke en annen div (#offset) til å kalkulere avstanden fra bildet, til toppen av kontaineren og deretter blu så høy, slik at den kan dytte ned #spacer? Det jeg ønsker å oppnå er at "#spacer" skal lese hvor høy og bred bildet er, og deretter få samme størrelse, og plassere seg samme sted som bildet. 
+
+HTML:
+<body>
+   <section aria-labelledby="beskrivelse">
+      <div id="spacer"></div>
+            <div>
+               <img class="boksRamme sB oppdragsSideBilde" src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_1.jpg" alt="nesten kvadratisk bilde" />
+               <div class="alttekst"></div>
+            </div>
+         <h2 id="beskrivelse">Produkt</h2>
+         <p>lorem ipsum...</p>
+         <h3>Beskrivelse</h3>
+         <p>lorem ipsum...</p>
+         <h3>Suksesskriterier</h3>
+         <ul>
+            <li>
+               <p>lorem ipsum...</p>
+            </li>
+         </ul>
+      </div> 
+   </section>
+   <section><p>lorem ipsum...</p></section>
+   <section><p>lorem ipsum...</p></section>
+</body>
+
+CSS:
+.oppdragGrid {
+   display: flow-root;
+   padding-block-end: -5rem;
+}
+#spacer {
+   width: 0px;
+   float: right;
+   outline: 2px solid red;
+}
+.oppdragsSideBilde {
+   height: auto;
+   width: 24rem;
+   float: right;
+   clear: right;
+   margin-inline-end: -2rem;
+   margin-inline-start: 1rem;
+   margin-block-start: 0.5rem;
+   box-shadow: 0 1.5rem 0 0 var(--clr-ramme);
+}
+section p {
+   margin-block-start: 0.2rem;
+   margin-block-end: 1rem;
+}
+
+JavaScript:
+function sizeSpacer(spacerElement) {
+   spacerElement.style.height = 0;
+   var container = spacerElement.parentNode;
+   var img = spacerElement.nextElementSibling || spacerElement.nextSibling;
+   var lastContentNode = container.children[container.children.length - 1];
+
+   var h = container.clientHeight - img.offsetHeight - -10; // endring: legger til en margin på 10px mellom img og spacer
+   spacerElement.style.height = h + "px";
+
+   if (h > 0) {
+      while (img.offsetHeight > lastContentNode.offsetHeight && h > 0) {
+         // endring: sammenligner høyden på img og lastContentNode
+         h--;
+         spacerElement.style.height = h + "px";
+      }
+   }
+}
+
+onload = onresize = function () {
+   sizeSpacer(document.getElementById("spacer"));
+};
+
+

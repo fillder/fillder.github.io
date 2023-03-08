@@ -130,15 +130,15 @@
    width: 80%;
    height: auto;
    margin-inline: auto;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: 1fr 0.6fr;
    grid-template-rows: 1fr auto auto;
    grid-template-areas:
-      "opp opp opp"
-      "eks eks res"
-      "gal gal gal";
+      "opp opp"
+      "eks res"
+      "gal gal";
    /*
    opp = Oppdrag
-   eks = Ekstra info 
+   eks = Ekstra info
    res = Nettressurser
    gal = Galleri
    */
@@ -254,27 +254,28 @@ table tbody tr td {
 
 /*______ OppdragsSide ______*/
 .oppdragGrid {
-   /* display: grid;
-   grid-template-columns: 1fr 0.6fr; */
+   display: flow-root;
 }
-
-.oppdragsSideBilde {
-   width: 30rem;
-   margin: 0rem -2rem 0rem 1rem;
-   /* grid-column: 2 / 3; */
+#spacer {
+   width: 0px;
    float: right;
-   left: 50rem;
-   top: 100%;
 }
-article p {
-   /* margin-block-start: 0.4rem;
-   margin-block-end: 1rem; */
+.oppdragsSideBilde {
+   height: auto;
+   width: 24rem;
+   float: right;
+   clear: right;
+   margin-inline-end: -2rem;
+   margin-inline-start: 0.6rem;
+   margin-block-start: 0.2rem;
+   margin-block-end: 0.8rem;
+   /* box-shadow: 0 1.5rem 0 0 var(--clr-ramme); */
 }
 
-.oppdragsBeskrivelse {
-   grid-column: 1 / 2;
+section p {
+   margin-block-start: 0.2rem;
+   margin-block-end: 1rem;
 }
-
 /*______ TittelHover ______*/
 .hover2d,
 .hover3d,
