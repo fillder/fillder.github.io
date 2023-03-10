@@ -54,7 +54,13 @@
    transition: outline 0.2s ease-in-out;
    outline: 2px solid var(--clr-spessartin);
 }
-
+.bilderammeHeader {
+   display: flex;
+   width: 100%;
+   height: 50px;
+   justify-content: space-between;
+   place-items: center;
+}
 .bildetittel {
    text-align: start;
 }
@@ -78,42 +84,55 @@
    margin-inline: 0.2rem;
    color: var(--clr-tekst);
 }
-.pil {
+.pil-neste {
    position: absolute;
    top: 50%;
-   width: 40px;
-   height: 50px;
+   right: 10px;
+   width: 30px;
+   height: 40px;
    transform: translateY(-50%);
-   fill: var(--clr-tekst);
+}
+.pil-tilbake {
+   position: absolute;
+   top: 50%;
+   left: 10px;
+   width: 30px;
+   height: 40px;
+   transform: translateY(-50%);
+}
+.pilBakgrunnTilbake {
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+   height: 100%;
+   width: 50px;
+   border-top-right-radius: 0.2rem;
+   border-bottom-right-radius: 0.6rem;
    cursor: pointer;
    opacity: 0.2;
    transition: opacity 0.2s ease-in-out;
 }
-.pil:hover,
-.pil:focus-visible {
-   opacity: 1;
-}
-.pil-neste {
+.pilBakgrunnNeste {
+   position: absolute;
+   top: 0;
    right: 0;
+   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
    height: 100%;
    width: 50px;
-   padding-inline-start: 10px;
-   padding-inline-end: 20px;
-   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
    border-top-right-radius: 0.2rem;
    border-bottom-right-radius: 0.6rem;
+   cursor: pointer;
+   opacity: 0.2;
+   transition: opacity 0.3s ease-in-out;
 }
-.pil-tilbake {
-   left: 0;
-   height: 100%;
-   width: 50px;
-   padding-inline-end: 10px;
-   padding-inline-start: 20px;
-   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
-   border-bottom-left-radius: 0.2rem;
-   border-top-left-radius: 0.6rem;
+.pilBakgrunnTilbake:hover,
+.pilBakgrunnTilbake:focus-visible,
+.pilBakgrunnNeste:hover,
+.pilBakgrunnNeste:focus-visible {
+   opacity: 1;
 }
-/* .bildefremvisning {
+.bildefremvisning {
    position: fixed;
    top: 0;
    left: 0;
@@ -121,26 +140,33 @@
    width: 100%;
    z-index: 100;
    background-color: rgba(0, 0, 0, 0.8);
-   display: flex;
+   display: none;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    display: none;
 }
-.fokusramme {
+.bildetekstAktiv {
+   width: 100%;
+   text-align: end;
+}
+.bildetittelAktiv {
+   width: 100%;
+}
+.maskeKryss {
+   display: flex;
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+}
+/* .fokusramme {
    margin: auto;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    align-items: center;
-}
-.fokusrammeHeader {
-   display: flex;
-   width: 100%;
-   justify-content: space-between;
-   align-items: center;
-}
-.kryss {
+} */
+/* .kryss {
    width: 50px;
    height: 50px;
    stroke: var(--clr-tekst);
@@ -150,8 +176,8 @@
    stroke-linejoin: round;
    stroke-width: 4;
    stroke-miterlimit: 10;
-}
-.fokusKarusell {
+} */
+/* .fokusKarusell {
    display: grid;
    grid-template-areas: "overlapp";
 }
@@ -207,13 +233,6 @@
    max-width: 100%;
    overflow-x: auto;
    width: 100%;
-}
-.alttekst {
-   color: var(--clr-tekst);
-   font-size: 1.6rem;
-   margin: 0;
-   padding: 0;
-   line-height: 1.5;
 }
 .bildeTeller {
    display: flex;

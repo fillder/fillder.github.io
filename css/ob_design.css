@@ -385,3 +385,6 @@ table tbody tr td {
    margin-block-start: 0.2rem;
    margin-block-end: 1rem;
 }
+.bildeGrid h3 {
+   margin-block-end: 0.5rem;
+}

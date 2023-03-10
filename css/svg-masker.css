@@ -147,6 +147,10 @@
    -webkit-mask: url(/images/svg/ob_oppdrag-tutorial.svg) no-repeat center;
    mask: url(/images/svg/ob_oppdrag-tutorial.svg) no-repeat center;
 }
+.maskeKryss {
+   -webkit-mask: url(/images/svg/ob_kryss.svg) no-repeat center;
+   mask: url(/images/svg/ob_kryss.svg) no-repeat center;
+}
 /*______ Ressursbanken ______*/
 .maskeDialog {
    -webkit-mask: url(/images/svg/rb_ikon-dialog.svg) no-repeat center;
