@@ -259,6 +259,7 @@
 }
 .bildeGrid {
    grid-area: gal;
+   position: relative;
 }
 /*______ Oppdragskategori Ikoner ______*/
 .spiciness {
@@ -378,7 +379,9 @@ table tbody tr td {
    /* box-shadow: 0 1.5rem 0 0 var(--clr-ramme); */
 }
 
-section p {
+.oppdragGrid p,
+.infoGrid p,
+.ressursGrid p {
    margin-block-start: 0.2rem;
    margin-block-end: 1rem;
 }

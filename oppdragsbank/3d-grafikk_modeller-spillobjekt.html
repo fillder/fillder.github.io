@@ -18,7 +18,7 @@
       <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
       <script type="module" src="/js/dag-natt.js"></script>
-      <script type="module" src="/js/ob_bildekarusell.js"></script>
+      <script type="module" src="/js/ob_bildekarusell_V2.js"></script>
       <script type="module" src="/js/ob_oppdragsbilde.js"></script>
       <title>Oppdrag: Modeller spillopbjekt</title>
    </head>
@@ -98,24 +98,41 @@
                   </li>
                </ul>
             </section>
-
-            <section aria-labelledby="Bildegalleri" class="sBoksRamme sB xSPS tekst bildeGrid galleri">
-               <div class="galleri-grid rb-ramme" id="galleri-grid">
-                  <img src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_1.jpg" class="miniatyrbilde" tittel="Valorant Lever Prop" />
-                  <img src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_2.jpg" class="miniatyrbilde" tittel="Valorant Lever Prop" />
-                  <img src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_3.jpg" class="miniatyrbilde" tittel="Mincraft Custom Props" />
-                  <img src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_4.jpg" class="miniatyrbilde" tittel="AmongUs Fan Art" />
+            <section aria-labelledby="Bildegalleri" class="sBoksRamme sB sPS tekst bildeGrid">
+               <h3 id="Bildegalleri" class="spessartinDek">Inspirasjon</h3>
+               <div class="sideTeller">
+                  <span class="gjeldendeSiden"></span>
+                  <span class="sideSkille">/</span>
+                  <span class="siderTotalt"></span>
+               </div>
+               <div class="bildegalleri_fire-pluss rb-ramme" id="galleri-grid">
+                  <div class="galleribilde">
+                     <h5 class="bildetittel" id="bildetittel"></h5>
+                     <img class="miniatyrbilde spessartinHover" src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_1.jpg" tittel="Overwatch spillobjekter" alt=" laget av Georg Klein" />
+                     <p class="bildetekst" id="bildetekst"></p>
+                  </div>
+                  <div class="galleribilde">
+                     <h5 class="bildetittel" id="bildetittel"></h5>
+                     <img class="miniatyrbilde spessartinHover" src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_2.jpg" tittel="AmongUs Fan Art" alt=" laget av Gregor Kopka" />
+                     <p class="bildetekst" id="bildetekst"></p>
+                  </div>
+                  <div class="galleribilde">
+                     <h5 class="bildetittel" id="bildetittel"></h5>
+                     <img class="miniatyrbilde spessartinHover" src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_3.jpg" tittel="Valorant Lever Prop" alt=" laget av Alexander Martins" />
+                     <p class="bildetekst" id="bildetekst"></p>
+                  </div>
+                  <div class="galleribilde">
+                     <h5 class="bildetittel" id="bildetittel"></h5>
+                     <img class="miniatyrbilde spessartinHover" src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_4.jpg" tittel="Mincraft Custom Props" alt="laget av Toby Plowy" />
+                     <p class="bildetekst" id="bildetekst"></p>
+                  </div>
+                  <!-- <div class="svgIkon maskeNeste"></div> -->
                   <svg class="pil pil-tilbake" viewBox="0 0 40 50" alt="forrige bildegruppe">
                      <path d="m.98,26.81l35.81,22.86c1.4.89,3.21-.13,3.21-1.81V2.14c0-1.68-1.81-2.7-3.21-1.81L.98,23.19c-1.31.84-1.31,2.79,0,3.62Z" />
                   </svg>
                   <svg class="pil pil-neste" viewBox="0 0 40 50" alt="neste bildegruppe">
                      <path d="m39.02,23.19L3.21.33C1.81-.56,0,.46,0,2.14v45.72c0,1.68,1.81,2.7,3.21,1.81l35.81-22.86c1.31-.84,1.31-2.79,0-3.62Z" />
                   </svg>
-                  <div class="sideTeller">
-                     <span class="gjeldendeSiden"></span>
-                     <span class="sideSkille">/</span>
-                     <span class="siderTotalt"></span>
-                  </div>
                </div>
             </section>
          </div>

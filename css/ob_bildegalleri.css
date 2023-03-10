@@ -1,14 +1,82 @@
-/*______ Bildegelleri ______*/
-.galleri-grid {
-   position: relative;
+/*___________ galleri __________*/
+.bildegalleri_fire-pluss,
+.bildegalleri_fire {
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   grid-template-rows: repeat(2, 1fr);
+   grid-template-columns: repeat(4, 1fr);
    grid-gap: 10px;
    height: 100%;
+   padding-bottom: 2rem;
 }
-.galleri-grid img:nth-child(n + 5) {
+.bildegalleri_tre {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 10px;
+   height: 100%;
+   padding-bottom: 2rem;
+}
+.bildegalleri_to {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 10px;
+   height: 100%;
+   padding-bottom: 2rem;
+}
+.bildegalleri_en {
+   display: grid;
+   grid-template-columns: 1fr;
+   height: 100%;
+   padding-bottom: 2rem;
+}
+.galleribilde {
+   display: flex;
+   flex-direction: column;
+   place-content: center;
+}
+
+/*______ Bildegelleri ______*/
+.bildegalleri_fire-pluss img:nth-child(n + 5) {
    display: none;
+}
+.miniatyrbilde {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   cursor: pointer;
+   transform-origin: center;
+   transition: all 0.3s ease-in-out;
+   border-radius: 0.4rem;
+}
+.spessartinHover {
+   outline: 0.5px solid var(--clr-ramme);
+}
+.spessartinHover:hover,
+.spessartinHover:focus-visible {
+   transition: outline 0.2s ease-in-out;
+   outline: 2px solid var(--clr-spessartin);
+}
+
+.bildetittel {
+   text-align: start;
+}
+.bildetekst {
+   text-align: end;
+}
+.sideTeller {
+   position: absolute;
+   top: 0;
+   right: 0;
+   transform: translateX(-50%);
+   margin-block-start: 0.5rem;
+   margin-inline-end: 0.5rem;
+}
+.gjeldendeSiden,
+.siderTotalt,
+.sideSkille {
+   font-family: "Roboto Mono", monospace;
+   font-weight: 500;
+   font-size: 1.2rem;
+   margin-inline: 0.2rem;
+   color: var(--clr-tekst);
 }
 .pil {
    position: absolute;
@@ -22,55 +90,30 @@
    transition: opacity 0.2s ease-in-out;
 }
 .pil:hover,
-.pil:focus {
+.pil:focus-visible {
    opacity: 1;
 }
 .pil-neste {
    right: 0;
    height: 100%;
-   width: 60px;
+   width: 50px;
    padding-inline-start: 10px;
-   padding-inline-end: 30px;
-   background-image: radial-gradient(farthest-side at 70% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+   padding-inline-end: 20px;
+   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+   border-top-right-radius: 0.2rem;
+   border-bottom-right-radius: 0.6rem;
 }
 .pil-tilbake {
    left: 0;
    height: 100%;
-   width: 60px;
+   width: 50px;
    padding-inline-end: 10px;
-   padding-inline-start: 30px;
-   background-image: radial-gradient(farthest-side at 30% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+   padding-inline-start: 20px;
+   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+   border-bottom-left-radius: 0.2rem;
+   border-top-left-radius: 0.6rem;
 }
-.miniatyrbilde {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   cursor: pointer;
-   transform-origin: center;
-   transition: transform 0.3s ease-in-out;
-   border-radius: 0.4rem;
-}
-.miniatyrbilde:hover,
-.miniatyrbilde:focus {
-   outline: 2px solid var(--clr-ramme);
-}
-.sideTeller {
-   position: absolute;
-   bottom: 0;
-   left: 50%;
-   transform: translateX(-50%);
-   padding-bottom: 0.2rem;
-}
-.gjeldendeSiden,
-.siderTotalt,
-.sideSkille {
-   font-family: "Roboto Mono", monospace;
-   font-weight: 500;
-   font-size: 1.2rem;
-   margin-inline: 0.2rem;
-   color: var(--clr-tekst);
-}
-.bildefremvisning {
+/* .bildefremvisning {
    position: fixed;
    top: 0;
    left: 0;
@@ -124,7 +167,7 @@
    transition: opacity 0.2s ease-in-out;
 }
 .fokuspil:hover,
-.fokuspil:focus {
+.fokuspil:focus-visible {
    opacity: 1;
 }
 .fokuspil-neste {
@@ -193,7 +236,7 @@
    filter: grayscale(80%);
 }
 .karusellramme:hover,
-.karusellramme:focus {
+.karusellramme:focus-visible {
    filter: none;
 }
 .karusellramme.aktiv {
@@ -206,4 +249,4 @@
    height: 100%;
    object-fit: cover;
    cursor: pointer;
-}
+} */

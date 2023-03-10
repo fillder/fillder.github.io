@@ -452,3 +452,38 @@ onload = onresize = function () {
 };
 
 
+
+
+
+Hei, jeg jobber med en responsiv nettside, og akkurat nå prøver jeg å lage et interaktivt bildegalleri. Det jeg ønsker å oppnå nå er å bruke JavaScript til å hente et bilde sin alttekst og tittel, og vise det som tekst i over og under bilde, uten å manuelt måtte kopiere det inn. Med andre ord ønsker jeg at på nettsiden, skal biltets "tittel" vises i tekstelementet med id "bildetittel", og bildets "alt" skal vises i tekstelementet "bildetekst". Kan du være så snill å hjelpe meg skrive logikken for dette?
+
+HTML:
+<div class="galleribilde">
+   <h5 class="bildetittel" id="bildetittel"></h5>
+   <img class="miniatyrbilde" src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_1.jpg" alt=" laget av Georg Klein" tittel="Overwatch-inspirerte spillobjekter" />
+   <p class="bildetekst" id="bildetekst"></p>
+</div>
+
+
+
+.galleribilde {
+   display: flex;
+   flex-direction: column;
+   place-content: center;
+}
+.bildetittel {
+   text-align: center;
+}
+.miniatyrbilde {
+   width: 100%;
+   height: 80%;
+   object-fit: cover;
+   cursor: pointer;
+   transform-origin: center;
+   transition: all 0.3s ease-in-out;
+   border-radius: 0.4rem;
+   border: 0.5px solid var(--clr-ramme);
+}
+.bildetekst {
+   text-align: end;
+}
