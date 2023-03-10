@@ -332,13 +332,25 @@ header {
    border-width: 3px 3px 6px 6px;
    border-color: var(--clr-ramme);
 }
-.xSP {
+.xSPA {
+   /* xtra small asymmetric padding */
    padding-block: 0.25rem;
    padding-inline: 0.5rem;
 }
-.sP {
+.sPA {
+   /* small asymmetric padding */
    padding-block: 0.5rem;
    padding-inline: 1rem;
+}
+
+.xSPS {
+   /* xtra small symmetric padding */
+   padding: 0.5rem;
+}
+
+.sPS {
+   /* small symmetric padding */
+   padding: 1rem;
 }
 
 .lP {

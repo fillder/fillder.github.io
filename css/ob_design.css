@@ -120,7 +120,112 @@
    height: 50px;
    width: 90px;
 }
+/*______ Kategoriside TittelHover ______*/
+.hover2d,
+.hover3d,
+.hoverFoto,
+.hoverFilm,
+.hoverAnimasjon,
+.hoverLyd,
+.hoverDrift,
+.hoverProgrammering,
+.hoverWeb,
+.hoverKi {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: none;
+   transform: scale(1);
+}
+.hover2d:hover,
+.hover2d:focus-visible {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-rubin);
+   transform: scale(1.02);
+}
+.hover3d:hover,
+.hover3d:focus-visible {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-spessartin);
+   transform: scale(1.02);
+}
+.hoverFoto:hover,
+.hoverFoto:focus-visible {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-citrin);
+   transform: scale(1.02);
+}
+.hoverFilm:hover,
+.hoverFilm:focus-visible {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-smaragd);
+   transform: scale(1.02);
+}
+.hoverAnimasjon:hover,
+.hoverAnimasjon:focus-visible {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-amazonitt);
+   transform: scale(1.02);
+}
+.hoverLyd:hover,
+.hoverLyd:focus-visible {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-akvamarin);
+   transform: scale(1.02);
+}
+.hoverDrift:hover,
+.hoverDrift:focus-visible {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-safir);
+   transform: scale(1.02);
+}
+.hoverProgrammering:hover,
+.hoverProgrammering:focus-visible {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-ametyst);
+   transform: scale(1.02);
+}
+.hoverWeb:hover,
+.hoverWeb:focus-visible {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-kunzitt);
+   transform: scale(1.02);
+}
+.hoverKi:hover,
+.hoverKi:focus-visible {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-thulitt);
+   transform: scale(1.02);
+}
+.flexInfoKnapp {
+   display: flex;
+   text-align: center;
+   align-items: center;
+   margin: 1rem;
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: none;
+   transform: scale(1);
+}
+.flexInfoKnapp:hover,
+.flexInfoKnapp:focus-visible {
+   transition: text-decoration 0.3s ease-in-out;
+   transition: transform 0.3s ease-in-out;
+   text-decoration: 3px underline var(--clr-tekst);
+   transform: scale(1.02);
+}
+/*___________________________________*/
 /*______ Oppdragskategori Grid ______*/
+/*___________________________________*/
 .gridBeholderkategori {
    display: grid;
    grid-gap: 1rem;
@@ -251,8 +356,9 @@ table tbody tr td {
    transition: transform 0.3s ease-in-out;
    transform: scale(1.02);
 }
-
-/*______ OppdragsSide ______*/
+/*___________________________________*/
+/*___________ OppdragsSide __________*/
+/*___________________________________*/
 .oppdragGrid {
    display: flow-root;
 }
@@ -275,107 +381,4 @@ table tbody tr td {
 section p {
    margin-block-start: 0.2rem;
    margin-block-end: 1rem;
-}
-/*______ TittelHover ______*/
-.hover2d,
-.hover3d,
-.hoverFoto,
-.hoverFilm,
-.hoverAnimasjon,
-.hoverLyd,
-.hoverDrift,
-.hoverProgrammering,
-.hoverWeb,
-.hoverKi {
-   transition: text-decoration 0.3s ease-in-out;
-   transition: transform 0.3s ease-in-out;
-   text-decoration: none;
-   transform: scale(1);
-}
-.hover2d:hover,
-.hover2d:focus-visible {
-   transition: text-decoration 0.3s ease-in-out;
-   transition: transform 0.3s ease-in-out;
-   text-decoration: 3px underline var(--clr-rubin);
-   transform: scale(1.02);
-}
-.hover3d:hover,
-.hover3d:focus-visible {
-   transition: text-decoration 0.3s ease-in-out;
-   transition: transform 0.3s ease-in-out;
-   text-decoration: 3px underline var(--clr-spessartin);
-   transform: scale(1.02);
-}
-.hoverFoto:hover,
-.hoverFoto:focus-visible {
-   transition: text-decoration 0.3s ease-in-out;
-   transition: transform 0.3s ease-in-out;
-   text-decoration: 3px underline var(--clr-citrin);
-   transform: scale(1.02);
-}
-.hoverFilm:hover,
-.hoverFilm:focus-visible {
-   transition: text-decoration 0.3s ease-in-out;
-   transition: transform 0.3s ease-in-out;
-   text-decoration: 3px underline var(--clr-smaragd);
-   transform: scale(1.02);
-}
-.hoverAnimasjon:hover,
-.hoverAnimasjon:focus-visible {
-   transition: text-decoration 0.3s ease-in-out;
-   transition: transform 0.3s ease-in-out;
-   text-decoration: 3px underline var(--clr-amazonitt);
-   transform: scale(1.02);
-}
-.hoverLyd:hover,
-.hoverLyd:focus-visible {
-   transition: text-decoration 0.3s ease-in-out;
-   transition: transform 0.3s ease-in-out;
-   text-decoration: 3px underline var(--clr-akvamarin);
-   transform: scale(1.02);
-}
-.hoverDrift:hover,
-.hoverDrift:focus-visible {
-   transition: text-decoration 0.3s ease-in-out;
-   transition: transform 0.3s ease-in-out;
-   text-decoration: 3px underline var(--clr-safir);
-   transform: scale(1.02);
-}
-.hoverProgrammering:hover,
-.hoverProgrammering:focus-visible {
-   transition: text-decoration 0.3s ease-in-out;
-   transition: transform 0.3s ease-in-out;
-   text-decoration: 3px underline var(--clr-ametyst);
-   transform: scale(1.02);
-}
-.hoverWeb:hover,
-.hoverWeb:focus-visible {
-   transition: text-decoration 0.3s ease-in-out;
-   transition: transform 0.3s ease-in-out;
-   text-decoration: 3px underline var(--clr-kunzitt);
-   transform: scale(1.02);
-}
-.hoverKi:hover,
-.hoverKi:focus-visible {
-   transition: text-decoration 0.3s ease-in-out;
-   transition: transform 0.3s ease-in-out;
-   text-decoration: 3px underline var(--clr-thulitt);
-   transform: scale(1.02);
-}
-.flexInfoKnapp {
-   display: flex;
-   text-align: center;
-   align-items: center;
-   margin: 1rem;
-   transition: text-decoration 0.3s ease-in-out;
-   transition: transform 0.3s ease-in-out;
-   text-decoration: none;
-   transform: scale(1);
-}
-.flexInfoKnapp:hover,
-.flexInfoKnapp:focus-visible {
-   transition: text-decoration 0.3s ease-in-out;
-   transition: transform 0.3s ease-in-out;
-   text-decoration: 3px underline var(--clr-tekst);
-   transform: scale(1.02);
 }
