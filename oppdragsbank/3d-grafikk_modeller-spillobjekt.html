@@ -18,7 +18,7 @@
       <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
       <script type="module" src="/js/dag-natt.js"></script>
-      <script type="module" src="/js/ob_bildekarusell_V2.js"></script>
+      <script type="module" src="/js/ob_bildekarusell_V4.js"></script>
       <script type="module" src="/js/ob_oppdragsbilde.js"></script>
       <title>Oppdrag: Modeller spillopbjekt</title>
    </head>
@@ -101,51 +101,59 @@
             <section aria-labelledby="Bildegalleri" class="sBoksRamme sB sPS tekst bildeGrid">
                <h3 id="Bildegalleri" class="spessartinDek">Inspirasjon</h3>
                <div class="sideTeller">
-                  <span class="gjeldendeSiden"></span>
-                  <span class="sideSkille">/</span>
-                  <span class="siderTotalt"></span>
+                  <h5 class="gjeldendeSiden"></h5>
+                  <h5 class="sideSkille">/</h5>
+                  <h5 class="siderTotalt"></h5>
                </div>
-               <div class="pilBakgrunnTilbake">
+               <div class="pilBakgrunnTilbake" id="pilForrigeGruppe">
                   <div class="svgIkon maskeTilbake pil-tilbake" alt="forrige bildegruppe"></div>
                </div>
-               <div class="pilBakgrunnNeste">
+               <div class="pilBakgrunnNeste" id="pilNesteGruppe">
                   <div class="svgIkon maskeNeste pil-neste" alt="neste bildegruppe"></div>
                </div>
-               <div class="bildegalleri_fire-pluss rb-ramme" id="galleri-grid">
+               <div class="bildegalleri_firePluss rb-ramme" id="galleri-grid">
                   <div class="galleribilde">
-                     <h5 class="bildetittel" id="bildetittel"></h5>
+                     <h5 class="bildetittel"></h5>
                      <img class="miniatyrbilde spessartinHover" src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_1.jpg" tittel="Overwatch spillobjekter" alt=" laget av Georg Klein" />
-                     <p class="bildetekst" id="bildetekst"></p>
+                     <p class="bildetekst"></p>
                   </div>
                   <div class="galleribilde">
-                     <h5 class="bildetittel" id="bildetittel"></h5>
+                     <h5 class="bildetittel"></h5>
                      <img class="miniatyrbilde spessartinHover" src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_2.jpg" tittel="AmongUs Fan Art" alt=" laget av Gregor Kopka" />
-                     <p class="bildetekst" id="bildetekst"></p>
+                     <p class="bildetekst"></p>
                   </div>
                   <div class="galleribilde">
-                     <h5 class="bildetittel" id="bildetittel"></h5>
+                     <h5 class="bildetittel"></h5>
                      <img class="miniatyrbilde spessartinHover" src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_3.jpg" tittel="Valorant Lever Prop" alt=" laget av Alexander Martins" />
-                     <p class="bildetekst" id="bildetekst"></p>
+                     <p class="bildetekst"></p>
                   </div>
                   <div class="galleribilde">
-                     <h5 class="bildetittel" id="bildetittel"></h5>
+                     <h5 class="bildetittel"></h5>
                      <img class="miniatyrbilde spessartinHover" src="/images/ob/kat-3_3d-grafikk/ob_3-1-1_gjennskap-spillobjekt_4.jpg" tittel="Minecraft Custom Props" alt="laget av Toby Plowy" />
-                     <p class="bildetekst" id="bildetekst"></p>
+                     <p class="bildetekst"></p>
                   </div>
                </div>
                <div class="bildefremvisning">
-                  <div class="bilderamme sBoksRamme tekst sB sPS">
-                     <div class="bilderammeHeader">
-                        <h2 class="bildetittelAktiv" id="bildetittelAktiv"></h2>
+                  <div class="bildeRamme sBoksRamme tekst sB">
+                     <div class="bilderammeHeader sPS">
+                        <h2 class="bildetittelAktiv spessartinDek" id="bildetittelAktiv"></h2>
                         <div class="svgIkon maskeKryss"></div>
                      </div>
-                     <div class="aktivtBilde"></div>
-                     <div class="bilderammeFooter">
-                        <p class="bildetekstAktiv" id="bildetekstAktiv"></p>
+                     <div class="aktivtBildeRamme">
+                        <div class="aktivtBilde"></div>
+                        <div class="pilBakgrunnTilbake" id="pilForrigeBilde">
+                           <div class="svgIkon maskeTilbake pil-tilbake" alt="forrige bildegruppe"></div>
+                        </div>
+                        <div class="pilBakgrunnNeste" id="pilNesteBilde">
+                           <div class="svgIkon maskeNeste pil-neste" alt="neste bildegruppe"></div>
+                        </div>
+                     </div>
+                     <div class="bildeRammeFooter sPS">
+                        <h5 class="bildetekstAktiv" id="bildetekstAktiv"></h5>
                         <div class="bildeTeller">
-                           <span class="gjeldendeBilde"></span>
-                           <span class="bildeSkille"></span>
-                           <span class="bilderTotalt"></span>
+                           <h5 class="gjeldendeBilde"></h5>
+                           <h5 class="bildeSkille">/</h5>
+                           <h5 class="bilderTotalt"></h5>
                         </div>
                      </div>
                      <div class="bildeKarusell"></div>

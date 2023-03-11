@@ -1,31 +1,26 @@
 /*___________ galleri __________*/
-.bildegalleri_fire-pluss,
-.bildegalleri_fire {
+.bildegalleri_firePluss {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
-   grid-gap: 10px;
-   height: 100%;
-   padding-bottom: 2rem;
+   grid-gap: 1rem;
+   padding-block-end: 3rem;
 }
 .bildegalleri_tre {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
-   grid-gap: 10px;
-   height: 100%;
-   padding-bottom: 2rem;
+   grid-gap: 1rem;
+   padding-block-end: 3rem;
 }
 .bildegalleri_to {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
-   grid-gap: 10px;
-   height: 100%;
-   padding-bottom: 2rem;
+   grid-gap: 1rem;
+   padding-block-end: 3rem;
 }
 .bildegalleri_en {
    display: grid;
    grid-template-columns: 1fr;
-   height: 100%;
-   padding-bottom: 2rem;
+   padding-block-end: 3rem;
 }
 .galleribilde {
    display: flex;
@@ -34,27 +29,27 @@
 }
 
 /*______ Bildegelleri ______*/
-.bildegalleri_fire-pluss img:nth-child(n + 5) {
+.bildegalleri_fire-pluss div:nth-child(n + 5) {
    display: none;
 }
 .miniatyrbilde {
-   width: 100%;
    height: 100%;
    object-fit: cover;
    cursor: pointer;
    transform-origin: center;
-   transition: all 0.3s ease-in-out;
+   transition: outline 0.1s ease-in-out;
    border-radius: 0.4rem;
 }
 .spessartinHover {
-   outline: 0.5px solid var(--clr-ramme);
+   outline: 2px solid var(--clr-ramme);
 }
 .spessartinHover:hover,
 .spessartinHover:focus-visible {
-   transition: outline 0.2s ease-in-out;
+   transition: outline 0.1s ease-in-out;
    outline: 2px solid var(--clr-spessartin);
 }
-.bilderammeHeader {
+.bilderammeHeader,
+.bildeRammeFooter {
    display: flex;
    width: 100%;
    height: 50px;
@@ -75,14 +70,10 @@
    margin-block-start: 0.5rem;
    margin-inline-end: 0.5rem;
 }
-.gjeldendeSiden,
-.siderTotalt,
-.sideSkille {
-   font-family: "Roboto Mono", monospace;
-   font-weight: 500;
-   font-size: 1.2rem;
-   margin-inline: 0.2rem;
-   color: var(--clr-tekst);
+.sideTeller .gjeldendeSiden,
+.sideTeller .siderTotalt,
+.sideTeller .sideSkille {
+   display: inline-block;
 }
 .pil-neste {
    position: absolute;
@@ -104,11 +95,9 @@
    position: absolute;
    top: 0;
    left: 0;
-   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
    height: 100%;
-   width: 50px;
-   border-top-right-radius: 0.2rem;
-   border-bottom-right-radius: 0.6rem;
+   width: 60px;
    cursor: pointer;
    opacity: 0.2;
    transition: opacity 0.2s ease-in-out;
@@ -117,14 +106,12 @@
    position: absolute;
    top: 0;
    right: 0;
-   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
    height: 100%;
-   width: 50px;
-   border-top-right-radius: 0.2rem;
-   border-bottom-right-radius: 0.6rem;
+   width: 60px;
    cursor: pointer;
-   opacity: 0.2;
-   transition: opacity 0.3s ease-in-out;
+   opacity: 0.1;
+   transition: opacity 0.2s ease-in-out;
 }
 .pilBakgrunnTilbake:hover,
 .pilBakgrunnTilbake:focus-visible,
@@ -146,126 +133,63 @@
    align-items: center;
    display: none;
 }
-.bildetekstAktiv {
-   width: 100%;
-   text-align: end;
+.bildeRamme {
+   position: relative;
 }
+.aktivtBildeRamme {
+   position: relative;
+}
+
+.bildetekstAktiv,
 .bildetittelAktiv {
-   width: 100%;
+   width: auto;
+}
+.bildeTeller .gjeldendeBilde,
+.bildeTeller .bildeSkille,
+.bildeTeller .bilderTotalt {
+   display: inline-block;
 }
 .maskeKryss {
    display: flex;
-   width: 40px;
-   height: 40px;
+   width: 30px;
+   height: 30px;
    cursor: pointer;
 }
-/* .fokusramme {
-   margin: auto;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   align-items: center;
-} */
-/* .kryss {
-   width: 50px;
-   height: 50px;
-   stroke: var(--clr-tekst);
-   cursor: pointer;
-   fill: var(--clr-main);
-   stroke-linecap: round;
-   stroke-linejoin: round;
-   stroke-width: 4;
-   stroke-miterlimit: 10;
-} */
-/* .fokusKarusell {
-   display: grid;
-   grid-template-areas: "overlapp";
-}
-.fokusKarusell > * {
-   grid-area: overlapp;
-}
-.fokuspil {
-   width: 40px;
-   height: 50px;
-   fill: var(--clr-tekst);
-   cursor: pointer;
-   opacity: 0.2;
-   transition: opacity 0.2s ease-in-out;
-}
-.fokuspil:hover,
-.fokuspil:focus-visible {
-   opacity: 1;
-}
-.fokuspil-neste {
-   place-self: end;
-   height: 100%;
-   width: 60px;
-   padding-inline-start: 30px;
-   padding-inline-end: 10px;
-   background-image: radial-gradient(farthest-side at 70% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-   z-index: 200;
-}
-.fokuspil-tilbake {
-   place-self: start;
-   height: 100%;
-   width: 60px;
-   padding-inline-end: 30px;
-   padding-inline-start: 10px;
-   background-image: radial-gradient(farthest-side at 30% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-   z-index: 200;
-}
-.fokusvindu {
+.bildeKarusell {
    margin-block: 1rem;
-   z-index: 190;
-   object-fit: contain;
-   outline: 0.1rem solid var(--clr-ramme);
-   max-width: 100%;
-}
-.fokusrammeInfo {
+   padding: 1rem;
+   background-color: var(--clr-tabellBoks);
    display: flex;
-   width: 100%;
-   justify-content: space-between;
-   align-items: center;
-   margin-bottom: 1rem;
-}
-.bildekarusell {
-   display: flex;
-   max-width: 100%;
+   gap: 1rem;
    overflow-x: auto;
-   width: 100%;
+   width: 90vw;
+   align-content: start;
+   justify-content: space-between;
 }
-.bildeTeller {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-.gjeldendeBilde,
-.bilderTotalt,
-.bildeSkille {
-   font-family: "Roboto Mono", monospace;
-   font-weight: 500;
-   font-size: 1.6rem;
-   margin-inline: 0.2rem;
-   color: var(--clr-tekst);
-}
-.karusellramme {
-   padding: 0.2rem;
-   height: 100px;
-   margin: auto;
-   filter: grayscale(80%);
-}
-.karusellramme:hover,
-.karusellramme:focus-visible {
-   filter: none;
-}
-.karusellramme.aktiv {
-   border: 2px solid var(--clr-ramme);
-   border-radius: 0.4rem;
-   filter: none;
-}
-.karusellbilde {
-   width: 100%;
+.bildeKarusell img {
    height: 100%;
+   width: 100%;
+   max-height: 150px;
    object-fit: cover;
    cursor: pointer;
-} */
+   filter: grayscale(0.8);
+   transition: all 300ms ease-in-out;
+   border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+   border-bottom-left-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+   outline: 2px solid var(--clr-ramme);
+   aspect-ratio: 4 / 3;
+}
+
+.bildeKarusell img:hover,
+.bildeKarusell img:focus-visible {
+   transition: all 300ms ease-in-out;
+   filter: grayscale(0);
+   outline: 2px solid var(--clr-spessartin);
+}
+
+.aktivtKarusellBilde {
+   filter: none;
+   outline: 2px solid var(--clr-spessartin);
+}

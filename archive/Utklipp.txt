@@ -455,12 +455,7 @@ onload = onresize = function () {
 
 
 
-Hei, jeg jobber med en responsiv nettside, og akkurat nå prøver jeg å lage et interaktivt bildegalleri. 
-Det jeg ønsker å oppnå nå er å bruke JavaScript til vise frem miniatyrbilder i fullskjerm. Med det mener jeg at når et av 
-miniatyrbildene trykkes på, så får klassen ".bildefremvisning" en "display: flex" slik at skjermen mørklegges med bakgrunnsfargen
-som allerede er definert. Deretter ønsker jeg at det bildet som ble trykket på, vises i klassen ".aktivtBilde" slik at det nesten 
-dekker brukerens nettsidens visuelle bredde og høyde, kanskje (80%), slik at det er rom for de andre elementene også. 
-Kan du være så snill å hjelpe meg skrive logikken til dette?
+Hei, jeg jobber med en responsiv nettside, og akkurat nå prøver jeg å lage et interaktivt bildegalleri. Jeg har nettopp lagt til en funksjon for å kunne bla gjennom bildegalleriet, dersom det er over fire bilder. Jeg brukder også ".bildegalleri_fire-pluss div:nth-child(n + 5) {display: none;}" for å gjemmee bort bilde, tekst og tittel for bilder dersom det er flere enn 4 bilder i galleriet. Nå ønsker jeg å legge til en kodeblokk som gjør noe av det motsatte; dersom det er mindre enn 5 bilder, altså 4 eller mindre, så skal ".sideTeller", ".pilBakgrunnTilbake" og ".pilBakgrunnNeste" skjules, da disse kun brukes for sidenavigering.Kan du være så snill å hjelpe meg med logikken?
 
 
 HTML:
@@ -471,47 +466,55 @@ HTML:
       <span class="sideSkille">/</span>
       <span class="siderTotalt"></span>
    </div>
-   <div class="pilBakgrunnTilbake">
+   <div class="pilBakgrunnTilbake" id="pilForrigeGruppe">
       <div class="svgIkon maskeTilbake pil-tilbake" alt="forrige bildegruppe"></div>
    </div>
-   <div class="pilBakgrunnNeste">
+   <div class="pilBakgrunnNeste" id="pilNesteGruppe">
       <div class="svgIkon maskeNeste pil-neste" alt="neste bildegruppe"></div>
    </div>
    <div class="bildegalleri_fire-pluss rb-ramme" id="galleri-grid">
       <div class="galleribilde">
-         <h5 class="bildetittel" id="bildetittel"></h5>
+         <h5 class="bildetittel"></h5>
          <img class="miniatyrbilde" src="/images/img_1.jpg" alt="alttekst_1" tittel="tittel_1" />
-         <p class="bildetekst" id="bildetekst"></p>
+         <p class="bildetekst"></p>
       </div>
       <div class="galleribilde">
-         <h5 class="bildetittel" id="bildetittel"></h5>
+         <h5 class="bildetittel"></h5>
          <img class="miniatyrbilde" src="/images/img_2.jpg" alt="alttekst_2" tittel="tittel_2" />
-         <p class="bildetekst" id="bildetekst"></p>
+         <p class="bildetekst"></p>
       </div>
       <div class="galleribilde">
-         <h5 class="bildetittel" id="bildetittel"></h5>
+         <h5 class="bildetittel"></h5>
          <img class="miniatyrbilde" src="/images/img_3.jpg" alt="alttekst_3" tittel="tittel_3" />
-         <p class="bildetekst" id="bildetekst"></p>
+         <p class="bildetekst"></p>
       </div>
       <div class="galleribilde">
-         <h5 class="bildetittel" id="bildetittel"></h5>
+         <h5 class="bildetittel"></h5>
          <img class="miniatyrbilde" src="/images/img_4.jpg" alt="alttekst_4" tittel="tittel_4" />
-         <p class="bildetekst" id="bildetekst"></p>
+         <p class="bildetekst"></p>
       </div>
    </div>
    <div class="bildefremvisning">
-      <div class="bilderamme">
-         <div class="bilderammeHeader">
-            <h3 class="bildetittel" id="bildetittel"></h3>
+      <div class="bildeRamme sBoksRamme tekst sB">
+         <div class="bilderammeHeader sPS">
+            <h2 class="bildetittelAktiv spessartinDek" id="bildetittelAktiv"></h2>
             <div class="svgIkon maskeKryss"></div>
          </div>
-         <div class="aktivtBilde"></div>
-         <div class="bilderammeFooter">
-            <p class="bildetekst" id="bildetekst"></p>
+         <div class="aktivtBildeRamme">
+            <div class="aktivtBilde"></div>
+            <div class="pilBakgrunnTilbake" id="pilForrigeBilde">
+               <div class="svgIkon maskeTilbake pil-tilbake" alt="forrige bildegruppe"></div>
+            </div>
+            <div class="pilBakgrunnNeste" id="pilNesteBilde">
+               <div class="svgIkon maskeNeste pil-neste" alt="neste bildegruppe"></div>
+            </div>
+         </div>
+         <div class="bildeRammeFooter sPS">
+            <h5 class="bildetekstAktiv" id="bildetekstAktiv"></h5>
             <div class="bildeTeller">
-               <span class="gjeldendeBilde"></span>
-               <span class="bildeSkille"></span>
-               <span class="bilderTotalt"></span>
+               <h5 class="gjeldendeBilde"></h5>
+               <h5 class="bildeSkille">/</h5>
+               <h5 class="bilderTotalt"></h5>
             </div>
          </div>
          <div class="bildeKarusell"></div>
@@ -520,29 +523,398 @@ HTML:
 </section>
 
 CSS:
+/*___________ galleri __________*/
+.bildegalleri_firePluss {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 1rem;
+   padding-block-end: 3rem;
+}
+.bildegalleri_tre {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 1rem;
+   padding-block-end: 3rem;
+}
+.bildegalleri_to {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 1rem;
+   padding-block-end: 3rem;
+}
+.bildegalleri_en {
+   display: grid;
+   grid-template-columns: 1fr;
+   padding-block-end: 3rem;
+}
 .galleribilde {
    display: flex;
    flex-direction: column;
    place-content: center;
 }
-.bildetittel {
-   text-align: center;
+
+/*______ Bildegelleri ______*/
+.bildegalleri_fire-pluss div:nth-child(n + 5) {
+   display: none;
 }
 .miniatyrbilde {
-   width: 100%;
-   height: 80%;
+   height: 100%;
    object-fit: cover;
    cursor: pointer;
    transform-origin: center;
-   transition: all 0.3s ease-in-out;
+   transition: outline 0.1s ease-in-out;
    border-radius: 0.4rem;
-   border: 0.5px solid var(--clr-ramme);
 }
-.miniatyrbilde:hover,
-.miniatyrbilde:focus-visible {
-   transition: all 0.3s ease-in-out;
-   border: 3px solid var(--clr-ramme);
+.spessartinHover {
+   outline: 2px solid var(--clr-ramme);
+}
+.spessartinHover:hover,
+.spessartinHover:focus-visible {
+   transition: outline 0.1s ease-in-out;
+   outline: 2px solid var(--clr-spessartin);
+}
+.bilderammeHeader,
+.bildeRammeFooter {
+   display: flex;
+   width: 100%;
+   height: 50px;
+   justify-content: space-between;
+   place-items: center;
+}
+.bildetittel {
+   text-align: start;
 }
 .bildetekst {
    text-align: end;
 }
+.sideTeller {
+   position: absolute;
+   top: 0;
+   right: 0;
+   transform: translateX(-50%);
+   margin-block-start: 0.5rem;
+   margin-inline-end: 0.5rem;
+}
+.gjeldendeSiden,
+.siderTotalt,
+.sideSkille {
+   font-family: "Roboto Mono", monospace;
+   font-weight: 500;
+   font-size: 1.2rem;
+   margin-inline: 0.2rem;
+   color: var(--clr-tekst);
+}
+.pil-neste {
+   position: absolute;
+   top: 50%;
+   right: 10px;
+   width: 30px;
+   height: 40px;
+   transform: translateY(-50%);
+   margin-inline-end: 1rem;
+}
+.pil-tilbake {
+   position: absolute;
+   top: 50%;
+   left: 10px;
+   width: 30px;
+   height: 40px;
+   transform: translateY(-50%);
+   margin-inline-start: 1rem;
+}
+.pilBakgrunnTilbake {
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+   height: 100%;
+   width: 70px;
+   border-top-left-radius: 0.6rem;
+   border-bottom-left-radius: 0.2rem;
+   cursor: pointer;
+   opacity: 0.2;
+   transition: opacity 0.2s ease-in-out;
+}
+.pilBakgrunnNeste {
+   position: absolute;
+   top: 0;
+   right: 0;
+   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+   height: 100%;
+   width: 70px;
+   border-top-right-radius: 0.2rem;
+   border-bottom-right-radius: 0.6rem;
+   cursor: pointer;
+   opacity: 0.1;
+   transition: opacity 0.2s ease-in-out;
+}
+.pilBakgrunnTilbake:hover,
+.pilBakgrunnTilbake:focus-visible,
+.pilBakgrunnNeste:hover,
+.pilBakgrunnNeste:focus-visible {
+   opacity: 1;
+}
+.bildefremvisning {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: 100;
+   background-color: rgba(0, 0, 0, 0.8);
+   display: none;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   display: none;
+}
+.bildeRamme {
+   position: relative;
+}
+.aktivtBildeRamme {
+   position: relative;
+}
+.aktivtBilde {
+   overflow: hidden;
+   border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+   border-bottom-left-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+}
+.bildetekstAktiv,
+.bildetittelAktiv {
+   width: auto;
+}
+.bildeTeller .gjeldendeBilde,
+.bildeTeller .bildeSkille,
+.bildeTeller .bilderTotalt {
+   display: inline-block;
+}
+.maskeKryss {
+   display: flex;
+   width: 30px;
+   height: 30px;
+   cursor: pointer;
+}
+.bildeKarusell {
+   margin-block: 1rem;
+   padding: 1rem;
+   background-color: var(--clr-tabellBoks);
+   display: flex;
+   gap: 1rem;
+   overflow-x: auto;
+   width: 90vw;
+   place-content: start;
+}
+.bildeKarusell img {
+   height: 100%;
+   min-width: 150px;
+   max-height: 150px;
+   object-fit: cover;
+   cursor: pointer;
+   filter: grayscale(0.8);
+   transition: all 300ms ease-in-out;
+   aspect-ratio: 4 / 3;
+   border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+   border-bottom-left-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+   outline: 2px solid var(--clr-ramme);
+}
+
+.bildeKarusell img:hover,
+.bildeKarusell img:focus-visible {
+   transition: all 300ms ease-in-out;
+   filter: grayscale(0);
+   outline: 2px solid var(--clr-spessartin);
+}
+
+
+JavaScript:
+const bilder = document.querySelectorAll(".miniatyrbilde");
+const bildefremvisning = document.querySelector(".bildefremvisning");
+const aktivtBilde = document.querySelector(".aktivtBilde");
+const lukkKnapp = document.querySelector(".maskeKryss");
+const bildeTittelAktiv = document.querySelector(".bildetittelAktiv");
+const bildeTekstAktiv = document.querySelector(".bildetekstAktiv");
+const miniatyrgalleri = document.querySelectorAll("#galleri-grid div");
+const bildeKarusell = document.querySelector(".bildeKarusell");
+const karusellBildeElement = document.querySelectorAll("#galleri-grid img");
+const aktivtBildeTeller = document.querySelector(".bildeTeller .gjeldendeBilde");
+const totaltBilderTeller = document.querySelector(".bildeTeller .bilderTotalt");
+const antallBilder = miniatyrgalleri.length;
+
+let totaltAntallBilder = bilder.length;
+let førsteBildeIgruppe = 0;
+let aktivtBildeIndex = 0;
+
+let galleriBilder = document.querySelectorAll("#galleri-bilde");
+
+if (antallBilder <= 4) {
+   document.querySelectorAll(".sideTeller, #pilForrigeGruppe, #pilNesteGruppe").forEach((elem) => {
+      elem.style.display = "none";
+   });
+}
+
+Array.from(miniatyrgalleri).forEach((galleri, i) => {
+   if (i < 4) {
+      galleri.style.display = "block";
+   } else {
+      galleri.style.display = "none";
+   }
+});
+
+function oppdaterBildeTekst(bilde, tittelElement, tekstElement) {
+   const tittelTekst = bilde.getAttribute("tittel");
+   const bildeTekst = bilde.getAttribute("alt");
+   tittelElement.textContent = tittelTekst ? tittelTekst : "";
+   tekstElement.textContent = bildeTekst ? bildeTekst : "";
+}
+
+bilder.forEach((bilde) => {
+   const tittelTekst = bilde.parentElement.querySelector(".bildetittel");
+   const bildeTekst = bilde.parentElement.querySelector(".bildetekst");
+   oppdaterBildeTekst(bilde, tittelTekst, bildeTekst);
+});
+
+const settBredde = () => {
+   const bilde = aktivtBilde.querySelector("img");
+   if (bilde) {
+      if (!bilde.style.maxWidth && !bilde.style.maxHeight) {
+         bilde.style.maxWidth = "90vw";
+         bilde.style.maxHeight = "90vh";
+      }
+   }
+};
+
+const pilNesteGruppe = document.querySelector("#pilNesteGruppe");
+const pilForrigeGruppe = document.querySelector("#pilForrigeGruppe");
+
+const bilderPerSide = 4;
+const antallSider = Math.ceil(antallBilder / bilderPerSide);
+let gjeldendeSide = 1;
+
+const gjeldendeSiden = document.querySelector(".gjeldendeSiden");
+const siderTotalt = document.querySelector(".siderTotalt");
+
+gjeldendeSiden.textContent = gjeldendeSide;
+siderTotalt.textContent = antallSider;
+
+const oppdaterBildegruppe = () => {
+   for (let i = 0; i < antallBilder; i++) {
+      if (i >= førsteBildeIgruppe && i < førsteBildeIgruppe + bilderPerSide) {
+         miniatyrgalleri[i].style.display = "block";
+      } else {
+         miniatyrgalleri[i].style.display = "none";
+      }
+   }
+   gjeldendeSiden.textContent = gjeldendeSide;
+};
+
+pilNesteGruppe.addEventListener("click", () => {
+   if (førsteBildeIgruppe + bilderPerSide < antallBilder) {
+      førsteBildeIgruppe += bilderPerSide;
+      gjeldendeSide++;
+   } else {
+      førsteBildeIgruppe = 0;
+      gjeldendeSide = 1;
+   }
+   oppdaterBildegruppe();
+});
+
+pilForrigeGruppe.addEventListener("click", () => {
+   if (førsteBildeIgruppe - bilderPerSide >= 0) {
+      førsteBildeIgruppe -= bilderPerSide;
+      gjeldendeSide--;
+   } else {
+      førsteBildeIgruppe = antallBilder - (antallBilder % bilderPerSide || bilderPerSide);
+      gjeldendeSide = antallSider;
+   }
+   oppdaterBildegruppe();
+});
+
+bilder.forEach((bilde) => {
+   bilde.addEventListener("click", () => {
+      aktivtBilde.innerHTML = `<img src="${bilde.src}"  alt="${bilde.alt}">`;
+      bildefremvisning.style.display = "flex";
+      bildeTittelAktiv.textContent = bilde.getAttribute("tittel");
+      bildeTekstAktiv.textContent = bilde.getAttribute("alt");
+      lukkKnapp.addEventListener("click", () => {
+         bildefremvisning.style.display = "none";
+      });
+      settBredde();
+   });
+});
+
+bildefremvisning.addEventListener("click", (event) => {
+   if (event.target === bildefremvisning) {
+      bildefremvisning.style.display = "none";
+   }
+});
+
+karusellBildeElement.forEach((bilde, index) => {
+   bilde.addEventListener("click", () => {
+      aktivtBildeIndex = index;
+      visBilde();
+   });
+});
+
+bilder.forEach((bilde, index) => {
+   const nyttBilde = document.createElement("img");
+   nyttBilde.src = bilde.src;
+   nyttBilde.alt = bilde.alt;
+   nyttBilde.addEventListener("click", () => {
+      aktivtBildeIndex = index;
+      visBilde();
+   });
+   bildeKarusell.appendChild(nyttBilde);
+});
+
+function visBilde() {
+   // Oppdater bilde- og tekstdata
+   aktivtBilde.innerHTML = `<img src="${bilder[aktivtBildeIndex].src}" alt="${bilder[aktivtBildeIndex].alt}" />`;
+   bildeTittelAktiv.innerHTML = miniatyrgalleri[aktivtBildeIndex].querySelector(".bildetittel").innerHTML;
+   bildeTekstAktiv.innerHTML = miniatyrgalleri[aktivtBildeIndex].querySelector(".bildetekst").innerHTML;
+
+   // Oppdater bildetelleren
+   aktivtBildeTeller.textContent = aktivtBildeIndex + 1;
+   totaltBilderTeller.textContent = totaltAntallBilder;
+
+   const bilderTotalt = document.querySelector(".bildeTeller .bilderTotalt");
+   bilderTotalt.textContent = bilder.length;
+
+   // Oppdater galleri-grid
+   galleriBilder.forEach((bilde, index) => {
+      const tittelTekst = bilde.querySelector(".bildetittel");
+      const bildeTekst = bilde.querySelector(".bildetekst");
+      oppdaterBildeTekst(bilder[index], tittelTekst, bildeTekst);
+   });
+
+   bildeKarusell.children[aktivtBildeIndex].click();
+   console.log(`Bytter til bilde ${aktivtBildeIndex + 1} i bildekarusell`);
+
+   // Oppdater plassering i rekken av det totale antallet bilder
+   const antallBilder = bilder.length;
+   const bildePlassering = document.querySelector("#bilde-plassering");
+   if (bildePlassering) {
+      bildePlassering.innerText = `Bilde ${aktivtBildeIndex + 1} av ${antallBilder}`;
+   }
+
+   // Juster bildestørrelse
+   settBredde();
+}
+document.querySelector("#pilForrigeBilde").addEventListener("click", () => {
+   aktivtBildeIndex = (aktivtBildeIndex - 1 + totaltAntallBilder) % totaltAntallBilder;
+   visBilde();
+   aktivtBildeTeller.textContent = aktivtBildeIndex + 1; // Oppdaterer bildetelleren
+});
+
+document.querySelector("#pilNesteBilde").addEventListener("click", () => {
+   aktivtBildeIndex = (aktivtBildeIndex + 1) % totaltAntallBilder;
+   visBilde();
+   aktivtBildeTeller.textContent = aktivtBildeIndex + 1; // Oppdaterer bildetelleren
+});
+
+window.addEventListener("load", settBredde);
+window.addEventListener("resize", settBredde);
+
