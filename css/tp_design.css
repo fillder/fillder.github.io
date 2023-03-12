@@ -17,13 +17,9 @@ main {
 } */
 /*______ fargedeklarering ______*/
 body {
-   /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
-   margin: auto;
-   display: grid;
    grid-template-rows:
       auto
-      1fr
-      auto;
+      1fr;
 }
 .farge-programfag {
    color: var(--clr-safir);
