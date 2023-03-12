@@ -1,74 +1,123 @@
-/*______ Bildegelleri ______*/
-.galleri-grid {
-   position: relative;
+/*___________ galleri __________*/
+.bildegalleri_firePluss {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 1rem;
+   padding-block-end: 3rem;
+}
+.bildegalleri_tre {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 1rem;
+   padding-block-end: 3rem;
+}
+.bildegalleri_to {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
-   grid-template-rows: repeat(2, 1fr);
-   grid-gap: 10px;
-   height: 100%;
+   grid-gap: 1rem;
+   padding-block-end: 3rem;
 }
-.galleri-grid img:nth-child(n + 5) {
+.bildegalleri_en {
+   display: grid;
+   grid-template-columns: 1fr;
+   padding-block-end: 3rem;
+}
+.galleribilde {
+   display: flex;
+   flex-direction: column;
+   place-content: center;
+}
+
+/*______ Bildegelleri ______*/
+.bildegalleri_fire-pluss div:nth-child(n + 5) {
    display: none;
 }
-.pil {
-   position: absolute;
-   top: 50%;
-   width: 40px;
-   height: 50px;
-   transform: translateY(-50%);
-   fill: var(--clr-tekst);
-   cursor: pointer;
-   opacity: 0.2;
-   transition: opacity 0.2s ease-in-out;
-}
-.pil:hover,
-.pil:focus {
-   opacity: 1;
-}
-.pil-neste {
-   right: 0;
-   height: 100%;
-   width: 60px;
-   padding-inline-start: 10px;
-   padding-inline-end: 30px;
-   background-image: radial-gradient(farthest-side at 70% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-}
-.pil-tilbake {
-   left: 0;
-   height: 100%;
-   width: 60px;
-   padding-inline-end: 10px;
-   padding-inline-start: 30px;
-   background-image: radial-gradient(farthest-side at 30% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-}
 .miniatyrbilde {
-   width: 100%;
    height: 100%;
    object-fit: cover;
    cursor: pointer;
    transform-origin: center;
-   transition: transform 0.3s ease-in-out;
+   transition: outline 0.1s ease-in-out;
    border-radius: 0.4rem;
 }
-.miniatyrbilde:hover,
-.miniatyrbilde:focus {
+.spessartinHover {
    outline: 2px solid var(--clr-ramme);
+}
+.spessartinHover:hover,
+.spessartinHover:focus-visible {
+   transition: outline 0.1s ease-in-out;
+   outline: 2px solid var(--clr-spessartin);
+}
+.bilderammeHeader,
+.bildeRammeFooter {
+   display: flex;
+   width: 100%;
+   height: 50px;
+   justify-content: space-between;
+   place-items: center;
+}
+.bildetittel {
+   text-align: start;
+}
+.bildetekst {
+   text-align: end;
 }
 .sideTeller {
    position: absolute;
-   bottom: 0;
-   left: 50%;
+   top: 0;
+   right: 0;
    transform: translateX(-50%);
-   padding-bottom: 0.2rem;
+   margin-block-start: 0.5rem;
+   margin-inline-end: 0.5rem;
 }
-.gjeldendeSiden,
-.siderTotalt,
-.sideSkille {
-   font-family: "Roboto Mono", monospace;
-   font-weight: 500;
-   font-size: 1.2rem;
-   margin-inline: 0.2rem;
-   color: var(--clr-tekst);
+.sideTeller .gjeldendeSiden,
+.sideTeller .siderTotalt,
+.sideTeller .sideSkille {
+   display: inline-block;
+}
+.pil-neste {
+   position: absolute;
+   top: 50%;
+   right: 10px;
+   width: 30px;
+   height: 40px;
+   transform: translateY(-50%);
+}
+.pil-tilbake {
+   position: absolute;
+   top: 50%;
+   left: 10px;
+   width: 30px;
+   height: 40px;
+   transform: translateY(-50%);
+}
+.pilBakgrunnTilbake {
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+   height: 100%;
+   width: 60px;
+   cursor: pointer;
+   opacity: 0.2;
+   transition: opacity 0.2s ease-in-out;
+}
+.pilBakgrunnNeste {
+   position: absolute;
+   top: 0;
+   right: 0;
+   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+   height: 100%;
+   width: 60px;
+   cursor: pointer;
+   opacity: 0.1;
+   transition: opacity 0.2s ease-in-out;
+}
+.pilBakgrunnTilbake:hover,
+.pilBakgrunnTilbake:focus-visible,
+.pilBakgrunnNeste:hover,
+.pilBakgrunnNeste:focus-visible {
+   opacity: 1;
 }
 .bildefremvisning {
    position: fixed;
@@ -78,132 +127,72 @@
    width: 100%;
    z-index: 100;
    background-color: rgba(0, 0, 0, 0.8);
-   display: flex;
+   display: none;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    display: none;
 }
-.fokusramme {
-   margin: auto;
+.bildeRamme {
+   position: relative;
+}
+.aktivtBildeRamme {
+   position: relative;
+}
+
+.bildetekstAktiv,
+.bildetittelAktiv {
+   width: auto;
+}
+.bildeTeller .gjeldendeBilde,
+.bildeTeller .bildeSkille,
+.bildeTeller .bilderTotalt {
+   display: inline-block;
+}
+.maskeKryss {
    display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   align-items: center;
-}
-.fokusrammeHeader {
-   display: flex;
-   width: 100%;
-   justify-content: space-between;
-   align-items: center;
-}
-.kryss {
-   width: 50px;
-   height: 50px;
-   stroke: var(--clr-tekst);
+   width: 30px;
+   height: 30px;
    cursor: pointer;
-   fill: var(--clr-main);
-   stroke-linecap: round;
-   stroke-linejoin: round;
-   stroke-width: 4;
-   stroke-miterlimit: 10;
 }
-.fokusKarusell {
-   display: grid;
-   grid-template-areas: "overlapp";
-}
-.fokusKarusell > * {
-   grid-area: overlapp;
-}
-.fokuspil {
-   width: 40px;
-   height: 50px;
-   fill: var(--clr-tekst);
-   cursor: pointer;
-   opacity: 0.2;
-   transition: opacity 0.2s ease-in-out;
-}
-.fokuspil:hover,
-.fokuspil:focus {
-   opacity: 1;
-}
-.fokuspil-neste {
-   place-self: end;
-   height: 100%;
-   width: 60px;
-   padding-inline-start: 30px;
-   padding-inline-end: 10px;
-   background-image: radial-gradient(farthest-side at 70% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-   z-index: 200;
-}
-.fokuspil-tilbake {
-   place-self: start;
-   height: 100%;
-   width: 60px;
-   padding-inline-end: 30px;
-   padding-inline-start: 10px;
-   background-image: radial-gradient(farthest-side at 30% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-   z-index: 200;
-}
-.fokusvindu {
+.bildeKarusell {
    margin-block: 1rem;
-   z-index: 190;
-   object-fit: contain;
-   outline: 0.1rem solid var(--clr-ramme);
-   max-width: 100%;
-}
-.fokusrammeInfo {
+   padding: 1rem;
+   background-color: var(--clr-tabellBoks);
    display: flex;
-   width: 100%;
-   justify-content: space-between;
-   align-items: center;
-   margin-bottom: 1rem;
-}
-.bildekarusell {
-   display: flex;
-   max-width: 100%;
+   gap: 1rem;
    overflow-x: auto;
-   width: 100%;
+   width: 90vw;
+   align-content: start;
+   justify-content: space-between;
 }
-.alttekst {
-   color: var(--clr-tekst);
-   font-size: 1.6rem;
-   margin: 0;
-   padding: 0;
-   line-height: 1.5;
-}
-.bildeTeller {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-.gjeldendeBilde,
-.bilderTotalt,
-.bildeSkille {
-   font-family: "Roboto Mono", monospace;
-   font-weight: 500;
-   font-size: 1.6rem;
-   margin-inline: 0.2rem;
-   color: var(--clr-tekst);
-}
-.karusellramme {
-   padding: 0.2rem;
-   height: 100px;
-   margin: auto;
-   filter: grayscale(80%);
-}
-.karusellramme:hover,
-.karusellramme:focus {
-   filter: none;
-}
-.karusellramme.aktiv {
-   border: 2px solid var(--clr-ramme);
-   border-radius: 0.4rem;
-   filter: none;
-}
-.karusellbilde {
-   width: 100%;
+.bildeKarusell img {
    height: 100%;
+   width: 100%;
+   max-height: 150px;
    object-fit: cover;
    cursor: pointer;
+   border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+   border-bottom-left-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+   aspect-ratio: 4 / 3;
+}
+
+.bildeKarusell img:not(.aktivtKarusellBilde) {
+   filter: grayscale(0.8);
+   transition: all 100ms ease-in-out;
+   outline: 1px solid var(--clr-ramme);
+}
+
+.bildeKarusell img:not(.aktivtKarusellBilde):hover,
+.bildeKarusell img:not(.aktivtKarusellBilde):focus-visible {
+   transition: all 100ms ease-in-out;
+   filter: grayscale(0);
+   outline: 3px solid var(--clr-ramme);
+}
+
+.aktivtKarusellBilde {
+   filter: none;
+   outline: 3px solid var(--clr-ramme);
 }

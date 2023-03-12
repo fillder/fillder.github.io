@@ -108,65 +108,8 @@ main {
    height: 25px;
    z-index: 110;
 }
-/*______ fagikoner ______*/
-.maskeWorkshop {
-   background-color: var(--clr-ametyst);
-   -webkit-mask: url(/images/svg/tp_fagikon-workshop.svg) no-repeat center;
-   mask: url(/images/svg/tp_fagikon-workshop.svg) no-repeat center;
-}
-.maskeProgramfag {
-   background-color: var(--clr-safir);
-   -webkit-mask: url(/images/svg/tp_fagikon-programfag.svg) no-repeat center;
-   mask: url(/images/svg/tp_fagikon-programfag.svg) no-repeat center;
-}
-.maskeEngelsk {
-   background-color: var(--clr-spessartin);
-   -webkit-mask: url(/images/svg/tp_fagikon-engelsk.svg) no-repeat center;
-   mask: url(/images/svg/tp_fagikon-engelsk.svg) no-repeat center;
-}
-.maskeMatte {
-   background-color: var(--clr-citrin);
-   -webkit-mask: url(/images/svg/tp_fagikon-matte.svg) no-repeat center;
-   mask: url(/images/svg/tp_fagikon-matte.svg) no-repeat center;
-}
-.maskeYFF {
-   background-color: var(--clr-akvamarin);
-   -webkit-mask: url(/images/svg/tp_fagikon-yff.svg) no-repeat center;
-   mask: url(/images/svg/tp_fagikon-yff.svg) no-repeat center;
-}
-.maskeNaturfag {
-   background-color: var(--clr-smaragd);
-   -webkit-mask: url(/images/svg/tp_fagikon-naturfag.svg) no-repeat center;
-   mask: url(/images/svg/tp_fagikon-naturfag.svg) no-repeat center;
-}
-.maskeMidttimen {
-   background-color: var(--clr-kunzitt);
-   -webkit-mask: url(/images/svg/tp_fagikon-midttimen.svg) no-repeat center;
-   mask: url(/images/svg/tp_fagikon-midttimen.svg) no-repeat center;
-}
-.maskeForum {
-   background-color: var(--clr-thulitt);
-   -webkit-mask: url(/images/svg/tp_fagikon-forum.svg) no-repeat center;
-   mask: url(/images/svg/tp_fagikon-forum.svg) no-repeat center;
-}
-.maskeKroppsoving {
-   background-color: var(--clr-amazonitt);
-   -webkit-mask: url(/images/svg/tp_fagikon-kroppsoving.svg) no-repeat center;
-   mask: url(/images/svg/tp_fagikon-kroppsoving.svg) no-repeat center;
-}
 footer {
    margin-top: 5rem;
-}
-
-.maskeForrigeDag {
-   background-color: var(--clr-tekst);
-   -webkit-mask: url(/images/svg/tp_pilForrigeDag.svg) no-repeat center;
-   mask: url(/images/svg/tp_pilForrigeDag.svg) no-repeat center;
-}
-.maskeNesteDag {
-   background-color: var(--clr-tekst);
-   -webkit-mask: url(/images/svg/tp_pilNesteDag.svg) no-repeat center;
-   mask: url(/images/svg/tp_pilNesteDag.svg) no-repeat center;
 }
 .dagPil {
    width: 2rem;
