@@ -182,14 +182,17 @@ a:visited {
 /* a:active {} */
 /*____Main grid____*/
 body {
-   /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
-   max-width: 1600px;
-   margin: auto;
    display: grid;
+   grid-template-columns: 1fr;
    grid-template-rows:
-      auto
       1fr
       auto;
+}
+main {
+   /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
+   max-width: 1600px;
+   width: 100%;
+   margin-inline: auto;
 }
 /*______ Navigasjon ______*/
 nav {
@@ -255,11 +258,13 @@ header {
    margin-top: 50px;
 }
 .hero {
-   position: fixed;
+   position: absolute;
+   top: 0;
    height: 400px; /* Sett høyden på banneret etter behov */
    width: 100%;
    left: 50%;
    transform: translateX(-50%);
+   z-index: 140;
 }
 .hero-bilde {
    /* Stil for bannerbildet */
@@ -272,7 +277,7 @@ header {
 }
 .hero-tittel {
    position: absolute;
-   
+
    top: 20px;
    left: 20px;
    padding: 0px 10px 7.5px 7.5px; /* top | right | bottom | left */
@@ -294,8 +299,8 @@ header {
    z-index: 110;
 }
 /*______ Main ______*/
-main {
-   margin-top: 400px;
+.mainMedHeader {
+   margin-top: 450px;
 }
 
 /*______ Rammer ______*/

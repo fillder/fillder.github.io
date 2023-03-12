@@ -9,11 +9,14 @@
    body {
       /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
       display: grid;
-      grid-template-rows: auto 1fr auto;
+      grid-template-rows: min-content;
       background-color: var(--clr-main);
    }
    header {
       display: none;
+   }
+   main {
+      margin-top: 50px;
    }
    .svgIkon {
       width: 30px;

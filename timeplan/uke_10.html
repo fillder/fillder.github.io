@@ -13,7 +13,7 @@
       <link rel="stylesheet" type="text/css" href="/css/dag-natt.css" />
       <link rel="stylesheet" type="text/css" href="/css/tp_design.css" />
       <link rel="stylesheet" type="text/css" href="/css/tp_oppsett_vinteraktivitetsdag.css" />
-      <link rel="stylesheet" type="text/css" href="/css/tp_mobil_ny.css" />
+      <link rel="stylesheet" type="text/css" href="/css/tp_mobil-lite.css" />
       <link rel="icon" href="/images/ico/skolelogo.svg" type="image/svg+xml" />
       <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
@@ -25,48 +25,49 @@
 
    <body>
       <!-- Tittel og uketall -->
-      <header>
-         <nav>
-            <button type="button" alt="hjem" title="hjem">
-               <div class="hjem maskeHjem"></div>
-            </button>
-            <div class="logo">
-               <a href="/timeplan/uke_9.html" target="_self" alt="Timeplan uke 9" title="Timeplan uke 9">
-                  <div class="pil maskeTilbake"></div>
-               </a>
-               <h1>
-                  <b><span>TIMEPLAN - </span>UKE 10</b>
-               </h1>
-               <a href="/timeplan/uke_11.html" target="_self" alt="Timeplan uke 11" title="Timeplan uke 11">
-                  <div class="pil maskeNeste"></div>
-               </a>
+      <nav>
+         <button type="button" alt="hjem" title="hjem">
+            <div class="hjem maskeHjem"></div>
+         </button>
+         <div class="logo">
+            <a href="/timeplan/uke_9.html" target="_self" alt="Timeplan uke 9" title="Timeplan uke 9">
+               <div class="pil maskeTilbake"></div>
+            </a>
+            <h1>
+               <b><span>TIMEPLAN - </span>UKE 10</b>
+            </h1>
+            <a href="/timeplan/uke_11.html" target="_self" alt="Timeplan uke 11" title="Timeplan uke 11">
+               <div class="pil maskeNeste"></div>
+            </a>
 
-            </div>
-            <div class="flexHoyre">
-               <a class="skolelogo" href="https://f21.vgs.no" target="_self">
-                  <svg class="skolelogo" viewBox="0 0 50 50" alt="skolens hjemmeside" title="skolens hjemmeside">
-                     <path class="skolefarge1" d="m35.71,7.14h7.14v35.71h-7.14V7.14ZM28.57,0v28.58h-14.29v7.14h14.29v7.14H7.14v-7.14H0v14.28h50V0h-21.43Z" />
-                     <polygon class="skolefarge2" points="0 0 0 32.72 7.14 32.72 7.14 21.43 21.43 21.43 21.43 14.29 7.14 14.29 7.14 7.14 25.58 7.14 25.58 0 0 0" />
+         </div>
+         <div class="flexHoyre">
+            <a class="skolelogo" href="https://f21.vgs.no" target="_self">
+               <svg class="skolelogo" viewBox="0 0 50 50" alt="skolens hjemmeside" title="skolens hjemmeside">
+                  <path class="skolefarge1" d="m35.71,7.14h7.14v35.71h-7.14V7.14ZM28.57,0v28.58h-14.29v7.14h14.29v7.14H7.14v-7.14H0v14.28h50V0h-21.43Z" />
+                  <polygon class="skolefarge2" points="0 0 0 32.72 7.14 32.72 7.14 21.43 21.43 21.43 21.43 14.29 7.14 14.29 7.14 7.14 25.58 7.14 25.58 0 0 0" />
+               </svg>
+            </a>
+            <div class="modusikon">
+               <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
+                  <svg class="svg-anim" viewBox="0 70 100 100">
+                     <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                     <circle class="sun" cx="50" cy="120" r="20" />
+                     <circle class="moon" cx="135" cy="40" r="40" />
                   </svg>
-               </a>
-               <div class="modusikon">
-                  <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
-                     <svg class="svg-anim" viewBox="0 70 100 100">
-                        <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                        <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                        <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                        <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                        <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                        <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                        <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                        <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                        <circle class="sun" cx="50" cy="120" r="20" />
-                        <circle class="moon" cx="135" cy="40" r="40" />
-                     </svg>
-                  </button>
-               </div>
+               </button>
             </div>
-         </nav>
+         </div>
+      </nav>
+      <header>
+
       </header>
       <main>
          <button type="button" class="pilForrige">
@@ -78,7 +79,7 @@
                <h2>Mandag</h2>
                <h4>6. mars</h4>
             </div>
-            <div class="boksRamme tekst sP lB forum">
+            <div class="boksRamme tekst xSPA lB forum">
                <div class="fagtittel">
                   <div class="svgIkon maskeForum"></div>
                   <h3 class="farge-forum">Forum</h3>
@@ -89,7 +90,7 @@
                   <h5>Jon og Marius</h5>
                </div>
             </div>
-            <div class="boksRamme tekst sP lB programfag1">
+            <div class="boksRamme tekst xSPA lB programfag1">
                <div class="fagtittel">
                   <div class="svgIkon maskeProgramfag"></div>
                   <h3 class="farge-programfag">Programfag</h3>
@@ -102,7 +103,7 @@
                   <p>Jobbing med prosjektoppgaven</p>
                </div>
             </div>
-            <div class="boksRamme tekst sP lB engelsk1">
+            <div class="boksRamme tekst xSPA lB engelsk1">
                <div class="fagtittel">
                   <div class="svgIkon maskeEngelsk"></div>
                   <h3 class="farge-engelsk">Engelsk</h3>
@@ -126,7 +127,7 @@
                <h2>Tirsdag</h2>
                <h4>7. mars</h4>
             </div>
-            <div class="boksRamme tekst sP lB ig">
+            <div class="boksRamme tekst xSPA lB ig">
                <div class="fagtittel">
                   <div class="svgIkon maskeWorkshop"></div>
                   <h3 class="farge-workshop">Workshop</h3>
@@ -138,7 +139,7 @@
                   <p>Oppstart i G18 etterfulgt av lignende opplegg som sist. Bao fortsetter i lydstudio og Endre med spillutvikling</p>
                </div>
             </div>
-            <div class="boksRamme tekst sP lB matte1">
+            <div class="boksRamme tekst xSPA lB matte1">
                <div class="fagtittel">
                   <div class="svgIkon maskeMatte"></div>
                   <h3 class="farge-matte">Matte</h3>
@@ -159,7 +160,7 @@
                   </div>
                </div>
             </div>
-            <div class="boksRamme tekst sP lB programfag2">
+            <div class="boksRamme tekst xSPA lB programfag2">
                <div class="fagtittel">
                   <div class="svgIkon maskeProgramfag"></div>
                   <h3 class="farge-programfag">Programfag</h3>
@@ -179,7 +180,7 @@
                <h2>Onsdag</h2>
                <h4>8. mars</h4>
             </div>
-            <div class="boksRamme tekst sP lB matte2">
+            <div class="boksRamme tekst xSPA lB matte2">
                <div class="fagtittel">
                   <div class="svgIkon maskeMidttimen"></div>
                   <h3 class="farge-midttimen">Aktivitetsdag</h3>
@@ -194,9 +195,6 @@
                      <p>11-12: Valgfri aktivitet</p>
                      <p>12-13.30: Liunsj og grilling av medbrakt mat på bålet (pinnebrød/pølser/mais med mer) </p>
                      <p>13.30: Utsjekk </p><br>
-                     <p>Det er fantastiske skiforhold i Nordmarka om dagen, og det anbefales virkelig å forsøke seg på en skitur. Både frigo.no og bua.no låner ut langrennsutstyr hvis man ikke har eget. Det blir i tillegg mulighet til å låne langrennsutstyr oppe på Songsvann (som skolen kjører opp) men dette må da leveres tilbake etter vinteraktivitetsdagen.  
-                        Det er meldt kalde forhold, så det er viktig å ha på seg varmt tøy. Ulltøy er å anbefale. Det kan også være smart å ha med sitteunderlag og tøyskift i tilfelle man blir våt eller svett. 
-                        Husk vannflaske og mat til bålet! </p>
                   </div>
                </div>
             </div>
@@ -208,7 +206,7 @@
                <h2>Torsdag</h2>
                <h4>9. mars</h4>
             </div>
-            <div class="boksRamme tekst sP lB yff1">
+            <div class="boksRamme tekst xSPA lB yff1">
                <div class="fagtittel">
                   <div class="svgIkon maskeYFF"></div>
                   <h3 class="farge-yff">YFF</h3>
@@ -222,7 +220,7 @@
                   <p>10:40-11:25 kommer Richard innom og tilbyr veiledning til de som jobber med lyd, og fortsetter etter lunsj</p>
                </div>
             </div>
-            <div class="boksRamme tekst sP lB midttimen">
+            <div class="boksRamme tekst xSPA lB midttimen">
                <div class="fagtittel">
                   <div class="svgIkon maskeMidttimen"></div>
                   <h3 class="farge-midttimen">Midttimen</h3>
@@ -232,7 +230,7 @@
                   <h4 class="farge-midttimen">Ute</h4>
                </div>
             </div>
-            <div class="boksRamme tekst sP lB yff2">
+            <div class="boksRamme tekst xSPA lB yff2">
                <div class="fagtittel">
                   <div class="svgIkon maskeYFF"></div>
                   <h3 class="farge-yff">YFF</h3>
@@ -250,7 +248,7 @@
                <h2>Fredag</h2>
                <h4>10. mars</h4>
             </div>
-            <div class="boksRamme tekst sP lB programfag4">
+            <div class="boksRamme tekst xSPA lB programfag4">
                <div class="fagtittel">
                   <div class="svgIkon maskeProgramfag"></div>
                   <h3 class="farge-programfag">Programfag</h3>
@@ -263,7 +261,7 @@
                   <p>Jobbing med prosjektoppgaven</p>
                </div>
             </div>
-            <div class="boksRamme tekst sP lB naturfag">
+            <div class="boksRamme tekst xSPA lB naturfag">
                <div class="fagtittel">
                   <div class="svgIkon maskeNaturfag"></div>
                   <h3 class="farge-naturfag">Naturfag</h3>
@@ -280,7 +278,7 @@
                   </div>
                </div>
             </div>
-            <div class="boksRamme tekst sP lB kroppsoving">
+            <div class="boksRamme tekst xSPA lB kroppsoving">
                <div class="fagtittel">
                   <div class="svgIkon maskeKroppsoving"></div>
                   <h3 class="farge-kroppsoving">Kroppsøving</h3>

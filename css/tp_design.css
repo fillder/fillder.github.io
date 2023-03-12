@@ -74,7 +74,6 @@ main {
    max-width: 1600px;
    padding-inline: 2rem;
    margin-inline: auto;
-   margin-top: 50px;
    box-shadow: 0 5rem 0 0rem var(--clr-main);
    text-align: center;
 }

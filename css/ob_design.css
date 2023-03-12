@@ -1,5 +1,5 @@
 /*______ Grid Oppdragsbank ______*/
-.gridBeholder {
+.ob_hovedsideGrid {
    display: grid;
    grid-gap: 1rem;
    margin-block: 3rem;
@@ -63,12 +63,12 @@
    margin-block-start: 2rem;
    margin-block-end: 1rem;
 }
-/*______ Kategoriside kategoriIkoner ______*/
+/*______ KategoriIkoner ______*/
 .kategoriIkon {
    position: relative;
    width: 180px;
    height: 180px;
-   margin: auto;
+   margin-inline: auto;
    padding: 2rem;
    z-index: 110;
 }
@@ -82,8 +82,9 @@
    width: 220px;
    z-index: 100;
    text-align: center;
+   margin-inline: auto;
 }
-/*______ Kategoriside infoKnapper ______*/
+/*______ InfoKnapper ______*/
 .infoKnapper {
    display: flex;
    justify-content: space-around;
@@ -226,40 +227,20 @@
 /*___________________________________*/
 /*______ Oppdragskategori Grid ______*/
 /*___________________________________*/
-.gridBeholderkategori {
+/*______ KategorisideGrid ______*/
+.ob_kategorisideGrid {
    display: grid;
    grid-gap: 1rem;
    margin-block: 2rem;
    column-gap: 1rem;
    row-gap: 2rem;
    width: 80%;
-   height: auto;
    margin-inline: auto;
-   grid-template-columns: 1fr 0.6fr;
-   grid-template-rows: 1fr auto auto;
-   grid-template-areas:
-      "opp opp"
-      "eks res"
-      "gal gal";
-   /*
-   opp = Oppdrag
-   eks = Ekstra info
-   res = Nettressurser
-   gal = Galleri
-   */
+   grid-template-columns: 1fr;
+   grid-template-areas: "kat";
 }
-.oppdragGrid {
-   grid-area: opp;
-}
-.infoGrid {
-   grid-area: eks;
-}
-.ressursGrid {
-   grid-area: res;
-}
-.bildeGrid {
-   grid-area: gal;
-   position: relative;
+.kategoriTabell {
+   grid-area: kat;
 }
 /*______ Oppdragskategori Ikoner ______*/
 .spiciness {
@@ -360,9 +341,42 @@ table tbody tr td {
 /*___________________________________*/
 /*___________ OppdragsSide __________*/
 /*___________________________________*/
-.oppdragGrid {
-   display: flow-root;
+.ob_oppdragssideGrid {
+   display: grid;
+   grid-gap: 1rem;
+   margin-block: 2rem;
+   column-gap: 1rem;
+   row-gap: 2rem;
+   width: 80%;
+   height: auto;
+   margin-inline: auto;
+   grid-template-columns: 1fr 0.6fr;
+   grid-template-rows: 1fr auto auto;
+   grid-template-areas:
+      "opp opp"
+      "eks res"
+      "gal gal";
+   /*
+   opp = Oppdrag
+   eks = Ekstra info
+   res = Nettressurser
+   gal = Galleri
+   */
 }
+.oppdragGrid {
+   grid-area: opp;
+}
+.infoGrid {
+   grid-area: eks;
+}
+.ressursGrid {
+   grid-area: res;
+}
+.bildeGrid {
+   grid-area: gal;
+   position: relative;
+}
+/*___________ OppdragsGrid __________*/
 #spacer {
    width: 0px;
    float: right;
