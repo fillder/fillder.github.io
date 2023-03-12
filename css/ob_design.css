@@ -376,7 +376,7 @@ table tbody tr td {
    margin-inline-start: 0.6rem;
    margin-block-start: 0.2rem;
    margin-block-end: 0.8rem;
-   /* box-shadow: 0 1.5rem 0 0 var(--clr-ramme); */
+   cursor: pointer;
 }
 
 .oppdragGrid p,

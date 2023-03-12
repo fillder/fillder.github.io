@@ -133,7 +133,6 @@ bildefremvisning.addEventListener("click", (event) => {
 });
 
 function aktivtKarusellBilde() {
-   console.log("Aktivt karusellbilde index:", aktivtBildeIndex);
    const karusellBildeElementer = document.querySelectorAll(".bildeKarusell img");
    karusellBildeElementer.forEach((bildeElement, index) => {
       if (index === aktivtBildeIndex) {
@@ -200,6 +199,13 @@ function visBilde() {
    settBredde();
    aktivtKarusellBilde();
 }
+
+const oppdragsSideBilde = document.querySelector(".oppdragsSideBilde");
+oppdragsSideBilde.addEventListener("click", () => {
+   bildefremvisning.style.display = "flex";
+   aktivtBildeIndex = 0;
+   visBilde();
+});
 
 document.querySelector("#pilForrigeBilde").addEventListener("click", () => {
    aktivtBildeIndex = (aktivtBildeIndex - 1 + totaltAntallBilder) % totaltAntallBilder;

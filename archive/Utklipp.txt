@@ -454,17 +454,46 @@ onload = onresize = function () {
 
 
 
-
-Hei, jeg jobber med en responsiv nettside, og akkurat nå prøver jeg å lage et interaktivt bildegalleri. Jeg har nettopp lagt til en funksjon for å kunne bla gjennom bildegalleriet, dersom det er over fire bilder. Jeg brukder også ".bildegalleri_fire-pluss div:nth-child(n + 5) {display: none;}" for å gjemmee bort bilde, tekst og tittel for bilder dersom det er flere enn 4 bilder i galleriet. Nå ønsker jeg å legge til en kodeblokk som gjør noe av det motsatte; dersom det er mindre enn 5 bilder, altså 4 eller mindre, så skal ".sideTeller", ".pilBakgrunnTilbake" og ".pilBakgrunnNeste" skjules, da disse kun brukes for sidenavigering.Kan du være så snill å hjelpe meg med logikken?
-
+Hei, jeg jobber med en responsiv nettside, og akkurat nå prøver jeg å lage et interaktivt bildegalleri. Jeg har nettopp lagt til en funksjon i JavaScript som heter "aktivtKarusellBilde". Formålet med den funksjonen er å legge til og fjerne en klasse med samme navn (.aktivtKarusellBilde) på det bildet som har tilsvarende index som aktivtBildeIndex. Altså det bildet som vises i "aktivtBilde". Problemet er at funksjonen ikke fungerer som den skal. Jeg får kosollutskriften når jeg navigerer, men klassen legges aldri til. Klarer du å se hva som er problemet?
 
 HTML:
+<section aria-labelledby="Oppdragsbeskrivelse" class="sBoksRamme sB tekst oppdragGrid">
+   <div id="spacer"></div>
+   <img class="boksRamme sB oppdragsSideBilde src="/images/img_1.jpg" alt="alttekst_1" tittel="tittel_1" />
+   <div class="sPA">
+      <h2 id="Oppdragsbeskrivelse" class="spessartinDek">Produkt</h2>
+      <p><!-- tekstinnhold --></p>
+      <h3 class="spessartinDek">Beskrivelse</h3>
+      <p><!-- tekstinnhold --></p>
+      <h3 class="spessartinDek">Suksesskriterier</h3>
+      <ul>
+         <li>
+            <p><!-- tekstinnhold --></p>
+         </li>
+      </ul>
+   </div>
+</section>
+<section aria-labelledby="Ekstra info" class="sBoksRamme sB sPA tekst infoGrid">
+   <h3 id="ekstra-info" class="spessartinDek">Ekstra info</h3>
+   <p><!-- tekstinnhold --></p>
+</section>
+<section aria-labelledby="Nettressurser" class="sBoksRamme sB sPA tekst ressursGrid">
+   <h3 id="nettressurser" class="spessartinDek">Nettressurser</h3>
+   <ul>
+      <li>
+         <p><!-- tekstinnhold --></p>
+      </li>
+      <li>
+         <p><!-- tekstinnhold --></p>
+      </li>
+   </ul>
+</section>
 <section aria-labelledby="Bildegalleri" class="sBoksRamme sB sPS tekst bildeGrid">
    <h3 id="Bildegalleri" class="spessartinDek">Inspirasjon</h3>
    <div class="sideTeller">
-      <span class="gjeldendeSiden"></span>
-      <span class="sideSkille">/</span>
-      <span class="siderTotalt"></span>
+      <h5 class="gjeldendeSiden"></h5>
+      <h5 class="sideSkille">/</h5>
+      <h5 class="siderTotalt"></h5>
    </div>
    <div class="pilBakgrunnTilbake" id="pilForrigeGruppe">
       <div class="svgIkon maskeTilbake pil-tilbake" alt="forrige bildegruppe"></div>
@@ -530,23 +559,6 @@ CSS:
    grid-gap: 1rem;
    padding-block-end: 3rem;
 }
-.bildegalleri_tre {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-gap: 1rem;
-   padding-block-end: 3rem;
-}
-.bildegalleri_to {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   grid-gap: 1rem;
-   padding-block-end: 3rem;
-}
-.bildegalleri_en {
-   display: grid;
-   grid-template-columns: 1fr;
-   padding-block-end: 3rem;
-}
 .galleribilde {
    display: flex;
    flex-direction: column;
@@ -595,65 +607,6 @@ CSS:
    margin-block-start: 0.5rem;
    margin-inline-end: 0.5rem;
 }
-.gjeldendeSiden,
-.siderTotalt,
-.sideSkille {
-   font-family: "Roboto Mono", monospace;
-   font-weight: 500;
-   font-size: 1.2rem;
-   margin-inline: 0.2rem;
-   color: var(--clr-tekst);
-}
-.pil-neste {
-   position: absolute;
-   top: 50%;
-   right: 10px;
-   width: 30px;
-   height: 40px;
-   transform: translateY(-50%);
-   margin-inline-end: 1rem;
-}
-.pil-tilbake {
-   position: absolute;
-   top: 50%;
-   left: 10px;
-   width: 30px;
-   height: 40px;
-   transform: translateY(-50%);
-   margin-inline-start: 1rem;
-}
-.pilBakgrunnTilbake {
-   position: absolute;
-   top: 0;
-   left: 0;
-   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-   height: 100%;
-   width: 70px;
-   border-top-left-radius: 0.6rem;
-   border-bottom-left-radius: 0.2rem;
-   cursor: pointer;
-   opacity: 0.2;
-   transition: opacity 0.2s ease-in-out;
-}
-.pilBakgrunnNeste {
-   position: absolute;
-   top: 0;
-   right: 0;
-   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-   height: 100%;
-   width: 70px;
-   border-top-right-radius: 0.2rem;
-   border-bottom-right-radius: 0.6rem;
-   cursor: pointer;
-   opacity: 0.1;
-   transition: opacity 0.2s ease-in-out;
-}
-.pilBakgrunnTilbake:hover,
-.pilBakgrunnTilbake:focus-visible,
-.pilBakgrunnNeste:hover,
-.pilBakgrunnNeste:focus-visible {
-   opacity: 1;
-}
 .bildefremvisning {
    position: fixed;
    top: 0;
@@ -674,27 +627,9 @@ CSS:
 .aktivtBildeRamme {
    position: relative;
 }
-.aktivtBilde {
-   overflow: hidden;
-   border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
-   border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
-   border-bottom-left-radius: clamp(0.1rem, 0.2rem, 0.3vw);
-   border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
-}
 .bildetekstAktiv,
 .bildetittelAktiv {
    width: auto;
-}
-.bildeTeller .gjeldendeBilde,
-.bildeTeller .bildeSkille,
-.bildeTeller .bilderTotalt {
-   display: inline-block;
-}
-.maskeKryss {
-   display: flex;
-   width: 30px;
-   height: 30px;
-   cursor: pointer;
 }
 .bildeKarusell {
    margin-block: 1rem;
@@ -704,29 +639,38 @@ CSS:
    gap: 1rem;
    overflow-x: auto;
    width: 90vw;
-   place-content: start;
+   align-content: start;
+   justify-content: space-between;
 }
 .bildeKarusell img {
    height: 100%;
-   min-width: 150px;
+   width: 100%;
    max-height: 150px;
    object-fit: cover;
    cursor: pointer;
-   filter: grayscale(0.8);
-   transition: all 300ms ease-in-out;
-   aspect-ratio: 4 / 3;
    border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
    border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
    border-bottom-left-radius: clamp(0.1rem, 0.2rem, 0.3vw);
    border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
-   outline: 2px solid var(--clr-ramme);
+   aspect-ratio: 4 / 3;
 }
 
-.bildeKarusell img:hover,
-.bildeKarusell img:focus-visible {
-   transition: all 300ms ease-in-out;
+.bildeKarusell img:not(.aktivtKarusellBilde) {
+   filter: grayscale(0.8);
+   transition: all 100ms ease-in-out;
+   outline: 1px solid var(--clr-ramme);
+}
+
+.bildeKarusell img:not(.aktivtKarusellBilde):hover,
+.bildeKarusell img:not(.aktivtKarusellBilde):focus-visible {
+   transition: all 100ms ease-in-out;
    filter: grayscale(0);
-   outline: 2px solid var(--clr-spessartin);
+   outline: 3px solid var(--clr-ramme);
+}
+
+.aktivtKarusellBilde {
+   filter: none;
+   outline: 3px solid var(--clr-ramme);
 }
 
 
@@ -739,7 +683,7 @@ const bildeTittelAktiv = document.querySelector(".bildetittelAktiv");
 const bildeTekstAktiv = document.querySelector(".bildetekstAktiv");
 const miniatyrgalleri = document.querySelectorAll("#galleri-grid div");
 const bildeKarusell = document.querySelector(".bildeKarusell");
-const karusellBildeElement = document.querySelectorAll("#galleri-grid img");
+const karusellBildeElement = document.querySelectorAll(".bildeKarusell img");
 const aktivtBildeTeller = document.querySelector(".bildeTeller .gjeldendeBilde");
 const totaltBilderTeller = document.querySelector(".bildeTeller .bilderTotalt");
 const antallBilder = miniatyrgalleri.length;
@@ -771,10 +715,14 @@ function oppdaterBildeTekst(bilde, tittelElement, tekstElement) {
    tekstElement.textContent = bildeTekst ? bildeTekst : "";
 }
 
-bilder.forEach((bilde) => {
+bilder.forEach((bilde, index) => {
    const tittelTekst = bilde.parentElement.querySelector(".bildetittel");
    const bildeTekst = bilde.parentElement.querySelector(".bildetekst");
    oppdaterBildeTekst(bilde, tittelTekst, bildeTekst);
+   bilde.addEventListener("click", () => {
+      aktivtBildeIndex = index;
+      visBilde();
+   });
 });
 
 const settBredde = () => {
@@ -841,21 +789,41 @@ bilder.forEach((bilde) => {
       bildeTekstAktiv.textContent = bilde.getAttribute("alt");
       lukkKnapp.addEventListener("click", () => {
          bildefremvisning.style.display = "none";
+         karusellBildeElement.forEach((element) => {
+            element.classList.remove("aktivtKarusellBilde");
+         });
+         aktivtBildeIndex = null;
       });
       settBredde();
+      aktivtKarusellBilde();
    });
 });
 
 bildefremvisning.addEventListener("click", (event) => {
    if (event.target === bildefremvisning) {
       bildefremvisning.style.display = "none";
+      karusellBildeElement.forEach((element) => {
+         element.classList.remove("aktivtKarusellBilde");
+      });
+      aktivtBildeIndex = null;
    }
 });
 
+function aktivtKarusellBilde() {
+   const karusellBildeElementer = document.querySelectorAll(".bildeKarusell img");
+   karusellBildeElementer.forEach((bildeElement, index) => {
+      if (index === aktivtBildeIndex) {
+         bildeElement.classList.add("aktivtKarusellBilde");
+      } else {
+         bildeElement.classList.remove("aktivtKarusellBilde");
+      }
+   });
+}
 karusellBildeElement.forEach((bilde, index) => {
    bilde.addEventListener("click", () => {
       aktivtBildeIndex = index;
       visBilde();
+      aktivtKarusellBilde();
    });
 });
 
@@ -888,10 +856,14 @@ function visBilde() {
       const tittelTekst = bilde.querySelector(".bildetittel");
       const bildeTekst = bilde.querySelector(".bildetekst");
       oppdaterBildeTekst(bilder[index], tittelTekst, bildeTekst);
+      if (index === aktivtBildeIndex) {
+         bilde.classList.add("aktivtBilde");
+      } else {
+         bilde.classList.remove("aktivtBilde");
+      }
    });
 
    bildeKarusell.children[aktivtBildeIndex].click();
-   console.log(`Bytter til bilde ${aktivtBildeIndex + 1} i bildekarusell`);
 
    // Oppdater plassering i rekken av det totale antallet bilder
    const antallBilder = bilder.length;
@@ -902,19 +874,29 @@ function visBilde() {
 
    // Juster bildestørrelse
    settBredde();
+   aktivtKarusellBilde();
 }
+
+const oppdragsSideBilde = document.querySelector(".oppdragsSideBilde");
+oppdragsSideBilde.addEventListener("click", () => {
+   bildefremvisning.style.display = "flex";
+   aktivtBildeIndex = 0;
+   visBilde();
+});
+
 document.querySelector("#pilForrigeBilde").addEventListener("click", () => {
    aktivtBildeIndex = (aktivtBildeIndex - 1 + totaltAntallBilder) % totaltAntallBilder;
    visBilde();
+   aktivtKarusellBilde();
    aktivtBildeTeller.textContent = aktivtBildeIndex + 1; // Oppdaterer bildetelleren
 });
 
 document.querySelector("#pilNesteBilde").addEventListener("click", () => {
    aktivtBildeIndex = (aktivtBildeIndex + 1) % totaltAntallBilder;
    visBilde();
+   aktivtKarusellBilde();
    aktivtBildeTeller.textContent = aktivtBildeIndex + 1; // Oppdaterer bildetelleren
 });
 
 window.addEventListener("load", settBredde);
 window.addEventListener("resize", settBredde);
-
