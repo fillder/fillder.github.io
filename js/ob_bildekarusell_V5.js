@@ -5,8 +5,6 @@ const lukkKnapp = document.querySelector(".maskeKryss");
 const bildeTittelAktiv = document.querySelector(".bildetittelAktiv");
 const bildeTekstAktiv = document.querySelector(".bildetekstAktiv");
 const miniatyrgalleri = document.querySelectorAll("#galleri-grid div");
-const bildeKarusell = document.querySelector(".bildeKarusell");
-const karusellBildeElement = document.querySelectorAll(".bildeKarusell img");
 const aktivtBildeTeller = document.querySelector(".bildeTeller .gjeldendeBilde");
 const totaltBilderTeller = document.querySelector(".bildeTeller .bilderTotalt");
 const antallBilder = miniatyrgalleri.length;
@@ -17,6 +15,7 @@ let aktivtBildeIndex = 0;
 
 let galleriBilder = document.querySelectorAll("#galleri-bilde");
 
+let karusellBildeElement;
 if (antallBilder <= 4) {
    document.querySelectorAll(".sideTeller, #pilForrigeGruppe, #pilNesteGruppe").forEach((elem) => {
       elem.style.display = "none";
@@ -119,9 +118,34 @@ bildefremvisning.addEventListener("click", (event) => {
    }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+   // Finn alle bildeKarusell-elementene
+   const bildeKarusell = document.querySelector(".bildeKarusell");
+   const karusellBildeElement = document.querySelectorAll(".bildeKarusell img");
+
+   // Legg til bilde-elementer i bildeKarusell
+   karusellBildeElement.forEach((bilde, index) => {
+      const nyttBilde = document.createElement("img");
+      nyttBilde.src = bilde.src;
+      nyttBilde.alt = bilde.alt;
+      nyttBilde.addEventListener("click", () => {
+         aktivtBildeIndex = index;
+         visBilde();
+      });
+      bildeKarusell.appendChild(nyttBilde);
+   });
+
+   // Kall aktivtKarusellBilde-funksjonen etter at alle bildeKarusell-elementene er lastet inn
+   karusellBildeElement.forEach((bilde, index) => {
+      bilde.addEventListener("load", () => {
+         aktivtKarusellBilde();
+      });
+   });
+});
+
 function aktivtKarusellBilde() {
    console.log("Aktivt karusellbilde index:", aktivtBildeIndex);
-   Array.from(karusellBildeElement).forEach((bilde, i) => {
+   karusellBildeElement.forEach((bilde, i) => {
       if (i === aktivtBildeIndex) {
          bilde.classList.add("aktivtKarusellBilde");
       } else {
@@ -129,24 +153,7 @@ function aktivtKarusellBilde() {
       }
    });
 }
-karusellBildeElement.forEach((bilde, index) => {
-   bilde.addEventListener("click", () => {
-      aktivtBildeIndex = index;
-      visBilde();
-      aktivtKarusellBilde();
-   });
-});
 
-bilder.forEach((bilde, index) => {
-   const nyttBilde = document.createElement("img");
-   nyttBilde.src = bilde.src;
-   nyttBilde.alt = bilde.alt;
-   nyttBilde.addEventListener("click", () => {
-      aktivtBildeIndex = index;
-      visBilde();
-   });
-   bildeKarusell.appendChild(nyttBilde);
-});
 function visBilde() {
    // Oppdater bilde- og tekstdata
    aktivtBilde.innerHTML = `<img src="${bilder[aktivtBildeIndex].src}" alt="${bilder[aktivtBildeIndex].alt}" />`;
