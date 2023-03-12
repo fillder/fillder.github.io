@@ -1,20 +1,20 @@
 /*______ Scrollehjulet ______*/
 /* Gjemmer bort scrollehjulet for Chrome, Safari og Opera */
-html::-webkit-scrollbar {
+/* html::-webkit-scrollbar {
    display: none;
 }
 main::-webkit-scrollbar {
    display: none;
-}
+} */
 /* Gjemmer bort scrollehjulet for IE, Edge og Firefox */
-html {
-   -ms-overflow-style: none; /* IE og Edge */
-   scrollbar-width: none; /* Firefox */
+/* html {
+   -ms-overflow-style: none; 
+   scrollbar-width: none; 
 }
 main {
-   -ms-overflow-style: none; /* IE og Edge */
-   scrollbar-width: none; /* Firefox */
-}
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+} */
 /*______ fargedeklarering ______*/
 body {
    /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */

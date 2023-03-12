@@ -1,0 +1,87 @@
+.desk {
+   display: block;
+}
+.mob {
+   display: none;
+}
+
+@media screen and (max-width: 1200px) {
+   body {
+      /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      background-color: var(--clr-main);
+   }
+   header {
+      display: none;
+   }
+   .svgIkon {
+      width: 30px;
+      height: 15px;
+   }
+   .desk {
+      display: none;
+   }
+   .mob {
+      display: block;
+   }
+   nav {
+      grid-template-columns: 1fr;
+   }
+   .logo span {
+      display: none;
+   }
+   .hjem {
+      display: none;
+   }
+   .flexHoyre {
+      display: none;
+   }
+   .svgIkon {
+      width: 40px;
+      height: 20px;
+   }
+   h1 {
+      /* Tittel */
+      font-size: 2rem;
+      padding-inline: 1rem;
+   }
+   h2 {
+      /* Dager */
+      font-size: 1.7rem;
+   }
+   h3 {
+      /* Fagtittel */
+      font-size: 1.1rem;
+      padding-inline: 0.5rem;
+   }
+   h4 {
+      /* sted */
+      font-size: 1rem;
+   }
+   h5 {
+      /* lærer */
+      font-size: 0.9rem;
+   }
+   h6 {
+      /* klokkelsett */
+      font-size: 0.7rem;
+   }
+   p {
+      /* brødtekst */
+      font-size: 0.9rem;
+   }
+
+   .boksRamme {
+      border-radius: 1.2rem 0.4rem 1.2rem 0.8rem;
+   }
+   .fagtittel {
+      margin-bottom: 1%;
+   }
+   footer {
+      display: none;
+   }
+   .lB {
+      border-width: 1px 1px 3px 3px;
+   }
+}

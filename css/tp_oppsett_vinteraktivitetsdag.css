@@ -44,11 +44,11 @@
       ".." 1fr
       "m2" 1fr
       "m2" 1fr
-      ".." 0.1fr
-      "e2" 1fr
-      "e2" 1fr
-      "p3" 1fr
-      "p3" 1fr
+      "m2" 0.1fr
+      "m2" 1fr
+      "m2" 1fr
+      ".." 1fr
+      ".." 1fr
       /1fr;
    justify-self: center;
 }
