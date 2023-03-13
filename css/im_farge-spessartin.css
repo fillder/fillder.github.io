@@ -1,8 +1,20 @@
+.lenkeKnapp a {
+   display: block;
+   width: min-content;
+   width: 35px;
+   overflow: hidden;
+}
+
 a,
 a:link,
 a:visited {
    cursor: pointer;
    text-decoration: 1px underline var(--clr-spessartin);
+}
+a:hover,
+a:focus-visible,
+a:active {
+   color: var(--clr-spessartin);
 }
 
 .bildeKarusell img:not(.aktivtKarusellBilde) {
@@ -21,7 +33,3 @@ a:visited {
    filter: none;
    outline: 3px solid var(--clr-spessartin);
 }
-
-/* a:hover {
- } */
-/* a:active {} */
