@@ -52,8 +52,8 @@ const settBredde = () => {
    const bilde = aktivtBilde.querySelector("img");
    if (bilde) {
       if (!bilde.style.maxWidth && !bilde.style.maxHeight) {
-         bilde.style.maxWidth = "90vw";
-         bilde.style.maxHeight = "90vh";
+         bilde.style.maxWidth = "70vw";
+         bilde.style.maxHeight = "70vh";
       }
    }
 };
