@@ -162,7 +162,7 @@
    display: flex;
    gap: 1rem;
    overflow-x: auto;
-   width: 70vw;
+   width: auto;
    align-content: start;
    justify-content: space-between;
 }
@@ -171,6 +171,7 @@
    width: 100%;
    max-height: 150px;
    object-fit: cover;
+   overflow: hidden;
    cursor: pointer;
    border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
    border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
@@ -178,7 +179,12 @@
    border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
    aspect-ratio: 4 / 3;
 }
-
+.aktivtBilde img {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   margin-inline: auto;
+}
 /* .bildeKarusell img:not(.aktivtKarusellBilde) {
    filter: grayscale(0.8);
    transition: all 100ms ease-in-out;

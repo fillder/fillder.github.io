@@ -53,7 +53,9 @@ const settBredde = () => {
    if (bilde) {
       if (!bilde.style.maxWidth && !bilde.style.maxHeight) {
          bilde.style.maxWidth = "70vw";
+         bilde.style.maxWidth = "70dvw";
          bilde.style.maxHeight = "70vh";
+         bilde.style.maxHeight = "70dvh";
       }
    }
 };
