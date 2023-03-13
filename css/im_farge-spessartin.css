@@ -1,0 +1,27 @@
+a,
+a:link,
+a:visited {
+   cursor: pointer;
+   text-decoration: 1px underline var(--clr-spessartin);
+}
+
+.bildeKarusell img:not(.aktivtKarusellBilde) {
+   filter: grayscale(0.8);
+   transition: all 100ms ease-in-out;
+   outline: 1px solid var(--clr-ramme);
+}
+.bildeKarusell img:not(.aktivtKarusellBilde):hover,
+.bildeKarusell img:not(.aktivtKarusellBilde):focus-visible {
+   transition: all 100ms ease-in-out;
+   filter: grayscale(0);
+   outline: 3px solid var(--clr-spessartin);
+}
+
+.aktivtKarusellBilde {
+   filter: none;
+   outline: 3px solid var(--clr-spessartin);
+}
+
+/* a:hover {
+ } */
+/* a:active {} */

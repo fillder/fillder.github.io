@@ -210,9 +210,10 @@ nav {
    z-index: 150;
    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
 }
+
 .hjem {
    display: flex;
-   align-items: center;
+   align-content: center;
    justify-content: start;
    width: 35px;
    height: 35px;

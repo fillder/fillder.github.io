@@ -179,7 +179,7 @@
    aspect-ratio: 4 / 3;
 }
 
-.bildeKarusell img:not(.aktivtKarusellBilde) {
+/* .bildeKarusell img:not(.aktivtKarusellBilde) {
    filter: grayscale(0.8);
    transition: all 100ms ease-in-out;
    outline: 1px solid var(--clr-ramme);
@@ -195,4 +195,4 @@
 .aktivtKarusellBilde {
    filter: none;
    outline: 3px solid var(--clr-ramme);
-}
+} */
