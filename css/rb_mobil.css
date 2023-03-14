@@ -13,23 +13,6 @@
          "iH iH"
          "aK aK";
    }
-   /*___Faktaboks___*/
-   .faktaboks {
-      display: flex;
-      flex-direction: column;
-      max-height: none;
-   }
-   .fbtittel {
-      text-align: center;
-   }
-   .fbInnhold {
-      display: flex;
-      flex-direction: column;
-   }
-   .fbListeElem {
-      padding-block: 0.1rem;
-      grid-template-columns: 1.2fr minmax(100px, 2fr);
-   }
 }
 @media screen and (max-width: 1000px) {
    .tabDesk {
@@ -49,7 +32,6 @@
    .gridBeholder {
       grid-template-columns: auto;
       grid-template-areas:
-         "fB"
          "oS"
          "iF"
          "iH"
@@ -59,12 +41,12 @@
    .logo span {
       display: none;
    }
-   .ifSeksjonsGrid {
+   .artikkelSeksjonsGrid {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-areas:
-         "sI1"
-         "sI2"
+         "aS1"
+         "aS2"
          "kna"
          "det";
       gap: 1rem;
