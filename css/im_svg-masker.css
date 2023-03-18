@@ -246,3 +246,17 @@
    -webkit-mask: url(/images/svg/ob/ob_play_fill.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_play_fill.svg) no-repeat center;
 }
+
+/* _____ Index - Hovedkategorier _____ */
+.maskeTP {
+   -webkit-mask: url(/images/svg/ob/ob_uker_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_uker_fill.svg) no-repeat center;
+}
+.maskeOB {
+   -webkit-mask: url(/images/svg/ob/ob_oppdragsbank_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_oppdragsbank_fill.svg) no-repeat center;
+}
+.maskeRB {
+   -webkit-mask: url(/images/svg/ob/ob_eksamen_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_eksamen_fill.svg) no-repeat center;
+}

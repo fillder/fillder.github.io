@@ -2,12 +2,14 @@ a,
 a:link,
 a:visited {
    cursor: pointer;
-   text-decoration: 1px underline var(--clr-rubin);
+   text-decoration: none;
 }
 a:hover,
 a:focus-visible,
 a:active {
-   color: var(--clr-rubin);
+   color: var(--clr-spessartin);
+   text-decoration: 2px underline var(--clr-rubin);
+   text-underline-offset: 3px;
 }
 .fargetHover {
    outline: 2px solid var(--clr-ramme);
