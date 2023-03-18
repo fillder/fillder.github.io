@@ -1,5 +1,5 @@
 @media screen and (max-width: 1320px) {
-   .gridBeholder {
+   .ob_hovedsideGrid {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(auto-min, 1fr);
       grid-template-areas:
@@ -16,7 +16,7 @@
    }
 }
 @media screen and (max-width: 1000px) {
-   .gridBeholder {
+   .ob_hovedsideGrid {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(auto-min, 1fr);
       grid-template-areas:
@@ -30,7 +30,7 @@
    }
 }
 @media screen and (max-width: 800px) {
-   .gridBeholder {
+   .ob_hovedsideGrid {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(auto-min, 1fr);
       grid-template-areas:
@@ -57,7 +57,7 @@
    }
 }
 @media screen and (max-width: 560px) {
-   .gridBeholder {
+   .ob_hovedsideGrid {
       width: 100%;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(auto, 1fr);

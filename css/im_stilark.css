@@ -201,6 +201,7 @@ nav {
 }
 
 .hjem {
+   background-color: var(--clr-tekst);
    width: 35px;
    height: 35px;
 }
@@ -241,6 +242,7 @@ nav {
    height: 30px;
 }
 .pil {
+   background-color: var(--clr-tekst);
    width: 24px;
    height: 30px;
 }
