@@ -1,12 +1,3 @@
-.hjemKnapp {
-   display: grid;
-   width: 35px;
-   height: 35px;
-   place-content: center;
-   margin-inline: 1rem;
-   margin-block: auto;
-}
-
 a,
 a:link,
 a:visited {
@@ -18,7 +9,14 @@ a:focus-visible,
 a:active {
    color: var(--clr-spessartin);
 }
-
+.fargetHover {
+   outline: 2px solid var(--clr-ramme);
+}
+.fargetHover:hover,
+.fargetHover:focus-visible {
+   transition: outline 0.1s ease-in-out;
+   outline: 2px solid var(--clr-spessartin);
+}
 .bildeKarusell img:not(.aktivtKarusellBilde) {
    filter: grayscale(0.8);
    transition: all 100ms ease-in-out;
@@ -30,8 +28,27 @@ a:active {
    filter: grayscale(0);
    outline: 3px solid var(--clr-spessartin);
 }
-
 .aktivtKarusellBilde {
    filter: none;
    outline: 3px solid var(--clr-spessartin);
+}
+.fargetTekst {
+   color: var(--clr-spessartin);
+}
+.fargetFyll {
+   background-color: var(--clr-spessartin);
+}
+.fargetRamme {
+   border-color: var(--clr-spessartin);
+}
+.fargetLinje {
+   text-decoration: 2px underline var(--clr-spessartin);
+   text-underline-offset: 3px;
+}
+.fargetHeroLinje {
+   text-decoration: 4px underline var(--clr-spessartin);
+   text-underline-offset: 4px;
+}
+ul li p::before {
+   color: var(--clr-spessartin);
 }

@@ -1,0 +1,55 @@
+a,
+a:link,
+a:visited {
+   cursor: pointer;
+   text-decoration: 1px underline var(--clr-akvamarin);
+}
+a:hover,
+a:focus-visible,
+a:active {
+   color: var(--clr-akvamarin);
+}
+.fargetHover {
+   outline: 2px solid var(--clr-ramme);
+}
+.fargetHover:hover,
+.fargetHover:focus-visible {
+   transition: outline 0.1s ease-in-out;
+   outline: 2px solid var(--clr-akvamarin);
+}
+.bildeKarusell img:not(.aktivtKarusellBilde) {
+   filter: grayscale(0.8);
+   transition: all 100ms ease-in-out;
+   outline: 1px solid var(--clr-ramme);
+}
+.bildeKarusell img:not(.aktivtKarusellBilde):hover,
+.bildeKarusell img:not(.aktivtKarusellBilde):focus-visible {
+   transition: all 100ms ease-in-out;
+   filter: grayscale(0);
+   outline: 3px solid var(--clr-akvamarin);
+}
+
+.aktivtKarusellBilde {
+   filter: none;
+   outline: 3px solid var(--clr-akvamarin);
+}
+.fargetTekst {
+   color: var(--clr-akvamarin);
+}
+.fargetFyll {
+   background-color: var(--clr-akvamarin);
+}
+.fargetRamme {
+   border-color: var(--clr-akvamarin);
+}
+.fargetLinje {
+   text-decoration: 2px underline var(--clr-akvamarin);
+   text-underline-offset: 3px;
+}
+.fargetHeroLinje {
+   text-decoration: 4px underline var(--clr-akvamarin);
+   text-underline-offset: 4px;
+}
+ul li p::before {
+   color: var(--clr-akvamarin);
+}

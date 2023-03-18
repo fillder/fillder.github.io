@@ -66,8 +66,8 @@
 /*______ KategoriIkoner ______*/
 .kategoriIkon {
    position: relative;
-   width: 180px;
-   height: 180px;
+   width: 12rem;
+   height: 12rem;
    margin-inline: auto;
    padding: 2rem;
    z-index: 110;
@@ -79,7 +79,7 @@
 .kategoriTittel {
    position: relative;
    margin-top: -0.8rem;
-   width: 220px;
+   width: 12rem;
    z-index: 100;
    text-align: center;
    margin-inline: auto;
@@ -132,14 +132,14 @@
 .hoverProgrammering,
 .hoverWeb,
 .hoverKi {
-   transition: text-decoration 0.3s ease-in-out;
-   transition: transform 0.3s ease-in-out;
+   display: grid;
+   place-items: center;
+   transition: all 0.3s ease-in-out;
    text-decoration: none;
    transform: scale(1);
 }
 .hover2d:hover,
 .hover2d:focus-visible {
-   transition: text-decoration 0.3s ease-in-out;
    transition: transform 0.3s ease-in-out;
    text-decoration: 3px underline var(--clr-rubin);
    transform: scale(1.02);
@@ -273,8 +273,6 @@ table thead tr th {
    padding-block: 0.5rem;
    padding-inline: 1rem;
    text-align: start;
-}
-table tbody tr td {
 }
 .op_spice :first-child,
 .op_tid :first-child {
