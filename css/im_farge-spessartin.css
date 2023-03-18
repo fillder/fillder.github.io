@@ -1,8 +1,10 @@
-.lenkeKnapp a {
-   display: block;
-   width: min-content;
+.hjemKnapp {
+   display: grid;
    width: 35px;
-   overflow: hidden;
+   height: 35px;
+   place-content: center;
+   margin-inline: 1rem;
+   margin-block: auto;
 }
 
 a,

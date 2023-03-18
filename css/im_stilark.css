@@ -201,13 +201,18 @@ nav {
 }
 
 .hjem {
-   display: flex;
-   align-content: center;
-   justify-content: start;
    width: 35px;
    height: 35px;
-   margin-inline: 1rem;
 }
+.hjemKnapp {
+   display: grid;
+   width: 35px;
+   height: 35px;
+   place-content: center;
+   margin-inline: 1rem;
+   margin-block: auto;
+}
+
 .logo {
    display: flex;
    align-items: center;

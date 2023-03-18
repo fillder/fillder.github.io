@@ -275,7 +275,6 @@ table thead tr th {
    text-align: start;
 }
 table tbody tr td {
-   padding-block: 0.5rem;
 }
 .op_spice :first-child,
 .op_tid :first-child {
@@ -307,7 +306,6 @@ table tbody tr td {
    align-items: center;
 }
 .oppdragsIkon {
-   position: relative;
    width: 60px;
    height: 60px;
    z-index: 100;
@@ -326,10 +324,10 @@ table tbody tr td {
    z-index: 90;
 }
 .oppdragsKnapp {
-   display: flex;
-   text-align: center;
+   display: grid;
+   grid-template-columns: auto 1fr;
+   margin: 0.2rem;
    align-items: center;
-   padding-inline: 1rem;
    transition: transform 0.3s ease-in-out;
    transform: scale(1);
 }
