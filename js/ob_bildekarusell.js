@@ -51,11 +51,17 @@ bilder.forEach((bilde, index) => {
 const settBredde = () => {
    const bilde = aktivtBilde.querySelector("img");
    if (bilde) {
-      if (!bilde.style.maxWidth && !bilde.style.maxHeight) {
-         bilde.style.maxWidth = "70vw";
-         bilde.style.maxWidth = "70dvw";
-         bilde.style.maxHeight = "70vh";
-         bilde.style.maxHeight = "70dvh";
+      const innerWidth = window.innerWidth;
+      const useDvw = CSS.supports("max-width", "1dvw");
+
+      if (innerWidth <= 560) {
+         bilde.style.maxWidth = useDvw ? "100dvw" : "100vw";
+      } else if (innerWidth <= 800) {
+         bilde.style.maxWidth = useDvw ? "90dvw" : "90vw";
+      } else if (innerWidth <= 1000) {
+         bilde.style.maxWidth = useDvw ? "80dvw" : "80vw";
+      } else {
+         bilde.style.maxWidth = useDvw ? "70dvw" : "70vw";
       }
    }
 };
