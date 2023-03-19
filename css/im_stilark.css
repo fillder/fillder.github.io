@@ -284,7 +284,7 @@ header {
 }
 .hero-emblem {
    position: relative;
-   bottom: -80%;
+   bottom: -83%;
    width: 120px;
    height: 120px;
    margin: auto;
@@ -361,6 +361,9 @@ header {
 .lP {
    padding: 1rem;
 }
+.xLP {
+   padding: 1.25rem;
+}
 /*______ Liste ______*/
 ul {
    list-style: none; /* Remove default bullets */
@@ -398,6 +401,8 @@ footer {
    justify-content: space-between;
    align-items: center;
    place-content: center;
+   text-align: center;
+   padding-inline: 2rem;
    background-color: var(--clr-tekstBoks);
    border-top: 3px solid var(--clr-ramme);
    height: 50px;

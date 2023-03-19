@@ -211,7 +211,7 @@
 .ob_kategorisideGrid {
    display: grid;
    grid-gap: 1rem;
-   margin-block: 2rem;
+   margin-block-start: 2.5rem;
    column-gap: 1rem;
    row-gap: 2rem;
    width: 80%;
@@ -296,7 +296,7 @@ table thead tr th {
 .oppdragsTittel {
    position: relative;
    padding-block: 0.5rem;
-   padding-inline-start: 3.5rem;
+   padding-inline-start: 3rem;
    padding-inline-end: 2rem;
    margin-inline-start: -2.5rem;
    z-index: 90;
@@ -320,7 +320,7 @@ table thead tr th {
 /*___________________________________*/
 .ob_oppdragssideGrid {
    display: grid;
-   margin-block: 2rem;
+   margin-block-start: 2.5rem;
    grid-gap: 1rem;
    width: 80%;
    height: auto;
