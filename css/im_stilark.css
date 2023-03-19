@@ -201,6 +201,7 @@ nav {
 }
 
 .hjem {
+   background-color: var(--clr-tekst);
    width: 35px;
    height: 35px;
 }
@@ -241,6 +242,7 @@ nav {
    height: 30px;
 }
 .pil {
+   background-color: var(--clr-tekst);
    width: 24px;
    height: 30px;
 }
@@ -271,21 +273,18 @@ header {
 }
 .hero-tittel {
    position: absolute;
-
    top: 20px;
    left: 20px;
    padding: 0px 10px 7.5px 7.5px; /* top | right | bottom | left */
    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
    border-radius: 0.2rem;
-   text-decoration: underline #ff9100 4px;
-   text-underline-offset: 4px;
 }
 .hero-tittel h1 {
    color: whitesmoke;
 }
 .hero-emblem {
    position: relative;
-   bottom: -80%;
+   bottom: -83%;
    width: 120px;
    height: 120px;
    margin: auto;
@@ -362,6 +361,9 @@ header {
 .lP {
    padding: 1rem;
 }
+.xLP {
+   padding: 1.25rem;
+}
 /*______ Liste ______*/
 ul {
    list-style: none; /* Remove default bullets */
@@ -372,7 +374,7 @@ ul li {
 }
 ul li p::before {
    content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-   color: var(--clr-citrin); /* Change the color */
+   color: var(--clr-tekst); /* Change the color */
    font-weight: bold; /* If you want it to be bold */
    display: inline-block; /* Needed to add space between the bullet and the text */
    width: 1em; /* Also needed for space (tweak if needed) */
@@ -392,141 +394,6 @@ ul li a button {
    width: 100%;
    height: 100%;
 }
-/*______ tekstFarger ______*/
-.rubinTekst {
-   color: var(--clr-rubin);
-}
-.spessartinTekst {
-   color: var(--clr-spessartin);
-}
-.citrinTekst {
-   color: var(--clr-citrin);
-}
-.smaragdTekst {
-   color: var(--clr-smaragd);
-}
-.amazonittTekst {
-   color: var(--clr-amazonitt);
-}
-.akvamarinTekst {
-   color: var(--clr-akvamarin);
-}
-.safirTekst {
-   color: var(--clr-safir);
-}
-.ametystTekst {
-   color: var(--clr-ametyst);
-}
-.kunzittTekst {
-   color: var(--clr-kunzitt);
-}
-.thulittTekst {
-   color: var(--clr-thulitt);
-}
-
-.rubinBak {
-   background-color: var(--clr-rubin);
-}
-.spessartinBak {
-   background-color: var(--clr-spessartin);
-}
-.citrinBak {
-   background-color: var(--clr-citrin);
-}
-.smaragdBak {
-   background-color: var(--clr-smaragd);
-}
-.amazonittBak {
-   background-color: var(--clr-amazonitt);
-}
-.akvamarinBak {
-   background-color: var(--clr-akvamarin);
-}
-.safirBak {
-   background-color: var(--clr-safir);
-}
-.ametystBak {
-   background-color: var(--clr-ametyst);
-}
-.kunzittBak {
-   background-color: var(--clr-kunzitt);
-}
-.thulittBak {
-   background-color: var(--clr-thulitt);
-}
-/*______ BorderFarger ______*/
-.rubinRamme {
-   border-color: var(--clr-rubin);
-}
-.spessartinRamme {
-   border-color: var(--clr-spessartin);
-}
-.citrinRamme {
-   border-color: var(--clr-citrin);
-}
-.smaragdRamme {
-   border-color: var(--clr-smaragd);
-}
-.amazonittRamme {
-   border-color: var(--clr-amazonitt);
-}
-.akvamarinRamme {
-   border-color: var(--clr-akvamarin);
-}
-.safirRamme {
-   border-color: var(--clr-safir);
-}
-.ametystRamme {
-   border-color: var(--clr-ametyst);
-}
-.kunzittRamme {
-   border-color: var(--clr-kunzitt);
-}
-.thulittRamme {
-   border-color: var(--clr-thulitt);
-}
-
-/*______ DeksFarger ______*/
-.rubinDek {
-   text-decoration: 2px underline var(--clr-rubin);
-   text-underline-offset: 3px;
-}
-.spessartinDek {
-   text-decoration: 2px underline var(--clr-spessartin);
-   text-underline-offset: 3px;
-}
-.citrinDek {
-   text-decoration: 2px underline var(--clr-citrin);
-   text-underline-offset: 3px;
-}
-.smaragdDek {
-   text-decoration: 2px underline var(--clr-smaragd);
-   text-underline-offset: 3px;
-}
-.amazonittDek {
-   text-decoration: 2px underline var(--clr-amazonitt);
-   text-underline-offset: 3px;
-}
-.akvamarinDek {
-   text-decoration: 2px underline var(--clr-akvamarin);
-   text-underline-offset: 3px;
-}
-.safirDek {
-   text-decoration: 2px underline var(--clr-safir);
-   text-underline-offset: 3px;
-}
-.ametystDek {
-   text-decoration: 2px underline var(--clr-ametyst);
-   text-underline-offset: 3px;
-}
-.kunzittDek {
-   text-decoration: 2px underline var(--clr-kunzitt);
-   text-underline-offset: 3px;
-}
-.thulittDek {
-   text-decoration: 2px underline var(--clr-thulitt);
-   text-underline-offset: 3px;
-}
 /*______ footer ______*/
 footer {
    height: 3rem;
@@ -534,6 +401,8 @@ footer {
    justify-content: space-between;
    align-items: center;
    place-content: center;
+   text-align: center;
+   padding-inline: 2rem;
    background-color: var(--clr-tekstBoks);
    border-top: 3px solid var(--clr-ramme);
    height: 50px;

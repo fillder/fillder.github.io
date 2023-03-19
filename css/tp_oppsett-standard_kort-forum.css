@@ -44,7 +44,7 @@
       ".." 1fr
       "m2" 1fr
       "m2" 1fr
-      ".." 0.1fr
+      "li" 0.1fr
       "e2" 1fr
       "e2" 1fr
       "p3" 1fr
@@ -139,6 +139,10 @@
 .programfag3 {
    grid-area: p3;
    margin-bottom: -4rem;
+}
+
+.f21-liga {
+   grid-area: li;
 }
 
 /* torsdag */

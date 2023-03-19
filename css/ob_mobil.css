@@ -1,5 +1,16 @@
+.oppdragsBildeMobil {
+   height: auto;
+   margin-inline: auto;
+   cursor: pointer;
+}
+.bildeMob,
+.tabMob,
+.infoTab,
+.infoMob {
+   display: none;
+}
 @media screen and (max-width: 1320px) {
-   .gridBeholder {
+   .ob_hovedsideGrid {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(auto-min, 1fr);
       grid-template-areas:
@@ -16,7 +27,7 @@
    }
 }
 @media screen and (max-width: 1000px) {
-   .gridBeholder {
+   .ob_hovedsideGrid {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(auto-min, 1fr);
       grid-template-areas:
@@ -28,9 +39,32 @@
          "inf inf inf"
          "tek tek tek";
    }
+   .ob_oppdragssideGrid {
+      width: 90%;
+   }
+   .bildeRamme {
+      max-width: 80vw;
+      max-width: 80dvw;
+   }
+   .oppdragsSideBilde {
+      margin-inline-end: -1rem;
+   }
+   .infoDesk {
+      display: none;
+   }
+   .infoTab {
+      display: block;
+   }
+   .op_spice :first-child,
+   .op_tid :first-child {
+      margin-inline-end: 0;
+   }
+   .op_spice {
+      padding-inline: 0.5rem;
+   }
 }
 @media screen and (max-width: 800px) {
-   .gridBeholder {
+   .ob_hovedsideGrid {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(auto-min, 1fr);
       grid-template-areas:
@@ -55,9 +89,49 @@
       gap: 2rem;
       margin-block: 0rem;
    }
+   .ob_oppdragssideGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto auto auto;
+      grid-template-areas:
+         "opp"
+         "bil"
+         "eks"
+         "res"
+         "gal";
+   }
+   .mobilBildeGrid {
+      grid-area: bil;
+   }
+   .infoTab,
+   .tabDesk,
+   .bildeDesk {
+      display: none;
+   }
+   .infoMob,
+   .tabMob,
+   .bildeMob {
+      display: block;
+   }
+   .bildegalleri_firePluss {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 1rem;
+   }
+   .bildegalleri_tre {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-gap: 1rem;
+      padding-block-end: 3rem;
+   }
+   .bildeRamme {
+      max-width: 90vw;
+      max-width: 90dvw;
+   }
 }
 @media screen and (max-width: 560px) {
-   .gridBeholder {
+   .ob_hovedsideGrid {
       width: 100%;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(auto, 1fr);
@@ -76,6 +150,13 @@
          "inf"
          "tek"
          "tek";
+   }
+   .bildeRamme {
+      max-width: 100vw;
+      max-width: 100dvw;
+   }
+   .tabTab {
+      display: none;
    }
 }
 /*______ KategoriSider ______*/

@@ -5,29 +5,27 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="color-scheme" content="dark light" />
-      <meta http-equiv="Refresh" content="0; url='/timeplan/uke_11.html'" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;0,700;1,300&family=Roboto+Slab:wght@300;500;700&family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet">
+      <!-- <meta http-equiv="Refresh" content="0; url='/timeplan/uke_11.html'" /> -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;0,700;1,300&family=Roboto+Slab:wght@300;500;700&family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet" />
       <link rel="stylesheet" type="text/css" href="/css/im_stilark.css" />
       <link rel="stylesheet" type="text/css" href="/css/im_dag-natt.css" />
       <link rel="stylesheet" type="text/css" href="/css/im_svg-masker.css" />
-      <link rel="stylesheet" type="text/css" href="/css/ob_design.css" />
-      <link rel="stylesheet" type="text/css" href="/css/ob_mobil.css" />
-      <link rel="icon" href="/bilder/skolelogo.svg" type="image/svg+xml">
-      <link rel="shortcut icon" href="/bilder/skolelogo.svg">
-      <link rel="apple-touch-icon" href="/bilder/skolelogo.svg">
+      <link rel="stylesheet" type="text/css" href="/css/im_farge_2-spessartin.css" />
+      <link rel="stylesheet" type="text/css" href="/css/index_design.css" />
+      <link rel="icon" href="/images/ico/skolelogo.svg" type="image/svg+xml" />
+      <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
+      <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
       <script type="module" src="/js/im_dag-natt.js"></script>
-      <title>Timeplan 2023</title>
+      <title>IM-Fagverket</title>
    </head>
 
    <body>
       <nav>
-         <a class="hjemKnapp" target="_self" rel="noreferrer noopener" href="/oppdragsbank.html" title="Hjem" alt="Naviger til startsiden">
-            <div class="hjem maskeHjem"></div>
-         </a>
+         <div></div>
          <div class="logo">
-            <h1><b>Kategorier</b></h1>
+            <h1><b>IM-FAGVERKET</b></h1>
          </div>
          <div class="flexHoyre">
             <div class="modusikon">
@@ -50,37 +48,52 @@
       </nav>
       <header class="hero">
          <img class="hero-bilde" src="/images/rb-banner.png" alt="bilde av en skjerm med kode" />
-         <div class="hero-tittel">
-            <h1><b>Oppdragsbank</b></h1>
-         </div>
-         <!-- <div class="hero-emblem">
-        </div> -->
       </header>
-      <main>
-         <div class="gridBeholder">
-            <section class="toD_grafikk" data-knapp="toD_grafikk">
-               <a class="hover2d" href="" alt="2D-grafikk" title="2D-grafikk">
-                  <div class="rundRamme ixD lB kategoriIkon" data-ikon="toD_grafikkIkon">
-                     <div class="svgIkon maskeGrafisk"></div>
+      <main class="mainMedHeader">
+         <div class="velkommen">
+            <h2>Velkommen!</h2>
+            <h5>Dette er et faglig nettsted for alle elever og lærere som jobber med Informasjonsteknologi og Medieproduksjon på videregående skole.</h5>
+            <br />
+            <p>Nettstedet er under utviklink og er administrert av Marius Strøm Riseth // F21 Skole. Ta gjerne kontakt dersom du har spørsmål eller ønsker å bridra.</p>
+         </div>
+         <div class="indexGrid">
+            <section class="timeplan hoverTP">
+               <a target="_self" rel="noreferrer noopener" href="timeplan.html" alt="F21 Timeplan" title="F21 Timeplan">
+                  <div class="rundRamme ixD sB kategoriIkon">
+                     <div class="svgIkon maskeTP"></div>
                   </div>
-                  <h3 class="boksRamme ixD lB kategoriTittel">2D-grafikk</h3>
+                  <div class="boksRamme ixD sB sPA kategoriTittel">
+                     <h3>F21 Timeplan</h3>
+                     <p>- for VG1 IM-elever på F21 Skole</p>
+                  </div>
                </a>
             </section>
-            <section class="treD_grafikk" data-knapp="treD_grafikk">
-               <a class="hover3d" href="/oppdragsbank/3d-grafikk.html" alt="3D-grafikk" title="3D-grafikk">
-                  <div class="rundRamme ixD lB kategoriIkon" data-ikon="treD_grafikkIkon">
-                     <div class="svgIkon maskeTreD"></div>
+            <section class="oppdragsbank hoverOB">
+               <a target="_self" rel="noreferrer noopener" href="oppdragsbank.html" alt="YFF-Oppdragsbank" title="YFF-Oppdragsbank">
+                  <div class="rundRamme ixD sB kategoriIkon">
+                     <div class="svgIkon maskeOB"></div>
                   </div>
-                  <h3 class="boksRamme ixD lB kategoriTittel">3D-grafikk</h3>
+                  <div class="boksRamme ixD sB sPA kategoriTittel">
+                     <h3>YFF-Oppdragsbank</h3>
+                     <p>- for IM-elever</p>
+                  </div>
                </a>
             </section>
-            <section class="fotografi" data-knapp="fotografi">
-               <a class="hoverFoto" href="" alt="Fotografi" title="Fotografi">
-                  <div class="rundRamme ixD lB kategoriIkon" data-ikon="fotografiIkon">
-                     <div class="svgIkon maskeFoto"></div>
+            <section class="im-ressurser hoverRB">
+               <a target="_self" rel="noreferrer noopener" href="ressursbank.html" alt="IM-Ressursbank" title="IM-Ressursbank">
+                  <div class="rundRamme ixD sB kategoriIkon">
+                     <div class="svgIkon maskeRB"></div>
                   </div>
-                  <h3 class="boksRamme ixD lB kategoriTittel">Fotografi</h3>
+                  <div class="boksRamme ixD sB sPA kategoriTittel">
+                     <h3>IM-Ressursbank</h3>
+                     <p>- for IM-lærere</p>
+                  </div>
                </a>
             </section>
+         </div>
+      </main>
+      <footer>
+         <p>Dette nettstedet er designet og utviklet av Marius Strøm Riseth // Fyrstikkalléen videregående skole • F21 vgs</p>
+      </footer>
    </body>
 </html>

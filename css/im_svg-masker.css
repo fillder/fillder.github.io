@@ -1,16 +1,13 @@
 /*______ Navigasjon ______*/
 .maskeHjem {
-   background-color: var(--clr-tekst);
    -webkit-mask: url(/images/svg/nav_hjem.svg) no-repeat center;
    mask: url(/images/svg/nav_hjem.svg) no-repeat center;
 }
 .maskeTilbake {
-   background-color: var(--clr-tekst);
    -webkit-mask: url(/images/svg/nav_pil-tilbake.svg) no-repeat center;
    mask: url(/images/svg/nav_pil-tilbake.svg) no-repeat center;
 }
 .maskeNeste {
-   background-color: var(--clr-tekst);
    -webkit-mask: url(/images/svg/nav_pil-neste.svg) no-repeat center;
    mask: url(/images/svg/nav_pil-neste.svg) no-repeat center;
 }
@@ -67,22 +64,16 @@
    mask: url(/images/svg/ob_10_ai.svg) no-repeat center;
 }
 .portfolio {
-   width: 100%;
-   height: 100%;
    background-color: var(--clr-tekst);
    -webkit-mask: url(/images/svg/ob_ikon_portfolio.svg) no-repeat center;
    mask: url(/images/svg/ob_ikon_portfolio.svg) no-repeat center;
 }
 .suksesskriterer {
-   width: 100%;
-   height: 100%;
    background-color: var(--clr-tekst);
    -webkit-mask: url(/images/svg/ob_ikon_suksesskriterer.svg) no-repeat center;
    mask: url(/images/svg/ob_ikon_suksesskriterer.svg) no-repeat center;
 }
 .visuell-logg {
-   width: 100%;
-   height: 100%;
    background-color: var(--clr-tekst);
    -webkit-mask: url(/images/svg/ob_ikon_visuell-logg.svg) no-repeat center;
    mask: url(/images/svg/ob_ikon_visuell-logg.svg) no-repeat center;
@@ -122,30 +113,6 @@
 .maskeTidUker {
    -webkit-mask: url(/images/svg/ob_tid-uker.svg) no-repeat center;
    mask: url(/images/svg/ob_tid-uker.svg) no-repeat center;
-}
-.maskeOppdragEkstern {
-   -webkit-mask: url(/images/svg/ob_oppdrag-ekstern.svg) no-repeat center;
-   mask: url(/images/svg/ob_oppdrag-ekstern.svg) no-repeat center;
-}
-.maskeOppdragIntern {
-   -webkit-mask: url(/images/svg/ob_oppdrag-intern.svg) no-repeat center;
-   mask: url(/images/svg/ob_oppdrag-intern.svg) no-repeat center;
-}
-.maskeOppdragNedlasting {
-   -webkit-mask: url(/images/svg/ob_oppdrag-nedlasting.svg) no-repeat center;
-   mask: url(/images/svg/ob_oppdrag-nedlasting.svg) no-repeat center;
-}
-.maskeOppdragNettsted {
-   -webkit-mask: url(/images/svg/ob_oppdrag-nettsted.svg) no-repeat center;
-   mask: url(/images/svg/ob_oppdrag-nettsted.svg) no-repeat center;
-}
-.maskeOppdragRessurs {
-   -webkit-mask: url(/images/svg/ob_oppdrag-ressurs.svg) no-repeat center;
-   mask: url(/images/svg/ob_oppdrag-ressurs.svg) no-repeat center;
-}
-.maskeOppdragTutorial {
-   -webkit-mask: url(/images/svg/ob_oppdrag-tutorial.svg) no-repeat center;
-   mask: url(/images/svg/ob_oppdrag-tutorial.svg) no-repeat center;
 }
 .maskeKryss {
    -webkit-mask: url(/images/svg/ob_kryss.svg) no-repeat center;
@@ -232,12 +199,64 @@
    mask: url(/images/svg/tp_fagikon-kroppsoving.svg) no-repeat center;
 }
 .maskeForrigeDag {
-   background-color: var(--clr-tekst);
    -webkit-mask: url(/images/svg/tp_pilForrigeDag.svg) no-repeat center;
    mask: url(/images/svg/tp_pilForrigeDag.svg) no-repeat center;
 }
 .maskeNesteDag {
-   background-color: var(--clr-tekst);
    -webkit-mask: url(/images/svg/tp_pilNesteDag.svg) no-repeat center;
    mask: url(/images/svg/tp_pilNesteDag.svg) no-repeat center;
+}
+
+/* _____ Oppdragsbank - hovedside _____ */
+
+.portfolio {
+   -webkit-mask: url(/images/svg/ob/ob_portfolio_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_portfolio_outline.svg) no-repeat center;
+}
+.visuell-logg {
+   -webkit-mask: url(/images/svg/ob/ob_visuell-logg_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_visuell-logg_outline.svg) no-repeat center;
+}
+.suksesskriterer {
+   -webkit-mask: url(/images/svg/ob/ob_sukksess_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_sukksess_outline.svg) no-repeat center;
+}
+/* _____ Oppdragsbank - kategoriside _____ */
+.maskeOppdragEkstern {
+   -webkit-mask: url(/images/svg/ob/ob_eksternt-oppdrag_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_eksternt-oppdrag_fill.svg) no-repeat center;
+}
+.maskeOppdragIntern {
+   -webkit-mask: url(/images/svg/ob/ob_internt-oppdrag_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_internt-oppdrag_fill.svg) no-repeat center;
+}
+.maskeOppdragNedlasting {
+   -webkit-mask: url(/images/svg/ob/ob_download_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_download_fill.svg) no-repeat center;
+}
+.maskeOppdragNettsted {
+   -webkit-mask: url(/images/svg/ob/ob_ekstern_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_ekstern_fill.svg) no-repeat center;
+}
+.maskeOppdragRessurs {
+   -webkit-mask: url(/images/svg/ob/ob_ressurs_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_ressurs_fill.svg) no-repeat center;
+}
+.maskeOppdragTutorial {
+   -webkit-mask: url(/images/svg/ob/ob_play_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_play_fill.svg) no-repeat center;
+}
+
+/* _____ Index - Hovedkategorier _____ */
+.maskeTP {
+   -webkit-mask: url(/images/svg/ob/ob_uker_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_uker_fill.svg) no-repeat center;
+}
+.maskeOB {
+   -webkit-mask: url(/images/svg/ob/ob_oppdragsbank_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_oppdragsbank_fill.svg) no-repeat center;
+}
+.maskeRB {
+   -webkit-mask: url(/images/svg/ob/ob_eksamen_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_eksamen_fill.svg) no-repeat center;
 }
