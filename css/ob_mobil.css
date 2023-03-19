@@ -1,3 +1,14 @@
+.oppdragsBildeMobil {
+   height: auto;
+   margin-inline: auto;
+   cursor: pointer;
+}
+.bildeDesk {
+   display: block;
+}
+.bildeMob {
+   display: none;
+}
 @media screen and (max-width: 1320px) {
    .ob_hovedsideGrid {
       grid-template-columns: repeat(4, 1fr);
@@ -28,6 +39,9 @@
          "inf inf inf"
          "tek tek tek";
    }
+   .ob_oppdragssideGrid {
+      width: 90%;
+   }
 }
 @media screen and (max-width: 800px) {
    .ob_hovedsideGrid {
@@ -54,6 +68,40 @@
       grid-template-rows: repeat(2, 1fr);
       gap: 2rem;
       margin-block: 0rem;
+   }
+   .ob_oppdragssideGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto auto auto;
+      grid-template-areas:
+         "opp"
+         "bil"
+         "eks"
+         "res"
+         "gal";
+   }
+   .mobilBildeGrid {
+      grid-area: bil;
+   }
+   .bildeDesk {
+      display: none;
+   }
+   .bildeMob {
+      display: block;
+   }
+   .bildegalleri_firePluss {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 1rem;
+      padding-block-end: 3rem;
+   }
+   .bildegalleri_tre {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-gap: 1rem;
+      padding-block-end: 3rem;
    }
 }
 @media screen and (max-width: 560px) {
