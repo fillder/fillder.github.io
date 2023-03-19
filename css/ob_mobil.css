@@ -3,10 +3,10 @@
    margin-inline: auto;
    cursor: pointer;
 }
-.bildeDesk {
-   display: block;
-}
-.bildeMob {
+.bildeMob,
+.tabMob,
+.infoTab,
+.infoMob {
    display: none;
 }
 @media screen and (max-width: 1320px) {
@@ -49,6 +49,19 @@
    .oppdragsSideBilde {
       margin-inline-end: -1rem;
    }
+   .infoDesk {
+      display: none;
+   }
+   .infoTab {
+      display: block;
+   }
+   .op_spice :first-child,
+   .op_tid :first-child {
+      margin-inline-end: 0;
+   }
+   .op_spice {
+      padding-inline: 0.5rem;
+   }
 }
 @media screen and (max-width: 800px) {
    .ob_hovedsideGrid {
@@ -90,9 +103,13 @@
    .mobilBildeGrid {
       grid-area: bil;
    }
+   .infoTab,
+   .tabDesk,
    .bildeDesk {
       display: none;
    }
+   .infoMob,
+   .tabMob,
    .bildeMob {
       display: block;
    }
@@ -137,6 +154,9 @@
    .bildeRamme {
       max-width: 100vw;
       max-width: 100dvw;
+   }
+   .tabTab {
+      display: none;
    }
 }
 /*______ KategoriSider ______*/
