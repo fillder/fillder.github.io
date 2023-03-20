@@ -116,13 +116,13 @@
    .bildegalleri_firePluss {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      row-gap: 1rem;
+      row-gap: 3rem;
    }
    .bildegalleri_tre {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 1fr;
-      grid-gap: 1rem;
+      row-gap: 3rem;
       padding-block-end: 3rem;
    }
    .bildeRamme {
@@ -157,6 +157,11 @@
    }
    .tabTab {
       display: none;
+   }
+   .bildegalleri_firePluss {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      row-gap: 3rem;
    }
 }
 /*______ KategoriSider ______*/

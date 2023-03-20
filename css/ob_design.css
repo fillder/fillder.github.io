@@ -1,7 +1,7 @@
 /*______ Grid Oppdragsbank ______*/
 .ob_hovedsideGrid {
    display: grid;
-   margin-block: 3rem;
+   margin-block-start: 3rem;
    column-gap: 1rem;
    row-gap: 2rem;
    width: 90%;
@@ -50,13 +50,9 @@
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    gap: 2rem;
-   margin-block-start: 1rem;
-   margin-block-end: 2rem;
 }
 .infoKnapper {
    grid-area: inf;
-   margin-block-start: 2rem;
-   margin-block-end: 1rem;
 }
 /*______ KategoriIkoner ______*/
 .kategoriIkon {
@@ -212,8 +208,6 @@
    display: grid;
    grid-gap: 1rem;
    margin-block-start: 2.5rem;
-   column-gap: 1rem;
-   row-gap: 2rem;
    width: 80%;
    margin-inline: auto;
    grid-template-columns: 1fr;
@@ -325,7 +319,6 @@ table thead tr th {
    width: 80%;
    height: auto;
    margin-inline: auto;
-   margin-block-end: 2rem;
    grid-template-columns: 1fr 0.6fr;
    grid-template-rows: 1fr auto auto;
    grid-template-areas:
