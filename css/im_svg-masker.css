@@ -247,7 +247,7 @@
    mask: url(/images/svg/ob/ob_play_fill.svg) no-repeat center;
 }
 
-/* _____ Index - Hovedkategorier _____ */
+/* __________ Index __________ */
 .maskeTP {
    -webkit-mask: url(/images/svg/ob/ob_uker_fill.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_uker_fill.svg) no-repeat center;
@@ -259,4 +259,32 @@
 .maskeRB {
    -webkit-mask: url(/images/svg/ob/ob_eksamen_fill.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_eksamen_fill.svg) no-repeat center;
+}
+
+/* __________ Timeplan __________ */
+.maskeF21Fill {
+   -webkit-mask: url(/images/svg/tp/tp_f21_fill.svg) no-repeat center;
+   mask: url(/images/svg/tp/tp_f21_fill.svg) no-repeat center;
+}
+.maskeF21Outline {
+   -webkit-mask: url(/images/svg/tp/tp_f21_outline.svg) no-repeat center;
+   mask: url(/images/svg/tp/tp_f21_outline.svg) no-repeat center;
+}
+
+/* __________ Nav __________ */
+.maskeIndexFill {
+   -webkit-mask: url(/images/svg/im/im_home_fill.svg) no-repeat center;
+   mask: url(/images/svg/im/im_home_fill.svg) no-repeat center;
+}
+.maskeIndexOutline {
+   -webkit-mask: url(/images/svg/im/im_home_outline.svg) no-repeat center;
+   mask: url(/images/svg/im/im_home_outline.svg) no-repeat center;
+}
+.maskeMenyFill {
+   -webkit-mask: url(/images/svg/im/im_meny_fill.svg) no-repeat center;
+   mask: url(/images/svg/im/im_meny_fill.svg) no-repeat center;
+}
+.maskeMenyOutline {
+   -webkit-mask: url(/images/svg/im/im_meny_outline.svg) no-repeat center;
+   mask: url(/images/svg/im/im_meny_outline.svg) no-repeat center;
 }

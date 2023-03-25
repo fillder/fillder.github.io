@@ -16,8 +16,8 @@
       margin-top: 50px;
    }
    .svgIkon {
-      width: 30px;
-      height: 15px;
+      width: 40px;
+      height: 20px;
    }
    .desk {
       display: none;
@@ -25,31 +25,17 @@
    .mob {
       display: block;
    }
-   .logo span {
-      display: none;
-   }
-   .hjem {
-      display: none;
-   }
-   .flexHoyre {
-      display: none;
-   }
-   .svgIkon {
-      width: 40px;
-      height: 20px;
-   }
    h1 {
       /* Tittel */
-      font-size: 2rem;
-      padding-inline: 1rem;
+      font-size: 1.6rem;
    }
    h2 {
       /* Dager */
-      font-size: 1.7rem;
+      font-size: 1.4rem;
    }
    h3 {
       /* Fagtittel */
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       padding-inline: 0.5rem;
    }
    h4 {
@@ -66,7 +52,7 @@
    }
    p {
       /* brødtekst */
-      font-size: 0.9rem;
+      font-size: 0.8rem;
    }
 
    .boksRamme {

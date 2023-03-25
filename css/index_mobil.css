@@ -1,0 +1,49 @@
+/* Ekstra store flater (Store laptop- og desktopskjermer, 1200px og oppover) */
+@media only screen and (max-width: 1200px) {
+   .kategoriIkon {
+      width: 15rem;
+      height: 15rem;
+   }
+   .kategoriTittel {
+      width: 15rem;
+   }
+}
+/* Store flater (laptop og desktop, 992px og oppover) */
+@media only screen and (max-width: 992px) {
+   .indexFlex {
+      width: 90%;
+      flex-wrap: wrap;
+      row-gap: 2rem;
+   }
+}
+/* Medium flater (Tablet i landskapsmodus, 768px og oppover) */
+@media only screen and (max-width: 768px) {
+   .kategoriIkon {
+      width: 14rem;
+      height: 14rem;
+   }
+   .kategoriTittel {
+      width: 14rem;
+   }
+}
+/* Små flater (Tablet i portrettmodus og store mobiler, 600px og oppover) */
+@media only screen and (max-width: 600px) {
+   h1 {
+      font-size: 1.6rem;
+   }
+   h2 {
+      font-size: 1.4rem;
+   }
+   h3 {
+      font-size: 1.2rem;
+   }
+   h4 {
+      font-size: 1rem;
+   }
+   h5 {
+      font-size: 0.9rem;
+   }
+   p {
+      font-size: 0.8rem;
+   }
+}
