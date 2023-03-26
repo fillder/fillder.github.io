@@ -252,7 +252,7 @@ nav {
    right: 0;
    top: 0;
    background-color: var(--clr-tekstBoks);
-   width: 300px;
+   width: 350px;
    height: 100vh;
    z-index: 901;
    padding-inline: 1rem;
