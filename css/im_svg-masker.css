@@ -291,7 +291,19 @@
    -webkit-mask: url(/images/svg/ob/ob_play_fill.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_play_fill.svg) no-repeat center;
 }
-
+/* _____ Oppdragsbank - Oppdragiside _____ */
+.maskeModulInfo {
+   -webkit-mask: url(/images/svg/ob/ob_info_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_info_outline.svg) no-repeat center;
+}
+.maskeModulPin {
+   -webkit-mask: url(/images/svg/ob/ob_pin_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_pin_outline.svg) no-repeat center;
+}
+.maskeModulNett {
+   -webkit-mask: url(/images/svg/ob/ob_nettressurs_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_nettressurs_outline.svg) no-repeat center;
+}
 /* __________ Index __________ */
 .maskeUkerOutline {
    -webkit-mask: url(/images/svg/ob/ob_uker_outline.svg) no-repeat center;

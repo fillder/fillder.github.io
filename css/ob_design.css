@@ -344,7 +344,8 @@ table thead tr th {
 .ob_oppdragssideGrid {
    display: grid;
    margin-block-start: 2.5rem;
-   grid-gap: 1rem;
+   row-gap: 1rem;
+   column-gap: 2rem;
    width: 80%;
    height: auto;
    margin-inline: auto;
@@ -363,16 +364,31 @@ table thead tr th {
 }
 .oppdragGrid {
    grid-area: opp;
+   position: relative;
 }
 .infoGrid {
    grid-area: eks;
+   position: relative;
+   padding-inline-end: 1.8rem;
 }
 .ressursGrid {
    grid-area: res;
+   position: relative;
+   padding-inline-end: 1.8rem;
 }
 .bildeGrid {
    grid-area: gal;
    position: relative;
+}
+.modulIkon {
+   position: absolute;
+   top: 10px;
+   right: 0;
+   transform: translateX(50%);
+   width: 50px;
+   height: 50px;
+   z-index: 100;
+   padding: 0.2rem;
 }
 /*___________ OppdragsGrid __________*/
 #spacer {

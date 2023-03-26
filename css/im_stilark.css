@@ -414,7 +414,7 @@ header {
 }
 .xSB {
    border-color: var(--clr-ramme);
-   border-width: 1.5px 1.5px 3px 3px;
+   border-width: 1.5px 2px 3px 3px;
 }
 .nB {
    border: 3px solid var(--clr-ramme);
