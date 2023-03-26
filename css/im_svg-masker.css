@@ -63,21 +63,6 @@
    -webkit-mask: url(/images/svg/ob_10_ai.svg) no-repeat center;
    mask: url(/images/svg/ob_10_ai.svg) no-repeat center;
 }
-.portfolio {
-   background-color: var(--clr-tekst);
-   -webkit-mask: url(/images/svg/ob_ikon_portfolio.svg) no-repeat center;
-   mask: url(/images/svg/ob_ikon_portfolio.svg) no-repeat center;
-}
-.suksesskriterer {
-   background-color: var(--clr-tekst);
-   -webkit-mask: url(/images/svg/ob_ikon_suksesskriterer.svg) no-repeat center;
-   mask: url(/images/svg/ob_ikon_suksesskriterer.svg) no-repeat center;
-}
-.visuell-logg {
-   background-color: var(--clr-tekst);
-   -webkit-mask: url(/images/svg/ob_ikon_visuell-logg.svg) no-repeat center;
-   mask: url(/images/svg/ob_ikon_visuell-logg.svg) no-repeat center;
-}
 .maskeSpice0 {
    -webkit-mask: url(/images/svg/ob_spiciness-0.svg) no-repeat center;
    mask: url(/images/svg/ob_spiciness-0.svg) no-repeat center;
@@ -230,6 +215,14 @@
    mask: url(/images/svg/ob/ob_sukksess_outline.svg) no-repeat center;
 }
 .maskeSuksessFill {
+   -webkit-mask: url(/images/svg/ob/ob_karrieresti_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_karrieresti_fill.svg) no-repeat center;
+}
+.maskeKarriereOutline {
+   -webkit-mask: url(/images/svg/ob/ob_karrieresti_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_karrieresti_outline.svg) no-repeat center;
+}
+.maskeKarriereFill {
    -webkit-mask: url(/images/svg/ob/ob_sukksess_fill.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_sukksess_fill.svg) no-repeat center;
 }
@@ -250,27 +243,51 @@
    mask: url(/images/svg/ob/ob_print_fill.svg) no-repeat center;
 }
 /* _____ Oppdragsbank - kategoriside _____ */
-.maskeOppdragEkstern {
+.maskeOppdragEksternOutline {
+   -webkit-mask: url(/images/svg/ob/ob_eksternt-oppdrag_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_eksternt-oppdrag_outline.svg) no-repeat center;
+}
+.maskeOppdragEksternFill {
    -webkit-mask: url(/images/svg/ob/ob_eksternt-oppdrag_fill.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_eksternt-oppdrag_fill.svg) no-repeat center;
 }
-.maskeOppdragIntern {
+.maskeOppdragInternOutline {
+   -webkit-mask: url(/images/svg/ob/ob_internt-oppdrag_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_internt-oppdrag_outline.svg) no-repeat center;
+}
+.maskeOppdragInternFill {
    -webkit-mask: url(/images/svg/ob/ob_internt-oppdrag_fill.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_internt-oppdrag_fill.svg) no-repeat center;
 }
-.maskeOppdragNedlasting {
+.maskeOppdragNedlastingOutline {
+   -webkit-mask: url(/images/svg/ob/ob_download_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_download_outline.svg) no-repeat center;
+}
+.maskeOppdragNedlastingFill {
    -webkit-mask: url(/images/svg/ob/ob_download_fill.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_download_fill.svg) no-repeat center;
 }
-.maskeOppdragNettsted {
+.maskeOppdragNettstedOutline {
+   -webkit-mask: url(/images/svg/ob/ob_ekstern_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_ekstern_outline.svg) no-repeat center;
+}
+.maskeOppdragNettstedFill {
    -webkit-mask: url(/images/svg/ob/ob_ekstern_fill.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_ekstern_fill.svg) no-repeat center;
 }
-.maskeOppdragRessurs {
+.maskeOppdragRessursOutline {
+   -webkit-mask: url(/images/svg/ob/ob_ressurs_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_ressurs_outline.svg) no-repeat center;
+}
+.maskeOppdragRessursFill {
    -webkit-mask: url(/images/svg/ob/ob_ressurs_fill.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_ressurs_fill.svg) no-repeat center;
 }
-.maskeOppdragTutorial {
+.maskeOppdragTutorialOutline {
+   -webkit-mask: url(/images/svg/ob/ob_play_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_play_outline.svg) no-repeat center;
+}
+.maskeOppdragTutorialFill {
    -webkit-mask: url(/images/svg/ob/ob_play_fill.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_play_fill.svg) no-repeat center;
 }

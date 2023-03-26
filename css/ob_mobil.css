@@ -4,12 +4,10 @@
    cursor: pointer;
 }
 .bildeMob,
-.tabMob,
-.infoTab,
-.infoMob {
+.tabMob {
    display: none;
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1200px) {
    .ob_hovedsideGrid {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(auto-min, 1fr);
@@ -26,7 +24,7 @@
       margin-block-end: 0rem;
    }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 992px) {
    .ob_hovedsideGrid {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(auto-min, 1fr);
@@ -49,12 +47,6 @@
    .oppdragsSideBilde {
       margin-inline-end: -1rem;
    }
-   .infoDesk {
-      display: none;
-   }
-   .infoTab {
-      display: block;
-   }
    .op_spice :first-child,
    .op_tid :first-child {
       margin-inline-end: 0;
@@ -63,7 +55,7 @@
       padding-inline: 0.5rem;
    }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
    h1 {
       font-size: 1.6rem;
    }
@@ -82,7 +74,6 @@
    p {
       font-size: 0.8rem;
    }
-
    .ob_hovedsideGrid {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(auto-min, 1fr);
@@ -98,6 +89,12 @@
    .infoKnappTittel {
       min-width: 250px;
       padding-inline-start: 2rem;
+   }
+   .oppdragsTittel {
+      position: relative;
+      padding-block: 0.5rem;
+      padding-inline-start: 2.5rem;
+      padding-inline-end: 1rem;
    }
    .tekstGrid {
       grid-area: tek;
@@ -122,12 +119,10 @@
    .mobilBildeGrid {
       grid-area: bil;
    }
-   .infoTab,
    .tabDesk,
    .bildeDesk {
       display: none;
    }
-   .infoMob,
    .tabMob,
    .bildeMob {
       display: block;
@@ -149,7 +144,7 @@
       max-width: 90dvw;
    }
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 600px) {
    .ob_hovedsideGrid {
       width: 100%;
       grid-template-columns: 1fr;

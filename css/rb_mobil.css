@@ -14,7 +14,7 @@
          "aK aK";
    }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 992px) {
    .tabDesk {
       display: none;
    }
@@ -22,7 +22,7 @@
       display: block;
    }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
    h5 {
       font-size: 1rem;
    }

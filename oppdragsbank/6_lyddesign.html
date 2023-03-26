@@ -18,6 +18,7 @@
       <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
       <script type="module" src="/js/im_hovedmeny.js"></script>
+      <script type="module" src="/js/im_dag-natt.js"></script>
       <!-- <script type="module" src="/js/im_hero-bilde.js"></script> -->
       <title>6. Lyddesign</title>
    </head>
@@ -34,7 +35,7 @@
          <div class="overlayMeny"></div>
          <div class="hovedmenyRamme">
             <h1><b>Oppdragsbanken</b></h1>
-            <a class="hovedmenyKnapp" target="_self" rel="noreferrer noopener" href="../index.html" title="Startside" alt="Naviger til startsiden">
+            <a class="hovedmenyKnapp" target="_self" rel="noreferrer noopener" href="/index.html" title="Startside" alt="Naviger til startsiden">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
                   <div class="hovedmenyIkon maskeIndexOutline displayOutline"></div>
                   <div class="hovedmenyIkon maskeIndexFill displayFill"></div>
@@ -62,20 +63,27 @@
                </div>
                <h3 class="rundRamme ixD xSB hovedmenyTittel">Portfolio</h3>
             </div>
-            <a class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Print side" alt="Print side">
+            <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="F21 Portfolio" alt="Portfolio">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskeKarriereOutline"></div>
+                  <!-- <div class="hovedmenyIkon maskeKarriereFill displayFill"></div> -->
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">Karrieresti</h3>
+            </div>
+            <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Print side" alt="Print side">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
                   <div class="hovedmenyIkon maskePrintOutline"></div>
                   <!-- <div class="hovedmenyIkon maskePrintFill displayFill"></div> -->
                </div>
                <h3 class="rundRamme ixD xSB hovedmenyTittel">Print side</h3>
-            </a>
-            <a class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Favoritter" alt="Favoritter">
+            </div>
+            <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Favoritter" alt="Favoritter">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
                   <div class="hovedmenyIkon maskeHjerteOutline"></div>
                   <!-- <div class="hovedmenyIkon maskeHjerteFill displayFill"></div> -->
                </div>
                <h3 class="rundRamme ixD xSB hovedmenyTittel">Favoritter</h3>
-            </a>
+            </div>
             <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
                <svg class="svg-anim" viewBox="0 70 100 100">
                   <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
@@ -183,7 +191,9 @@
          </div>
       </main>
       <footer>
-         <p>Dette nettstedet er designet og utviklet av Marius Strøm Riseth // Fyrstikkalléen videregående skole • F21 vgs</p>
+         <p class="infoDesk">Dette nettstedet er designet og utviklet av Marius Strøm Riseth // Fyrstikkalléen videregående skole • F21 vgs</p>
+         <p class="infoTab">Designet og utviklet av Marius Strøm Riseth // F21 VGS</p>
+         <p class="infoMob">Laget av Marius S. Riseth // F21 VGS</p>
       </footer>
    </body>
 </html>
