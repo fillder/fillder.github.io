@@ -209,17 +209,45 @@
 
 /* _____ Oppdragsbank - hovedside _____ */
 
-.portfolio {
+.maskePortfolioOutline {
    -webkit-mask: url(/images/svg/ob/ob_portfolio_outline.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_portfolio_outline.svg) no-repeat center;
 }
-.visuell-logg {
+.maskePortfolioFill {
+   -webkit-mask: url(/images/svg/ob/ob_portfolio_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_portfolio_fill.svg) no-repeat center;
+}
+.maskeLoggOutline {
    -webkit-mask: url(/images/svg/ob/ob_visuell-logg_outline.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_visuell-logg_outline.svg) no-repeat center;
 }
-.suksesskriterer {
+.maskeLoggFill {
+   -webkit-mask: url(/images/svg/ob/ob_visuell-logg_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_visuell-logg_fill.svg) no-repeat center;
+}
+.maskeSuksessOutline {
    -webkit-mask: url(/images/svg/ob/ob_sukksess_outline.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_sukksess_outline.svg) no-repeat center;
+}
+.maskeSuksessFill {
+   -webkit-mask: url(/images/svg/ob/ob_sukksess_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_sukksess_fill.svg) no-repeat center;
+}
+.maskeHjerteOutline {
+   -webkit-mask: url(/images/svg/ob/ob_heart_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_heart_outline.svg) no-repeat center;
+}
+.maskeHjerteFill {
+   -webkit-mask: url(/images/svg/ob/ob_heart_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_heart_fill.svg) no-repeat center;
+}
+.maskePrintOutline {
+   -webkit-mask: url(/images/svg/ob/ob_print_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_print_outline.svg) no-repeat center;
+}
+.maskePrintFill {
+   -webkit-mask: url(/images/svg/ob/ob_print_fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_print_fill.svg) no-repeat center;
 }
 /* _____ Oppdragsbank - kategoriside _____ */
 .maskeOppdragEkstern {
@@ -248,17 +276,29 @@
 }
 
 /* __________ Index __________ */
-.maskeTP {
+.maskeUkerOutline {
+   -webkit-mask: url(/images/svg/ob/ob_uker_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_uker_outline.svg) no-repeat center;
+}
+.maskeUkerFill {
    -webkit-mask: url(/images/svg/ob/ob_uker_fill.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_uker_fill.svg) no-repeat center;
 }
-.maskeOB {
+.maskeOppdragsbankFill {
    -webkit-mask: url(/images/svg/ob/ob_oppdragsbank_fill.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_oppdragsbank_fill.svg) no-repeat center;
 }
-.maskeRB {
+.maskeOppdragsbankOutline {
+   -webkit-mask: url(/images/svg/ob/ob_oppdragsbank_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_oppdragsbank_outline.svg) no-repeat center;
+}
+.maskeRessursbankFill {
    -webkit-mask: url(/images/svg/ob/ob_eksamen_fill.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_eksamen_fill.svg) no-repeat center;
+}
+.maskeRessursbankOutline {
+   -webkit-mask: url(/images/svg/ob/ob_eksamen_outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_eksamen_outline.svg) no-repeat center;
 }
 
 /* __________ Timeplan __________ */

@@ -19,36 +19,79 @@
       <link rel="icon" href="/images/ico/skolelogo.svg" type="image/svg+xml" />
       <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
-      <script type="module" src="/js/im_dag-natt.js"></script>
+      <script type="module" src="/js/im_hovedmeny.js"></script>
       <!-- <script type="module" src="/js/im_hero-bilde.js"></script> -->
-      <title>Oppdragsbank</title>
+      <title>Oppdragsbanken</title>
    </head>
 
    <body>
       <nav>
-         <a class="hjemKnapp" target="_self" rel="noreferrer noopener" href="../index.html" title="Hjem" alt="Naviger til startsiden">
-            <div class="hjem maskeIndexOutline"></div>
-         </a>
-         <div class="logo">
-            <h1><b>OPPDRAGSBANK</b></h1>
+         <div class="navKnapp">
+            <div class="navIkon maskeOppdragsbankFill"></div>
          </div>
-         <div class="flexHoyre">
-            <div class="modusikon">
-               <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
-                  <svg class="svg-anim" viewBox="0 70 100 100">
-                     <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <circle class="sun" cx="50" cy="120" r="20" />
-                     <circle class="moon" cx="135" cy="40" r="40" />
-                  </svg>
-               </button>
+         <div class="logo">
+            <h1><b>OPPDRAGSBANKEN</b></h1>
+         </div>
+         <button class="hamburgerIkon navIkon maskeMenyOutline"></button>
+         <div class="overlayMeny"></div>
+         <div class="hovedmenyRamme">
+            <h1><b>Oppdragsbanken</b></h1>
+            <a class="hovedmenyKnapp" target="_self" rel="noreferrer noopener" href="../index.html" title="Startside" alt="Naviger til startsiden">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskeIndexOutline displayOutline"></div>
+                  <div class="hovedmenyIkon maskeIndexFill displayFill"></div>
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">Startside</h3>
+            </a>
+            <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Visuell logg" alt="Visuell logg">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskeLoggOutline"></div>
+                  <!-- <div class="hovedmenyIkon maskeLoggFill displayFill"></div> -->
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">Visuell logg</h3>
             </div>
+            <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Suksesskriterer" alt="Suksesskriterer">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskeSuksessOutline"></div>
+                  <!-- <div class="hovedmenyIkon maskeSuksessFill displayFill"></div> -->
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">Suksesskriterer</h3>
+            </div>
+            <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="F21 Portfolio" alt="Portfolio">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskePortfolioOutline"></div>
+                  <!-- <div class="hovedmenyIkon maskePortfolioFill displayFill"></div> -->
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">Portfolio</h3>
+            </div>
+            <a class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Print side" alt="Print side">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskePrintOutline"></div>
+                  <!-- <div class="hovedmenyIkon maskePrintFill displayFill"></div> -->
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">Print side</h3>
+            </a>
+            <a class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Favoritter" alt="Favoritter">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskeHjerteOutline"></div>
+                  <!-- <div class="hovedmenyIkon maskeHjerteFill displayFill"></div> -->
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">Favoritter</h3>
+            </a>
+            <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
+               <svg class="svg-anim" viewBox="0 70 100 100">
+                  <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <circle class="sun" cx="50" cy="120" r="20" />
+                  <circle class="moon" cx="135" cy="40" r="40" />
+               </svg>
+            </button>
          </div>
       </nav>
       <header class="hero">

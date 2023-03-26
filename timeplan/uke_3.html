@@ -17,7 +17,7 @@
       <link rel="icon" href="/images/ico/skolelogo.svg" type="image/svg+xml" />
       <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
-      <script type="module" src="/js/im_dag-natt.js"></script>
+      <script type="module" src="/js/im_hovedmeny.js"></script>
       <!-- <script type="module" src="/js/tp_navigasjon.js"></script> -->
       <title>Timeplan uke 3</title>
    </head>
@@ -25,9 +25,10 @@
    <body>
       <!-- Tittel og uketall -->
       <nav>
-         <a class="hjemKnapp" target="_self" rel="noreferrer noopener" href="../index.html" title="Hjem" alt="Naviger til startsiden">
-            <div class="hjem maskeIndexOutline"></div>
-         </a>
+         <div class="navKnapp utilgjengelig">
+            <div class="navIkon maskeUkerOutline displayOutline"></div>
+            <!-- <div class="hovedmenyIkon maskeUkerFill displayFill"></div> -->
+         </div>
          <div class="logo">
             <a href="/timeplan/uke_2.html" target="_self" rel="noreferrer noopener" alt="Timeplan uke 2" title="Timeplan uke 2">
                <div class="pil maskeTilbake"></div>
@@ -39,29 +40,38 @@
                <div class="pil maskeNeste"></div>
             </a>
          </div>
-         <div class="flexHoyre">
-            <a target="_blank" rel="noreferrer noopener" class="skolelogo" href="https://f21.vgs.no" title="F21 Skole hjemmeside" alt="F21 Skole hjemmeside">
-               <svg class="skolelogo" viewBox="0 0 50 50">
-                  <path class="skolefarge1" d="m35.71,7.14h7.14v35.71h-7.14V7.14ZM28.57,0v28.58h-14.29v7.14h14.29v7.14H7.14v-7.14H0v14.28h50V0h-21.43Z" />
-                  <polygon class="skolefarge2" points="0 0 0 32.72 7.14 32.72 7.14 21.43 21.43 21.43 21.43 14.29 7.14 14.29 7.14 7.14 25.58 7.14 25.58 0 0 0" />
-               </svg>
+         <button class="hamburgerIkon navIkon maskeMenyOutline"></button>
+         <div class="overlayMeny"></div>
+         <div class="hovedmenyRamme">
+            <h1><b>Timeplan 2023</b></h1>
+            <a class="hovedmenyKnapp" target="_self" rel="noreferrer noopener" href="../index.html" title="Startside" alt="Naviger til startsiden">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskeIndexOutline displayOutline"></div>
+                  <div class="hovedmenyIkon maskeIndexFill displayFill"></div>
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">Startside</h3>
             </a>
-            <div class="modusikon">
-               <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
-                  <svg class="svg-anim" viewBox="0 70 100 100">
-                     <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-                     <circle class="sun" cx="50" cy="120" r="20" />
-                     <circle class="moon" cx="135" cy="40" r="40" />
-                  </svg>
-               </button>
-            </div>
+            <a class="hovedmenyKnapp" target="_self" rel="noreferrer noopener" href="https://f21.vgs.no" title="F21 Skole hjemmeside" alt="F21 Skole hjemmeside">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskeF21Outline displayOutline"></div>
+                  <div class="hovedmenyIkon maskeF21Fill displayFill"></div>
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">F21 Hjemmeside</h3>
+            </a>
+            <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
+               <svg class="svg-anim" viewBox="0 70 100 100">
+                  <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <circle class="sun" cx="50" cy="120" r="20" />
+                  <circle class="moon" cx="135" cy="40" r="40" />
+               </svg>
+            </button>
          </div>
       </nav>
       <header></header>

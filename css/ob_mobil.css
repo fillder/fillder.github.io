@@ -64,6 +64,25 @@
    }
 }
 @media screen and (max-width: 800px) {
+   h1 {
+      font-size: 1.6rem;
+   }
+   h2 {
+      font-size: 1.4rem;
+   }
+   h3 {
+      font-size: 1rem;
+   }
+   h4 {
+      font-size: 1rem;
+   }
+   h5 {
+      font-size: 0.8rem;
+   }
+   p {
+      font-size: 0.8rem;
+   }
+
    .ob_hovedsideGrid {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(auto-min, 1fr);

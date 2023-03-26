@@ -436,3 +436,130 @@ document.querySelector("#pilNesteBilde").addEventListener("click", () => {
 
 window.addEventListener("load", settBredde);
 window.addEventListener("resize", settBredde);
+
+
+
+
+
+Hei, jeg lager en responsiv nettside, og akkurat nå jobber jeg med interaktiviteten til et navigasjonssystem som skal fungere som nettsidens hovedmeny.
+Jeg har til nå satt menyen opp slik jeg ønsker at den skal se ut, ved å bla. plassere den absolutt til høyre på skjermen med en bredde på 300px, og grået ut resten av skjerm 
+Det jeg prøver å finne ut av nå er hvordan jeg kan gjøre menyen interaktiv. Jeg ønsker at vi normalt kun ser knappen med klassen "maskeMenyOutline",
+men når vi trykker knappen, så kommer ".overlayMeny" til syne, mens ".tpHovedmenytil" kommer inn fra siden. Jeg regner med å måtte bruke JavaScript for
+å oppnå dette, men kan du du være så snill å hjelpe meg med å skrive logikken?
+
+HTML:
+<nav>
+   <button class="menyKnapp navIkon maskeMenyOutline"></button>
+   <button class="navIkon maskeMenyFill menyAktive"></button>
+      <div class="overlayMeny">
+         <div class="tpHovedmeny">
+            <h1><b>Timeplan 2023</b></h1>
+            <a class="hovedmenyKnapp" target="_self" rel="noreferrer noopener" href="../index.html" title="Startside" alt="Naviger til startsiden">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskeIndexOutline displayOutline"></div>
+                  <div class="hovedmenyIkon maskeIndexFill displayFill"></div>
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel infoDesk">Startside</h3>
+            </a>
+            <a class="hovedmenyKnapp" target="_self" rel="noreferrer noopener" href="https://f21.vgs.no" title="F21 Skole hjemmeside" alt="F21 Skole hjemmeside">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskeF21Outline displayOutline"></div>
+                  <div class="hovedmenyIkon maskeF21Fill displayFill"></div>
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel infoDesk">F21 Hjemmeside</h3>
+            </a>
+            <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
+               <svg class="svg-anim" viewBox="0 70 100 100">
+                  [svg-kode]
+               </svg>
+            </button>
+         </div>
+      </div>
+</nav>
+
+CSS
+.overlayMeny {
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   width: 100%;
+   z-index: 900;
+   background-color: rgba(0, 0, 0, 0.8);
+   place-content: center;
+   text-align: center;
+}
+.menyAktive {
+   position: absolute;
+   top: 0.4rem;
+   right: 0.5rem;
+   z-index: 1000;
+}
+.tpHovedmeny {
+   position: absolute;
+   margin-inline: auto;
+   right: 0;
+   background-color: var(--clr-tekstBoks);
+   width: 300px;
+   height: 100%;
+   padding-inline: 1rem;
+   padding-block-start: 3rem;
+   /* display: none; */
+}
+.tpHovedmeny h1 {
+   font-size: 2rem;
+}
+.hovedmenyIkonRamme {
+   width: 60px;
+   height: 60px;
+   z-index: 100;
+   padding: 0.4rem;
+}
+.hovedmenyIkon {
+   background-color: var(--clr-tekst);
+   width: 100%;
+   height: 100%;
+}
+.hovedmenyTittel {
+   position: relative;
+   padding-block: 0.5rem;
+   padding-inline-start: 3rem;
+   padding-inline-end: 2rem;
+   margin-inline-start: -2.5rem;
+   z-index: 90;
+}
+.hovedmenyKnapp {
+   display: grid;
+   grid-template-columns: auto 1fr;
+   align-items: center;
+   margin-block: 1rem;
+   transition: all 0.3s ease-in-out;
+   transform: scale(1);
+}
+.hovedmenyKnapp:hover,
+.hovedmenyKnapp:focus-visible {
+   transition: all 0.3s ease-in-out;
+   transform: scale(1.01);
+}
+.displayOutline {
+   display: block;
+}
+.displayFill {
+   display: none;
+}
+.hovedmenyKnapp:hover .displayOutline,
+.hovedmenyKnapp:focus-visible .displayOutline {
+   display: none;
+}
+.hovedmenyKnapp:hover .displayFill,
+.hovedmenyKnapp:focus-visible .displayFill {
+   display: block;
+}
+.maskeIndexFill {
+   -webkit-mask: url(/images/svg/im/im_home_fill.svg) no-repeat center;
+   mask: url(/images/svg/im/im_home_fill.svg) no-repeat center;
+}
+.maskeIndexOutline {
+   -webkit-mask: url(/images/svg/im/im_home_outline.svg) no-repeat center;
+   mask: url(/images/svg/im/im_home_outline.svg) no-repeat center;
+}
