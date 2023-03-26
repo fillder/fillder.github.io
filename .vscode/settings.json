@@ -1,5 +1,5 @@
 {
-   "prettier.printWidth": 300,
+   "prettier.printWidth": 200,
    "editor.formatOnSave": true,
    "editor.defaultFormatter": "esbenp.prettier-vscode",
    "[javascript]": {

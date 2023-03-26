@@ -362,6 +362,37 @@ table thead tr th {
    gal = Galleri
    */
 }
+.spiceEmblem {
+   position: absolute;
+   bottom: 0;
+   left: calc(50% - 8rem);
+   transform: translateX(-50%) translateY(40%);
+   width: 120px;
+   height: 50px;
+   margin: auto;
+   padding-block: 0.5rem;
+   z-index: 110;
+}
+.tidEmblem {
+   position: absolute;
+   bottom: 0;
+   left: calc(50% + 8rem);
+   transform: translateX(-50%) translateY(40%);
+   width: 120px;
+   height: 50px;
+   margin: auto;
+   padding-block: 0.5rem;
+   z-index: 110;
+   display: flex;
+}
+.tidEmblem > * {
+   margin-inline-start: 0.5rem;
+   margin-block: auto;
+}
+.tidEmblem div {
+   max-width: 30px;
+}
+
 .oppdragGrid {
    grid-area: opp;
    position: relative;
