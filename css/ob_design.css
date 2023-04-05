@@ -246,12 +246,12 @@
    margin-inline-end: 0.5rem;
 }
 .spiceIkon {
-   width: 125px;
-   height: 40px;
+   width: 90px;
+   height: 30px;
 }
 .tidIkon {
-   width: 40px;
-   height: 40px;
+   width: 30px;
+   height: 30px;
 }
 /*______ Oppdragskategori tabeller ______*/
 table thead tr th {
@@ -261,7 +261,7 @@ table thead tr th {
 }
 .op_spice :first-child,
 .op_tid :first-child {
-   margin-inline-end: 1rem;
+   margin-inline-end: 0.5rem;
 }
 .op_knapp {
    width: max-content;
@@ -277,9 +277,12 @@ table thead tr th {
    transition: all 0.3s ease-in-out;
    transform: scale(1.02);
 }
+.oppdragsInfo {
+   display: flex;
+}
 .op_spice {
    display: flex;
-   padding-inline: 1rem;
+   padding-inline-end: 2rem;
    align-items: center;
 }
 .op_tid {
@@ -289,6 +292,16 @@ table thead tr th {
    align-items: center;
 }
 .oppdragsIkon {
+   width: 60px;
+   height: 60px;
+   z-index: 100;
+   padding: 0.4rem;
+}
+.oppdragsIkonNy {
+   position: absolute;
+   top: 50%;
+   transform: translate(-20%, -50%);
+   left: 0;
    width: 60px;
    height: 60px;
    z-index: 100;
@@ -306,6 +319,14 @@ table thead tr th {
    margin-inline-start: -2.5rem;
    z-index: 90;
 }
+.oppdragsTittelNy {
+   position: relative;
+   padding-block: 0.5rem;
+   padding-inline-start: 6rem;
+   padding-inline-end: 2rem;
+   margin-inline-start: -2.5rem;
+   z-index: 90;
+}
 .oppdragsKnapp {
    display: grid;
    grid-template-columns: auto 1fr;
@@ -314,6 +335,16 @@ table thead tr th {
    align-items: center;
    transition: all 0.1s ease-in-out;
    /* transform: scale(1); */
+}
+.oppdragsKnappNy {
+   display: flex;
+   position: relative;
+   z-index: 80;
+   height: 3rem;
+   justify-content: space-between;
+}
+.oppdragsKnappNy > * {
+   margin-block: auto;
 }
 .oppdragsKnapp:hover:not(.utilgjengelig),
 .oppdragsKnapp:focus-visible:not(.utilgjengelig) {
