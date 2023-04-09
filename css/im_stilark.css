@@ -417,7 +417,7 @@ header {
    border-width: 1.5px 2px 3px 3px;
 }
 .nB {
-   border: 3px solid var(--clr-ramme);
+   border: 2px solid var(--clr-ramme);
 }
 .sB {
    border-color: var(--clr-ramme);
@@ -440,7 +440,7 @@ header {
 
 .xSPS {
    /* xtra small symmetric padding */
-   padding: 0.6rem;
+   padding: 0.4rem;
 }
 
 .sPS {
