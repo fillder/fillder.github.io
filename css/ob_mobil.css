@@ -7,6 +7,13 @@
 .tabMob {
    display: none;
 }
+.infoKnappDesk {
+   display: block;
+}
+.infoKnappMob {
+   display: none;
+}
+
 @media screen and (max-width: 1200px) {
    .ob_hovedsideGrid {
       grid-template-columns: repeat(4, 1fr);
@@ -47,12 +54,25 @@
    .oppdragsSideBilde {
       margin-inline-end: -1rem;
    }
-   .op_spice :first-child,
+   /* .op_spice :first-child,
    .op_tid :first-child {
       margin-inline-end: 0;
+   } */
+   /* .op_spice {
+      padding-inline: 0.5rem;
+   } */
+   .infoKnappDesk {
+      display: none;
+   }
+   .infoKnappMob {
+      display: block;
+      text-align: start;
    }
    .op_spice {
-      padding-inline: 0.5rem;
+      width: 50px;
+   }
+   .kategoriKnappTittel {
+      padding-inline-end: 0.5rem;
    }
 }
 @media screen and (max-width: 768px) {
@@ -142,6 +162,15 @@
    .bildeRamme {
       max-width: 90vw;
       max-width: 90dvw;
+   }
+   .ob_kategorisideGrid {
+      width: 90%;
+   }
+   .kategoriFilter span {
+      display: none;
+   }
+   .kategoriKnappTittel span {
+      display: none;
    }
 }
 @media screen and (max-width: 600px) {

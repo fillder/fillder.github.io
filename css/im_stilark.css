@@ -129,7 +129,7 @@ h2 {
    font-weight: 700;
 }
 h3 {
-   font-size: clamp(1rem, 1.4vw, 1.4rem);
+   font-size: clamp(1rem, 1.1vw, 1.2rem);
    font-weight: 500;
 }
 h4 {
@@ -414,7 +414,7 @@ header {
 }
 .xSB {
    border-color: var(--clr-ramme);
-   border-width: 1.5px 2px 3px 3px;
+   border-width: 1px 1px 2px 2px;
 }
 .nB {
    border: 2px solid var(--clr-ramme);

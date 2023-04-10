@@ -63,6 +63,10 @@
    -webkit-mask: url(/images/svg/ob_10_ai.svg) no-repeat center;
    mask: url(/images/svg/ob_10_ai.svg) no-repeat center;
 }
+.maskeSpiceMob {
+   -webkit-mask: url(/images/svg/ob/ob_spice-mobil.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_spice-mobil.svg) no-repeat center;
+}
 .maskeSpice0 {
    -webkit-mask: url(/images/svg/ob_spiciness-0.svg) no-repeat center;
    mask: url(/images/svg/ob_spiciness-0.svg) no-repeat center;
