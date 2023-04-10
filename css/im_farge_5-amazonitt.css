@@ -55,3 +55,13 @@ a:active {
 ul li p::before {
    color: var(--clr-amazonitt);
 }
+
+.fargetFilter {
+   background-color: var(--clr-amazonitt);
+   color: var(--clr-bakgrunn);
+}
+
+.kategoriFilter button:hover,
+.kategoriFilter button:focus-visible {
+   border: 2px solid var(--clr-amazonitt);
+}

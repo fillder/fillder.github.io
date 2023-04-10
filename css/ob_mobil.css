@@ -69,7 +69,10 @@
       text-align: start;
    }
    .op_spice {
-      width: 50px;
+      min-width: 50px;
+   }
+   .op_tid {
+      min-width: 100px;
    }
    .kategoriKnappTittel {
       padding-inline-end: 0.5rem;

@@ -55,3 +55,13 @@ a:active {
 ul li p::before {
    color: var(--clr-citrin);
 }
+
+.fargetFilter {
+   background-color: var(--clr-citrin);
+   color: var(--clr-bakgrunn);
+}
+
+.kategoriFilter button:hover,
+.kategoriFilter button:focus-visible {
+   border: 2px solid var(--clr-citrin);
+}

@@ -295,13 +295,23 @@ table thead tr th {
 /*___________________________________*/
 /*___________ kategoriSide __________*/
 /*___________________________________*/
-.kategori {
+.filterMeny .kategoriFilter {
+   margin-block-start: 0.5rem;
+   margin-block-end: 1em;
+   margin-inline: 1rem;
+}
+.kategoriSeksjon {
    display: flex;
    flex-direction: column;
 }
-.kategori .kategoriKnapp {
-   margin-block: 0.5rem;
+.kategoriSeksjon button,
+.kategoriSeksjon a {
+   margin-block: 0.4rem;
    margin-inline: 1rem;
+   position: relative;
+}
+.kategoriSeksjon {
+   padding-block-end: 0.5rem;
 }
 .kategoriHeader {
    background-color: var(--clr-tabellBoks);
@@ -324,22 +334,31 @@ table thead tr th {
    flex-basis: 150px;
    max-width: 200px;
    margin-inline-end: 0.5rem;
-   margin-block-end: 0.25rem;
+   font-family: "Roboto", sans-serif;
+   color: var(--clr-tekst);
+   line-height: 1.5;
+   font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+   font-weight: 500;
 }
 .kategoriKnapp {
    display: flex;
    position: relative;
    z-index: 80;
-   height: 3rem;
-   margin-inline-start: 0.5rem;
+   height: 2.5rem;
    justify-content: space-between;
 }
 .kategoriKnapp > * {
    margin-block: auto;
 }
+.kategoriLenke {
+   position: relative;
+   padding-block: 0.45rem;
+   z-index: 80;
+   height: 2.5rem;
+}
 .kategoriKnappTittel {
    position: relative;
-   padding-inline-start: 4rem;
+   padding-inline-start: 3.4rem;
    padding-inline-end: 2rem;
    z-index: 90;
 }
@@ -348,8 +367,8 @@ table thead tr th {
    top: 50%;
    transform: translate(-10%, -50%);
    left: 0;
-   width: 60px;
-   height: 60px;
+   width: 50px;
+   height: 50px;
    z-index: 100;
    padding: 0.4rem;
 }
@@ -359,11 +378,11 @@ table thead tr th {
 .op_spice {
    display: flex;
    align-items: center;
-   width: 210px;
+   min-width: 200px;
 }
 .op_tid {
    display: flex;
-   width: max-content;
+   min-width: 150px;
    padding-inline: 1rem;
    align-items: center;
 }
@@ -383,12 +402,19 @@ table thead tr th {
    width: 30px;
    height: 30px;
 }
+.hidden {
+   display: none;
+}
 .kategoriKnapp:hover:not(.utilgjengelig) .displayOutline,
-.kategoriKnapp:focus-visible:not(.utilgjengelig) .displayOutline {
+.kategoriKnapp:focus-visible:not(.utilgjengelig) .displayOutline,
+.kategoriLenke:hover:not(.utilgjengelig) .displayOutline,
+.kategoriLenke:focus-visible:not(.utilgjengelig) .displayOutline {
    display: none;
 }
 .kategoriKnapp:hover:not(.utilgjengelig) .displayFill,
-.kategoriKnapp:focus-visible:not(.utilgjengelig) .displayFill {
+.kategoriKnapp:focus-visible:not(.utilgjengelig) .displayFill,
+.kategoriLenke:hover:not(.utilgjengelig) .displayFill,
+.kategoriLenke:focus-visible:not(.utilgjengelig) .displayFill {
    display: block;
 }
 .flexInfoKnapp:hover:not(.utilgjengelig) .displayOutline,

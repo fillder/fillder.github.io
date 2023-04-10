@@ -53,5 +53,15 @@ a:active {
    text-underline-offset: 4px;
 }
 ul li p::before {
-   color: var(--clr-amazonitt);
+   color: var(--clr-smaragd);
+}
+
+.fargetFilter {
+   background-color: var(--clr-smaragd);
+   color: var(--clr-bakgrunn);
+}
+
+.kategoriFilter button:hover,
+.kategoriFilter button:focus-visible {
+   border: 2px solid var(--clr-smaragd);
 }
