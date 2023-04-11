@@ -30,7 +30,6 @@ a:active {
    filter: grayscale(0);
    outline: 3px solid var(--clr-rubin);
 }
-
 .aktivtKarusellBilde {
    filter: none;
    outline: 3px solid var(--clr-rubin);
@@ -55,13 +54,15 @@ a:active {
 ul li p::before {
    color: var(--clr-rubin);
 }
-
 .fargetFilter {
    background-color: var(--clr-rubin);
    color: var(--clr-bakgrunn);
 }
-
 .kategoriFilter button:hover,
 .kategoriFilter button:focus-visible {
    border: 2px solid var(--clr-rubin);
+}
+.hovedmenyKnappAktiv h3 {
+   text-decoration: 2px underline var(--clr-rubin);
+   text-underline-offset: 3px;
 }

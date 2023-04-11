@@ -246,6 +246,80 @@
    -webkit-mask: url(/images/svg/ob/ob_print_fill.svg) no-repeat center;
    mask: url(/images/svg/ob/ob_print_fill.svg) no-repeat center;
 }
+
+.maskeGrafiskOutline {
+   -webkit-mask: url(/images/svg/ob/ob_grafisk-outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_grafisk-outline.svg) no-repeat center;
+}
+.maskeGrafiskFill {
+   -webkit-mask: url(/images/svg/ob/ob_grafisk-fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_grafisk-fill.svg) no-repeat center;
+}
+.maskeTreDOutline {
+   -webkit-mask: url(/images/svg/ob/ob_tred-outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_tred-outline.svg) no-repeat center;
+}
+.maskeTreDFill {
+   -webkit-mask: url(/images/svg/ob/ob_tred-fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_tred-fill.svg) no-repeat center;
+}
+.maskeFotoOutline {
+   -webkit-mask: url(/images/svg/ob/ob_foto-outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_foto-outline.svg) no-repeat center;
+}
+.maskeFotoFill {
+   -webkit-mask: url(/images/svg/ob/ob_foto-fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_foto-fill.svg) no-repeat center;
+}
+.maskeFilmOutline {
+   -webkit-mask: url(/images/svg/ob/ob_film-outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_film-outline.svg) no-repeat center;
+}
+.maskeFilmFill {
+   -webkit-mask: url(/images/svg/ob/ob_film-fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_film-fill.svg) no-repeat center;
+}
+.maskeLydOutline {
+   -webkit-mask: url(/images/svg/ob/ob_lyd-outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_lyd-outline.svg) no-repeat center;
+}
+.maskeLydFill {
+   -webkit-mask: url(/images/svg/ob/ob_lyd-fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_lyd-fill.svg) no-repeat center;
+}
+.maskeDriftOutline {
+   -webkit-mask: url(/images/svg/ob/ob_drift-outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_drift-outline.svg) no-repeat center;
+}
+.maskeDriftFill {
+   -webkit-mask: url(/images/svg/ob/ob_drift-fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_drift-fill.svg) no-repeat center;
+}
+.maskeUtviklingOutline {
+   -webkit-mask: url(/images/svg/ob/ob_utvikling-outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_utvikling-outline.svg) no-repeat center;
+}
+.maskeUtviklingFill {
+   -webkit-mask: url(/images/svg/ob/ob_utvikling-fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_utvikling-fill.svg) no-repeat center;
+}
+.maskeWebOutline {
+   -webkit-mask: url(/images/svg/ob/ob_web-outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_web-outline.svg) no-repeat center;
+}
+.maskeWebFill {
+   -webkit-mask: url(/images/svg/ob/ob_web-fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_web-fill.svg) no-repeat center;
+}
+.maskeAiOutline {
+   -webkit-mask: url(/images/svg/ob/ob_ai-outline.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_ai-outline.svg) no-repeat center;
+}
+.maskeAiFill {
+   -webkit-mask: url(/images/svg/ob/ob_ai-fill.svg) no-repeat center;
+   mask: url(/images/svg/ob/ob_ai-fill.svg) no-repeat center;
+}
+
 /* _____ Oppdragsbank - kategoriside _____ */
 .maskeOppdragEksternOutline {
    -webkit-mask: url(/images/svg/ob/ob_eksternt-oppdrag_outline.svg) no-repeat center;

@@ -19,6 +19,7 @@
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
       <script type="module" src="/js/im_hovedmeny.js"></script>
       <script type="module" src="/js/im_dag-natt.js"></script>
+      <script type="module" src="/js/ob_kategori-filter.js"></script>
       <!-- <script type="module" src="/js/im_hero-bilde.js"></script> -->
       <title>9. Webutvikling</title>
    </head>
@@ -41,35 +42,53 @@
                   <div class="hovedmenyIkon maskeIndexFill displayFill"></div>
                </div>
                <h3 class="rundRamme ixD xSB hovedmenyTittel">Startside</h3>
+               <h2 class="hovedmenyPil">﹀</h2>
             </a>
-            <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Visuell logg" alt="Visuell logg">
+            <a class="hovedmenyKnapp" target="_self" rel="noreferrer noopener" href="/oppdragsbank.html" title="Kategoriside" alt="Naviger til oppdragskategorier">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskeOppdragsbankOutline displayOutline"></div>
+                  <div class="hovedmenyIkon maskeOppdragsbankFill displayFill"></div>
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">Kategoriside</h3>
+               <h2 class="hovedmenyPil">﹀</h2>
+            </a>
+            <a class="hovedmenyKnapp hovedmenyKnappAktiv" target="_self" rel="noreferrer noopener" href="/oppdragsbank/9_webutvikling.html" title="Webutvikling" alt="Naviger til oppdragskategori Webutvikling">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskeWebOutline displayOutline fargetFyll"></div>
+                  <div class="hovedmenyIkon maskeWebFill displayFill fargetFyll"></div>
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">9. Webutvikling</h3>
+            </a>
+            <div class="linjeskille"></div>
+            <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Visuell logg" alt="Naviger til Visuell logg">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
                   <div class="hovedmenyIkon maskeLoggOutline"></div>
                   <!-- <div class="hovedmenyIkon maskeLoggFill displayFill"></div> -->
                </div>
                <h3 class="rundRamme ixD xSB hovedmenyTittel">Visuell logg</h3>
             </div>
-            <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Suksesskriterer" alt="Suksesskriterer">
+            <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Suksesskriterer" alt="Naviger til Suksesskriterer">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
                   <div class="hovedmenyIkon maskeSuksessOutline"></div>
                   <!-- <div class="hovedmenyIkon maskeSuksessFill displayFill"></div> -->
                </div>
                <h3 class="rundRamme ixD xSB hovedmenyTittel">Suksesskriterer</h3>
             </div>
-            <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="F21 Portfolio" alt="Portfolio">
+            <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="F21 Portfolio" alt="Naviger til Portfolio">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
                   <div class="hovedmenyIkon maskePortfolioOutline"></div>
                   <!-- <div class="hovedmenyIkon maskePortfolioFill displayFill"></div> -->
                </div>
                <h3 class="rundRamme ixD xSB hovedmenyTittel">Portfolio</h3>
             </div>
-            <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="F21 Portfolio" alt="Portfolio">
+            <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Karrieresti" alt="Naviger til Karrieresti">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
                   <div class="hovedmenyIkon maskeKarriereOutline"></div>
                   <!-- <div class="hovedmenyIkon maskeKarriereFill displayFill"></div> -->
                </div>
                <h3 class="rundRamme ixD xSB hovedmenyTittel">Karrieresti</h3>
             </div>
+            <div class="linjeskille"></div>
             <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Print side" alt="Print side">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
                   <div class="hovedmenyIkon maskePrintOutline"></div>
@@ -113,81 +132,188 @@
       </header>
       <main class="mainMedHeader">
          <div class="ob_kategorisideGrid">
-            <table class="sBoksRamme sB tekst kategoriTabell">
-               <thead class="tab">
-                  <tr>
-                     <th><h3 class="fargetLinje">9.1. Opplæring</h3></th>
-                     <th class="tabTab"><h3 class="fargetLinje">Spiciness</h3></th>
-                     <th class="tabDesk"><h3 class="fargetLinje">Tid</h3></th>
-                  </tr>
-               </thead>
-               <!-- _______ Opplæring _______ -->
-               <tbody>
-                  <tr></tr>
-               </tbody>
-               <!-- _______ Oppdrag _______ -->
-               <thead class="tab">
-                  <tr>
-                     <th><h3 class="fargetLinje">9.2. Oppdrag</h3></th>
-                     <th class="tabTab"><h3 class="fargetLinje">Spiciness</h3></th>
-                     <th class="tabDesk"><h3 class="fargetLinje">Tid</h3></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td>
-                        <!-- <a target="_self" rel="noreferrer noopener" class="oppdragsKnapp" href="" alt="" title="tittel, spice: ?/5, tid: ? timer">
-                           <div class="oppdragsIkon rundRamme ixD nB">
-                              <div class="op_ikon maskeOppdragIntern fargetFyll"></div>
-                           </div>
-                           <h5 class="rundRamme ixD xSB oppdragsTittel infoDesk">Lang tittel</h5>
-                           <h5 class="rundRamme ixD xSB oppdragsTittel infoTab">Medium tittel</h5>
-                           <h5 class="rundRamme ixD xSB oppdragsTittel infoMob">Kort tittel</h5>
-                        </a> -->
-                     </td>
-                     <td class="tabTab">
-                        <!-- <div class="op_spice">
-                           <div class="spiceIkon maskeSpice40 fargetFyll"></div>
-                           <h3 class="infoDesk">Mild</h3>
-                        </div> -->
-                     </td>
-                     <td class="tabDesk">
-                        <!-- <div class="op_tid">
-                           <div class="tidIkon maskeTidTimer fargetFyll infoDesk"></div>
-                           <h3>2-6 uker</h3>
-                        </div> -->
-                     </td>
-                  </tr>
-               </tbody>
-               <!-- _______ Nettressurser _______ -->
-               <thead class="tab">
-                  <tr>
-                     <th colspan="3"><h3 class="fargetLinje">9.3. Nettressurser</h3></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <!-- <tr>
-                     <td th colspan="3">
-                        <a target="_blank" rel="noreferrer noopener" class="oppdragsKnapp" href="" alt="">
-                           <div class="oppdragsIkon rundRamme ixD nB">
-                              <div class="op_ikon maskeOppdragIntern fargetFyll"></div>
-                           </div>
-                           <h5 class="rundRamme ixD xSB oppdragsTittel infoDesk">Lang tittel</h5>
-                           <h5 class="rundRamme ixD xSB oppdragsTittel infoTab">Medium tittel</h5>
-                           <h5 class="rundRamme ixD xSB oppdragsTittel infoMob">Kort tittel</h5>
-                        </a> 
-                     </td>
-                  </tr> -->
-               </tbody>
-               <tfoot class="tab">
-                  <tr>
-                     <td colspan="3" class="sPA">
-                        <p></p>
-                        <br />
-                     </td>
-                  </tr>
-               </tfoot>
-            </table>
+            <section class="sBoksRamme sB tekst filterMeny">
+               <div class="kategoriHeader">
+                  <h2 class="fargetLinje">Filtermeny</h2>
+               </div>
+               <div class="kategoriFilter">
+                  <button type="button" data-filter="*" class="sBoksRamme nB xSPS ixD">Vis alt</button>
+                  <button type="button" data-filter=".html" class="sBoksRamme nB xSPS ixD">HTML</button>
+                  <button type="button" data-filter=".css" class="sBoksRamme nB xSPS ixD">CSS</button>
+                  <button type="button" data-filter=".javascript" class="sBoksRamme nB xSPS ixD">JavaScript</button>
+               </div>
+            </section>
+            <section class="sBoksRamme sB tekst kategoriSeksjon">
+               <div class="kategoriHeader">
+                  <h2 class="fargetLinje">9.2. Oppdrag</h2>
+               </div>
+               <!-- _____________________ oppdragsKnapp _____________________ -->
+               <button type="button" class="rundRamme ixD xSB html css">
+                  <div class="kategoriKnapp">
+                     <h5 class="kategoriKnappTittel"><span>9.2.1. HTML/CSS: </span>Reklamefilmnettside</h5>
+                     <div class="kategoriKnappInfo">
+                        <div class="op_spice">
+                           <div class="infoKnappDesk spiceIkon maskeSpice20 fargetFyll"></div>
+                           <div class="infoKnappMob spiceIkonMob maskeSpiceMob fargetFyll"></div>
+                           <h5 class="infoKnappDesk">Ekstra mild</h5>
+                           <h5 class="infoKnappMob">1/5</h5>
+                        </div>
+                        <div class="op_tid">
+                           <div class="tidIkon maskeTidTimer fargetFyll"></div>
+                           <h5 class="infoKnappDesk">6-12 timer</h5>
+                           <h5 class="infoKnappMob">6-12t</h5>
+                        </div>
+                     </div>
+                     <div class="kategoriKnappIkon rundRamme ixD nB">
+                        <div class="op_ikon maskeOppdragInternOutline fargetFyll displayOutline"></div>
+                        <div class="op_ikon maskeOppdragInternFill fargetFyll displayFill"></div>
+                     </div>
+                  </div>
+               </button>
+               <!-- _____________________ oppdragsKnapp _____________________ -->
+               <button type="button" class="rundRamme ixD xSB html css">
+                  <div class="kategoriKnapp">
+                     <h5 class="kategoriKnappTittel"><span>9.2.2. HTML/CSS: </span>Kantinenettside</h5>
+                     <div class="kategoriKnappInfo">
+                        <div class="op_spice">
+                           <div class="infoKnappDesk spiceIkon maskeSpice40 fargetFyll"></div>
+                           <div class="infoKnappMob spiceIkonMob maskeSpiceMob fargetFyll"></div>
+                           <h5 class="infoKnappDesk">Mild</h5>
+                           <h5 class="infoKnappMob">2/5</h5>
+                        </div>
+                        <div class="op_tid">
+                           <div class="tidIkon maskeTidTimer fargetFyll"></div>
+                           <h5 class="infoKnappDesk">6-12 timer</h5>
+                           <h5 class="infoKnappMob">6-12t</h5>
+                        </div>
+                     </div>
+                     <div class="kategoriKnappIkon rundRamme ixD nB">
+                        <div class="op_ikon maskeOppdragInternOutline fargetFyll displayOutline"></div>
+                        <div class="op_ikon maskeOppdragInternFill fargetFyll displayFill"></div>
+                     </div>
+                  </div>
+               </button>
+               <!-- _____________________ oppdragsKnapp _____________________ -->
+               <button type="button" class="rundRamme ixD xSB html css javascript">
+                  <div class="kategoriKnapp">
+                     <h5 class="kategoriKnappTittel"><span>9.2.3. HTML/CSS/Js: </span>"Hva står på menyen?"</h5>
+                     <div class="kategoriKnappInfo">
+                        <div class="op_spice">
+                           <div class="infoKnappDesk spiceIkon maskeSpice60 fargetFyll"></div>
+                           <div class="infoKnappMob spiceIkonMob maskeSpiceMob fargetFyll"></div>
+                           <h5 class="infoKnappDesk">Medium</h5>
+                           <h5 class="infoKnappMob">3/5</h5>
+                        </div>
+                        <div class="op_tid">
+                           <div class="tidIkon maskeTidTimer fargetFyll"></div>
+                           <h5 class="infoKnappDesk">9-16 timer</h5>
+                           <h5 class="infoKnappMob">9-16t</h5>
+                        </div>
+                     </div>
+                     <div class="kategoriKnappIkon rundRamme ixD nB">
+                        <div class="op_ikon maskeOppdragInternOutline fargetFyll displayOutline"></div>
+                        <div class="op_ikon maskeOppdragInternFill fargetFyll displayFill"></div>
+                     </div>
+                  </div>
+               </button>
+               <!-- _____________________ oppdragsKnapp _____________________ -->
+               <button type="button" class="rundRamme ixD xSB javascript">
+                  <div class="kategoriKnapp">
+                     <h5 class="kategoriKnappTittel"><span>9.2.4. JavaScript: </span>Abstrakt Kunst med P5js</h5>
+                     <div class="kategoriKnappInfo">
+                        <div class="op_spice">
+                           <div class="infoKnappDesk spiceIkon maskeSpice20 fargetFyll"></div>
+                           <div class="infoKnappMob spiceIkonMob maskeSpiceMob fargetFyll"></div>
+                           <h5 class="infoKnappDesk">Ekstra mild</h5>
+                           <h5 class="infoKnappMob">1/5</h5>
+                        </div>
+                        <div class="op_tid">
+                           <div class="tidIkon maskeTidTimer fargetFyll"></div>
+                           <h5 class="infoKnappDesk">2-6 timer</h5>
+                           <h5 class="infoKnappMob">2-6t</h5>
+                        </div>
+                     </div>
+                     <div class="kategoriKnappIkon rundRamme ixD nB">
+                        <div class="op_ikon maskeOppdragInternOutline fargetFyll displayOutline"></div>
+                        <div class="op_ikon maskeOppdragInternFill fargetFyll displayFill"></div>
+                     </div>
+                  </div>
+               </button>
+            </section>
+            <section class="sBoksRamme sB tekst kategoriSeksjon">
+               <div class="kategoriHeader">
+                  <h2 class="fargetLinje">9.3. Nettressurser</h2>
+               </div>
+               <!-- _____________________ Nettressurs _____________________ -->
+               <a target="_blank" rel="noreferrer noopener" href="https://www.w3schools.com/where_to_start.asp" title="www.w3schools.com" alt="Lenke til w3schools.com" class="rundRamme ixD xSB kategoriLenke html css javascript">
+                  <h5 class="kategoriKnappTittel"><span>9.3.1. </span>W3 Schools: Ressurusside for HTML/CSS/Js<span> med interaktive kodebokser</span></h5>
+                  <div class="kategoriKnappIkon rundRamme ixD nB">
+                     <div class="op_ikon maskeOppdragRessursOutline fargetFyll displayOutline"></div>
+                     <div class="op_ikon maskeOppdragRessursFill fargetFyll displayFill"></div>
+                  </div>
+               </a>
+               <!-- _____________________ Nettressurs _____________________ -->
+               <a target="_blank" rel="noreferrer noopener" href="https://developer.mozilla.org/en-US/docs/Learn" title="developer.mozilla.org/html" alt="Lenke til mozilla.org/html" class="rundRamme ixD xSB kategoriLenke html css javascript">
+                  <h5 class="kategoriKnappTittel"><span>9.3.2. </span>MDM: Ressurusside for HTML/CSS/Js<span> med detaljernte beskrivelser</span></h5>
+                  <div class="kategoriKnappIkon rundRamme ixD nB">
+                     <div class="op_ikon maskeOppdragRessursOutline fargetFyll displayOutline"></div>
+                     <div class="op_ikon maskeOppdragRessursFill fargetFyll displayFill"></div>
+                  </div>
+               </a>
+               <!-- _____________________ Nettressurs _____________________ -->
+               <a target="_blank" rel="noreferrer noopener" href="https://javascript.info/" title="javascript.info" alt="Lenke til javascript.info" class="rundRamme ixD xSB kategoriLenke javascript">
+                  <h5 class="kategoriKnappTittel"><span>9.3.5. </span>JavaScript.info: Referanseside for Js-utvikling<span> med innholdsfortegnelse</span></h5>
+                  <div class="kategoriKnappIkon rundRamme ixD nB">
+                     <div class="op_ikon maskeOppdragRessursOutline fargetFyll displayOutline"></div>
+                     <div class="op_ikon maskeOppdragRessursFill fargetFyll displayFill"></div>
+                  </div>
+               </a>
+            </section>
+            <section class="sBoksRamme sB tekst kategoriSeksjon">
+               <div class="kategoriHeader">
+                  <h2 class="fargetLinje">9.4. Læringsressurser</h2>
+               </div>
+               <!-- _____________________ Læringsressurser _____________________ -->
+               <a target="_blank" rel="noreferrer noopener" href="https://flukeout.github.io/" title="flukeout.github.io" alt="Lenke til flukeout.github.io" class="rundRamme ixD xSB kategoriLenke css">
+                  <h5 class="kategoriKnappTittel"><span>9.4.1. </span>CSS Dinder: Et spill<span> laget for å lære </span>om CSS Grid<span> Layout</span></h5>
+                  <div class="kategoriKnappIkon rundRamme ixD nB">
+                     <div class="op_ikon maskeOppdragEksternOutline fargetFyll displayOutline"></div>
+                     <div class="op_ikon maskeOppdragEksternFill fargetFyll displayFill"></div>
+                  </div>
+               </a>
+               <!-- _____________________ Læringsressurser _____________________ -->
+               <a target="_blank" rel="noreferrer noopener" href="https://cssgridgarden.com/" title="cssgridgarden.com" alt="Lenke til cssgridgarden.com" class="rundRamme ixD xSB kategoriLenke css">
+                  <h5 class="kategoriKnappTittel"><span>9.4.2. </span>CSS Grid Garden: Et spill<span> laget for å lære </span>om CSS Grid<span> Layout</span></h5>
+                  <div class="kategoriKnappIkon rundRamme ixD nB">
+                     <div class="op_ikon maskeOppdragEksternOutline fargetFyll displayOutline"></div>
+                     <div class="op_ikon maskeOppdragEksternFill fargetFyll displayFill"></div>
+                  </div>
+               </a>
+               <!-- _____________________ Læringsressurser _____________________ -->
+               <a target="_blank" rel="noreferrer noopener" href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" title="www.freecodecamp.org/responsive-web-design" alt="Lenke til www.freecodecamp.org" class="rundRamme ixD xSB kategoriLenke html css">
+                  <h5 class="kategoriKnappTittel"><span>9.4.3. </span>FreeCodeCamp: Responsiv webutvikling</h5>
+                  <div class="kategoriKnappIkon rundRamme ixD nB">
+                     <div class="op_ikon maskePlanOutline fargetFyll displayOutline"></div>
+                     <div class="op_ikon maskePlanFill fargetFyll displayFill"></div>
+                  </div>
+               </a>
+               <!-- _____________________ Læringsressurser _____________________ -->
+               <a target="_blank" rel="noreferrer noopener" href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" title="www.freecodecamp.org/javascript-algorithms-and-data-structures" alt="Lenke til www.freecodecamp.org" class="rundRamme ixD xSB kategoriLenke javascript">
+                  <h5 class="kategoriKnappTittel"><span>9.4.4. </span>FreeCodeCamp: JavaScript-utvikling<span> algoritmer og datastrukturer</span></h5>
+                  <div class="kategoriKnappIkon rundRamme ixD nB">
+                     <div class="op_ikon maskePlanOutline fargetFyll displayOutline"></div>
+                     <div class="op_ikon maskePlanFill fargetFyll displayFill"></div>
+                  </div>
+               </a>
+               <!-- _____________________ Læringsressurser _____________________ -->
+               <a target="_blank" rel="noreferrer noopener" href="https://www.freecodecamp.org/learn/front-end-development-libraries/" title="www.freecodecamp.org/front-end-development-libraries" alt="Lenke til www.freecodecamp.org" class="rundRamme ixD xSB kategoriLenke javascript">
+                  <h5 class="kategoriKnappTittel"><span>9.4.5. </span>FreeCodeCamp: Bootstrap frontend-utvikling<span> med kodebibliotek</span></h5>
+                  <div class="kategoriKnappIkon rundRamme ixD nB">
+                     <div class="op_ikon maskePlanOutline fargetFyll displayOutline"></div>
+                     <div class="op_ikon maskePlanFill fargetFyll displayFill"></div>
+                  </div>
+               </a>
+            </section>
          </div>
       </main>
       <footer>

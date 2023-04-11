@@ -55,13 +55,15 @@ a:active {
 ul li p::before {
    color: var(--clr-smaragd);
 }
-
 .fargetFilter {
    background-color: var(--clr-smaragd);
    color: var(--clr-bakgrunn);
 }
-
 .kategoriFilter button:hover,
 .kategoriFilter button:focus-visible {
    border: 2px solid var(--clr-smaragd);
+}
+.hovedmenyKnappAktiv h3 {
+   text-decoration: 2px underline var(--clr-smaragd);
+   text-underline-offset: 3px;
 }
