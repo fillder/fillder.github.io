@@ -413,6 +413,10 @@ header {
    padding: 0.8rem;
    z-index: 110;
 }
+.fargetHeroLinje {
+   text-decoration: 4px underline var(--clr-spessartin);
+   text-underline-offset: 4px;
+}
 /*______ Main ______*/
 .mainMedHeader {
    margin-top: 450px;
@@ -494,19 +498,19 @@ header {
 }
 /*______ Liste ______*/
 ul {
-   list-style: none; /* Remove default bullets */
+   list-style: none;
    margin-block-end: 1rem;
 }
 ul li {
    margin-left: 1em;
 }
 ul li p::before {
-   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-   color: var(--clr-tekst); /* Change the color */
-   font-weight: bold; /* If you want it to be bold */
-   display: inline-block; /* Needed to add space between the bullet and the text */
-   width: 1em; /* Also needed for space (tweak if needed) */
-   margin-left: -1em; /* Also needed for space (tweak if needed) */
+   content: "\2022";
+   color: var(--clr-tekst);
+   font-weight: bold;
+   display: inline-block;
+   width: 1em;
+   margin-left: -1em;
 }
 ul li a button {
    margin-left: -1em;

@@ -51,15 +51,8 @@
       max-width: 80vw;
       max-width: 80dvw;
    }
-   .oppdragsSideBilde {
+   /* .oppdragsSideBilde {
       margin-inline-end: -1rem;
-   }
-   /* .op_spice :first-child,
-   .op_tid :first-child {
-      margin-inline-end: 0;
-   } */
-   /* .op_spice {
-      padding-inline: 0.5rem;
    } */
    .infoKnappDesk {
       display: none;
@@ -72,7 +65,7 @@
       min-width: 50px;
    }
    .op_tid {
-      min-width: 100px;
+      min-width: 115px;
    }
    .kategoriKnappTittel {
       padding-inline-end: 0.5rem;
@@ -174,6 +167,9 @@
    }
    .kategoriKnappTittel span {
       display: none;
+   }
+   .op_tid {
+      min-width: 95px;
    }
 }
 @media screen and (max-width: 600px) {

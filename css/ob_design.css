@@ -1,7 +1,3 @@
-.fargetHeroLinje {
-   text-decoration: 4px underline var(--clr-spessartin);
-   text-underline-offset: 4px;
-}
 /*______ Grid Oppdragsbank ______*/
 .ob_hovedsideGrid {
    display: grid;
@@ -383,7 +379,7 @@ table thead tr th {
 .op_tid {
    display: flex;
    min-width: 150px;
-   padding-inline: 1rem;
+   padding-inline: 0.5rem;
    align-items: center;
 }
 .op_ikon {
@@ -461,7 +457,7 @@ table thead tr th {
 .ressursGrid {
    grid-area: res;
    position: relative;
-   padding-inline-end: 1.8rem;
+   /* padding-inline-end: 1.8rem; */
 }
 .bildeGrid {
    grid-area: gal;
@@ -487,14 +483,18 @@ table thead tr th {
    width: 24rem;
    float: right;
    clear: right;
-   margin-inline-end: -2rem;
-   margin-inline-start: 0.6rem;
-   margin-block: 0.5rem;
+   /* margin-inline-end: -2rem; */
+   /* margin-inline-start: 0.6rem; */
+   margin-inline-start: 0.5rem;
+   margin-inline-end: 1rem;
+   margin-block-start: 1rem;
+   margin-block-end: 0.5rem;
    cursor: pointer;
 }
 .oppdragGrid p,
 .infoGrid p,
-.ressursGrid p {
+.ressursGrid p,
+.oppdragGrid .kategoriKnappInfo {
    /* margin-block-start: 0.2rem; */
    margin-block-end: 1rem;
 }
@@ -503,4 +503,16 @@ table thead tr th {
 .ressursGrid h3,
 .bildeGrid h3 {
    margin-block-end: 0.5rem;
+}
+.ressursGrid a h5 {
+   margin-block-end: 0.5rem;
+}
+
+.oppdragGrid .kategoriKnappInfo .op_spice {
+   min-width: min-content;
+   padding-inline-end: 1rem;
+}
+.oppdragGrid .kategoriKnappInfo .op_tid {
+   min-width: min-content;
+   padding-inline-end: 1rem;
 }

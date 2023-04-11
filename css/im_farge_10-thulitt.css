@@ -4,10 +4,9 @@ a:visited {
    cursor: pointer;
    text-decoration: none;
 }
-a:hover,
-a:focus-visible,
-a:active {
-   color: var(--clr-spessartin);
+a:hover h5:first-of-type,
+a:focus-visible h5:first-of-type,
+a:active h5:first-of-type {
    text-decoration: 2px underline var(--clr-thulitt);
    text-underline-offset: 3px;
 }
