@@ -165,6 +165,9 @@
    .kategoriFilter span {
       display: none;
    }
+   .kategoriFilter {
+      flex-wrap: wrap;
+   }
    .kategoriKnappTittel span {
       display: none;
    }

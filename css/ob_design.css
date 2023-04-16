@@ -323,13 +323,14 @@ table thead tr th {
 }
 .kategoriFilter {
    display: flex;
+   gap: 1rem;
+   justify-content: center;
 }
 .kategoriFilter > * {
    flex-grow: 1;
    flex-shrink: 1;
    flex-basis: 150px;
    max-width: 200px;
-   margin-inline-end: 0.5rem;
    font-family: "Roboto", sans-serif;
    color: var(--clr-tekst);
    line-height: 1.5;

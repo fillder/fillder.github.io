@@ -165,6 +165,9 @@ button {
    background: none;
    cursor: pointer;
 }
+.kategoriFilter div {
+   text-align: center;
+}
 a {
    cursor: pointer;
    text-decoration: none;
