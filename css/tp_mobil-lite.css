@@ -64,7 +64,8 @@
    footer {
       display: none;
    }
-   .lB {
+   .lB,
+   .sB {
       border-width: 1px 1px 3px 3px;
    }
 }
