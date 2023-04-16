@@ -4,9 +4,9 @@ a:visited {
    cursor: pointer;
    text-decoration: none;
 }
-a:hover h5:first-of-type,
-a:focus-visible h5:first-of-type,
-a:active h5:first-of-type {
+a:hover h5:not(.infoKnappDesk, .infoKnappMob),
+a:focus-visible h5:not(.infoKnappDesk, .infoKnappMob),
+a:active h5:not(.infoKnappDesk, .infoKnappMob) {
    text-decoration: 2px underline var(--clr-rubin);
    text-underline-offset: 3px;
 }

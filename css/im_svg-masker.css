@@ -65,7 +65,32 @@
    -webkit-mask: url(/svg/ob_10_ai.svg) no-repeat center;
    mask: url(/svg/ob_10_ai.svg) no-repeat center;
 }
-.maskeSpiceMob {
+.maskeSpiceMob0 {
+   opacity: 0.2;
+   -webkit-mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
+   mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
+}
+.maskeSpiceMob1 {
+   opacity: 0.36;
+   -webkit-mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
+   mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
+}
+.maskeSpiceMob2 {
+   opacity: 0.52;
+   -webkit-mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
+   mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
+}
+.maskeSpiceMob3 {
+   opacity: 0.68;
+   -webkit-mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
+   mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
+}
+.maskeSpiceMob4 {
+   opacity: 0.84;
+   -webkit-mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
+   mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
+}
+.maskeSpiceMob5 {
    -webkit-mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
    mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
 }
@@ -429,4 +454,4 @@
 .maskeMenyOutline {
    -webkit-mask: url(/svg/im/im_meny_outline.svg) no-repeat center;
    mask: url(/svg/im/im_meny_outline.svg) no-repeat center;
-} ;
+}
