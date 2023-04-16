@@ -110,7 +110,7 @@ footer {
    width: 2rem;
    height: 100%;
 }
-.pilNeste,
+/* .pilNeste,
 .pilForrige {
    display: none;
 }
@@ -118,4 +118,13 @@ footer {
 .pilNeste[disabled] {
    opacity: 0.2;
    cursor: default;
+} */
+
+.ukeNav:hover:not(.utilgjengelig) .displayOutline,
+.ukeNav:focus-visible:not(.utilgjengelig) .displayOutline {
+   display: none;
+}
+.ukeNav:hover:not(.utilgjengelig) .displayFill,
+.ukeNav:focus-visible:not(.utilgjengelig) .displayFill {
+   display: block;
 }

@@ -1,14 +1,20 @@
 /*______ Navigasjon ______*/
-.maskeTilbake {
+.maskeTilbakeOutline {
    -webkit-mask: url(/svg/tp/tp_pil-tilbake_outline.svg) no-repeat center;
-   mask: url(/svg/nav_pil-tilbake.svg) no-repeat center;
+   mask: url(/svg/tp/tp_pil-tilbake_outline.svg) no-repeat center;
 }
-.maskeNeste {
-   -webkit-mask: url(/svg/nav_pil-neste.svg) no-repeat center;
-   mask: url(/svg/nav_pil-neste.svg) no-repeat center;
+.maskeTilbakeFill {
+   -webkit-mask: url(/svg/tp/tp_pil-tilbake_fill.svg) no-repeat center;
+   mask: url(/svg/tp/tp_pil-tilbake_fill.svg) no-repeat center;
 }
-
-/*______ Oppdragsbanken ______*/
+.maskeNesteOutline {
+   -webkit-mask: url(/svg/tp/tp_pil-neste_outline.svg) no-repeat center;
+   mask: url(/svg/tp/tp_pil-neste_outline.svg) no-repeat center;
+}
+.maskeNesteFill {
+   -webkit-mask: url(/svg/tp/tp_pil-neste_fill.svg) no-repeat center;
+   mask: url(/svg/tp/tp_pil-neste_fill.svg) no-repeat center;
+}
 .maskeGrafisk {
    background-color: var(--clr-rubin);
    -webkit-mask: url(/svg/ob_1_2d-grafikk.svg) no-repeat center;
@@ -103,7 +109,6 @@
    -webkit-mask: url(/svg/ob_kryss.svg) no-repeat center;
    mask: url(/svg/ob_kryss.svg) no-repeat center;
 }
-/*______ Ressursbanken ______*/
 .maskeDialog {
    -webkit-mask: url(/svg/rb_ikon-dialog.svg) no-repeat center;
    mask: url(/svg/rb_ikon-dialog.svg) no-repeat center;
@@ -136,8 +141,6 @@
    -webkit-mask: url(/svg/rb_ikon-vurdering.svg) no-repeat center;
    mask: url(/svg/rb_ikon-vurdering.svg) no-repeat center;
 }
-
-/*______ Timeplan ______*/
 .maskeWorkshop {
    background-color: var(--clr-ametyst);
    -webkit-mask: url(/svg/tp_fagikon-workshop.svg) no-repeat center;
@@ -191,9 +194,6 @@
    -webkit-mask: url(/svg/tp_pilNesteDag.svg) no-repeat center;
    mask: url(/svg/tp_pilNesteDag.svg) no-repeat center;
 }
-
-/* _____ Oppdragsbank - hovedside _____ */
-
 .maskePortfolioOutline {
    -webkit-mask: url(/svg/ob/ob_portfolio_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_portfolio_outline.svg) no-repeat center;
@@ -242,7 +242,6 @@
    -webkit-mask: url(/svg/ob/ob_print_fill.svg) no-repeat center;
    mask: url(/svg/ob/ob_print_fill.svg) no-repeat center;
 }
-
 .maskeGrafiskOutline {
    -webkit-mask: url(/svg/ob/ob_grafisk-outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_grafisk-outline.svg) no-repeat center;
@@ -315,8 +314,6 @@
    -webkit-mask: url(/svg/ob/ob_ai-fill.svg) no-repeat center;
    mask: url(/svg/ob/ob_ai-fill.svg) no-repeat center;
 }
-
-/* _____ Oppdragsbank - kategoriside _____ */
 .maskeOppdragEksternOutline {
    -webkit-mask: url(/svg/ob/ob_eksternt-oppdrag_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_eksternt-oppdrag_outline.svg) no-repeat center;
@@ -373,7 +370,6 @@
    -webkit-mask: url(/svg/ob/ob_plan_fill.svg) no-repeat center;
    mask: url(/svg/ob/ob_plan_fill.svg) no-repeat center;
 }
-/* _____ Oppdragsbank - Oppdragiside _____ */
 .maskeModulInfo {
    -webkit-mask: url(/svg/ob/ob_info_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_info_outline.svg) no-repeat center;
@@ -386,7 +382,6 @@
    -webkit-mask: url(/svg/ob/ob_nettressurs_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_nettressurs_outline.svg) no-repeat center;
 }
-/* __________ Index __________ */
 .maskeUkerOutline {
    -webkit-mask: url(/svg/ob/ob_uker_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_uker_outline.svg) no-repeat center;
@@ -411,8 +406,6 @@
    -webkit-mask: url(/svg/ob/ob_eksamen_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_eksamen_outline.svg) no-repeat center;
 }
-
-/* __________ Timeplan __________ */
 .maskeF21Fill {
    -webkit-mask: url(/svg/tp/tp_f21_fill.svg) no-repeat center;
    mask: url(/svg/tp/tp_f21_fill.svg) no-repeat center;
@@ -421,8 +414,6 @@
    -webkit-mask: url(/svg/tp/tp_f21_outline.svg) no-repeat center;
    mask: url(/svg/tp/tp_f21_outline.svg) no-repeat center;
 }
-
-/* __________ Nav __________ */
 .maskeIndexFill {
    -webkit-mask: url(/svg/im/im_home_fill.svg) no-repeat center;
    mask: url(/svg/im/im_home_fill.svg) no-repeat center;
@@ -438,4 +429,4 @@
 .maskeMenyOutline {
    -webkit-mask: url(/svg/im/im_meny_outline.svg) no-repeat center;
    mask: url(/svg/im/im_meny_outline.svg) no-repeat center;
-}
+} ;
