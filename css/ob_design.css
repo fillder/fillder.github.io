@@ -492,9 +492,9 @@ table thead tr th {
    margin-block-end: 0.5rem;
    cursor: pointer;
 }
-.oppdragGrid p,
-.infoGrid p,
-.ressursGrid p,
+.oppdragGrid p:not(li p),
+.infoGrid p:not(li p),
+.ressursGrid p:not(li p),
 .oppdragGrid .kategoriKnappInfo {
    /* margin-block-start: 0.2rem; */
    margin-block-end: 1rem;
