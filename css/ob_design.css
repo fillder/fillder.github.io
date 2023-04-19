@@ -480,8 +480,6 @@ table thead tr th {
    float: right;
 }
 .oppdragsSideBilde {
-   height: auto;
-   width: 24rem;
    float: right;
    clear: right;
    margin-inline-start: 0.5rem;
@@ -489,26 +487,27 @@ table thead tr th {
    margin-block-start: 1rem;
    margin-block-end: 0.5rem;
 }
-.oppdragsSideBildeLite {
+.horisontaltStandard {
    height: auto;
-   width: 18rem;
-   float: right;
-   clear: right;
-   margin-inline-start: 0.5rem;
-   margin-inline-end: 1rem;
-   margin-block-start: 1rem;
-   margin-block-end: 1rem;
+   width: 24rem;
 }
-.oppdragsSideBildeBredde {
-   height: 10rem;
+.vertikaltStandard {
+   height: auto;
+   width: 14rem;
+}
+.vertikaltSmalt {
+   height: auto;
+   width: 10rem;
+}
+.horisontaltSmalt {
+   height: 6.5rem;
    width: auto;
-   float: right;
-   clear: right;
-   margin-inline-start: 0.5rem;
-   margin-inline-end: 1rem;
-   margin-block-start: 1rem;
-   margin-block-end: 1rem;
 }
+.kvadratisk {
+   height: auto;
+   width: 16rem;
+}
+
 .hvitBakgrunn {
    background-color: whitesmoke;
 }
