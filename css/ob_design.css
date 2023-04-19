@@ -507,11 +507,9 @@ table thead tr th {
    height: auto;
    width: 16rem;
 }
-
 .hvitBakgrunn {
    background-color: whitesmoke;
 }
-
 .oppdragGrid p:not(li p),
 .infoGrid p:not(li p),
 .ressursGrid p:not(li p),
