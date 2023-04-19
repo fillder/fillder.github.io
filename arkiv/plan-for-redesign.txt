@@ -1,0 +1,25 @@
+HTML:
+- Finn en metode for å være konsekvent på et oppdrag sin nettsidetittel, knappteksttittel og headertittel, både for mobil og desktop
+
+CSS:
+-   En rejustering av stilark med en bredere definering av margin, padding, border og effekter, 
+    som kan videre defineres i sett ved hjelp av TypeScript for å lage lett gjennbrukbar kode.
+
+
+JavaScript:
+-   Skriv JavaScript-koden på nytt med TypeScript som fundament
+-   Gjør så mye som mulig dynamisk, dvs. ikke deklarer noe mer enn en gang. 
+    --  Spiciness kan gjøres til en kommando, hvor en klasse gjør at riktig bilde og tekst vises på desktop og mobil
+    --  En Brødsmulemeny som generer seg automatisk basert på hvor i hierakiet man befinner seg
+    --  En favoritt-funksjonalitet som er knyttet til localStorage
+    --  En responsiv erstattning for span og infoDesk/infoMob
+    --  En logikk for bilder, som gjør at alle <img>-elementer i dokumentet leses for å generere en dynamisk bildefremvisning med bildeKarusell,
+        rekkefølgen de står i HTML er nummeret de får designert i bildekarusellen. 
+    --  En dynamisk hovedmeny som ikke trenger alle knappene listet opp manuelt for hvert HTML-dokumentet
+    --  En dynamisk kategorimeny, som ser etter HTML-dokumenter som starter med tall, 
+        og deretter henter den nøkkelinformasjon som tittel, spiciness og tid for å generere en knapp.
+    --  Dynamiske navn til cross-refrence lenker i tekst, altså dersom en oppdrag referer til et annet oppdrag, så legges inn lenke og/eller navn som fikser begge delene dynamisk 
+        
+    --  En mal som kan brukes av andre lærere for å sende inn nye oppdrag
+    --  Et dynamisk Tag-system, som kan settes opp sammen med oppdraget, slik at det får riktig plassering
+    --  En automatisk sortering for nye oppdrag som først sorterer og nummererer oppdrag etter kategori og så vanskelighetsgrad, og deretter oppdaterer alle andre oppdragsnummer samt lenkereferanser i tekst. 

@@ -129,7 +129,7 @@ h2 {
    font-weight: 700;
 }
 h3 {
-   font-size: clamp(1rem, 1.4vw, 1.4rem);
+   font-size: clamp(1rem, 1.1vw, 1.2rem);
    font-weight: 500;
 }
 h4 {
@@ -164,6 +164,9 @@ button {
    border: none;
    background: none;
    cursor: pointer;
+}
+.kategoriFilter div {
+   text-align: center;
 }
 a {
    cursor: pointer;
@@ -285,19 +288,43 @@ nav {
    margin-inline-start: -2.5rem;
    z-index: 90;
 }
-.hovedmenyKnapp,
-.hovedmenyKnappNoHover {
+.hovedmenyKnapp {
+   position: relative;
    display: grid;
    grid-template-columns: auto 1fr;
    align-items: center;
-   padding: 0.5rem;
+   padding-block: 0.25rem;
+   padding-inline-start: 0.25rem;
+   padding-inline-end: 0.75rem;
+   margin-block: 0.25rem;
    transition: all 0.1s ease-in-out;
 }
 .hovedmenyKnapp:hover:not(.utilgjengelig),
 .hovedmenyKnapp:focus-visible:not(.utilgjengelig) {
    transition: all 0.1s ease-in-out;
    background-color: var(--clr-tabellBoks);
-   border-radius: 5px;
+   border-radius: 50rem;
+}
+.hovedmenyKnappAktiv {
+   display: grid;
+   grid-template-columns: auto 1fr;
+   align-items: center;
+   padding-block: 0.25rem;
+   padding-inline-start: 0.25rem;
+   padding-inline-end: 0.75rem;
+   background-color: var(--clr-tabellBoks);
+   border-radius: 50rem;
+}
+.hovedmenyKnappAktiv h3 {
+   text-decoration: 2px underline var(--clr-tekst);
+   text-underline-offset: 3px;
+}
+.hovedmenyPil {
+   position: absolute;
+   bottom: 0%;
+   left: 50%;
+   transform: translate(-50%, 60%);
+   z-index: 1000;
 }
 .displayOutline {
    display: block;
@@ -336,6 +363,15 @@ nav {
 .utilgjengelig {
    opacity: 0.2;
 }
+.linjeskille {
+   display: flex;
+   border: 0.25px solid var(--clr-tekst);
+   border-radius: 50rem;
+   width: 200px;
+   height: 0.5px;
+   margin-inline: 75px;
+   margin-block: 0.5rem;
+}
 /*______ headerområde ______*/
 header {
    margin-top: 50px;
@@ -370,13 +406,19 @@ header {
    color: whitesmoke;
 }
 .hero-emblem {
-   position: relative;
-   bottom: -83%;
+   position: absolute;
+   bottom: 0%;
+   left: 50%;
+   transform: translate(-50%, 45%);
    width: 120px;
    height: 120px;
    margin: auto;
    padding: 0.8rem;
    z-index: 110;
+}
+.fargetHeroLinje {
+   text-decoration: 4px underline var(--clr-spessartin);
+   text-underline-offset: 4px;
 }
 /*______ Main ______*/
 .mainMedHeader {
@@ -389,18 +431,15 @@ header {
    border-top-left-radius: clamp(0.8rem, 1.2rem, 1.2vw);
    border-bottom-left-radius: clamp(0.2rem, 0.4rem, 0.6vw);
    border-bottom-right-radius: clamp(0.8rem, 1.2rem, 1.2vw);
-   border-style: solid;
 }
 .sBoksRamme {
    border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
    border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
    border-bottom-left-radius: clamp(0.1rem, 0.2rem, 0.3vw);
    border-bottom-right-radius: clamp(0.4rem, 0.8rem, 0.8vw);
-   border-style: solid;
 }
 .rundRamme {
    border-radius: 50rem;
-   border-style: solid;
 }
 .tekst {
    background-color: var(--clr-tekstBoks);
@@ -414,18 +453,21 @@ header {
 }
 .xSB {
    border-color: var(--clr-ramme);
-   border-width: 1.5px 2px 3px 3px;
+   border-width: 1px 1px 2px 2px;
+   border-style: solid;
 }
 .nB {
-   border: 3px solid var(--clr-ramme);
+   border: 2px solid var(--clr-ramme);
 }
 .sB {
    border-color: var(--clr-ramme);
    border-width: 2px 2px 4px 4px;
+   border-style: solid;
 }
 .lB {
    border-width: 3px 3px 6px 6px;
    border-color: var(--clr-ramme);
+   border-style: solid;
 }
 .xSPA {
    /* xtra small asymmetric padding */
@@ -440,7 +482,10 @@ header {
 
 .xSPS {
    /* xtra small symmetric padding */
-   padding: 0.6rem;
+   padding: 0.4rem;
+}
+.xSPS2 {
+   padding: 0.5rem;
 }
 
 .sPS {
@@ -456,19 +501,19 @@ header {
 }
 /*______ Liste ______*/
 ul {
-   list-style: none; /* Remove default bullets */
+   list-style: none;
    margin-block-end: 1rem;
 }
 ul li {
    margin-left: 1em;
 }
 ul li p::before {
-   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-   color: var(--clr-tekst); /* Change the color */
-   font-weight: bold; /* If you want it to be bold */
-   display: inline-block; /* Needed to add space between the bullet and the text */
-   width: 1em; /* Also needed for space (tweak if needed) */
-   margin-left: -1em; /* Also needed for space (tweak if needed) */
+   content: "\2022";
+   color: var(--clr-tekst);
+   font-weight: bold;
+   display: inline-block;
+   width: 1em;
+   margin-left: -1em;
 }
 ul li a button {
    margin-left: -1em;

@@ -1,7 +1,3 @@
-.fargetHeroLinje {
-   text-decoration: 4px underline var(--clr-spessartin);
-   text-underline-offset: 4px;
-}
 /*______ Grid Oppdragsbank ______*/
 .ob_hovedsideGrid {
    display: grid;
@@ -98,7 +94,7 @@
    position: relative;
    min-width: 225px;
    padding: 0.5rem;
-   margin-inline-start: -2rem;
+   /* margin-inline-start: -2rem; */
    z-index: 100;
 }
 /*______ Kategoriside infoBokser ______*/
@@ -245,23 +241,15 @@
 .tid > * {
    margin-inline-end: 0.5rem;
 }
-.spiceIkon {
-   width: 125px;
-   height: 40px;
-}
-.tidIkon {
-   width: 40px;
-   height: 40px;
-}
 /*______ Oppdragskategori tabeller ______*/
 table thead tr th {
    padding-block: 0.5rem;
    padding-inline: 1rem;
    text-align: start;
 }
-.op_spice :first-child,
-.op_tid :first-child {
-   margin-inline-end: 1rem;
+.op_spice div,
+.op_tid div {
+   margin-inline-end: 0.5rem;
 }
 .op_knapp {
    width: max-content;
@@ -277,27 +265,6 @@ table thead tr th {
    transition: all 0.3s ease-in-out;
    transform: scale(1.02);
 }
-.op_spice {
-   display: flex;
-   padding-inline: 1rem;
-   align-items: center;
-}
-.op_tid {
-   display: flex;
-   width: max-content;
-   padding-inline: 1rem;
-   align-items: center;
-}
-.oppdragsIkon {
-   width: 60px;
-   height: 60px;
-   z-index: 100;
-   padding: 0.4rem;
-}
-.op_ikon {
-   width: 100%;
-   height: 100%;
-}
 .oppdragsTittel {
    position: relative;
    padding-block: 0.5rem;
@@ -305,6 +272,12 @@ table thead tr th {
    padding-inline-end: 2rem;
    margin-inline-start: -2.5rem;
    z-index: 90;
+}
+.oppdragsIkon {
+   width: 60px;
+   height: 60px;
+   z-index: 100;
+   padding: 0.4rem;
 }
 .oppdragsKnapp {
    display: grid;
@@ -315,19 +288,130 @@ table thead tr th {
    transition: all 0.1s ease-in-out;
    /* transform: scale(1); */
 }
-.oppdragsKnapp:hover:not(.utilgjengelig),
-.oppdragsKnapp:focus-visible:not(.utilgjengelig) {
-   transition: all 0.1s ease-in-out;
-   /* transform: scale(1.01); */
-   background-color: var(--clr-tabellBoks);
-   border-radius: 5px;
+/*___________________________________*/
+/*___________ kategoriSide __________*/
+/*___________________________________*/
+.filterMeny .kategoriFilter {
+   margin-block-start: 0.5rem;
+   margin-block-end: 1em;
+   margin-inline: 1rem;
 }
-.oppdragsKnapp:hover:not(.utilgjengelig) .displayOutline,
-.oppdragsKnapp:focus-visible:not(.utilgjengelig) .displayOutline {
+.kategoriSeksjon {
+   display: flex;
+   flex-direction: column;
+}
+.kategoriSeksjon button,
+.kategoriSeksjon a {
+   margin-block: 0.4rem;
+   margin-inline: 1rem;
+   position: relative;
+}
+.kategoriSeksjon {
+   padding-block-end: 0.5rem;
+}
+.kategoriHeader {
+   background-color: var(--clr-tabellBoks);
+   width: 100%;
+   padding-inline: 1rem;
+   padding-block: 0.5rem;
+   margin-block-end: 0.5rem;
+   border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
+   border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
+}
+.kategoriHeader h2 {
+   margin-block-end: 0.5rem;
+}
+.kategoriFilter {
+   display: flex;
+   gap: 1rem;
+   justify-content: center;
+}
+.kategoriFilter > * {
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 150px;
+   max-width: 200px;
+   font-family: "Roboto", sans-serif;
+   color: var(--clr-tekst);
+   line-height: 1.5;
+   font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+   font-weight: 500;
+}
+.kategoriKnapp {
+   display: flex;
+   position: relative;
+   z-index: 80;
+   height: 2.5rem;
+   justify-content: space-between;
+}
+.kategoriKnapp > * {
+   margin-block: auto;
+}
+.kategoriLenke {
+   position: relative;
+   padding-block: 0.45rem;
+   z-index: 80;
+   height: 2.5rem;
+}
+.kategoriKnappTittel {
+   position: relative;
+   padding-inline-start: 3.4rem;
+   padding-inline-end: 2rem;
+   z-index: 90;
+}
+.kategoriKnappIkon {
+   position: absolute;
+   top: 50%;
+   transform: translate(-10%, -50%);
+   left: 0;
+   width: 50px;
+   height: 50px;
+   z-index: 100;
+   padding: 0.4rem;
+}
+.kategoriKnappInfo {
+   display: flex;
+}
+.op_spice {
+   display: flex;
+   align-items: center;
+   min-width: 200px;
+}
+.op_tid {
+   display: flex;
+   min-width: 150px;
+   padding-inline: 0.5rem;
+   align-items: center;
+}
+.op_ikon {
+   width: 100%;
+   height: 100%;
+}
+.spiceIkon {
+   width: 90px;
+   height: 30px;
+}
+.spiceIkonMob {
+   width: 18px;
+   height: 30px;
+}
+.tidIkon {
+   width: 30px;
+   height: 30px;
+}
+.hidden {
    display: none;
 }
-.oppdragsKnapp:hover:not(.utilgjengelig) .displayFill,
-.oppdragsKnapp:focus-visible:not(.utilgjengelig) .displayFill {
+.kategoriKnapp:hover:not(.utilgjengelig) .displayOutline,
+.kategoriKnapp:focus-visible:not(.utilgjengelig) .displayOutline,
+.kategoriLenke:hover:not(.utilgjengelig) .displayOutline,
+.kategoriLenke:focus-visible:not(.utilgjengelig) .displayOutline {
+   display: none;
+}
+.kategoriKnapp:hover:not(.utilgjengelig) .displayFill,
+.kategoriKnapp:focus-visible:not(.utilgjengelig) .displayFill,
+.kategoriLenke:hover:not(.utilgjengelig) .displayFill,
+.kategoriLenke:focus-visible:not(.utilgjengelig) .displayFill {
    display: block;
 }
 .flexInfoKnapp:hover:not(.utilgjengelig) .displayOutline,
@@ -362,37 +446,6 @@ table thead tr th {
    gal = Galleri
    */
 }
-.spiceEmblem {
-   position: absolute;
-   bottom: 0;
-   left: calc(50% - 8rem);
-   transform: translateX(-50%) translateY(40%);
-   width: 120px;
-   height: 50px;
-   margin: auto;
-   padding-block: 0.5rem;
-   z-index: 110;
-}
-.tidEmblem {
-   position: absolute;
-   bottom: 0;
-   left: calc(50% + 8rem);
-   transform: translateX(-50%) translateY(40%);
-   width: 120px;
-   height: 50px;
-   margin: auto;
-   padding-block: 0.5rem;
-   z-index: 110;
-   display: flex;
-}
-.tidEmblem > * {
-   margin-inline-start: 0.5rem;
-   margin-block: auto;
-}
-.tidEmblem div {
-   max-width: 30px;
-}
-
 .oppdragGrid {
    grid-area: opp;
    position: relative;
@@ -405,7 +458,7 @@ table thead tr th {
 .ressursGrid {
    grid-area: res;
    position: relative;
-   padding-inline-end: 1.8rem;
+   /* padding-inline-end: 1.8rem; */
 }
 .bildeGrid {
    grid-area: gal;
@@ -427,35 +480,67 @@ table thead tr th {
    float: right;
 }
 .oppdragsSideBilde {
-   height: auto;
-   width: 24rem;
    float: right;
    clear: right;
-   margin-inline-end: -2rem;
-   margin-inline-start: 0.6rem;
-   margin-block-start: 0.2rem;
-   margin-block-end: 0.8rem;
-   cursor: pointer;
+   margin-inline-start: 0.5rem;
+   margin-inline-end: 1rem;
+   margin-block-start: 1rem;
+   margin-block-end: 0.5rem;
 }
-.oppdragGrid p,
-.infoGrid p,
-.ressursGrid p {
-   margin-block-start: 0.2rem;
+.horisontaltStandard {
+   height: auto;
+   width: 24rem;
+}
+.vertikaltStandard {
+   height: auto;
+   width: 14rem;
+}
+.vertikaltSmalt {
+   height: auto;
+   width: 10rem;
+}
+.horisontaltSmalt {
+   height: 6.5rem;
+   width: auto;
+}
+.kvadratisk {
+   height: auto;
+   width: 16rem;
+}
+.hvitBakgrunn {
+   background-color: whitesmoke;
+}
+.oppdragGrid p:not(li p),
+.infoGrid p:not(li p),
+.ressursGrid p:not(li p),
+.oppdragGrid .kategoriKnappInfo {
+   /* margin-block-start: 0.2rem; */
    margin-block-end: 1rem;
 }
+.oppdragGrid h3,
+.infoGrid h3,
+.ressursGrid h3,
 .bildeGrid h3 {
    margin-block-end: 0.5rem;
 }
-.hovedmenyKnapp:nth-child(2),
-.hovedmenyKnapp:nth-child(6) {
-   border-bottom: 1px solid var(--clr-tekst);
-   margin-bottom: 1rem;
-   padding-bottom: 1rem;
-}
-.hover2dMeny {
-   background-color: var(--clr-tekst);
+.ressursGrid a h5 {
+   margin-block-end: 0.5rem;
 }
 
-.hovedmenyKnapp .hover2dMeny {
-   background-color: var(--clr-rubin);
+.oppdragGrid .kategoriKnappInfo .op_spice {
+   min-width: min-content;
+   padding-inline-end: 1rem;
+}
+.oppdragGrid .kategoriKnappInfo .op_tid {
+   min-width: min-content;
+   padding-inline-end: 1rem;
+}
+.nettResFlex {
+   display: flex;
+   gap: 1rem;
+}
+.nettResFlex > * {
+   flex-basis: 200px;
+   flex-grow: 1;
+   flex-shrink: 1;
 }
