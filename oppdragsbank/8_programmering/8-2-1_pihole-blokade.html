@@ -11,17 +11,19 @@
       <link rel="stylesheet" type="text/css" href="/css/im_stilark.css" />
       <link rel="stylesheet" type="text/css" href="/css/im_dag-natt.css" />
       <link rel="stylesheet" type="text/css" href="/css/im_svg-masker.css" />
-      <link rel="stylesheet" type="text/css" href="/css/ob_design.css" />
-      <link rel="stylesheet" type="text/css" href="/css/ob_mobil.css" />
       <link rel="stylesheet" type="text/css" href="/css/im_farge_8-ametyst.css" />
+      <link rel="stylesheet" type="text/css" href="/css/ob_design.css" />
+      <link rel="stylesheet" type="text/css" href="/css/ob_bildegalleri.css" />
+      <link rel="stylesheet" type="text/css" href="/css/ob_mobil.css" />
       <link rel="icon" href="/images/ico/skolelogo.svg" type="image/svg+xml" />
       <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
       <script type="module" src="/js/im_hovedmeny.js"></script>
       <script type="module" src="/js/im_dag-natt.js"></script>
-      <script type="module" src="/js/ob_kategori-filter.js"></script>
       <!-- <script type="module" src="/js/im_hero-bilde.js"></script> -->
-      <title>8. Programmering</title>
+      <!-- <script type="module" src="/js/ob_bildekarusell.js"></script> -->
+      <script type="module" src="/js/ob_oppdragsbilde.js"></script>
+      <title>PiHole Blokade</title>
    </head>
 
    <body>
@@ -30,7 +32,7 @@
             <div class="navIkon maskeOppdragsbankOutline"></div>
          </a>
          <div class="logo">
-            <h1><b>OPPDRAGSBANK</b></h1>
+            <h1><b>8. Programmering</b></h1>
          </div>
          <button class="hamburgerIkon navIkon maskeMenyOutline"></button>
          <div class="overlayMeny"></div>
@@ -52,12 +54,20 @@
                <h3 class="rundRamme ixD xSB hovedmenyTittel">Kategoriside</h3>
                <h2 class="hovedmenyPil">﹀</h2>
             </a>
-            <a class="hovedmenyKnapp hovedmenyKnappAktiv" target="_self" rel="noreferrer noopener" href="/oppdragsbank/8_programmering.html" title="Programmering" alt="Naviger til oppdragskategori Programmering">
+            <a class="hovedmenyKnapp" target="_self" rel="noreferrer noopener" href="/oppdragsbank/8_programmering.html" title="Programmering" alt="Naviger til oppdragskategori Programmering">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
-                  <div class="hovedmenyIkon maskeUtviklingOutline displayOutline fargetFyll"></div>
-                  <div class="hovedmenyIkon maskeUtviklingFill displayFill fargetFyll"></div>
+                  <div class="hovedmenyIkon maskeUtviklingOutline displayOutline"></div>
+                  <div class="hovedmenyIkon maskeUtviklingFill displayFill"></div>
                </div>
                <h3 class="rundRamme ixD xSB hovedmenyTittel">8. Programmering</h3>
+            </a>
+            <!-- Menyknapp til oppdraget for hovermenyen -->
+            <a class="hovedmenyKnapp hovedmenyKnappAktiv" target="_self" rel="noreferrer noopener" href="/oppdragsbank/8_programmering/8-x-x_oppdragsmal.html" title="" alt="">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskeOppdragInternOutline displayOutline fargetFyll"></div>
+                  <div class="hovedmenyIkon maskeOppdragInternFill displayFill fargetFyll"></div>
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">Navn på oppdrag</h3>
             </a>
             <div class="linjeskille"></div>
             <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Visuell logg" alt="Naviger til Visuell logg">
@@ -122,7 +132,9 @@
       <header class="hero" id="hero">
          <img class="hero-bilde" src="/images/ob_kategoribanner-8_programmering.png" alt="bilde av en skjerm med kode" />
          <div class="hero-tittel fargetHeroLinje">
-            <h1><b>8. Programmering</b></h1>
+            <h1 class="infoDesk"><b>8.2.1. PiHole Blokade med Raspberry Pi</b></h1>
+            <h1 class="infoTab"><b>PiHole Blokade med Raspberry Pi</b></h1>
+            <h1 class="infoMob"><b>PiHole Blokade</b></h1>
          </div>
          <a target="_self" rel="noreferrer noopener" href="/oppdragsbank/8_programmering.html" title="Kategoriside" alt="Naviger til kategoriside">
             <div class="hero-emblem rundRamme ixD sB xLP" data-ikon="programmeringIkon">
@@ -131,94 +143,46 @@
          </a>
       </header>
       <main class="mainMedHeader">
-         <div class="ob_kategorisideGrid">
-            <section class="sBoksRamme sB tekst filterMeny">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">Filtermeny</h2>
+         <div class="ob_oppdragssideGrid">
+            <section aria-labelledby="Oppdragsbeskrivelse" class="sBoksRamme sB tekst oppdragGrid">
+               <div class="modulIkon rundRamme ixD nB">
+                  <div class="op_ikon maskeOppdragInternOutline fargetFyll"></div>
                </div>
-               <div class="kategoriFilter">
-                  <button type="button" data-filter="*" class="sBoksRamme nB xSPS ixD">Vis alt</button>
-                  <button type="button" data-filter=".raspberry" class="sBoksRamme nB xSPS ixD">Raspberry Pi</button>
-                  <div type="button" data-filter=".python" class="sBoksRamme nB xSPS ixD utilgjengelig">Python</div>
-               </div>
-            </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">8.1. Opplæring</h2>
-               </div>
-               <!-- ____ - ____ - ____ - ____ - ____ - Opplæring - ____ - ____ - ____ - ____ - ____ -->
-               <!-- <a target="_blank" rel="noreferrer noopener" href="" class="rundRamme ixD xSB kategoriKnapp">
-                  <h5 class="kategoriKnappTittel"><span>8.1.1. kategori: </span>navn</h5>
+               <img id="deskImg" class="boksRamme sB oppdragsSideBildeLite bildeDesk sPS hvitBakgrunn" src="/images/ob/kategori-8_utvikling/ob_8-raspberry.svg" alt="Logoen til Raspberry Pi" />
+               <div class="sPA oppdragsInfo">
+                  <h2 id="Oppdragsbeskrivelse" class="fargetLinje">Produkt</h2>
+                  <p><em>Lage et program i Raspberry Pi som heter PiHole, som kan blokkere bestemte nettsider.</em></p>
                   <div class="kategoriKnappInfo">
                      <div class="op_spice">
-                        <div class="infoKnappDesk spiceIkon maskeSpice0 fargetFyll"></div>
-                        <div class="infoKnappMob spiceIkonMob maskeSpiceMob0 fargetFyll"></div>
-                        <h5 class="infoKnappDesk">Uten krydder</h5>
-                        <h5 class="infoKnappMob">0/5</h5>
+                        <div class="spiceIkon maskeSpice2 fargetFyll"></div>
+                        <h5>Mild</h5>
                      </div>
                      <div class="op_tid">
                         <div class="tidIkon maskeTidTimer fargetFyll"></div>
-                        <h5 class="infoKnappDesk">≤1 timer</h5>
-                        <h5 class="infoKnappMob">≤1t</h5>
+                        <h5>9-12 timer</h5>
                      </div>
                   </div>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskeOppdragTutorialOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskeOppdragTutorialFill fargetFyll displayFill"></div>
+                  <h3 class="fargetLinje">Beskrivelse</h3>
+                  <p>Installer et OS i din Raspberry Pi og bruk SSH til å få kontakt med denne. Deretter kan du installere et program som heter PiHole. Med dette programmet så skal du blokkere facebook.com i ditt nettvek. Du trenger en ruter, en nettverkskabel og en Raspberry Pi</p>
+                  <h3 class="fargetLinje">Suksesskriterier</h3>
+                  <ul>
+                     <li>
+                        <p>Du viser at du kan løse problemer på egen hånd eller sammen med andre.</p>
+                     </li>
+                  </ul>
+                  <h3 id="nettressurser" class="fargetLinje">Nettressurser</h3>
+                  <div class="nettResFlex">
+                     <a target="_blank" rel="noreferrer noopener" href="https://youtu.be/5jA8wYqQLBU" class="sBoksRamme ixD sPA nB">
+                        <h5>Hva er Raspberry Pi?</h5>
+                     </a>
+                     <a target="_blank" rel="noreferrer noopener" href="https://youtu.be/KkAS7tavCYI" class="sBoksRamme ixD sPA nB">
+                        <h5>Hvordan installere PiHole</h5>
+                     </a>
                   </div>
-               </a> -->
-            </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">8.2. Oppdrag</h2>
                </div>
-               <!-- ___ -- ___ -- ___ -- ___ -- ___ -- Oppdrag -- ___ -- ___ -- ___ -- ___ -- ___ -->
-               <a target="_self" href="/oppdragsbank/8_programmering/8-2-1_pihole-blokade.html" class="rundRamme ixD xSB kategoriKnapp raspberry">
-                  <h5 class="kategoriKnappTittel"><span>8.2.1. Raspberry Pi: </span>PiHole Blokade</h5>
-                  <div class="kategoriKnappInfo">
-                     <div class="op_spice">
-                        <div class="infoKnappDesk spiceIkon maskeSpice1 fargetFyll"></div>
-                        <div class="infoKnappMob spiceIkonMob maskeSpiceMob1 fargetFyll"></div>
-                        <h5 class="infoKnappDesk">Mild</h5>
-                        <h5 class="infoKnappMob">2/5</h5>
-                     </div>
-                     <div class="op_tid">
-                        <div class="tidIkon maskeTidTimer fargetFyll"></div>
-                        <h5 class="infoKnappDesk">9-12 timer</h5>
-                        <h5 class="infoKnappMob">9-12t</h5>
-                     </div>
-                  </div>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskeOppdragInternOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskeOppdragInternFill fargetFyll displayFill"></div>
-                  </div>
-               </a>
             </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">8.3. Ressurser</h2>
-               </div>
-               <!-- __ --- __ --- __ --- __ --- __ --- Ressurs --- __ --- __ --- __ --- __ --- __ -->
-               <!-- <a target="_blank" rel="noreferrer noopener" href="" class="rundRamme ixD xSB kategoriLenke">
-                  <h5 class="kategoriKnappTittel"><span>8.3.1. kategori:</span> navn</h5>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskeOppdragRessursOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskeOppdragRessursFill fargetFyll displayFill"></div>
-                  </div>
-               </a> -->
-            </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">8.4. Læringsstier</h2>
-               </div>
-               <!-- _ ---- _ ---- _ ---- _ ---- _ ---- Læringssti ---- _ ---- _ ---- _ ---- _ ---- _ -->
-               <!-- <a target="_blank" rel="noreferrer noopener" href="" class="rundRamme ixD xSB kategoriLenke">
-                  <h5 class="kategoriKnappTittel"><span>8.4.1. kategori:</span> navn</h5>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskePlanOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskePlanFill fargetFyll displayFill"></div>
-                  </div>
-               </a> -->
+            <section aria-labelledby="Oppdragsbilde" class="mobilBildeGrid bildeMob">
+               <img id="mobImg" class="boksRamme sB oppdragsBildeMobil xLP hvitBakgrunn" src="" alt="" />
             </section>
          </div>
       </main>

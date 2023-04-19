@@ -484,14 +484,35 @@ table thead tr th {
    width: 24rem;
    float: right;
    clear: right;
-   /* margin-inline-end: -2rem; */
-   /* margin-inline-start: 0.6rem; */
    margin-inline-start: 0.5rem;
    margin-inline-end: 1rem;
    margin-block-start: 1rem;
    margin-block-end: 0.5rem;
-   cursor: pointer;
 }
+.oppdragsSideBildeLite {
+   height: auto;
+   width: 18rem;
+   float: right;
+   clear: right;
+   margin-inline-start: 0.5rem;
+   margin-inline-end: 1rem;
+   margin-block-start: 1rem;
+   margin-block-end: 1rem;
+}
+.oppdragsSideBildeBredde {
+   height: 10rem;
+   width: auto;
+   float: right;
+   clear: right;
+   margin-inline-start: 0.5rem;
+   margin-inline-end: 1rem;
+   margin-block-start: 1rem;
+   margin-block-end: 1rem;
+}
+.hvitBakgrunn {
+   background-color: whitesmoke;
+}
+
 .oppdragGrid p:not(li p),
 .infoGrid p:not(li p),
 .ressursGrid p:not(li p),
@@ -516,4 +537,13 @@ table thead tr th {
 .oppdragGrid .kategoriKnappInfo .op_tid {
    min-width: min-content;
    padding-inline-end: 1rem;
+}
+.nettResFlex {
+   display: flex;
+   gap: 1rem;
+}
+.nettResFlex > * {
+   flex-basis: 200px;
+   flex-grow: 1;
+   flex-shrink: 1;
 }

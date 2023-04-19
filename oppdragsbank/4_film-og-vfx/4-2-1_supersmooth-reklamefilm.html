@@ -11,17 +11,19 @@
       <link rel="stylesheet" type="text/css" href="/css/im_stilark.css" />
       <link rel="stylesheet" type="text/css" href="/css/im_dag-natt.css" />
       <link rel="stylesheet" type="text/css" href="/css/im_svg-masker.css" />
+      <link rel="stylesheet" type="text/css" href="/css/im_farge_4-smaragd.css" />
       <link rel="stylesheet" type="text/css" href="/css/ob_design.css" />
+      <link rel="stylesheet" type="text/css" href="/css/ob_bildegalleri.css" />
       <link rel="stylesheet" type="text/css" href="/css/ob_mobil.css" />
-      <link rel="stylesheet" type="text/css" href="/css/im_farge_8-ametyst.css" />
       <link rel="icon" href="/images/ico/skolelogo.svg" type="image/svg+xml" />
       <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
       <script type="module" src="/js/im_hovedmeny.js"></script>
       <script type="module" src="/js/im_dag-natt.js"></script>
-      <script type="module" src="/js/ob_kategori-filter.js"></script>
       <!-- <script type="module" src="/js/im_hero-bilde.js"></script> -->
-      <title>8. Programmering</title>
+      <!-- <script type="module" src="/js/ob_bildekarusell.js"></script> -->
+      <script type="module" src="/js/ob_oppdragsbilde.js"></script>
+      <title>Knuts Supersmoothie Reklamefilm</title>
    </head>
 
    <body>
@@ -30,7 +32,7 @@
             <div class="navIkon maskeOppdragsbankOutline"></div>
          </a>
          <div class="logo">
-            <h1><b>OPPDRAGSBANK</b></h1>
+            <h1><b>4. Film og VFX</b></h1>
          </div>
          <button class="hamburgerIkon navIkon maskeMenyOutline"></button>
          <div class="overlayMeny"></div>
@@ -52,12 +54,21 @@
                <h3 class="rundRamme ixD xSB hovedmenyTittel">Kategoriside</h3>
                <h2 class="hovedmenyPil">﹀</h2>
             </a>
-            <a class="hovedmenyKnapp hovedmenyKnappAktiv" target="_self" rel="noreferrer noopener" href="/oppdragsbank/8_programmering.html" title="Programmering" alt="Naviger til oppdragskategori Programmering">
+            <a class="hovedmenyKnapp" target="_self" rel="noreferrer noopener" href="/oppdragsbank/4_film-og-vfx.html" title="Film og VFX" alt="Naviger til oppdragskategori Film og VFX">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
-                  <div class="hovedmenyIkon maskeUtviklingOutline displayOutline fargetFyll"></div>
-                  <div class="hovedmenyIkon maskeUtviklingFill displayFill fargetFyll"></div>
+                  <div class="hovedmenyIkon maskeFilmOutline displayOutline"></div>
+                  <div class="hovedmenyIkon maskeFilmFill displayFill"></div>
                </div>
-               <h3 class="rundRamme ixD xSB hovedmenyTittel">8. Programmering</h3>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">4. Film og VFX</h3>
+               <h2 class="hovedmenyPil">﹀</h2>
+            </a>
+            <!-- Menyknapp til oppdraget for hovermenyen -->
+            <a class="hovedmenyKnapp hovedmenyKnappAktiv" target="_self" rel="noreferrer noopener" href="/oppdragsbank/4_film-og-vfx/4-x-x_oppdragsmal.html" title="" alt="">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskeOppdragInternOutline displayOutline fargetFyll"></div>
+                  <div class="hovedmenyIkon maskeOppdragInternFill displayFill fargetFyll"></div>
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">Navn på Oppdrag</h3>
             </a>
             <div class="linjeskille"></div>
             <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Visuell logg" alt="Naviger til Visuell logg">
@@ -120,105 +131,66 @@
          </div>
       </nav>
       <header class="hero" id="hero">
-         <img class="hero-bilde" src="/images/ob_kategoribanner-8_programmering.png" alt="bilde av en skjerm med kode" />
+         <img class="hero-bilde" src="/images/ob_kategoribanner-4_film.png" alt="bilde av en skjerm med kode" />
          <div class="hero-tittel fargetHeroLinje">
-            <h1><b>8. Programmering</b></h1>
+            <h1 class="infoDesk"><b>4.2.1. Knuts Supersmoothie Reklamefilm</b></h1>
+            <h1 class="infoTab"><b>Knuts Supersmoothie Reklamefilm</b></h1>
+            <h1 class="infoMob"><b>Smoothie Reklamefilm</b></h1>
          </div>
-         <a target="_self" rel="noreferrer noopener" href="/oppdragsbank/8_programmering.html" title="Kategoriside" alt="Naviger til kategoriside">
-            <div class="hero-emblem rundRamme ixD sB xLP" data-ikon="programmeringIkon">
-               <div class="svgIkon maskeProgrammering"></div>
+         <a target="_self" rel="noreferrer noopener" href="/oppdragsbank/4_film-og-vfx.html" title="Kategoriside" alt="Naviger til kategoriside">
+            <div class="hero-emblem rundRamme ixD sB xLP" data-ikon="filmIkon">
+               <div class="svgIkon maskeFilm"></div>
             </div>
          </a>
       </header>
       <main class="mainMedHeader">
-         <div class="ob_kategorisideGrid">
-            <section class="sBoksRamme sB tekst filterMeny">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">Filtermeny</h2>
+         <div class="ob_oppdragssideGrid">
+            <section aria-labelledby="Oppdragsbeskrivelse" class="sBoksRamme sB tekst oppdragGrid">
+               <div class="modulIkon rundRamme ixD nB">
+                  <div class="op_ikon maskeOppdragInternOutline fargetFyll"></div>
                </div>
-               <div class="kategoriFilter">
-                  <button type="button" data-filter="*" class="sBoksRamme nB xSPS ixD">Vis alt</button>
-                  <button type="button" data-filter=".raspberry" class="sBoksRamme nB xSPS ixD">Raspberry Pi</button>
-                  <div type="button" data-filter=".python" class="sBoksRamme nB xSPS ixD utilgjengelig">Python</div>
-               </div>
-            </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">8.1. Opplæring</h2>
-               </div>
-               <!-- ____ - ____ - ____ - ____ - ____ - Opplæring - ____ - ____ - ____ - ____ - ____ -->
-               <!-- <a target="_blank" rel="noreferrer noopener" href="" class="rundRamme ixD xSB kategoriKnapp">
-                  <h5 class="kategoriKnappTittel"><span>8.1.1. kategori: </span>navn</h5>
+               <img id="deskImg" class="boksRamme sB oppdragsSideBilde bildeDesk" src="/images/ob/kategori-9_web/ob_9-reklamenettside.PNG" alt="nesten kvadratisk bilde" />
+               <div class="sPA oppdragsInfo">
+                  <h2 id="Oppdragsbeskrivelse" class="fargetLinje">Produkt</h2>
+                  <p><em>En reklamefilm for «Knuts supersmoothie» og ev. en logo.</em></p>
                   <div class="kategoriKnappInfo">
                      <div class="op_spice">
-                        <div class="infoKnappDesk spiceIkon maskeSpice0 fargetFyll"></div>
-                        <div class="infoKnappMob spiceIkonMob maskeSpiceMob0 fargetFyll"></div>
-                        <h5 class="infoKnappDesk">Uten krydder</h5>
-                        <h5 class="infoKnappMob">0/5</h5>
+                        <div class="spiceIkon maskeSpice2 fargetFyll"></div>
+                        <h5>Mild</h5>
                      </div>
                      <div class="op_tid">
                         <div class="tidIkon maskeTidTimer fargetFyll"></div>
-                        <h5 class="infoKnappDesk">≤1 timer</h5>
-                        <h5 class="infoKnappMob">≤1t</h5>
+                        <h5>6-12 timer</h5>
                      </div>
                   </div>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskeOppdragTutorialOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskeOppdragTutorialFill fargetFyll displayFill"></div>
+                  <h3 class="fargetLinje">Beskrivelse</h3>
+                  <p>
+                     Ønsker du lære mer om videoredigering, samt hvordan legge på lyd til en enkel reklamefilm? I dette oppdraget setter du sammen videoklipp til en reklamefilm for "Knuts Supersmoothie". Oppdraget tar utgangspunkt i at du har litt kjennskap til Premiere Pro; at du har gjort enkel videoredigering,
+                     lagt på lyd og fargekorrigert fra før. Det er også mulig å gjøre oppgaven uten forkunnskap, følg da de ulike screencastene i lenken under. Du får tilgang til filmklipp, men må selv finne lydeffekter og musikk, samt lage en enkel logo for «Knuts supersmoothie».
+                  </p>
+                  <p>Etter at du har gjennomført dette oppdraget, kan du vurdere å lage en enkel nettside til reklamefilmen i oppdrag <a href="/oppdragsbank/9_webutvikling/9-2-1_reklamefilmnettside.html">9.2.1. Super Smooth Reklamefilmnettside!</a></p>
+                  <h3 class="fargetLinje">Suksesskriterier</h3>
+                  <ul>
+                     <li>
+                        <p>Du produserer innhold som har et tydelig budskap og som treffer målgruppen din</p>
+                     </li>
+                     <li>
+                        <p>Du bruker virkemidlene i historiefortellingen for å skape engasjement rettet mot en målgruppe</p>
+                     </li>
+                  </ul>
+                  <h3 id="nettressurser" class="fargetLinje">Nettressurser</h3>
+                  <div class="nettResFlex">
+                     <a target="_blank" rel="noreferrer noopener" href="https://app.elevkanalen.no/fag/1002/produkt/2057/del/16352/artikkel/134241" class="sBoksRamme ixD sPA nB">
+                        <h5>Last ned råmaterialet på Elevkanalen av TV2 skole</h5>
+                     </a>
+                     <a target="_blank" rel="noreferrer noopener" href="https://app.elevkanalen.no/fag/1002/produkt/1813/del/15866/artikkel/125045" class="sBoksRamme ixD sPA nB">
+                        <h5>Sjekk ut Elevkanalen sine ressurser om Premiere Pro</h5>
+                     </a>
                   </div>
-               </a> -->
-            </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">8.2. Oppdrag</h2>
                </div>
-               <!-- ___ -- ___ -- ___ -- ___ -- ___ -- Oppdrag -- ___ -- ___ -- ___ -- ___ -- ___ -->
-               <a target="_self" href="/oppdragsbank/8_programmering/8-2-1_pihole-blokade.html" class="rundRamme ixD xSB kategoriKnapp raspberry">
-                  <h5 class="kategoriKnappTittel"><span>8.2.1. Raspberry Pi: </span>PiHole Blokade</h5>
-                  <div class="kategoriKnappInfo">
-                     <div class="op_spice">
-                        <div class="infoKnappDesk spiceIkon maskeSpice1 fargetFyll"></div>
-                        <div class="infoKnappMob spiceIkonMob maskeSpiceMob1 fargetFyll"></div>
-                        <h5 class="infoKnappDesk">Mild</h5>
-                        <h5 class="infoKnappMob">2/5</h5>
-                     </div>
-                     <div class="op_tid">
-                        <div class="tidIkon maskeTidTimer fargetFyll"></div>
-                        <h5 class="infoKnappDesk">9-12 timer</h5>
-                        <h5 class="infoKnappMob">9-12t</h5>
-                     </div>
-                  </div>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskeOppdragInternOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskeOppdragInternFill fargetFyll displayFill"></div>
-                  </div>
-               </a>
             </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">8.3. Ressurser</h2>
-               </div>
-               <!-- __ --- __ --- __ --- __ --- __ --- Ressurs --- __ --- __ --- __ --- __ --- __ -->
-               <!-- <a target="_blank" rel="noreferrer noopener" href="" class="rundRamme ixD xSB kategoriLenke">
-                  <h5 class="kategoriKnappTittel"><span>8.3.1. kategori:</span> navn</h5>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskeOppdragRessursOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskeOppdragRessursFill fargetFyll displayFill"></div>
-                  </div>
-               </a> -->
-            </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">8.4. Læringsstier</h2>
-               </div>
-               <!-- _ ---- _ ---- _ ---- _ ---- _ ---- Læringssti ---- _ ---- _ ---- _ ---- _ ---- _ -->
-               <!-- <a target="_blank" rel="noreferrer noopener" href="" class="rundRamme ixD xSB kategoriLenke">
-                  <h5 class="kategoriKnappTittel"><span>8.4.1. kategori:</span> navn</h5>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskePlanOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskePlanFill fargetFyll displayFill"></div>
-                  </div>
-               </a> -->
+            <section aria-labelledby="Oppdragsbilde" class="mobilBildeGrid bildeMob">
+               <img id="mobImg" class="boksRamme sB oppdragsBildeMobil fargetHover" src="" alt="" />
             </section>
          </div>
       </main>

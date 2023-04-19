@@ -3,24 +3,20 @@
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    grid-gap: 1rem;
-   padding-bottom: 2.5rem;
 }
 .bildegalleri_tre {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-gap: 1rem;
-   padding-block-end: 1rem;
 }
 .bildegalleri_to {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    grid-gap: 1rem;
-   padding-block-end: 1rem;
 }
 .bildegalleri_en {
    display: grid;
    grid-template-columns: 1fr;
-   padding-block-end: 1rem;
 }
 .galleribilde {
    display: flex;
@@ -31,6 +27,9 @@
    width: 100%;
    height: 100%;
    object-fit: cover;
+}
+.galleriMedAlt {
+   padding-block-end: 2.5rem;
 }
 
 /*______ Bildegelleri ______*/

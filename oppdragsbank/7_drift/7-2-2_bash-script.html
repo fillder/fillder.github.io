@@ -11,17 +11,19 @@
       <link rel="stylesheet" type="text/css" href="/css/im_stilark.css" />
       <link rel="stylesheet" type="text/css" href="/css/im_dag-natt.css" />
       <link rel="stylesheet" type="text/css" href="/css/im_svg-masker.css" />
+      <link rel="stylesheet" type="text/css" href="/css/im_farge_7-safir.css" />
       <link rel="stylesheet" type="text/css" href="/css/ob_design.css" />
+      <link rel="stylesheet" type="text/css" href="/css/ob_bildegalleri.css" />
       <link rel="stylesheet" type="text/css" href="/css/ob_mobil.css" />
-      <link rel="stylesheet" type="text/css" href="/css/im_farge_8-ametyst.css" />
       <link rel="icon" href="/images/ico/skolelogo.svg" type="image/svg+xml" />
       <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
       <script type="module" src="/js/im_hovedmeny.js"></script>
       <script type="module" src="/js/im_dag-natt.js"></script>
-      <script type="module" src="/js/ob_kategori-filter.js"></script>
       <!-- <script type="module" src="/js/im_hero-bilde.js"></script> -->
-      <title>8. Programmering</title>
+      <!-- <script type="module" src="/js/ob_bildekarusell.js"></script> -->
+      <script type="module" src="/js/ob_oppdragsbilde.js"></script>
+      <title>Utforsk Bash-script</title>
    </head>
 
    <body>
@@ -30,7 +32,7 @@
             <div class="navIkon maskeOppdragsbankOutline"></div>
          </a>
          <div class="logo">
-            <h1><b>OPPDRAGSBANK</b></h1>
+            <h1><b>7. Drift</b></h1>
          </div>
          <button class="hamburgerIkon navIkon maskeMenyOutline"></button>
          <div class="overlayMeny"></div>
@@ -52,12 +54,21 @@
                <h3 class="rundRamme ixD xSB hovedmenyTittel">Kategoriside</h3>
                <h2 class="hovedmenyPil">﹀</h2>
             </a>
-            <a class="hovedmenyKnapp hovedmenyKnappAktiv" target="_self" rel="noreferrer noopener" href="/oppdragsbank/8_programmering.html" title="Programmering" alt="Naviger til oppdragskategori Programmering">
+            <a class="hovedmenyKnapp" target="_self" rel="noreferrer noopener" href="/oppdragsbank/7_drift.html" title="Drift" alt="Naviger til oppdragskategori Drift">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
-                  <div class="hovedmenyIkon maskeUtviklingOutline displayOutline fargetFyll"></div>
-                  <div class="hovedmenyIkon maskeUtviklingFill displayFill fargetFyll"></div>
+                  <div class="hovedmenyIkon maskeDriftOutline displayOutline"></div>
+                  <div class="hovedmenyIkon maskeDriftFill displayFill"></div>
                </div>
-               <h3 class="rundRamme ixD xSB hovedmenyTittel">8. Programmering</h3>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">7. Drift</h3>
+               <h2 class="hovedmenyPil">﹀</h2>
+            </a>
+            <!-- Menyknapp til oppdraget for hovermenyen -->
+            <a class="hovedmenyKnapp hovedmenyKnappAktiv" target="_self" rel="noreferrer noopener" href="/oppdragsbank/7_drift/7-x-x_oppdragsmal.html" title="" alt="">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskeOppdragInternOutline displayOutline fargetFyll"></div>
+                  <div class="hovedmenyIkon maskeOppdragInternFill displayFill fargetFyll"></div>
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">Navn på Oppdrag</h3>
             </a>
             <div class="linjeskille"></div>
             <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Visuell logg" alt="Naviger til Visuell logg">
@@ -120,105 +131,65 @@
          </div>
       </nav>
       <header class="hero" id="hero">
-         <img class="hero-bilde" src="/images/ob_kategoribanner-8_programmering.png" alt="bilde av en skjerm med kode" />
+         <img class="hero-bilde" src="/images/ob_kategoribanner-7_drift.png" alt="bilde av en skjerm med kode" />
          <div class="hero-tittel fargetHeroLinje">
-            <h1><b>8. Programmering</b></h1>
+            <h1 class="infoDesk"><b>7.2.2. Utforsk Bash-script (Mac)</b></h1>
+            <h1 class="infoTab"><b>Utforsk Bash-script (Mac)</b></h1>
+            <h1 class="infoMob"><b>Bash-script</b></h1>
          </div>
-         <a target="_self" rel="noreferrer noopener" href="/oppdragsbank/8_programmering.html" title="Kategoriside" alt="Naviger til kategoriside">
-            <div class="hero-emblem rundRamme ixD sB xLP" data-ikon="programmeringIkon">
-               <div class="svgIkon maskeProgrammering"></div>
+         <a target="_self" rel="noreferrer noopener" href="/oppdragsbank/7_drift.html" title="Kategoriside" alt="Naviger til kategoriside">
+            <div class="hero-emblem rundRamme ixD sB xLP" data-ikon="driftIkon">
+               <div class="svgIkon maskeDrift"></div>
             </div>
          </a>
       </header>
       <main class="mainMedHeader">
-         <div class="ob_kategorisideGrid">
-            <section class="sBoksRamme sB tekst filterMeny">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">Filtermeny</h2>
+         <div class="ob_oppdragssideGrid">
+            <section aria-labelledby="Oppdragsbeskrivelse" class="sBoksRamme sB tekst oppdragGrid">
+               <div class="modulIkon rundRamme ixD nB">
+                  <div class="op_ikon maskeOppdragInternOutline fargetFyll"></div>
                </div>
-               <div class="kategoriFilter">
-                  <button type="button" data-filter="*" class="sBoksRamme nB xSPS ixD">Vis alt</button>
-                  <button type="button" data-filter=".raspberry" class="sBoksRamme nB xSPS ixD">Raspberry Pi</button>
-                  <div type="button" data-filter=".python" class="sBoksRamme nB xSPS ixD utilgjengelig">Python</div>
-               </div>
-            </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">8.1. Opplæring</h2>
-               </div>
-               <!-- ____ - ____ - ____ - ____ - ____ - Opplæring - ____ - ____ - ____ - ____ - ____ -->
-               <!-- <a target="_blank" rel="noreferrer noopener" href="" class="rundRamme ixD xSB kategoriKnapp">
-                  <h5 class="kategoriKnappTittel"><span>8.1.1. kategori: </span>navn</h5>
+               <img id="deskImg" class="boksRamme sB oppdragsSideBilde bildeDesk" src="/images/ob/kategori-7_drift/ob_7-bash-script.PNG" alt="nesten kvadratisk bilde" />
+               <div class="sPA oppdragsInfo">
+                  <h2 id="Oppdragsbeskrivelse" class="fargetLinje">Produkt</h2>
+                  <p><em>Et script som lager en mappe med bestemte filer på skrivebordet.</em></p>
                   <div class="kategoriKnappInfo">
                      <div class="op_spice">
-                        <div class="infoKnappDesk spiceIkon maskeSpice0 fargetFyll"></div>
-                        <div class="infoKnappMob spiceIkonMob maskeSpiceMob0 fargetFyll"></div>
-                        <h5 class="infoKnappDesk">Uten krydder</h5>
-                        <h5 class="infoKnappMob">0/5</h5>
+                        <div class="spiceIkon maskeSpice1 fargetFyll"></div>
+                        <h5>Ekstra mild</h5>
                      </div>
                      <div class="op_tid">
                         <div class="tidIkon maskeTidTimer fargetFyll"></div>
-                        <h5 class="infoKnappDesk">≤1 timer</h5>
-                        <h5 class="infoKnappMob">≤1t</h5>
+                        <h5>3-9 timer</h5>
                      </div>
                   </div>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskeOppdragTutorialOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskeOppdragTutorialFill fargetFyll displayFill"></div>
+                  <h3 class="fargetLinje">Beskrivelse</h3>
+                  <p>
+                     Et bash-script er en kode du skriver i en tekstfil, som kan leses av terminalen. Du kan velge hva terminalen skal gjøre. Målet kan være at du lager en mappe på skrivebordet som heter «minMappe» og lager filene «index.html» og «style.css» inne i mappa. Dersom du er ukjent med terminalkode så er
+                     dette en fin nybegynneroppgave. Du trenger kun en MAC, med tilgang til nett.
+                  </p>
+                  <h3 class="fargetLinje">Suksesskriterier</h3>
+                  <ul>
+                     <li>
+                        <p>Du viser at du kan løse problemer på egen hånd eller sammen med andre.</p>
+                     </li>
+                  </ul>
+                  <h3 id="nettressurser" class="fargetLinje">Nettressurser</h3>
+                  <div class="nettResFlex">
+                     <a target="_blank" rel="noreferrer noopener" href="https://youtu.be/aKRYQsKR46I" class="sBoksRamme ixD sPA nB">
+                        <h5>Hvordan bruke terminal på MAC (Percy Grunwald - YouTube)</h5>
+                     </a>
+                     <a target="_blank" rel="noreferrer noopener" href="https://youtu.be/SPwyp2NG-bE" class="sBoksRamme ixD sPA nB">
+                        <h5>Hvorfor du trenger å lære Bash-script (NetworkChuck - YouTube)</h5>
+                     </a>
+                     <a target="_blank" rel="noreferrer noopener" href="https://youtu.be/v-F3YLd6oMw" class="sBoksRamme ixD sPA nB">
+                        <h5>Hvordan lage et Bash-script (Traversy Media - YouTube)</h5>
+                     </a>
                   </div>
-               </a> -->
-            </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">8.2. Oppdrag</h2>
                </div>
-               <!-- ___ -- ___ -- ___ -- ___ -- ___ -- Oppdrag -- ___ -- ___ -- ___ -- ___ -- ___ -->
-               <a target="_self" href="/oppdragsbank/8_programmering/8-2-1_pihole-blokade.html" class="rundRamme ixD xSB kategoriKnapp raspberry">
-                  <h5 class="kategoriKnappTittel"><span>8.2.1. Raspberry Pi: </span>PiHole Blokade</h5>
-                  <div class="kategoriKnappInfo">
-                     <div class="op_spice">
-                        <div class="infoKnappDesk spiceIkon maskeSpice1 fargetFyll"></div>
-                        <div class="infoKnappMob spiceIkonMob maskeSpiceMob1 fargetFyll"></div>
-                        <h5 class="infoKnappDesk">Mild</h5>
-                        <h5 class="infoKnappMob">2/5</h5>
-                     </div>
-                     <div class="op_tid">
-                        <div class="tidIkon maskeTidTimer fargetFyll"></div>
-                        <h5 class="infoKnappDesk">9-12 timer</h5>
-                        <h5 class="infoKnappMob">9-12t</h5>
-                     </div>
-                  </div>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskeOppdragInternOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskeOppdragInternFill fargetFyll displayFill"></div>
-                  </div>
-               </a>
             </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">8.3. Ressurser</h2>
-               </div>
-               <!-- __ --- __ --- __ --- __ --- __ --- Ressurs --- __ --- __ --- __ --- __ --- __ -->
-               <!-- <a target="_blank" rel="noreferrer noopener" href="" class="rundRamme ixD xSB kategoriLenke">
-                  <h5 class="kategoriKnappTittel"><span>8.3.1. kategori:</span> navn</h5>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskeOppdragRessursOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskeOppdragRessursFill fargetFyll displayFill"></div>
-                  </div>
-               </a> -->
-            </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">8.4. Læringsstier</h2>
-               </div>
-               <!-- _ ---- _ ---- _ ---- _ ---- _ ---- Læringssti ---- _ ---- _ ---- _ ---- _ ---- _ -->
-               <!-- <a target="_blank" rel="noreferrer noopener" href="" class="rundRamme ixD xSB kategoriLenke">
-                  <h5 class="kategoriKnappTittel"><span>8.4.1. kategori:</span> navn</h5>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskePlanOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskePlanFill fargetFyll displayFill"></div>
-                  </div>
-               </a> -->
+            <section aria-labelledby="Oppdragsbilde" class="mobilBildeGrid bildeMob">
+               <img id="mobImg" class="boksRamme sB oppdragsBildeMobil" src="" alt="" />
             </section>
          </div>
       </main>

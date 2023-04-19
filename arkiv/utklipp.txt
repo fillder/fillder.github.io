@@ -1155,3 +1155,80 @@ filterButtons.forEach(button => {
 });
 
 setActiveFilterButton(document.querySelector('[data-filter="*"]'));
+
+
+
+Hei, jeg jobber med å sette opp en sidemal. akkurat nå har jeg et grunnleggende oppsett, 
+hvor jeg har en infoboks med noe tekst og et bilde. Min midlertidige løsning er at når nettleseren er under 768px bred, 
+så blir bildet usynlig, mens en seksjon under infoboksenm med samme bildet blir synlig. Jeg ønsker ikke å måtte skrive
+bildeaddressen både i og under infoboksen. Finnes det en enkel måte å hente samme bilde på med Javascript slik at
+dette blir dynamisk?
+
+<section aria-labelledby="Oppdragsbeskrivelse" class="sBoksRamme sB tekst oppdragGrid">
+   <img class="boksRamme oppdragsSideBilde bildeDesk" src="/images/img1.jpg" alt="nesten kvadratisk bilde" />
+   <div class="sPA oppdragsInfo">
+      <h2 id="Oppdragsbeskrivelse" class="fargetLinje">Produkt</h2>
+      <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni!</em></p>
+      <div class="kategoriKnappInfo">
+         <div class="op_spice">
+            <div class="spiceIkon maskeSpice0 fargetFyll"></div>
+            <h5>Spiciness</h5>
+         </div>
+         <div class="op_tid">
+            <div class="tidIkon maskeTidTimer fargetFyll"></div>
+            <h5>X-X timer</h5>
+         </div>
+      </div>
+      <h3 class="fargetLinje">Beskrivelse</h3>
+      <p>
+         Lorem ipsum dolor sit amet consectetur...
+      </p>
+      <h3 class="fargetLinje">Suksesskriterier</h3>
+      <ul>
+         <li>
+            <p><b>Lorem ipsum</b>: dolor sit amet consectetur adipisicing elit.</p>
+         </li>
+      </ul>
+   </div>
+</section>
+<section aria-labelledby="Oppdragsbilde" class="mobilBildeGrid bildeMob">
+   <img class="boksRamme sB oppdragsBildeMobil" src="/images/img1.jpg" />
+</section>
+
+
+Relevant CSS: 
+.bildeMob,
+.tabMob {
+   display: none;
+}
+.infoKnappDesk {
+   display: block;
+}
+.infoKnappMob {
+   display: none;
+}
+
+@media screen and (max-width: 768px) {
+      .ob_oppdragssideGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto auto auto;
+      grid-template-areas:
+         "opp"
+         "bil"
+         "eks"
+         "res"
+         "gal";
+   }
+   .mobilBildeGrid {
+      grid-area: bil;
+   }
+   .tabDesk,
+   .bildeDesk {
+      display: none;
+   }
+   .tabMob,
+   .bildeMob {
+      display: block;
+   }
+}
