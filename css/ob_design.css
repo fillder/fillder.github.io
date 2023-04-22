@@ -446,6 +446,27 @@ table thead tr th {
    gal = Galleri
    */
 }
+.ob_oppdragssideGridAlt {
+   display: grid;
+   margin-block-start: 2.5rem;
+   row-gap: 1rem;
+   column-gap: 2rem;
+   width: 80%;
+   height: auto;
+   margin-inline: auto;
+   grid-template-columns: 1fr 0.6fr;
+   grid-template-rows: 1fr auto auto;
+   grid-template-areas:
+      "opp opp"
+      "eks eks"
+      "gal gal";
+   /*
+   opp = Oppdrag
+   eks = Ekstra info
+   res = Nettressurser
+   gal = Galleri
+   */
+}
 .oppdragGrid {
    grid-area: opp;
    position: relative;

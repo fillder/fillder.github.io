@@ -132,6 +132,17 @@
          "res"
          "gal";
    }
+   .ob_oppdragssideGridAlt {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto auto auto;
+      grid-template-areas:
+         "opp"
+         "bil"
+         "eks"
+         "res"
+         "gal";
+   }
    .mobilBildeGrid {
       grid-area: bil;
    }
