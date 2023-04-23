@@ -356,7 +356,6 @@ table thead tr th {
 .kategoriKnappTittel {
    position: relative;
    padding-inline-start: 3.4rem;
-   padding-inline-end: 2rem;
    z-index: 90;
 }
 .kategoriKnappIkon {

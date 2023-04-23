@@ -1,4 +1,16 @@
 /*______ Navigasjon ______*/
+.maskeOppdragsbank {
+   -webkit-mask: url(/svg/im/im_oppdragsbanken.svg) no-repeat center;
+   mask: url(/svg/im/im_oppdragsbanken.svg) no-repeat center;
+}
+.maskeTimeplan {
+   -webkit-mask: url(/svg/im/im_timeplanen.svg) no-repeat center;
+   mask: url(/svg/im/im_timeplanen.svg) no-repeat center;
+}
+.maskeRessursbank {
+   -webkit-mask: url(/svg/im/im_ressursbanken.svg) no-repeat center;
+   mask: url(/svg/im/im_ressursbanken.svg) no-repeat center;
+}
 .maskeTilbakeOutline {
    -webkit-mask: url(/svg/tp/tp_pil-tilbake_outline.svg) no-repeat center;
    mask: url(/svg/tp/tp_pil-tilbake_outline.svg) no-repeat center;

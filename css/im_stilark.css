@@ -196,7 +196,7 @@ nav {
    top: 0;
    left: 0;
    display: grid;
-   grid-template-columns: 0.2fr 1fr 0.2fr;
+   grid-template-columns: 1fr 1fr;
    grid-template-rows: 1fr;
    place-content: center;
    background-color: var(--clr-tekstBoks);
@@ -218,10 +218,6 @@ nav {
    width: 35px;
    height: 35px;
 }
-.maskeUkerOutline {
-   margin-inline-start: 0.5rem;
-}
-
 .logo {
    position: fixed;
    display: flex;
