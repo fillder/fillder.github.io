@@ -40,8 +40,8 @@
    gap: 0.5rem;
    grid:
       "d3" 0.4fr
-      ".." 1fr
-      ".." 1fr
+      "ev" 1fr
+      "ev" 1fr
       "m2" 1fr
       "m2" 1fr
       ".." 0.1fr
@@ -139,7 +139,10 @@
    grid-area: p3;
    margin-bottom: -4rem;
 }
-
+.event {
+   grid-area: ev;
+   margin-block: 2rem;
+}
 /* torsdag */
 .torsdag {
    grid-area: d4;

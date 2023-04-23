@@ -9,13 +9,20 @@ CSS:
 JavaScript:
 -   Skriv JavaScript-koden på nytt med TypeScript som fundament
 -   Gjør så mye som mulig dynamisk, dvs. ikke deklarer noe mer enn en gang. 
+    Generelt
+    --  En dynamisk hovedmeny som ikke trenger alle knappene listet opp manuelt for hvert HTML-dokumentet
+    
+    Timeplan
+    --  En dynamisk tidfunksjon: Når et uketall endres i HTML dokumentet, så fylles alle datoer og tilhørende data seg inn automatisk.
+    --  En funskjon som highlighter dagen i dag ved visning 
+
+    Oppdragsbanken
     --  Spiciness kan gjøres til en kommando, hvor en klasse gjør at riktig bilde og tekst vises på desktop og mobil
     --  En Brødsmulemeny som generer seg automatisk basert på hvor i hierakiet man befinner seg
     --  En favoritt-funksjonalitet som er knyttet til localStorage
     --  En responsiv erstattning for span og infoDesk/infoMob
     --  En logikk for bilder, som gjør at alle <img>-elementer i dokumentet leses for å generere en dynamisk bildefremvisning med bildeKarusell,
         rekkefølgen de står i HTML er nummeret de får designert i bildekarusellen. 
-    --  En dynamisk hovedmeny som ikke trenger alle knappene listet opp manuelt for hvert HTML-dokumentet
     --  En dynamisk kategorimeny, som ser etter HTML-dokumenter som starter med tall, 
         og deretter henter den nøkkelinformasjon som tittel, spiciness og tid for å generere en knapp.
     --  Dynamiske navn til cross-refrence lenker i tekst, altså dersom en oppdrag referer til et annet oppdrag, så legges inn lenke og/eller navn som fikser begge delene dynamisk 
