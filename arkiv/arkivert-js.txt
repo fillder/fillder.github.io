@@ -38,3 +38,48 @@ function sizeSpacer(spacerElement) {
 onload = onresize = function () {
    sizeSpacer(document.getElementById("spacer"));
 };
+
+
+
+
+
+
+function generateBreadcrumbs() {
+  const currentPath = window.location.pathname.split('/').pop();
+  const breadcrumbList = document.getElementById('breadcrumbs');
+  let breadcrumbs = [];
+
+  function findInHierarchy(obj, path) {
+    for (const key in obj) {
+      if (key === currentPath) {
+        // Sjekk om nøkkelen er "index.html" og ikke legg den til i breadcrumbs
+        if (key !== 'index.html') {
+          breadcrumbs.push({ path: path + key, displayName: obj[key].displayName });
+        }
+        return true;
+      } else if (obj[key].children) {
+        if (findInHierarchy(obj[key].children, path + key + '/')) {
+          // Sjekk om nøkkelen er "index.html" og ikke legg den til i breadcrumbs
+          if (key !== 'index.html') {
+            breadcrumbs.push({ path: path + key, displayName: obj[key].displayName });
+          }
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
+  findInHierarchy(siteHierarchy['index.html'].children, '');
+
+  breadcrumbs.forEach((breadcrumb) => {
+    const listItem = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = breadcrumb.path;
+    link.textContent = breadcrumb.displayName;
+    listItem.appendChild(link);
+    breadcrumbList.appendChild(listItem);
+  });
+}
+
+generateBreadcrumbs();

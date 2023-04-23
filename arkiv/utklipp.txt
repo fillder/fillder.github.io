@@ -1232,3 +1232,122 @@ Relevant CSS:
       display: block;
    }
 }
+
+
+
+Hei, jeg jobber med å lage en dynamisk brødsmulemeny, som skal generere seg som et listeelement med lenker i HTML-dokumentene mine. Problemet jeg står ovenfor er at listeelementene ikke genereres som forventet. Kan du være så snill å se over koden min og se om du klarer å se årsaken til problemet?
+
+HTML:       
+<div class="breadcrumbsMenu">
+   <ul id="breadcrumbs"></ul>
+</div>
+
+
+CSS:
+.breadcrumbsMenu {
+   position: fixed;
+   top: 50px;
+   left: 0;
+   background-color: var(--clr-ixDBoks);
+   border-bottom: 2px solid var(--clr-ramme);
+   height: 40px;
+   width: 100%;
+   z-index: 142;
+}
+#breadcrumbs {
+   display: flex;
+   list-style-type: none;
+   padding: 0;
+   height: 40px;
+   align-items: center;
+}
+#breadcrumbs li a {
+   color: var(--clr-tekst);
+   line-height: 1.5;
+   font-weight: 300;
+   text-decoration: underline;
+}
+#breadcrumbs li:not(:last-child)::after {
+   content: ">";
+   margin-left: 15px;
+}
+
+
+JavaScript
+const siteHierarchy = {
+   "index.html": {
+      displayName: "Hjem",
+      children: {
+         "timeplan.html": {
+            displayName: "Timeplan",
+            children: {
+               "/timeplan/uke_1.html": { displayName: "Uke 1" },
+               "/timeplan/uke_2.html": { displayName: "Uke 2" },
+            },
+         },
+         "oppdragsbank.html": {
+            displayName: "Oppdragsbank",
+            children: {
+               "/oppdragsbank/1_2d-grafikk.html": {
+                  displayName: "2D Grafikk",
+                  children: {
+                     "/oppdragsbank/1_2d-grafikk/1-1-1_illustrator-pen-tool.html": { displayName: "Illustrator: Pen tool" },
+                     "/oppdragsbank/1_2d-grafikk/1-2-1_produkt-etter-manualen.html": { displayName: "Produkt etter manualen" },
+                     // ...
+                  },
+               },
+               "/oppdragsbank/7_drift.html": {
+                  displayName: "Drift",
+                  children: {
+                     "/oppdragsbank/7_drift/7-2-1_burp-suite.html": { displayName: "Burp Suite" },
+                     "/oppdragsbank/7_drift/7-2-2_bash-script.html": { displayName: "Bash Script" },
+                     // ...
+                  },
+               },
+            },
+         },
+         "ressurser.html": {
+            displayName: "IM-fagverket",
+         },
+      },
+   },
+};
+
+function generateBreadcrumbs() {
+   const currentPath = window.location.pathname;
+   const breadcrumbList = document.getElementById("breadcrumbs");
+   let breadcrumbs = [];
+
+   function findInHierarchy(obj, basePath) {
+      for (const key in obj) {
+         const fullPath = basePath + key;
+         if (fullPath === currentPath) {
+            if (key !== "index.html") {
+               breadcrumbs.push({ path: fullPath, displayName: obj[key].displayName });
+            }
+            return true;
+         } else if (obj[key].children) {
+            if (findInHierarchy(obj[key].children, fullPath)) {
+               if (key !== "index.html") {
+                  breadcrumbs.push({ path: fullPath, displayName: obj[key].displayName });
+               }
+               return true;
+            }
+         }
+      }
+      return false;
+   }
+
+   findInHierarchy(siteHierarchy["index.html"].children, "");
+
+   breadcrumbs.forEach((breadcrumb) => {
+      const listItem = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = breadcrumb.path;
+      link.textContent = breadcrumb.displayName;
+      listItem.appendChild(link);
+      breadcrumbList.appendChild(listItem);
+   });
+}
+
+generateBreadcrumbs();

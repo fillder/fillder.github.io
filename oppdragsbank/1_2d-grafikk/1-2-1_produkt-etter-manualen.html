@@ -20,6 +20,7 @@
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
       <script type="module" src="/js/im_hovedmeny.js"></script>
       <script type="module" src="/js/im_dag-natt.js"></script>
+      <script type="module" src="/js/im_breadcrumbs.js"></script>
       <!-- <script type="module" src="/js/im_hero-bilde.js"></script> -->
       <script type="module" src="/js/ob_bildekarusell.js"></script>
       <script type="module" src="/js/ob_oppdragsbilde.js"></script>
@@ -28,9 +29,12 @@
 
    <body>
       <nav>
-         <a class="navKnapp" target="_self" rel="noreferrer noopener" href="/oppdragsbank.html" title="Kategoriside" alt="Kategoriside">
-            <div class="navIkon maskeOppdragsbankOutline"></div>
-         </a>
+         <div class="navKnapp">
+            <a target="_self" rel="noreferrer noopener" href="../index.html" title="Hjem" alt="Naviger til startsiden">
+               <div class="navIkon maskeIndexOutline"></div>
+            </a>
+            <ul class="breadcrumbsMenu" id="breadcrumbs"></ul>
+         </div>
          <div class="logo">
             <h1><b>1. 2D-grafikk</b></h1>
          </div>

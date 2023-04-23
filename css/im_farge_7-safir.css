@@ -3,6 +3,7 @@ a:link,
 a:visited {
    cursor: pointer;
    text-decoration: none;
+   color: var(--clr-tekst);
 }
 a:hover h5:not(.infoKnappDesk, .infoKnappMob),
 a:focus-visible h5:not(.infoKnappDesk, .infoKnappMob),

@@ -19,15 +19,19 @@
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
       <script type="module" src="/js/im_dag-natt.js"></script>
       <script type="module" src="/js/rb_seksjoner.js"></script>
+      <script type="module" src="/js/im_breadcrumbs.js"></script>
       <!-- <script type="module" src="/js/im_hero-bilde.js"></script> -->
       <title>IM-ressursbank</title>
    </head>
 
    <body>
       <nav>
-         <a class="navKnapp" target="_self" rel="noreferrer noopener" href="../index.html" title="Hjem" alt="Naviger til startsiden">
-            <div class="navIkon maskeIndexOutline"></div>
-         </a>
+         <div class="navKnapp">
+            <a target="_self" rel="noreferrer noopener" href="../index.html" title="Hjem" alt="Naviger til startsiden">
+               <div class="navIkon maskeIndexOutline"></div>
+            </a>
+            <ul class="breadcrumbsMenu" id="breadcrumbs"></ul>
+         </div>
          <div class="logo">
             <h1>
                <b><span>IM-</span>RESSURSBANK</b>
