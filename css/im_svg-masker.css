@@ -467,3 +467,8 @@
    -webkit-mask: url(/svg/im/im_meny_outline.svg) no-repeat center;
    mask: url(/svg/im/im_meny_outline.svg) no-repeat center;
 }
+.maskeMenyPil {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/svg/im/im_hovedmeny-pil.svg) no-repeat center;
+   mask: url(/svg/im/im_hovedmeny-pil.svg) no-repeat center;
+}

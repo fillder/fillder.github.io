@@ -354,8 +354,12 @@ nav {
    position: absolute;
    bottom: 0%;
    left: 50%;
-   transform: translate(-50%, 60%);
+   transform: translate(-50%, 100%);
    z-index: 1000;
+}
+.pilStr {
+   width: 10px;
+   height: 7.5px;
 }
 .displayOutline {
    display: block;
