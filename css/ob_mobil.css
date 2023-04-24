@@ -82,10 +82,10 @@
       font-size: 1rem;
    }
    h5 {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
    }
    p {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
    }
    .ob_hovedsideGrid {
       grid-template-columns: repeat(2, 1fr);
@@ -175,12 +175,48 @@
    }
    .kategoriFilter {
       flex-wrap: wrap;
+      gap: 0.5rem;
    }
+   .kategoriKnappTittel {
+      padding-inline-start: 2.8rem;
+      line-height: 120%;
+   }
+
    .kategoriKnappTittel span {
       display: none;
    }
+   .kategoriKnappIkon {
+      width: 45px;
+      height: 45px;
+      padding: 0.2rem;
+   }
    .op_tid {
-      min-width: 95px;
+      min-width: 85px;
+   }
+   .op_spice {
+      min-width: 40px;
+   }
+   .spiceIkon {
+      width: 75px;
+      height: 25px;
+   }
+   .spiceIkonMob {
+      width: 15px;
+      height: 25px;
+   }
+   .tidIkon {
+      width: 25px;
+      height: 25px;
+   }
+   .filterMeny .kategoriFilter {
+      margin-inline: 0.5rem;
+   }
+   .kategoriSeksjon button,
+   .kategoriSeksjon a {
+      margin-inline: 0.5rem;
+   }
+   .kategoriFilter > * {
+      flex-basis: 50px;
    }
 }
 @media screen and (max-width: 600px) {
@@ -215,6 +251,9 @@
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, 1fr);
       row-gap: 3rem;
+   }
+   .ob_kategorisideGrid {
+      width: 96%;
    }
 }
 /*______ KategoriSider ______*/

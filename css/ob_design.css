@@ -329,7 +329,7 @@ table thead tr th {
 .kategoriFilter > * {
    flex-grow: 1;
    flex-shrink: 1;
-   flex-basis: 150px;
+   flex-basis: 100px;
    max-width: 200px;
    font-family: "Roboto", sans-serif;
    color: var(--clr-tekst);
@@ -354,9 +354,12 @@ table thead tr th {
    height: 2.5rem;
 }
 .kategoriKnappTittel {
+   display: grid;
    position: relative;
    padding-inline-start: 3.4rem;
    z-index: 90;
+   height: 100%;
+   align-content: center;
 }
 .kategoriKnappIkon {
    position: absolute;
