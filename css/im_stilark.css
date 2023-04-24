@@ -419,6 +419,7 @@ header {
    top: 0;
    height: 400px; /* Sett høyden på banneret etter behov */
    width: 100%;
+   max-width: 1600px;
    left: 50%;
    transform: translateX(-50%);
    z-index: 140;
