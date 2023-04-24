@@ -330,10 +330,13 @@ table thead tr th {
    flex-grow: 1;
    flex-shrink: 1;
    flex-basis: 100px;
+   display: grid;
+   align-content: center;
    max-width: 200px;
+   height: 3rem;
    font-family: "Roboto", sans-serif;
    color: var(--clr-tekst);
-   line-height: 1.5;
+   line-height: 120%;
    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
    font-weight: 500;
 }
@@ -357,8 +360,10 @@ table thead tr th {
    display: grid;
    position: relative;
    padding-inline-start: 3.4rem;
+   padding-inline-end: 0.5rem;
    z-index: 90;
    height: 100%;
+   width: 100%;
    align-content: center;
 }
 .kategoriKnappIkon {
