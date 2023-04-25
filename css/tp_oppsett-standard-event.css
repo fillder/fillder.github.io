@@ -58,8 +58,8 @@
    gap: 0.5rem;
    grid:
       "d4" 0.4fr
-      "y1" 1fr
-      "y1" 1fr
+      "y0" 1fr
+      "y0" 1fr
       "y1" 1fr
       "y1" 1fr
       ".." 0.1fr
@@ -147,7 +147,10 @@
 .torsdag {
    grid-area: d4;
 }
-
+.yff0 {
+   grid-area: y0;
+   margin-block: 2rem;
+}
 .yff1 {
    grid-area: y1;
 }
