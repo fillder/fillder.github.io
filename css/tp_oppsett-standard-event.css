@@ -141,7 +141,7 @@
 }
 .event {
    grid-area: ev;
-   margin-block: 2rem;
+   margin-block-end: 2rem;
 }
 /* torsdag */
 .torsdag {
@@ -149,7 +149,7 @@
 }
 .yff0 {
    grid-area: y0;
-   margin-block: 2rem;
+   margin-block-end: 2rem;
 }
 .yff1 {
    grid-area: y1;
