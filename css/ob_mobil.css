@@ -217,6 +217,10 @@
    .kategoriFilter > * {
       flex-basis: 50px;
    }
+   .stortInspBilde {
+      flex-direction: column;
+      gap: 1rem;
+   }
 }
 @media screen and (max-width: 600px) {
    .ob_hovedsideGrid {

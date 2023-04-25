@@ -535,6 +535,14 @@ table thead tr th {
    height: auto;
    width: 16rem;
 }
+.stortInspBilde {
+   display: flex;
+   gap: 1rem;
+}
+.stortInspBilde img {
+   max-width: 30rem;
+   overflow: hidden;
+}
 .hvitBakgrunn {
    background-color: whitesmoke;
 }

@@ -1,9 +1,9 @@
-a,
-a:link,
-a:visited {
+p a,
+p a:link,
+p a:visited {
    cursor: pointer;
-   text-decoration: none;
-   color: var(--clr-tekst);
+   text-decoration: underline;
+   color: var(--clr-ametyst);
 }
 a:hover h5:not(.infoKnappDesk, .infoKnappMob),
 a:focus-visible h5:not(.infoKnappDesk, .infoKnappMob),
