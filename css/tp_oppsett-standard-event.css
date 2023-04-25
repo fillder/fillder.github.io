@@ -78,8 +78,8 @@
       "d5" 0.4fr
       "p4" 1fr
       "p4" 1fr
-      "p4" 1fr
-      "p4" 1fr
+      "p5" 1fr
+      "p5" 1fr
       ".." 0.1fr
       "nt" 1fr
       "nt" 1fr
@@ -170,7 +170,9 @@
 .programfag4 {
    grid-area: p4;
 }
-
+.programfag5 {
+   grid-area: p5;
+}
 .naturfag {
    grid-area: nt;
 }
