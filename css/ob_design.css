@@ -107,7 +107,10 @@
 .infoBoks {
    display: flex;
    flex-direction: column;
-   place-items: start;
+   /* place-items: start; */
+   justify-content: space-around;
+   text-align: center;
+   height: 100%;
 }
 .infoBoksIkon {
    display: flex;
@@ -178,19 +181,19 @@
 .hoverProgrammering:focus-visible {
    transition: transform 0.3s ease-in-out;
    text-decoration: 3px underline var(--clr-ametyst);
-   transform: scale(1.01);
+   transform: scale(1.03);
 }
 .hoverWeb:hover,
 .hoverWeb:focus-visible {
    transition: transform 0.3s ease-in-out;
    text-decoration: 3px underline var(--clr-kunzitt);
-   transform: scale(1.01);
+   transform: scale(1.03);
 }
 .hoverKi:hover,
 .hoverKi:focus-visible {
    transition: transform 0.3s ease-in-out;
    text-decoration: 3px underline var(--clr-thulitt);
-   transform: scale(1.01);
+   transform: scale(1.03);
 }
 .flexInfoKnapp {
    display: flex;

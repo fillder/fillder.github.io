@@ -131,8 +131,8 @@
    mask: url(/svg/ob/ob_spice5.svg) no-repeat center;
 }
 .maskeSpiceGrad {
-   -webkit-mask: url(/svg/ob_spiciness-gradient.svg) no-repeat center;
-   mask: url(/svg/ob_spiciness-gradient.svg) no-repeat center;
+   -webkit-mask: url(/svg/ob/ob_spice-grad.svg) no-repeat center;
+   mask: url(/svg/ob/ob_spice-grad.svg) no-repeat center;
 }
 .maskeTidTimer {
    -webkit-mask: url(/svg/ob_tid-timer.svg) no-repeat center;
