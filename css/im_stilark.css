@@ -620,6 +620,7 @@ footer {
    }
    #breadcrumbs {
       height: 40px;
+      line-height: 120%;
    }
    header {
       margin-top: 90px;
@@ -658,17 +659,20 @@ footer {
    .infoMob {
       display: block;
    }
-   .breadcrumbsMenu,
+   /* .breadcrumbsMenu,
    #breadcrumbs {
       display: none;
-   }
-   header {
+   } */
+   /* header {
       margin-top: 50px;
-   }
+   } */
    .mainMedHeader {
       margin-top: 450px;
    }
    .hovedmenyRamme {
       width: 100%;
+   }
+   .forkortet-smuleMeny > li:nth-last-child(n + 4) {
+      display: none;
    }
 }

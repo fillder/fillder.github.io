@@ -69,7 +69,7 @@ const siteHierarchy = {
                "/oppdragsbank/2_3d-grafikk.html": {
                   displayName: "3D Grafikk",
                   children: {
-                     "/oppdragsbank/2_3d-grafikk/2-2-1_modeller-spillobjekt.html": { displayName: "Gjenskap et spillobjekt i 3D" },
+                     "/oppdragsbank/2_3d-grafikk/2-2-1_modeller-spillobjekt.html": { displayName: "Modeller et spillobjekt" },
                   },
                },
                "/oppdragsbank/3_fotografi.html": {
@@ -166,6 +166,28 @@ function generateBreadcrumbs() {
       }
       breadcrumbsList.appendChild(listItem);
    });
+
+   // Funksjon for å oppdatere visningen av liste-elementene basert på vindusbredden
+   function updateBreadcrumbsVisibility() {
+      const windowWidth = window.innerWidth;
+
+      if (windowWidth <= 600) {
+         const listItems = breadcrumbsList.getElementsByTagName("li");
+         for (let i = 0; i < listItems.length - 3; i++) {
+            listItems[i].style.display = "none";
+         }
+      } else {
+         const listItems = breadcrumbsList.getElementsByTagName("li");
+         for (let i = 0; i < listItems.length; i++) {
+            listItems[i].style.display = "list-item";
+         }
+      }
+   }
+   // Kaller funksjonen for å oppdatere visningen av liste-elementene
+   updateBreadcrumbsVisibility();
+
+   // Legger til en event listener for å oppdatere visningen når vindusstørrelsen endres
+   window.addEventListener("resize", updateBreadcrumbsVisibility);
 }
 
 // Kaller funksjonen for å generere brødsmulemenyen
