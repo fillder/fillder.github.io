@@ -38,19 +38,19 @@
 .hoverTP:focus-visible {
    transition: all 0.3s ease-in-out;
    text-decoration: 1px underline var(--clr-tekst);
-   transform: scale(1.01);
+   transform: scale(1.03);
 }
 .hoverOB:hover,
 .hoverOB:focus-visible {
    transition: all 0.3s ease-in-out;
    text-decoration: 1px underline var(--clr-tekst);
-   transform: scale(1.01);
+   transform: scale(1.03);
 }
 .hoverRB:hover,
 .hoverRB:focus-visible {
    transition: all 0.3s ease-in-out;
    text-decoration: 1px underline var(--clr-tekst);
-   transform: scale(1.01);
+   transform: scale(1.03);
 }
 .velkommen {
    display: flex;
