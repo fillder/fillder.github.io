@@ -207,19 +207,26 @@ nav {
    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
 }
 .navKnapp {
-   display: flex;
-   width: max-content;
-   place-content: center;
-   margin-inline: 0.5rem;
-   margin-block: auto;
+   position: relative;
+   top: 0.4rem;
+   left: 0.5rem;
+   /* display: flex; */
+   /* width: max-content; */
+   /* place-content: center;
+   margin-block: auto; */
 }
 .navIkon {
    background-color: var(--clr-tekst);
    width: 35px;
    height: 35px;
 }
+.hjem {
+   position: absolute;
+}
 .logo {
-   position: fixed;
+   position: absolute;
+   /* left: 50%;
+   transform: translateX(-50%); */
    display: flex;
    align-items: center;
    place-self: center;
@@ -231,15 +238,18 @@ nav {
    margin-inline: 0.5rem;
 }
 .breadcrumbsMenu {
-   display: none;
+   position: absolute;
+   top: 0;
+   left: 3rem;
 }
 #breadcrumbs {
    display: flex;
    list-style-type: none;
    padding: 0;
-   height: 40px;
+   height: 50px;
    align-items: center;
    padding-inline-start: 0.5rem;
+   z-index: 900;
 }
 #breadcrumbs li {
    color: var(--clr-tekst);
@@ -376,10 +386,12 @@ nav {
    display: block;
 }
 .flexHoyre {
-   display: grid;
-   align-self: center;
-   justify-self: end;
-   margin-inline: 0.5rem;
+   position: absolute;
+   top: 0.4rem;
+   right: 0.5rem;
+   /* align-self: center;
+   justify-self: end; */
+   /* margin-inline: 0.5rem; */
 }
 .dag-natt {
    margin-block-start: 1rem;
@@ -589,7 +601,6 @@ footer {
    width: 100%;
    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
 }
-/* Små flater (Tablet i portrettmodus og store mobiler, 600px og oppover) */
 .infoTab,
 .infoMob {
    display: none;
@@ -598,7 +609,7 @@ footer {
 @media only screen and (max-width: 1200px) {
    .breadcrumbsMenu {
       display: block;
-      position: fixed;
+      position: absolute;
       top: 50px;
       left: 0;
       background-color: var(--clr-ixDBoks);
@@ -606,6 +617,9 @@ footer {
       height: 40px;
       width: 100%;
       z-index: 142;
+   }
+   #breadcrumbs {
+      height: 40px;
    }
    header {
       margin-top: 90px;
