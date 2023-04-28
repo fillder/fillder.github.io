@@ -3,17 +3,8 @@
 }
 
 @media screen and (max-width: 1200px) {
-   body {
-      /* strekker innholdet i body til å dekke all tilgjengelig skjermplass */
-      display: grid;
-      grid-template-rows: min-content;
-      background-color: var(--clr-main);
-   }
-   header {
-      display: none;
-   }
    main {
-      margin-top: 90px;
+      margin-block-start: 90px;
    }
    .svgIkon {
       width: 40px;
@@ -61,11 +52,13 @@
    .fagtittel {
       margin-bottom: 1%;
    }
-   footer {
-      display: none;
-   }
    .lB,
    .sB {
       border-width: 1px 1px 3px 3px;
+   }
+}
+@media screen and (max-width: 600px) {
+   main {
+      margin-block-start: 50px;
    }
 }

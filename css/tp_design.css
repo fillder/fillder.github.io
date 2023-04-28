@@ -16,11 +16,6 @@ main {
    scrollbar-width: none;
 } */
 /*______ fargedeklarering ______*/
-body {
-   grid-template-rows:
-      auto
-      1fr;
-}
 .farge-programfag {
    color: var(--clr-safir);
    fill: var(--clr-safir);
@@ -62,15 +57,20 @@ body {
    fill: var(--clr-ametyst);
 }
 /*______ Boksdesign ______*/
+
 main {
    display: flex;
    gap: 0.5rem;
    justify-content: space-between;
    background-color: var(--clr-main);
    max-width: 1600px;
+   height: min-content;
    padding-inline: 2rem;
+   padding-block-start: 1rem;
+   padding-block-end: 0;
    margin-inline: auto;
-   box-shadow: 0 5rem 0 0rem var(--clr-main);
+   margin-block-start: 50px;
+   box-shadow: 0 35rem 0 0rem var(--clr-main);
    text-align: center;
 }
 .fagtittel {
@@ -78,13 +78,6 @@ main {
    justify-content: space-between;
    align-items: center;
    margin-bottom: 2%;
-}
-.man,
-.tir,
-.ons,
-.tor,
-.fre {
-   margin-block-start: 1rem;
 }
 .gruppe-xy {
    display: grid;
@@ -104,7 +97,8 @@ main {
    z-index: 110;
 }
 footer {
-   margin-top: 5rem;
+   position: fixed;
+   bottom: 0;
 }
 .dagPil {
    width: 2rem;
