@@ -257,7 +257,7 @@
    .ob_kategorisideGrid {
       width: 96%;
    }
-   .spiceIkonMob {
+   /* .spiceIkonMob {
       display: none;
    }
    .tidIkon {
@@ -267,11 +267,14 @@
    .op_tid::before {
       content: "|";
       margin-inline-end: 0.25rem;
+   } */
+   .op_spice div,
+   .op_tid div {
+      margin-inline-end: 0.25rem;
    }
    .op_tid {
-      min-width: 55px;
-      padding-inline-start: 0.25rem;
-      padding-inline-end: 0.5rem;
+      min-width: 80px;
+      padding-inline: 0.5rem;
    }
    .op_spice {
       min-width: 20px;
