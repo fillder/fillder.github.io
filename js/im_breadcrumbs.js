@@ -63,7 +63,7 @@ const siteHierarchy = {
                      "/oppdragsbank/1_grafisk-design/1-2-2_serie-etter-manualen.html": { displayName: "Serie etter manualen" },
                      "/oppdragsbank/1_grafisk-design/1-2-3_fiktiv-virksomhet.html": { displayName: "Fiktiv virksomhet" },
                      "/oppdragsbank/1_grafisk-design/1-1-2_deg-selv-i-vektor.html": { displayName: "Deg selv i vektor" },
-                     "/oppdragsbank/1_grafisk-design/1-2-5_im-i-vektor.html": { displayName: "IM-lærerne i vektor" },
+                     "/oppdragsbank/1_grafisk-design/1-2-4_im-i-vektor.html": { displayName: "IM-lærerne i vektor" },
                   },
                },
                "/oppdragsbank/2_3d-design.html": {
