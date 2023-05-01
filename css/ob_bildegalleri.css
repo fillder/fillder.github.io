@@ -23,22 +23,17 @@
    flex-direction: column;
    place-content: center;
 }
-.galleribilde img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-}
-.galleriMedAlt {
-   padding-block-end: 2.5rem;
-}
-
 /*______ Bildegelleri ______*/
 .bildegalleri_fire-pluss div:nth-child(n + 5) {
    display: none;
 }
 .miniatyrbilde {
+   width: 100%;
    height: 100%;
+   max-height: 20rem;
    object-fit: cover;
+   overflow: hidden;
+   object-position: 0 50;
    cursor: pointer;
    transform-origin: center;
    transition: outline 0.1s ease-in-out;
@@ -130,8 +125,10 @@
 }
 .bildeRamme {
    position: relative;
-   max-width: 70vw;
+   /* max-width: 70vw;
    max-width: 70dvw;
+   max-height: 70vh;
+   max-height: 70dvh; */
 }
 .aktivtBildeRamme {
    position: relative;
@@ -178,8 +175,8 @@
    aspect-ratio: 4 / 3;
 }
 .aktivtBilde img {
-   width: 100%;
-   height: 100%;
+   width: auto;
+   height: auto;
    overflow: hidden;
    margin-inline: auto;
 }
@@ -200,3 +197,7 @@
    filter: none;
    outline: 3px solid var(--clr-ramme);
 } */
+.isolertBildergalleri {
+   position: relative;
+   padding-block-start: 1rem;
+}

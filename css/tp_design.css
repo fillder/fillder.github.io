@@ -94,7 +94,7 @@ main {
    position: relative;
    width: 50px;
    height: 25px;
-   z-index: 110;
+   z-index: 10;
 }
 footer {
    position: fixed;

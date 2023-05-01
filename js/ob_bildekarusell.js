@@ -36,17 +36,16 @@ Array.from(miniatyrgalleri).forEach((galleri, i) => {
 
 // Oppdater bilde- og tekstdata dynamisk
 function oppdaterBildeTekst(bilde, tittelElement, tekstElement) {
-   const tittelTekst = bilde.getAttribute("tittel");
-   const bildeTekst = bilde.getAttribute("alt");
-   tittelElement.textContent = tittelTekst ? tittelTekst : "";
-   tekstElement.textContent = bildeTekst ? bildeTekst : "";
+   if (tittelElement && tekstElement) {
+      const tittelTekst = bilde.getAttribute("tittel");
+      const bildeTekst = bilde.getAttribute("alt");
+      tittelElement.textContent = tittelTekst ? tittelTekst : "";
+      tekstElement.textContent = bildeTekst ? bildeTekst : "";
+   }
 }
 
 // Legg til click-event på hvert bilde i galleriet for å vise det i bildefremvisning
 bilder.forEach((bilde, index) => {
-   const tittelTekst = bilde.parentElement.querySelector(".bildetittel");
-   const bildeTekst = bilde.parentElement.querySelector(".bildetekst");
-   oppdaterBildeTekst(bilde, tittelTekst, bildeTekst);
    bilde.addEventListener("click", () => {
       aktivtBildeIndex = index;
       visBilde();
@@ -59,15 +58,20 @@ const settBredde = () => {
    if (bilde) {
       const innerWidth = window.innerWidth;
       const useDvw = CSS.supports("max-width", "1dvw");
+      const useDvh = CSS.supports("max-width", "1dvw");
 
-      if (innerWidth <= 560) {
+      if (innerWidth <= 600) {
          bilde.style.maxWidth = useDvw ? "100dvw" : "100vw";
-      } else if (innerWidth <= 800) {
+         bilde.style.maxHeight = useDvh ? "100dvh" : "100vh";
+      } else if (innerWidth <= 768) {
          bilde.style.maxWidth = useDvw ? "90dvw" : "90vw";
+         bilde.style.maxHeight = useDvh ? "90dvh" : "90vh";
       } else if (innerWidth <= 1000) {
          bilde.style.maxWidth = useDvw ? "80dvw" : "80vw";
+         bilde.style.maxHeight = useDvh ? "80dvh" : "80vh";
       } else {
          bilde.style.maxWidth = useDvw ? "70dvw" : "70vw";
+         bilde.style.maxHeight = useDvh ? "70dvh" : "70vh";
       }
    }
 };
@@ -192,8 +196,8 @@ bilder.forEach((bilde, index) => {
 function visBilde() {
    // Oppdater bilde- og tekstdata
    aktivtBilde.innerHTML = `<img src="${bilder[aktivtBildeIndex].src}" alt="${bilder[aktivtBildeIndex].alt}" />`;
-   bildeTittelAktiv.innerHTML = miniatyrgalleri[aktivtBildeIndex].querySelector(".bildetittel").innerHTML;
-   bildeTekstAktiv.innerHTML = miniatyrgalleri[aktivtBildeIndex].querySelector(".bildetekst").innerHTML;
+   bildeTittelAktiv.innerHTML = bilder[aktivtBildeIndex].getAttribute("tittel");
+   bildeTekstAktiv.innerHTML = bilder[aktivtBildeIndex].getAttribute("alt");
 
    // Oppdater bildetelleren
    aktivtBildeTeller.textContent = aktivtBildeIndex + 1;
@@ -204,9 +208,6 @@ function visBilde() {
 
    // Oppdater galleri-grid
    galleriBilder.forEach((bilde, index) => {
-      const tittelTekst = bilde.querySelector(".bildetittel");
-      const bildeTekst = bilde.querySelector(".bildetekst");
-      oppdaterBildeTekst(bilder[index], tittelTekst, bildeTekst);
       if (index === aktivtBildeIndex) {
          bilde.classList.add("aktivtBilde");
       } else {
@@ -227,13 +228,6 @@ function visBilde() {
    settBredde();
    aktivtKarusellBilde();
 }
-
-// const oppdragsSideBilde = document.querySelector(".oppdragsSideBilde");
-// oppdragsSideBilde.addEventListener("click", () => {
-//    bildefremvisning.style.display = "flex";
-//    aktivtBildeIndex = 0;
-//    visBilde();
-// });
 
 document.querySelector("#pilForrigeBilde").addEventListener("click", () => {
    aktivtBildeIndex = (aktivtBildeIndex - 1 + totaltAntallBilder) % totaltAntallBilder;

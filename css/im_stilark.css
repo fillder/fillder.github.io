@@ -590,6 +590,7 @@ ul li a button {
 footer {
    height: 3rem;
    display: flex;
+   z-index: 20;
    justify-content: space-between;
    align-items: center;
    place-content: center;

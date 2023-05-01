@@ -539,12 +539,14 @@ table thead tr th {
    width: 16rem;
 }
 .stortInspBilde {
-   display: flex;
+   display: grid;
+   grid-template-columns: 1fr 0.8fr;
    gap: 1rem;
 }
 .stortInspBilde img {
-   max-width: 30rem;
+   /* max-width: 30rem; */
    overflow: hidden;
+   object-fit: cover;
 }
 .hvitBakgrunn {
    background-color: whitesmoke;
@@ -583,3 +585,39 @@ table thead tr th {
    flex-grow: 1;
    flex-shrink: 1;
 }
+.flexGalleriBredde {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   margin-top: 1rem;
+   justify-content: center;
+}
+.flexGalleriBredde img {
+   cursor: pointer;
+   transform-origin: center;
+   border-radius: 0.4rem;
+}
+.flexGalleri > * {
+   max-width: 350px;
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 250px;
+}
+/* .gridGalleri1 {
+   display: grid;
+   gap: 1rem;
+   grid-template-columns: auto auto;
+   grid-template-rows: repeat(1fr, auto);
+   grid-template-areas:
+      "hor1 vert"
+      "hor2 vert";
+}
+.horisontal1 {
+   grid-area: hor1;
+}
+.horisontal2 {
+   grid-area: hor2;
+}
+.vertikal {
+   grid-area: vert;
+} */

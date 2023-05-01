@@ -55,21 +55,21 @@ const siteHierarchy = {
          "/oppdragsbank.html": {
             displayName: "Oppdragsbank",
             children: {
-               "/oppdragsbank/1_2d-grafikk.html": {
-                  displayName: "2D Grafikk",
+               "/oppdragsbank/1_grafisk-design.html": {
+                  displayName: "Grafisk design",
                   children: {
-                     "/oppdragsbank/1_2d-grafikk/1-1-1_illustrator-pen-tool.html": { displayName: "Illustrator: Pen tool" },
-                     "/oppdragsbank/1_2d-grafikk/1-2-1_produkt-etter-manualen.html": { displayName: "Produkt etter manualen" },
-                     "/oppdragsbank/1_2d-grafikk/1-2-2_serie-etter-manualen.html": { displayName: "Serie etter manualen" },
-                     "/oppdragsbank/1_2d-grafikk/1-2-3_fiktiv-virksomhet.html": { displayName: "Fiktiv virksomhet" },
-                     "/oppdragsbank/1_2d-grafikk/1-2-5_deg-selv-i-vektor.html": { displayName: "Deg selv i vektor" },
-                     "/oppdragsbank/1_2d-grafikk/1-2-6_im-i-vektor.html": { displayName: "IM-lærerne i vektor" },
+                     "/oppdragsbank/1_grafisk-design/1-1-1_illustrator-pen-tool.html": { displayName: "Illustrator: Pen tool" },
+                     "/oppdragsbank/1_grafisk-design/1-2-1_produkt-etter-manualen.html": { displayName: "Produkt etter manualen" },
+                     "/oppdragsbank/1_grafisk-design/1-2-2_serie-etter-manualen.html": { displayName: "Serie etter manualen" },
+                     "/oppdragsbank/1_grafisk-design/1-2-3_fiktiv-virksomhet.html": { displayName: "Fiktiv virksomhet" },
+                     "/oppdragsbank/1_grafisk-design/1-1-2_deg-selv-i-vektor.html": { displayName: "Deg selv i vektor" },
+                     "/oppdragsbank/1_grafisk-design/1-2-5_im-i-vektor.html": { displayName: "IM-lærerne i vektor" },
                   },
                },
-               "/oppdragsbank/2_3d-grafikk.html": {
+               "/oppdragsbank/2_3d-design.html": {
                   displayName: "3D Grafikk",
                   children: {
-                     "/oppdragsbank/2_3d-grafikk/2-2-1_modeller-spillobjekt.html": { displayName: "Modeller et spillobjekt" },
+                     "/oppdragsbank/2_3d-design/2-2-1_modeller-spillobjekt.html": { displayName: "Modeller et spillobjekt" },
                   },
                },
                "/oppdragsbank/3_fotografi.html": {

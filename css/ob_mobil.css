@@ -51,9 +51,6 @@
       max-width: 80vw;
       max-width: 80dvw;
    }
-   /* .oppdragsSideBilde {
-      margin-inline-end: -1rem;
-   } */
    .infoKnappDesk {
       display: none;
    }
@@ -66,6 +63,10 @@
    }
    .op_tid {
       min-width: 115px;
+   }
+   .stortInspBilde {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
    }
 }
 @media screen and (max-width: 768px) {
@@ -137,7 +138,6 @@
          "opp"
          "bil"
          "eks"
-         "res"
          "gal";
    }
    .mobilBildeGrid {
@@ -154,14 +154,11 @@
    .bildegalleri_firePluss {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      row-gap: 3rem;
    }
    .bildegalleri_tre {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 1fr;
-      row-gap: 3rem;
-      padding-block-end: 3rem;
    }
    .bildeRamme {
       max-width: 90vw;
@@ -217,9 +214,6 @@
    .kategoriFilter > * {
       flex-basis: 50px;
    }
-   .stortInspBilde {
-      flex-direction: column;
-   }
 }
 @media screen and (max-width: 600px) {
    .ob_hovedsideGrid {
@@ -251,11 +245,6 @@
    }
    .tabTab {
       display: none;
-   }
-   .bildegalleri_firePluss {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(4, 1fr);
-      row-gap: 3rem;
    }
    .ob_kategorisideGrid {
       width: 96%;
