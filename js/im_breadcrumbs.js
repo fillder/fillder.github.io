@@ -75,6 +75,7 @@ const siteHierarchy = {
                "/oppdragsbank/3_fotografi.html": {
                   displayName: "Fotografi",
                   children: {
+                     "/oppdragsbank/3_fotografi/3-1-1_naturens-barn.html": { displayName: "Naturens barn" },
                      "/oppdragsbank/3_fotografi/3-2-1_filmplakat.html": { displayName: "Filmplakat" },
                      "/oppdragsbank/3_fotografi/3-2-2_gatefoto.html": { displayName: "Gatefoto" },
                   },
