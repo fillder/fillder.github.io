@@ -25,8 +25,10 @@ JavaScript:
         rekkefølgen de står i HTML er nummeret de får designert i bildekarusellen. 
     --  En dynamisk kategorimeny, som ser etter HTML-dokumenter som starter med tall, 
         og deretter henter den nøkkelinformasjon som tittel, spiciness og tid for å generere en knapp.
-    --  Dynamiske navn til cross-refrence lenker i tekst, altså dersom en oppdrag referer til et annet oppdrag, så legges inn lenke og/eller navn som fikser begge delene dynamisk 
+    --  Dynamiske navn til cross-refrence lenker i tekst, altså dersom en oppdrag referer til et annet oppdrag, så legges inn lenke og/eller navn som fikser begge delene dynamisk .
         
     --  En mal som kan brukes av andre lærere for å sende inn nye oppdrag
     --  Et dynamisk Tag-system, som kan settes opp sammen med oppdraget, slik at det får riktig plassering
     --  En automatisk sortering for nye oppdrag som først sorterer og nummererer oppdrag etter kategori og så vanskelighetsgrad, og deretter oppdaterer alle andre oppdragsnummer samt lenkereferanser i tekst. 
+
+    --  Legg til alternative kategorier rettet mot lærefagene, som henter oppdrag og ressurser fra alle kategoriene dynamisk

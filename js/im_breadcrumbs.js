@@ -74,7 +74,10 @@ const siteHierarchy = {
                },
                "/oppdragsbank/3_fotografi.html": {
                   displayName: "Fotografi",
-                  //   children: { "oppdragnavn.html": { displayName: "oppdragnavn" } },
+                  children: {
+                     "/oppdragsbank/3_fotografi/3-2-1_filmplakat.html": { displayName: "Filmplakat" },
+                     "/oppdragsbank/3_fotografi/3-2-2_gatefoto.html": { displayName: "Gatefoto" },
+                  },
                },
                "/oppdragsbank/4_film-og-vfx.html": {
                   displayName: "Film og VFX",
