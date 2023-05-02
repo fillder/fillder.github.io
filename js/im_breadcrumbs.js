@@ -84,11 +84,14 @@ const siteHierarchy = {
                   displayName: "Film og VFX",
                   children: {
                      "/oppdragsbank/4_film-og-vfx/4-2-1_supersmooth-reklamefilm.html": { displayName: "Reklamefilm" },
+                     "/oppdragsbank/4_film-og-vfx/4-2-2_manus123.html": { displayName: "Manus 1-2-3" },
                   },
                },
                "/oppdragsbank/5_animasjon.html": {
                   displayName: "Animasjon",
-                  //   children: { "oppdragnavn.html": { displayName: "oppdragnavn" } },
+                  children: {
+                     "/oppdragsbank/5_animasjon/5-2-1_tine-animasjon.html": { displayName: "Litagoreklame" },
+                  },
                },
                "/oppdragsbank/6_lyddesign.html": {
                   displayName: "Lyddesign",

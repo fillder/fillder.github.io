@@ -11,18 +11,20 @@
       <link rel="stylesheet" type="text/css" href="/css/im_stilark.css" />
       <link rel="stylesheet" type="text/css" href="/css/im_dag-natt.css" />
       <link rel="stylesheet" type="text/css" href="/css/im_svg-masker.css" />
+      <link rel="stylesheet" type="text/css" href="/css/im_farge_4-smaragd.css" />
       <link rel="stylesheet" type="text/css" href="/css/ob_design.css" />
+      <link rel="stylesheet" type="text/css" href="/css/ob_bildegalleri.css" />
       <link rel="stylesheet" type="text/css" href="/css/ob_mobil.css" />
-      <link rel="stylesheet" type="text/css" href="/css/im_farge_5-amazonitt.css" />
       <link rel="icon" href="/images/ico/skolelogo.svg" type="image/svg+xml" />
       <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
       <script type="module" src="/js/im_hovedmeny.js"></script>
       <script type="module" src="/js/im_dag-natt.js"></script>
       <script type="module" src="/js/im_breadcrumbs.js"></script>
-      <script type="module" src="/js/ob_kategori-filter.js"></script>
       <!-- <script type="module" src="/js/im_hero-bilde.js"></script> -->
-      <title>5. Animasjon</title>
+      <!-- <script type="module" src="/js/ob_bildekarusell.js"></script> -->
+      <script type="module" src="/js/ob_oppdragsbilde.js"></script>
+      <title>Manus 1-2-3!</title>
    </head>
 
    <body>
@@ -32,7 +34,7 @@
          </a>
          <ul class="breadcrumbsMenu" id="breadcrumbs"></ul>
          <div class="logo">
-            <h1><b>OPPDRAGSBANK</b></h1>
+            <h1><b>4. Film og VFX</b></h1>
          </div>
          <button class="hamburgerIkon navIkon maskeMenyOutline"></button>
          <div class="overlayMeny"></div>
@@ -54,12 +56,21 @@
                <h3 class="rundRamme ixD xSB hovedmenyTittel">Kategoriside</h3>
                <div class="hovedmenyPil"><div class="pilStr maskeMenyPil"></div></div>
             </a>
-            <a class="hovedmenyKnapp hovedmenyKnappAktiv" target="_self" rel="noreferrer noopener" href="/oppdragsbank/5_animasjon.html" title="Animasjon" alt="Naviger til oppdragskategori Animasjon">
+            <a class="hovedmenyKnapp" target="_self" rel="noreferrer noopener" href="/oppdragsbank/4_film-og-vfx.html" title="Film og VFX" alt="Naviger til oppdragskategori Film og VFX">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
-                  <div class="hovedmenyIkon maskeOppdragEksternOutline displayOutline fargetFyll"></div>
-                  <div class="hovedmenyIkon maskeOppdragEksternFill displayFill fargetFyll"></div>
+                  <div class="hovedmenyIkon maskeFilmOutline displayOutline"></div>
+                  <div class="hovedmenyIkon maskeFilmFill displayFill"></div>
                </div>
-               <h3 class="rundRamme ixD xSB hovedmenyTittel">5. Animasjon</h3>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">4. Film og VFX</h3>
+               <div class="hovedmenyPil"><div class="pilStr maskeMenyPil"></div></div>
+            </a>
+            <!-- Menyknapp til oppdraget for hovermenyen -->
+            <a class="hovedmenyKnapp hovedmenyKnappAktiv" target="_self" rel="noreferrer noopener" href="/oppdragsbank/4_film-og-vfx/4-2-2_manus123.html">
+               <div class="hovedmenyIkonRamme rundRamme ixD nB">
+                  <div class="hovedmenyIkon maskeOppdragInternOutline displayOutline fargetFyll"></div>
+                  <div class="hovedmenyIkon maskeOppdragInternFill displayFill fargetFyll"></div>
+               </div>
+               <h3 class="rundRamme ixD xSB hovedmenyTittel">Manus 1-2-3!</h3>
             </a>
             <div class="linjeskille"></div>
             <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Visuell logg" alt="Naviger til Visuell logg">
@@ -122,105 +133,68 @@
          </div>
       </nav>
       <header class="hero" id="hero">
-         <img class="hero-bilde" src="/images/ob_kategoribanner-5_anim.png" alt="bilde av en skjerm med kode" />
+         <img class="hero-bilde" src="/images/ob_kategoribanner-4_film.png" alt="bilde av en skjerm med kode" />
          <div class="hero-tittel fargetHeroLinje">
-            <h1><b>5. Animasjon</b></h1>
+            <h1 class="infoDesk"><b>4.2.2. Manus 1-2-3!</b></h1>
+            <h1 class="infoTab"><b>Manus 1-2-3!</b></h1>
+            <h1 class="infoMob"><b>Manus 1-2-3!</b></h1>
          </div>
-         <div class="hero-emblem rundRamme ixD sB xLP" data-ikon="animasjonIkon">
-            <div class="svgIkon maskeAnim"></div>
-         </div>
+         <a target="_self" rel="noreferrer noopener" href="/oppdragsbank/4_film-og-vfx.html" title="Kategoriside" alt="Naviger til kategoriside">
+            <div class="hero-emblem rundRamme ixD sB xLP" data-ikon="filmIkon">
+               <div class="svgIkon maskeFilm"></div>
+            </div>
+         </a>
       </header>
       <main class="mainMedHeader">
-         <div class="ob_kategorisideGrid">
-            <section class="sBoksRamme sB tekst filterMeny">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">Filtermeny</h2>
+         <div class="ob_oppdragssideGrid">
+            <section aria-labelledby="Oppdragsbeskrivelse" class="sBoksRamme sB tekst oppdragGrid">
+               <div class="modulIkon rundRamme ixD nB">
+                  <div class="op_ikon maskeOppdragInternOutline fargetFyll"></div>
                </div>
-               <div class="kategoriFilter">
-                  <button type="button" data-filter="*" class="sBoksRamme nB xSPS ixD">Vis alt</button>
-                  <button type="button" data-filter=".animasjon2" class="sBoksRamme nB xSPS ixD">2D-animasjon</button>
-                  <div type="button" data-filter=".animasjon3" class="sBoksRamme nB xSPS ixD utilgjengelig">3D-animasjon</div>
-                  <div type="button" data-filter=".stopmotion" class="sBoksRamme nB xSPS ixD utilgjengelig">Stop Motion</div>
-                  <div type="button" data-filter=".mocap" class="sBoksRamme nB xSPS ixD utilgjengelig">Motion Capture</div>
-               </div>
-            </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">5.1. Opplæring</h2>
-               </div>
-               <!-- ____ - ____ - ____ - ____ - ____ - Opplæring - ____ - ____ - ____ - ____ - ____ -->
-               <!-- <a target="_self" href="" class="rundRamme ixD xSB kategoriKnapp">
-                  <h5 class="kategoriKnappTittel">5.2.1. kategori: oppdragsnavn</h5>
-                  <div class="kategoriKnappInfo">
-                     <div class="op_spice">
-                        <div class="infoKnappDesk spiceIkon maskeSpice1 fargetFyll"></div>
-                        <div class="infoKnappMob spiceIkonMob maskeSpiceMob1 fargetFyll"></div>
-                        <h5 class="infoKnappDesk">Ekstra mild</h5>
-                        <h5 class="infoKnappMob">1/5</h5>
-                     </div>
-                     <div class="op_tid">
-                        <div class="tidIkon maskeTidTimer fargetFyll"></div>
-                        <h5 class="infoKnappDesk">6-12 timer</h5>
-                        <h5 class="infoKnappMob">6-12t</h5>
-                     </div>
-                  </div>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskeOppdragInternOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskeOppdragInternFill fargetFyll displayFill"></div>
-                  </div>
-               </a> -->
-            </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">5.2. Oppdrag</h2>
-               </div>
-               <!-- ___ -- ___ -- ___ -- ___ -- ___ -- Oppdrag -- ___ -- ___ -- ___ -- ___ -- ___ -->
-               <a target="_blank" rel="noreferrer noopener" href="/oppdragsbank/5_animasjon/5-2-1_tine-animasjon.html" class="rundRamme ixD xSB kategoriKnapp animasjon2">
-                  <h5 class="kategoriKnappTittel">5.2.1. Verdens beste Litago</h5>
-                  <div class="kategoriKnappInfo">
-                     <div class="op_spice">
-                        <div class="infoKnappDesk spiceIkon maskeSpice2 fargetFyll"></div>
-                        <div class="infoKnappMob spiceIkonMob maskeSpiceMob2 fargetFyll"></div>
-                        <h5 class="infoKnappDesk">Mild</h5>
-                        <h5 class="infoKnappMob">2/5</h5>
-                     </div>
-                     <div class="op_tid">
-                        <div class="tidIkon maskeTidTimer fargetFyll"></div>
-                        <h5 class="infoKnappDesk">16 timer+</h5>
-                        <h5 class="infoKnappMob">16t+</h5>
-                     </div>
-                  </div>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskeOppdragInternOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskeOppdragInternFill fargetFyll displayFill"></div>
-                  </div>
+               <a id="openDeskImg" target="_self" href="">
+                  <img id="deskImg" class="boksRamme oppdragsSideBilde kvadratisk bildeDesk fargetHover" src="/images/ob/kategori-4_film/3-2-2_manus123.png" alt="nesten kvadratisk bilde" />
                </a>
-            </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">5.3. Ressurser</h2>
-               </div>
-               <!-- __ --- __ --- __ --- __ --- __ --- Ressurs --- __ --- __ --- __ --- __ --- __ -->
-               <!-- <a target="_blank" rel="noreferrer noopener" href="" class="rundRamme ixD xSB kategoriLenke">
-                  <h5 class="kategoriKnappTittel">5.3.1. kategori: navn</h5>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskeOppdragRessursOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskeOppdragRessursFill fargetFyll displayFill"></div>
+               <div class="sPA oppdragsInfo">
+                  <h2 id="Oppdragsbeskrivelse" class="fargetLinje">Produkt</h2>
+                  <p><em>En idé/premiss, synopsis og manus til en film</em></p>
+                  <div class="kategoriKnappInfo">
+                     <div class="op_spice">
+                        <div class="spiceIkon maskeSpice2 fargetFyll"></div>
+                        <h5>Mild</h5>
+                     </div>
+                     <div class="op_tid">
+                        <div class="tidIkon maskeTidTimer fargetFyll"></div>
+                        <h5>6-12 timer</h5>
+                     </div>
                   </div>
-               </a> -->
-            </section>
-            <section class="sBoksRamme sB tekst kategoriSeksjon">
-               <div class="kategoriHeader">
-                  <h2 class="fargetLinje">5.4. Læringsstier</h2>
-               </div>
-               <!-- _ ---- _ ---- _ ---- _ ---- _ ---- Læringssti ---- _ ---- _ ---- _ ---- _ ---- _ -->
-               <!-- <a target="_blank" rel="noreferrer noopener" href="" class="rundRamme ixD xSB kategoriLenke">
-                  <h5 class="kategoriKnappTittel">5.4.1. kategori: navn</h5>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskePlanOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskePlanFill fargetFyll displayFill"></div>
+                  <h3 class="fargetLinje">Beskrivelse</h3>
+                  <p>
+                     Du skal utvikle et manus basert på en kort historie du ønsker å fortelle. Begynn med korte historier som er lette å produsere. Øvelse gjør som sagt mester hvis man gjør prosessen flere ganger. Last ned oppdragsressursen nedenfor og følg instruksen for å kommunisere din ide, og få et godt
+                     arbeidsdokument for produksjon av historien. Du kan selv velge om du vil lage et tilsvarende oppsett I Word, eller laste ned Scenarist, som er en gratis programvaren for å skrive manus.
+                  </p>
+                  <h3 class="fargetLinje">Suksesskriterier</h3>
+                  <ul>
+                     <li>
+                        <p>Du kan beskrive og reflektere over virkemidlene du bruker i historie-fortellingen for å skape engasjement</p>
+                     </li>
+                     <li>
+                        <p>Du bruker kreative og spennende metoder for å skape et selvstendig uttrykk</p>
+                     </li>
+                  </ul>
+                  <div class="nettResFlex">
+                     <a target="_blank" href="/ob_filer/manus_1-2-3.pdf" class="sBoksRamme ixD sPA nB">
+                        <h5>Last ned oppdragsressursene</h5>
+                     </a>
+                     <a target="_blank" rel="noreferrer noopener" href="https://kitscenarist.ru/en/index.html" class="sBoksRamme ixD sPA nB">
+                        <h5>Last ned Scenarist (valgfritt)</h5>
+                     </a>
                   </div>
-               </a> -->
+               </div>
+            </section>
+            <section aria-labelledby="Oppdragsbilde" class="mobilBildeGrid bildeMob">
+               <a id="openMobImg" href="">
+                  <img id="mobImg" class="boksRamme sB oppdragsBildeMobil fargetHover" src="" alt="" />
+               </a>
             </section>
          </div>
       </main>
