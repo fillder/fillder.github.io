@@ -170,10 +170,6 @@
    .kategoriFilter span {
       display: none;
    }
-   .kategoriFilter {
-      flex-wrap: wrap;
-      gap: 0.5rem;
-   }
    .kategoriKnappTittel {
       padding-inline-start: 2.8rem;
       line-height: 120%;

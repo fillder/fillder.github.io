@@ -326,7 +326,8 @@ table thead tr th {
 }
 .kategoriFilter {
    display: flex;
-   gap: 1rem;
+   flex-wrap: wrap;
+   gap: 0.5rem;
    justify-content: center;
 }
 .kategoriFilter > * {
@@ -335,7 +336,7 @@ table thead tr th {
    flex-basis: 100px;
    display: grid;
    align-content: center;
-   max-width: 200px;
+   max-width: 150px;
    height: 3rem;
    font-family: "Roboto", sans-serif;
    color: var(--clr-tekst);
@@ -515,7 +516,8 @@ table thead tr th {
    clear: right;
    margin-inline-start: 0.5rem;
    margin-inline-end: 1rem;
-   margin-block: 1rem;
+   margin-block-start: 1rem;
+   margin-block-end: 0.5rem;
 }
 .horisontaltStandard {
    height: auto;
@@ -583,6 +585,7 @@ table thead tr th {
    flex-basis: 200px;
    flex-grow: 1;
    flex-shrink: 1;
+   max-width: 500px;
 }
 .nettResFlexKol {
    display: flex;

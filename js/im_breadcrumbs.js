@@ -95,7 +95,10 @@ const siteHierarchy = {
                },
                "/oppdragsbank/6_lyddesign.html": {
                   displayName: "Lyddesign",
-                  //   children: { "oppdragnavn.html": { displayName: "oppdragnavn" } },
+                  children: {
+                     "/oppdragsbank/6_lyddesign/6-2-1_im-podcast.html": { displayName: "IM-Podkast" },
+                     "/oppdragsbank/6_lyddesign/6-2-2_musicless-music-video.html": { displayName: "Musicless music video" },
+                  },
                },
                "/oppdragsbank/7_drift.html": {
                   displayName: "Drift",
