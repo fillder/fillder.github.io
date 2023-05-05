@@ -1,62 +1,4 @@
-p a,
-p a:link,
-p a:visited {
-   cursor: pointer;
-   text-decoration: underline;
-   color: var(--clr-kunzitt);
-}
-/* a:hover h5:not(.infoKnappDesk, .infoKnappMob),
-a:focus-visible h5:not(.infoKnappDesk, .infoKnappMob),
-a:active h5:not(.infoKnappDesk, .infoKnappMob) {
-   text-decoration: 2px underline var(--clr-kunzitt);
-   text-underline-offset: 3px;
-} */
-.fargetHover {
-   border: 2px solid var(--clr-ramme);
-}
-.fargetHover:hover,
-.fargetHover:focus-visible {
-   transition: border 0.1s ease-in-out;
-   border: 2px solid var(--clr-kunzitt);
-}
-.bildeKarusell img:not(.aktivtKarusellBilde) {
-   filter: grayscale(0.8);
-   transition: all 100ms ease-in-out;
-   border: 2px solid var(--clr-ramme);
-}
-.bildeKarusell img:not(.aktivtKarusellBilde):hover,
-.bildeKarusell img:not(.aktivtKarusellBilde):focus-visible {
-   transition: all 100ms ease-in-out;
-   filter: grayscale(0);
-   border: 2px solid var(--clr-kunzitt);
-}
-
-.aktivtKarusellBilde {
-   filter: none;
-   border: 3px solid var(--clr-kunzitt);
-}
-.fargetTekst {
-   color: var(--clr-kunzitt);
-}
-.fargetFyll {
-   background-color: var(--clr-tekst);
-}
-.kategoriKnapp:hover .fargetFyll,
-.kategoriKnapp:focus-visible .fargetFyll,
-.kategoriLenke:hover .fargetFyll,
-.kategoriLenke:focus-visible .fargetFyll {
-   background-color: var(--clr-kunzitt);
-}
-.kategoriLenke:hover .kategoriKnappTittel,
-.kategoriLenke:hover .kategoriKnappIkon,
-.kategoriLenke:hover .kategoriKnappTittel,
-.kategoriLenke:hover .kategoriKnappIkon,
-.kategoriKnapp:hover .kategoriKnappTittel,
-.kategoriKnapp:hover .kategoriKnappIkon,
-.kategoriKnapp:hover .kategoriKnappTittel,
-.kategoriKnapp:hover .kategoriKnappIkon {
-   border-color: var(--clr-kunzitt);
-}
+/* ___________ Generelle farger ___________ */
 .fargetRamme {
    border-color: var(--clr-kunzitt);
 }
@@ -68,18 +10,69 @@ a:active h5:not(.infoKnappDesk, .infoKnappMob) {
    text-decoration: 4px underline var(--clr-kunzitt);
    text-underline-offset: 4px;
 }
-ul li p::before {
+.fargetTekst {
    color: var(--clr-kunzitt);
 }
-.fargetFilter {
+.fargetFyll {
+   background-color: var(--clr-tekst);
+}
+
+/* ___________ hover-effekt .svg ___________ */
+.kategoriKnapp:hover .fargetFyll,
+.kategoriKnapp:focus-visible .fargetFyll,
+.kategoriLenke:hover .fargetFyll,
+.kategoriLenke:focus-visible .fargetFyll {
    background-color: var(--clr-kunzitt);
-   color: var(--clr-bakgrunn);
+}
+
+/* ___________ hover-effekt Knapper ___________ */
+.kategoriLenke:hover .kategoriKnappTittel,
+.kategoriLenke:hover .kategoriKnappIkon,
+.kategoriLenke:hover .kategoriKnappTittel,
+.kategoriLenke:hover .kategoriKnappIkon,
+.kategoriKnapp:hover .kategoriKnappTittel,
+.kategoriKnapp:hover .kategoriKnappIkon,
+.kategoriKnapp:hover .kategoriKnappTittel,
+.kategoriKnapp:hover .kategoriKnappIkon {
+   border-color: var(--clr-kunzitt);
 }
 .kategoriFilter button:hover,
 .kategoriFilter button:focus-visible {
    border: 2px solid var(--clr-kunzitt);
 }
-.hovedmenyKnappAktiv h3 {
-   text-decoration: 2px underline var(--clr-kunzitt);
-   text-underline-offset: 3px;
+
+/* ___________ hover-effekt Bilder ___________ */
+.fargetHover {
+   border: 2px solid var(--clr-ramme);
+}
+.fargetHover:hover,
+.fargetHover:focus-visible {
+   transition: border 0.1s ease-in-out;
+   border: 2px solid var(--clr-kunzitt);
+}
+
+/* ___________ Punktlistefarge ___________ */
+ul li p::before {
+   color: var(--clr-kunzitt);
+}
+
+/* ___________ Bildefremvisning ___________ */
+.bildeKarusell img:not(.aktivtKarusellBilde) {
+   filter: grayscale(0.8);
+   transition: all 100ms ease-in-out;
+   border: 2px solid var(--clr-ramme);
+}
+.bildeKarusell img:not(.aktivtKarusellBilde):hover,
+.bildeKarusell img:not(.aktivtKarusellBilde):focus-visible {
+   transition: all 100ms ease-in-out;
+   filter: grayscale(0);
+   border: 2px solid var(--clr-kunzitt);
+}
+.aktivtKarusellBilde {
+   filter: none;
+   border: 3px solid var(--clr-kunzitt);
+}
+.fargetFilter {
+   background-color: var(--clr-kunzitt);
+   color: var(--clr-bakgrunn);
 }
