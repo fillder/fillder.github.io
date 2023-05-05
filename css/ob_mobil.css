@@ -68,6 +68,51 @@
       grid-template-columns: 1fr;
       grid-template-rows: auto;
    }
+   /*___________ Spiciness __________*/
+   .spiceIkon {
+      width: 18px;
+      height: 30px;
+   }
+   .utenKrydder::after {
+      content: "0/5";
+   }
+   .ekstraMild::after {
+      content: "1/5";
+   }
+   .mild::after {
+      content: "2/5";
+   }
+   .medium::after {
+      content: "3/5";
+   }
+   .sterk::after {
+      content: "4/5";
+   }
+   .ekstraSterk::after {
+      content: "5/5";
+   }
+   /*___________ Tid __________*/
+   .tid1::after {
+      content: "≤1t";
+   }
+   .tid1-3::after {
+      content: "1-3t";
+   }
+   .tid3-6::after {
+      content: "3-6t";
+   }
+   .tid6-9::after {
+      content: "6-9t";
+   }
+   .tid9-12::after {
+      content: "9-12t";
+   }
+   .tid12-15::after {
+      content: "12-15t";
+   }
+   .tid15::after {
+      content: "15t+";
+   }
 }
 @media screen and (max-width: 768px) {
    h1 {
@@ -171,16 +216,8 @@
       display: none;
    }
    .kategoriKnappTittel {
-      padding-inline-start: 2.8rem;
+      padding-inline-start: 3rem;
       line-height: 120%;
-   }
-   .kategoriKnappTittel span {
-      display: none;
-   }
-   .kategoriKnappIkon {
-      width: 45px;
-      height: 45px;
-      padding: 0.2rem;
    }
    .op_tid {
       min-width: 85px;
@@ -189,10 +226,6 @@
       min-width: 40px;
    }
    .spiceIkon {
-      width: 75px;
-      height: 25px;
-   }
-   .spiceIkonMob {
       width: 15px;
       height: 25px;
    }
@@ -245,17 +278,6 @@
    .ob_kategorisideGrid {
       width: 96%;
    }
-   /* .spiceIkonMob {
-      display: none;
-   }
-   .tidIkon {
-      display: none;
-   }
-   .op_spice::before,
-   .op_tid::before {
-      content: "|";
-      margin-inline-end: 0.25rem;
-   } */
    .op_spice div,
    .op_tid div {
       margin-inline-end: 0.25rem;

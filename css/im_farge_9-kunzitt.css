@@ -5,12 +5,12 @@ p a:visited {
    text-decoration: underline;
    color: var(--clr-kunzitt);
 }
-a:hover h5:not(.infoKnappDesk, .infoKnappMob),
+/* a:hover h5:not(.infoKnappDesk, .infoKnappMob),
 a:focus-visible h5:not(.infoKnappDesk, .infoKnappMob),
 a:active h5:not(.infoKnappDesk, .infoKnappMob) {
    text-decoration: 2px underline var(--clr-kunzitt);
    text-underline-offset: 3px;
-}
+} */
 .fargetHover {
    border: 2px solid var(--clr-ramme);
 }
@@ -39,7 +39,23 @@ a:active h5:not(.infoKnappDesk, .infoKnappMob) {
    color: var(--clr-kunzitt);
 }
 .fargetFyll {
+   background-color: var(--clr-tekst);
+}
+.kategoriKnapp:hover .fargetFyll,
+.kategoriKnapp:focus-visible .fargetFyll,
+.kategoriLenke:hover .fargetFyll,
+.kategoriLenke:focus-visible .fargetFyll {
    background-color: var(--clr-kunzitt);
+}
+.kategoriLenke:hover .kategoriKnappTittel,
+.kategoriLenke:hover .kategoriKnappIkon,
+.kategoriLenke:hover .kategoriKnappTittel,
+.kategoriLenke:hover .kategoriKnappIkon,
+.kategoriKnapp:hover .kategoriKnappTittel,
+.kategoriKnapp:hover .kategoriKnappIkon,
+.kategoriKnapp:hover .kategoriKnappTittel,
+.kategoriKnapp:hover .kategoriKnappIkon {
+   border-color: var(--clr-kunzitt);
 }
 .fargetRamme {
    border-color: var(--clr-kunzitt);

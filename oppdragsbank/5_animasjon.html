@@ -21,6 +21,7 @@
       <script type="module" src="/js/im_dag-natt.js"></script>
       <script type="module" src="/js/im_breadcrumbs.js"></script>
       <script type="module" src="/js/ob_kategori-filter.js"></script>
+      <script type="module" src="/js/ob_tid-og-spice.js"></script>
       <!-- <script type="module" src="/js/im_hero-bilde.js"></script> -->
       <title>5. Animasjon</title>
    </head>
@@ -43,7 +44,7 @@
                   <div class="hovedmenyIkon maskeIndexOutline displayOutline"></div>
                   <div class="hovedmenyIkon maskeIndexFill displayFill"></div>
                </div>
-               <h3 class="rundRamme ixD xSB hovedmenyTittel">Startside</h3>
+               <h3 class="hovedmenyTittel">Startside</h3>
                <div class="hovedmenyPil"><div class="pilStr maskeMenyPil"></div></div>
             </a>
             <a class="hovedmenyKnapp" target="_self" rel="noreferrer noopener" href="/oppdragsbank.html" title="Kategoriside" alt="Naviger til oppdragskategorier">
@@ -51,7 +52,7 @@
                   <div class="hovedmenyIkon maskeOppdragsbankOutline displayOutline"></div>
                   <div class="hovedmenyIkon maskeOppdragsbankFill displayFill"></div>
                </div>
-               <h3 class="rundRamme ixD xSB hovedmenyTittel">Kategoriside</h3>
+               <h3 class="hovedmenyTittel">Kategoriside</h3>
                <div class="hovedmenyPil"><div class="pilStr maskeMenyPil"></div></div>
             </a>
             <a class="hovedmenyKnapp hovedmenyKnappAktiv" target="_self" rel="noreferrer noopener" href="/oppdragsbank/5_animasjon.html" title="Animasjon" alt="Naviger til oppdragskategori Animasjon">
@@ -59,7 +60,7 @@
                   <div class="hovedmenyIkon maskeOppdragEksternOutline displayOutline fargetFyll"></div>
                   <div class="hovedmenyIkon maskeOppdragEksternFill displayFill fargetFyll"></div>
                </div>
-               <h3 class="rundRamme ixD xSB hovedmenyTittel">5. Animasjon</h3>
+               <h3 class="hovedmenyTittel">5. Animasjon</h3>
             </a>
             <div class="linjeskille"></div>
             <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Visuell logg" alt="Naviger til Visuell logg">
@@ -67,28 +68,28 @@
                   <div class="hovedmenyIkon maskeLoggOutline"></div>
                   <!-- <div class="hovedmenyIkon maskeLoggFill displayFill"></div> -->
                </div>
-               <h3 class="rundRamme ixD xSB hovedmenyTittel">Visuell logg</h3>
+               <h3 class="hovedmenyTittel">Visuell logg</h3>
             </div>
             <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Suksesskriterer" alt="Naviger til Suksesskriterer">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
                   <div class="hovedmenyIkon maskeSuksessOutline"></div>
                   <!-- <div class="hovedmenyIkon maskeSuksessFill displayFill"></div> -->
                </div>
-               <h3 class="rundRamme ixD xSB hovedmenyTittel">Suksesskriterer</h3>
+               <h3 class="hovedmenyTittel">Suksesskriterer</h3>
             </div>
             <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="F21 Portfolio" alt="Naviger til Portfolio">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
                   <div class="hovedmenyIkon maskePortfolioOutline"></div>
                   <!-- <div class="hovedmenyIkon maskePortfolioFill displayFill"></div> -->
                </div>
-               <h3 class="rundRamme ixD xSB hovedmenyTittel">Portfolio</h3>
+               <h3 class="hovedmenyTittel">Portfolio</h3>
             </div>
             <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Karrieresti" alt="Naviger til Karrieresti">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
                   <div class="hovedmenyIkon maskeKarriereOutline"></div>
                   <!-- <div class="hovedmenyIkon maskeKarriereFill displayFill"></div> -->
                </div>
-               <h3 class="rundRamme ixD xSB hovedmenyTittel">Karrieresti</h3>
+               <h3 class="hovedmenyTittel">Karrieresti</h3>
             </div>
             <div class="linjeskille"></div>
             <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Print side" alt="Print side">
@@ -96,14 +97,14 @@
                   <div class="hovedmenyIkon maskePrintOutline"></div>
                   <!-- <div class="hovedmenyIkon maskePrintFill displayFill"></div> -->
                </div>
-               <h3 class="rundRamme ixD xSB hovedmenyTittel">Print side</h3>
+               <h3 class="hovedmenyTittel">Print side</h3>
             </div>
             <div class="hovedmenyKnapp utilgjengelig" target="_self" rel="noreferrer noopener" href="" title="Favoritter" alt="Favoritter">
                <div class="hovedmenyIkonRamme rundRamme ixD nB">
                   <div class="hovedmenyIkon maskeHjerteOutline"></div>
                   <!-- <div class="hovedmenyIkon maskeHjerteFill displayFill"></div> -->
                </div>
-               <h3 class="rundRamme ixD xSB hovedmenyTittel">Favoritter</h3>
+               <h3 class="hovedmenyTittel">Favoritter</h3>
             </div>
             <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
                <svg class="svg-anim" viewBox="0 70 100 100">
@@ -150,51 +151,21 @@
                   <h2 class="fargetLinje">5.1. Opplæring</h2>
                </div>
                <!-- ____ - ____ - ____ - ____ - ____ - Opplæring - ____ - ____ - ____ - ____ - ____ -->
-               <!-- <a target="_self" href="" class="rundRamme ixD xSB kategoriKnapp">
-                  <h5 class="kategoriKnappTittel">5.2.1. kategori: oppdragsnavn</h5>
-                  <div class="kategoriKnappInfo">
-                     <div class="op_spice">
-                        <div class="infoKnappDesk spiceIkon maskeSpice1 fargetFyll"></div>
-                        <div class="infoKnappMob spiceIkonMob maskeSpiceMob1 fargetFyll"></div>
-                        <h5 class="infoKnappDesk">Ekstra mild</h5>
-                        <h5 class="infoKnappMob">1/5</h5>
-                     </div>
-                     <div class="op_tid">
-                        <div class="tidIkon maskeTidTimer fargetFyll"></div>
-                        <h5 class="infoKnappDesk">6-12 timer</h5>
-                        <h5 class="infoKnappMob">6-12t</h5>
-                     </div>
-                  </div>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskeOppdragInternOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskeOppdragInternFill fargetFyll displayFill"></div>
-                  </div>
-               </a> -->
             </section>
             <section class="sBoksRamme sB tekst kategoriSeksjon">
                <div class="kategoriHeader">
                   <h2 class="fargetLinje">5.2. Oppdrag</h2>
                </div>
                <!-- ___ -- ___ -- ___ -- ___ -- ___ -- Oppdrag -- ___ -- ___ -- ___ -- ___ -- ___ -->
-               <a target="_blank" rel="noreferrer noopener" href="/oppdragsbank/5_animasjon/5-2-1_tine-animasjon.html" class="rundRamme ixD xSB kategoriKnapp animasjon2">
-                  <h5 class="kategoriKnappTittel">5.2.1. Verdens beste Litago</h5>
-                  <div class="kategoriKnappInfo">
-                     <div class="op_spice">
-                        <div class="infoKnappDesk spiceIkon maskeSpice2 fargetFyll"></div>
-                        <div class="infoKnappMob spiceIkonMob maskeSpiceMob2 fargetFyll"></div>
-                        <h5 class="infoKnappDesk">Mild</h5>
-                        <h5 class="infoKnappMob">2/5</h5>
-                     </div>
-                     <div class="op_tid">
-                        <div class="tidIkon maskeTidTimer fargetFyll"></div>
-                        <h5 class="infoKnappDesk">16 timer+</h5>
-                        <h5 class="infoKnappMob">16t+</h5>
+               <a target="_blank" rel="noreferrer noopener" href="/oppdragsbank/5_animasjon/5-2-1_tine-animasjon.html" class="kategoriKnapp animasjon2">
+                  <div class="kategoriKnappTittel">
+                     <h5>5.2.1. Verdens beste Litago</h5>
+                     <div class="kategoriKnappInfo">
+                        <div class="op_spice mild"></div>
+                        <div class="op_tid tid15"></div>
                      </div>
                   </div>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskeOppdragInternOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskeOppdragInternFill fargetFyll displayFill"></div>
-                  </div>
+                  <div class="kategoriKnappIkon interntOppdrag"></div>
                </a>
             </section>
             <section class="sBoksRamme sB tekst kategoriSeksjon">
@@ -202,32 +173,19 @@
                   <h2 class="fargetLinje">5.3. Ressurser</h2>
                </div>
                <!-- __ --- __ --- __ --- __ --- __ --- Ressurs --- __ --- __ --- __ --- __ --- __ -->
-               <!-- <a target="_blank" rel="noreferrer noopener" href="" class="rundRamme ixD xSB kategoriLenke">
-                  <h5 class="kategoriKnappTittel">5.3.1. kategori: navn</h5>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskeOppdragRessursOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskeOppdragRessursFill fargetFyll displayFill"></div>
-                  </div>
-               </a> -->
             </section>
             <section class="sBoksRamme sB tekst kategoriSeksjon">
                <div class="kategoriHeader">
                   <h2 class="fargetLinje">5.4. Læringsstier og kurs</h2>
                </div>
                <!-- _ ---- _ ---- _ ---- _ ---- _ ---- Læringssti ---- _ ---- _ ---- _ ---- _ ---- _ -->
-               <a target="_blank" rel="noreferrer noopener" href="https://helpx.adobe.com/animate/get-started.html" class="rundRamme ixD xSB kategoriLenke programvare">
+               <a target="_blank" rel="noreferrer noopener" href="https://helpx.adobe.com/animate/get-started.html" class="kategoriLenke programvare">
                   <h5 class="kategoriKnappTittel">Adobe Get Started: Lær å bruke Animate</h5>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskePlanOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskePlanFill fargetFyll displayFill"></div>
-                  </div>
+                  <div class="kategoriKnappIkon ressurs"></div>
                </a>
-               <a target="_blank" rel="noreferrer noopener" href="https://helpx.adobe.com/adobe-character-animator/get-started.html" class="rundRamme ixD xSB kategoriLenke programvare">
+               <a target="_blank" rel="noreferrer noopener" href="https://helpx.adobe.com/adobe-character-animator/get-started.html" class="kategoriLenke programvare">
                   <h5 class="kategoriKnappTittel">Adobe Get Started: Lær å bruke Character Animator</h5>
-                  <div class="kategoriKnappIkon rundRamme ixD nB">
-                     <div class="op_ikon maskePlanOutline fargetFyll displayOutline"></div>
-                     <div class="op_ikon maskePlanFill fargetFyll displayFill"></div>
-                  </div>
+                  <div class="kategoriKnappIkon ressurs"></div>
                </a>
             </section>
          </div>

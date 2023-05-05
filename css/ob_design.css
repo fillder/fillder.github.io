@@ -344,6 +344,13 @@ table thead tr th {
    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
    font-weight: 500;
 }
+/* .kategoriKnapp {
+   display: flex;
+   position: relative;
+   z-index: 80;
+   height: 2.5rem;
+   justify-content: space-between;
+} */
 .kategoriKnapp {
    display: flex;
    position: relative;
@@ -354,31 +361,49 @@ table thead tr th {
 .kategoriKnapp > * {
    margin-block: auto;
 }
-.kategoriLenke {
+/* .kategoriLenke {
    position: relative;
    padding-block: 0.45rem;
+   z-index: 80;
+   height: 2.5rem;
+} */
+.kategoriLenke {
+   position: relative;
+   /* padding-block: 0.45rem; */
    z-index: 80;
    height: 2.5rem;
 }
 .kategoriKnappTittel {
    display: grid;
+   grid-template-columns: 1fr auto;
    position: relative;
    padding-inline-start: 3.4rem;
    padding-inline-end: 0.5rem;
+   border-radius: 50rem;
+   background-color: var(--clr-ixDBoks);
+   border-color: var(--clr-ramme);
+   border-width: 1px 1px 2px 2px;
+   border-style: solid;
    z-index: 90;
-   height: 100%;
+   height: 2.5rem;
    width: 100%;
    align-content: center;
+}
+.kategoriKnappTittel > * {
+   margin-block: auto;
 }
 .kategoriKnappIkon {
    position: absolute;
    top: 50%;
    transform: translate(-10%, -50%);
    left: 0;
+   border-radius: 50rem;
+   background-color: var(--clr-ixDBoks);
+   border: 2px solid var(--clr-ramme);
    width: 50px;
    height: 50px;
    z-index: 100;
-   padding: 0.4rem;
+   padding: 0.2rem;
 }
 .kategoriKnappInfo {
    display: flex;
@@ -402,10 +427,6 @@ table thead tr th {
    width: 90px;
    height: 30px;
 }
-.spiceIkonMob {
-   width: 18px;
-   height: 30px;
-}
 .tidIkon {
    width: 30px;
    height: 30px;
@@ -413,18 +434,19 @@ table thead tr th {
 .hidden {
    display: none;
 }
-.kategoriKnapp:hover:not(.utilgjengelig) .displayOutline,
-.kategoriKnapp:focus-visible:not(.utilgjengelig) .displayOutline,
-.kategoriLenke:hover:not(.utilgjengelig) .displayOutline,
-.kategoriLenke:focus-visible:not(.utilgjengelig) .displayOutline {
+/* .kategoriKnapp:hover .displayOutline,
+.kategoriKnapp:focus-visible .displayOutline,
+.kategoriLenke:hover .displayOutline,
+.kategoriLenke:focus-visible .displayOutline {
    display: none;
-}
-.kategoriKnapp:hover:not(.utilgjengelig) .displayFill,
-.kategoriKnapp:focus-visible:not(.utilgjengelig) .displayFill,
-.kategoriLenke:hover:not(.utilgjengelig) .displayFill,
-.kategoriLenke:focus-visible:not(.utilgjengelig) .displayFill {
+} */
+
+/* .kategoriKnapp:hover .displayFill,
+.kategoriKnapp:focus-visible .displayFill,
+.kategoriLenke:hover .displayFill,
+.kategoriLenke:focus-visible .displayFill {
    display: block;
-}
+} */
 .flexInfoKnapp:hover:not(.utilgjengelig) .displayOutline,
 .flexInfoKnapp:focus-visible:not(.utilgjengelig) .displayOutline {
    display: none;
@@ -432,6 +454,64 @@ table thead tr th {
 .flexInfoKnapp:hover:not(.utilgjengelig) .displayFill,
 .flexInfoKnapp:focus-visible:not(.utilgjengelig) .displayFill {
    display: block;
+}
+/*___________ Spiciness __________*/
+.utenKrydder::after {
+   content: "Uten krydder";
+}
+.ekstraMild::after {
+   content: "Ekstra Mild";
+}
+.mild::after {
+   content: "Mild";
+}
+.medium::after {
+   content: "Medium";
+}
+.sterk::after {
+   content: "Sterk";
+}
+.ekstraSterk::after {
+   content: "Ekstra sterk";
+}
+/*___________ Tid __________*/
+.tid1::after {
+   content: "≤1 timer";
+}
+.tid1-3::after {
+   content: "1-3 timer";
+}
+.tid3-6::after {
+   content: "3-6 timer";
+}
+.tid6-9::after {
+   content: "6-9 timer";
+}
+.tid9-12::after {
+   content: "9-12 timer";
+}
+.tid12-15::after {
+   content: "12-15 timer";
+}
+.tid15::after {
+   content: "15 timer+";
+}
+.utenKrydder,
+.ekstraMild,
+.mild,
+.medium,
+.sterk,
+.ekstraSterk,
+.tid1,
+.tid1-3,
+.tid3-6,
+.tid6-9,
+.tid9-12,
+.tid12-15,
+.tid15 {
+   font-family: "Roboto", sans-serif;
+   font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+   font-weight: 500;
 }
 /*___________________________________*/
 /*___________ OppdragsSide __________*/

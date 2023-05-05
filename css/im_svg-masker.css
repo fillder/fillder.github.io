@@ -77,35 +77,6 @@
    -webkit-mask: url(/svg/ob_10_ai.svg) no-repeat center;
    mask: url(/svg/ob_10_ai.svg) no-repeat center;
 }
-.maskeSpiceMob0 {
-   opacity: 0.2;
-   -webkit-mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
-   mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
-}
-.maskeSpiceMob1 {
-   opacity: 0.36;
-   -webkit-mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
-   mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
-}
-.maskeSpiceMob2 {
-   opacity: 0.52;
-   -webkit-mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
-   mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
-}
-.maskeSpiceMob3 {
-   opacity: 0.68;
-   -webkit-mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
-   mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
-}
-.maskeSpiceMob4 {
-   opacity: 0.84;
-   -webkit-mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
-   mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
-}
-.maskeSpiceMob5 {
-   -webkit-mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
-   mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
-}
 .maskeSpice0 {
    -webkit-mask: url(/svg/ob/ob_spice0.svg) no-repeat center;
    mask: url(/svg/ob/ob_spice0.svg) no-repeat center;
@@ -235,177 +206,78 @@
    -webkit-mask: url(/svg/ob/ob_portfolio_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_portfolio_outline.svg) no-repeat center;
 }
-.maskePortfolioFill {
-   -webkit-mask: url(/svg/ob/ob_portfolio_fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_portfolio_fill.svg) no-repeat center;
-}
+
 .maskeLoggOutline {
    -webkit-mask: url(/svg/ob/ob_visuell-logg_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_visuell-logg_outline.svg) no-repeat center;
 }
-.maskeLoggFill {
-   -webkit-mask: url(/svg/ob/ob_visuell-logg_fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_visuell-logg_fill.svg) no-repeat center;
-}
+
 .maskeSuksessOutline {
    -webkit-mask: url(/svg/ob/ob_sukksess_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_sukksess_outline.svg) no-repeat center;
 }
-.maskeSuksessFill {
-   -webkit-mask: url(/svg/ob/ob_karrieresti_fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_karrieresti_fill.svg) no-repeat center;
-}
+
 .maskeKarriereOutline {
    -webkit-mask: url(/svg/ob/ob_karrieresti_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_karrieresti_outline.svg) no-repeat center;
 }
-.maskeKarriereFill {
-   -webkit-mask: url(/svg/ob/ob_sukksess_fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_sukksess_fill.svg) no-repeat center;
-}
+
 .maskeHjerteOutline {
    -webkit-mask: url(/svg/ob/ob_heart_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_heart_outline.svg) no-repeat center;
 }
-.maskeHjerteFill {
-   -webkit-mask: url(/svg/ob/ob_heart_fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_heart_fill.svg) no-repeat center;
-}
+
 .maskePrintOutline {
    -webkit-mask: url(/svg/ob/ob_print_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_print_outline.svg) no-repeat center;
 }
-.maskePrintFill {
-   -webkit-mask: url(/svg/ob/ob_print_fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_print_fill.svg) no-repeat center;
-}
+
 .maskeGrafiskOutline {
    -webkit-mask: url(/svg/ob/ob_grafisk-outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_grafisk-outline.svg) no-repeat center;
 }
-.maskeGrafiskFill {
-   -webkit-mask: url(/svg/ob/ob_grafisk-fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_grafisk-fill.svg) no-repeat center;
-}
+
 .maskeTreDOutline {
    -webkit-mask: url(/svg/ob/ob_tred-outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_tred-outline.svg) no-repeat center;
 }
-.maskeTreDFill {
-   -webkit-mask: url(/svg/ob/ob_tred-fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_tred-fill.svg) no-repeat center;
-}
+
 .maskeFotoOutline {
    -webkit-mask: url(/svg/ob/ob_foto-outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_foto-outline.svg) no-repeat center;
 }
-.maskeFotoFill {
-   -webkit-mask: url(/svg/ob/ob_foto-fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_foto-fill.svg) no-repeat center;
-}
+
 .maskeFilmOutline {
    -webkit-mask: url(/svg/ob/ob_film-outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_film-outline.svg) no-repeat center;
 }
-.maskeFilmFill {
-   -webkit-mask: url(/svg/ob/ob_film-fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_film-fill.svg) no-repeat center;
-}
+
 .maskeLydOutline {
    -webkit-mask: url(/svg/ob/ob_lyd-outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_lyd-outline.svg) no-repeat center;
 }
-.maskeLydFill {
-   -webkit-mask: url(/svg/ob/ob_lyd-fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_lyd-fill.svg) no-repeat center;
-}
+
 .maskeDriftOutline {
    -webkit-mask: url(/svg/ob/ob_drift-outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_drift-outline.svg) no-repeat center;
 }
-.maskeDriftFill {
-   -webkit-mask: url(/svg/ob/ob_drift-fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_drift-fill.svg) no-repeat center;
-}
+
 .maskeUtviklingOutline {
    -webkit-mask: url(/svg/ob/ob_utvikling-outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_utvikling-outline.svg) no-repeat center;
 }
-.maskeUtviklingFill {
-   -webkit-mask: url(/svg/ob/ob_utvikling-fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_utvikling-fill.svg) no-repeat center;
-}
+
 .maskeWebOutline {
    -webkit-mask: url(/svg/ob/ob_web-outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_web-outline.svg) no-repeat center;
-}
-.maskeWebFill {
-   -webkit-mask: url(/svg/ob/ob_web-fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_web-fill.svg) no-repeat center;
 }
 .maskeAiOutline {
    -webkit-mask: url(/svg/ob/ob_ai-outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_ai-outline.svg) no-repeat center;
 }
-.maskeAiFill {
-   -webkit-mask: url(/svg/ob/ob_ai-fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_ai-fill.svg) no-repeat center;
-}
-.maskeOppdragEksternOutline {
-   -webkit-mask: url(/svg/ob/ob_eksternt-oppdrag_outline.svg) no-repeat center;
-   mask: url(/svg/ob/ob_eksternt-oppdrag_outline.svg) no-repeat center;
-}
-.maskeOppdragEksternFill {
-   -webkit-mask: url(/svg/ob/ob_eksternt-oppdrag_fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_eksternt-oppdrag_fill.svg) no-repeat center;
-}
-.maskeOppdragInternOutline {
-   -webkit-mask: url(/svg/ob/ob_internt-oppdrag_outline.svg) no-repeat center;
-   mask: url(/svg/ob/ob_internt-oppdrag_outline.svg) no-repeat center;
-}
-.maskeOppdragInternFill {
-   -webkit-mask: url(/svg/ob/ob_internt-oppdrag_fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_internt-oppdrag_fill.svg) no-repeat center;
-}
-.maskeOppdragNedlastingOutline {
-   -webkit-mask: url(/svg/ob/ob_download_outline.svg) no-repeat center;
-   mask: url(/svg/ob/ob_download_outline.svg) no-repeat center;
-}
-.maskeOppdragNedlastingFill {
-   -webkit-mask: url(/svg/ob/ob_download_fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_download_fill.svg) no-repeat center;
-}
-.maskeOppdragNettstedOutline {
-   -webkit-mask: url(/svg/ob/ob_ekstern_outline.svg) no-repeat center;
-   mask: url(/svg/ob/ob_ekstern_outline.svg) no-repeat center;
-}
-.maskeOppdragNettstedFill {
-   -webkit-mask: url(/svg/ob/ob_ekstern_fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_ekstern_fill.svg) no-repeat center;
-}
-.maskeOppdragRessursOutline {
-   -webkit-mask: url(/svg/ob/ob_ressurs_outline.svg) no-repeat center;
-   mask: url(/svg/ob/ob_ressurs_outline.svg) no-repeat center;
-}
-.maskeOppdragRessursFill {
-   -webkit-mask: url(/svg/ob/ob_ressurs_fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_ressurs_fill.svg) no-repeat center;
-}
-.maskeOppdragTutorialOutline {
-   -webkit-mask: url(/svg/ob/ob_play_outline.svg) no-repeat center;
-   mask: url(/svg/ob/ob_play_outline.svg) no-repeat center;
-}
-.maskeOppdragTutorialFill {
-   -webkit-mask: url(/svg/ob/ob_play_fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_play_fill.svg) no-repeat center;
-}
-.maskePlanOutline {
+.maskePlan {
    -webkit-mask: url(/svg/ob/ob_plan_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_plan_outline.svg) no-repeat center;
-}
-.maskePlanFill {
-   -webkit-mask: url(/svg/ob/ob_plan_fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_plan_fill.svg) no-repeat center;
 }
 .maskeModulInfo {
    -webkit-mask: url(/svg/ob/ob_info_outline.svg) no-repeat center;
@@ -423,10 +295,6 @@
    -webkit-mask: url(/svg/ob/ob_uker_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_uker_outline.svg) no-repeat center;
 }
-.maskeUkerFill {
-   -webkit-mask: url(/svg/ob/ob_uker_fill.svg) no-repeat center;
-   mask: url(/svg/ob/ob_uker_fill.svg) no-repeat center;
-}
 .maskeOppdragsbankFill {
    -webkit-mask: url(/svg/ob/ob_oppdragsbank_fill.svg) no-repeat center;
    mask: url(/svg/ob/ob_oppdragsbank_fill.svg) no-repeat center;
@@ -442,10 +310,6 @@
 .maskeRessursbankOutline {
    -webkit-mask: url(/svg/ob/ob_eksamen_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_eksamen_outline.svg) no-repeat center;
-}
-.maskeF21Fill {
-   -webkit-mask: url(/svg/tp/tp_f21_fill.svg) no-repeat center;
-   mask: url(/svg/tp/tp_f21_fill.svg) no-repeat center;
 }
 .maskeF21Outline {
    -webkit-mask: url(/svg/tp/tp_f21_outline.svg) no-repeat center;
@@ -471,4 +335,42 @@
    background-color: var(--clr-tekst);
    -webkit-mask: url(/svg/im/im_hovedmeny-pil.svg) no-repeat center;
    mask: url(/svg/im/im_hovedmeny-pil.svg) no-repeat center;
+}
+
+/* Nye ikoner */
+.maskeOppdragIntern {
+   -webkit-mask: url(/svg/ob/ob_internt-oppdrag_outline.svg) no-repeat center;
+   mask: url(/svg/ob/ob_internt-oppdrag_outline.svg) no-repeat center;
+}
+.maskeOppdragEkstern {
+   -webkit-mask: url(/svg/ob/ob_eksternt-oppdrag_outline.svg) no-repeat center;
+   mask: url(/svg/ob/ob_eksternt-oppdrag_outline.svg) no-repeat center;
+}
+.maskeOppdragNedlasting {
+   -webkit-mask: url(/svg/ob/ob_download_outline.svg) no-repeat center;
+   mask: url(/svg/ob/ob_download_outline.svg) no-repeat center;
+}
+.maskeOppdragNettsted {
+   -webkit-mask: url(/svg/ob/ob_ekstern_outline.svg) no-repeat center;
+   mask: url(/svg/ob/ob_ekstern_outline.svg) no-repeat center;
+}
+.maskeOppdragRessurs {
+   -webkit-mask: url(/svg/ob/ob_ressurs_outline.svg) no-repeat center;
+   mask: url(/svg/ob/ob_ressurs_outline.svg) no-repeat center;
+}
+.maskeVideo {
+   -webkit-mask: url(/svg/ob/ob_play_outline.svg) no-repeat center;
+   mask: url(/svg/ob/ob_play_outline.svg) no-repeat center;
+}
+
+@media screen and (max-width: 992px) {
+   .maskeSpice0,
+   .maskeSpice1,
+   .maskeSpice2,
+   .maskeSpice3,
+   .maskeSpice4,
+   .maskeSpice5 {
+      -webkit-mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
+      mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
+   }
 }
