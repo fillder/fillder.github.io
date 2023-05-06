@@ -602,11 +602,13 @@ footer {
    width: 100%;
    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
 }
+.footerContent::after {
+   content: "Dette nettstedet er designet og utviklet av Marius Strøm Riseth // Fyrstikkalléen videregående skole • F21 vgs";
+}
 .infoTab,
 .infoMob {
    display: none;
 }
-/* Store flater (laptop og desktop, opp til 992px) */
 @media only screen and (max-width: 1200px) {
    .breadcrumbsMenu {
       display: block;
@@ -629,22 +631,15 @@ footer {
       margin-top: 490px;
    }
 }
-
 @media only screen and (max-width: 992px) {
-   .infoDesk {
-      display: none;
-   }
-   .infoTab {
-      display: block;
+   .footerContent::after {
+      content: "Designet og utviklet av Marius Strøm Riseth // F21 VGS";
    }
 }
 @media only screen and (max-width: 600px) {
    nav {
       grid-template-columns: 42px 1fr 42px;
    }
-   /* .hovedmenyRamme {
-      width: 100%;
-   } */
    .menyKnapp {
       display: flex;
       place-items: center;
@@ -653,19 +648,9 @@ footer {
    .logo span {
       display: none;
    }
-   .infoTab {
-      display: none;
+   .footerContent::after {
+      content: "Laget av Marius S. Riseth // F21 VGS";
    }
-   .infoMob {
-      display: block;
-   }
-   /* .breadcrumbsMenu,
-   #breadcrumbs {
-      display: none;
-   } */
-   /* header {
-      margin-top: 50px;
-   } */
    .mainMedHeader {
       margin-top: 450px;
    }

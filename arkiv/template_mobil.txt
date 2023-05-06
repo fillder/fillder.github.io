@@ -12,3 +12,13 @@
 /* Ekstra små flater (Mobiltelefoner, opp til 600px) */
 @media only screen and (max-width: 600px) {
 }
+
+
+
+
+
+‘ = Single opening = Alt + 0 1 4 5
+’ = Single closing = Alt + 0 1 4 6
+“ = Double opening = Alt + 0 1 4 7
+” = Double closing = Alt + 0 1 4 8
+https://smartquotesforsmartpeople.com/ 
