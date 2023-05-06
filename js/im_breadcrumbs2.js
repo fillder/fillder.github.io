@@ -1,6 +1,7 @@
 const siteHierarchy = {
    "/index.html": {
       displayName: "Hjem",
+      icon: "/svg/im/im_home_outline.svg",
       children: {
          "/timeplan.html": {
             displayName: "Timeplan",

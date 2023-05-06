@@ -343,8 +343,12 @@
    mask: url(/svg/ob/ob_internt-oppdrag_outline.svg) no-repeat center;
 }
 .maskeOppdragEkstern {
-   -webkit-mask: url(/svg/ob/ob_eksternt-oppdrag_outline.svg) no-repeat center;
-   mask: url(/svg/ob/ob_eksternt-oppdrag_outline.svg) no-repeat center;
+   -webkit-mask: url(/svg/ob/ob_ekstern_outline.svg) no-repeat center;
+   mask: url(/svg/ob/ob_ekstern_outline.svg) no-repeat center;
+}
+.maskeAnimasjon {
+   -webkit-mask: url(/svg/ob/ob_animasjon.svg) no-repeat center;
+   mask: url(/svg/ob/ob_animasjon.svg) no-repeat center;
 }
 .maskeOppdragNedlasting {
    -webkit-mask: url(/svg/ob/ob_download_outline.svg) no-repeat center;
@@ -361,6 +365,10 @@
 .maskeVideo {
    -webkit-mask: url(/svg/ob/ob_play_outline.svg) no-repeat center;
    mask: url(/svg/ob/ob_play_outline.svg) no-repeat center;
+}
+.maskeFagverket {
+   -webkit-mask: url(/svg/im/im_fagverket_outline.svg) no-repeat center;
+   mask: url(/svg/im/im_fagverket_outline.svg) no-repeat center;
 }
 
 @media screen and (max-width: 992px) {

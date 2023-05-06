@@ -356,13 +356,6 @@ table thead tr th {
    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
    font-weight: 500;
 }
-/* .kategoriKnapp {
-   display: flex;
-   position: relative;
-   z-index: 80;
-   height: 2.5rem;
-   justify-content: space-between;
-} */
 .kategoriKnapp {
    display: flex;
    position: relative;
@@ -373,15 +366,8 @@ table thead tr th {
 .kategoriKnapp > * {
    margin-block: auto;
 }
-/* .kategoriLenke {
-   position: relative;
-   padding-block: 0.45rem;
-   z-index: 80;
-   height: 2.5rem;
-} */
 .kategoriLenke {
    position: relative;
-   /* padding-block: 0.45rem; */
    z-index: 80;
    height: 2.5rem;
 }
@@ -450,19 +436,6 @@ table thead tr th {
 .hidden {
    display: none;
 }
-/* .kategoriKnapp:hover .displayOutline,
-.kategoriKnapp:focus-visible .displayOutline,
-.kategoriLenke:hover .displayOutline,
-.kategoriLenke:focus-visible .displayOutline {
-   display: none;
-} */
-
-/* .kategoriKnapp:hover .displayFill,
-.kategoriKnapp:focus-visible .displayFill,
-.kategoriLenke:hover .displayFill,
-.kategoriLenke:focus-visible .displayFill {
-   display: block;
-} */
 .flexInfoKnapp:hover:not(.utilgjengelig) .displayOutline,
 .flexInfoKnapp:focus-visible:not(.utilgjengelig) .displayOutline {
    display: none;

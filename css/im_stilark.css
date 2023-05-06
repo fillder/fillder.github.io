@@ -616,25 +616,46 @@ footer {
    position: relative;
 }
 #mainMenu li {
-   margin-block: 0.25rem;
+   margin-block: 0.6rem;
 }
 #mainMenu li ul li {
-   margin-left: 1rem;
+   margin-left: 2rem;
 }
 #mainMenu li a {
    display: flex;
    padding-block: 0.5rem;
-   padding-inline: 2rem;
-   background-color: var(--clr-tabellBoks);
+   padding-inline: 3rem;
+   background-color: var(--clr-ixDBoks);
+   border: 2px solid var(--clr-ramme);
    border-radius: 50rem;
-}
-#mainMenu li a::before {
-   content: "\2022";
+   font-family: "Roboto Slab", serif;
    color: var(--clr-tekst);
-   font-weight: bold;
-   display: inline-block;
-   width: 1em;
-   margin-left: -1em;
+   line-height: 1.5;
+   font-size: clamp(1rem, 1.1vw, 1.2rem);
+   font-weight: 500;
+}
+.ikonStr {
+   height: 100%;
+   width: 100%;
+}
+.hovedmenyLenke {
+   position: relative;
+   z-index: 80;
+   height: 2.4rem;
+   place-items: center;
+}
+.hovedmenyIkon {
+   position: absolute;
+   top: 50%;
+   transform: translate(-10%, -50%);
+   left: 0;
+   border-radius: 50rem;
+   background-color: var(--clr-ixDBoks);
+   border: 2px solid var(--clr-ramme);
+   width: 45px;
+   height: 45px;
+   z-index: 100;
+   padding: 0.1rem;
 }
 @media only screen and (max-width: 1200px) {
    .breadcrumbsMenu {

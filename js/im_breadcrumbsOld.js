@@ -1,11 +1,9 @@
 const siteHierarchy = {
    "/index.html": {
       displayName: "Hjem",
-      iconClass: "maskeIndexOutline",
       children: {
          "/timeplan.html": {
-            displayName: "F21 Timeplan",
-            iconClass: "maskeUkerOutline",
+            displayName: "Timeplan",
             children: {
                "/timeplan/uke_1.html": { displayName: "Uke 1" },
                "/timeplan/uke_2.html": { displayName: "Uke 2" },
@@ -56,11 +54,9 @@ const siteHierarchy = {
          },
          "/oppdragsbank.html": {
             displayName: "Oppdragsbank",
-            iconClass: "maskeOppdragsbankOutline",
             children: {
                "/oppdragsbank/1_grafisk-design.html": {
-                  displayName: "1. Grafisk design",
-                  iconClass: "maskeGrafiskOutline",
+                  displayName: "Grafisk design",
                   children: {
                      "/oppdragsbank/1_grafisk-design/1-1-1_illustrator-pen-tool.html": { displayName: "Illustrator: Pen tool" },
                      "/oppdragsbank/1_grafisk-design/1-2-1_produkt-etter-manualen.html": { displayName: "Produkt etter manualen" },
@@ -71,15 +67,13 @@ const siteHierarchy = {
                   },
                },
                "/oppdragsbank/2_3d-design.html": {
-                  displayName: "2. 3D-design",
-                  iconClass: "maskeTreDOutline",
+                  displayName: "3D Grafikk",
                   children: {
                      "/oppdragsbank/2_3d-design/2-2-1_modeller-spillobjekt.html": { displayName: "Modeller et spillobjekt" },
                   },
                },
                "/oppdragsbank/3_fotografi.html": {
-                  displayName: "3. Fotografi",
-                  iconClass: "maskeFotoOutline",
+                  displayName: "Fotografi",
                   children: {
                      "/oppdragsbank/3_fotografi/3-1-1_naturens-barn.html": { displayName: "Naturens barn" },
                      "/oppdragsbank/3_fotografi/3-2-1_filmplakat.html": { displayName: "Filmplakat" },
@@ -87,31 +81,27 @@ const siteHierarchy = {
                   },
                },
                "/oppdragsbank/4_film-og-vfx.html": {
-                  displayName: "4. Film og VFX",
-                  iconClass: "maskeFilmOutline",
+                  displayName: "Film og VFX",
                   children: {
                      "/oppdragsbank/4_film-og-vfx/4-2-1_supersmooth-reklamefilm.html": { displayName: "Reklamefilm" },
                      "/oppdragsbank/4_film-og-vfx/4-2-2_manus123.html": { displayName: "Manus 1-2-3" },
                   },
                },
                "/oppdragsbank/5_animasjon.html": {
-                  displayName: "5. Animasjon",
-                  iconClass: "maskeAnimasjon",
+                  displayName: "Animasjon",
                   children: {
                      "/oppdragsbank/5_animasjon/5-2-1_tine-animasjon.html": { displayName: "Litagoreklame" },
                   },
                },
                "/oppdragsbank/6_lyddesign.html": {
-                  displayName: "6. Lyddesign",
-                  iconClass: "maskeLydOutline",
+                  displayName: "Lyddesign",
                   children: {
                      "/oppdragsbank/6_lyddesign/6-2-1_im-podcast.html": { displayName: "IM-Podkast" },
                      "/oppdragsbank/6_lyddesign/6-2-2_musicless-music-video.html": { displayName: "Musicless music video" },
                   },
                },
                "/oppdragsbank/7_drift.html": {
-                  displayName: "7. Drift",
-                  iconClass: "maskeDriftOutline",
+                  displayName: "Drift",
                   children: {
                      "/oppdragsbank/7_drift/7-2-1_burp-suite.html": { displayName: "Burp Suite" },
                      "/oppdragsbank/7_drift/7-2-2_bash-script.html": { displayName: "Bash Script" },
@@ -119,15 +109,13 @@ const siteHierarchy = {
                   },
                },
                "/oppdragsbank/8_programmering.html": {
-                  displayName: "8. Programmering",
-                  iconClass: "maskeUtviklingOutline",
+                  displayName: "Programmering",
                   children: {
                      "/oppdragsbank/8_programmering/8-2-1_pihole-blokade.html": { displayName: "PiHole Blokade" },
                   },
                },
                "/oppdragsbank/9_webutvikling.html": {
-                  displayName: "9. Webutvikling",
-                  iconClass: "maskeWebOutline",
+                  displayName: "Webutvikling",
                   children: {
                      "/oppdragsbank/9_webutvikling/9-2-1_reklamefilmnettside.html": { displayName: "Reklamefilmnettside" },
                      "/oppdragsbank/9_webutvikling/9-2-2_kantinenettside.html": { displayName: "Kantinenettside" },
@@ -137,15 +125,13 @@ const siteHierarchy = {
                   },
                },
                "/oppdragsbank/10_ai-systemer.html": {
-                  displayName: "10. AI-systemer",
-                  iconClass: "maskeAiOutline",
+                  displayName: "AI-systemer",
                   //   children: { "oppdragnavn.html": { displayName: "oppdragnavn" } },
                },
             },
          },
          "/ressursbank.html": {
-            displayName: "IM-lærerverket",
-            iconClass: "maskeFagverket",
+            displayName: "IM-fagverket",
          },
       },
    },
@@ -216,59 +202,3 @@ function generateBreadcrumbs() {
 
 // Kaller funksjonen for å generere brødsmulemenyen
 generateBreadcrumbs();
-
-document.addEventListener("DOMContentLoaded", function () {
-   function generateMainMenu() {
-      const mainMenu = document.getElementById("mainMenu");
-
-      function createMenuItem(displayName, url, iconClass) {
-         const listItem = document.createElement("li");
-         const link = document.createElement("a");
-         link.href = url;
-         link.classList.add("hovedmenyLenke");
-
-         if (iconClass) {
-            const iconWrapper = document.createElement("div");
-            iconWrapper.classList.add("hovedmenyIkon");
-
-            const icon = document.createElement("div");
-            icon.classList.add("ikonStr", iconClass, "fargetFyll");
-
-            iconWrapper.appendChild(icon);
-            link.appendChild(iconWrapper);
-         }
-
-         const text = document.createTextNode(displayName);
-         link.appendChild(text);
-
-         listItem.appendChild(link);
-         return listItem;
-      }
-
-      function createSubMenu(children) {
-         const subMenu = document.createElement("ul");
-         for (const [url, value] of Object.entries(children)) {
-            const listItem = createMenuItem(value.displayName, url, value.iconClass);
-            subMenu.appendChild(listItem);
-         }
-         return subMenu;
-      }
-
-      // Legger til "Hjem"-elementet i menyen
-      const homeMenuItem = createMenuItem(siteHierarchy["/index.html"].displayName, "/index.html", siteHierarchy["/index.html"].iconClass);
-      mainMenu.appendChild(homeMenuItem);
-
-      // Legger til resten av elementene i menyen
-      for (const [url, value] of Object.entries(siteHierarchy["/index.html"].children)) {
-         const menuItem = createMenuItem(value.displayName, url, value.iconClass);
-         mainMenu.appendChild(menuItem);
-
-         if (url === "/oppdragsbank.html" && value.children) {
-            const subMenu = createSubMenu(value.children);
-            menuItem.appendChild(subMenu);
-         }
-      }
-   }
-
-   generateMainMenu();
-});
