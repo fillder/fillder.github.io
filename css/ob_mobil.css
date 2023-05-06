@@ -256,25 +256,6 @@
    }
 }
 @media screen and (max-width: 600px) {
-   /* .ob_hovedsideGrid {
-      width: 96%;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(auto, 1fr);
-      grid-template-areas:
-         "tek"
-         "gra"
-         "tre"
-         "fot"
-         "fil"
-         "ani"
-         "lyd"
-         "dri"
-         "pro"
-         "web"
-         "kun"
-         "inf"
-         "inf";
-   } */
    .kategoriTittel {
       width: 9rem;
       text-align: center;

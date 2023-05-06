@@ -385,6 +385,8 @@ nav {
 .hovedmenyKnapp:focus-visible .displayFill {
    display: block;
 }
+
+/* Resterende Nav*/
 .flexHoyre {
    position: absolute;
    top: 0.4rem;
@@ -554,16 +556,16 @@ header {
 ul {
    list-style: none;
 }
-.oppdragsInfo ul,
+/* .oppdragsInfo ul,
 .toKolloner ul,
 .infoGrid ul {
    margin-block-end: 1rem;
-}
-.oppdragsInfo ul li,
+} */
+/* .oppdragsInfo ul li,
 .toKolloner ul li,
 .infoGrid ul li {
    margin-left: 1em;
-}
+} */
 ul li p::before {
    content: "\2022";
    color: var(--clr-tekst);
@@ -608,6 +610,31 @@ footer {
 .infoTab,
 .infoMob {
    display: none;
+}
+/* Ny hovedmeny */
+#mainMenu {
+   position: relative;
+}
+#mainMenu li {
+   margin-block: 0.25rem;
+}
+#mainMenu li ul li {
+   margin-left: 1rem;
+}
+#mainMenu li a {
+   display: flex;
+   padding-block: 0.5rem;
+   padding-inline: 2rem;
+   background-color: var(--clr-tabellBoks);
+   border-radius: 50rem;
+}
+#mainMenu li a::before {
+   content: "\2022";
+   color: var(--clr-tekst);
+   font-weight: bold;
+   display: inline-block;
+   width: 1em;
+   margin-left: -1em;
 }
 @media only screen and (max-width: 1200px) {
    .breadcrumbsMenu {
