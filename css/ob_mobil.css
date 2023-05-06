@@ -17,13 +17,13 @@
 @media screen and (max-width: 1200px) {
    .ob_hovedsideGrid {
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(auto-min, 1fr);
+      grid-template-rows: auto 1fr 1fr 1fr auto;
       grid-template-areas:
+         "tek tek tek tek"
          "gra tre fot fil"
          "ani lyd dri pro"
          "... web kun ..."
-         "inf inf inf inf"
-         "tek tek tek tek";
+         "inf inf inf inf";
    }
    .infoKnapper {
       display: flex;
@@ -34,15 +34,15 @@
 @media screen and (max-width: 992px) {
    .ob_hovedsideGrid {
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(auto-min, 1fr);
+      grid-template-rows: auto 1fr 1fr 1fr 1fr auto auto;
       grid-template-areas:
+         "tek tek tek"
          "gra tre fot"
          "fil ani lyd"
          "dri pro web"
          "... kun ..."
          "inf inf inf"
-         "inf inf inf"
-         "tek tek tek";
+         "inf inf inf";
    }
    .ob_oppdragssideGrid {
       width: 90%;
@@ -135,15 +135,15 @@
    }
    .ob_hovedsideGrid {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(auto-min, 1fr);
+      grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr auto;
       grid-template-areas:
+         "tek tek"
          "gra tre"
          "fot fil"
          "ani lyd"
          "dri pro"
          "web kun"
-         "inf inf"
-         "tek tek";
+         "inf inf";
    }
    .infoKnappTittel {
       min-width: 250px;
@@ -156,13 +156,24 @@
       padding-inline-end: 1rem;
    }
    .tekstGrid {
-      grid-area: tek;
-      display: grid;
-      padding: 2rem;
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(2, 1fr);
-      gap: 2rem;
-      margin-block: 0rem;
+      grid-template-areas:
+         "obb"
+         "spi"
+         "tid";
+      row-gap: 1rem;
+   }
+   .infoBoksGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      gap: 0.25rem;
+   }
+   .infoBoks {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0.5rem;
    }
    .ob_oppdragssideGrid {
       display: grid;
@@ -245,11 +256,12 @@
    }
 }
 @media screen and (max-width: 600px) {
-   .ob_hovedsideGrid {
-      width: 100%;
+   /* .ob_hovedsideGrid {
+      width: 96%;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(auto, 1fr);
       grid-template-areas:
+         "tek"
          "gra"
          "tre"
          "fot"
@@ -261,9 +273,16 @@
          "web"
          "kun"
          "inf"
-         "inf"
-         "tek"
-         "tek";
+         "inf";
+   } */
+   .kategoriTittel {
+      width: 9rem;
+      text-align: center;
+      align-content: center;
+   }
+   .kategoriIkon {
+      width: 9rem;
+      height: 9rem;
    }
    .bildeRamme {
       max-width: 100vw;

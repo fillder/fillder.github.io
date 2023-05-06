@@ -8,12 +8,12 @@
    height: 90%;
    margin-inline: auto;
    grid-template-columns: repeat(5, 1fr);
-   grid-template-rows: 1fr 1fr auto auto;
+   grid-template-rows: auto 1fr 1fr auto;
    grid-template-areas:
+      "tek tek tek tek tek"
       "gra tre fot fil ani"
       "lyd dri pro web kun"
-      "inf inf inf inf inf"
-      "tek tek tek tek tek";
+      "inf inf inf inf inf";
 }
 /* .ob_hovedsideGrid > * {
    width: min-content;
@@ -53,10 +53,42 @@
    grid-area: tek;
    display: grid;
    grid-template-columns: repeat(2, 1fr);
-   gap: 2rem;
+   grid-template-areas:
+      "obb obb"
+      "spi tid";
+   column-gap: 2rem;
+   row-gap: 1rem;
+}
+.infoSpice {
+   grid-area: spi;
+}
+.infoTid {
+   grid-area: tid;
+}
+.infoIntro {
+   grid-area: obb;
 }
 .infoKnapper {
    grid-area: inf;
+}
+/*______ Kategoriside infoBokser ______*/
+.infoBoksGrid {
+   display: grid;
+   grid-template-columns: auto 1fr;
+   gap: 1rem;
+}
+.infoBoks {
+   display: flex;
+   flex-direction: column;
+   place-items: start;
+   gap: 0.5rem;
+   text-align: center;
+}
+.infoBoksIkon {
+   display: flex;
+   gap: 1rem;
+   height: 50px;
+   width: 90px;
 }
 /*______ KategoriIkoner ______*/
 .kategoriIkon {
@@ -69,11 +101,12 @@
 }
 .kategoriTittel {
    position: relative;
-   margin-top: -0.8rem;
+   margin-top: -0.5rem;
    width: 12rem;
    z-index: 100;
    text-align: center;
-   margin-inline: auto;
+   align-content: center;
+   padding-block: 0.5rem;
 }
 /*______ InfoKnapper ______*/
 .infoKnapper {
@@ -94,29 +127,8 @@
    position: relative;
    min-width: 225px;
    padding: 0.5rem;
-   /* margin-inline-start: -2rem; */
+   margin-inline-start: -2rem;
    z-index: 100;
-}
-/*______ Kategoriside infoBokser ______*/
-.infoBoksGrid {
-   display: grid;
-   grid-template-columns: auto 1fr;
-   gap: 1rem;
-   height: 100%;
-}
-.infoBoks {
-   display: flex;
-   flex-direction: column;
-   /* place-items: start; */
-   justify-content: space-around;
-   text-align: center;
-   height: 100%;
-}
-.infoBoksIkon {
-   display: flex;
-   gap: 1rem;
-   height: 50px;
-   width: 90px;
 }
 /*______ Kategoriside TittelHover ______*/
 .hover2d,
@@ -427,6 +439,10 @@ table thead tr th {
    width: 90px;
    height: 30px;
 }
+.spiceIkonStatisk {
+   width: 90px;
+   height: 30px;
+}
 .tidIkon {
    width: 30px;
    height: 30px;
@@ -510,7 +526,7 @@ table thead tr th {
 .tid12-15,
 .tid15 {
    font-family: "Roboto", sans-serif;
-   font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+   font-size: clamp(0.9rem, 1vw, 1rem);
    font-weight: 500;
 }
 /*___________________________________*/
