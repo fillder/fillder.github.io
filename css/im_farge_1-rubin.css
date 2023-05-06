@@ -76,3 +76,13 @@ ul li p::before {
    background-color: var(--clr-rubin);
    color: var(--clr-bakgrunn);
 }
+/* ___________ Hovedmenyen ___________ */
+#mainMenu li a:focus-visible,
+#mainMenu li a:focus-visible .hovedmenyIkon,
+#mainMenu li a:hover,
+#mainMenu li a:hover .hovedmenyIkon {
+   border-color: var(--clr-rubin);
+}
+#mainMenu li a:hover .hovedmenyIkon .fargetFyll {
+   background-color: var(--clr-rubin);
+}

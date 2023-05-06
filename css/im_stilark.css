@@ -289,7 +289,7 @@ nav {
    display: flex;
    flex-direction: column;
    align-content: center;
-   text-align: center;
+   /* text-align: center; */
    margin-inline: auto;
    right: 0;
    top: 0;
@@ -297,7 +297,8 @@ nav {
    width: 350px;
    height: 100vh;
    z-index: 901;
-   padding-inline: 1rem;
+   padding-inline-start: 2rem;
+   padding-inline-end: 3rem;
    padding-block-start: 3rem;
    transform: translateX(100%);
    transition: transform 0.3s ease-in-out;
@@ -306,86 +307,56 @@ nav {
 }
 .hovedmenyRamme h1 {
    font-size: 2rem;
+   padding-block-end: 1rem;
 }
 .hovedmenyRamme .dag-natt {
    margin-inline: auto;
 }
-.hovedmenyIkonRamme {
-   width: 50px;
-   height: 50px;
-   z-index: 100;
-   padding: 0.2rem;
+#mainMenu {
+   position: relative;
+}
+#mainMenu li {
+   margin-block: 0.6rem;
+}
+#mainMenu li ul li {
+   margin-left: 2rem;
+}
+#mainMenu li a {
+   display: flex;
+   padding-block: 0.5rem;
+   padding-inline: 3rem;
+   background-color: var(--clr-ixDBoks);
+   border: 2px solid var(--clr-ramme);
+   border-radius: 50rem;
+   font-family: "Roboto Slab", serif;
+   color: var(--clr-tekst);
+   line-height: 1.5;
+   font-size: clamp(1rem, 1.1vw, 1.2rem);
+   font-weight: 500;
+}
+.ikonStr {
+   height: 100%;
+   width: 100%;
+}
+.hovedmenyLenke {
+   position: relative;
+   z-index: 80;
+   height: 2.4rem;
+   place-items: center;
 }
 .hovedmenyIkon {
-   background-color: var(--clr-tekst);
-   width: 100%;
-   height: 100%;
-}
-.hovedmenyTittel {
-   position: relative;
-   padding-block: 0.25rem;
-   padding-inline-start: 3rem;
-   padding-inline-end: 2rem;
-   margin-inline-start: -2.5rem;
-   z-index: 90;
-}
-.hovedmenyKnapp {
-   position: relative;
-   display: grid;
-   grid-template-columns: auto 1fr;
-   align-items: center;
-   padding-block: 0.25rem;
-   padding-inline-start: 0.25rem;
-   padding-inline-end: 0.75rem;
-   margin-block: 0.25rem;
-   transition: all 0.1s ease-in-out;
-}
-.hovedmenyKnapp:hover:not(.utilgjengelig),
-.hovedmenyKnapp:focus-visible:not(.utilgjengelig) {
-   transition: all 0.1s ease-in-out;
-   background-color: var(--clr-tabellBoks);
-   border-radius: 50rem;
-}
-.hovedmenyKnappAktiv {
-   display: grid;
-   grid-template-columns: auto 1fr;
-   align-items: center;
-   padding-block: 0.25rem;
-   padding-inline-start: 0.25rem;
-   padding-inline-end: 0.75rem;
-   background-color: var(--clr-tabellBoks);
-   border-radius: 50rem;
-}
-.hovedmenyKnappAktiv h3 {
-   text-decoration: 2px underline var(--clr-tekst);
-   text-underline-offset: 3px;
-}
-.hovedmenyPil {
    position: absolute;
-   bottom: 0%;
-   left: 50%;
-   transform: translate(-50%, 100%);
-   z-index: 1000;
+   top: 50%;
+   transform: translate(-10%, -50%);
+   left: 0;
+   border-radius: 50rem;
+   background-color: var(--clr-ixDBoks);
+   border: 2px solid var(--clr-ramme);
+   width: 45px;
+   height: 45px;
+   z-index: 100;
+   padding: 0.1rem;
 }
-.pilStr {
-   width: 10px;
-   height: 7.5px;
-}
-.displayOutline {
-   display: block;
-}
-.displayFill {
-   display: none;
-}
-.hovedmenyKnapp:hover .displayOutline,
-.hovedmenyKnapp:focus-visible .displayOutline {
-   display: none;
-}
-.hovedmenyKnapp:hover .displayFill,
-.hovedmenyKnapp:focus-visible .displayFill {
-   display: block;
-}
-
 /* Resterende Nav*/
 .flexHoyre {
    position: absolute;
@@ -606,56 +577,6 @@ footer {
 }
 .footerContent::after {
    content: "Dette nettstedet er designet og utviklet av Marius Strøm Riseth // Fyrstikkalléen videregående skole • F21 vgs";
-}
-.infoTab,
-.infoMob {
-   display: none;
-}
-/* Ny hovedmeny */
-#mainMenu {
-   position: relative;
-}
-#mainMenu li {
-   margin-block: 0.6rem;
-}
-#mainMenu li ul li {
-   margin-left: 2rem;
-}
-#mainMenu li a {
-   display: flex;
-   padding-block: 0.5rem;
-   padding-inline: 3rem;
-   background-color: var(--clr-ixDBoks);
-   border: 2px solid var(--clr-ramme);
-   border-radius: 50rem;
-   font-family: "Roboto Slab", serif;
-   color: var(--clr-tekst);
-   line-height: 1.5;
-   font-size: clamp(1rem, 1.1vw, 1.2rem);
-   font-weight: 500;
-}
-.ikonStr {
-   height: 100%;
-   width: 100%;
-}
-.hovedmenyLenke {
-   position: relative;
-   z-index: 80;
-   height: 2.4rem;
-   place-items: center;
-}
-.hovedmenyIkon {
-   position: absolute;
-   top: 50%;
-   transform: translate(-10%, -50%);
-   left: 0;
-   border-radius: 50rem;
-   background-color: var(--clr-ixDBoks);
-   border: 2px solid var(--clr-ramme);
-   width: 45px;
-   height: 45px;
-   z-index: 100;
-   padding: 0.1rem;
 }
 @media only screen and (max-width: 1200px) {
    .breadcrumbsMenu {
