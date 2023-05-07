@@ -372,15 +372,57 @@
    -webkit-mask: url(/svg/im/im_fagverket_outline.svg) no-repeat center;
    mask: url(/svg/im/im_fagverket_outline.svg) no-repeat center;
 }
-
+.maskeTid1 {
+   -webkit-mask: url(/svg/ob/ob_tid1.svg) no-repeat center;
+   mask: url(/svg/ob/ob_tid1.svg) no-repeat center;
+}
+.maskeTid1-3 {
+   -webkit-mask: url(/svg/ob/ob_tid1-3.svg) no-repeat center;
+   mask: url(/svg/ob/ob_tid1-3.svg) no-repeat center;
+}
+.maskeTid3-6 {
+   -webkit-mask: url(/svg/ob/ob_tid3-6.svg) no-repeat center;
+   mask: url(/svg/ob/ob_tid3-6.svg) no-repeat center;
+}
+.maskeTid6-9 {
+   -webkit-mask: url(/svg/ob/ob_tid6-9.svg) no-repeat center;
+   mask: url(/svg/ob/ob_tid6-9.svg) no-repeat center;
+}
+.maskeTid9-12 {
+   -webkit-mask: url(/svg/ob/ob_tid9-12.svg) no-repeat center;
+   mask: url(/svg/ob/ob_tid9-12.svg) no-repeat center;
+}
+.maskeTid12-15 {
+   -webkit-mask: url(/svg/ob/ob_tid12-15.svg) no-repeat center;
+   mask: url(/svg/ob/ob_tid12-15.svg) no-repeat center;
+}
+.maskeTid15 {
+   -webkit-mask: url(/svg/ob/ob_tid15.svg) no-repeat center;
+   mask: url(/svg/ob/ob_tid15.svg) no-repeat center;
+}
 @media screen and (max-width: 992px) {
-   .maskeSpice0,
-   .maskeSpice1,
-   .maskeSpice2,
-   .maskeSpice3,
-   .maskeSpice4,
+   .maskeSpice0 {
+      -webkit-mask: url(/svg/ob/ob_spice0-mob.svg) no-repeat center;
+      mask: url(/svg/ob/ob_spice0-mob.svg) no-repeat center;
+   }
+   .maskeSpice1 {
+      -webkit-mask: url(/svg/ob/ob_spice1-mob.svg) no-repeat center;
+      mask: url(/svg/ob/ob_spice1-mob.svg) no-repeat center;
+   }
+   .maskeSpice2 {
+      -webkit-mask: url(/svg/ob/ob_spice2-mob.svg) no-repeat center;
+      mask: url(/svg/ob/ob_spice2-mob.svg) no-repeat center;
+   }
+   .maskeSpice3 {
+      -webkit-mask: url(/svg/ob/ob_spice3-mob.svg) no-repeat center;
+      mask: url(/svg/ob/ob_spice3-mob.svg) no-repeat center;
+   }
+   .maskeSpice4 {
+      -webkit-mask: url(/svg/ob/ob_spice4-mob.svg) no-repeat center;
+      mask: url(/svg/ob/ob_spice4-mob.svg) no-repeat center;
+   }
    .maskeSpice5 {
-      -webkit-mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
-      mask: url(/svg/ob/ob_spice-mobil.svg) no-repeat center;
+      -webkit-mask: url(/svg/ob/ob_spice5-mob.svg) no-repeat center;
+      mask: url(/svg/ob/ob_spice5-mob.svg) no-repeat center;
    }
 }
