@@ -1,20 +1,3 @@
-/*______ Scrollehjulet ______*/
-/* Gjemmer bort scrollehjulet for Chrome, Safari og Opera */
-/* html::-webkit-scrollbar {
-   display: none;
-}
-main::-webkit-scrollbar {
-   display: none;
-} */
-/* Gjemmer bort scrollehjulet for IE, Edge og Firefox */
-/* html {
-   -ms-overflow-style: none; 
-   scrollbar-width: none; 
-}
-main {
-   -ms-overflow-style: none;
-   scrollbar-width: none;
-} */
 /*______ fargedeklarering ______*/
 .farge-programfag {
    color: var(--clr-safir);
