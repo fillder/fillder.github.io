@@ -57,7 +57,6 @@ main {
    fill: var(--clr-ametyst);
 }
 /*______ Boksdesign ______*/
-
 main {
    display: flex;
    gap: 0.5rem;
@@ -67,7 +66,6 @@ main {
    height: min-content;
    padding-inline: 2rem;
    padding-block-start: 1rem;
-   padding-block-end: 0;
    margin-inline: auto;
    margin-block-start: 50px;
    box-shadow: 0 35rem 0 0rem var(--clr-main);

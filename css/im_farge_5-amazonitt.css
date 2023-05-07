@@ -10,13 +10,6 @@
    text-decoration: 4px underline var(--clr-amazonitt);
    text-underline-offset: 4px;
 }
-.fargetTekst {
-   color: var(--clr-amazonitt);
-}
-.fargetFyll {
-   background-color: var(--clr-tekst);
-}
-
 /* ___________ hover-effekt .svg ___________ */
 .kategoriKnapp:hover .fargetFyll,
 .kategoriKnapp:focus-visible .fargetFyll,
@@ -77,6 +70,9 @@ ul li p::before {
    color: var(--clr-bakgrunn);
 }
 /* ___________ Hovedmenyen ___________ */
+.fargetTekst {
+   color: var(--clr-amazonitt);
+}
 #mainMenu li a:focus-visible,
 #mainMenu li a:focus-visible .hovedmenyIkon,
 #mainMenu li a:hover,

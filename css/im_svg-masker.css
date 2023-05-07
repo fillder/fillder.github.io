@@ -15,7 +15,8 @@
    -webkit-mask: url(/svg/tp/tp_pil-tilbake_outline.svg) no-repeat center;
    mask: url(/svg/tp/tp_pil-tilbake_outline.svg) no-repeat center;
 }
-.maskeTilbakeFill {
+.maskeTilbakeOutline:hover:not(.utilgjengelig),
+.maskeTilbakeOutline:focus-visible:not(.utilgjengelig) {
    -webkit-mask: url(/svg/tp/tp_pil-tilbake_fill.svg) no-repeat center;
    mask: url(/svg/tp/tp_pil-tilbake_fill.svg) no-repeat center;
 }
@@ -23,7 +24,8 @@
    -webkit-mask: url(/svg/tp/tp_pil-neste_outline.svg) no-repeat center;
    mask: url(/svg/tp/tp_pil-neste_outline.svg) no-repeat center;
 }
-.maskeNesteFill {
+.maskeNesteOutline:hover:not(.utilgjengelig),
+.maskeNesteOutline:focus-visible:not(.utilgjengelig) {
    -webkit-mask: url(/svg/tp/tp_pil-neste_fill.svg) no-repeat center;
    mask: url(/svg/tp/tp_pil-neste_fill.svg) no-repeat center;
 }

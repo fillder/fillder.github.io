@@ -294,11 +294,11 @@ nav {
    right: 0;
    top: 0;
    background-color: var(--clr-tekstBoks);
-   width: 350px;
+   width: 300px;
    height: 100vh;
    z-index: 901;
    padding-inline-start: 2rem;
-   padding-inline-end: 3rem;
+   padding-inline-end: 2rem;
    padding-block-start: 3rem;
    transform: translateX(100%);
    transition: transform 0.3s ease-in-out;
@@ -306,8 +306,9 @@ nav {
    padding-block-end: 2rem;
 }
 .hovedmenyRamme h1 {
-   font-size: 2rem;
+   font-size: 1.8rem;
    padding-block-end: 1rem;
+   text-align: center;
 }
 .hovedmenyRamme .dag-natt {
    margin-inline: auto;
@@ -324,7 +325,7 @@ nav {
 #mainMenu li a {
    display: flex;
    padding-block: 0.5rem;
-   padding-inline: 3rem;
+   padding-inline-start: 3rem;
    background-color: var(--clr-ixDBoks);
    border: 2px solid var(--clr-ramme);
    border-radius: 50rem;
@@ -337,6 +338,18 @@ nav {
 .ikonStr {
    height: 100%;
    width: 100%;
+}
+.fargetFyll {
+   background-color: var(--clr-tekst);
+}
+#mainMenu li a:focus-visible,
+#mainMenu li a:focus-visible .hovedmenyIkon,
+#mainMenu li a:hover,
+#mainMenu li a:hover .hovedmenyIkon {
+   border-color: var(--clr-tekst);
+}
+#mainMenu li a:hover .hovedmenyIkon .fargetFyll {
+   background-color: var(--clr-tekst);
 }
 .hovedmenyLenke {
    position: relative;

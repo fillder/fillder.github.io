@@ -13,10 +13,6 @@
 .fargetTekst {
    color: var(--clr-spessartin);
 }
-.fargetFyll {
-   background-color: var(--clr-tekst);
-}
-
 /* ___________ hover-effekt .svg ___________ */
 .kategoriKnapp:hover .fargetFyll,
 .kategoriKnapp:focus-visible .fargetFyll,
@@ -77,6 +73,9 @@ ul li p::before {
    color: var(--clr-bakgrunn);
 }
 /* ___________ Hovedmenyen ___________ */
+.fargetFyll {
+   background-color: var(--clr-tekst);
+}
 #mainMenu li a:focus-visible,
 #mainMenu li a:focus-visible .hovedmenyIkon,
 #mainMenu li a:hover,
