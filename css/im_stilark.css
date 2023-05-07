@@ -614,6 +614,26 @@ footer {
 .footerContent::after {
    content: "Dette nettstedet er designet og utviklet av Marius Strøm Riseth // Fyrstikkalléen videregående skole • F21 vgs";
 }
+
+/*______ Scrollehjulet ______*/
+/* Gjemmer bort scrollehjulet for Chrome, Safari og Opera */
+html::-webkit-scrollbar {
+   display: none;
+}
+main::-webkit-scrollbar,
+nav .hovedmenyRamme::-webkit-scrollbar {
+   display: none;
+}
+/* Gjemmer bort scrollehjulet for IE, Edge og Firefox */
+html {
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+}
+main,
+nav .hovedmenyRamme {
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+}
 @media only screen and (max-width: 1200px) {
    .breadcrumbsMenu {
       display: block;
@@ -661,7 +681,8 @@ footer {
    }
    .hovedmenyRamme {
       width: 100%;
-      padding-inline: 5rem;
+      padding-inline-start: 2rem;
+      padding-inline-end: 3rem;
    }
    .forkortet-smuleMeny > li:nth-last-child(n + 4) {
       display: none;
