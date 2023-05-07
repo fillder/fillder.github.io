@@ -446,7 +446,7 @@ header {
 }
 .hero-emblem {
    position: absolute;
-   bottom: 0%;
+   bottom: 1rem;
    left: 50%;
    transform: translate(-50%, 45%);
    width: 120px;
@@ -455,6 +455,13 @@ header {
    padding: 0.8rem;
    z-index: 110;
 }
+.hero-blend {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 80px;
+   background-image: linear-gradient(transparent 20%, var(--clr-main));
+}
 .fargetHeroLinje {
    text-decoration: 4px underline var(--clr-spessartin);
    text-underline-offset: 4px;
@@ -462,8 +469,22 @@ header {
 /*______ Main ______*/
 .mainMedHeader,
 .mainUtenNav {
-   margin-top: 450px;
+   margin-top: 430px;
 }
+.mainBlur {
+   background-color: var(--clr-tekst);
+   border-radius: 100rem;
+   width: 90%;
+   height: 20%;
+   position: absolute;
+   z-index: 0;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   filter: blur(20rem);
+   opacity: 0.2;
+}
+
 /*______ Rammer ______*/
 .boksRamme {
    border-top-right-radius: clamp(0.2rem, 0.4rem, 0.6vw);
@@ -542,16 +563,16 @@ header {
 ul {
    list-style: none;
 }
-/* .oppdragsInfo ul,
+.oppdragsInfo ul,
 .toKolloner ul,
 .infoGrid ul {
    margin-block-end: 1rem;
-} */
-/* .oppdragsInfo ul li,
+}
+.oppdragsInfo ul li,
 .toKolloner ul li,
 .infoGrid ul li {
    margin-left: 1em;
-} */
+}
 ul li p::before {
    content: "\2022";
    color: var(--clr-tekst);
@@ -612,7 +633,7 @@ footer {
       margin-top: 95px;
    }
    .mainMedHeader {
-      margin-top: 490px;
+      margin-top: 470px;
    }
 }
 @media only screen and (max-width: 992px) {
@@ -636,7 +657,7 @@ footer {
       content: "Laget av Marius S. Riseth // F21 VGS";
    }
    .mainMedHeader {
-      margin-top: 450px;
+      margin-top: 430px;
    }
    .hovedmenyRamme {
       width: 100%;

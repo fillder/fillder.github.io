@@ -82,3 +82,6 @@ ul li p::before {
 #mainMenu li a:hover .hovedmenyIkon .fargetFyll {
    background-color: var(--clr-amazonitt);
 }
+.mainBlur {
+   background-color: var(--clr-amazonitt);
+}

@@ -68,6 +68,26 @@
       grid-template-columns: 1fr;
       grid-template-rows: auto;
    }
+   .tekstGrid {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+         "obb"
+         "spi"
+         "tid";
+      row-gap: 1rem;
+   }
+   .infoBoksGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      gap: 0.25rem;
+   }
+   .infoBoks {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0.5rem;
+   }
    /*___________ Spiciness __________*/
    .spiceIkon {
       width: 18px;
@@ -154,26 +174,6 @@
       padding-block: 0.5rem;
       padding-inline-start: 2.5rem;
       padding-inline-end: 1rem;
-   }
-   .tekstGrid {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-         "obb"
-         "spi"
-         "tid";
-      row-gap: 1rem;
-   }
-   .infoBoksGrid {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto 1fr;
-      gap: 0.25rem;
-   }
-   .infoBoks {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      gap: 0.5rem;
    }
    .ob_oppdragssideGrid {
       display: grid;
