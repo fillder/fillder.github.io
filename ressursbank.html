@@ -18,6 +18,7 @@
       <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
       <link rel="apple-touch-icon" href="/images/ico/skolelogo.svg" />
       <script type="module" src="/js/im_dag-natt.js"></script>
+      <script type="module" src="/js/im_hovedmeny.js"></script>
       <script type="module" src="/js/rb_seksjoner.js"></script>
       <script type="module" src="/js/im_breadcrumbs.js"></script>
       <!-- <script type="module" src="/js/im_hero-bilde.js"></script> -->
@@ -35,20 +36,26 @@
                <b><span>IM-</span>RESSURSBANK</b>
             </h1>
          </div>
-         <button id="dark-mode-toggle" class="flexHoyre dag-nattLiten" aria-label="dark mode toggle">
-            <svg class="svg-anim" viewBox="0 70 100 100">
-               <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-               <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-               <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-               <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-               <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-               <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-               <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-               <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
-               <circle class="sun" cx="50" cy="120" r="20" />
-               <circle class="moon" cx="135" cy="40" r="40" />
-            </svg>
-         </button>
+         <button class="hamburgerIkon navIkon maskeMenyOutline"></button>
+         <div class="overlayMeny"></div>
+         <div class="hovedmenyRamme">
+            <h1><b>Oppdragsbanken</b></h1>
+            <ul id="mainMenu"></ul>
+            <button id="dark-mode-toggle" class="dag-natt" aria-label="dark mode toggle">
+               <svg class="svg-anim" viewBox="0 70 100 100">
+                  <line class="sun" x1="83.14" y1="153.14" x2="69" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="3" y1="120" x2="23" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="16.86" y1="153.14" x2="31" y2="139" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="50" y1="167" x2="50" y2="147" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="16.86" y1="86.86" x2="31" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="97" y1="120" x2="77" y2="120" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="83.25" y1="86.86" x2="69.11" y2="101" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <line class="sun" x1="50" y1="73" x2="50" y2="93" stroke-width="6" stroke-dasharray="20" stroke-dashoffset="0" />
+                  <circle class="sun" cx="50" cy="120" r="20" />
+                  <circle class="moon" cx="135" cy="40" r="40" />
+               </svg>
+            </button>
+         </div>
       </nav>
       <header class="hero">
          <img class="hero-bilde" src="images/rb-banner.png" alt="bilde av en skjerm med kode" />
