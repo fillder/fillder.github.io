@@ -202,7 +202,8 @@ nav {
    background-color: var(--clr-tekstBoks);
    border-bottom: 3px solid var(--clr-ramme);
    height: 55px;
-   width: 100%;
+   width: 100vw;
+   width: 100dvw;
    z-index: 150;
    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
 }
