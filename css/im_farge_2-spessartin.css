@@ -88,3 +88,9 @@ ul li p::before {
 .mainBlur {
    background-color: var(--clr-spessartin);
 }
+.nettResFlex a:hover,
+.nettResFlex a:focus-visible,
+.nettResFlexKol a:hover,
+.nettResFlexKol a:focus-visible {
+   border-color: var(--clr-spessartin);
+}

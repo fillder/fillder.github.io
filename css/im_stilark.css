@@ -565,12 +565,10 @@ ul {
    list-style: none;
 }
 .oppdragsInfo ul,
-.toKolloner ul,
 .infoGrid ul {
    margin-block-end: 1rem;
 }
 .oppdragsInfo ul li,
-.toKolloner ul li,
 .infoGrid ul li {
    margin-left: 1em;
 }
@@ -584,11 +582,6 @@ ul li p::before {
 }
 ul li a button {
    margin-left: -1em;
-}
-.toKolloner {
-   display: grid;
-   grid-template-columns: 1fr 0.75fr;
-   gap: 1rem;
 }
 /*______ svgIkon ______*/
 .svgIkon {
@@ -651,7 +644,7 @@ nav .hovedmenyRamme {
       height: 40px;
    }
    header {
-      margin-top: 95px;
+      margin-top: 90px;
    }
    .mainMedHeader {
       margin-top: 470px;

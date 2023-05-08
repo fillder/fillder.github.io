@@ -15,6 +15,9 @@
    }
 }
 @media screen and (max-width: 992px) {
+   .mainMedHeader {
+      padding-block-start: 0px;
+   }
    .tabDesk {
       display: none;
    }
@@ -57,5 +60,16 @@
    }
    .fylkesTittel {
       justify-content: space-between;
+   }
+   .toKolloner {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto;
+      gap: 1rem;
+   }
+}
+@media screen and (max-width: 600px) {
+   .gridBeholder {
+      padding-block-start: 2.5rem;
    }
 }
