@@ -669,6 +669,11 @@ table thead tr th {
    flex-direction: column;
    gap: 0.5rem;
 }
+.nettResMono {
+   display: flex;
+   width: max-content;
+   margin-block-end: 1rem;
+}
 .flexGalleriBredde {
    display: flex;
    flex-direction: column;

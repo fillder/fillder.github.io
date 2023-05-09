@@ -92,6 +92,7 @@ const siteHierarchy = {
                   children: {
                      "/oppdragsbank/4_film-og-vfx/4-2-1_supersmooth-reklamefilm.html": { displayName: "Reklamefilm" },
                      "/oppdragsbank/4_film-og-vfx/4-2-2_manus123.html": { displayName: "Manus 1-2-3" },
+                     "/oppdragsbank/4_film-og-vfx/4-2-3_konkurranserprodukt.html": { displayName: "Filmkonkurranse" },
                   },
                },
                "/oppdragsbank/5_animasjon.html": {
