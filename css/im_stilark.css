@@ -564,25 +564,6 @@ header {
 ul {
    list-style: none;
 }
-.oppdragsInfo ul,
-.infoGrid ul {
-   margin-block-end: 1rem;
-}
-.oppdragsInfo ul li,
-.infoGrid ul li {
-   margin-left: 1em;
-}
-ul li p::before {
-   content: "\2022";
-   color: var(--clr-tekst);
-   font-weight: bold;
-   display: inline-block;
-   width: 1em;
-   margin-left: -1em;
-}
-ul li a button {
-   margin-left: -1em;
-}
 /*______ svgIkon ______*/
 .svgIkon {
    background-color: var(--clr-tekst);

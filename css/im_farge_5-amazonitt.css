@@ -74,6 +74,8 @@ ul li p::before {
 .nettResFlex a:hover,
 .nettResFlex a:focus-visible,
 .nettResFlexKol a:hover,
-.nettResFlexKol a:focus-visible {
+.nettResFlexKol a:focus-visible,
+.nettResMono a:hover,
+.nettResMono a:focus-visible {
    border-color: var(--clr-amazonitt);
 }
