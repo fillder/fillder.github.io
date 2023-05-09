@@ -99,6 +99,7 @@ const siteHierarchy = {
                   iconClass: "maskeAnimasjon",
                   children: {
                      "/oppdragsbank/5_animasjon/5-2-1_tine-animasjon.html": { displayName: "Litagoreklame" },
+                     "/oppdragsbank/5_animasjon/5-1-1_walkcycle.html": { displayName: "Walk cycle" },
                   },
                },
                "/oppdragsbank/6_lyddesign.html": {

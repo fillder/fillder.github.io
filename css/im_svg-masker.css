@@ -15,8 +15,8 @@
    -webkit-mask: url(/svg/tp/tp_pil-tilbake_outline.svg) no-repeat center;
    mask: url(/svg/tp/tp_pil-tilbake_outline.svg) no-repeat center;
 }
-.maskeTilbakeOutline:hover:not(.utilgjengelig),
-.maskeTilbakeOutline:focus-visible:not(.utilgjengelig) {
+.maskeTilbakeOutline:hover:not(.utilgjengelig, .pil-tilbake),
+.maskeTilbakeOutline:focus-visible:not(.utilgjengelig, .pil-tilbake) {
    -webkit-mask: url(/svg/tp/tp_pil-tilbake_fill.svg) no-repeat center;
    mask: url(/svg/tp/tp_pil-tilbake_fill.svg) no-repeat center;
 }
@@ -24,8 +24,8 @@
    -webkit-mask: url(/svg/tp/tp_pil-neste_outline.svg) no-repeat center;
    mask: url(/svg/tp/tp_pil-neste_outline.svg) no-repeat center;
 }
-.maskeNesteOutline:hover:not(.utilgjengelig),
-.maskeNesteOutline:focus-visible:not(.utilgjengelig) {
+.maskeNesteOutline:hover:not(.utilgjengelig, .pil-neste),
+.maskeNesteOutline:focus-visible:not(.utilgjengelig, .pil-neste) {
    -webkit-mask: url(/svg/tp/tp_pil-neste_fill.svg) no-repeat center;
    mask: url(/svg/tp/tp_pil-neste_fill.svg) no-repeat center;
 }

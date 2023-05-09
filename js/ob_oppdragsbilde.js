@@ -1,12 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-   var deskImg = document.getElementById("deskImg");
-   var mobImg = document.getElementById("mobImg");
+   const deskImg = document.getElementById("deskImg");
+   const mobImg = document.getElementById("mobImg");
 
-   var openDeskImg = document.getElementById("openDeskImg");
-   var openMobImg = document.getElementById("openMobImg");
-
-   var galImg = document.getElementById("galImg");
-   var openGalImg = document.getElementById("openGalImg");
+   const openDeskImg = document.getElementById("openDeskImg");
+   const openMobImg = document.getElementById("openMobImg");
 
    mobImg.src = deskImg.src;
    mobImg.alt = deskImg.alt;
@@ -16,5 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
    openMobImg.target = openDeskImg.target;
 
-   openGalImg.href = galImg.src;
+   const galImg = document.getElementById("galImg");
+   const openGalImg = document.getElementById("openGalImg");
+   if (galImg) {
+      openGalImg.href = galImg.src;
+   }
 });
