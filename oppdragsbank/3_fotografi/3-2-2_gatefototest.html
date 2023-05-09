@@ -13,7 +13,7 @@
       <link rel="stylesheet" type="text/css" href="/css/im_svg-masker.css" />
       <link rel="stylesheet" type="text/css" href="/css/im_farge_3-citrin.css" />
       <link rel="stylesheet" type="text/css" href="/css/ob_design.css" />
-      <link rel="stylesheet" type="text/css" href="/css/ob_ny-bildekarusell.css" />
+      <link rel="stylesheet" type="text/css" href="/css/ob_bildegalleri2.css" />
       <link rel="stylesheet" type="text/css" href="/css/ob_mobil.css" />
       <link rel="icon" href="/images/ico/skolelogo.svg" type="image/svg+xml" />
       <link rel="shortcut icon" href="/images/ico/skolelogo.svg" />
@@ -23,7 +23,7 @@
       <script type="module" src="/js/im_breadcrumbs.js"></script>
       <script type="module" src="/js/ob_tid-og-spice.js"></script>
       <script type="module" src="/js/ob_oppdragsbilde.js"></script>
-      <script type="module" src="/js/ob_ny-bildekarusell.js"></script>
+      <script type="module" src="/js/ob_bildekarusell2.js"></script>
       <title>Navn på oppdrag</title>
    </head>
 
@@ -141,31 +141,65 @@
                <div class="modulIkon rundRamme ixD nB">
                   <div class="op_ikon maskeModulPin fargetFyll"></div>
                </div>
-               <h3 class="fargetLinje">Inspirasjon</h3>
-               <div class="gallery-container">
-                  <div class="gallery-item" data-index="1">
-                     <img class="m-p-g__thumbs-img fargetHover" src="/images/ob/kategori-3_foto/3-2-2_johnniecraw.png" tittel="The Smell - John Crawford" alt="" />
+               <h3 id="Bildegalleri" class="fargetLinje">Inspirasjon</h3>
+               <div class="sideTeller">
+                  <h5 class="gjeldendeSiden"></h5>
+                  <h5 class="sideSkille">/</h5>
+                  <h5 class="siderTotalt"></h5>
+               </div>
+               <div class="pilBakgrunnTilbake" id="pilForrigeGruppe">
+                  <div class="svgIkon maskeTilbakeOutline pil-tilbake" alt="forrige bildegruppe"></div>
+               </div>
+               <div class="pilBakgrunnNeste" id="pilNesteGruppe">
+                  <div class="svgIkon maskeNesteOutline pil-neste" alt="neste bildegruppe"></div>
+               </div>
+               <div class="bildegalleri_firePluss rb-ramme" id="galleri-grid">
+                  <div class="galleribilde">
+                     <img class="miniatyrbilde fargetHover" src="/images/ob/kategori-3_foto/3-2-2_johnniecraw.png" tittel="The Smell - John Crawford" alt="" />
                   </div>
-                  <div class="gallery-item" data-index="2">
-                     <img class="m-p-g__thumbs-img fargetHover" src="/images/ob/kategori-3_foto/3-2-2_two-stories.jpg" tittel="Two Stories - Міхась Аракчэеў (Mikhas Arakcheev)" alt="" />
+                  <div class="galleribilde">
+                     <img class="miniatyrbilde fargetHover" src="/images/ob/kategori-3_foto/3-2-2_two-stories.jpg" tittel="Two Stories - Міхась Аракчэеў (Mikhas Arakcheev)" alt="" />
                   </div>
-                  <div class="gallery-item" data-index="3">
-                     <img class="m-p-g__thumbs-img fargetHover" src="/images/ob/kategori-3_foto/3-2-2_pretzels.jpg" tittel="Pretzels - Yaşar Koç" alt="" />
+                  <div class="galleribilde">
+                     <img class="miniatyrbilde fargetHover" src="/images/ob/kategori-3_foto/3-2-2_pretzels.jpg" tittel="Pretzels - Yaşar Koç" alt="" />
                   </div>
-                  <div class="gallery-item" data-index="4">
-                     <img class="m-p-g__thumbs-img fargetHover" src="/images/ob/kategori-3_foto/3-2-2_usstop.jpg" tittel="At the bus stop - Øystein Brembo" alt="" />
+                  <div class="galleribilde">
+                     <img class="miniatyrbilde fargetHover" src="/images/ob/kategori-3_foto/3-2-2_usstop.jpg" tittel="At the bus stop - Øystein Brembo" alt="" />
                   </div>
-                  <div class="gallery-item" data-index="5">
-                     <img class="m-p-g__thumbs-img fargetHover" src="/images/ob/kategori-3_foto/3-2-2_aligned.jpg" tittel="Aligned - Luca Gennatiempo" alt="" />
+                  <div class="galleribilde">
+                     <img class="miniatyrbilde fargetHover" src="/images/ob/kategori-3_foto/3-2-2_aligned.jpg" tittel="Aligned - Luca Gennatiempo" alt="" />
                   </div>
-                  <div class="gallery-item" data-index="6">
-                     <img class="m-p-g__thumbs-img fargetHover" src="/images/ob/kategori-3_foto/3-2-2_angel.jpg" tittel="This Is How Angels Are Born - Sorin Dobrescu" alt="" />
+                  <div class="galleribilde">
+                     <img class="miniatyrbilde fargetHover" src="/images/ob/kategori-3_foto/3-2-2_angel.jpg" tittel="This Is How Angels Are Born - Sorin Dobrescu" alt="" />
                   </div>
-                  <div class="gallery-item" data-index="7">
-                     <img class="m-p-g__thumbs-img fargetHover" src="/images/ob/kategori-3_foto/3-2-2_notre-dame.jpg" tittel="Behind Notre Dame - Don Kedgley" alt="" />
+                  <div class="galleribilde">
+                     <img class="miniatyrbilde fargetHover" src="/images/ob/kategori-3_foto/3-2-2_notre-dame.jpg" tittel="Behind Notre Dame - Don Kedgley" alt="" />
                   </div>
-                  <div class="gallery-item" data-index="8">
-                     <img class="m-p-g__thumbs-img fargetHover" src="/images/ob/kategori-3_foto/3-2-2_match.jpg" tittel="Match - Mike Bland" alt="" />
+                  <div class="galleribilde">
+                     <img class="miniatyrbilde fargetHover" src="/images/ob/kategori-3_foto/3-2-2_match.jpg" tittel="Match - Mike Bland" alt="" />
+                  </div>
+               </div>
+               <div class="bildefremvisning">
+                  <div class="bildeRamme">
+                     <div class="svgIkon maskeKryss"></div>
+                     <div class="pilBakgrunnTilbake" id="pilForrigeBilde">
+                        <div class="svgIkon maskeTilbakeOutline pil-tilbake" alt="forrige bildegruppe"></div>
+                     </div>
+                     <div class="pilBakgrunnNeste" id="pilNesteBilde">
+                        <div class="svgIkon maskeNesteOutline pil-neste" alt="neste bildegruppe"></div>
+                     </div>
+                     <div class="aktivtBildeRamme">
+                        <div class="bildeTeller">
+                           <h5 class="gjeldendeBilde"></h5>
+                           <h5 class="bildeSkille">/</h5>
+                           <h5 class="bilderTotalt"></h5>
+                           <h5 class="bildetittelAktiv fargetLinje" id="bildetittelAktiv"></h5>
+                           <h5 class="nyFane">Åpne i ny fane</h5>
+                        </div>
+                        <div class="aktivtBilde"></div>
+                        <h5 class="bildetekstAktiv" id="bildetekstAktiv"></h5>
+                     </div>
+                     <div class="bildeRammeFooter sPS"></div>
                   </div>
                </div>
             </section>
@@ -174,12 +208,5 @@
       <footer>
          <p class="footerContent"></p>
       </footer>
-      <script>
-         var elem = document.querySelector(".m-p-g");
-
-         document.addEventListener("DOMContentLoaded", function () {
-            var gallery = new MaterialPhotoGallery(elem);
-         });
-      </script>
    </body>
 </html>

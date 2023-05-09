@@ -47,10 +47,6 @@
    .ob_oppdragssideGrid {
       width: 90%;
    }
-   .bildeRamme {
-      max-width: 80vw;
-      max-width: 80dvw;
-   }
    .infoKnappDesk {
       display: none;
    }
@@ -216,10 +212,6 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 1fr;
    }
-   .bildeRamme {
-      max-width: 90vw;
-      max-width: 90dvw;
-   }
    .ob_kategorisideGrid {
       width: 90%;
    }
@@ -272,10 +264,6 @@
    .kategoriIkon {
       width: 9rem;
       height: 9rem;
-   }
-   .bildeRamme {
-      max-width: 100vw;
-      max-width: 100dvw;
    }
    main {
       padding-block-start: 2.5rem;
