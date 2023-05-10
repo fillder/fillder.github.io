@@ -687,6 +687,7 @@ ul li a button {
 .nettResFlex {
    display: flex;
    gap: 1rem;
+   margin-block-start: 0.5rem;
 }
 .nettResFlex > * {
    flex-basis: 200px;
@@ -698,6 +699,7 @@ ul li a button {
    display: flex;
    flex-direction: column;
    gap: 0.5rem;
+   margin-block-start: 0.5rem;
 }
 .nettResMono {
    display: flex;
