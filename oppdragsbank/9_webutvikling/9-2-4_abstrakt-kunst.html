@@ -58,7 +58,7 @@
          </div>
       </nav>
       <header class="hero" id="hero">
-         <img class="hero-bilde" src="/images/ob_kategoribanner-9_web.png" alt="bilde av en skjerm med kode" />
+         <img class="hero-bilde" src="/images/img/kategori-9_web/ob_kategoribanner-9_web.png" alt="bilde av en skjerm med kode" />
          <div class="hero-tittel fargetHeroLinje">
             <h1><b>9.2.4. Abstrakt Kunst med JavaScript</b></h1>
          </div>
@@ -67,6 +67,9 @@
             <div class="hero-emblem rundRamme ixD nB xLP" data-ikon="webutviklingIkon">
                <div class="svgIkon maskeWeb"></div>
             </div>
+         </a>
+         <a class="tilbakeKnapp" href="/oppdragsbank/9_webutvikling.html" target="_self">
+            <div class="tilbakePil maskeTilbakeOutline"></div>
          </a>
       </header>
       <main class="mainMedHeader">
@@ -77,7 +80,7 @@
                   <div class="op_ikon maskeOppdragIntern fargetFyll"></div>
                </div>
                <a id="openDeskImg" target="_self" href="">
-                  <img id="deskImg" class="boksRamme oppdragsSideBilde kvadratisk bildeDesk fargetHover" src="/images/ob/kategori-9_web/ob_9-abstrakt-kunst_1.png" alt="Abstrakt kunst laget med JavaScript" />
+                  <img id="deskImg" class="boksRamme oppdragsSideBilde kvadratisk bildeDesk fargetHover" src="/images/img/kategori-9_web/ob_9-abstrakt-kunst_1.png" alt="Abstrakt kunst laget med JavaScript" />
                </a>
                <div class="sPS oppdragsInfo">
                   <h2 id="Oppdragsbeskrivelse" class="fargetLinje">Produkt</h2>
@@ -113,57 +116,56 @@
                   <h5 class="sideSkille">/</h5>
                   <h5 class="siderTotalt"></h5>
                </div>
-               <div class="pilBakgrunnTilbake" id="pilForrigeGruppe">
+               <div class="pilGalleriTilbake" id="pilForrigeGruppe">
                   <div class="svgIkon maskeTilbakeOutline pil-tilbake" alt="forrige bildegruppe"></div>
                </div>
-               <div class="pilBakgrunnNeste" id="pilNesteGruppe">
+               <div class="pilGalleriNeste" id="pilNesteGruppe">
                   <div class="svgIkon maskeNesteOutline pil-neste" alt="neste bildegruppe"></div>
                </div>
                <div class="bildegalleri_tre rb-ramme" id="galleri-grid">
                   <div class="galleribilde">
                      <h5 class="bildetittel"></h5>
-                     <img class="miniatyrbilde fargetHover" src="/images/ob/kategori-9_web/ob_9-abstrakt-kunst_2.jpg" />
+                     <img class="miniatyrbilde fargetHover" src="/images/img/kategori-9_web/ob_9-abstrakt-kunst_2.jpg" />
                      <p class="bildetekst"></p>
                   </div>
                   <div class="galleribilde">
                      <h5 class="bildetittel"></h5>
-                     <img class="miniatyrbilde fargetHover" src="/images/ob/kategori-9_web/ob_9-abstrakt-kunst_3.jpg" />
+                     <img class="miniatyrbilde fargetHover" src="/images/img/kategori-9_web/ob_9-abstrakt-kunst_3.jpg" />
                      <p class="bildetekst"></p>
                   </div>
                   <div class="galleribilde">
                      <h5 class="bildetittel"></h5>
-                     <img class="miniatyrbilde fargetHover" src="/images/ob/kategori-9_web/ob_9-abstrakt-kunst_4.jpg" />
+                     <img class="miniatyrbilde fargetHover" src="/images/img/kategori-9_web/ob_9-abstrakt-kunst_4.jpg" />
                      <p class="bildetekst"></p>
                   </div>
                </div>
                <div class="bildefremvisning">
-                  <div class="bildeRamme sBoksRamme tekst sB">
-                     <div class="bilderammeHeader sPS">
-                        <h2 class="bildetittelAktiv fargetLinje" id="bildetittelAktiv"></h2>
+                  <div class="bildeRamme">
+                     <div class="kryssBoks">
                         <div class="svgIkon maskeKryss"></div>
                      </div>
-                     <div class="aktivtBildeRamme">
-                        <div class="aktivtBilde"></div>
-                        <div class="pilBakgrunnTilbake" id="pilForrigeBilde">
-                           <div class="svgIkon maskeTilbakeOutline pil-tilbake" alt="forrige bildegruppe"></div>
-                        </div>
-                        <div class="pilBakgrunnNeste" id="pilNesteBilde">
-                           <div class="svgIkon maskeNesteOutline pil-neste" alt="neste bildegruppe"></div>
-                        </div>
+                     <div class="pilBakgrunnTilbake" id="pilForrigeBilde">
+                        <div class="svgIkon maskeTilbakeOutline pil-tilbake" alt="forrige bildegruppe"></div>
                      </div>
-                     <div class="bildeRammeFooter sPS">
-                        <h5 class="bildetekstAktiv" id="bildetekstAktiv"></h5>
+                     <div class="pilBakgrunnNeste" id="pilNesteBilde">
+                        <div class="svgIkon maskeNesteOutline pil-neste" alt="neste bildegruppe"></div>
+                     </div>
+                     <div class="aktivtBildeRamme">
                         <div class="bildeTeller">
                            <h5 class="gjeldendeBilde"></h5>
                            <h5 class="bildeSkille">/</h5>
                            <h5 class="bilderTotalt"></h5>
+                           <h5 class="bildetittelAktiv fargetLinje" id="bildetittelAktiv"></h5>
+                           <a id="aktivtBildeLenke" href=""><p class="nyFane">Åpne i ny fane</p></a>
                         </div>
+                        <div class="aktivtBilde"></div>
+                        <h5 class="bildetekstAktiv" id="bildetekstAktiv"></h5>
                      </div>
-                     <div class="bildeKarusell" id="bildeKarusell"></div>
+                     <div class="bildeRammeFooter sPS"></div>
                   </div>
                </div>
             </section>
-            <section aria-labelledby="Nettressurser" class="sBoksRamme sB sPA tekst ressursGrid">
+            <section aria-labelledby="Nettressurser" class="sBoksRamme sB sPS tekst ressursGrid">
                <div class="modulIkon rundRamme ixD nB">
                   <div class="op_ikon maskeModulNett fargetFyll"></div>
                </div>

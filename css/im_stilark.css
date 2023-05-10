@@ -190,6 +190,9 @@ main {
    margin-inline: auto;
    padding-block-end: 3rem;
 }
+.no-scroll {
+   overflow: hidden;
+}
 /*______ Navigasjon ______*/
 nav {
    position: fixed;
@@ -206,6 +209,7 @@ nav {
    width: 100dvw;
    z-index: 150;
    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+   transition: transform 0.3s ease-in-out;
 }
 .navKnapp {
    position: relative;
@@ -220,6 +224,10 @@ nav {
    background-color: var(--clr-tekst);
    width: 35px;
    height: 35px;
+}
+.hide-nav {
+   transform: translateY(-100%);
+   transition: transform 0.3s ease-in-out;
 }
 .hjem {
    position: absolute;
@@ -266,6 +274,11 @@ nav {
    content: ">";
    margin-inline: 0.5rem;
 }
+.hide-breadcrumbs {
+   transform: translateY(-100%);
+   transition: transform 0.3s ease-in-out;
+}
+
 /*__________________ Hovedmeny __________________*/
 .overlayMeny {
    position: fixed;
@@ -397,7 +410,9 @@ nav {
    height: 30px;
 }
 .utilgjengelig {
-   opacity: 0.2;
+   position: relative;
+   opacity: 0.5;
+   /* filter: opacity(0.2); */
 }
 .linjeskille {
    display: flex;
@@ -408,17 +423,52 @@ nav {
    margin-inline: 75px;
    margin-block: 0.5rem;
 }
+/*______ Tooltip ______*/
+.utilgjengelig::before,
+.utilgjengelig::after {
+   --scale: 0;
+   --arrow-size: 10px;
+
+   position: absolute;
+   top: -0.25rem;
+   left: 50%;
+   transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+   transition: 150ms transform;
+   transform-origin: bottom center;
+}
+
+.utilgjengelig::before {
+   --translate-y: calc(-80% - var(--arrow-size));
+
+   content: attr(data-tooltip);
+   color: var(--clr-tekst);
+   padding: 0.5rem;
+   font-family: "Roboto", sans-serif;
+   font-weight: 300;
+   font-size: 0.8rem;
+   border-radius: 0.3rem;
+   text-align: center;
+   width: max-content;
+   max-width: 100%;
+   background: var(--clr-tekstBoks);
+   border: 1px solid var(--clr-ramme);
+}
+.utilgjengelig:hover::before,
+.utilgjengelig:hover::after {
+   --scale: 1;
+}
 /*______ headerområde ______*/
-header {
-   margin-top: 50px;
-}
-.headerUtenNav {
-   margin-top: 50px;
-}
+/* header {
+   position: relative;
+   z-index: 160;
+} */
+/*.headerUtenNav {
+   margin-top: 30px;
+} */
 .hero {
    position: absolute;
    top: 0;
-   height: 400px; /* Sett høyden på banneret etter behov */
+   height: 455px; /* Sett høyden på banneret etter behov */
    width: 100%;
    max-width: 1600px;
    left: 50%;
@@ -436,12 +486,16 @@ header {
 }
 .hero-tittel {
    position: absolute;
-   top: 20px;
+   top: 75px;
    left: 20px;
    padding: 0px 10px 7.5px 7.5px; /* top | right | bottom | left */
    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
    border-radius: 0.2rem;
 }
+nav.hide-nav ~ .hero-tittel {
+   top: 20px; /* 75px - 55px */
+}
+
 .hero-tittel h1 {
    color: whitesmoke;
 }
@@ -449,7 +503,7 @@ header {
    position: absolute;
    bottom: 1rem;
    left: 50%;
-   transform: translate(-50%, 45%);
+   transform: translate(-50%, 60%);
    width: 120px;
    height: 120px;
    margin: auto;
@@ -461,7 +515,7 @@ header {
    bottom: 0;
    width: 100%;
    height: 80px;
-   background-image: linear-gradient(transparent 20%, var(--clr-main));
+   background-image: linear-gradient(transparent 0%, var(--clr-main));
 }
 .fargetHeroLinje {
    text-decoration: 4px underline var(--clr-spessartin);
@@ -470,13 +524,13 @@ header {
 /*______ Main ______*/
 .mainMedHeader,
 .mainUtenNav {
-   margin-top: 430px;
+   margin-top: 450px;
 }
 .mainBlur {
    background-color: var(--clr-tekst);
    border-radius: 100rem;
    width: 90%;
-   height: 20%;
+   height: 30%;
    position: absolute;
    z-index: 0;
    left: 50%;
@@ -564,25 +618,6 @@ header {
 ul {
    list-style: none;
 }
-.oppdragsInfo ul,
-.infoGrid ul {
-   margin-block-end: 1rem;
-}
-.oppdragsInfo ul li,
-.infoGrid ul li {
-   margin-left: 1em;
-}
-ul li p::before {
-   content: "\2022";
-   color: var(--clr-tekst);
-   font-weight: bold;
-   display: inline-block;
-   width: 1em;
-   margin-left: -1em;
-}
-ul li a button {
-   margin-left: -1em;
-}
 /*______ svgIkon ______*/
 .svgIkon {
    background-color: var(--clr-tekst);
@@ -629,6 +664,9 @@ nav .hovedmenyRamme {
    scrollbar-width: none;
 }
 @media only screen and (max-width: 1200px) {
+   .hero-tittel {
+      top: 115px;
+   }
    .breadcrumbsMenu {
       display: block;
       position: absolute;
@@ -639,25 +677,32 @@ nav .hovedmenyRamme {
       height: 40px;
       width: 100%;
       z-index: 142;
+      transition: transform 0.3s ease-in-out;
+   }
+   nav.hide-nav.hide-breadcrumbs ~ .hero-tittel {
+      top: 20px;
    }
    #breadcrumbs {
       height: 40px;
    }
-   header {
-      margin-top: 90px;
-   }
    .mainMedHeader {
-      margin-top: 470px;
+      margin-top: 450px;
    }
 }
 @media only screen and (max-width: 992px) {
    .footerContent::after {
       content: "Designet og utviklet av Marius Strøm Riseth // F21 VGS";
    }
+   .mainBlur {
+      height: 50%;
+   }
 }
 @media only screen and (max-width: 600px) {
    nav {
       grid-template-columns: 42px 1fr 42px;
+   }
+   .mainBlur {
+      height: 70%;
    }
    .menyKnapp {
       display: flex;
@@ -671,7 +716,7 @@ nav .hovedmenyRamme {
       content: "Laget av Marius S. Riseth // F21 VGS";
    }
    .mainMedHeader {
-      margin-top: 430px;
+      margin-top: 410px;
    }
    .hovedmenyRamme {
       width: 100%;

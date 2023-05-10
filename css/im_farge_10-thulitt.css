@@ -53,24 +53,10 @@ ul li p::before {
 }
 
 /* ___________ Bildefremvisning ___________ */
-.bildeKarusell img:not(.aktivtKarusellBilde) {
-   filter: grayscale(0.8);
-   transition: all 100ms ease-in-out;
-   border: 2px solid var(--clr-ramme);
-}
-.bildeKarusell img:not(.aktivtKarusellBilde):hover,
-.bildeKarusell img:not(.aktivtKarusellBilde):focus-visible {
-   transition: all 100ms ease-in-out;
-   filter: grayscale(0);
-   border: 2px solid var(--clr-thulitt);
-}
-.aktivtKarusellBilde {
-   filter: none;
-   border: 3px solid var(--clr-thulitt);
-}
-.fargetFilter {
-   background-color: var(--clr-thulitt);
-   color: var(--clr-bakgrunn);
+.nyFane:hover,
+.nyFane:focus-visible {
+   color: var(--clr-thulitt);
+   text-decoration: underline;
 }
 /* ___________ Hovedmenyen ___________ */
 .fargetFyll {
@@ -91,6 +77,8 @@ ul li p::before {
 .nettResFlex a:hover,
 .nettResFlex a:focus-visible,
 .nettResFlexKol a:hover,
-.nettResFlexKol a:focus-visible {
+.nettResFlexKol a:focus-visible,
+.nettResMono a:hover,
+.nettResMono a:focus-visible {
    border-color: var(--clr-thulitt);
 }

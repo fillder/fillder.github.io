@@ -75,6 +75,7 @@ const siteHierarchy = {
                   iconClass: "maskeTreDOutline",
                   children: {
                      "/oppdragsbank/2_3d-design/2-2-1_modeller-spillobjekt.html": { displayName: "Modeller et spillobjekt" },
+                     "/oppdragsbank/2_3d-design/2-2-2_produktdesign.html": { displayName: "Produktdesign: PC-kabinett" },
                   },
                },
                "/oppdragsbank/3_fotografi.html": {
@@ -92,6 +93,8 @@ const siteHierarchy = {
                   children: {
                      "/oppdragsbank/4_film-og-vfx/4-2-1_supersmooth-reklamefilm.html": { displayName: "Reklamefilm" },
                      "/oppdragsbank/4_film-og-vfx/4-2-2_manus123.html": { displayName: "Manus 1-2-3" },
+                     "/oppdragsbank/4_film-og-vfx/4-2-3_konkurranserprodukt.html": { displayName: "Filmkonkurranse" },
+                     "/oppdragsbank/4_film-og-vfx/4-1-1_verdensrommet-animert.html": { displayName: "Verdensrommet Animert" },
                   },
                },
                "/oppdragsbank/5_animasjon.html": {
@@ -99,6 +102,7 @@ const siteHierarchy = {
                   iconClass: "maskeAnimasjon",
                   children: {
                      "/oppdragsbank/5_animasjon/5-2-1_tine-animasjon.html": { displayName: "Litagoreklame" },
+                     "/oppdragsbank/5_animasjon/5-1-1_walkcycle.html": { displayName: "Walk cycle" },
                   },
                },
                "/oppdragsbank/6_lyddesign.html": {
@@ -107,6 +111,7 @@ const siteHierarchy = {
                   children: {
                      "/oppdragsbank/6_lyddesign/6-2-1_im-podcast.html": { displayName: "IM-Podkast" },
                      "/oppdragsbank/6_lyddesign/6-2-2_musicless-music-video.html": { displayName: "Musicless music video" },
+                     "/oppdragsbank/6_lyddesign/6-1-1_analyse-av-lyd-i-film.html": { displayName: "Analyse av lyd i film" },
                   },
                },
                "/oppdragsbank/7_drift.html": {
