@@ -310,12 +310,35 @@ table thead tr th {
 /*___________ kategoriSide __________*/
 /*___________________________________*/
 .filterMeny {
+   position: relative;
    z-index: 2;
 }
 .filterMeny .kategoriFilter {
    margin-block-start: 0.5rem;
    margin-block-end: 1em;
    margin-inline: 1rem;
+}
+.tilbakeKnapp {
+   position: absolute;
+   bottom: 0;
+   left: 1rem;
+   transform: translate(0%, 50%);
+   background-color: var(--clr-ixDBoks);
+   border: 1px solid var(--clr-ramme);
+   border-radius: 0.25rem;
+   width: 60px;
+   height: 40px;
+   z-index: 900;
+   place-items: center;
+}
+.tilbakePil {
+   position: relative;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: var(--clr-tekst);
+   width: 24px;
+   height: 24px;
 }
 .kategoriSeksjon {
    display: flex;

@@ -285,6 +285,9 @@
    .op_spice {
       min-width: 20px;
    }
+   .tilbakeKnapp {
+      left: 0.5rem;
+   }
 }
 /*______ KategoriSider ______*/
 @media screen and (max-width: 800px) {

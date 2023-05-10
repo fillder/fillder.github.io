@@ -421,17 +421,18 @@ nav {
    margin-inline: 75px;
    margin-block: 0.5rem;
 }
+
 /*______ headerområde ______*/
-header {
+/* header {
    margin-top: 30px;
 }
 .headerUtenNav {
    margin-top: 30px;
-}
+} */
 .hero {
    position: absolute;
    top: 0;
-   height: 400px; /* Sett høyden på banneret etter behov */
+   height: 455px; /* Sett høyden på banneret etter behov */
    width: 100%;
    max-width: 1600px;
    left: 50%;
@@ -449,12 +450,16 @@ header {
 }
 .hero-tittel {
    position: absolute;
-   top: 40px;
+   top: 75px;
    left: 20px;
    padding: 0px 10px 7.5px 7.5px; /* top | right | bottom | left */
    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
    border-radius: 0.2rem;
 }
+nav.hide-nav ~ .hero-tittel {
+   top: 20px; /* 75px - 55px */
+}
+
 .hero-tittel h1 {
    color: whitesmoke;
 }
@@ -483,13 +488,13 @@ header {
 /*______ Main ______*/
 .mainMedHeader,
 .mainUtenNav {
-   margin-top: 430px;
+   margin-top: 450px;
 }
 .mainBlur {
    background-color: var(--clr-tekst);
    border-radius: 100rem;
    width: 90%;
-   height: 20%;
+   height: 30%;
    position: absolute;
    z-index: 0;
    left: 50%;
@@ -624,7 +629,7 @@ nav .hovedmenyRamme {
 }
 @media only screen and (max-width: 1200px) {
    .hero-tittel {
-      top: 95px;
+      top: 115px;
    }
    .breadcrumbsMenu {
       display: block;
@@ -638,24 +643,30 @@ nav .hovedmenyRamme {
       z-index: 142;
       transition: transform 0.3s ease-in-out;
    }
+   nav.hide-nav.hide-breadcrumbs ~ .hero-tittel {
+      top: 20px;
+   }
    #breadcrumbs {
       height: 40px;
    }
-   header {
-      margin-top: 20px;
-   }
    .mainMedHeader {
-      margin-top: 420px;
+      margin-top: 450px;
    }
 }
 @media only screen and (max-width: 992px) {
    .footerContent::after {
       content: "Designet og utviklet av Marius Strøm Riseth // F21 VGS";
    }
+   .mainBlur {
+      height: 50%;
+   }
 }
 @media only screen and (max-width: 600px) {
    nav {
       grid-template-columns: 42px 1fr 42px;
+   }
+   .mainBlur {
+      height: 70%;
    }
    .menyKnapp {
       display: flex;
@@ -669,7 +680,7 @@ nav .hovedmenyRamme {
       content: "Laget av Marius S. Riseth // F21 VGS";
    }
    .mainMedHeader {
-      margin-top: 380px;
+      margin-top: 410px;
    }
    .hovedmenyRamme {
       width: 100%;
