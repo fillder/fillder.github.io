@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
    const overlayMeny = document.querySelector(".overlayMeny");
    const hovedmenyRamme = document.querySelector(".hovedmenyRamme");
    const main = document.querySelector("main");
-   const header = document.querySelector("header");
 
    function closeMenu() {
       overlayMeny.style.opacity = "0";
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
       menyKnapp.classList.add("maskeMenyOutline");
       hovedmenyRamme.style.transform = "translateX(100%)";
       main.classList.remove("no-scroll");
-      header.classList.remove("no-scroll");
       isMenuOpen = false;
    }
 
@@ -34,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
          menyKnapp.classList.add("maskeMenyFill");
          hovedmenyRamme.style.transform = "translateX(0%)";
          main.classList.add("no-scroll");
-         header.classList.add("no-scroll");
          isMenuOpen = true;
       }
    });
