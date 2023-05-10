@@ -75,6 +75,7 @@ const siteHierarchy = {
                   iconClass: "maskeTreDOutline",
                   children: {
                      "/oppdragsbank/2_3d-design/2-2-1_modeller-spillobjekt.html": { displayName: "Modeller et spillobjekt" },
+                     "/oppdragsbank/2_3d-design/2-2-2_produktdesign.html": { displayName: "Produktdesign: PC-kabinett" },
                   },
                },
                "/oppdragsbank/3_fotografi.html": {

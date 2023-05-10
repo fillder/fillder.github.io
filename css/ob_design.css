@@ -560,6 +560,7 @@ table thead tr th {
 }
 .ob_oppdragssideGridAlt {
    display: grid;
+   position: relative;
    margin-block-start: 2.5rem;
    row-gap: 1rem;
    column-gap: 2rem;

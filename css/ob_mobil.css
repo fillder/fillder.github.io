@@ -194,6 +194,7 @@
    }
    .mobilBildeGrid {
       grid-area: bil;
+      position: relative;
    }
    .tabDesk,
    .bildeDesk {
