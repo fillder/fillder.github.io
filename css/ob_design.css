@@ -372,18 +372,19 @@ table thead tr th {
    gap: 0.5rem;
    justify-content: center;
 }
-.kategoriFilter > * {
+.kategoriFilter button {
    flex-grow: 1;
    flex-shrink: 1;
    flex-basis: 100px;
    display: grid;
+   width: max-content;
    align-content: center;
-   max-width: 150px;
+   max-width: 200px;
    height: 3rem;
    font-family: "Roboto", sans-serif;
    color: var(--clr-tekst);
    line-height: 120%;
-   font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+   font-size: 1rem;
    font-weight: 500;
 }
 .kategoriKnapp {
