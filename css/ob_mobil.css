@@ -258,7 +258,7 @@
 }
 @media screen and (max-width: 600px) {
    .kategoriTittel {
-      width: 9rem;
+      width: 10rem;
       text-align: center;
       align-content: center;
    }
