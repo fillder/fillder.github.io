@@ -250,6 +250,7 @@
    display: flex;
    place-items: center;
 }
+
 .oppdrag .boksRamme,
 .oppdrag .spiciness {
    margin-inline-end: 1rem;
@@ -358,13 +359,14 @@ table thead tr th {
    background-color: var(--clr-tabellBoks);
    width: 100%;
    padding-inline: 1rem;
-   padding-block: 0.5rem;
+   padding-block-end: 0.5rem;
+   padding-block-start: 0.25rem;
    margin-block-end: 0.5rem;
    border-top-right-radius: clamp(0.1rem, 0.2rem, 0.3vw);
    border-top-left-radius: clamp(0.4rem, 0.8rem, 0.8vw);
 }
-.kategoriHeader h2 {
-   margin-block-end: 0.5rem;
+.kategoriHeader h3 {
+   padding-block: 0.25rem;
 }
 .kategoriFilter {
    display: flex;
@@ -388,24 +390,12 @@ table thead tr th {
    font-weight: 500;
 }
 .kategoriKnapp {
-   display: flex;
+   display: grid;
+   grid-template-columns: 1fr auto;
    position: relative;
    z-index: 80;
    height: 2.5rem;
    justify-content: space-between;
-}
-.kategoriKnapp > * {
-   margin-block: auto;
-}
-.kategoriLenke {
-   position: relative;
-   z-index: 80;
-   height: 2.5rem;
-}
-.kategoriKnappTittel {
-   display: grid;
-   grid-template-columns: 1fr auto;
-   position: relative;
    padding-inline-start: 3.4rem;
    padding-inline-end: 0.5rem;
    border-radius: 50rem;
@@ -415,11 +405,28 @@ table thead tr th {
    border-style: solid;
    z-index: 90;
    height: 2.5rem;
-   width: 100%;
    align-content: center;
 }
-.kategoriKnappTittel > * {
+.kategoriKnapp > * {
    margin-block: auto;
+}
+.kategoriLenke {
+   display: flex;
+   justify-content: space-between;
+   position: relative;
+   z-index: 80;
+   height: 2.5rem;
+   padding-inline-start: 3.4rem;
+   padding-inline-end: 0.5rem;
+   border-radius: 50rem;
+   background-color: var(--clr-ixDBoks);
+   border-color: var(--clr-ramme);
+   border-width: 1px 1px 2px 2px;
+   border-style: solid;
+   z-index: 90;
+   height: 2.5rem;
+   /* width: 100%; */
+   place-items: center;
 }
 .kategoriKnappIkon {
    position: absolute;
@@ -434,24 +441,41 @@ table thead tr th {
    z-index: 100;
    padding: 0.2rem;
 }
+.midtStiltHeader {
+   text-align: center;
+}
 .kategoriKnappInfo {
    display: flex;
+   align-items: center;
    margin-block: 1rem;
 }
 .op_spice {
    display: flex;
    align-items: center;
-   min-width: 200px;
+   min-width: 175px;
 }
 .op_tid {
    display: flex;
-   min-width: 150px;
+   min-width: 130px;
    padding-inline: 0.5rem;
    align-items: center;
 }
 .op_ikon {
    width: 100%;
    height: 100%;
+}
+.tittel-og-Krav {
+   display: flex;
+   place-items: center;
+}
+.kravIkon {
+   width: 25px;
+   height: 25px;
+   margin-inline-end: 2rem;
+}
+.kravIkonStor {
+   width: 30px;
+   height: 30px;
 }
 .spiceIkon {
    width: 90px;
@@ -477,24 +501,41 @@ table thead tr th {
    display: block;
 }
 /*___________ Spiciness __________*/
-.utenKrydder::after {
-   content: "Uten krydder";
+.spice0::after {
+   /* content: "Uten krydder";
+   content: "Utemperert";
+   content: "Ukrydret";;
+   content: "Krydderfri";
+   content: "Basisk"; */
+   content: "Nøytral";
 }
-.ekstraMild::after {
-   content: "Ekstra Mild";
+.spice1::after {
+   /* content: "Ekstra Mild";
+   content: "Lett"; */
+   content: "Krydret";
 }
-.mild::after {
-   content: "Mild";
+.spice2::after {
+   /* content: "Mild";
+   content: "Pikant"; */
+   content: "Smakfull";
 }
-.medium::after {
-   content: "Medium";
+.spice3::after {
+   /* content: "Medium";
+   content: "Hot"; */
+   content: "Kraftig";
 }
-.sterk::after {
-   content: "Sterk";
+.spice4::after {
+   /* content: "Sterk";
+   content: "Intens";
+   content: "Blussende"; */
+   content: "Brennhet";
 }
-.ekstraSterk::after {
-   content: "Ekstra sterk";
+.spice5::after {
+   /* content: "Ekstra Sterk";
+   content: "Infernal"; */
+   content: "Eksplosiv";
 }
+
 /*___________ Tid __________*/
 .tid1::after {
    content: "≤1 timer";
@@ -517,12 +558,12 @@ table thead tr th {
 .tid15::after {
    content: "15 timer+";
 }
-.utenKrydder,
-.ekstraMild,
-.mild,
-.medium,
-.sterk,
-.ekstraSterk,
+.spice0,
+.spice1,
+.spice2,
+.spice3,
+.spice4,
+.spice5,
 .tid1,
 .tid1-3,
 .tid3-6,
@@ -530,6 +571,86 @@ table thead tr th {
 .tid9-12,
 .tid12-15,
 .tid15 {
+   font-family: "Roboto", sans-serif;
+   font-size: clamp(0.9rem, 1vw, 1rem);
+   font-weight: 500;
+}
+.ikonDefinisjoner {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: auto;
+   gap: 0.5rem;
+   margin-inline: 1rem;
+}
+.ikonDefinisjon {
+   display: grid;
+   grid-template-columns: auto 1fr;
+   gap: 0.5rem;
+   align-items: center;
+}
+.ikonDefinisjon h5 {
+   line-height: 120%;
+}
+.intDef::after {
+   content: "Interne oppdrag/øvelser";
+}
+.eksDef::after {
+   content: "Eksterne oppdrag/øvelser";
+}
+.kursDef::after {
+   content: "Sertifiseringskurs";
+}
+.ressDef::after {
+   content: "Faglitteratur og referanser";
+}
+.kontoDef::after {
+   content: "Krever brukerkonto";
+}
+.utstyrDef::after {
+   content: "Krever utstyr eller studio";
+}
+.nedDef::after {
+   content: "Krever utstyr eller studio";
+}
+.ccDef::after {
+   content: "Creative Commons lisens";
+}
+.progDef::after {
+   content: "Programvare og opplæring";
+}
+.fagDef::after {
+   content: "Teori og faglitteratur";
+}
+.ixdDef::after {
+   content: "Interaktive ressurer";
+}
+.refDef::after {
+   content: "Referansenettsider";
+}
+.ressDef::after {
+   content: "Ressursbibliotek";
+}
+.spillDef::after {
+   content: "Undervisningsspill";
+}
+.playDef::after {
+   content: "Undervisningsvideo";
+}
+.intDef,
+.eksDef,
+.kursDef,
+.ressDef,
+.kontoDef,
+.utstyrDef,
+.nedDef,
+.ccDef,
+.progDef,
+.fagDef,
+.ixdDef,
+.refDef,
+.ressDef,
+.spillDef,
+.playDef {
    font-family: "Roboto", sans-serif;
    font-size: clamp(0.9rem, 1vw, 1rem);
    font-weight: 500;
