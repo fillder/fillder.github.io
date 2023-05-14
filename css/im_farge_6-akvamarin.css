@@ -14,22 +14,22 @@
    color: var(--clr-akvamarin);
 }
 /* ___________ hover-effekt .svg ___________ */
-.kategoriKnapp:hover .fargetFyll,
+/* .kategoriKnapp:hover .fargetFyll,
 .kategoriKnapp:focus-visible .fargetFyll,
 .kategoriLenke:hover .fargetFyll,
 .kategoriLenke:focus-visible .fargetFyll {
    background-color: var(--clr-akvamarin);
-}
+} */
 
 /* ___________ hover-effekt Knapper ___________ */
-.kategoriLenke:hover .kategoriKnappTittel,
+.kategoriLenke:hover,
+.kategoriLenke:focus-visible,
 .kategoriLenke:hover .kategoriKnappIkon,
-.kategoriLenke:hover .kategoriKnappTittel,
-.kategoriLenke:hover .kategoriKnappIkon,
-.kategoriKnapp:hover .kategoriKnappTittel,
+.kategoriLenke:focus-visible .kategoriKnappIkon,
+.kategoriKnapp:hover,
+.kategoriKnapp:focus-visible,
 .kategoriKnapp:hover .kategoriKnappIkon,
-.kategoriKnapp:hover .kategoriKnappTittel,
-.kategoriKnapp:hover .kategoriKnappIkon {
+.kategoriKnapp:focus-visible .kategoriKnappIkon {
    border-color: var(--clr-akvamarin);
 }
 .kategoriFilter button:hover,
@@ -68,9 +68,9 @@ ul li p::before {
 #mainMenu li a:hover .hovedmenyIkon {
    border-color: var(--clr-akvamarin);
 }
-#mainMenu li a:hover .hovedmenyIkon .fargetFyll {
+/* #mainMenu li a:hover .hovedmenyIkon .fargetFyll {
    background-color: var(--clr-akvamarin);
-}
+} */
 .mainBlur {
    background-color: var(--clr-akvamarin);
 }

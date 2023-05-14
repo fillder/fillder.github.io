@@ -79,34 +79,7 @@
    -webkit-mask: url(/images/svg/ob_10_ai.svg) no-repeat center;
    mask: url(/images/svg/ob_10_ai.svg) no-repeat center;
 }
-.maskeSpice0 {
-   -webkit-mask: url(/images/svg/ob_spice0.svg) no-repeat center;
-   mask: url(/images/svg/ob_spice0.svg) no-repeat center;
-}
-.maskeSpice1 {
-   -webkit-mask: url(/images/svg/ob_spice1.svg) no-repeat center;
-   mask: url(/images/svg/ob_spice1.svg) no-repeat center;
-}
-.maskeSpice2 {
-   -webkit-mask: url(/images/svg/ob_spice2.svg) no-repeat center;
-   mask: url(/images/svg/ob_spice2.svg) no-repeat center;
-}
-.maskeSpice3 {
-   -webkit-mask: url(/images/svg/ob_spice3.svg) no-repeat center;
-   mask: url(/images/svg/ob_spice3.svg) no-repeat center;
-}
-.maskeSpice4 {
-   -webkit-mask: url(/images/svg/ob_spice4.svg) no-repeat center;
-   mask: url(/images/svg/ob_spice4.svg) no-repeat center;
-}
-.maskeSpice5 {
-   -webkit-mask: url(/images/svg/ob_spice5.svg) no-repeat center;
-   mask: url(/images/svg/ob_spice5.svg) no-repeat center;
-}
-.maskeSpiceGrad {
-   -webkit-mask: url(/images/svg/ob_spice-grad.svg) no-repeat center;
-   mask: url(/images/svg/ob_spice-grad.svg) no-repeat center;
-}
+
 .maskeTidTimer {
    -webkit-mask: url(/images/svg/ob_tid-timer.svg) no-repeat center;
    mask: url(/images/svg/ob_tid-timer.svg) no-repeat center;
@@ -277,10 +250,6 @@
    -webkit-mask: url(/images/svg/ob_ai-outline.svg) no-repeat center;
    mask: url(/images/svg/ob_ai-outline.svg) no-repeat center;
 }
-.maskePlan {
-   -webkit-mask: url(/images/svg/ob_plan_outline.svg) no-repeat center;
-   mask: url(/images/svg/ob_plan_outline.svg) no-repeat center;
-}
 .maskeModulInfo {
    -webkit-mask: url(/images/svg/ob_info_outline.svg) no-repeat center;
    mask: url(/images/svg/ob_info_outline.svg) no-repeat center;
@@ -339,7 +308,7 @@
    mask: url(/images/svg/im_hovedmeny-pil.svg) no-repeat center;
 }
 
-/* Nye ikoner */
+/* ___________ Oppdragikoner ___________ */
 .maskeOppdragIntern {
    -webkit-mask: url(/images/svg/ob_internt-oppdrag_outline.svg) no-repeat center;
    mask: url(/images/svg/ob_internt-oppdrag_outline.svg) no-repeat center;
@@ -372,6 +341,7 @@
    -webkit-mask: url(/images/svg/im_fagverket_outline.svg) no-repeat center;
    mask: url(/images/svg/im_fagverket_outline.svg) no-repeat center;
 }
+/* ___________ Tidikoner ___________ */
 .maskeTid1 {
    -webkit-mask: url(/images/svg/ob_tid1.svg) no-repeat center;
    mask: url(/images/svg/ob_tid1.svg) no-repeat center;
@@ -400,7 +370,93 @@
    -webkit-mask: url(/images/svg/ob_tid15.svg) no-repeat center;
    mask: url(/images/svg/ob_tid15.svg) no-repeat center;
 }
+/* ___________ Spice-ikoner ___________ */
+.maskeSpice0 {
+   -webkit-mask: url(/images/svg/ob_spice0.svg) no-repeat center;
+   mask: url(/images/svg/ob_spice0.svg) no-repeat center;
+}
+.maskeSpice1 {
+   -webkit-mask: url(/images/svg/ob_spice1.svg) no-repeat center;
+   mask: url(/images/svg/ob_spice1.svg) no-repeat center;
+}
+.maskeSpice2 {
+   -webkit-mask: url(/images/svg/ob_spice2.svg) no-repeat center;
+   mask: url(/images/svg/ob_spice2.svg) no-repeat center;
+}
+.maskeSpice3 {
+   -webkit-mask: url(/images/svg/ob_spice3.svg) no-repeat center;
+   mask: url(/images/svg/ob_spice3.svg) no-repeat center;
+}
+.maskeSpice4 {
+   -webkit-mask: url(/images/svg/ob_spice4.svg) no-repeat center;
+   mask: url(/images/svg/ob_spice4.svg) no-repeat center;
+}
+.maskeSpice5 {
+   -webkit-mask: url(/images/svg/ob_spice5.svg) no-repeat center;
+   mask: url(/images/svg/ob_spice5.svg) no-repeat center;
+}
+.maskeSpiceGrad {
+   -webkit-mask: url(/images/svg/ob_spice-grad.svg) no-repeat center;
+   mask: url(/images/svg/ob_spice-grad.svg) no-repeat center;
+}
+/* ___________ Krav til oppdrag-ikoner ___________ */
+.maskeKreverKonto {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_krever-konto.svg) no-repeat center;
+   mask: url(/images/svg/ob_krever-konto.svg) no-repeat center;
+}
+.maskeKreverUtstyr {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_krever-utstyr.svg) no-repeat center;
+   mask: url(/images/svg/ob_krever-utstyr.svg) no-repeat center;
+}
+.maskeKreverNedlastning {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_krever-nedlastning.svg) no-repeat center;
+   mask: url(/images/svg/ob_krever-nedlastning.svg) no-repeat center;
+}
+.maskeCreativeCommons {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_creative-commons.svg) no-repeat center;
+   mask: url(/images/svg/ob_creative-commons.svg) no-repeat center;
+}
+.maskeFaglitteratur {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_faglitteratur.svg) no-repeat center;
+   mask: url(/images/svg/ob_faglitteratur.svg) no-repeat center;
+}
+.maskeProgramvare {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_programvare.svg) no-repeat center;
+   mask: url(/images/svg/ob_programvare.svg) no-repeat center;
+}
+.maskeInteraktivt {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_interaktiv.svg) no-repeat center;
+   mask: url(/images/svg/ob_interaktiv.svg) no-repeat center;
+}
+.maskeReferanse {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_referanseside.svg) no-repeat center;
+   mask: url(/images/svg/ob_referanseside.svg) no-repeat center;
+}
+.maskeRessurser {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_ressurser.svg) no-repeat center;
+   mask: url(/images/svg/ob_ressurser.svg) no-repeat center;
+}
+.maskeSertifisering {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_sertifisering.svg) no-repeat center;
+   mask: url(/images/svg/ob_sertifisering.svg) no-repeat center;
+}
+.maskeSpill {
+   background-color: var(--clr-tekst);
+   -webkit-mask: url(/images/svg/ob_undervisningsspill.svg) no-repeat center;
+   mask: url(/images/svg/ob_undervisningsspill.svg) no-repeat center;
+}
 @media screen and (max-width: 992px) {
+   /* ___________ Spice-ikoner ___________ */
    .maskeSpice0 {
       -webkit-mask: url(/images/svg/ob_spice0-mob.svg) no-repeat center;
       mask: url(/images/svg/ob_spice0-mob.svg) no-repeat center;
@@ -424,5 +480,10 @@
    .maskeSpice5 {
       -webkit-mask: url(/images/svg/ob_spice5-mob.svg) no-repeat center;
       mask: url(/images/svg/ob_spice5-mob.svg) no-repeat center;
+   }
+}
+@media screen and (max-width: 600px) {
+   .kravIkon {
+      display: none;
    }
 }

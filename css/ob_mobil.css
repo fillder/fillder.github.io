@@ -30,6 +30,9 @@
       flex-wrap: wrap;
       margin-block-end: 0rem;
    }
+   .ikonDefinisjoner {
+      grid-template-columns: repeat(3, 1fr);
+   }
 }
 @media screen and (max-width: 992px) {
    .ob_hovedsideGrid {
@@ -60,6 +63,9 @@
    .op_tid {
       min-width: 115px;
    }
+   .kravIkon {
+      margin-inline-end: 1rem;
+   }
    .stortInspBilde {
       grid-template-columns: 1fr;
       grid-template-rows: auto;
@@ -89,22 +95,25 @@
       width: 18px;
       height: 30px;
    }
-   .utenKrydder::after {
+   .op_tid {
+      min-width: 85px;
+   }
+   .spice0::after {
       content: "0/5";
    }
-   .ekstraMild::after {
+   .spice1::after {
       content: "1/5";
    }
-   .mild::after {
+   .spice2::after {
       content: "2/5";
    }
-   .medium::after {
+   .spice3::after {
       content: "3/5";
    }
-   .sterk::after {
+   .spice4::after {
       content: "4/5";
    }
-   .ekstraSterk::after {
+   .spice5::after {
       content: "5/5";
    }
    /*___________ Tid __________*/
@@ -220,14 +229,11 @@
       display: none;
    }
    .kategoriKnappTittel {
-      padding-inline-start: 3rem;
       line-height: 120%;
    }
-   .op_tid {
-      min-width: 85px;
-   }
+
    .op_spice {
-      min-width: 40px;
+      min-width: 45px;
    }
    .spiceIkon {
       width: 15px;
@@ -258,7 +264,7 @@
 }
 @media screen and (max-width: 600px) {
    .kategoriTittel {
-      width: 9rem;
+      width: 10rem;
       text-align: center;
       align-content: center;
    }
@@ -283,19 +289,10 @@
       min-width: 80px;
       padding-inline: 0.5rem;
    }
-   .op_spice {
-      min-width: 20px;
-   }
    .tilbakeKnapp {
       left: 0.5rem;
    }
-}
-/*______ KategoriSider ______*/
-@media screen and (max-width: 800px) {
-   .oppdrag {
-      flex-wrap: wrap;
-   }
-   .oppdrag > * {
-      margin-block-start: 0.5rem;
+   .ikonDefinisjoner {
+      grid-template-columns: repeat(2, 1fr);
    }
 }

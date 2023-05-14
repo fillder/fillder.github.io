@@ -56,46 +56,132 @@ document.addEventListener("DOMContentLoaded", function () {
    }
 
    // Spiciness graderinger
-   const utenKrydderElementer = document.querySelectorAll(".utenKrydder");
-   for (let utenKrydderElement of utenKrydderElementer) {
+   const spice0Elementer = document.querySelectorAll(".spice0");
+   for (let spice0Element of spice0Elementer) {
       const nyttDivElement = document.createElement("div");
       nyttDivElement.classList.add("spiceIkon", "maskeSpice0", "fargetFyll");
-      utenKrydderElement.appendChild(nyttDivElement);
+      spice0Element.appendChild(nyttDivElement);
    }
 
-   const ekstraMildElementer = document.querySelectorAll(".ekstraMild");
-   for (let ekstraMildElement of ekstraMildElementer) {
+   const spice1Elementer = document.querySelectorAll(".spice1");
+   for (let spice1Element of spice1Elementer) {
       const nyttDivElement = document.createElement("div");
       nyttDivElement.classList.add("spiceIkon", "maskeSpice1", "fargetFyll");
-      ekstraMildElement.appendChild(nyttDivElement);
+      spice1Element.appendChild(nyttDivElement);
    }
 
-   const mildElementer = document.querySelectorAll(".mild");
-   for (let mildElement of mildElementer) {
+   const spice2Elementer = document.querySelectorAll(".spice2");
+   for (let spice2Element of spice2Elementer) {
       const nyttDivElement = document.createElement("div");
       nyttDivElement.classList.add("spiceIkon", "maskeSpice2", "fargetFyll");
-      mildElement.appendChild(nyttDivElement);
+      spice2Element.appendChild(nyttDivElement);
    }
 
-   const mediumElementer = document.querySelectorAll(".medium");
-   for (let mediumElement of mediumElementer) {
+   const spice3Elementer = document.querySelectorAll(".spice3");
+   for (let spice3Element of spice3Elementer) {
       const nyttDivElement = document.createElement("div");
       nyttDivElement.classList.add("spiceIkon", "maskeSpice3", "fargetFyll");
-      mediumElement.appendChild(nyttDivElement);
+      spice3Element.appendChild(nyttDivElement);
    }
 
-   const sterkElementer = document.querySelectorAll(".sterk");
-   for (let sterkElement of sterkElementer) {
+   const spice4Elementer = document.querySelectorAll(".spice4");
+   for (let spice4Element of spice4Elementer) {
       const nyttDivElement = document.createElement("div");
       nyttDivElement.classList.add("spiceIkon", "maskeSpice4", "fargetFyll");
-      sterkElement.appendChild(nyttDivElement);
+      spice4Element.appendChild(nyttDivElement);
    }
 
-   const ekstraSterkElementer = document.querySelectorAll(".ekstraSterk");
-   for (let ekstraSterkElement of ekstraSterkElementer) {
+   const spice5Elementer = document.querySelectorAll(".spice5");
+   for (let spice5Element of spice5Elementer) {
       const nyttDivElement = document.createElement("div");
       nyttDivElement.classList.add("spiceIkon", "maskeSpice5", "fargetFyll");
-      ekstraSterkElement.appendChild(nyttDivElement);
+      spice5Element.appendChild(nyttDivElement);
+   }
+
+   // Definisjoner
+   const intDefElementer = document.querySelectorAll(".intDef");
+   for (let intDefElement of intDefElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("kravIkonStor", "interntOppdrag");
+      intDefElement.appendChild(nyttDivElement);
+   }
+   const eksDefElementer = document.querySelectorAll(".eksDef");
+   for (let eksDefElement of eksDefElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("kravIkonStor", "eksterntOppdrag");
+      eksDefElement.appendChild(nyttDivElement);
+   }
+   const kursDefElementer = document.querySelectorAll(".kursDef");
+   for (let kursDefElement of kursDefElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("kravIkonStor", "kurs");
+      kursDefElement.appendChild(nyttDivElement);
+   }
+   const kontoDefElementer = document.querySelectorAll(".kontoDef");
+   for (let kontoDefElement of kontoDefElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("kravIkonStor", "maskeKreverKonto");
+      kontoDefElement.appendChild(nyttDivElement);
+   }
+   const utstyrDefElementer = document.querySelectorAll(".utstyrDef");
+   for (let utstyrDefElement of utstyrDefElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("kravIkonStor", "maskeKreverUtstyr");
+      utstyrDefElement.appendChild(nyttDivElement);
+   }
+   const nedDefElementer = document.querySelectorAll(".nedDef");
+   for (let nedDefElement of nedDefElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("kravIkonStor", "maskeKreverNedlastning");
+      nedDefElement.appendChild(nyttDivElement);
+   }
+   const ccDefElementer = document.querySelectorAll(".ccDef");
+   for (let ccDefElement of ccDefElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("kravIkonStor", "maskeCreativeCommons");
+      ccDefElement.appendChild(nyttDivElement);
+   }
+   const progDefElementer = document.querySelectorAll(".progDef");
+   for (let progDefElement of progDefElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("kravIkonStor", "progVare");
+      progDefElement.appendChild(nyttDivElement);
+   }
+   const fagDefElementer = document.querySelectorAll(".fagDef");
+   for (let fagDefElement of fagDefElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("kravIkonStor", "fagLitt");
+      fagDefElement.appendChild(nyttDivElement);
+   }
+   const ixdDefElementer = document.querySelectorAll(".ixdDef");
+   for (let ixdDefElement of ixdDefElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("kravIkonStor", "interaktiv");
+      ixdDefElement.appendChild(nyttDivElement);
+   }
+   const refDefElementer = document.querySelectorAll(".refDef");
+   for (let refDefElement of refDefElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("kravIkonStor", "refSide");
+      refDefElement.appendChild(nyttDivElement);
+   }
+   const ressDefElementer = document.querySelectorAll(".ressDef");
+   for (let ressDefElement of ressDefElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("kravIkonStor", "maskeRessurser");
+      ressDefElement.appendChild(nyttDivElement);
+   }
+   const spillDefElementer = document.querySelectorAll(".spillDef");
+   for (let spillDefElement of spillDefElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("kravIkonStor", "spill");
+      spillDefElement.appendChild(nyttDivElement);
+   }
+   const playDefElementer = document.querySelectorAll(".playDef");
+   for (let playDefElement of playDefElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("kravIkonStor", "video");
+      playDefElement.appendChild(nyttDivElement);
    }
 
    // oppdragstyper
@@ -105,32 +191,58 @@ document.addEventListener("DOMContentLoaded", function () {
       nyttDivElement.classList.add("op_ikon", "maskeOppdragIntern", "fargetFyll");
       interntOppdragElement.appendChild(nyttDivElement);
    }
-
    const eksterntOppdragElementer = document.querySelectorAll(".eksterntOppdrag");
    for (let eksterntOppdragElement of eksterntOppdragElementer) {
       const nyttDivElement = document.createElement("div");
       nyttDivElement.classList.add("op_ikon", "maskeOppdragEkstern", "fargetFyll");
       eksterntOppdragElement.appendChild(nyttDivElement);
    }
-
    const ressursElementer = document.querySelectorAll(".ressurs");
    for (let ressursElement of ressursElementer) {
       const nyttDivElement = document.createElement("div");
-      nyttDivElement.classList.add("op_ikon", "maskeOppdragRessurs", "fargetFyll");
+      nyttDivElement.classList.add("op_ikon", "maskeRessurser", "fargetFyll");
       ressursElement.appendChild(nyttDivElement);
    }
-
    const kursElementer = document.querySelectorAll(".kurs");
    for (let kursElement of kursElementer) {
       const nyttDivElement = document.createElement("div");
-      nyttDivElement.classList.add("op_ikon", "maskePlan", "fargetFyll");
+      nyttDivElement.classList.add("op_ikon", "maskeSertifisering", "fargetFyll");
       kursElement.appendChild(nyttDivElement);
    }
-
    const videoElementer = document.querySelectorAll(".video");
    for (let videoElement of videoElementer) {
       const nyttDivElement = document.createElement("div");
       nyttDivElement.classList.add("op_ikon", "maskeVideo", "fargetFyll");
       videoElement.appendChild(nyttDivElement);
+   }
+   const progVareElementer = document.querySelectorAll(".progVare");
+   for (let progVareElement of progVareElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("op_ikon", "maskeProgramvare", "fargetFyll");
+      progVareElement.appendChild(nyttDivElement);
+   }
+   const refSideElementer = document.querySelectorAll(".refSide");
+   for (let refSideElement of refSideElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("op_ikon", "maskeReferanse", "fargetFyll");
+      refSideElement.appendChild(nyttDivElement);
+   }
+   const interaktivElementer = document.querySelectorAll(".interaktiv");
+   for (let interaktivElement of interaktivElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("op_ikon", "maskeInteraktivt", "fargetFyll");
+      interaktivElement.appendChild(nyttDivElement);
+   }
+   const spillElementer = document.querySelectorAll(".spill");
+   for (let spillElement of spillElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("op_ikon", "maskeSpill", "fargetFyll");
+      spillElement.appendChild(nyttDivElement);
+   }
+   const fagLittElementer = document.querySelectorAll(".fagLitt");
+   for (let fagLittElement of fagLittElementer) {
+      const nyttDivElement = document.createElement("div");
+      nyttDivElement.classList.add("op_ikon", "maskeFaglitteratur", "fargetFyll");
+      fagLittElement.appendChild(nyttDivElement);
    }
 });
