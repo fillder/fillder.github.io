@@ -730,23 +730,6 @@ table thead tr th {
    z-index: 100;
    padding: 0.2rem;
 }
-/*___________ OppdragsListe __________*/
-
-.oppdragsInfo ul li,
-.infoGrid ul li {
-   margin-left: 1em;
-}
-ul li p::before {
-   content: "\2022";
-   color: var(--clr-tekst);
-   font-weight: bold;
-   display: inline-block;
-   width: 1em;
-   margin-left: -1em;
-}
-ul li a button {
-   margin-left: -1em;
-}
 /*___________ OppdragsGrid __________*/
 .oppdragsSideBilde {
    float: right;

@@ -74,6 +74,7 @@ const siteHierarchy = {
                   displayName: "2. 3D-design",
                   iconClass: "maskeTreDOutline",
                   children: {
+                     "/oppdragsbank/2_3d-design/2-1-1_blenderkurs.html": { displayName: "Lær å bruke Blender" },
                      "/oppdragsbank/2_3d-design/2-2-1_modeller-spillobjekt.html": { displayName: "Modeller et spillobjekt" },
                      "/oppdragsbank/2_3d-design/2-2-2_produktdesign.html": { displayName: "Produktdesign: PC-kabinett" },
                   },
@@ -145,6 +146,10 @@ const siteHierarchy = {
                   displayName: "10. AI-systemer",
                   iconClass: "maskeAiOutline",
                   //   children: { "oppdragnavn.html": { displayName: "oppdragnavn" } },
+               },
+               "/oppdragsbank/visuell-logg.html": {
+                  displayName: "Visuell logg",
+                  iconClass: "maskeLoggOutline",
                },
             },
          },

@@ -519,13 +519,6 @@ nav {
    --scale: 1;
 }
 /*______ headerområde ______*/
-/* header {
-   position: relative;
-   z-index: 160;
-} */
-/*.headerUtenNav {
-   margin-top: 30px;
-} */
 .hero {
    position: absolute;
    top: 0;
@@ -646,18 +639,15 @@ nav.hide-nav ~ .hero-tittel {
    border-style: solid;
 }
 .xSPA {
-   /* xtra small asymmetric padding */
    padding-block: 0.25rem;
    padding-inline: 0.5rem;
 }
 .sPA {
-   /* small asymmetric padding */
    padding-block: 0.5rem;
    padding-inline: 1rem;
 }
 
 .xSPS {
-   /* xtra small symmetric padding */
    padding: 0.4rem;
 }
 .xSPS2 {
@@ -665,7 +655,6 @@ nav.hide-nav ~ .hero-tittel {
 }
 
 .sPS {
-   /* small symmetric padding */
    padding: 1rem;
 }
 
@@ -678,6 +667,26 @@ nav.hide-nav ~ .hero-tittel {
 /*______ Liste ______*/
 ul {
    list-style: none;
+}
+.oppdragsInfo ul,
+.infoGrid ul {
+   margin-block-start: 0.5rem;
+   margin-block-end: 1rem;
+}
+.oppdragsInfo ul li,
+.infoGrid ul li {
+   margin-left: 1rem;
+}
+ul li p::before {
+   content: "\2022";
+   color: var(--clr-tekst);
+   font-weight: bold;
+   display: inline-block;
+   width: 1rem;
+   margin-left: -1em;
+}
+ul li a button {
+   margin-left: -1em;
 }
 /*______ svgIkon ______*/
 .svgIkon {
