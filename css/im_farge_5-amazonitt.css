@@ -11,12 +11,12 @@
    text-underline-offset: 4px;
 }
 /* ___________ hover-effekt .svg ___________ */
-/* .kategoriKnapp:hover .fargetFyll,
+.kategoriKnapp:hover .fargetFyll,
 .kategoriKnapp:focus-visible .fargetFyll,
 .kategoriLenke:hover .fargetFyll,
 .kategoriLenke:focus-visible .fargetFyll {
    background-color: var(--clr-amazonitt);
-} */
+}
 
 /* ___________ hover-effekt Knapper ___________ */
 .kategoriLenke:hover,

@@ -323,7 +323,7 @@ table thead tr th {
    position: absolute;
    bottom: 0;
    left: 1rem;
-   transform: translate(0%, 50%);
+   transform: translate(0%, 50%) scale(1);
    background-color: var(--clr-ixDBoks);
    border: 1px solid var(--clr-ramme);
    border-radius: 0.25rem;
@@ -331,6 +331,7 @@ table thead tr th {
    height: 40px;
    z-index: 900;
    place-items: center;
+   transition: all 0.3s ease-in-out;
 }
 .tilbakePil {
    position: relative;
@@ -340,6 +341,11 @@ table thead tr th {
    background-color: var(--clr-tekst);
    width: 24px;
    height: 24px;
+}
+.tilbakeKnapp:hover,
+.tilbakeKnapp:focus-visible {
+   transition: all 0.3s ease-in-out;
+   transform: translate(0%, 50%) scale(1.1);
 }
 .kategoriSeksjon {
    display: flex;

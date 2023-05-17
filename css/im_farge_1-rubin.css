@@ -14,12 +14,12 @@
    color: var(--clr-rubin);
 }
 /* ___________ hover-effekt .svg ___________ */
-/* .kategoriKnapp:hover .fargetFyll,
+.kategoriKnapp:hover .fargetFyll,
 .kategoriKnapp:focus-visible .fargetFyll,
 .kategoriLenke:hover .fargetFyll,
 .kategoriLenke:focus-visible .fargetFyll {
    background-color: var(--clr-rubin);
-} */
+}
 
 /* ___________ hover-effekt Knapper ___________ */
 .kategoriLenke:hover,
