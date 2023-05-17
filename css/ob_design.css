@@ -751,10 +751,7 @@ ul li a button {
 .oppdragsSideBilde {
    float: right;
    clear: right;
-   margin-inline-start: 0.5rem;
-   margin-inline-end: 1rem;
-   margin-block-start: 1rem;
-   margin-block-end: 0.5rem;
+   margin: 1rem;
 }
 .horisontaltStandard {
    height: auto;
@@ -774,7 +771,7 @@ ul li a button {
 }
 .kvadratisk {
    height: auto;
-   width: 16rem;
+   width: 20rem;
 }
 .stortInspBilde {
    display: grid;
