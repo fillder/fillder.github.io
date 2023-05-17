@@ -525,8 +525,7 @@ table thead tr th {
    content: "Sterk";
 }
 .spice4::after {
-   /* content: "Sterk";
-   content: "Intens";
+   /* content: "Intens";
    content: "Blussende"; */
    content: "Brennhet";
 }
