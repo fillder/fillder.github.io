@@ -665,19 +665,41 @@ nav.hide-nav ~ .hero-tittel {
    padding: 1.25rem;
 }
 /*______ Liste ______*/
-ul {
+ul,
+ol {
    list-style: none;
 }
-.oppdragsInfo ul,
-.infoGrid ul {
-   margin-block-start: 0.5rem;
-   margin-block-end: 1rem;
+.punktListe,
+.nummerertPunktListe,
+.subPunktListe {
+   font-family: "Roboto", sans-serif;
+   font-size: clamp(0.8rem, 0.9vw, 1rem);
+   color: var(--clr-tekst);
+   line-height: 1.5;
+   font-weight: 300;
 }
-.oppdragsInfo ul li,
-.infoGrid ul li {
+.punktListe {
+   margin-block: 0.5rem;
+}
+.punktListe li,
+.nummerertPunktListe li {
    margin-left: 1rem;
 }
-ul li p::before {
+.subPunktListe {
+   margin-left: 1.5rem;
+   margin-block: 0.5rem;
+}
+ol li::before {
+   color: var(--clr-tekst);
+   display: inline-block;
+   width: 1rem;
+   margin-left: -1em;
+}
+.nummerertPunktListe li::before {
+   content: "\25CF";
+}
+.punktListe li::before,
+.subPunktListe li::before {
    content: "\2022";
    color: var(--clr-tekst);
    font-weight: bold;

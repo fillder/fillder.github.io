@@ -145,7 +145,9 @@ const siteHierarchy = {
                "/oppdragsbank/10_ai-systemer.html": {
                   displayName: "10. AI-systemer",
                   iconClass: "maskeAiOutline",
-                  //   children: { "oppdragnavn.html": { displayName: "oppdragnavn" } },
+                  children: {
+                     "/oppdragsbank/10_ai-systemer/10-1-1_stable-diffusion.html": { displayName: "Lær å Bruke SD" },
+                  },
                },
                "/oppdragsbank/visuell-logg.html": {
                   displayName: "Visuell logg",
