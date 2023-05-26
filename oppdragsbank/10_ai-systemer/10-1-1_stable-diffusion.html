@@ -59,7 +59,7 @@
       <header class="hero" id="hero">
          <img class="hero-bilde" src="/images/img/kategori-10_ai/ob_kategoribanner-10_ai.webp" alt="bilde av en skjerm med kode" />
          <div class="hero-tittel fargetHeroLinje">
-            <h1><b>10.x.x. Tittel</b></h1>
+            <h1><b>10.1.1. Lær å bruke Stable Diffusion</b></h1>
          </div>
          <div class="hero-blend"></div>
          <a target="_self" rel="noreferrer noopener" href="/oppdragsbank/10_ai-systemer.html" title="Kategoriside" alt="Naviger til kategoriside">
@@ -79,27 +79,54 @@
                   <div class="op_ikon maskeOppdragIntern fargetFyll"></div>
                </div>
                <a id="openDeskImg" target="_self" href="">
-                  <img id="deskImg" class="boksRamme oppdragsSideBilde horisontaltStandard bildeDesk fargetHover" src="" alt="" />
+                  <img id="deskImg" class="boksRamme oppdragsSideBilde horisontaltStandard bildeDesk fargetHover" src="/images/img/kategori-10_ai/10-1-1_stable_diffusion.webp" alt="" />
                </a>
                <div class="sPS oppdragsInfo">
                   <h2 id="Oppdragsbeskrivelse" class="fargetLinje">Produkt</h2>
-                  <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, magni!</em></p>
+                  <p><em>En lokal installasjon av Automatic1111, et lokalt grensesnitt for Stable Diffusion.</em></p>
                   <div class="kategoriKnappInfo">
-                     <div class="op_spice ekstraspice1"></div>
-                     <div class="op_tid tid3-6"></div>
+                     <div class="op_spice spice2"></div>
+                     <div class="op_tid tid1-3"></div>
                   </div>
                   <h3 class="fargetLinje">Beskrivelse</h3>
                   <p>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptates temporibus, asperiores at sint repudiandae laudantium dolorem blanditiis vel expedita hic porro quas iure, delectus, maiores facilis? Deleniti quisquam adipisci facilis amet rem eos illum minus. Officiis mollitia harum perspiciatis, aspernatur ratione qui
-                     obcaecati, ab amet ullam maiores pariatur facere assumenda reprehenderit iure quasi, eligendi incidunt inventore. Ut blanditiis, adipisci minus dolor molestiae similique consequatur explicabo provident repudiandae nisi reiciendis voluptates labore inventore repellendus modi magnam nostrum, placeat ipsam eum. Adipisci nemo
-                     beatae cumque possimus error sapiente ea est, quo veritatis sint ut sit ducimus modi voluptatibus, itaque, esse deleniti.
+                     Stable Diffusion (SD) er et AI-system som lar deg utforske og skape generativ kunst. Dette gjør vi ved å bruke “Prompts”, som er nøkkelord og -setninger for å få et ønsket resultat. Stable Diffusion skiller seg fra andre alternativer som OpenAI's DALL·E 2 og Midjourney ved at det kan installeres lokalt på din egen maskinvare.
+                     Dette betyr at du ikke trenger å betale for et månedlig abonnement for å bruke tjenesten. Selv om det krever litt mer arbeid å sette opp og har en brattere læringskurve, gir SD deg ubegrenset kreativ frihet.
                   </p>
-                  <h3 class="fargetLinje">Suksesskriterier</h3>
-                  <ul>
-                     <li>
-                        <p><b>Lorem ipsum</b>: dolor sit amet consectetur adipisicing elit. Quod, quo.</p>
-                     </li>
+                  <br />
+                  <p>
+                     Før du starter prosjektet, er det viktig å kjenne til operativsystemet (OS) du bruker og om maskinen din har et dedikert grafikkort (GPU). Dette vil påvirke hvilke drivere du må installere for at SD skal fungere optimalt. Vær oppmerksom på at dette prosjektet krever at du leser installasjonsinstruksjonene grundig og kan
+                     håndtere feilsøking.
+                  </p>
+                  <br />
+                  <p>Her er en steg-for-steg guide for å komme i gang med Stable Diffusion:</p>
+                  <ol class="nummerertPunktListe">
+                     <li>Sjekk at du har den nyeste versjonen av grafikkortdriverne installert. For AMD bruker du <a target="_blank" rel="noreferrer noopener" href="https://www.amd.com/en/support">Adrenalin</a>, mens Nvidia bruker <a target="_blank" rel="noreferrer noopener" href="https://www.nvidia.com/download/index.aspx">GeForce</a>.</li>
+                     <li>Installer Python (versjon 3.10.6): <a target="_blank" rel="noreferrer noopener" href="https://www.python.org/downloads/release/python-3106/ ">python.org</a></li>
+                     <li>Installer Git (siste versjon):</li>
+                     <ul class="subPunktListe">
+                        <li>For Windows OS: <a target="_blank" rel="noreferrer noopener" href="https://gitforwindows.org">gitforwindows.org</a></li>
+                        <li>For Mac OS (Installer Homebrew først, og deretter Git): <a target="_blank" rel="noreferrer noopener" href="https://git-scm.com/download/mac">git-scm.com</a></li>
+                     </ul>
+                     <li>Følg instruksjonene og installer Stable Diffusion - Automatic1111 WebUI:</li>
+                     <ul class="subPunktListe">
+                        <li>Nvidia GPU: <a target="_blank" rel="noreferrer noopener" href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">Automatic1111</a></li>
+                        <li>AMD GPU: <a target="_blank" rel="noreferrer noopener" href="https://github.com/lshqqytiger/stable-diffusion-webui-directml">Automatic1111 DirectML</a></li>
+                        <li>Mac (Homebrew): <a target="_blank" rel="noreferrer noopener" href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Installation-on-Apple-Silicon">Automatic1111 Apple Silicon</a></li>
+                     </ul>
+                     <li>Last ned standardmodell for SD, v1-5-pruned.safetensors, dersom du ikke har gjort det alt: <a target="_blank" rel="noreferrer noopener" href="https://huggingface.co/runwayml/stable-diffusion-v1-5/tree/main">Stable Diffusion 1.5</a></li>
+                     <li>Plasser modellen i modellmappen til Stable Diffusion (stable-diffusion-webui/models/Stable-diffusion).</li>
+                     <li>Åpne webui-user.bat med et tekstverktøy og legg til alle nødvendige innstillinger.</li>
+                     <li>Start webui-user.bat og begynn å generere bilder!</li>
+                  </ol>
+                  <br />
+                  <p>For å få en bedre forståelse av prosessen, kan du se fremgangsvideoene på YouTube:</p>
+                  <ul class="punktListe">
+                     <li>AMD GPU: <a target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=onmqbI5XPH8">How to Install & Use Stable Diffusion on Windows</a></li>
+                     <li>Nvidia GPU: <a target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=8xR0vms0e0U">How to Install Stable Diffusion on AMD GPUs</a></li>
+                     <li>Apple Silicon (Homebrew): <a target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/watch?v=dIB4GW3iACQ">How to Install Stable Diffusion on M1 Macs</a></li>
                   </ul>
+                  <p>Nå er du din tur til å utforske og eksperimentere med Stable Diffusion for å skape unik kunst. Vær kreativ og la din egen kunstneriske visjon utfolde seg!</p>
                </div>
             </section>
             <section aria-labelledby="Oppdragsbilde" class="mobilBildeGrid bildeMob">
@@ -107,83 +134,6 @@
                   <img id="mobImg" class="boksRamme sB oppdragsBildeMobil fargetHover" src="" alt="" />
                </a>
             </section>
-            <section aria-labelledby="Ekstra info" class="sBoksRamme sB sPS tekst infoGrid">
-               <div class="modulIkon rundRamme ixD nB">
-                  <div class="op_ikon maskeModulInfo fargetFyll"></div>
-               </div>
-               <h3 id="ekstra-info" class="fargetLinje">Ekstra info</h3>
-               <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolor pariatur magnam doloremque. A natus odio laboriosam optio. Inventore repudiandae laboriosam atque totam magnam, magni minima quisquam animi perspiciatis enim ipsam excepturi ab, aliquam rem mollitia nihil sed accusantium autem fuga ea ut dolorum, tempora
-                  architecto deserunt. Dolores, autem ab!
-               </p>
-            </section>
-            <section aria-labelledby="Nettressurser" class="sBoksRamme sB sPS tekst ressursGrid">
-               <div class="modulIkon rundRamme ixD nB">
-                  <div class="op_ikon maskeModulNett fargetFyll"></div>
-               </div>
-               <h3 id="nettressurser" class="fargetLinje">Nettressurser</h3>
-               <div class="nettResFlexKol">
-                  <a class="sBoksRamme ixD sPA nB" target="_blank" rel="noreferrer noopener" href="">
-                     <h5>Lorem ipsum dolor sit amet.</h5>
-                  </a>
-                  <a class="sBoksRamme ixD sPA nB" target="_blank" rel="noreferrer noopener" href="">
-                     <h5>Lorem ipsum dolor sit amet.</h5>
-                  </a>
-               </div>
-            </section>
-            <!-- <section aria-labelledby="Bildegalleri" class="sBoksRamme sB sPS tekst bildeGrid">
-               <div class="modulIkon rundRamme ixD nB">
-                  <div class="op_ikon maskeModulPin fargetFyll"></div>
-               </div>
-               <h3 id="Bildegalleri" class="fargetLinje">Inspirasjon</h3>
-               <div class="sideTeller">
-                  <h5 class="gjeldendeSiden"></h5>
-                  <h5 class="sideSkille">/</h5>
-                  <h5 class="siderTotalt"></h5>
-               </div>
-               <div class="pilGalleriTilbake" id="pilForrigeGruppe">
-                  <div class="svgIkon maskeTilbakeOutline pil-tilbake" alt="forrige bildegruppe"></div>
-               </div>
-               <div class="pilGalleriNeste" id="pilNesteGruppe">
-                  <div class="svgIkon maskeNesteOutline pil-neste" alt="neste bildegruppe"></div>
-               </div>
-               <div class="bildegalleri_tre rb-ramme" id="galleri-grid">
-                  <div class="galleribilde">
-                     <img class="miniatyrbilde fargetHover" src="/images/img/kategori-2_3d/ob_3-1-1_gjennskap-spillobjekt_2.jpg" tittel="AmongUs fan art" alt="@ Gregor Kopka" />
-                  </div>
-                  <div class="galleribilde">
-                     <img class="miniatyrbilde fargetHover" src="/images/img/kategori-2_3d/ob_3-1-1_gjennskap-spillobjekt_3.jpg" tittel="Valorant lever prop" alt="@ Alexander Martins" />
-                  </div>
-                  <div class="galleribilde">
-                     <img class="miniatyrbilde fargetHover" src="/images/img/kategori-2_3d/ob_3-1-1_gjennskap-spillobjekt_4.jpg" tittel="Minecraft props" alt="@ Toby Plowy" />
-                  </div>
-               </div>
-               <div class="bildefremvisning">
-                  <div class="bildeRamme">
-                     <div class="kryssBoks">
-                        <div class="svgIkon maskeKryss"></div>
-                     </div>
-                     <div class="pilBakgrunnTilbake" id="pilForrigeBilde">
-                        <div class="svgIkon maskeTilbakeOutline pil-tilbake" alt="forrige bildegruppe"></div>
-                     </div>
-                     <div class="pilBakgrunnNeste" id="pilNesteBilde">
-                        <div class="svgIkon maskeNesteOutline pil-neste" alt="neste bildegruppe"></div>
-                     </div>
-                     <div class="aktivtBildeRamme">
-                        <div class="bildeTeller">
-                           <h5 class="gjeldendeBilde"></h5>
-                           <h5 class="bildeSkille">/</h5>
-                           <h5 class="bilderTotalt"></h5>
-                           <h5 class="bildetittelAktiv fargetLinje" id="bildetittelAktiv"></h5>
-                           <a id="aktivtBildeLenke" href=""><p class="nyFane">Åpne i ny fane</p></a>
-                        </div>
-                        <div class="aktivtBilde"></div>
-                        <h5 class="bildetekstAktiv" id="bildetekstAktiv"></h5>
-                     </div>
-                     <div class="bildeRammeFooter sPS"></div>
-                  </div>
-               </div>
-            </section>-->
          </div>
       </main>
       <footer>

@@ -48,10 +48,22 @@
 }
 
 /* ___________ Punktlistefarge ___________ */
-ul li p::before {
+.punktListe li::before,
+.subPunktListe li::before {
    color: var(--clr-safir);
 }
-
+.nummerertPunktListe li::before {
+   color: var(--clr-safir);
+}
+.subPunktListe li a,
+.punktListe li a,
+.nummerertPunktListe li a,
+.subPunktListe li a:visited,
+.punktListe li a:visited,
+.nummerertPunktListe li a:visited {
+   color: var(--clr-safir);
+   text-decoration: underline;
+}
 /* ___________ Bildefremvisning ___________ */
 .nyFane:hover,
 .nyFane:focus-visible {

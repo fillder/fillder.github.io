@@ -164,6 +164,11 @@
    -webkit-mask: url(/images/svg/tp_fagikon-midttimen.svg) no-repeat center;
    mask: url(/images/svg/tp_fagikon-midttimen.svg) no-repeat center;
 }
+.maskeMidttimenSommer {
+   background-color: var(--clr-kunzitt);
+   -webkit-mask: url(/images/svg/tp_fagikon-midttimen2.svg) no-repeat center;
+   mask: url(/images/svg/tp_fagikon-midttimen2.svg) no-repeat center;
+}
 .maskeForum {
    background-color: var(--clr-thulitt);
    -webkit-mask: url(/images/svg/tp_fagikon-forum.svg) no-repeat center;
