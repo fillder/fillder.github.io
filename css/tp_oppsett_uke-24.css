@@ -21,15 +21,15 @@
    gap: 0.5rem;
    grid:
       "d2" 0.4fr
-      "ig" 1fr
-      "ig" 1fr
-      "ig" 1fr
-      "ig" 1fr
-      ".." 0.1fr
-      "m1" 1fr
-      "p2" 1fr
-      "p2" 1fr
-      ".." 1fr
+      "s2" 1fr
+      "s2" 1fr
+      "s2" 1fr
+      "s2" 1fr
+      "s2" 0.1fr
+      "s2" 1fr
+      "s2" 1fr
+      "s2" 1fr
+      "s2" 1fr
       /1fr;
 }
 .ons {
@@ -176,7 +176,11 @@
 .turdag2 {
    grid-area: t2;
 }
-.studiedag {
+.studiedag1 {
    grid-area: s1;
+   opacity: 0.4;
+}
+.studiedag2 {
+   grid-area: s2;
    opacity: 0.4;
 }
