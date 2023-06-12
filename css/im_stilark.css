@@ -215,8 +215,10 @@ nav {
    position: relative;
    top: 0.6rem;
    left: 0.5rem;
-   /* display: flex; */
-   /* width: max-content; */
+   /* border: 2px solid red; */
+   display: flex;
+   width: max-content;
+   height: max-content;
    /* place-content: center;
    margin-block: auto; */
 }
@@ -458,6 +460,13 @@ nav {
    position: absolute;
    top: 0.6rem;
    right: 3.5rem;
+   width: 35px;
+   height: 35px;
+}
+.dag-natt2 {
+   position: absolute;
+   top: 0.6rem;
+   right: 0.6rem;
    width: 35px;
    height: 35px;
 }
