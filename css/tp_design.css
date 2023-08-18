@@ -71,6 +71,11 @@ main {
    grid-template-columns: 1fr 1fr 1fr;
    align-items: center;
 }
+.timepPlanBilde {
+   width: 100%;
+   height: auto;
+   overflow: hidden;
+}
 /*______ ikoner og bilder ______*/
 .svgIkon {
    position: relative;
